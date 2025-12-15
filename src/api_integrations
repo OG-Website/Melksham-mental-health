@@ -1,0 +1,291 @@
+"""
+API Integrations - Free APIs for enhanced content
+No API keys required for these free services!
+"""
+
+import requests
+import json
+import random
+from typing import List, Dict, Optional
+import time
+
+class APIContentFetcher:
+    """Fetch content from free APIs to enhance our database"""
+    
+    def __init__(self):
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'MelkshamMentalHealth/1.0'
+        })
+    
+    # ============================================
+    # QUOTES API - ZenQuotes (Free, No Key)
+    # ============================================
+    
+    def fetch_inspirational_quotes(self, count=50) -> List[Dict]:
+        """Fetch inspirational quotes from ZenQuotes API"""
+        quotes = []
+        
+        try:
+            # ZenQuotes - Free, no key needed
+            url = "https://zenquotes.io/api/quotes"
+            response = self.session.get(url, timeout=10)
+            
+            if response.status_code == 200:
+                data = response.json()
+                for item in data[:count]:
+                    quotes.append({
+                        'text': item. get('q', ''),
+                        'author': item.get('a', 'Unknown'),
+                        'source': 'ZenQuotes',
+                        'topics': ['Inspiration', 'Motivation', 'General'],
+                        'audience': ['adults', 'teens', 'general']
+                    })
+                print(f"✓ Fetched {len(quotes)} quotes from ZenQuotes")
+        except Exception as e:
+            print(f"Warning: Could not fetch from ZenQuotes: {e}")
+        
+        return quotes
+    
+    def fetch_quotable_quotes(self, count=50) -> List[Dict]:
+        """Fetch quotes from Quotable API"""
+        quotes = []
+        
+        try:
+            # Quotable API - Free, no key
+            for _ in range(min(count, 50)):  # Rate limit consideration
+                url = "https://api.quotable.io/random? tags=inspirational|wisdom|life"
+                response = self.session.get(url, timeout=10)
+                
+                if response. status_code == 200:
+                    data = response.json()
+                    quotes.append({
+                        'text': data. get('content', ''),
+                        'author': data.get('author', 'Unknown'),
+                        'source': 'Quotable',
+                        'topics':  data.get('tags', ['General']),
+                        'audience': ['adults', 'general']
+                    })
+                
+                time.sleep(0.5)  # Be nice to the API
+            
+            print(f"✓ Fetched {len(quotes)} quotes from Quotable")
+        except Exception as e:
+            print(f"Warning: Could not fetch from Quotable: {e}")
+        
+        return quotes
+    
+    # ============================================
+    # ADVICE API - Advice Slip (Free, No Key)
+    # ============================================
+    
+    def fetch_advice_slips(self, count=50) -> List[Dict]:
+        """Fetch life advice from Advice Slip API"""
+        advice_list = []
+        
+        try: 
+            for _ in range(min(count, 50)):
+                url = "https://api.adviceslip.com/advice"
+                response = self.session.get(url, timeout=10)
+                
+                if response. status_code == 200:
+                    data = response.json()
+                    advice_text = data.get('slip', {}).get('advice', '')
+                    
+                    if advice_text: 
+                        advice_list.append({
+                            'title': 'Life Advice',
+                            'content': advice_text,
+                            'topics': ['General', 'Life Skills', 'Wellbeing'],
+                            'audience': ['adults', 'teens', 'general'],
+                            'evidence': 'General life wisdom'
+                        })
+                
+                time.sleep(2)  # API requirement - 2 second delay
+            
+            print(f"✓ Fetched {len(advice_list)} advice pieces from Advice Slip")
+        except Exception as e:
+            print(f"Warning: Could not fetch from Advice Slip: {e}")
+        
+        return advice_list
+    
+    # ============================================
+    # AFFIRMATIONS API - Custom generation
+    # ============================================
+    
+    def generate_affirmations(self, count=100) -> List[Dict]:
+        """Generate mental health affirmations"""
+        
+        templates = [
+            "I am worthy of {value}",
+            "I choose to {action} today",
+            "My {quality} is enough",
+            "I release {negative} and embrace {positive}",
+            "I am {adjective} and {adjective2}",
+            "Today I will {action} with {quality}",
+            "I honor my {thing}",
+            "I am learning to {action}",
+            "My {quality} matters",
+            "I give myself permission to {action}"
+        ]
+        
+        values = ["love", "respect", "happiness", "peace", "kindness", "compassion"]
+        actions = ["be kind to myself", "rest", "ask for help", "set boundaries", 
+                  "prioritize my wellbeing", "take small steps", "be patient", "practice self-care"]
+        qualities = ["feelings", "journey", "progress", "efforts", "needs", "boundaries", "pace"]
+        negatives = ["guilt", "shame", "fear", "doubt", "worry", "perfectionism"]
+        positives = ["acceptance", "hope", "courage", "self-compassion", "growth", "healing"]
+        adjectives = ["strong", "capable", "resilient", "worthy", "enough", "valuable", 
+                     "deserving", "brave", "important", "loved"]
+        things = ["feelings", "needs", "boundaries", "journey", "mental health", "wellbeing"]
+        
+        affirmations = []
+        
+        for _ in range(count):
+            template = random.choice(templates)
+            
+            affirmation = template.format(
+                value=random.choice(values),
+                action=random.choice(actions),
+                quality=random.choice(qualities),
+                negative=random.choice(negatives),
+                positive=random.choice(positives),
+                adjective=random.choice(adjectives),
+                adjective2=random.choice([a for a in adjectives if a != random.choice(adjectives)]),
+                thing=random.choice(things)
+            )
+            
+            affirmations.append({
+                'text': affirmation,
+                'topics': ['Self-compassion', 'Affirmations', 'Wellbeing'],
+                'audience': ['adults', 'teens', 'general']
+            })
+        
+        print(f"✓ Generated {len(affirmations)} affirmations")
+        return affirmations
+    
+    # ============================================
+    # UK NHS API - Mental Health Information
+    # ============================================
+    
+    def fetch_nhs_conditions(self) -> List[Dict]:
+        """
+        Note: NHS API requires registration but here's the structure
+        For now, we'll use pre-curated NHS information
+        """
+        # This would integrate with NHS API if keys were available
+        # For now, returning structured NHS information
+        
+        nhs_educational = [
+            {
+                'title':  'NHS:  Understanding Depression',
+                'content': 'Depression is more than simply feeling unhappy or fed up for a few days. Most people go through periods of feeling down, but when you\'re depressed you feel persistently sad for weeks or months. Depression is a real illness with real symptoms, and it\'s not a sign of weakness.  The good news is that with the right treatment and support, most people with depression can make a full recovery.',
+                'topics': ['Depression', 'NHS Information'],
+                'source': 'NHS UK',
+                'audience': ['adults', 'general']
+            },
+            {
+                'title': 'NHS:  Anxiety Disorders',
+                'content': 'Anxiety is a feeling of unease, such as worry or fear, that can be mild or severe. Everyone has feelings of anxiety at some point in their life. However, some people find it hard to control their worries.  Their feelings of anxiety are more constant and can affect their daily lives.  Anxiety is the main symptom of several conditions including panic disorder, phobias, post-traumatic stress disorder and social anxiety disorder.',
+                'topics':  ['Anxiety', 'NHS Information'],
+                'source': 'NHS UK',
+                'audience':  ['adults', 'teens', 'general']
+            },
+            {
+                'title':  'NHS: 5 Steps to Mental Wellbeing',
+                'content': 'Evidence suggests there are 5 steps you can take to improve your mental health and wellbeing. 1) Connect with others 2) Be physically active 3) Learn new skills 4) Give to others 5) Pay attention to the present moment (mindfulness). Making small changes can make a big difference to how you feel.',
+                'topics': ['Wellbeing', 'Self-care', 'NHS Advice'],
+                'source': 'NHS UK',
+                'audience':  ['adults', 'general']
+            }
+        ]
+        
+        print(f"✓ Loaded {len(nhs_educational)} NHS educational pieces")
+        return nhs_educational
+    
+    # ============================================
+    # AGGREGATE ALL CONTENT
+    # ============================================
+    
+    def fetch_all_content(self) -> Dict[str, List[Dict]]: 
+        """Fetch and aggregate all content from APIs"""
+        print("\n🌐 Fetching content from free APIs...")
+        print("=" * 60)
+        
+        all_content = {
+            'quotes': [],
+            'advice': [],
+            'affirmations': [],
+            'educational': []
+        }
+        
+        # Fetch quotes from multiple sources
+        print("\n📝 Fetching quotes...")
+        all_content['quotes']. extend(self.fetch_inspirational_quotes(25))
+        time.sleep(1)
+        all_content['quotes'].extend(self.fetch_quotable_quotes(25))
+        
+        # Fetch advice
+        print("\n💡 Fetching advice...")
+        all_content['advice']. extend(self.fetch_advice_slips(30))
+        
+        # Generate affirmations
+        print("\n✨ Generating affirmations...")
+        all_content['affirmations']. extend(self.generate_affirmations(100))
+        
+        # Get NHS content
+        print("\n🏥 Loading NHS information...")
+        all_content['educational']. extend(self.fetch_nhs_conditions())
+        
+        print("\n" + "=" * 60)
+        print("✓ Content fetching complete!")
+        print(f"  Total Quotes: {len(all_content['quotes'])}")
+        print(f"  Total Advice: {len(all_content['advice'])}")
+        print(f"  Total Affirmations: {len(all_content['affirmations'])}")
+        print(f"  Total Educational: {len(all_content['educational'])}")
+        print("=" * 60 + "\n")
+        
+        return all_content
+
+
+def merge_with_existing_content(api_content: Dict, existing_data_dir='data'):
+    """Merge API content with existing manual content"""
+    from pathlib import Path
+    import json
+    
+    data_dir = Path(existing_data_dir)
+    
+    for content_type, items in api_content.items():
+        filename = f"{content_type}.json"
+        filepath = data_dir / filename
+        
+        # Load existing
+        existing = []
+        if filepath.exists():
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    existing = json. load(f)
+            except: 
+                pass
+        
+        # Merge (avoid duplicates)
+        existing_texts = {item. get('text', item.get('content', '')) for item in existing}
+        
+        for new_item in items:
+            new_text = new_item.get('text', new_item.get('content', ''))
+            if new_text and new_text not in existing_texts:
+                existing.append(new_item)
+                existing_texts.add(new_text)
+        
+        # Save merged content
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(existing, f, indent=2, ensure_ascii=False)
+        
+        print(f"✓ Merged and saved {len(existing)} items to {filename}")
+
+
+if __name__ == "__main__": 
+    # Test the API fetcher
+    fetcher = APIContentFetcher()
+    content = fetcher.fetch_all_content()
+    merge_with_existing_content(content)

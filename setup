@@ -1,0 +1,57 @@
+@echo off
+REM Complete setup script for Windows
+
+echo ==================================================
+echo   MELKSHAM MENTAL HEALTH - POST CREATOR SETUP
+echo ==================================================
+echo. 
+
+REM Check Python
+echo Checking Python version...
+python --version
+
+REM Create virtual environment
+echo. 
+echo Creating virtual environment...
+python -m venv venv
+
+REM Activate virtual environment
+echo Activating virtual environment...
+call venv\Scripts\activate. bat
+
+REM Install dependencies
+echo. 
+echo Installing dependencies...
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+REM Create data directory
+echo. 
+echo Creating data directory...
+if not exist data mkdir data
+
+REM Run content pre-loader
+echo. 
+echo Pre-loading content from APIs... 
+python scripts\preload_content.py
+
+REM Generate additional advice
+echo.
+echo Generating comprehensive advice database...
+python scripts\generate_advice_database.py
+
+REM Final message
+echo.
+echo ==================================================
+echo SETUP COMPLETE!
+echo ==================================================
+echo.
+echo To run the application:
+echo   python src\main.py
+echo.
+echo To run the web interface:
+echo   python web_app.py
+echo.
+echo Your database now contains 500+ pieces of content! 
+echo ==================================================
+pause

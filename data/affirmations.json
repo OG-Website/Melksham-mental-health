@@ -1,0 +1,52 @@
+[
+  {
+    "text": "I am worthy of love, care, and compassion - especially from myself.",
+    "topics": ["Self-compassion", "Self-esteem"],
+    "audience": ["adults", "teens", "general"]
+  },
+  {
+    "text": "My feelings are valid, and it's okay to express them.",
+    "topics": ["Emotions", "General"],
+    "audience": ["adults", "teens", "general"]
+  },
+  {
+    "text": "I am doing the best I can with what I have right now.",
+    "topics": ["Self-compassion", "Stress"],
+    "audience": ["adults", "students", "general"]
+  },
+  {
+    "text": "It's okay to ask for help.  I don't have to do this alone.",
+    "topics":  ["Support", "General"],
+    "audience": ["adults", "teens", "elderly"]
+  },
+  {
+    "text": "I am more than my thoughts and feelings.  They will pass.",
+    "topics": ["Anxiety", "Depression", "Mindfulness"],
+    "audience": ["adults", "teens", "general"]
+  },
+  {
+    "text": "Today, I choose to be kind to myself.",
+    "topics": ["Self-compassion", "Self-care"],
+    "audience": ["adults", "teens", "general"]
+  },
+  {
+    "text": "I have survived 100% of my difficult days so far.  I am resilient.",
+    "topics": ["Resilience", "Strength", "Hope"],
+    "audience":  ["adults", "teens", "general"]
+  },
+  {
+    "text": "My mental health matters, and I am taking steps to protect it.",
+    "topics": ["Self-care", "General"],
+    "audience": ["adults", "healthcare", "general"]
+  },
+  {
+    "text": "I release what I cannot control and focus on what I can.",
+    "topics": ["Anxiety", "Stress", "Control"],
+    "audience": ["adults", "students", "general"]
+  },
+  {
+    "text": "I am allowed to take up space.  I am allowed to have needs.",
+    "topics": ["Self-esteem", "Boundaries"],
+    "audience": ["adults", "teens", "general"]
+  }
+]

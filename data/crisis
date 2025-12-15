@@ -1,0 +1,93 @@
+[
+  {
+    "name": "EMERGENCY - 999",
+    "description": "If you or someone else is at immediate risk, call 999",
+    "phone": "999",
+    "hours": "24/7",
+    "type": "Emergency",
+    "priority": 1
+  },
+  {
+    "name": "NHS 24/7 Mental Health Helpline (AWP)",
+    "description": "Urgent mental health support for Wiltshire residents.  Call if you or someone else is in crisis, feeling unsafe, or needs urgent support",
+    "phone": "0800 953 1919",
+    "hours": "24/7",
+    "website": "https://www.awp.nhs.uk",
+    "type": "Local NHS Crisis",
+    "priority": 2
+  },
+  {
+    "name": "NHS 111",
+    "description": "For urgent medical concerns or if you're unsure who to call",
+    "phone":  "111",
+    "hours": "24/7",
+    "website": "https://www.nhs.uk/111",
+    "type": "NHS Urgent Care",
+    "priority": 2
+  },
+  {
+    "name": "Samaritans",
+    "description": "24/7 confidential emotional support for anyone in distress or struggling to cope",
+    "phone": "116 123",
+    "email": "jo@samaritans.org",
+    "hours": "24/7, 365 days a year",
+    "website": "https://www.samaritans.org",
+    "type": "Crisis Line",
+    "priority": 3
+  },
+  {
+    "name": "Shout",
+    "description": "Free, confidential, 24/7 text messaging support service for anyone in crisis",
+    "textline": "Text SHOUT to 85258",
+    "hours": "24/7",
+    "website": "https://giveusashout.org",
+    "type": "Text Support",
+    "priority": 3
+  },
+  {
+    "name": "CALM (Campaign Against Living Miserably)",
+    "description": "Support for men (though anyone can call) struggling with life or suicidal thoughts",
+    "phone": "0800 58 58 58",
+    "webchat": "Available on website",
+    "hours": "5pm-midnight daily",
+    "website": "https://www.thecalmzone.net",
+    "type": "Men's Crisis Support",
+    "priority": 3
+  },
+  {
+    "name": "Papyrus HOPELINEUK",
+    "description":  "Suicide prevention service for young people under 35",
+    "phone": "0800 068 4141",
+    "textline": "07860 039967",
+    "email": "pat@papyrus-uk.org",
+    "hours": "9am-midnight daily",
+    "website": "https://www.papyrus-uk.org",
+    "type": "Youth Crisis Support",
+    "priority": 3
+  },
+  {
+    "name": "Mind InfoLine",
+    "description": "Information and support for mental health concerns",
+    "phone":  "0300 123 3393",
+    "textline": "Text 86463",
+    "hours": "9am-6pm, Monday to Friday",
+    "website": "https://www.mind.org.uk",
+    "type": "Information & Support"
+  },
+  {
+    "name": "Rethink Mental Illness Advice Line",
+    "description": "Expert advice and information for people affected by mental illness",
+    "phone": "0808 801 0525",
+    "hours": "9:30am-4pm, Monday to Friday",
+    "website": "https://www.rethink.org",
+    "type": "Advice & Information"
+  },
+  {
+    "name": "SANEline",
+    "description": "Emotional support and information for people affected by mental illness",
+    "phone": "0300 304 7000",
+    "hours": "4: 30pm-10:30pm daily",
+    "website": "https://www.sane.org.uk",
+    "type": "Support Line"
+  }
+]

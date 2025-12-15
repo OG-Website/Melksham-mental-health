@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Understanding Depression",
+    "content": "Depression is more than feeling sad. It's a real illness that affects how you think, feel, and function daily.  Symptoms can include persistent low mood, loss of interest in activities, changes in sleep/appetite, and difficulty concentrating. Depression is treatable - talking therapies, medication, and lifestyle changes can all help.  If you think you might be depressed, speak to your GP.",
+    "topics": ["Depression", "Mental Health Conditions"],
+    "source": "NHS Mental Health",
+    "audience": ["adults", "general"]
+  },
+  {
+    "title":  "Anxiety Explained",
+    "content": "Anxiety is your body's natural response to stress, but when it becomes overwhelming or persistent, it can be a disorder. Types include GAD (generalised anxiety disorder), social anxiety, and panic disorder. Physical symptoms like rapid heartbeat, sweating, and trouble breathing are common. Anxiety is highly treatable through therapy, self-help strategies, and sometimes medication.",
+    "topics": ["Anxiety", "Mental Health Conditions"],
+    "source": "Mind UK",
+    "audience": ["adults", "teens", "general"]
+  },
+  {
+    "title": "The Mind-Body Connection",
+    "content": "Physical and mental health are deeply connected. Chronic physical conditions can affect mental wellbeing, and mental health issues can manifest as physical symptoms. Exercise, nutrition, and sleep all impact mental health. Taking care of your body supports your mind, and vice versa.",
+    "topics": ["Physical Health", "General", "Self-care"],
+    "source":  "Mental Health Foundation",
+    "audience":  ["adults", "elderly", "general"]
+  },
+  {
+    "title": "Men and Mental Health",
+    "content":  "Men are less likely to seek help for mental health problems, yet suicide is the biggest killer of men under 45 in the UK. Traditional masculinity can make it hard to show vulnerability, but talking saves lives. If you're a man struggling, know that seeking help is an act of courage.  Resources like CALM are specifically for you.",
+    "topics": ["Men's Mental Health", "Suicide Prevention"],
+    "source": "CALM UK",
+    "audience": ["adults"],
+    "gender_specific": true
+  },
+  {
+    "title": "Understanding Neurodiversity",
+    "content": "Neurodiversity recognizes that brains work differently.  Conditions like ADHD, autism, and dyslexia aren't deficits - they're differences. Many neurodivergent people face mental health challenges due to living in a world not designed for them. Understanding and accommodations, not 'fixing', are key.  Celebrate different ways of thinking.",
+    "topics": ["Neurodiversity", "ADHD", "Autism"],
+    "source": "National Autistic Society",
+    "audience": ["adults", "teens", "parents"]
+  }
+]

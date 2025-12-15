@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Emergency Services",
+    "description": "If you or someone else is in immediate danger",
+    "phone": "999",
+    "hours": "24/7",
+    "type": "Emergency"
+  },
+  {
+    "name": "NHS 111",
+    "description":  "Urgent mental health support when it's not an emergency",
+    "phone": "111",
+    "hours": "24/7",
+    "website": "www.nhs.uk/111",
+    "type": "NHS Urgent Care"
+  },
+  {
+    "name": "Samaritans",
+    "description": "Confidential emotional support for anyone in distress or struggling to cope",
+    "phone": "116 123",
+    "email": "jo@samaritans.org",
+    "hours": "24/7, 365 days a year",
+    "website": "www.samaritans.org",
+    "type": "Crisis Line"
+  },
+  {
+    "name": "Shout",
+    "description": "Free, confidential, 24/7 text messaging support service for anyone in crisis",
+    "textline": "Text SHOUT to 85258",
+    "hours": "24/7",
+    "website": "www.giveusashout.org",
+    "type": "Text Support"
+  },
+  {
+    "name": "CALM (Campaign Against Living Miserably)",
+    "description": "Support for men (though anyone can call) struggling with life or suicidal thoughts",
+    "phone": "0800 58 58 58",
+    "webchat": "Available on website",
+    "hours": "5pm-midnight daily",
+    "website": "www.thecalmzone.net",
+    "type": "Men's Crisis Support"
+  },
+  {
+    "name": "Papyrus HOPELINEUK",
+    "description": "Suicide prevention service for young people under 35",
+    "phone": "0800 068 4141",
+    "textline": "07860 039967",
+    "email": "pat@papyrus-uk.org",
+    "hours":  "9am-midnight daily",
+    "website": "www.papyrus-uk.org",
+    "type": "Youth Crisis Support"
+  },
+  {
+    "name":  "AWP Crisis Line (Wiltshire)",
+    "description": "Local NHS mental health crisis line for Wiltshire residents",
+    "phone": "0800 953 0110",
+    "hours": "24/7",
+    "website":  "www.awp.nhs.uk",
+    "type":  "Local NHS Crisis"
+  }
+]

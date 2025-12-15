@@ -1,0 +1,9 @@
+# Core dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Optional but recommended
+Pillow>=10.0.0
+flask>=2.3.0
+
+# No API keys needed for the free APIs we'll use! 

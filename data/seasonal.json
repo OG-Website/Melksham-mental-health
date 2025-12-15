@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Winter Blues Support",
+    "content": "As days get shorter, many people experience low mood or Seasonal Affective Disorder (SAD). Tips:  Maximize daylight exposure, consider a light therapy lamp, maintain physical activity, stay connected with others, and keep warm. If symptoms persist, speak to your GP about treatment options.",
+    "topics": ["Depression", "Seasonal", "Self-care"],
+    "season": "Winter",
+    "audience": ["adults", "elderly", "general"]
+  },
+  {
+    "title": "Exam Season Self-Care",
+    "content":  "Exam stress is real, but you can manage it. Remember: Breaks are productive, sleep matters more than cramming, breathing exercises help anxiety, and your worth isn't determined by grades. Reach out to teachers, friends, or school counsellors if you're struggling. You've got this! ",
+    "topics": ["Stress", "Anxiety", "Students"],
+    "season": "Exam Season",
+    "audience":  ["teens", "students"]
+  },
+  {
+    "title": "Mental Health Awareness Week",
+    "content": "This week, let's break the silence around mental health. Share your story, check in on loved ones, learn something new about mental health, and remember: it's okay to not be okay. Every conversation helps reduce stigma and saves lives.",
+    "topics": ["Awareness", "General", "Community"],
+    "season": "Mental Health Awareness Week",
+    "audience":  ["general", "adults", "teens"]
+  },
+  {
+    "title": "Holiday Season Pressures",
+    "content": "The holidays can be challenging for mental health - financial stress, family tensions, or feeling alone. It's okay to set boundaries, say no, and prioritize your wellbeing. Remember: you don't have to be perfect or please everyone. Take care of yourself first.",
+    "topics": ["Stress", "Family", "Boundaries"],
+    "season": "Christmas/Holidays",
+    "audience": ["adults", "general"]
+  }
+]

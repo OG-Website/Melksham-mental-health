@@ -1,0 +1,72 @@
+[
+  {
+    "title":  "5-4-3-2-1 Grounding Technique",
+    "content": "When anxiety strikes, try this simple exercise:  Acknowledge 5 things you can see, 4 things you can touch, 3 things you can hear, 2 things you can smell, and 1 thing you can taste. This brings you back to the present moment and can help calm racing thoughts.",
+    "topics": ["Anxiety", "Coping Strategies", "Stress"],
+    "audience": ["adults", "teens", "general"],
+    "evidence": "Recommended by NHS and Mind UK"
+  },
+  {
+    "title": "The Power of Routine",
+    "content": "Establishing a daily routine can significantly improve mental wellbeing. Try to wake up and sleep at similar times, eat regular meals, and schedule activities you enjoy.  Routine provides structure and purpose, especially helpful when managing depression or anxiety.",
+    "topics": ["Depression", "Self-care", "General"],
+    "audience": ["adults", "elderly", "general"],
+    "evidence": "NHS Mental Health Guidelines"
+  },
+  {
+    "title": "Box Breathing for Calm",
+    "content": "This simple breathing technique can reduce stress in minutes:  Breathe in for 4 counts, hold for 4, breathe out for 4, hold for 4. Repeat 4 times. Perfect for exam stress, workplace anxiety, or any overwhelming moment.  You can do this anywhere, anytime.",
+    "topics": ["Anxiety", "Stress", "Coping Strategies"],
+    "audience": ["students", "adults", "teens"],
+    "evidence": "Evidence-based anxiety management"
+  },
+  {
+    "title": "Stay Connected",
+    "content": "Loneliness significantly impacts mental health. Make time for social connections, even if it's just a phone call or text.  Join local groups in Melksham - book clubs, walking groups, or community centers. Connection is powerful medicine for the mind.",
+    "topics": ["Loneliness", "Social Connection", "Community"],
+    "audience":  ["elderly", "adults", "general"],
+    "evidence":  "Mental Health Foundation research"
+  },
+  {
+    "title": "Move Your Body",
+    "content":  "Physical activity releases endorphins that boost mood. You don't need a gym membership - a 20-minute walk around Melksham Town, gardening, or dancing at home all count. Start small and build up. Movement is medicine for mental health.",
+    "topics": ["Self-care", "Depression", "General"],
+    "audience": ["adults", "elderly", "general"],
+    "evidence": "NHS Physical Activity Guidelines"
+  },
+  {
+    "title": "Practice Self-Compassion",
+    "content": "Treat yourself with the same kindness you'd show a good friend. When you make a mistake or feel down, avoid harsh self-criticism. Try saying: 'I'm doing my best, and that's enough.' Self-compassion is linked to better mental health outcomes.",
+    "topics": ["Self-compassion", "General", "Recovery"],
+    "audience": ["adults", "teens", "general"],
+    "evidence": "Research-backed by Mental Health Foundation"
+  },
+  {
+    "title": "Digital Detox",
+    "content": "Constant connectivity can increase anxiety and affect sleep. Try designating phone-free times, especially before bed. Put devices away 1 hour before sleep. Your mental health will benefit from regular breaks from screens and social media.",
+    "topics":  ["Anxiety", "Sleep", "Self-care"],
+    "audience":  ["teens", "students", "adults"],
+    "evidence": "Royal College of Psychiatrists recommendations"
+  },
+  {
+    "title": "Journaling for Mental Clarity",
+    "content": "Writing down your thoughts and feelings can help process emotions and reduce anxiety. Try spending 10 minutes each day journaling - it doesn't have to be perfect. This simple practice can provide valuable insights into your mental health patterns.",
+    "topics": ["Anxiety", "Self-care", "Emotional Wellbeing"],
+    "audience":  ["teens", "adults", "general"],
+    "evidence": "Recommended therapeutic technique"
+  },
+  {
+    "title": "Healthy Sleep Habits",
+    "content":  "Quality sleep is crucial for mental health. Create a bedtime routine:  keep your bedroom cool and dark, avoid caffeine after 2pm, and try to maintain consistent sleep and wake times. If sleep problems persist, speak to your GP.",
+    "topics": ["Sleep", "Self-care", "General"],
+    "audience": ["adults", "elderly", "general"],
+    "evidence": "NHS Sleep Advice"
+  },
+  {
+    "title": "Know When to Seek Help",
+    "content": "If you've been feeling low, anxious, or struggling for more than 2 weeks, it's time to reach out. Contact your GP, call the Samaritans (116 123), or use NHS 111. Seeking help is a sign of strength, not weakness.  You deserve support.",
+    "topics": ["Support", "General", "Crisis"],
+    "audience": ["adults", "teens", "general"],
+    "evidence": "NHS Guidelines"
+  }
+]

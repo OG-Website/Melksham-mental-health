@@ -1,0 +1,72 @@
+[
+  {
+    "text": "You don't have to be positive all the time. It's perfectly okay to feel sad, angry, annoyed, frustrated, scared and anxious. Having feelings doesn't make you a negative person.  It makes you human.",
+    "author": "Lori Deschene",
+    "source": "Mind UK",
+    "topics": ["General", "Emotions", "Self-compassion"],
+    "audience": ["adults", "teens", "general"]
+  },
+  {
+    "text": "Mental health is not a destination, but a process.  It's about how you drive, not where you're going.",
+    "author": "Noam Shpancer",
+    "source":  "Mental Health Foundation",
+    "topics": ["Recovery", "General"],
+    "audience": ["adults", "general"]
+  },
+  {
+    "text": "It's okay to not be okay, but it's not okay to stay that way.",
+    "author":  "Anonymous",
+    "source": "NHS Mental Health",
+    "topics": ["Depression", "Recovery", "Hope"],
+    "audience": ["adults", "teens", "general"]
+  },
+  {
+    "text": "Your mental health is everything - prioritise it.  Make the time like your life depends on it, because it does.",
+    "author": "Mel Robbins",
+    "source": "Mental Health UK",
+    "topics": ["Self-care", "General"],
+    "audience": ["adults", "students", "healthcare"]
+  },
+  {
+    "text": "Sometimes the people around you won't understand your journey. They don't need to, it's not for them.",
+    "author": "Joubert Botha",
+    "source": "Mind UK",
+    "topics": ["Recovery", "Support"],
+    "audience": ["adults", "general"]
+  },
+  {
+    "text": "You are not your illness. You have an individual story to tell.  You have a name, a history, a personality.  Staying yourself is part of the battle.",
+    "author": "Julian Seifter",
+    "source": "Rethink Mental Illness",
+    "topics": ["Identity", "Mental Health Conditions", "Self-compassion"],
+    "audience": ["adults", "general"]
+  },
+  {
+    "text": "There is hope, even when your brain tells you there isn't.",
+    "author": "John Green",
+    "source": "YoungMinds",
+    "topics": ["Depression", "Hope", "Anxiety"],
+    "audience": ["teens", "adults", "general"]
+  },
+  {
+    "text": "Healing doesn't mean the damage never existed. It means the damage no longer controls your life.",
+    "author": "Akshay Dubey",
+    "source": "Trauma Survivors UK",
+    "topics": ["Trauma", "Recovery", "PTSD"],
+    "audience":  ["adults", "general"]
+  },
+  {
+    "text": "You are stronger than you think. You have gotten through every bad day in your life, and you are undefeated.",
+    "author": "Anonymous",
+    "source": "CALM",
+    "topics": ["Strength", "Resilience", "Hope"],
+    "audience": ["adults", "teens", "general"]
+  },
+  {
+    "text": "Talk about your feelings - it can help you stay in good mental health and deal with times when you feel troubled.",
+    "author": "NHS Mental Health",
+    "source": "NHS",
+    "topics": ["Communication", "Self-care", "Support"],
+    "audience":  ["adults", "general"]
+  }
+]

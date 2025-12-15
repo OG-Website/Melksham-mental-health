@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Finding Light After Depression in Melksham",
+    "content": "After months of struggling silently with depression, Sarah from Melksham finally called the NHS 24/7 Mental Health Helpline (0800 953 1919). 'I thought asking for help meant I was weak,' she shares. 'But the person on the phone was so kind and understanding.' She was connected to Wiltshire Mind who provided counselling and peer support. Today, Sarah volunteers at The Community Hub Melksham, helping others find their path to recovery.  'Every small step counts.  You don't have to do it alone - Melksham has so much support available.'",
+    "topics": ["Depression", "Recovery", "Local Resources"],
+    "audience": ["adults", "general"],
+    "mood": "hopeful",
+    "location": "Melksham"
+  },
+  {
+    "title": "A Student's Anxiety Journey in Wiltshire",
+    "content":  "James, a college student in Wiltshire, struggled with crippling anxiety during exam season. Through NHS Talking Therapies (01380 731335), he accessed free CBT without even needing a GP referral. 'Learning breathing techniques and cognitive strategies changed my life,' he says. James also joined a youth wellbeing group through Wiltshire Mind.  His message to other students: 'Your mental health matters infinitely more than any exam result.  Reach out - the support is there and it's free.'",
+    "topics": ["Anxiety", "Youth Mental Health", "Students", "NHS Services"],
+    "audience": ["teens", "students"],
+    "mood": "inspiring",
+    "location": "Wiltshire"
+  },
+  {
+    "title": "Breaking Isolation: A Melksham Retiree's Story",
+    "content": "After retiring, Tom felt lost and isolated in his Melksham home. A visit to The Community Hub Melksham (01225 704187) changed everything.  'I walked in feeling invisible, but the welcome was incredible,' he recalls. Through the hub, Tom discovered local walking groups, coffee mornings, and eventually a men's mental health circle. 'I never thought I'd talk about my feelings, but sharing experiences with other Melksham men my age has been life-changing.' Tom now mentors others facing loneliness.",
+    "topics":  ["Loneliness", "Men's Mental Health", "Elderly", "Community"],
+    "audience": ["elderly", "adults"],
+    "mood": "uplifting",
+    "location":  "Melksham"
+  },
+  {
+    "title": "Postnatal Depression: A Wiltshire Mother's Courage",
+    "content": "Emma experienced severe postnatal depression after her second child.  'I felt like I was failing as a mother and was too ashamed to speak up,' she recalls. Her health visitor connected her with specialist perinatal mental health services through AWP NHS Trust. With therapy, medication, and support from Melksham Family Hub, Emma found her way through.  'Now I'm the mother I always wanted to be.  If you're struggling, please reach out to your GP or call NHS 111. Help is available and you deserve it.'",
+    "topics":  ["Perinatal Mental Health", "Depression", "Parents", "NHS Support"],
+    "audience": ["carers", "adults"],
+    "mood": "hopeful",
+    "location": "Wiltshire"
+  },
+  {
+    "title":  "From Crisis to Hope: One Wiltshire Resident's Story",
+    "content": "During a mental health crisis at 2am, Mark didn't know where to turn. He called the NHS 24/7 Mental Health Helpline (0800 953 1919) and received immediate compassionate support. 'They talked me through the crisis, helped me feel safe, and arranged a follow-up the next day,' Mark explains. He was connected to Wiltshire Mental Health Inclusion Service who provided ongoing support. 'That phone call saved my life.  If you're in crisis, please use these services - they're there for you 24/7.'",
+    "topics": ["Crisis", "Hope", "NHS Services", "Recovery"],
+    "audience": ["adults", "general"],
+    "mood": "hopeful",
+    "location": "Wiltshire"
+  },
+  {
+    "title":  "Supporting a Loved One:  A Carer's Journey",
+    "content": "When Jane's husband developed severe depression, she didn't know how to help.  Feeling overwhelmed, she contacted Carer Support Wiltshire (0800 181 4118). 'I didn't even realize I counted as a carer,' Jane says. 'But they provided advice, connected me with other carers, and gave me emotional support.' Jane learned how to support her husband while also caring for her own mental health. 'Carers need support too. Don't wait until you're at breaking point like I did.'",
+    "topics": ["Carers", "Depression", "Support", "Family"],
+    "audience": ["carers", "adults"],
+    "mood": "supportive",
+    "location": "Wiltshire"
+  },
+  {
+    "title": "Substance Use and Mental Health: Finding Help",
+    "content": "Alex struggled with both anxiety and alcohol use, feeling trapped in a cycle. Through Turning Point Wiltshire (0345 603 6993), he received integrated support for both issues. 'They didn't judge me - they understood that my drinking was linked to my anxiety,' Alex shares. With counseling, peer support, and medical help, Alex is now 18 months sober and managing his anxiety effectively. 'If you're struggling with substance use and mental health, specialized help is available. You don't have to choose between addressing one or the other.'",
+    "topics": ["Substance Use", "Anxiety", "Recovery", "Dual Diagnosis"],
+    "audience":  ["adults", "general"],
+    "mood": "hopeful",
+    "location": "Wiltshire"
+  },
+  {
+    "title":  "A Young Person's Battle with Self-Harm",
+    "content": "At 16, Sophie struggled with self-harm and didn't know how to tell anyone. She texted SHOUT to 85258 at midnight when things felt overwhelming. 'Being able to text rather than call made it easier,' Sophie explains. The crisis volunteer helped her through the moment and encouraged her to reach out for ongoing support. Through Wiltshire Mind's youth services and her school counselor, Sophie learned healthier coping strategies. 'I still have hard days, but I now have tools and people to turn to.  To anyone self-harming:  please reach out. Text, call, tell someone.  You deserve support.'",
+    "topics": ["Self-harm", "Youth Mental Health", "Crisis Support", "Recovery"],
+    "audience": ["teens", "general"],
+    "mood": "hopeful",
+    "trigger_warning": true
+  }
+]
