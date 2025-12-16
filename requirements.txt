@@ -2,6 +2,9 @@
 requests>=2.31.0
 python-dotenv>=1.0.0
 
+# Desktop GUI (PyQt6)
+PyQt6>=6.4.0
+
 # Optional but recommended
 Pillow>=10.0.0
 flask>=2.3.0
