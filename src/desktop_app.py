@@ -1063,42 +1063,36 @@ You're not alone. Help is available.
 
     def open_nhs_mental_health(self):
         """Open NHS Mental Health website"""
-        import subprocess
-        try:
-            subprocess.Popen(['xdg-open', 'https://www.nhs.uk/mental-health/'])
-            self.update_status("✓ Opening NHS Mental Health website...")
-        except:
-            try:
-                subprocess.Popen(['wslview', 'https://www.nhs.uk/mental-health/'])
-                self.update_status("✓ Opening NHS Mental Health website...")
-            except Exception as e:
-                self.show_error(f"Could not open browser: {e}")
+        import webbrowser
+        import os
+        url = 'https://www.nhs.uk/mental-health/'
+        if os.name == 'nt':
+            os.startfile(url)
+        else:
+            webbrowser.open(url)
+        self.update_status("✓ Opening NHS Mental Health website...")
 
     def open_mind_uk(self):
         """Open Mind UK website"""
-        import subprocess
-        try:
-            subprocess.Popen(['xdg-open', 'https://www.mind.org.uk/'])
-            self.update_status("✓ Opening Mind UK website...")
-        except:
-            try:
-                subprocess.Popen(['wslview', 'https://www.mind.org.uk/'])
-                self.update_status("✓ Opening Mind UK website...")
-            except Exception as e:
-                self.show_error(f"Could not open browser: {e}")
+        import webbrowser
+        import os
+        url = 'https://www.mind.org.uk/'
+        if os.name == 'nt':
+            os.startfile(url)
+        else:
+            webbrowser.open(url)
+        self.update_status("✓ Opening Mind UK website...")
 
     def open_samaritans(self):
         """Open Samaritans website"""
-        import subprocess
-        try:
-            subprocess.Popen(['xdg-open', 'https://www.samaritans.org/'])
-            self.update_status("✓ Opening Samaritans website...")
-        except:
-            try:
-                subprocess.Popen(['wslview', 'https://www.samaritans.org/'])
-                self.update_status("✓ Opening Samaritans website...")
-            except Exception as e:
-                self.show_error(f"Could not open browser: {e}")
+        import webbrowser
+        import os
+        url = 'https://www.samaritans.org/'
+        if os.name == 'nt':
+            os.startfile(url)
+        else:
+            webbrowser.open(url)
+        self.update_status("✓ Opening Samaritans website...")
 
     def update_status(self, message):
         """Update status bar"""
