@@ -1,3 +1,4 @@
+
 """
 Content Generator - Core logic for generating mental health posts
 """

@@ -23,6 +23,8 @@ from PyQt6.QtPrintSupport import QPrinter, QPrintDialog
 
 from generator import ContentGenerator
 from formatter import PostFormatter
+from user_config import UserConfig
+from setup_wizard import SetupWizardDialog, ProfileSettingsDialog
 
 
 class MelkshamMentalHealthApp(QMainWindow):
@@ -31,17 +33,25 @@ class MelkshamMentalHealthApp(QMainWindow):
     def __init__(self):
         super().__init__()
         
-        # Set up paths first - handle both running from src and from root
-        script_path = Path(__file__).resolve()
-        src_parent = script_path.parent.parent
-        self.assets_path = src_parent / "assets"
-        self.data_path = src_parent / "data"
+        # Set up paths - handle PyInstaller bundled app, running from src, and root
+        if getattr(sys, 'frozen', False):
+            # Running as compiled exe (PyInstaller)
+            base_path = Path(sys._MEIPASS)
+        else:
+            # Running as script
+            base_path = Path(__file__).resolve().parent.parent
+        
+        self.assets_path = base_path / "assets"
+        self.data_path = base_path / "data"
         
         # Debug: print the paths being used
         print(f"Assets path: {self.assets_path}")
         print(f"Assets exists: {self.assets_path.exists()}")
         print(f"Data path: {self.data_path}")
         print(f"Data exists: {self.data_path.exists()}")
+        
+        # Initialize user configuration
+        self.user_config = UserConfig()
         
         # Initialize generator with correct data path
         self.generator = ContentGenerator(str(self.data_path))
@@ -54,6 +64,20 @@ class MelkshamMentalHealthApp(QMainWindow):
         self.init_ui()
         self.setup_window()
         self.load_logo()
+        
+        # Show setup wizard on first run
+        self.check_first_run()
+
+    def check_first_run(self):
+        """Check if this is the first run and show setup wizard"""
+        if not self.user_config.is_setup_complete():
+            # Delay to ensure main window is shown first
+            QTimer.singleShot(500, self.show_setup_wizard)
+    
+    def show_setup_wizard(self):
+        """Show the setup wizard dialog"""
+        wizard = SetupWizardDialog(self.user_config, self)
+        wizard.exec()
 
     def setup_window(self):
         """Setup window properties"""
@@ -106,11 +130,11 @@ class MelkshamMentalHealthApp(QMainWindow):
         layout.setContentsMargins(15, 10, 15, 10)
         layout.setSpacing(8)
 
-        # Logo Section - BIGGER
+        # Logo Section - BIGGER and fills area properly
         self.logo_label = QLabel()
         self.logo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.logo_label.setMinimumHeight(150)
-        self.logo_label.setStyleSheet("background-color: #1a1a1a; border: none;")
+        self.logo_label.setMinimumHeight(180)
+        self.logo_label.setStyleSheet("background-color: #000000; border: none; padding: 0px;")
         self.load_logo_image()
         layout.addWidget(self.logo_label)
 
@@ -184,8 +208,9 @@ class MelkshamMentalHealthApp(QMainWindow):
     def load_logo_image(self):
         """Load logo image from assets, prefer your black-background version if present"""
         preferred_names = [
+            "logo black background.png",
             "logo_black.png",
-            "logo with backgrpunds.png",
+            "logo with backgrounds.png",
             "logo_with_black.png"
         ]
         logo_path = None
@@ -200,9 +225,10 @@ class MelkshamMentalHealthApp(QMainWindow):
         if logo_path.exists():
             pixmap = QPixmap(str(logo_path))
             if not pixmap.isNull():
-                # Scale logo to be bigger - fit width of container
-                scaled = pixmap.scaledToHeight(140, Qt.TransformationMode.SmoothTransformation)
+                # Scale logo to fill the container width properly
+                scaled = pixmap.scaledToHeight(175, Qt.TransformationMode.SmoothTransformation)
                 self.logo_label.setPixmap(scaled)
+                self.logo_label.setScaledContents(False)
 
     def create_quick_generate_tab(self):
         """Create the quick generate tab"""
@@ -405,6 +431,29 @@ class MelkshamMentalHealthApp(QMainWindow):
         btn_samaritans.clicked.connect(self.open_samaritans)
         layout.addWidget(btn_samaritans)
 
+        layout.addSpacing(15)
+
+        # Melksham Mental Health Website
+        mmh_header = QLabel("💚 Our Community:")
+        mmh_header.setFont(QFont("Segoe UI", 10, QFont.Weight.Bold))
+        layout.addWidget(mmh_header)
+
+        btn_mmh = QPushButton("🏠 Melksham Mental Health Website")
+        btn_mmh.setMinimumHeight(45)
+        btn_mmh.setStyleSheet("""
+            QPushButton {
+                background-color: #00aa00;
+                color: white;
+                border: 2px solid #00cc00;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #00cc00;
+            }
+        """)
+        btn_mmh.clicked.connect(self.open_melksham_mental_health)
+        layout.addWidget(btn_mmh)
+
         layout.addStretch()
         widget.setLayout(layout)
         return widget
@@ -434,6 +483,22 @@ class MelkshamMentalHealthApp(QMainWindow):
         widget = QWidget()
         layout = QVBoxLayout()
         layout.setSpacing(10)
+
+        # Profile Settings Section
+        profile_header = QLabel("👤 Your Profile:")
+        profile_header.setFont(QFont("Segoe UI", 10, QFont.Weight.Bold))
+        layout.addWidget(profile_header)
+
+        btn_profile = QPushButton("🔧 Edit Profile & Social Media")
+        btn_profile.setMinimumHeight(45)
+        btn_profile.clicked.connect(self.open_profile_settings)
+        layout.addWidget(btn_profile)
+
+        btn_license = QPushButton("🔑 Manage License")
+        btn_license.clicked.connect(self.manage_license)
+        layout.addWidget(btn_license)
+
+        layout.addSpacing(15)
 
         # App Info Section
         info_header = QLabel("ℹ️ App Information:")
@@ -494,10 +559,11 @@ class MelkshamMentalHealthApp(QMainWindow):
         
         layout.addLayout(title_layout)
 
-        # Content Display - BIGGER TEXT
+        # Content Display - BIGGER TEXT with bright white color
         self.text_content = QTextEdit()
         self.text_content.setReadOnly(True)
-        self.text_content.setFont(QFont("Courier New", 14))
+        self.text_content.setFont(QFont("Courier New", 16))
+        self.text_content.setStyleSheet("QTextEdit { color: #ffffff; background-color: #1a1a1a; font-size: 16px; }")
         welcome_text = """
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -585,23 +651,27 @@ You're not alone. Help is available.
         """Load available topics from the data files"""
         topics = set()
         try:
-            data_path = Path(__file__).parent.parent / "data"
+            # Use the same data path as the generator
+            data_path = self.data_path
             for json_file in data_path.glob("*.json"):
                 if json_file.name not in ["crisis.json", "resources.json"]:
                     try:
-                        with open(json_file) as f:
+                        with open(json_file, 'r', encoding='utf-8') as f:
                             data = json.load(f)
                             if isinstance(data, list):
                                 for item in data:
                                     if isinstance(item, dict) and "topics" in item:
                                         if isinstance(item["topics"], list):
                                             topics.update(item["topics"])
-                    except:
-                        pass
+                    except Exception as e:
+                        print(f"Error reading {json_file.name}: {e}")
             topics = sorted(list(topics))
             self.combo_topic.addItems(["Any Topic"] + topics)
+            print(f"Loaded {len(topics)} topics")
         except Exception as e:
             print(f"Error loading topics: {e}")
+            # Add some default topics if loading fails
+            self.combo_topic.addItems(["Any Topic", "Anxiety", "Depression", "Stress", "Self-Care", "Recovery", "Support"])
 
     def generate_random_post(self):
         """Generate a random post"""
@@ -663,6 +733,7 @@ You're not alone. Help is available.
         content_type = self.combo_content_type.currentText()
         topic = self.combo_topic.currentText()
         audience = self.combo_audience.currentText()
+        user_notes = self.user_notes.text().strip()
         
         self.update_status(f"Generating with: Type={content_type}, Topic={topic}, Audience={audience}...")
         
@@ -682,6 +753,10 @@ You're not alone. Help is available.
             else:
                 # All are "Any" - just generate random
                 content = self.generator.generate_random()
+            
+            # Add user notes to the content if provided
+            if user_notes and isinstance(content, dict):
+                content['user_notes'] = user_notes
             
             # Build title based on selections
             title_parts = ["🚀 Custom Post"]
@@ -777,11 +852,10 @@ You're not alone. Help is available.
 
     def display_content(self, content, title="Post Content"):
         """Display content in the text area"""
-        self.current_content = content
         self.current_title = title
         self.label_title.setText(title)
         
-        # Format content - handle dict or string
+        # Format content - handle dict, list, or string
         if isinstance(content, dict):
             # Format the dict into readable text
             formatted = []
@@ -811,10 +885,41 @@ You're not alone. Help is available.
             if 'topics' in content and isinstance(content['topics'], list):
                 formatted.append(f"\n\n🎯 Topics: {', '.join(content['topics'])}")
             
+            # User Notes if present
+            if 'user_notes' in content and content['user_notes']:
+                formatted.append(f"\n\n📋 Your Notes: {content['user_notes']}")
+            
             display_text = "\n".join(formatted) if formatted else str(content)
+            
+            # Add branding footer for generated posts (not for resources/crisis info)
+            if content.get('type') not in ['resources', 'crisis']:
+                display_text = self.user_config.get_full_post_text(display_text)
+            
+        elif isinstance(content, list):
+            # Handle list of items (e.g., resources, search results)
+            formatted_items = []
+            for item in content:
+                if isinstance(item, dict):
+                    name = item.get('name', item.get('title', 'Item'))
+                    desc = item.get('description', item.get('content', ''))
+                    phone = item.get('phone', '')
+                    website = item.get('website', '')
+                    formatted_items.append(f"• {name}")
+                    if desc:
+                        formatted_items.append(f"  ℹ️ {desc[:100]}")
+                    if phone:
+                        formatted_items.append(f"  📞 {phone}")
+                    if website:
+                        formatted_items.append(f"  🔗 {website}")
+                    formatted_items.append("")
+                else:
+                    formatted_items.append(str(item))
+            display_text = "\n".join(formatted_items)
         else:
             display_text = str(content)
         
+        # Store the formatted text as string for save/export/copy
+        self.current_content = display_text
         self.text_content.setText(display_text)
 
     def add_favorite(self):
@@ -891,7 +996,9 @@ You're not alone. Help is available.
         """Copy content to clipboard"""
         if self.current_content:
             clipboard = QApplication.clipboard()
-            clipboard.setText(self.current_content)
+            # Ensure we're copying a string
+            text_to_copy = self.current_content if isinstance(self.current_content, str) else str(self.current_content)
+            clipboard.setText(text_to_copy)
             self.update_status("✓ Copied to clipboard")
             self.show_success("Content copied to clipboard!")
         else:
@@ -908,8 +1015,10 @@ You're not alone. Help is available.
             output_dir.mkdir(exist_ok=True)
 
             filename = output_dir / f"post_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-            with open(filename, 'w') as f:
-                f.write(self.current_content)
+            # Ensure we're writing a string
+            text_to_save = self.current_content if isinstance(self.current_content, str) else str(self.current_content)
+            with open(filename, 'w', encoding='utf-8') as f:
+                f.write(text_to_save)
 
             self.update_status(f"✓ Saved to {filename.name}")
             self.show_success(f"Content saved to:\n{filename.name}")
@@ -927,17 +1036,20 @@ You're not alone. Help is available.
             output_dir.mkdir(exist_ok=True)
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
 
+            # Ensure we're working with a string
+            text_to_export = self.current_content if isinstance(self.current_content, str) else str(self.current_content)
+
             # Save as TXT
             txt_file = output_dir / f"post_{timestamp}.txt"
-            with open(txt_file, 'w') as f:
-                f.write(self.current_content)
+            with open(txt_file, 'w', encoding='utf-8') as f:
+                f.write(text_to_export)
 
             # Save as JSON
             json_file = output_dir / f"post_{timestamp}.json"
-            with open(json_file, 'w') as f:
+            with open(json_file, 'w', encoding='utf-8') as f:
                 json.dump({
                     "title": self.current_title,
-                    "content": self.current_content,
+                    "content": text_to_export,
                     "exported_at": timestamp
                 }, f, indent=2)
 
@@ -987,79 +1099,64 @@ You're not alone. Help is available.
             self.show_success("Saved data cleared!")
 
     def fetch_online_resources(self):
-        """Fetch latest mental health resources from real APIs"""
-        self.update_status("🔄 Fetching live data from NHS and mental health APIs...")
+        """Show mental health resources (local data + reliable links)"""
+        self.update_status("🔄 Loading mental health resources...")
         try:
-            import requests
             from datetime import datetime
             
             resources_parts = []
-            resources_parts.append("🌐 LIVE MENTAL HEALTH RESOURCES")
+            resources_parts.append("🌐 MENTAL HEALTH RESOURCES")
             resources_parts.append("═" * 60)
-            resources_parts.append(f"Fetched: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            resources_parts.append(f"Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
             resources_parts.append("")
             
-            # Fetch from NHS API
-            try:
-                nhs_response = requests.get(
-                    "https://api.nhs.uk/mental-health/",
-                    headers={"subscription-key": "public", "Accept": "application/json"},
-                    timeout=5
-                )
-                if nhs_response.status_code == 200:
-                    resources_parts.append("✅ NHS API: Connected")
-                else:
-                    resources_parts.append(f"⚠️ NHS API: Status {nhs_response.status_code}")
-            except requests.exceptions.RequestException as e:
-                resources_parts.append(f"❌ NHS API: {str(e)[:50]}")
+            # Load local resources from data
+            local_resources = self.generator.get_local_resources()
+            if local_resources:
+                resources_parts.append("📍 LOCAL SERVICES (MELKSHAM & WILTSHIRE):")
+                resources_parts.append("─" * 40)
+                for res in local_resources[:10]:
+                    name = res.get('name', 'Resource')
+                    phone = res.get('phone', '')
+                    desc = res.get('description', '')
+                    resources_parts.append(f"• {name}")
+                    if phone:
+                        resources_parts.append(f"  📞 {phone}")
+                    if desc:
+                        resources_parts.append(f"  ℹ️ {desc[:80]}")
+                resources_parts.append("")
             
-            # Fetch from Hub of Hope API (real UK mental health service finder)
-            try:
-                hub_response = requests.get(
-                    "https://hubofhope.co.uk/api/v1/services?postcode=SN12",
-                    timeout=5
-                )
-                if hub_response.status_code == 200:
-                    data = hub_response.json()
-                    if isinstance(data, list) and len(data) > 0:
-                        resources_parts.append(f"✅ Hub of Hope: Found {len(data)} local services")
-                        resources_parts.append("")
-                        resources_parts.append("📍 LOCAL SERVICES NEAR MELKSHAM (SN12):")
-                        resources_parts.append("─" * 40)
-                        for service in data[:10]:
-                            name = service.get('name', 'Unknown')
-                            phone = service.get('phone', '')
-                            resources_parts.append(f"• {name}")
-                            if phone:
-                                resources_parts.append(f"  📞 {phone}")
-                    else:
-                        resources_parts.append("⚠️ Hub of Hope: No services returned")
-                else:
-                    resources_parts.append(f"⚠️ Hub of Hope: Status {hub_response.status_code}")
-            except requests.exceptions.RequestException as e:
-                resources_parts.append(f"❌ Hub of Hope API: {str(e)[:50]}")
-            
-            resources_parts.append("")
-            resources_parts.append("🆘 CRISIS LINES (Always Available):")
+            resources_parts.append("🆘 CRISIS LINES (Always Available 24/7):")
             resources_parts.append("─" * 40)
             resources_parts.append("• Samaritans: 116 123 (Free, 24/7)")
+            resources_parts.append("• NHS 24/7 Mental Health: 0800 953 1919")
             resources_parts.append("• NHS Urgent: 111 then press 2")
             resources_parts.append("• Crisis Text: Text SHOUT to 85258")
-            resources_parts.append("• CALM (Men): 0800 58 58 58")
+            resources_parts.append("• CALM (Men): 0800 58 58 58 (5pm-midnight)")
+            resources_parts.append("• Papyrus (Under 35): 0800 068 4141")
+            resources_parts.append("")
+            resources_parts.append("🏥 NHS SERVICES:")
+            resources_parts.append("─" * 40)
+            resources_parts.append("• NHS Talking Therapies: 01380 731335")
+            resources_parts.append("• AWP Mental Health Trust: 0300 303 1320")
+            resources_parts.append("• Emergency (life threatening): 999")
             resources_parts.append("")
             resources_parts.append("🔗 WEBSITES:")
             resources_parts.append("─" * 40)
+            resources_parts.append("• melkshammentalhealth.co.uk (Our Community)")
             resources_parts.append("• nhs.uk/mental-health")
             resources_parts.append("• mind.org.uk")
             resources_parts.append("• samaritans.org")
             resources_parts.append("• hubofhope.co.uk")
+            resources_parts.append("• rethink.org")
+            resources_parts.append("• youngminds.org.uk")
             
             full_text = "\n".join(resources_parts)
-            self.display_content({'type': 'resources', 'content': full_text}, "🌐 Live Resources")
-            self.update_status("✓ Live resources fetched")
+            self.display_content({'type': 'resources', 'content': full_text}, "🌐 Mental Health Resources")
+            self.update_status("✓ Resources loaded")
         except Exception as e:
-            self.show_error(f"Error fetching resources: {e}")
-            self.update_status("✗ Error fetching resources")
+            self.show_error(f"Error loading resources: {e}")
+            self.update_status("✗ Error loading resources")
 
     def open_nhs_mental_health(self):
         """Open NHS Mental Health website"""
@@ -1093,6 +1190,52 @@ You're not alone. Help is available.
         else:
             webbrowser.open(url)
         self.update_status("✓ Opening Samaritans website...")
+
+    def open_melksham_mental_health(self):
+        """Open Melksham Mental Health website"""
+        import webbrowser
+        import os
+        url = 'https://melksham-mentalhealth.us/'
+        if os.name == 'nt':
+            os.startfile(url)
+        else:
+            webbrowser.open(url)
+        self.update_status("✓ Opening Melksham Mental Health website...")
+
+    def open_profile_settings(self):
+        """Open the profile settings dialog"""
+        dialog = ProfileSettingsDialog(self.user_config, self)
+        dialog.exec()
+        self.update_status("✓ Profile settings updated")
+
+    def manage_license(self):
+        """Open license management dialog"""
+        current_status = "Free (Branding Included)" if self.user_config.is_branding_required() else "Licensed (Branding Removed)"
+        
+        from PyQt6.QtWidgets import QInputDialog
+        
+        license_key, ok = QInputDialog.getText(
+            self, "Manage License",
+            f"Current Status: {current_status}\n\n"
+            "Enter your license key to remove Melksham Mental Health branding:\n"
+            "(Purchase at https://melksham-mentalhealth.us/license for £20)",
+            QLineEdit.EchoMode.Normal
+        )
+        
+        if ok and license_key:
+            if self.user_config.activate_license(license_key):
+                QMessageBox.information(
+                    self, "License Activated",
+                    "Your license has been activated!\n\n"
+                    "Melksham Mental Health branding will no longer appear on your posts."
+                )
+                self.update_status("✓ License activated successfully")
+            else:
+                QMessageBox.warning(
+                    self, "Invalid License",
+                    "The license key you entered is invalid.\n\n"
+                    "Please check the key and try again."
+                )
 
     def update_status(self, message):
         """Update status bar"""
@@ -1223,6 +1366,35 @@ in Melksham, Wiltshire, and across the UK.</p>
             font-weight: bold;
             font-size: 11px;
         }
+        QComboBox::drop-down {
+            border: none;
+            background-color: #ff6600;
+            width: 30px;
+        }
+        QComboBox::down-arrow {
+            border: none;
+        }
+        QComboBox QAbstractItemView {
+            background-color: #2a2a2a;
+            color: #ff9900;
+            selection-background-color: #ff6600;
+            selection-color: #ffffff;
+            border: 2px solid #ff6600;
+            font-weight: bold;
+        }
+        QComboBox QAbstractItemView::item {
+            padding: 8px;
+            min-height: 25px;
+            color: #ff9900;
+        }
+        QComboBox QAbstractItemView::item:hover {
+            background-color: #ff6600;
+            color: #ffffff;
+        }
+        QComboBox QAbstractItemView::item:selected {
+            background-color: #ff6600;
+            color: #ffffff;
+        }
         QLineEdit {
             border: 2px solid #ff6600;
             border-radius: 0px;
@@ -1236,9 +1408,10 @@ in Melksham, Wiltshire, and across the UK.</p>
             border: 2px solid #ff6600;
             border-radius: 0px;
             background-color: #1a1a1a;
-            color: #ffcc99;
+            color: #ffffff;
             font-family: 'Courier New', monospace;
-            font-size: 11px;
+            font-size: 16px;
+            line-height: 1.5;
         }
         QTabWidget::pane {
             border: 2px solid #ff6600;
