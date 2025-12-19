@@ -610,17 +610,23 @@ branding from your posts. Your own branding will still appear!
             }
             QLabel {
                 color: #ffffff;
+                font-size: 13px;
             }
             QLineEdit {
                 border: 2px solid #ff6600;
                 border-radius: 0px;
-                padding: 8px;
+                padding: 10px;
                 background-color: #1a1a1a;
-                color: #ff9900;
+                color: #ffffff;
                 font-weight: bold;
+                font-size: 14px;
+            }
+            QLineEdit::placeholder {
+                color: #888888;
             }
             QLineEdit:focus {
                 border: 2px solid #ff9900;
+                background-color: #2a2a2a;
             }
             QPushButton {
                 background-color: #ff6600;
@@ -629,6 +635,7 @@ branding from your posts. Your own branding will still appear!
                 border-radius: 0px;
                 padding: 10px 20px;
                 font-weight: bold;
+                font-size: 13px;
             }
             QPushButton:hover {
                 background-color: #ff3300;
@@ -639,10 +646,13 @@ branding from your posts. Your own branding will still appear!
             }
             QRadioButton {
                 color: #ffffff;
+                font-size: 13px;
             }
             QRadioButton::indicator {
                 border: 2px solid #ff6600;
                 background-color: #1a1a1a;
+                width: 18px;
+                height: 18px;
             }
             QRadioButton::indicator:checked {
                 background-color: #ff6600;
@@ -651,12 +661,28 @@ branding from your posts. Your own branding will still appear!
                 border: 2px solid #ff6600;
                 padding: 15px;
                 margin-top: 10px;
+                color: #ffffff;
+                font-size: 13px;
             }
             QGroupBox::title {
                 color: #ff9900;
+                font-weight: bold;
             }
             QScrollArea {
                 background-color: transparent;
+            }
+            QCheckBox {
+                color: #ffffff;
+                font-size: 13px;
+            }
+            QCheckBox::indicator {
+                border: 2px solid #ff6600;
+                background-color: #1a1a1a;
+                width: 18px;
+                height: 18px;
+            }
+            QCheckBox::indicator:checked {
+                background-color: #ff6600;
             }
         """)
 
