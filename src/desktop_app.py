@@ -1393,15 +1393,22 @@ in Melksham, Wiltshire, and across the UK.</p>
             color: #ffffff;
             font-weight: bold;
             font-size: 13px;
-            min-height: 20px;
+            min-height: 25px;
+        }
+        QComboBox:on {
+            background-color: #3a3a3a;
         }
         QComboBox::drop-down {
-            border: none;
+            subcontrol-origin: padding;
+            subcontrol-position: top right;
+            width: 30px;
+            border-left: 2px solid #ff6600;
             background-color: #ff6600;
-            width: 35px;
         }
         QComboBox::down-arrow {
-            border: none;
+            image: none;
+            width: 12px;
+            height: 12px;
         }
         QComboBox QAbstractItemView {
             background-color: #2a2a2a;
@@ -1409,14 +1416,11 @@ in Melksham, Wiltshire, and across the UK.</p>
             selection-background-color: #ff6600;
             selection-color: #ffffff;
             border: 2px solid #ff6600;
-            font-weight: bold;
-            font-size: 13px;
+            outline: none;
         }
         QComboBox QAbstractItemView::item {
-            padding: 10px;
-            min-height: 30px;
-            color: #ffffff;
-            background-color: #2a2a2a;
+            padding: 8px;
+            min-height: 25px;
         }
         QComboBox QAbstractItemView::item:hover {
             background-color: #ff6600;
