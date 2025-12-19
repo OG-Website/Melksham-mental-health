@@ -133,8 +133,8 @@ class MelkshamMentalHealthApp(QMainWindow):
         # Logo Section - BIGGER and fills area properly
         self.logo_label = QLabel()
         self.logo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.logo_label.setMinimumHeight(180)
-        self.logo_label.setStyleSheet("background-color: #000000; border: none; padding: 0px;")
+        self.logo_label.setMinimumHeight(200)
+        self.logo_label.setStyleSheet("background-color: #050505; border: none; padding: 0px; margin: 0px;")
         self.load_logo_image()
         layout.addWidget(self.logo_label)
 
@@ -225,9 +225,11 @@ class MelkshamMentalHealthApp(QMainWindow):
         if logo_path.exists():
             pixmap = QPixmap(str(logo_path))
             if not pixmap.isNull():
-                # Scale logo to fill the container width properly
-                scaled = pixmap.scaledToHeight(175, Qt.TransformationMode.SmoothTransformation)
+                # Scale logo to fill the container - use width-based scaling for larger display
+                container_width = 350  # Approximate left panel width
+                scaled = pixmap.scaledToWidth(container_width, Qt.TransformationMode.SmoothTransformation)
                 self.logo_label.setPixmap(scaled)
+                self.logo_label.setMinimumHeight(scaled.height())
                 self.logo_label.setScaledContents(False)
 
     def create_quick_generate_tab(self):
@@ -562,8 +564,16 @@ class MelkshamMentalHealthApp(QMainWindow):
         # Content Display - BIGGER TEXT with bright white color
         self.text_content = QTextEdit()
         self.text_content.setReadOnly(True)
-        self.text_content.setFont(QFont("Courier New", 16))
-        self.text_content.setStyleSheet("QTextEdit { color: #ffffff; background-color: #1a1a1a; font-size: 16px; }")
+        self.text_content.setFont(QFont("Segoe UI", 18))
+        self.text_content.setStyleSheet("""
+            QTextEdit { 
+                color: #ffffff; 
+                background-color: #0a0a0a; 
+                font-size: 18px; 
+                padding: 15px;
+                border: 2px solid #ff6600;
+            }
+        """)
         welcome_text = """
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -610,6 +620,8 @@ You're not alone. Help is available.
 ═══════════════════════════════════════════════════════════════════════════
         """
         self.text_content.setText(welcome_text)
+        self.current_content = welcome_text  # Store welcome text so copy/save works
+        self.current_title = "Welcome"
         layout.addWidget(self.text_content)
 
         # Action Buttons
@@ -780,16 +792,32 @@ You're not alone. Help is available.
         self.progress_bar.setVisible(True)
         
         try:
-            posts = []
+            formatted_posts = []
             for i in range(count):
                 progress = int((i / count) * 100)
                 self.progress_bar.setValue(progress)
                 content = self.generator.generate_random()
-                posts.append(content)
+                
+                # Format each post as a string
+                if isinstance(content, dict):
+                    post_text = f"\n📝 Post {i+1}\n"
+                    post_text += "=" * 40 + "\n"
+                    if content.get('title'):
+                        post_text += f"{content['title']}\n\n"
+                    main_text = content.get('content') or content.get('text') or content.get('message') or ''
+                    post_text += main_text
+                    if content.get('author'):
+                        post_text += f"\n\n— {content['author']}"
+                    formatted_posts.append(post_text)
+                else:
+                    formatted_posts.append(str(content))
 
             self.progress_bar.setValue(100)
-            combined = "\n\n" + "=" * 70 + "\n\n".join(posts)
-            self.display_content(combined, f"📦 Batch: {count} Posts Generated")
+            combined = "\n\n".join(formatted_posts)
+            self.current_content = combined
+            self.current_title = f"📦 Batch: {count} Posts Generated"
+            self.label_title.setText(self.current_title)
+            self.text_content.setText(combined)
             self.update_status(f"✓ Batch of {count} posts generated")
         except Exception as e:
             self.show_error(f"Error generating batch: {e}")
@@ -1407,11 +1435,11 @@ in Melksham, Wiltshire, and across the UK.</p>
         QTextEdit {
             border: 2px solid #ff6600;
             border-radius: 0px;
-            background-color: #1a1a1a;
+            background-color: #0a0a0a;
             color: #ffffff;
-            font-family: 'Courier New', monospace;
-            font-size: 16px;
-            line-height: 1.5;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 18px;
+            padding: 10px;
         }
         QTabWidget::pane {
             border: 2px solid #ff6600;
