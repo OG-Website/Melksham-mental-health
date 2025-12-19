@@ -1388,32 +1388,35 @@ in Melksham, Wiltshire, and across the UK.</p>
         QComboBox {
             border: 2px solid #ff6600;
             border-radius: 0px;
-            padding: 6px;
-            background-color: #1a1a1a;
-            color: #ff9900;
+            padding: 8px;
+            background-color: #2a2a2a;
+            color: #ffffff;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 13px;
+            min-height: 20px;
         }
         QComboBox::drop-down {
             border: none;
             background-color: #ff6600;
-            width: 30px;
+            width: 35px;
         }
         QComboBox::down-arrow {
             border: none;
         }
         QComboBox QAbstractItemView {
             background-color: #2a2a2a;
-            color: #ff9900;
+            color: #ffffff;
             selection-background-color: #ff6600;
             selection-color: #ffffff;
             border: 2px solid #ff6600;
             font-weight: bold;
+            font-size: 13px;
         }
         QComboBox QAbstractItemView::item {
-            padding: 8px;
-            min-height: 25px;
-            color: #ff9900;
+            padding: 10px;
+            min-height: 30px;
+            color: #ffffff;
+            background-color: #2a2a2a;
         }
         QComboBox QAbstractItemView::item:hover {
             background-color: #ff6600;
@@ -1426,11 +1429,15 @@ in Melksham, Wiltshire, and across the UK.</p>
         QLineEdit {
             border: 2px solid #ff6600;
             border-radius: 0px;
-            padding: 8px;
-            background-color: #1a1a1a;
-            color: #ff9900;
+            padding: 10px;
+            background-color: #2a2a2a;
+            color: #ffffff;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 13px;
+            min-height: 20px;
+        }
+        QLineEdit::placeholder {
+            color: #888888;
         }
         QTextEdit {
             border: 2px solid #ff6600;
@@ -1463,13 +1470,15 @@ in Melksham, Wiltshire, and across the UK.</p>
             font-weight: bold;
         }
         QLabel {
-            color: #ffcc99;
+            color: #ffffff;
             font-weight: bold;
+            font-size: 12px;
         }
         QCheckBox {
-            color: #ff9900;
+            color: #ffffff;
             spacing: 8px;
             font-weight: bold;
+            font-size: 12px;
         }
         QCheckBox::indicator {
             border: 2px solid #ff6600;
@@ -1481,10 +1490,11 @@ in Melksham, Wiltshire, and across the UK.</p>
         QSpinBox {
             border: 2px solid #ff6600;
             border-radius: 0px;
-            padding: 6px;
-            background-color: #1a1a1a;
-            color: #ff9900;
+            padding: 8px;
+            background-color: #2a2a2a;
+            color: #ffffff;
             font-weight: bold;
+            font-size: 13px;
         }
         QProgressBar {
             border: 2px solid #ff6600;
@@ -1500,15 +1510,17 @@ in Melksham, Wiltshire, and across the UK.</p>
         }
         QStatusBar {
             background-color: #1a1a1a;
-            color: #ff9900;
+            color: #ffffff;
             border-top: 2px solid #ff6600;
             font-weight: bold;
+            font-size: 12px;
         }
         QListWidget {
             border: 2px solid #ff6600;
             border-radius: 0px;
-            background-color: #1a1a1a;
-            color: #ffcc99;
+            background-color: #2a2a2a;
+            color: #ffffff;
+            font-size: 12px;
         }
         QListWidget::item {
             padding: 6px;
