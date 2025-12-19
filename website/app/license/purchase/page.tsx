@@ -11,9 +11,25 @@ export default function PurchasePage() {
     e.preventDefault();
     setProcessing(true);
     
-    // In production, this would redirect to Stripe Checkout
-    // For now, simulate the process
-    alert('Stripe Checkout integration will be added in production. License key: MMH-' + Math.random().toString(36).substring(2, 6).toUpperCase() + '-' + Math.random().toString(36).substring(2, 6).toUpperCase() + '-' + Math.random().toString(36).substring(2, 6).toUpperCase());
+    // TODO: Implement Stripe Checkout integration
+    // This is a placeholder for development
+    // In production, this would:
+    // 1. Create a Stripe checkout session
+    // 2. Redirect user to Stripe hosted checkout
+    // 3. Generate license key on successful payment via webhook
+    
+    const mockLicenseKey = [
+      'MMH',
+      Math.random().toString(36).substring(2, 6).toUpperCase(),
+      Math.random().toString(36).substring(2, 6).toUpperCase(),
+      Math.random().toString(36).substring(2, 6).toUpperCase()
+    ].join('-');
+    
+    alert(
+      `Stripe Checkout integration required.\n\n` +
+      `Demo license key: ${mockLicenseKey}\n\n` +
+      `See README.md for Stripe setup instructions.`
+    );
     setProcessing(false);
   };
 

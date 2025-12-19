@@ -7,7 +7,6 @@ import CrisisBanner from "@/components/CrisisBanner";
 export const metadata: Metadata = {
   title: "Melksham Mental Health | Real Struggles. Real Support",
   description: "Mental health support for Melksham, Wiltshire and beyond. Access resources, download our free app, and find real support.",
-  keywords: ["mental health", "Melksham", "Wiltshire", "support", "resources", "crisis help"],
   authors: [{ name: "Melksham Mental Health" }],
   openGraph: {
     title: "Melksham Mental Health",
