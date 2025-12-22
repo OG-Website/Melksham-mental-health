@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,75 +10,62 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Tagline */}
           <div>
-            <h3 className="text-primary font-bold text-xl mb-4 grunge-text uppercase">
-              Melksham<br />Mental Health
+            <h3 className="text-secondary font-black text-2xl mb-4 grunge-text">
+              MELKSHAM<br />MENTAL HEALTH
             </h3>
-            <p className="text-primary font-bold text-sm grunge-text">
-              ⚡ REAL STRUGGLES. REAL SUPPORT ⚡
-            </p>
           </div>
 
           {/* Navigation Links */}
           <div>
-            <nav className="flex flex-col space-y-2">
-              <Link href="/" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+            <nav className="flex flex-wrap gap-4 justify-center items-center">
+              <Link href="/" className="text-white hover:text-secondary transition-colors font-black uppercase text-sm grunge-text">
                 Home
               </Link>
-              <Link href="/resources" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+              <span className="text-primary">•</span>
+              <Link href="/resources" className="text-white hover:text-secondary transition-colors font-black uppercase text-sm grunge-text">
                 Resources
               </Link>
-              <Link href="/blog" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+              <span className="text-primary">•</span>
+              <Link href="/blog" className="text-white hover:text-secondary transition-colors font-black uppercase text-sm grunge-text">
                 Blog
               </Link>
-              <Link href="/app/support" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+              <span className="text-primary">•</span>
+              <Link href="/app/support" className="text-white hover:text-secondary transition-colors font-black uppercase text-sm grunge-text">
                 Support
               </Link>
-              <Link href="/about" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+              <span className="text-primary">•</span>
+              <Link href="/about" className="text-white hover:text-secondary transition-colors font-black uppercase text-sm grunge-text">
                 About
               </Link>
             </nav>
           </div>
 
-          {/* Social and Email */}
+          {/* Email Subscribe */}
           <div>
-            <div className="mb-4">
+            <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="Enter your email..."
-                className="w-full px-4 py-2 bg-dark border border-primary/30 rounded text-white placeholder-muted focus:border-primary focus:outline-none"
+                className="flex-1 px-4 py-2 bg-darker border-2 border-primary/30 rounded text-white placeholder-muted focus:border-primary focus:outline-none font-bold"
               />
-              <button className="grunge-button w-full mt-2 px-6 py-2 rounded text-primary font-bold uppercase text-sm transition-all">
+              <button className="grunge-button px-6 py-2 rounded text-secondary font-black uppercase text-sm transition-all">
                 Subscribe
               </button>
-            </div>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com/melkshammentalhealth" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
-                <FaFacebook className="text-2xl" />
-              </a>
-              <a href="#" className="text-muted hover:text-primary transition-colors">
-                <FaTwitter className="text-2xl" />
-              </a>
-              <a href="#" className="text-muted hover:text-primary transition-colors">
-                <FaYoutube className="text-2xl" />
-              </a>
-              <a href="#" className="text-muted hover:text-primary transition-colors">
-                <FaInstagram className="text-2xl" />
-              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary/20 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p className="text-muted mb-4 md:mb-0">
+        <div className="border-t-2 border-primary/30 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+          <p className="text-white mb-4 md:mb-0 font-bold">
             © {currentYear} Melksham Mental Health. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            <Link href="/privacy" className="text-muted hover:text-primary transition-colors">
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="text-white hover:text-secondary transition-colors font-bold">
               Privacy Policy
             </Link>
-            <span className="text-muted">|</span>
-            <Link href="/terms" className="text-muted hover:text-primary transition-colors">
+            <span className="text-primary">|</span>
+            <Link href="/terms" className="text-white hover:text-secondary transition-colors font-bold">
               Terms of Service
             </Link>
           </div>
