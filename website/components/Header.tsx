@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -26,9 +27,15 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="text-2xl font-bold text-primary">MMH</div>
+            <Image 
+              src="/logo.png" 
+              alt="Melksham Mental Health Logo" 
+              width={180}
+              height={60}
+              className="h-12 w-auto"
+              priority
+            />
             <div className="hidden sm:block">
-              <div className="text-xl font-bold text-white">MELKSHAM MENTAL HEALTH</div>
               <div className="text-xs text-muted">⚡ REAL STRUGGLES. REAL SUPPORT ⚡</div>
             </div>
           </Link>
