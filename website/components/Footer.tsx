@@ -1,114 +1,84 @@
 import Link from 'next/link';
-import { FaFacebook, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer className="bg-darker border-t border-primary/20 mt-16">
+    <footer className="grunge-header mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* About Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Logo and Tagline */}
           <div>
-            <h3 className="text-primary font-bold text-lg mb-4">About</h3>
-            <p className="text-muted text-sm">
-              Mental health support for Melksham, Wiltshire and beyond.
-            </p>
-            <p className="text-white font-bold mt-4 text-sm">
+            <h3 className="text-primary font-bold text-xl mb-4 grunge-text uppercase">
+              Melksham<br />Mental Health
+            </h3>
+            <p className="text-primary font-bold text-sm grunge-text">
               ⚡ REAL STRUGGLES. REAL SUPPORT ⚡
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation Links */}
           <div>
-            <h3 className="text-primary font-bold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/resources" className="text-muted hover:text-primary text-sm">
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/crisis" className="text-muted hover:text-primary text-sm">
-                  Crisis Support
-                </Link>
-              </li>
-              <li>
-                <Link href="/app" className="text-muted hover:text-primary text-sm">
-                  Download App
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-muted hover:text-primary text-sm">
-                  Blog
-                </Link>
-              </li>
-            </ul>
+            <nav className="flex flex-col space-y-2">
+              <Link href="/" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+                Home
+              </Link>
+              <Link href="/resources" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+                Resources
+              </Link>
+              <Link href="/blog" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+                Blog
+              </Link>
+              <Link href="/app/support" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+                Support
+              </Link>
+              <Link href="/about" className="text-muted hover:text-primary text-sm font-bold uppercase transition-colors">
+                About
+              </Link>
+            </nav>
           </div>
 
-          {/* Support */}
+          {/* Social and Email */}
           <div>
-            <h3 className="text-primary font-bold text-lg mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/contact" className="text-muted hover:text-primary text-sm">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/app/support" className="text-muted hover:text-primary text-sm">
-                  App Support
-                </Link>
-              </li>
-              <li>
-                <Link href="/license" className="text-muted hover:text-primary text-sm">
-                  Purchase License
-                </Link>
-              </li>
-              <li>
-                <Link href="/community/stories" className="text-muted hover:text-primary text-sm">
-                  Share Your Story
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact & Social */}
-          <div>
-            <h3 className="text-primary font-bold text-lg mb-4">Connect</h3>
-            <div className="space-y-3">
-              <a
-                href="mailto:help@melksham-mentalhealth.us"
-                className="flex items-center space-x-2 text-muted hover:text-primary text-sm"
-              >
-                <FaEnvelope />
-                <span>help@melksham-mentalhealth.us</span>
-              </a>
-              <a
-                href="https://facebook.com/melkshammentalhealth"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-muted hover:text-primary text-sm"
-              >
-                <FaFacebook />
-                <span>/melkshammentalhealth</span>
-              </a>
+            <div className="mb-4">
+              <input
+                type="email"
+                placeholder="Enter your email..."
+                className="w-full px-4 py-2 bg-dark border border-primary/30 rounded text-white placeholder-muted focus:border-primary focus:outline-none"
+              />
+              <button className="grunge-button w-full mt-2 px-6 py-2 rounded text-primary font-bold uppercase text-sm transition-all">
+                Subscribe
+              </button>
             </div>
-            <div className="mt-4 space-x-2">
-              <span className="text-muted text-xs">#melksham-mentalhealth</span>
-              <span className="text-muted text-xs">#wobbob</span>
+            <div className="flex space-x-4">
+              <a href="https://facebook.com/melkshammentalhealth" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                <FaFacebook className="text-2xl" />
+              </a>
+              <a href="#" className="text-muted hover:text-primary transition-colors">
+                <FaTwitter className="text-2xl" />
+              </a>
+              <a href="#" className="text-muted hover:text-primary transition-colors">
+                <FaYoutube className="text-2xl" />
+              </a>
+              <a href="#" className="text-muted hover:text-primary transition-colors">
+                <FaInstagram className="text-2xl" />
+              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted text-sm">
-            © 2024 Melksham Mental Health. All rights reserved.
+        <div className="border-t border-primary/20 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+          <p className="text-muted mb-4 md:mb-0">
+            © {currentYear} Melksham Mental Health. All rights reserved.
           </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-muted hover:text-primary text-sm">
+          <div className="flex space-x-4">
+            <Link href="/privacy" className="text-muted hover:text-primary transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-muted hover:text-primary text-sm">
+            <span className="text-muted">|</span>
+            <Link href="/terms" className="text-muted hover:text-primary transition-colors">
               Terms of Service
             </Link>
           </div>
