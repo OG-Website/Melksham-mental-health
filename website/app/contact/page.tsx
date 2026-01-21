@@ -134,10 +134,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                     <a
-                      href="mailto:help@melksham-mentalhealth.us"
+                      href="mailto:Melksham-mental-health@outlook.com"
                       className="text-secondary hover:text-primary"
                     >
-                      help@melksham-mentalhealth.us
+                      Melksham-mental-health@outlook.com
                     </a>
                     <p className="text-muted text-sm mt-2">
                       We typically respond within 24-48 hours

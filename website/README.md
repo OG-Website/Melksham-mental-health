@@ -97,7 +97,7 @@ STRIPE_LICENSE_PRICE_ID=price_...
 
 # Email Configuration (optional)
 RESEND_API_KEY=re_...
-CONTACT_EMAIL=help@melksham-mentalhealth.us
+CONTACT_EMAIL=Melksham-mental-health@outlook.com
 
 # Analytics (optional)
 NEXT_PUBLIC_GA_ID=G-...
@@ -148,7 +148,7 @@ The sticky crisis banner is always visible and provides:
 
 ## 📧 Contact & Support
 
-- **Email**: help@melksham-mentalhealth.us
+- **Email**: Melksham-mental-health@outlook.com
 - **Facebook**: /melkshammentalhealth
 - **Website**: melksham-mentalhealth.us
 

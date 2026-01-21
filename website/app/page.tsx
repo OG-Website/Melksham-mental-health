@@ -42,10 +42,10 @@ export default function Home() {
               Get Help
             </Link>
             <Link
-              href="/license"
+              href="/contact"
               className="grunge-button text-secondary font-black py-5 px-10 rounded-lg text-xl uppercase"
             >
-              Join Now
+              Contact Us
             </Link>
           </div>
         </div>
@@ -144,19 +144,12 @@ export default function Home() {
                 </li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-6">
-                <Link
-                  href="/app/download"
-                  className="grunge-button text-secondary font-black py-4 px-8 rounded-lg inline-flex items-center justify-center text-lg uppercase"
+                <div
+                  className="grunge-button text-secondary font-black py-4 px-8 rounded-lg inline-flex items-center justify-center text-lg uppercase opacity-70 cursor-not-allowed"
                 >
                   <FaDownload className="mr-3 text-xl" />
-                  Download Free
-                </Link>
-                <Link
-                  href="/license"
-                  className="grunge-button text-secondary font-black py-4 px-8 rounded-lg inline-block text-center text-lg uppercase"
-                >
-                  License - £20
-                </Link>
+                  Coming Soon
+                </div>
               </div>
             </div>
             <div className="grunge-button p-8 rounded-lg">

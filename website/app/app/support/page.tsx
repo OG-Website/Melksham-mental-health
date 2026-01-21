@@ -42,7 +42,7 @@ export default function SupportPage() {
     },
     {
       question: "Can I suggest new content or features?",
-      answer: "Absolutely! We welcome suggestions. Use the contact form or email us at help@melksham-mentalhealth.us"
+      answer: "Absolutely! We welcome suggestions. Use the contact form or email us at Melksham-mental-health@outlook.com"
     },
     {
       question: "Is my data safe?",

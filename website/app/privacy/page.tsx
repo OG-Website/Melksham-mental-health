@@ -78,8 +78,8 @@ export default function PrivacyPage() {
             </ul>
             <p className="text-white mt-4">
               To exercise these rights, contact us at{' '}
-              <a href="mailto:help@melksham-mentalhealth.us" className="text-secondary hover:text-primary">
-                help@melksham-mentalhealth.us
+              <a href="mailto:Melksham-mental-health@outlook.com" className="text-secondary hover:text-primary">
+                Melksham-mental-health@outlook.com
               </a>
             </p>
           </section>
@@ -116,8 +116,8 @@ export default function PrivacyPage() {
             </p>
             <p className="text-white mt-4">
               Email:{' '}
-              <a href="mailto:help@melksham-mentalhealth.us" className="text-secondary hover:text-primary">
-                help@melksham-mentalhealth.us
+              <a href="mailto:Melksham-mental-health@outlook.com" className="text-secondary hover:text-primary">
+                Melksham-mental-health@outlook.com
               </a>
             </p>
           </section>
