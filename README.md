@@ -8,12 +8,18 @@ A comprehensive mental health support project featuring a **Post Creator** deskt
 
 **NEW!** We now have a complete Next.js website ready to deploy!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wobbob89/Melksham-Mental-Health)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wobbob89/Melksham-Mental-Health&project-name=melksham-mental-health&repository-name=Melksham-Mental-Health&root-directory=website)
 
 **Quick Deploy Instructions:**
+1. Click the "Deploy with Vercel" button above (automatically sets root directory)
+2. Sign in with GitHub if needed
+3. Click "Deploy" - Done! ✅
+
+**Manual Deploy:**
 1. Visit [vercel.com](https://vercel.com) and sign in with GitHub
 2. Click "Add New Project" and import this repository
-3. Click "Deploy" - Done! ✅
+3. **Set Root Directory to `website`** (IMPORTANT!)
+4. Click "Deploy" ✅
 
 **Project ID:** `prj_lu136UlR6S9JxZC8t9n17SDLItx4`
 
@@ -22,10 +28,12 @@ A comprehensive mental health support project featuring a **Post Creator** deskt
 **Website Features:**
 - Mental health resources (local & national)
 - 24/7 crisis support information
-- Post Creator app download page
+- Post Creator app (Coming Soon)
 - Blog and community features
 - Mobile-responsive design
 - Built with Next.js 16 + Tailwind CSS
+
+**Contact:** Melksham-mental-health@outlook.com
 
 ---
 

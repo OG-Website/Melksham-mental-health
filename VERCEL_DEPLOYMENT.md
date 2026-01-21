@@ -4,7 +4,13 @@
 
 This repository is configured for easy deployment to Vercel. Follow these steps:
 
-### Option 1: Deploy via Vercel Dashboard (Recommended)
+### Option 1: One-Click Deploy (Easiest!)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wobbob89/Melksham-Mental-Health&project-name=melksham-mental-health&repository-name=Melksham-Mental-Health&root-directory=website)
+
+Click the button above - it automatically sets everything up including the root directory!
+
+### Option 2: Deploy via Vercel Dashboard
 
 1. **Visit Vercel**
    - Go to [vercel.com](https://vercel.com)
@@ -15,10 +21,11 @@ This repository is configured for easy deployment to Vercel. Follow these steps:
    - Select this repository: `wobbob89/Melksham-Mental-Health`
    - Vercel will automatically detect the Next.js framework
 
-3. **Configure Project**
-   - **Root Directory**: Leave as default (Vercel will use `vercel.json` configuration)
-   - **Framework**: Next.js (auto-detected)
-   - **Build Settings**: Automatically configured via `vercel.json`
+3. **⚠️ CRITICAL: Configure Root Directory**
+   - In the "Configure Project" section
+   - Find "Root Directory" setting
+   - **Set it to: `website`** (this is REQUIRED!)
+   - Click "Continue"
 
 4. **Environment Variables** (Optional - for full functionality)
    Add these in Vercel Project Settings → Environment Variables:
@@ -34,22 +41,17 @@ This repository is configured for easy deployment to Vercel. Follow these steps:
    - Wait 2-3 minutes for the build to complete
    - Your site will be live at `your-project.vercel.app`
 
-### Option 2: Deploy via Vercel CLI
+### Option 3: Deploy via Vercel CLI
 
 ```bash
 # Install Vercel CLI globally
 npm install -g vercel
 
-# Navigate to repository root
-cd Melksham-Mental-Health
+# Navigate to the website directory
+cd Melksham-Mental-Health/website
 
-# Deploy to Vercel
+# Deploy to Vercel from the website directory
 vercel
-
-# Follow the prompts:
-# - Link to existing project or create new
-# - Confirm settings
-# - Deploy!
 
 # For production deployment
 vercel --prod
@@ -60,20 +62,33 @@ vercel --prod
 Project ID: prj_lu136UlR6S9JxZC8t9n17SDLItx4
 ```
 
+## ⚠️ IMPORTANT: Root Directory Configuration
+
+The Next.js application is located in the `/website` subdirectory, NOT at the repository root.
+
+**You MUST configure the Root Directory:**
+- When using the deploy button above, it's automatically set
+- When deploying manually, set Root Directory to `website` in project settings
+- When using CLI, deploy from within the `website` directory
+
+**If you don't set this correctly, deployment will fail!**
+
 ## What Gets Deployed
 
-The Vercel configuration (`vercel.json`) is set up to:
-- Build the Next.js website from the `/website` directory
-- Install dependencies automatically
-- Optimize for production
-- Enable Edge Functions
-- Configure automatic HTTPS
+When properly configured with `website` as the root directory:
+- Next.js framework is auto-detected
+- Build command: `npm run build` (automatic)
+- Install command: `npm install` (automatic)
+- Output directory: `.next` (automatic)
+- 22 static pages are generated
+- Optimized for production with Edge Functions
+- Automatic HTTPS configured
 
 ## Deployment Features
 
 ✅ **Automatic Deployments**: Push to GitHub = automatic deploy  
 ✅ **Preview Deployments**: Each PR gets a unique preview URL  
-✅ **Zero Configuration**: Works out of the box with Next.js  
+✅ **Zero Configuration**: Works when root directory is set correctly  
 ✅ **Global CDN**: Fast worldwide access  
 ✅ **HTTPS**: Automatic SSL certificates  
 ✅ **Environment Variables**: Secure secrets management  

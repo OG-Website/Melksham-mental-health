@@ -1,6 +1,6 @@
 # 🚀 Deploy to Vercel - Quick Start
 
-This repository is ready to deploy to Vercel with **one click**!
+This repository is ready to deploy to Vercel!
 
 ## Vercel Project Information
 
@@ -8,20 +8,26 @@ This repository is ready to deploy to Vercel with **one click**!
 
 ## Quick Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wobbob89/Melksham-Mental-Health)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wobbob89/Melksham-Mental-Health&project-name=melksham-mental-health&repository-name=Melksham-Mental-Health&root-directory=website)
 
-### OR Deploy via Vercel Dashboard
+**Important:** The deploy button above automatically sets the root directory to `website`.
+
+### Manual Deploy via Vercel Dashboard
 
 1. **Go to [vercel.com](https://vercel.com)** and sign in with GitHub
 2. **Click "Add New Project"**
 3. **Import this repository:** `wobbob89/Melksham-Mental-Health`
-4. **Click "Deploy"** - That's it! ✅
+4. **IMPORTANT: Configure Root Directory**
+   - In "Configure Project" section
+   - Set **Root Directory** to: `website`
+   - Click "Continue"
+5. **Click "Deploy"** ✅
 
-Vercel will automatically:
-- Detect the Next.js framework
-- Use the `vercel.json` configuration
-- Build from the `/website` directory
-- Deploy to a live URL
+## Critical Configuration
+
+⚠️ **You MUST set the Root Directory to `website`** or the deployment will fail.
+
+This is because the Next.js application lives in the `/website` subdirectory, not at the repository root.
 
 ## What You Get
 
@@ -43,6 +49,19 @@ STRIPE_SECRET_KEY=sk_test_...
 ### Add Custom Domain
 In Vercel Project Settings → Domains, add your custom domain.
 
+## Troubleshooting
+
+### Deployment Fails?
+**Check this first:** Is the Root Directory set to `website`?
+- Go to Project Settings → General → Root Directory
+- It should be set to `website`
+- If it's empty or different, change it to `website` and redeploy
+
+### Build Errors?
+The build command should automatically be: `npm run build`
+The install command should be: `npm install`
+These are auto-detected when Root Directory is correctly set to `website`.
+
 ## 📚 Full Documentation
 
 For detailed deployment instructions, see:
@@ -55,7 +74,7 @@ For detailed deployment instructions, see:
 
 The website includes:
 - Mental health resources and crisis support
-- Post Creator desktop app download
+- Post Creator desktop app (Coming Soon)
 - Blog and community features
 - Mobile-responsive design
 - Accessibility features
@@ -67,9 +86,10 @@ The website includes:
 Mental health support for Melksham, Wiltshire and beyond. This website provides:
 - 24/7 crisis support information
 - Local and national mental health resources
-- Free desktop app for creating mental health awareness content
 - Community stories and blog posts
+
+**Contact:** Melksham-mental-health@outlook.com
 
 ---
 
-**Ready to deploy?** Click the Deploy button above or visit [vercel.com](https://vercel.com)!
+**Ready to deploy?** Click the Deploy button above (it automatically sets root directory to `website`) or follow the manual steps!
