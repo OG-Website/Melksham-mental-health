@@ -166,6 +166,29 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              <div className="bg-darker p-6 rounded-lg border border-primary/20">
+                <div className="flex items-start">
+                  <FaFacebook className="text-3xl text-accent mt-1 mr-4" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Community Group</h3>
+                    <a
+                      href="https://www.facebook.com/groups/m.m.health"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-secondary hover:text-primary"
+                    >
+                      Join Our Private Facebook Group
+                    </a>
+                    <p className="text-muted text-sm mt-2">
+                      A private peer support group where people help one another with mental health challenges
+                    </p>
+                    <p className="text-muted text-xs mt-1 italic">
+                      Note: This is a private group - requests to join are reviewed
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-primary/10 border border-primary p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-3">Office Hours</h3>
                 <p className="text-muted">

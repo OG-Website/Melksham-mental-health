@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaHeart, FaPen } from 'react-icons/fa';
+import { FaHeart, FaPen, FaFacebook } from 'react-icons/fa';
 
 export const metadata = {
   title: "Community | Melksham Mental Health",
@@ -37,6 +37,31 @@ export default function CommunityPage() {
             >
               Read Community Stories
             </Link>
+          </div>
+        </div>
+
+        {/* Facebook Community Group */}
+        <div className="mb-12">
+          <div className="bg-gradient-to-br from-accent to-primary p-8 rounded-lg text-center">
+            <FaFacebook className="text-6xl text-white mx-auto mb-6" />
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Join Our Private Support Group
+            </h2>
+            <p className="text-white text-lg mb-6">
+              Connect with others in our private Facebook group where people help one another 
+              with mental health challenges in a safe, moderated environment.
+            </p>
+            <p className="text-white/90 text-sm mb-8 italic">
+              This is a private group - all join requests are reviewed to maintain a safe space
+            </p>
+            <a
+              href="https://www.facebook.com/groups/m.m.health"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-lg inline-block transition-colors"
+            >
+              Join Facebook Group
+            </a>
           </div>
         </div>
 
