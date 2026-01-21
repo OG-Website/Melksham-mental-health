@@ -148,26 +148,6 @@ export default function ContactPage() {
 
               <div className="bg-darker p-6 rounded-lg border border-primary/20">
                 <div className="flex items-start">
-                  <FaFacebook className="text-3xl text-primary mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Social Media</h3>
-                    <a
-                      href="https://facebook.com/melkshammentalhealth"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-secondary hover:text-primary"
-                    >
-                      /melkshammentalhealth
-                    </a>
-                    <p className="text-muted text-sm mt-2">
-                      Follow us for updates and mental health content
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-darker p-6 rounded-lg border border-primary/20">
-                <div className="flex items-start">
                   <FaFacebook className="text-3xl text-accent mt-1 mr-4" />
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Community Group</h3>
