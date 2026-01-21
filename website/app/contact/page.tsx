@@ -134,10 +134,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                     <a
-                      href="mailto:help@melksham-mentalhealth.us"
+                      href="mailto:Melksham-mental-health@outlook.com"
                       className="text-secondary hover:text-primary"
                     >
-                      help@melksham-mentalhealth.us
+                      Melksham-mental-health@outlook.com
                     </a>
                     <p className="text-muted text-sm mt-2">
                       We typically respond within 24-48 hours
@@ -148,19 +148,22 @@ export default function ContactPage() {
 
               <div className="bg-darker p-6 rounded-lg border border-primary/20">
                 <div className="flex items-start">
-                  <FaFacebook className="text-3xl text-primary mt-1 mr-4" />
+                  <FaFacebook className="text-3xl text-accent mt-1 mr-4" />
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Social Media</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">Community Group</h3>
                     <a
-                      href="https://facebook.com/melkshammentalhealth"
+                      href="https://www.facebook.com/groups/m.m.health"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-secondary hover:text-primary"
                     >
-                      /melkshammentalhealth
+                      Join Our Private Facebook Group
                     </a>
                     <p className="text-muted text-sm mt-2">
-                      Follow us for updates and mental health content
+                      A private peer support group where people help one another with mental health challenges
+                    </p>
+                    <p className="text-muted text-xs mt-1 italic">
+                      Note: This is a private group - requests to join are reviewed
                     </p>
                   </div>
                 </div>

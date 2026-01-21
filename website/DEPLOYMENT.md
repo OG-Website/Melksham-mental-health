@@ -272,7 +272,7 @@ pm2 restart melksham-mh
 ## Support
 
 For deployment issues:
-- Email: help@melksham-mentalhealth.us
+- Email: Melksham-mental-health@outlook.com
 - Check Next.js docs: https://nextjs.org/docs
 - Vercel support: https://vercel.com/support
 

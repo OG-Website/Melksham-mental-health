@@ -63,7 +63,7 @@ Every requirement from the original scope has been implemented:
 - Tagline: "⚡ REAL STRUGGLES. REAL SUPPORT ⚡"
 - Hashtags: #melksham-mentalhealth #wobbob
 - Social: Facebook /melkshammentalhealth
-- Email: help@melksham-mentalhealth.us
+- Email: Melksham-mental-health@outlook.com
 
 ---
 
@@ -313,7 +313,7 @@ These are **not required** but could be added later:
 - Comprehensive FAQ on `/app/support`
 - Contact form on `/contact`
 - Crisis resources on every page
-- Email: help@melksham-mentalhealth.us
+- Email: Melksham-mental-health@outlook.com
 - Facebook: /melkshammentalhealth
 
 ### Maintenance Recommendations

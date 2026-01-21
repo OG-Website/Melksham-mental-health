@@ -136,8 +136,8 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-primary mb-4">13. Contact</h2>
             <p className="text-white">
               Questions about these terms? Contact us at:{' '}
-              <a href="mailto:help@melksham-mentalhealth.us" className="text-secondary hover:text-primary">
-                help@melksham-mentalhealth.us
+              <a href="mailto:Melksham-mental-health@outlook.com" className="text-secondary hover:text-primary">
+                Melksham-mental-health@outlook.com
               </a>
             </p>
           </section>
