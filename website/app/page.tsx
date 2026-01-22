@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaHeart, FaUsers, FaTools, FaDownload, FaStar, FaSkull } from 'react-icons/fa';
+import { FaHeart, FaUsers, FaTools, FaDownload, FaStar } from 'react-icons/fa';
 
 export default function Home() {
   return (

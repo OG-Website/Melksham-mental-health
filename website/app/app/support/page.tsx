@@ -87,7 +87,7 @@ export default function SupportPage() {
                 <div className="space-y-4 text-white">
                   <div>
                     <p className="font-bold mb-2">Windows SmartScreen Warning</p>
-                    <p className="text-muted">Click "More info" then "Run anyway" - this is normal for new applications.</p>
+                    <p className="text-muted">Click &quot;More info&quot; then &quot;Run anyway&quot; - this is normal for new applications.</p>
                   </div>
                   <div>
                     <p className="font-bold mb-2">App Crashes on Startup</p>
