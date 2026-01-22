@@ -126,7 +126,7 @@ export default function NationalResourcesPage() {
             <li>
               <strong className="text-white">Elefriends:</strong>{' '}
               <a href="https://www.elefriends.org.uk" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary">
-                Mind's supportive online community
+                Mind&apos;s supportive online community
               </a>
             </li>
           </ul>

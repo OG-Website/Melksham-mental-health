@@ -1,4 +1,4 @@
-import { FaStar, FaDownload } from 'react-icons/fa';
+import { FaDownload } from 'react-icons/fa';
 import Link from 'next/link';
 
 export const metadata = {
