@@ -58,14 +58,11 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
 STRIPE_SECRET_KEY=sk_test_...
 ```
 
-## Why No vercel.json?
+## Why vercel.json?
 
-For monorepos with subdirectories, Vercel's best practice is:
-1. Set Root Directory in the dashboard (not in code)
-2. Let Vercel auto-detect the framework
-3. No vercel.json needed at repository root
+This repo includes a root `vercel.json` so Vercel builds the `website/` Next.js app even if the Root Directory setting was missed.
 
-This avoids configuration conflicts and follows Vercel's recommended approach.
+It points Vercel at `website/package.json` and uses the Next.js builder, so deployments work without extra dashboard configuration.
 
 ## Need Help?
 
