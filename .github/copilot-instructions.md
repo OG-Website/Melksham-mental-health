@@ -253,7 +253,7 @@ Always include when relevant:
 ### Good Commit Messages
 - ✅ "Add anxiety resources for teenagers"
 - ✅ "Fix desktop app crash when data file missing"
-- ✅ "Update crisis contact information for 2026"
+- ✅ "Update crisis contact information"
 - ✅ "Improve mobile navigation on website"
 
 ### Bad Commit Messages
@@ -272,12 +272,13 @@ Always include when relevant:
 }
 ```
 
-### Bad Content Addition
+### Bad Content Addition (Missing Required Fields)
 ```json
 {
-  "text": "Just think positive!"  // Too simplistic, not evidence-based
+  "text": "Just think positive!"
 }
 ```
+Note: This is bad because it's too simplistic, not evidence-based, and missing required fields (author, topics, audience, source).
 
 ## Summary
 
