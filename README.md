@@ -2,6 +2,8 @@
 
 ⚡ **REAL STRUGGLES. REAL SUPPORT** ⚡
 
+[![PR Visual Proof](https://github.com/wobbob89/Melksham-Mental-Health/actions/workflows/pr-visual-proof.yml/badge.svg)](https://github.com/wobbob89/Melksham-Mental-Health/actions/workflows/pr-visual-proof.yml)
+
 A comprehensive mental health support project featuring a **Post Creator** desktop application and a **professional website** for raising awareness and supporting mental wellbeing in Melksham, Wiltshire, and across the UK.
 
 ## 🌐 Website - Deploy to Vercel
@@ -24,6 +26,16 @@ A comprehensive mental health support project featuring a **Post Creator** deskt
 **Project ID:** `prj_lu136UlR6S9JxZC8t9n17SDLItx4`
 
 📖 **Full deployment guide:** [DEPLOY_TO_VERCEL.md](./DEPLOY_TO_VERCEL.md)
+
+### 📸 Automatic Visual Verification
+
+Every Pull Request automatically:
+- ✅ Builds the website to verify it works
+- 📸 Takes full-page screenshots of key pages
+- 💬 Posts visual proof as a PR comment
+- 📦 Uploads screenshots as downloadable artifacts
+
+**See it in action:** Open any PR and check the automated comment with screenshots!
 
 **Website Features:**
 - Mental health resources (local & national)
