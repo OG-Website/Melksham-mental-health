@@ -11,7 +11,7 @@ jobs:
   visual-proof:
     name: 📸 Generate Visual Proof
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 🔍 Checkout code
         uses: actions/checkout@v4
@@ -56,17 +56,17 @@ jobs:
             --full-page \
             http://localhost:3000 \
             ../screenshots/homepage.png
-          
+
           npx playwright screenshot \
             --full-page \
             http://localhost:3000/about \
             ../screenshots/about.png
-          
+
           npx playwright screenshot \
             --full-page \
             http://localhost:3000/resources \
             ../screenshots/resources.png
-          
+
           npx playwright screenshot \
             --full-page \
             http://localhost:3000/contact \
@@ -85,34 +85,38 @@ jobs:
           script: |
             const fs = require('fs');
             const path = require('path');
-            
+
             const screenshotDir = path.join(process.cwd(), 'screenshots');
             const files = fs.readdirSync(screenshotDir);
-            
+
             let comment = `## 🎉 VISUAL PROOF - Site is Working! ✅\n\n`;
             comment += `### Build Status: SUCCESS ✅\n\n`;
             comment += `The website has been built and tested successfully!\n\n`;
             comment += `### 📸 Screenshots Generated:\n\n`;
-            
+
             files.forEach(file => {
               const pageName = file.replace('.png', '').replace('-', ' ');
               comment += `- ✅ ${pageName.charAt(0).toUpperCase() + pageName.slice(1)}\n`;
             });
-            
+
             comment += `\n### 📦 Download Full Screenshots\n\n`;
-            comment += `You can download all screenshots from the workflow artifacts:\n`;
-            comment += `[Download Screenshots](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\n\n`;
-            
+            comment += `You can download all screenshots `;
+            comment += `from the workflow artifacts:\n`;
+            comment += `[Download Screenshots](https://github.com/`;
+            comment += `${{ github.repository }}/actions/runs/`;
+            comment += `${{ github.run_id }})\n\n`;
+
             comment += `### 🔗 Pages Tested:\n`;
             comment += `- Homepage: http://localhost:3000\n`;
             comment += `- About: http://localhost:3000/about\n`;
             comment += `- Resources: http://localhost:3000/resources\n`;
             comment += `- Contact: http://localhost:3000/contact\n\n`;
-            
+
             comment += `---\n`;
-            comment += `**✨ All pages rendered successfully! The site is working! ✨**\n`;
+            comment += `**✨ All pages rendered successfully! `;
+            comment += `The site is working! ✨**\n`;
             comment += `*Powered by GitHub Actions + Playwright*`;
-            
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
