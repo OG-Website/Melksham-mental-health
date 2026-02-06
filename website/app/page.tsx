@@ -1,22 +1,43 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaHeart, FaUsers, FaTools, FaDownload, FaStar } from 'react-icons/fa';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section with grunge background */}
-      <section className="relative py-20 md:py-32" style={{
+      {/* Hero Section with detailed background */}
+      <section className="relative py-20 md:py-32 overflow-hidden" style={{
         background: 'linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%)'
       }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Detailed background pattern overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `
+            repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 102, 0, 0.3) 10px, rgba(255, 102, 0, 0.3) 20px),
+            repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 153, 0, 0.2) 10px, rgba(255, 153, 0, 0.2) 20px)
+          `,
+          backgroundSize: '100px 100px'
+        }}></div>
+        {/* Orange glow accents */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-orange-600/20 via-orange-500/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-radial from-orange-500/15 via-orange-600/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="mb-8">
-            <div className="text-7xl md:text-9xl font-black mb-4 grunge-text" style={{
-              WebkitTextStroke: '2px #000',
-              paintOrder: 'stroke fill'
-            }}>
-              MMH
+            {/* Logo instead of MMH text */}
+            <div className="flex justify-center mb-8">
+              <Image 
+                src="/logo.png" 
+                alt="Melksham Mental Health Logo" 
+                width={400}
+                height={150}
+                className="w-auto h-32 md:h-48"
+                priority
+                style={{
+                  filter: 'drop-shadow(0 0 20px rgba(255, 102, 0, 0.5)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9))'
+                }}
+              />
             </div>
-            <h1 className="text-5xl md:text-7xl font-black mb-4 grunge-text" style={{
+            <h1 className="text-4xl md:text-6xl font-black mb-4 grunge-text" style={{
               WebkitTextStroke: '2px #000',
               paintOrder: 'stroke fill'
             }}>
@@ -51,9 +72,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* What We Do Section with detailed background */}
+      <section className="py-16 relative overflow-hidden">
+        {/* Detailed geometric background pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `
+            linear-gradient(30deg, #ff6600 12%, transparent 12.5%, transparent 87%, #ff6600 87.5%, #ff6600),
+            linear-gradient(150deg, #ff6600 12%, transparent 12.5%, transparent 87%, #ff6600 87.5%, #ff6600),
+            linear-gradient(30deg, #ff6600 12%, transparent 12.5%, transparent 87%, #ff6600 87.5%, #ff6600),
+            linear-gradient(150deg, #ff6600 12%, transparent 12.5%, transparent 87%, #ff6600 87.5%, #ff6600)
+          `,
+          backgroundSize: '80px 140px',
+          backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px'
+        }}></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-16 grunge-text">
             What We Do
           </h2>
@@ -95,11 +127,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App Promotion Section */}
-      <section className="py-16" style={{
+      {/* App Promotion Section with detailed background */}
+      <section className="py-16 relative overflow-hidden" style={{
         background: 'linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%)'
       }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hexagonal pattern background */}
+        <div className="absolute inset-0" style={{
+          opacity: 0.08,
+          backgroundImage: `
+            radial-gradient(circle at center, rgba(255, 102, 0, 0.4) 0%, transparent 2px),
+            radial-gradient(circle at center, rgba(255, 153, 0, 0.3) 0%, transparent 2px)
+          `,
+          backgroundSize: '40px 40px, 40px 40px',
+          backgroundPosition: '0 0, 20px 20px'
+        }}></div>
+        {/* Orange accent glows */}
+        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-radial from-orange-600/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-radial from-orange-500/15 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-black mb-6 grunge-text">
