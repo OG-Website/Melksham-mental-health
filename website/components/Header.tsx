@@ -20,8 +20,8 @@ export default function Header() {
 
   return (
     <header className="grunge-header sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-5">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
@@ -29,34 +29,40 @@ export default function Header() {
               alt="Melksham Mental Health Logo" 
               width={280}
               height={90}
-              className="h-16 w-auto drop-shadow-2xl"
+              className="h-14 w-auto"
               priority
               style={{
-                filter: 'drop-shadow(0 0 8px rgba(255, 102, 0, 0.6)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9))'
+                filter: 'drop-shadow(0 2px 4px rgba(61, 56, 52, 0.15))'
               }}
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-7">
             {menuItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className="text-white hover:text-secondary transition-colors font-black uppercase text-base grunge-text"
+                className="font-medium transition-colors text-base"
+                style={{ color: '#5d7861' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#b86f56'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#5d7861'}
               >
                 {item.name}
               </Link>
             ))}
             <button
-              className="text-white hover:text-secondary transition-colors grunge-text"
+              className="transition-colors"
+              style={{ color: '#5d7861' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#b86f56'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#5d7861'}
               aria-label="Search"
             >
-              <FaSearch className="text-xl" />
+              <FaSearch className="text-lg" />
             </button>
             <Link
               href="/license"
-              className="grunge-button px-8 py-3 rounded-lg text-secondary font-black uppercase text-base transition-all"
+              className="grunge-button px-6 py-2.5 font-medium text-white transition-all"
             >
               Join Now
             </Link>
@@ -65,7 +71,8 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-secondary text-3xl"
+            className="md:hidden text-3xl transition-colors"
+            style={{ color: '#b86f56' }}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -74,12 +81,17 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-4 border-t border-primary/30 mt-2 pt-4">
+          <nav className="md:hidden pb-5 mt-4 pt-5" style={{
+            borderTop: '1px solid rgba(143, 165, 143, 0.15)'
+          }}>
             {menuItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className="block py-3 text-white hover:text-secondary transition-colors font-black uppercase grunge-text"
+                className="block py-3 font-medium transition-colors"
+                style={{ color: '#5d7861' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#b86f56'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#5d7861'}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
@@ -87,7 +99,7 @@ export default function Header() {
             ))}
             <Link
               href="/license"
-              className="block mt-3 grunge-button px-8 py-3 rounded-lg text-secondary font-black uppercase text-center"
+              className="block mt-4 grunge-button px-6 py-3 font-medium text-white text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Join Now
