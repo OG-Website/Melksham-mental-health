@@ -1,129 +1,125 @@
-'use client';
-
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaHeart, FaUsers, FaTools, FaDownload, FaStar } from 'react-icons/fa';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section with warm welcoming design */}
-      <section className="relative py-24 md:py-36" style={{
-        background: `
-          radial-gradient(circle at 20% 40%, rgba(143, 165, 143, 0.08), transparent 50%),
-          radial-gradient(circle at 80% 70%, rgba(212, 134, 106, 0.06), transparent 45%),
-          linear-gradient(to bottom, #f5f1e8, #fdfbf7)
-        `
+      {/* Hero Section with detailed background */}
+      <section className="relative py-20 md:py-32 overflow-hidden" style={{
+        background: 'linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%)'
       }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-6 px-5 py-2 rounded-full text-sm font-medium tracking-wide" style={{
-              background: 'rgba(143, 165, 143, 0.12)',
-              color: '#5d7861'
-            }}>
-              Supporting Melksham & Wiltshire Communities
+        {/* Detailed background pattern overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `
+            repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 102, 0, 0.3) 10px, rgba(255, 102, 0, 0.3) 20px),
+            repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 153, 0, 0.2) 10px, rgba(255, 153, 0, 0.2) 20px)
+          `,
+          backgroundSize: '100px 100px'
+        }}></div>
+        {/* Orange glow accents */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-orange-600/20 via-orange-500/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-radial from-orange-500/15 via-orange-600/5 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="mb-8">
+            {/* Logo instead of MMH text */}
+            <div className="flex justify-center mb-8">
+              <Image 
+                src="/logo.png" 
+                alt="Melksham Mental Health Logo" 
+                width={400}
+                height={150}
+                className="w-auto h-32 md:h-48"
+                priority
+                style={{
+                  filter: 'drop-shadow(0 0 20px rgba(255, 102, 0, 0.5)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9))'
+                }}
+              />
             </div>
-            <h1 className="text-5xl md:text-7xl mb-6 grunge-text" style={{
-              color: '#3d3834'
+            <h1 className="text-4xl md:text-6xl font-black mb-4 grunge-text" style={{
+              WebkitTextStroke: '2px #000',
+              paintOrder: 'stroke fill'
             }}>
-              You&apos;re Not Alone
+              MELKSHAM MENTAL HEALTH
             </h1>
-            <p className="text-2xl md:text-3xl mb-8" style={{
-              color: '#5d7861',
-              fontFamily: 'Georgia, serif',
-              fontWeight: '500',
-              lineHeight: '1.4'
+            <p className="text-2xl md:text-4xl font-black mb-8 grunge-text text-white" style={{
+              textShadow: '3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000'
             }}>
-              Finding strength together through compassionate support
+              ⚡ REAL STRUGGLES. REAL SUPPORT ⚡
             </p>
           </div>
-          <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-center" style={{
-            color: '#3d3834',
-            lineHeight: '1.8'
+          <p className="text-xl text-white mb-12 max-w-3xl mx-auto font-bold" style={{
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)'
           }}>
             Mental health support for Melksham, Wiltshire and beyond. 
             Access free resources, connect with your community, and find real help when you need it.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               href="/resources"
-              className="grunge-button py-4 px-9 text-lg font-medium tracking-wide text-white"
+              className="grunge-button text-secondary font-black py-5 px-10 rounded-lg text-xl uppercase"
             >
-              Find Support Now
+              Get Help
             </Link>
             <Link
               href="/contact"
-              className="py-4 px-9 text-lg font-medium tracking-wide rounded-xl border-2 transition-all duration-300"
-              style={{
-                borderColor: '#8fa58f',
-                color: '#5d7861',
-                background: 'transparent'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(143, 165, 143, 0.08)';
-                e.currentTarget.style.borderColor = '#5d7861';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.borderColor = '#8fa58f';
-              }}
+              className="grunge-button text-secondary font-black py-5 px-10 rounded-lg text-xl uppercase"
             >
-              Get in Touch
+              Contact Us
             </Link>
           </div>
         </div>
       </section>
 
-      {/* What We Do Section */}
-      <section className="py-20" style={{ background: '#fdfbf7' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl text-center mb-4 grunge-text">
-            How We Help
+      {/* What We Do Section with detailed background */}
+      <section className="py-16 relative overflow-hidden">
+        {/* Detailed geometric background pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `
+            linear-gradient(30deg, #ff6600 12%, transparent 12.5%, transparent 87%, #ff6600 87.5%, #ff6600),
+            linear-gradient(150deg, #ff6600 12%, transparent 12.5%, transparent 87%, #ff6600 87.5%, #ff6600),
+            linear-gradient(30deg, #ff6600 12%, transparent 12.5%, transparent 87%, #ff6600 87.5%, #ff6600),
+            linear-gradient(150deg, #ff6600 12%, transparent 12.5%, transparent 87%, #ff6600 87.5%, #ff6600)
+          `,
+          backgroundSize: '80px 140px',
+          backgroundPosition: '0 0, 0 0, 40px 70px, 40px 70px'
+        }}></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 grunge-text">
+            What We Do
           </h2>
-          <p className="text-center text-lg mb-16 max-w-2xl mx-auto" style={{
-            color: '#5d7861'
-          }}>
-            Compassionate support designed with you in mind
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="p-8 rounded-2xl" style={{
-              background: 'linear-gradient(135deg, #ffffff, #f5f1e8)',
-              boxShadow: '0 4px 20px rgba(61, 56, 52, 0.08)'
-            }}>
-              <div className="mb-6 inline-block p-4 rounded-xl" style={{
-                background: 'rgba(212, 134, 106, 0.12)'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grunge-button p-8 rounded-lg">
+              <FaHeart className="text-6xl text-secondary mb-6 mx-auto" style={{
+                filter: 'drop-shadow(0 0 10px rgba(255, 102, 0, 0.6))'
+              }} />
+              <h3 className="text-2xl font-black mb-4 grunge-text text-center">Support</h3>
+              <p className="text-white font-bold text-center" style={{
+                textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)'
               }}>
-                <FaHeart className="text-5xl" style={{ color: '#b86f56' }} />
-              </div>
-              <h3 className="text-2xl mb-4 grunge-text">Real Support</h3>
-              <p style={{ color: '#3d3834', lineHeight: '1.7' }}>
                 Real mental health support for real people. We understand because we&apos;ve been there.
               </p>
             </div>
-            <div className="p-8 rounded-2xl" style={{
-              background: 'linear-gradient(135deg, #ffffff, #f5f1e8)',
-              boxShadow: '0 4px 20px rgba(61, 56, 52, 0.08)'
-            }}>
-              <div className="mb-6 inline-block p-4 rounded-xl" style={{
-                background: 'rgba(143, 165, 143, 0.12)'
+            <div className="grunge-button p-8 rounded-lg">
+              <FaUsers className="text-6xl text-secondary mb-6 mx-auto" style={{
+                filter: 'drop-shadow(0 0 10px rgba(255, 102, 0, 0.6))'
+              }} />
+              <h3 className="text-2xl font-black mb-4 grunge-text text-center">Resources</h3>
+              <p className="text-white font-bold text-center" style={{
+                textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)'
               }}>
-                <FaUsers className="text-5xl" style={{ color: '#5d7861' }} />
-              </div>
-              <h3 className="text-2xl mb-4 grunge-text">Local Resources</h3>
-              <p style={{ color: '#3d3834', lineHeight: '1.7' }}>
                 Comprehensive local and national crisis resources available 24/7.
               </p>
             </div>
-            <div className="p-8 rounded-2xl" style={{
-              background: 'linear-gradient(135deg, #ffffff, #f5f1e8)',
-              boxShadow: '0 4px 20px rgba(61, 56, 52, 0.08)'
-            }}>
-              <div className="mb-6 inline-block p-4 rounded-xl" style={{
-                background: 'rgba(212, 134, 106, 0.12)'
+            <div className="grunge-button p-8 rounded-lg">
+              <FaTools className="text-6xl text-secondary mb-6 mx-auto" style={{
+                filter: 'drop-shadow(0 0 10px rgba(255, 102, 0, 0.6))'
+              }} />
+              <h3 className="text-2xl font-black mb-4 grunge-text text-center">Tools</h3>
+              <p className="text-white font-bold text-center" style={{
+                textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)'
               }}>
-                <FaTools className="text-5xl" style={{ color: '#b86f56' }} />
-              </div>
-              <h3 className="text-2xl mb-4 grunge-text">Free Tools</h3>
-              <p style={{ color: '#3d3834', lineHeight: '1.7' }}>
                 Free content creation app for mental health awareness and support.
               </p>
             </div>
@@ -131,94 +127,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App Promotion Section */}
-      <section className="py-20" style={{
-        background: 'linear-gradient(to bottom, #f5f1e8, #fdfbf7)'
+      {/* App Promotion Section with detailed background */}
+      <section className="py-16 relative overflow-hidden" style={{
+        background: 'linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%)'
       }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hexagonal pattern background */}
+        <div className="absolute inset-0 opacity-8" style={{
+          backgroundImage: `
+            radial-gradient(circle at center, rgba(255, 102, 0, 0.4) 0%, transparent 2px),
+            radial-gradient(circle at center, rgba(255, 153, 0, 0.3) 0%, transparent 2px)
+          `,
+          backgroundSize: '40px 40px, 40px 40px',
+          backgroundPosition: '0 0, 20px 20px'
+        }}></div>
+        {/* Orange accent glows */}
+        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-radial from-orange-600/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-radial from-orange-500/15 to-transparent rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block mb-4 px-4 py-1 rounded-full text-sm font-medium" style={{
-                background: 'rgba(212, 134, 106, 0.15)',
-                color: '#b86f56'
-              }}>
-                Coming Soon
-              </div>
-              <h2 className="text-4xl md:text-5xl mb-6 grunge-text">
+              <h2 className="text-4xl md:text-5xl font-black mb-6 grunge-text">
                 Post Creator Desktop App
               </h2>
-              <p className="text-lg mb-10" style={{
-                color: '#3d3834',
-                lineHeight: '1.8'
+              <p className="text-white text-lg mb-8 font-bold" style={{
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)'
               }}>
                 Generate positive mental health content with our free desktop application. 
                 Perfect for raising awareness and supporting your community.
               </p>
-              <ul className="space-y-4 mb-12">
+              <ul className="space-y-4 mb-10">
                 <li className="flex items-start">
-                  <div className="mt-1 mr-3 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style={{
-                    background: 'rgba(143, 165, 143, 0.2)'
-                  }}>
-                    <FaStar style={{ color: '#5d7861', fontSize: '12px' }} />
-                  </div>
-                  <span style={{ color: '#3d3834' }}>100+ inspirational quotes and affirmations</span>
+                  <FaStar className="text-secondary mt-1 mr-3 flex-shrink-0 text-xl" style={{
+                    filter: 'drop-shadow(0 0 6px rgba(255, 102, 0, 0.6))'
+                  }} />
+                  <span className="text-white font-bold text-lg">100+ inspirational quotes and affirmations</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="mt-1 mr-3 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style={{
-                    background: 'rgba(143, 165, 143, 0.2)'
-                  }}>
-                    <FaStar style={{ color: '#5d7861', fontSize: '12px' }} />
-                  </div>
-                  <span style={{ color: '#3d3834' }}>Uplifting recovery stories</span>
+                  <FaStar className="text-secondary mt-1 mr-3 flex-shrink-0 text-xl" style={{
+                    filter: 'drop-shadow(0 0 6px rgba(255, 102, 0, 0.6))'
+                  }} />
+                  <span className="text-white font-bold text-lg">Uplifting recovery stories</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="mt-1 mr-3 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style={{
-                    background: 'rgba(143, 165, 143, 0.2)'
-                  }}>
-                    <FaStar style={{ color: '#5d7861', fontSize: '12px' }} />
-                  </div>
-                  <span style={{ color: '#3d3834' }}>Evidence-based advice and tips</span>
+                  <FaStar className="text-secondary mt-1 mr-3 flex-shrink-0 text-xl" style={{
+                    filter: 'drop-shadow(0 0 6px rgba(255, 102, 0, 0.6))'
+                  }} />
+                  <span className="text-white font-bold text-lg">Evidence-based advice and tips</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="mt-1 mr-3 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style={{
-                    background: 'rgba(143, 165, 143, 0.2)'
-                  }}>
-                    <FaStar style={{ color: '#5d7861', fontSize: '12px' }} />
-                  </div>
-                  <span style={{ color: '#3d3834' }}>Local Melksham & Wiltshire resources</span>
+                  <FaStar className="text-secondary mt-1 mr-3 flex-shrink-0 text-xl" style={{
+                    filter: 'drop-shadow(0 0 6px rgba(255, 102, 0, 0.6))'
+                  }} />
+                  <span className="text-white font-bold text-lg">Local Melksham & Wiltshire resources</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="mt-1 mr-3 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style={{
-                    background: 'rgba(143, 165, 143, 0.2)'
-                  }}>
-                    <FaStar style={{ color: '#5d7861', fontSize: '12px' }} />
-                  </div>
-                  <span style={{ color: '#3d3834' }}>20+ mental health topics covered</span>
+                  <FaStar className="text-secondary mt-1 mr-3 flex-shrink-0 text-xl" style={{
+                    filter: 'drop-shadow(0 0 6px rgba(255, 102, 0, 0.6))'
+                  }} />
+                  <span className="text-white font-bold text-lg">20+ mental health topics covered</span>
                 </li>
               </ul>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-6">
                 <div
-                  className="py-4 px-8 rounded-xl inline-flex items-center justify-center font-medium opacity-60 cursor-not-allowed"
-                  style={{
-                    background: 'rgba(143, 165, 143, 0.15)',
-                    color: '#5d7861'
-                  }}
+                  className="grunge-button text-secondary font-black py-4 px-8 rounded-lg inline-flex items-center justify-center text-lg uppercase opacity-70 cursor-not-allowed"
                 >
-                  <FaDownload className="mr-3" />
-                  Available Soon
+                  <FaDownload className="mr-3 text-xl" />
+                  Coming Soon
                 </div>
               </div>
             </div>
-            <div className="p-6 rounded-2xl" style={{
-              background: 'linear-gradient(135deg, #ffffff, #f5f1e8)',
-              boxShadow: '0 8px 30px rgba(61, 56, 52, 0.1)'
-            }}>
-              <div className="aspect-video rounded-xl flex items-center justify-center" style={{
-                background: 'linear-gradient(to bottom right, rgba(143, 165, 143, 0.1), rgba(212, 134, 106, 0.08))'
+            <div className="grunge-button p-8 rounded-lg">
+              <div className="aspect-video rounded flex items-center justify-center" style={{
+                background: 'radial-gradient(circle, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%)'
               }}>
                 <div className="text-center">
                   <div className="text-7xl mb-4">📱</div>
-                  <p className="font-medium text-lg" style={{ color: '#5d7861' }}>Preview Coming Soon</p>
+                  <p className="text-white font-bold text-xl grunge-text">App Screenshot</p>
                 </div>
               </div>
             </div>
@@ -227,62 +212,44 @@ export default function Home() {
       </section>
 
       {/* Featured Content Section */}
-      <section className="py-20" style={{ background: '#fdfbf7' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl text-center mb-14 grunge-text">
+      <section className="py-16 bg-darker">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
             From Our Community
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Quote Card */}
-            <div className="p-7 rounded-2xl" style={{
-              background: 'linear-gradient(135deg, #ffffff, #f5f1e8)',
-              border: '1px solid rgba(143, 165, 143, 0.15)',
-              boxShadow: '0 2px 12px rgba(61, 56, 52, 0.06)'
-            }}>
-              <div className="text-5xl mb-4">💬</div>
-              <h3 className="text-xl mb-3 grunge-text" style={{ fontSize: '1.3rem' }}>Daily Inspiration</h3>
-              <blockquote className="italic mb-4" style={{ color: '#3d3834', lineHeight: '1.7' }}>
+            <div className="bg-dark p-6 rounded-lg border border-primary/20">
+              <div className="text-4xl mb-4">💬</div>
+              <h3 className="text-xl font-bold text-primary mb-3">Daily Inspiration</h3>
+              <blockquote className="text-white italic mb-4">
                 &quot;You don&apos;t have to be positive all the time. Having feelings doesn&apos;t make you negative. It makes you human.&quot;
               </blockquote>
-              <Link href="/blog" className="font-medium transition-colors" style={{ color: '#b86f56' }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#d4866a'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#b86f56'}>
+              <Link href="/blog" className="text-secondary hover:text-primary transition-colors">
                 Read more →
               </Link>
             </div>
 
             {/* Blog Card */}
-            <div className="p-7 rounded-2xl" style={{
-              background: 'linear-gradient(135deg, #ffffff, #f5f1e8)',
-              border: '1px solid rgba(143, 165, 143, 0.15)',
-              boxShadow: '0 2px 12px rgba(61, 56, 52, 0.06)'
-            }}>
-              <div className="text-5xl mb-4">📝</div>
-              <h3 className="text-xl mb-3 grunge-text" style={{ fontSize: '1.3rem' }}>Latest Article</h3>
-              <p className="mb-4" style={{ color: '#3d3834', lineHeight: '1.7' }}>
+            <div className="bg-dark p-6 rounded-lg border border-primary/20">
+              <div className="text-4xl mb-4">📝</div>
+              <h3 className="text-xl font-bold text-primary mb-3">Latest Blog Post</h3>
+              <p className="text-white mb-4">
                 5 Ways to Support Your Mental Health This Winter
               </p>
-              <Link href="/blog" className="font-medium transition-colors" style={{ color: '#b86f56' }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#d4866a'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#b86f56'}>
+              <Link href="/blog" className="text-secondary hover:text-primary transition-colors">
                 Read article →
               </Link>
             </div>
 
             {/* Community Card */}
-            <div className="p-7 rounded-2xl" style={{
-              background: 'linear-gradient(135deg, #ffffff, #f5f1e8)',
-              border: '1px solid rgba(143, 165, 143, 0.15)',
-              boxShadow: '0 2px 12px rgba(61, 56, 52, 0.06)'
-            }}>
-              <div className="text-5xl mb-4">💚</div>
-              <h3 className="text-xl mb-3 grunge-text" style={{ fontSize: '1.3rem' }}>Community Stories</h3>
-              <p className="mb-4" style={{ color: '#3d3834', lineHeight: '1.7' }}>
+            <div className="bg-dark p-6 rounded-lg border border-primary/20">
+              <div className="text-4xl mb-4">💚</div>
+              <h3 className="text-xl font-bold text-primary mb-3">Community Stories</h3>
+              <p className="text-white mb-4">
                 Real stories of hope and recovery from people just like you.
               </p>
-              <Link href="/community/stories" className="font-medium transition-colors" style={{ color: '#b86f56' }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#d4866a'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#b86f56'}>
+              <Link href="/community/stories" className="text-secondary hover:text-primary transition-colors">
                 Share your story →
               </Link>
             </div>
@@ -291,35 +258,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20" style={{
-        background: 'linear-gradient(to right, #d4866a, #b86f56)'
-      }}>
+      <section className="py-16 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6" style={{
-            fontFamily: 'Georgia, serif'
-          }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             You Are Not Alone
           </h2>
-          <p className="text-xl text-white mb-10" style={{ opacity: 0.95, lineHeight: '1.7' }}>
+          <p className="text-xl text-white mb-8">
             Whether you&apos;re struggling or supporting someone who is, we&apos;re here to help. 
             Reach out today.
           </p>
           <Link
             href="/contact"
-            className="inline-block py-4 px-10 rounded-xl text-lg font-medium transition-all duration-300"
-            style={{
-              background: 'white',
-              color: '#b86f56',
-              boxShadow: '0 4px 14px rgba(0, 0, 0, 0.15)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 14px rgba(0, 0, 0, 0.15)';
-            }}
+            className="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-8 rounded-lg text-lg inline-block transition-colors"
           >
             Get In Touch
           </Link>
