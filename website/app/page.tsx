@@ -132,7 +132,8 @@ export default function Home() {
         background: 'linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%)'
       }}>
         {/* Hexagonal pattern background */}
-        <div className="absolute inset-0 opacity-8" style={{
+        <div className="absolute inset-0" style={{
+          opacity: 0.08,
           backgroundImage: `
             radial-gradient(circle at center, rgba(255, 102, 0, 0.4) 0%, transparent 2px),
             radial-gradient(circle at center, rgba(255, 153, 0, 0.3) 0%, transparent 2px)
