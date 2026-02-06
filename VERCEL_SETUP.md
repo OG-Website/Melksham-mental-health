@@ -58,11 +58,14 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
 STRIPE_SECRET_KEY=sk_test_...
 ```
 
-## Why vercel.json?
+## Configuration Notes
 
-This repo includes a root `vercel.json` so Vercel builds the `website/` Next.js app even if the Root Directory setting was missed.
+This repository relies on Vercel's project settings for deployment configuration. There is **no root `vercel.json`** file - this avoids conflicts between file-based configuration and Vercel Dashboard settings.
 
-It points Vercel at `website/package.json` and uses the Next.js builder, so deployments work without extra dashboard configuration.
+When you set the Root Directory to `website` in Vercel Dashboard:
+- Vercel automatically detects Next.js and applies the correct build settings
+- No additional configuration files are needed
+- You have full control via the Vercel Dashboard
 
 ## Need Help?
 
