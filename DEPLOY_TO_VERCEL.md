@@ -8,7 +8,7 @@ This repository is ready to deploy to Vercel!
 
 ## Quick Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wobbob89/Melksham-Mental-Health&project-name=melksham-mental-health&repository-name=Melksham-Mental-Health&root-directory=website)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/wobbob89/melksham-mentalhealth.us&project-name=melksham-mental-health&repository-name=melksham-mentalhealth.us&root-directory=website)
 
 **Important:** The deploy button above automatically sets the root directory to `website`.
 
@@ -16,7 +16,7 @@ This repository is ready to deploy to Vercel!
 
 1. **Go to [vercel.com](https://vercel.com)** and sign in with GitHub
 2. **Click "Add New Project"**
-3. **Import this repository:** `wobbob89/Melksham-Mental-Health`
+3. **Import this repository:** `wobbob89/melksham-mentalhealth.us`
 4. **IMPORTANT: Configure Root Directory**
    - In "Configure Project" section
    - Set **Root Directory** to: `website`
