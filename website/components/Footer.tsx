@@ -23,7 +23,7 @@ export default function Footer() {
             </nav>
 
             <form className="footer-subscribe-bar">
-              <input type="email" placeholder="Enter your email>>" className="brand-input" />
+              <input type="email" placeholder="Enter your email..." className="brand-input" />
               <button type="button" className="metal-button pulse-attention">Subscribe</button>
             </form>
           </div>

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FaEnvelope, FaExclamationTriangle } from 'react-icons/fa';
 
 export const metadata = {
@@ -12,7 +11,7 @@ export default function ContactPage() {
       <section className="content-shell bg-texture-3">
         <p className="section-kicker">Page 7 — Contact</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-4 normal-case tracking-normal">Get In Touch</h1>
-        <p className="text-lg text-zinc-100 mb-5">If you would like to reach out, contact us via email or the website form. We aim to respond as soon as possible.</p>
+        <p className="text-lg text-zinc-100 mb-5">If you would like to reach out, you can contact us by email or via our private Facebook group below. We aim to respond as soon as possible.</p>
         <p className="text-zinc-100">Thank you for being here. If you’re reading this, you’re still fighting — and that matters.</p>
       </section>
 
@@ -22,7 +21,7 @@ export default function ContactPage() {
           <a href="mailto:Melksham-mental-health@outlook.com" className="metal-button metal-button--small pulse-attention">
             <FaEnvelope /> Melksham-mental-health@outlook.com
           </a>
-          <Link href="https://www.facebook.com/groups/m.m.health" className="metal-button metal-button--small">Private Facebook Group</Link>
+          <a href="https://www.facebook.com/groups/m.m.health" target="_blank" rel="noopener noreferrer" className="metal-button metal-button--small">Private Facebook Group</a>
         </div>
       </section>
 

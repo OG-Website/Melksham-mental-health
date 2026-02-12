@@ -12,12 +12,9 @@ This repository now includes the full content and UI refresh requested for:
 
 ## Background assets
 
-- The textured page backgrounds are sourced from: `website/public/Bground-buttons.png`.
-- CSS texture classes are mapped in `website/app/globals.css` using `bg-texture-1..4` with quadrant positions:
-  - `left top`
-  - `right top`
-  - `left bottom`
-  - `right bottom`
+- The textured page backgrounds use the design reference image: `website/public/design-reference.png` (originally `assets/headders footers buttons etc.png`).
+- CSS texture classes `bg-texture-1..4` are defined in `website/app/globals.css` and use specific positioning to show texture-only areas (avoiding UI elements like buttons/headers).
+- Background positioning focuses on concrete/grunge texture areas of the design reference image.
 
 ## Notes on binary files
 
