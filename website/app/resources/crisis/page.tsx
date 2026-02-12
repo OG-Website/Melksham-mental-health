@@ -7,21 +7,21 @@ export const metadata = {
 
 export default function CrisisHelpPage() {
   return (
-    <div className="py-10 md:py-14 space-y-8">
-      <section className="content-shell bg-texture-2 border border-error/70">
+    <div className="space-y-0">
+      <section className="page-section bg-texture-1 border-t-4 border-error/70">
         <p className="section-kicker">Page 6 — Crisis Help</p>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal flex items-center gap-3">
+        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal flex items-center gap-3 max-w-4xl">
           <FaExclamationTriangle className="text-error" /> If you are in immediate danger
         </h1>
-        <div className="space-y-4 text-lg text-zinc-100">
+        <div className="space-y-4 text-lg text-zinc-100 max-w-4xl">
           <p className="text-white font-bold text-2xl">Call <a href="tel:999" className="underline">999</a>.</p>
           <p>If you or someone else is in immediate danger or needs urgent medical help, call 999 right away.</p>
         </div>
       </section>
 
-      <section className="content-shell bg-texture-2">
+      <section className="page-section bg-texture-2">
         <h2 className="text-3xl md:text-4xl font-black text-white mb-5 normal-case tracking-normal">24/7 Urgent Mental Health Support</h2>
-        <div className="space-y-4 text-lg text-zinc-100">
+        <div className="space-y-4 text-lg text-zinc-100 max-w-4xl">
           <div className="flex flex-col gap-3">
             <div>
               <h3 className="font-bold text-white mb-2 flex items-center gap-2"><FaPhoneAlt /> Samaritans</h3>
@@ -57,10 +57,10 @@ export default function CrisisHelpPage() {
         </div>
       </section>
 
-      <section className="content-shell bg-texture-2 border border-primary/50">
-        <p className="text-white font-bold text-xl mb-3">Reaching out for emergency help is not failure.</p>
-        <p className="text-lg text-zinc-100">It is survival.</p>
-        <p className="mt-4 text-zinc-100">This platform offers peer support but cannot replace emergency or medical services.</p>
+      <section className="page-section bg-texture-3 border-t-4 border-primary/50">
+        <p className="text-white font-bold text-xl mb-3 max-w-4xl">Reaching out for emergency help is not failure.</p>
+        <p className="text-lg text-zinc-100 max-w-4xl">It is survival.</p>
+        <p className="mt-4 text-zinc-100 max-w-4xl">This platform offers peer support but cannot replace emergency or medical services.</p>
       </section>
     </div>
   );

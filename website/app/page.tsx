@@ -3,9 +3,9 @@ import { FaArrowRight, FaExclamationTriangle, FaHeart, FaLifeRing } from 'react-
 
 export default function Home() {
   return (
-    <div className="space-y-8 py-10 md:py-14">
+    <div className="space-y-0">
       {/* HERO SECTION */}
-      <section className="content-shell bg-texture-1">
+      <section className="page-section bg-texture-1">
         <h1 className="text-4xl md:text-6xl font-black text-white mb-6 normal-case tracking-normal">
           I Nearly Lost Everything. <br />
           <span className="text-primary">More Than Once.</span>
@@ -20,9 +20,9 @@ export default function Home() {
       </section>
 
       {/* WHAT THIS IS */}
-      <section className="content-shell bg-texture-2">
+      <section className="page-section bg-texture-2">
         <h2 className="text-3xl md:text-4xl font-black text-white mb-6 normal-case tracking-normal">What This Is</h2>
-        <div className="space-y-4 text-zinc-100 text-lg leading-relaxed">
+        <div className="space-y-4 text-zinc-100 text-lg leading-relaxed max-w-4xl">
           <p>Melksham Mental Health isn't a clinic.</p>
           <p>It isn't a charity built from a boardroom.</p>
           <p className="font-semibold text-white">It's built from lived experience.</p>
@@ -33,9 +33,9 @@ export default function Home() {
       </section>
 
       {/* WHO THIS IS FOR */}
-      <section className="content-shell bg-texture-3">
+      <section className="page-section bg-texture-3">
         <h2 className="text-3xl md:text-4xl font-black text-white mb-6 normal-case tracking-normal">Who This Is For</h2>
-        <div className="space-y-4 text-zinc-100 text-lg leading-relaxed">
+        <div className="space-y-4 text-zinc-100 text-lg leading-relaxed max-w-4xl">
           <p>This is for you if:</p>
           <ul className="space-y-2">
             <li className="flex gap-3 items-start">
@@ -66,9 +66,9 @@ export default function Home() {
       </section>
 
       {/* WHAT YOU'LL FIND HERE */}
-      <section className="content-shell bg-texture-4">
+      <section className="page-section bg-texture-4">
         <h2 className="text-3xl md:text-4xl font-black text-white mb-6 normal-case tracking-normal">What You'll Find Here</h2>
-        <div className="space-y-4 text-zinc-100 text-lg leading-relaxed">
+        <div className="space-y-4 text-zinc-100 text-lg leading-relaxed max-w-4xl">
           <ul className="space-y-2">
             <li className="flex gap-3 items-start">
               <span className="text-primary mt-1">•</span>
@@ -108,24 +108,24 @@ export default function Home() {
       </section>
 
       {/* IMPORTANT - CRISIS INFO */}
-      <section className="content-shell bg-texture-1 border border-error/70">
+      <section className="page-section bg-texture-1 border-t-4 border-error/70">
         <h2 className="text-3xl font-black text-white mb-4 normal-case tracking-normal flex items-center gap-3">
           <FaExclamationTriangle className="text-error" /> Important
         </h2>
-        <p className="text-zinc-100 text-lg mb-4">
+        <p className="text-zinc-100 text-lg mb-4 max-w-4xl">
           This is peer support. We are not a crisis service and we do not replace emergency care.
         </p>
-        <ul className="space-y-2 text-zinc-100 text-lg">
+        <ul className="space-y-2 text-zinc-100 text-lg max-w-4xl">
           <li>• If you are in immediate danger, call <a href="tel:999" className="underline font-semibold">999</a>.</li>
           <li>• If you need urgent emotional support in the UK, call <a href="tel:116123" className="underline font-semibold">Samaritans on 116 123</a>.</li>
         </ul>
-        <p className="mt-6 text-white font-bold text-xl">Asking for help is not weakness. Staying is strength.</p>
+        <p className="mt-6 text-white font-bold text-xl max-w-4xl">Asking for help is not weakness. Staying is strength.</p>
       </section>
 
       {/* CLOSING MESSAGE */}
-      <section className="content-shell bg-texture-2">
-        <p className="text-zinc-100 text-lg">If you're here, it means part of you still wants to survive.</p>
-        <p className="text-white font-bold text-2xl mt-3">That's enough for today.</p>
+      <section className="page-section bg-texture-2">
+        <p className="text-zinc-100 text-lg max-w-4xl">If you're here, it means part of you still wants to survive.</p>
+        <p className="text-white font-bold text-2xl mt-3 max-w-4xl">That's enough for today.</p>
       </section>
     </div>
   );

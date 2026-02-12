@@ -554,6 +554,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('/design-reference.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Top-left area (above main logo area - concrete texture) */
@@ -574,4 +575,39 @@ h1, h2, h3, h4, h5, h6 {
 /* Bottom-right area (footer right side texture) */
 .bg-texture-4 { 
   background-position: 88% 95%;
+}
+
+/* Page section styling - backgrounds applied directly with text overlay */
+.page-section {
+  position: relative;
+  padding: 2rem 1.5rem;
+  min-height: 200px;
+}
+
+@media (min-width: 768px) {
+  .page-section {
+    padding: 3rem 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-section {
+    padding: 4rem 3rem;
+  }
+}
+
+/* Dark overlay for better text readability on backgrounds */
+.page-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content is above the overlay */
+.page-section > * {
+  position: relative;
+  z-index: 1;
 }
