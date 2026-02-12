@@ -73,3 +73,9 @@ Thumbs.db
 # Vercel
 .vercel
 website/.vercel
+
+# Windows ADS sidecar artifacts
+*:Zone.Identifier
+
+# Alternate Zone.Identifier filename variant
+*.Zone.Identifier
