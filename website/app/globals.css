@@ -580,35 +580,23 @@ p {
   font-weight: 800;
 }
 
-/* Background textures - using backgrounds.png from assets */
+/* Background textures - using background_1.png and background_2.png */
 .bg-texture-1,
-.bg-texture-2,
-.bg-texture-3,
-.bg-texture-4 {
-  background-image: url('/backgrounds.png');
+.bg-texture-3 {
+  background-image: url('/background_1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
 }
 
-/* Top-left area */
-.bg-texture-1 { 
-  background-position: 10% 10%;
-}
-
-/* Top-right area */
-.bg-texture-2 { 
-  background-position: 90% 10%;
-}
-
-/* Bottom-left area */
-.bg-texture-3 { 
-  background-position: 10% 90%;
-}
-
-/* Bottom-right area */
-.bg-texture-4 { 
-  background-position: 90% 90%;
+.bg-texture-2,
+.bg-texture-4 {
+  background-image: url('/background_2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* Page section styling - backgrounds applied directly with text overlay */
