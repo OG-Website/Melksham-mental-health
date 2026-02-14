@@ -175,7 +175,7 @@ p {
 }
 
 .grunge-button:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translate3d(0, -3px, 0) scale(1.02);
   box-shadow: 
     inset 0 3px 0 rgba(255, 255, 255, 0.5),
     inset 0 -3px 6px rgba(0, 0, 0, 0.6),
@@ -383,7 +383,7 @@ p {
 }
 
 .feature-button:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translate3d(0, -3px, 0) scale(1.02);
   box-shadow: 
     inset 0 2px 0 rgba(255, 255, 255, 0.55), 
     0 0 25px rgba(255, 102, 0, 0.7),
@@ -523,7 +523,7 @@ p {
 .metal-button::after { right: 10px; }
 
 .metal-button:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translate3d(0, -3px, 0) scale(1.02);
   filter: brightness(1.15);
   box-shadow: 
     inset 0 2px 0 rgba(255, 210, 130, 0.4), 
@@ -616,7 +616,6 @@ p {
   position: relative;
   padding: 2.5rem 1.5rem;
   min-height: 250px;
-  background-blend-mode: overlay;
 }
 
 @media (min-width: 768px) {
