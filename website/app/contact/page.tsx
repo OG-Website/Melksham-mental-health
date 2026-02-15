@@ -7,34 +7,34 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="space-y-0">
-      <section className="page-section bg-texture-1">
+    <div className="bg-page-2">
+      <div className="page-content">
         <p className="section-kicker">Page 7 — Contact</p>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-4 normal-case tracking-normal max-w-4xl">Get In Touch</h1>
-        <p className="text-lg text-zinc-100 mb-5 max-w-4xl">If you would like to reach out, you can contact us by email or via our private Facebook group below. We aim to respond as soon as possible.</p>
-        <p className="text-zinc-100 max-w-4xl">Thank you for being here. If you're reading this, you're still fighting — and that matters.</p>
-      </section>
+        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">Get In Touch</h1>
+        <p className="text-lg text-zinc-100 mb-6">If you would like to reach out, you can contact us by email or via our private Facebook group below. We aim to respond as soon as possible.</p>
+        <p className="text-zinc-100 mb-12">Thank you for being here. If you're reading this, you're still fighting — and that matters.</p>
 
-      <section className="page-section bg-texture-2">
-        <h2 className="text-3xl font-black text-white mb-4 normal-case tracking-normal">Contact Methods</h2>
-        <div className="flex flex-wrap gap-3">
-          <a href="mailto:Melksham-mental-health@outlook.com" className="metal-button metal-button--small pulse-attention">
-            <FaEnvelope /> Melksham-mental-health@outlook.com
-          </a>
-          <a href="https://www.facebook.com/groups/m.m.health" target="_blank" rel="noopener noreferrer" className="metal-button metal-button--small">Private Facebook Group</a>
+        <div className="mt-12 mb-16">
+          <h2 className="text-3xl font-black text-white mb-6 normal-case tracking-normal">Contact Methods</h2>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="mailto:Melksham-mental-health@outlook.com" className="metal-button metal-button--small pulse-attention">
+              <FaEnvelope /> Melksham-mental-health@outlook.com
+            </a>
+            <a href="https://www.facebook.com/groups/m.m.health" target="_blank" rel="noopener noreferrer" className="metal-button metal-button--small">Private Facebook Group</a>
+          </div>
         </div>
-      </section>
 
-      <section className="page-section bg-texture-3 border-t-4 border-error/70">
-        <h2 className="text-3xl font-black text-white mb-4 normal-case tracking-normal flex items-center gap-3">
-          <FaExclamationTriangle className="text-error" /> Urgent or life-threatening situation
-        </h2>
-        <p className="text-lg text-zinc-100 mb-3 max-w-4xl">This is a peer-led support space. If your situation is urgent or life-threatening, contact emergency services immediately.</p>
-        <ul className="space-y-2 text-zinc-100 max-w-4xl">
-          <li>• Call <a href="tel:999" className="underline font-semibold">999</a> for immediate danger.</li>
-          <li>• Call <a href="tel:116123" className="underline font-semibold">Samaritans 116 123</a> for urgent emotional support.</li>
-        </ul>
-      </section>
+        <div className="mt-16 pt-8 border-t-4 border-error/70">
+          <h2 className="text-3xl font-black text-white mb-6 normal-case tracking-normal flex items-center gap-3 justify-center">
+            <FaExclamationTriangle className="text-error" /> Urgent or life-threatening situation
+          </h2>
+          <p className="text-lg text-zinc-100 mb-6">This is a peer-led support space. If your situation is urgent or life-threatening, contact emergency services immediately.</p>
+          <div className="space-y-3 text-zinc-100">
+            <p>• Call <a href="tel:999" className="underline font-semibold">999</a> for immediate danger.</p>
+            <p>• Call <a href="tel:116123" className="underline font-semibold">Samaritans 116 123</a> for urgent emotional support.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

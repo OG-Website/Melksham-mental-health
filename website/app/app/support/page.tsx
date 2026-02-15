@@ -7,43 +7,43 @@ export const metadata = {
 
 export default function SupportPage() {
   return (
-    <div className="space-y-0">
-      <section className="page-section bg-texture-1">
+    <div className="bg-page-2">
+      <div className="page-content">
         <p className="section-kicker">Page 3 — Get Support</p>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-4 normal-case tracking-normal max-w-4xl">You don't need the right words.</h1>
-        <p className="text-lg text-zinc-100 max-w-4xl">If you're here, that's enough.</p>
-      </section>
+        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">You don't need the right words.</h1>
+        <p className="text-lg text-zinc-100 mb-12">If you're here, that's enough.</p>
 
-      <section className="page-section bg-texture-2">
-        <h2 className="text-3xl font-black text-white mb-4 normal-case tracking-normal">What We Offer</h2>
-        <ul className="space-y-2 text-lg text-zinc-100 max-w-4xl">
-          <li>• Peer-led support from lived experience.</li>
-          <li>• A confidential, respectful space.</li>
-          <li>• Listening without judgement.</li>
-          <li>• Honest conversations.</li>
-          <li>• Signposting to professional services when needed.</li>
-        </ul>
-        <p className="mt-5 text-zinc-100 text-lg max-w-4xl">We won't try to fix you. We won't minimise what you're feeling. We will listen.</p>
-      </section>
-
-      <section className="page-section bg-texture-3 border-t-4 border-error/70">
-        <h2 className="text-3xl font-black text-white mb-4 normal-case tracking-normal">What This Is Not</h2>
-        <ul className="space-y-2 text-lg text-zinc-100 max-w-4xl">
-          <li>• This is not therapy.</li>
-          <li>• This is not a medical service.</li>
-          <li>• This is not a crisis intervention line.</li>
-        </ul>
-        <p className="mt-5 text-zinc-100 max-w-4xl">If you are in immediate danger, call <a href="tel:999" className="underline font-semibold">999</a>. If you need urgent support, call <a href="tel:116123" className="underline font-semibold">Samaritans on 116 123</a>.</p>
-      </section>
-
-      <section className="page-section bg-texture-4">
-        <h2 className="text-3xl font-black text-white mb-4 normal-case tracking-normal">How to Reach Out</h2>
-        <p className="text-lg text-zinc-100 mb-6 max-w-4xl">Contact us through the website form or email. We aim to respond as quickly as possible, but this is a peer-led service.</p>
-        <div className="flex flex-wrap gap-3">
-          <Link href="/contact" className="metal-button metal-button--small pulse-attention">Contact Form</Link>
-          <a href="mailto:Melksham-mental-health@outlook.com" className="metal-button metal-button--small">Email Us</a>
+        <div className="mt-12">
+          <h2 className="text-3xl font-black text-white mb-6 normal-case tracking-normal">What We Offer</h2>
+          <div className="space-y-3 text-lg text-zinc-100 mb-6">
+            <p>• Peer-led support from lived experience.</p>
+            <p>• A confidential, respectful space.</p>
+            <p>• Listening without judgement.</p>
+            <p>• Honest conversations.</p>
+            <p>• Signposting to professional services when needed.</p>
+          </div>
+          <p className="text-zinc-100 text-lg">We won't try to fix you. We won't minimise what you're feeling. We will listen.</p>
         </div>
-      </section>
+
+        <div className="mt-16 pt-8 border-t-4 border-error/70">
+          <h2 className="text-3xl font-black text-white mb-6 normal-case tracking-normal">What This Is Not</h2>
+          <div className="space-y-3 text-lg text-zinc-100 mb-6">
+            <p>• This is not therapy.</p>
+            <p>• This is not a medical service.</p>
+            <p>• This is not a crisis intervention line.</p>
+          </div>
+          <p className="text-zinc-100">If you are in immediate danger, call <a href="tel:999" className="underline font-semibold">999</a>. If you need urgent support, call <a href="tel:116123" className="underline font-semibold">Samaritans on 116 123</a>.</p>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-3xl font-black text-white mb-6 normal-case tracking-normal">How to Reach Out</h2>
+          <p className="text-lg text-zinc-100 mb-8">Contact us through the website form or email. We aim to respond as quickly as possible, but this is a peer-led service.</p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/contact" className="metal-button metal-button--small pulse-attention">Contact Form</Link>
+            <a href="mailto:Melksham-mental-health@outlook.com" className="metal-button metal-button--small">Email Us</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

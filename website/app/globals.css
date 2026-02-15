@@ -580,41 +580,43 @@ p {
   font-weight: 800;
 }
 
-/* Background textures - using background_1.png and background_2.png */
-.bg-texture-1,
-.bg-texture-3 {
+/* Single page backgrounds - ONE background per page */
+.bg-page-1 {
   background-image: url('/background_1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  min-height: 100vh;
 }
 
-.bg-texture-2,
-.bg-texture-4 {
+.bg-page-2 {
   background-image: url('/background_2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  min-height: 100vh;
 }
 
-/* Page section styling - backgrounds applied directly with text overlay */
-.page-section {
+/* Page content container - centered text, no boxes */
+.page-content {
   position: relative;
-  padding: 2.5rem 1.5rem;
-  min-height: 250px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
-  .page-section {
-    padding: 4rem 2.5rem;
+  .page-content {
+    padding: 6rem 3rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .page-section {
-    padding: 5rem 3rem;
+  .page-content {
+    padding: 8rem 4rem;
   }
 }
 
