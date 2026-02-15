@@ -478,77 +478,57 @@ p {
   gap: 0.5rem;
   width: 100%;
   min-height: 52px;
-  padding: 0.9rem 1.1rem;
-  border-radius: 12px;
-  border: 3px solid rgba(255, 141, 28, 0.8);
-  color: #ffd78f;
-  font-weight: 900;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #ff6600;
+  color: #ffffff;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background:
-    linear-gradient(180deg, rgba(60, 55, 52, 0.98) 0%, rgba(25, 22, 20, 0.99) 50%, rgba(10, 8, 7, 1) 100%),
-    radial-gradient(circle at 35% 25%, rgba(255, 130, 0, 0.2), transparent 45%),
-    radial-gradient(circle at 70% 70%, rgba(255, 102, 0, 0.15), transparent 40%);
+  background: linear-gradient(180deg, #ff6600 0%, #ff8800 100%);
   box-shadow: 
-    inset 0 2px 0 rgba(255, 200, 120, 0.35), 
-    inset 0 -3px 0 rgba(0, 0, 0, 0.8), 
-    0 0 15px rgba(255, 102, 0, 0.4),
-    0 8px 16px rgba(0, 0, 0, 0.65), 
-    0 0 12px rgba(255, 120, 0, 0.3);
+    0 4px 12px rgba(255, 102, 0, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
-  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
-  text-shadow: 
-    1px 1px 2px rgba(0, 0, 0, 0.9),
-    0 0 8px rgba(255, 153, 0, 0.5);
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-
-.metal-button::before,
-.metal-button::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: 
-    radial-gradient(circle, #35250f 30%, #20150b 70%);
-  border: 2px solid rgba(255, 180, 100, 0.75);
-  box-shadow: 
-    inset 0 1px 2px rgba(0, 0, 0, 0.8),
-    0 0 5px rgba(255, 153, 0, 0.4);
-  transform: translateY(-50%);
-}
-
-.metal-button::before { left: 10px; }
-.metal-button::after { right: 10px; }
 
 .metal-button:hover {
-  transform: translate3d(0, -3px, 0) scale(1.02);
-  filter: brightness(1.15);
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #ff7700 0%, #ff9900 100%);
   box-shadow: 
-    inset 0 2px 0 rgba(255, 210, 130, 0.4), 
-    0 0 25px rgba(255, 102, 0, 0.6),
-    0 12px 22px rgba(0, 0, 0, 0.75), 
-    0 0 25px rgba(255, 130, 0, 0.5);
+    0 6px 16px rgba(255, 102, 0, 0.5),
+    0 3px 6px rgba(0, 0, 0, 0.4);
+  border-color: #ff7700;
+}
+
+.metal-button:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 6px rgba(255, 102, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .metal-button:focus-visible {
   outline: 2px solid #ffffff;
   outline-offset: 3px;
-  border-color: rgba(255, 153, 0, 0.9);
-  box-shadow: inset 0 1px 0 rgba(255, 188, 120, 0.33), 0 10px 18px rgba(0, 0, 0, 0.65), 0 0 20px rgba(255, 120, 0, 0.7);
+  box-shadow: 
+    0 4px 12px rgba(255, 102, 0, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 0 3px rgba(255, 102, 0, 0.3);
 }
 
 .metal-button--small {
   width: auto;
   min-height: 44px;
-  padding: 0.6rem 1rem;
-  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
 }
 
 .metal-button--rail {
   justify-content: flex-start;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 .footer-subscribe-bar {
@@ -580,41 +560,43 @@ p {
   font-weight: 800;
 }
 
-/* Background textures - using background_1.png and background_2.png */
-.bg-texture-1,
-.bg-texture-3 {
+/* Single page backgrounds - ONE background per page */
+.bg-page-1 {
   background-image: url('/background_1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  min-height: 100vh;
 }
 
-.bg-texture-2,
-.bg-texture-4 {
+.bg-page-2 {
   background-image: url('/background_2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  min-height: 100vh;
 }
 
-/* Page section styling - backgrounds applied directly with text overlay */
-.page-section {
+/* Page content container - centered text, no boxes */
+.page-content {
   position: relative;
-  padding: 2.5rem 1.5rem;
-  min-height: 250px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
-  .page-section {
-    padding: 4rem 2.5rem;
+  .page-content {
+    padding: 6rem 3rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .page-section {
-    padding: 5rem 3rem;
+  .page-content {
+    padding: 8rem 4rem;
   }
 }
 
