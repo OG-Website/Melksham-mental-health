@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="bg-page-2">
+    <div>
       <div className="page-content">
         <p className="section-kicker">Page 7 — Contact</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">Get In Touch</h1>

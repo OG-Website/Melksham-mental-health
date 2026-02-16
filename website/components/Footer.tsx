@@ -5,25 +5,25 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="page-section bg-texture-3 mt-0">
+    <footer className="site-footer mt-0">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-5">
           <Link href="/" className="flex items-center justify-center xl:justify-start">
             <Image src="/logo.png" alt="Melksham Mental Health" width={220} height={72} className="h-14 w-auto" />
           </Link>
 
-          <nav className="flex flex-wrap justify-center gap-2">
-            <Link href="/" className="metal-button metal-button--small">Home</Link>
-            <Link href="/about" className="metal-button metal-button--small">My Story</Link>
-            <Link href="/app/support" className="metal-button metal-button--small">Get Support</Link>
-            <Link href="/resources" className="metal-button metal-button--small">Resources</Link>
-            <Link href="/blog" className="metal-button metal-button--small">Blog</Link>
-            <Link href="/contact" className="metal-button metal-button--small">Contact</Link>
+          <nav className="flex flex-wrap justify-center gap-1">
+            <Link href="/" className="footer-link">Home</Link>
+            <Link href="/about" className="footer-link">My Story</Link>
+            <Link href="/app/support" className="footer-link">Get Support</Link>
+            <Link href="/resources" className="footer-link">Resources</Link>
+            <Link href="/blog" className="footer-link">Blog</Link>
+            <Link href="/contact" className="footer-link">Contact</Link>
           </nav>
 
           <form className="footer-subscribe-bar">
             <input type="email" placeholder="Enter your email..." className="brand-input" />
-            <button type="button" className="metal-button pulse-attention">Subscribe</button>
+            <button type="button" className="metal-button metal-button--small pulse-attention">Subscribe</button>
           </form>
         </div>
 

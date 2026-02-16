@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { FaBars, FaTimes, FaSearch, FaSkull } from 'react-icons/fa';
+import { FaBars, FaTimes, FaSkull } from 'react-icons/fa';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,39 +20,36 @@ export default function Header() {
 
   return (
     <header className="grunge-header sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center gap-4 py-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center gap-6 py-3">
           <Link href="/" className="flex items-center flex-shrink-0">
-            <Image src="/logo.png" alt="Melksham Mental Health Logo" width={280} height={90} className="h-14 md:h-16 w-auto drop-shadow-2xl" priority />
+            <Image src="/logo.png" alt="Melksham Mental Health Logo" width={400} height={130} className="h-20 md:h-24 w-auto drop-shadow-2xl" priority />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-2 lg:gap-3 flex-wrap justify-end">
+          <nav className="hidden lg:flex items-center gap-1 flex-wrap justify-end">
             {menuItems.map((item) => (
-              <Link key={item.path} href={item.path} className="metal-button metal-button--small">
+              <Link key={item.path} href={item.path} className="nav-link">
                 {item.name}
               </Link>
             ))}
-            <button className="brand-icon-button" aria-label="Search">
-              <FaSearch className="text-base" />
-            </button>
-            <Link href="/license" className="metal-button metal-button--small pulse-attention">
+            <Link href="/license" className="nav-link nav-link--cta">
               <FaSkull /> Join Now
             </Link>
           </nav>
 
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden brand-icon-button" aria-label="Toggle menu">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden brand-icon-button" aria-label="Toggle menu">
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
         {isMenuOpen && (
-          <nav className="md:hidden pb-4 border-t border-primary/30 mt-2 pt-4 space-y-3">
+          <nav className="lg:hidden pb-4 border-t border-primary/30 mt-2 pt-4 space-y-2">
             {menuItems.map((item) => (
-              <Link key={item.path} href={item.path} className="block metal-button metal-button--small" onClick={() => setIsMenuOpen(false)}>
+              <Link key={item.path} href={item.path} className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>
                 {item.name}
               </Link>
             ))}
-            <Link href="/license" className="block text-center metal-button pulse-attention" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/license" className="block metal-button mt-2" onClick={() => setIsMenuOpen(false)}>
               <FaSkull /> Join Now
             </Link>
           </nav>

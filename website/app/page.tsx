@@ -3,7 +3,7 @@ import { FaArrowRight, FaExclamationTriangle, FaHeart, FaLifeRing } from 'react-
 
 export default function Home() {
   return (
-    <div className="bg-page-1">
+    <div>
       <div className="page-content">
         <h1 className="text-4xl md:text-6xl font-black text-white mb-8 normal-case tracking-normal">
           I Nearly Lost Everything. <br />

@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function CrisisHelpPage() {
   return (
-    <div className="bg-page-1">
+    <div>
       <div className="page-content">
         <div className="border-t-4 border-error/70 pt-8">
           <p className="section-kicker">Page 6 — Crisis Help</p>
