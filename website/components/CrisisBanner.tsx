@@ -3,7 +3,7 @@ import { FaPhone } from 'react-icons/fa';
 
 export default function CrisisBanner() {
   return (
-    <div className="bg-error text-white py-3 sticky top-[64px] z-40 border-y-2 border-primary/40" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5), inset 0 -1px 0 rgba(255, 102, 0, 0.2)' }}>
+    <div className="bg-error text-white py-2 z-40 border-y-2 border-primary/40" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5), inset 0 -1px 0 rgba(255, 102, 0, 0.2)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-center">
           <div className="flex items-center space-x-2">

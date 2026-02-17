@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ResourcesPage() {
   return (
-    <div className="bg-page-1">
+    <div>
       <div className="page-content">
         <p className="section-kicker">Page 4 — Resources</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">You don't have to figure this out alone.</h1>

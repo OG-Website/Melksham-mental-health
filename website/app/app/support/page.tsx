@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function SupportPage() {
   return (
-    <div className="bg-page-2">
+    <div>
       <div className="page-content">
         <p className="section-kicker">Page 3 — Get Support</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">You don't need the right words.</h1>

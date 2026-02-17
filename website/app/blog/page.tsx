@@ -5,7 +5,7 @@ export const metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="bg-page-1">
+    <div>
       <div className="page-content">
         <p className="section-kicker">Page 5 — Blog</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-8 normal-case tracking-normal">

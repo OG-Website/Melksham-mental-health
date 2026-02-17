@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-page-2">
+    <div>
       <div className="page-content">
         <p className="section-kicker">Page 2 — My Story</p>
         <h1 className="text-4xl md:text-5xl font-black text-white normal-case tracking-normal mb-12">Built from breakdowns, rebuilding, and staying.</h1>
