@@ -26,10 +26,34 @@
 }
 
 body {
-  background: #000000;
+  background: #0a0a0a;
   color: var(--foreground);
   font-family: 'Arial Black', Impact, sans-serif;
   font-weight: bold;
+}
+
+/* Main content area with background texture */
+.main-content {
+  background-image: url('/background_1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.main-content > * {
+  position: relative;
+  z-index: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -531,26 +555,3 @@ p {
   }
 }
 
-/* Dark overlay for better text readability on backgrounds */
-.page-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, 0.1) 2px,
-      rgba(0, 0, 0, 0.1) 4px
-    );
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Ensure content is above the overlay */
-.page-section > * {
-  position: relative;
-  z-index: 1;
-}

@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className="antialiased min-h-screen flex flex-col">
         <Header />
         <CrisisBanner />
-        <main className="flex-grow">
+        <main className="flex-grow main-content">
           {children}
         </main>
         <Footer />
