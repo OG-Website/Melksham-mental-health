@@ -1,5 +1,11 @@
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
+import { getIronSession } from 'iron-session';
+import { cookies } from 'next/headers';
 import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeacher } from 'react-icons/fa';
+import { sessionOptions, type SessionData } from '@/lib/session';
+import { findUserById } from '@/lib/users';
+import CourseInterestButton from '@/components/CourseInterestButton';
 
 export const metadata = {
   title: 'Mental Health Courses | Melksham Mental Health',
@@ -72,7 +78,17 @@ const categories = [
   { label: 'Modern Life & Meaning', range: [45, 50] },
 ];
 
-export default function CoursesPage() {
+export default async function CoursesPage() {
+  // Server-side auth check — middleware also guards this route
+  const cookieStore = await cookies();
+  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  if (!session.isLoggedIn || !session.userId) {
+    redirect('/portal/login?next=/courses');
+  }
+  const user = findUserById(session.userId);
+  const userInterests = new Set(user?.interests ?? []);
+  const isAdmin = session.isAdmin;
+
   return (
     <div>
       <div className="page-content">
@@ -138,13 +154,23 @@ export default function CoursesPage() {
                       <span className="text-primary font-black text-lg min-w-[2.5rem] text-right leading-tight pt-0.5">
                         {String(mod.id).padStart(2, '0')}
                       </span>
-                      <div>
-                        <h3 className="text-white font-black text-base normal-case tracking-normal mb-1" style={{ textShadow: 'none', filter: 'none' }}>
-                          {mod.topic}
-                        </h3>
-                        <p className="text-zinc-300 text-sm leading-relaxed">
+                      <div className="flex-1">
+                        <div className="flex flex-wrap items-center gap-2 mb-1">
+                          <h3 className="text-white font-black text-base normal-case tracking-normal" style={{ textShadow: 'none', filter: 'none' }}>
+                            {mod.topic}
+                          </h3>
+                          <span className="inline-block bg-zinc-800 border border-zinc-600 text-zinc-400 text-xs font-bold px-2 py-0.5 rounded">
+                            Coming Soon
+                          </span>
+                        </div>
+                        <p className="text-zinc-300 text-sm leading-relaxed mb-2">
                           {mod.summary}
                         </p>
+                        <CourseInterestButton
+                          moduleId={mod.id}
+                          initialInterested={userInterests.has(mod.id)}
+                          isAdmin={isAdmin}
+                        />
                       </div>
                     </div>
                   </div>

@@ -17,6 +17,7 @@ export default function Header() {
     { name: 'Blog', path: '/blog' },
     { name: 'Crisis Help', path: '/resources/crisis' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Member Portal', path: '/portal' },
   ];
 
   return (

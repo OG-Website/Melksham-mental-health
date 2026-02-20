@@ -19,6 +19,8 @@ parts/
 sdist/
 var/
 wheels/
+# Allow website/lib (Next.js application library code)
+!website/lib/
 *.egg-info/
 .installed.cfg
 *.egg
