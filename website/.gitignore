@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Members portal user data (contains personal information — never commit)
+data/portal-users.json

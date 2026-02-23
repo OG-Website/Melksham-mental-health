@@ -13,9 +13,11 @@ export default function Header() {
     { name: 'My Story', path: '/about' },
     { name: 'Get Support', path: '/app/support' },
     { name: 'Resources', path: '/resources' },
+    { name: 'Courses', path: '/courses' },
     { name: 'Blog', path: '/blog' },
     { name: 'Crisis Help', path: '/resources/crisis' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Member Portal', path: '/portal' },
   ];
 
   return (
