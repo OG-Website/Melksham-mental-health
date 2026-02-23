@@ -8,7 +8,12 @@ import { FaLock, FaEnvelope, FaEye, FaEyeSlash } from 'react-icons/fa';
 function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const next = searchParams.get('next') ?? '/portal';
+  // Guard against open-redirect: only allow same-origin relative paths
+  const rawNext = searchParams.get('next') ?? '/portal';
+  const next =
+    rawNext.startsWith('/') && !rawNext.startsWith('//') && !rawNext.includes('://')
+      ? rawNext
+      : '/portal';
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

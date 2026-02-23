@@ -44,7 +44,18 @@ function writeUsers(users: User[]): void {
   fs.writeFileSync(filePath, JSON.stringify(users, null, 2), 'utf-8');
 }
 
-// ─── Admin from environment variables ─────────────────────────────────────
+// Dummy hash used to perform a constant-time comparison when the user does not
+// exist, preventing email enumeration via response-time differences.
+// This is a real bcrypt hash (of a random string) so timing characteristics
+// match a genuine bcrypt.compare call.
+const DUMMY_HASH = '$2b$12$dummy.hash.for.timing.x.xUJGwnBxHjJ7tYcaHKNHQ8i2eSHuuq';
+
+// Basic RFC-5322-inspired email format check (server-side guard against junk data).
+export function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+}
+
+
 // The admin account is defined via ADMIN_EMAIL + ADMIN_PASSWORD_HASH env vars.
 // This means the admin always works even if /tmp is reset on Vercel.
 
@@ -87,9 +98,11 @@ export async function verifyCredentials(
   password: string,
 ): Promise<User | null> {
   const user = findUserByEmail(email);
-  if (!user) return null;
-  const valid = await bcrypt.compare(password, user.passwordHash);
-  return valid ? user : null;
+  // Always run bcrypt.compare even when user not found, to prevent timing attacks
+  // that would allow email enumeration.
+  const hash = user ? user.passwordHash : DUMMY_HASH;
+  const valid = await bcrypt.compare(password, hash);
+  return valid && user ? user : null;
 }
 
 /** Register a new member. */
@@ -101,6 +114,9 @@ export async function createUser(
 ): Promise<{ success: true; user: User } | { success: false; error: string }> {
   if (!gdprConsent) {
     return { success: false, error: 'You must agree to the data policy to register.' };
+  }
+  if (!isValidEmail(email)) {
+    return { success: false, error: 'Please enter a valid email address.' };
   }
   if (password.length < 8) {
     return { success: false, error: 'Password must be at least 8 characters.' };

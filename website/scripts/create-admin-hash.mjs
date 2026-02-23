@@ -34,9 +34,12 @@ bcrypt.hash(password, 12, (/** @type {Error|null} */ err, /** @type {string} */ 
     console.error('Error generating hash:', err.message);
     process.exit(1);
   }
-  console.log('\nPassword hash generated successfully.');
-  console.log('\nAdd to your website/.env.local (note the SINGLE QUOTES around the hash):');
-  console.log(`ADMIN_PASSWORD_HASH='${hash}'`);
-  console.log('\nFor Vercel environment variables, paste the hash WITHOUT quotes:');
+  console.log('\nPassword hash generated successfully.\n');
+  console.log('─────────────────────────────────────────────────────────────');
+  console.log('For .env.local / .env files (escape $ with \\$):');
+  console.log(`ADMIN_PASSWORD_HASH=${hash.replace(/\$/g, '\\$')}`);
+  console.log('─────────────────────────────────────────────────────────────');
+  console.log('For Vercel Dashboard environment variables (paste as-is):');
   console.log(hash);
+  console.log('─────────────────────────────────────────────────────────────');
 });

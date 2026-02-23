@@ -6,7 +6,6 @@ import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeache
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById } from '@/lib/users';
 import CourseInterestButton from '@/components/CourseInterestButton';
-
 export const metadata = {
   title: 'Mental Health Courses | Melksham Mental Health',
   description: 'A comprehensive 50-module mental health course covering every major condition, social issue, and life-stage challenge. Evidence-based, peer-informed, and built for real people.',
@@ -166,11 +165,19 @@ export default async function CoursesPage() {
                         <p className="text-zinc-300 text-sm leading-relaxed mb-2">
                           {mod.summary}
                         </p>
-                        <CourseInterestButton
-                          moduleId={mod.id}
-                          initialInterested={userInterests.has(mod.id)}
-                          isAdmin={isAdmin}
-                        />
+                        <div className="flex flex-wrap items-center gap-3 mt-2">
+                          <Link
+                            href={`/courses/${mod.id}`}
+                            className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-orange-500/60 text-orange-300 hover:bg-orange-600/20 transition-colors"
+                          >
+                            <FaChalkboardTeacher className="text-xs" /> Tutor Guide
+                          </Link>
+                          <CourseInterestButton
+                            moduleId={mod.id}
+                            initialInterested={userInterests.has(mod.id)}
+                            isAdmin={isAdmin}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>

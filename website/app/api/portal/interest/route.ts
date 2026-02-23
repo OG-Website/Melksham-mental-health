@@ -19,8 +19,8 @@ export async function POST(request: Request) {
 
     const body = await request.json() as { moduleId?: number };
     const { moduleId } = body;
-    if (typeof moduleId !== 'number') {
-      return NextResponse.json({ error: 'moduleId is required.' }, { status: 400 });
+    if (typeof moduleId !== 'number' || !Number.isInteger(moduleId) || moduleId < 1 || moduleId > 50) {
+      return NextResponse.json({ error: 'moduleId must be an integer between 1 and 50.' }, { status: 400 });
     }
 
     const user = findUserById(session.userId);
@@ -35,7 +35,10 @@ export async function POST(request: Request) {
       current.add(moduleId);
     }
     const updated = Array.from(current).sort((a, b) => a - b);
-    updateInterests(session.userId, updated);
+    const success = updateInterests(session.userId, updated);
+    if (!success) {
+      return NextResponse.json({ error: 'Failed to update interests.' }, { status: 500 });
+    }
 
     return NextResponse.json({ ok: true, interests: updated });
   } catch {
