@@ -58,14 +58,23 @@ export function isValidEmail(email: string): boolean {
 
 // The admin account is defined via ADMIN_EMAIL + ADMIN_PASSWORD_HASH env vars.
 // This means the admin always works even if /tmp is reset on Vercel.
+//
+// Default fallback credentials are used when the env vars are not configured or
+// contain a placeholder value.  See DEPLOYMENT.md for the default login details.
+const DEFAULT_ADMIN_EMAIL = 'hello@tradeathem.co.uk';
+const DEFAULT_ADMIN_HASH =
+  '$2b$12$JdbYVuAuLAZXHt6VwH88O.MdPzOCuP4PmCsZUrvl8EVCAOlbZEYBa';
 
 function getAdminUser(): User | null {
-  const email = process.env.ADMIN_EMAIL;
-  const rawHash = process.env.ADMIN_PASSWORD_HASH;
-  if (!email || !rawHash) return null;
+  const email = process.env.ADMIN_EMAIL ?? DEFAULT_ADMIN_EMAIL;
+  const rawHash = process.env.ADMIN_PASSWORD_HASH ?? '';
   // Strip backslash-escaped dollar signs that users sometimes accidentally copy
   // from .env.local examples when pasting into the Vercel dashboard.
-  const passwordHash = rawHash.replace(/\\\$/g, '$');
+  const normalized = rawHash.replace(/\\\$/g, '$');
+  // Fall back to the default hash when no hash is configured or the stored value
+  // is a placeholder (i.e. it does not look like a real bcrypt hash).
+  const isValidBcrypt = /^\$2[ab]\$\d{2}\$[./A-Za-z0-9]{53}$/.test(normalized);
+  const passwordHash = isValidBcrypt ? normalized : DEFAULT_ADMIN_HASH;
   return {
     id: 'admin',
     email: email.toLowerCase().trim(),
