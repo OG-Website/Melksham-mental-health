@@ -51,10 +51,13 @@ Vercel is the recommended platform as it's created by the Next.js team and offer
      ```
      SESSION_SECRET=<random string of at least 32 characters>
      ADMIN_EMAIL=hello@tradeathem.co.uk
-     ADMIN_PASSWORD_HASH=<bcrypt hash — generate with: cd website && node scripts/create-admin-hash.mjs 'YourPassword'>
+     ADMIN_PASSWORD_HASH=$2b$12$<your-generated-hash>
      ADMIN_NAME=Rob Johnston
      ```
-     > ⚠️ In the Vercel dashboard paste the raw hash (e.g. `$2b$12$...`) without any backslash escaping.
+     > ⚠️ In the Vercel dashboard paste the raw hash **without** any backslash escaping.
+     > To generate your hash run `cd website && node scripts/create-admin-hash.mjs 'YourPassword'` and paste the raw hash line shown at the bottom of the output.
+     > ⚠️ `SESSION_SECRET` must be at least 32 random characters. Generate one with:
+     > `node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"`
 
 4. **Deploy**
    - Click "Deploy"
