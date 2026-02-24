@@ -47,6 +47,14 @@ Vercel is the recommended platform as it's created by the Next.js team and offer
      RESEND_API_KEY
      CONTACT_EMAIL
      ```
+   - **Members Portal** (required for admin login):
+     ```
+     SESSION_SECRET=<random string of at least 32 characters>
+     ADMIN_EMAIL=hello@tradeathem.co.uk
+     ADMIN_PASSWORD_HASH=<bcrypt hash — generate with: cd website && node scripts/create-admin-hash.mjs 'YourPassword'>
+     ADMIN_NAME=Rob Johnston
+     ```
+     > ⚠️ In the Vercel dashboard paste the raw hash (e.g. `$2b$12$...`) without any backslash escaping.
 
 4. **Deploy**
    - Click "Deploy"
