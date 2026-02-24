@@ -61,8 +61,11 @@ export function isValidEmail(email: string): boolean {
 
 function getAdminUser(): User | null {
   const email = process.env.ADMIN_EMAIL;
-  const passwordHash = process.env.ADMIN_PASSWORD_HASH;
-  if (!email || !passwordHash) return null;
+  const rawHash = process.env.ADMIN_PASSWORD_HASH;
+  if (!email || !rawHash) return null;
+  // Strip backslash-escaped dollar signs that users sometimes accidentally copy
+  // from .env.local examples when pasting into the Vercel dashboard.
+  const passwordHash = rawHash.replace(/\\\$/g, '$');
   return {
     id: 'admin',
     email: email.toLowerCase().trim(),
