@@ -14,6 +14,7 @@ import {
   FaClock,
 } from 'react-icons/fa';
 import { sessionOptions, type SessionData } from '@/lib/session';
+import { findUserById } from '@/lib/users';
 import { getModuleGuide, SESSION_BREAKDOWN } from '@/lib/moduleGuides';
 
 interface Props {
@@ -36,6 +37,13 @@ export default async function ModuleGuidePage({ params }: Props) {
   const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
   if (!session.isLoggedIn || !session.userId) {
     redirect(`/portal/login?next=/courses/${(await params).id}`);
+  }
+
+  // Access gate — non-approved users are redirected back to the courses page
+  const user = findUserById(session.userId);
+  const hasCourseAccess = session.isAdmin || (user?.courseAccess ?? false);
+  if (!hasCourseAccess) {
+    redirect('/courses');
   }
 
   const { id } = await params;
