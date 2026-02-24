@@ -12,27 +12,32 @@ const FALLBACK_SECRET = 'mmh-fallback-secret-please-set-session-secret-env-var-3
 const COOKIE_NAME = 'mmh-portal-session';
 
 /**
- * Returns the session secret, enforcing that SESSION_SECRET is set in production.
- * Called lazily at runtime — not at module load / build time — so the build succeeds
- * even without the env var, while preventing insecure deployments at runtime.
+ * Returns the session secret.  Falls back to a built-in value when SESSION_SECRET
+ * is not set, so the portal remains functional in misconfigured environments.
+ * A prominent warning / error is logged to encourage administrators to set a real
+ * secret in their Vercel / hosting environment variables.
  */
 function getSecret(): string {
   const env = process.env.SESSION_SECRET;
   if (!env) {
-    if (process.env.NODE_ENV === 'production') {
-      throw new Error(
-        'SESSION_SECRET environment variable is required in production. ' +
-          'Set it to a secure random string of at least 32 characters.',
-      );
-    }
-    // Development / test — warn once per process
+    // Warn once per process regardless of environment
     if (!(globalThis as Record<string, unknown>).__mmhSessionWarnShown) {
       (globalThis as Record<string, unknown>).__mmhSessionWarnShown = true;
-      // eslint-disable-next-line no-console
-      console.warn(
-        '[MMH] SESSION_SECRET is not set — using an insecure fallback for development only. ' +
-          'Do NOT use this in production.',
-      );
+      if (process.env.NODE_ENV === 'production') {
+        // eslint-disable-next-line no-console
+        console.error(
+          '[MMH] SESSION_SECRET is not set in production. ' +
+            "Using an insecure built-in fallback — set SESSION_SECRET to a secure random " +
+            "string of at least 32 characters in your Vercel / hosting environment variables. " +
+            'Generate one with: node -e "console.log(require(\'crypto\').randomBytes(48).toString(\'hex\'))"',
+        );
+      } else {
+        // eslint-disable-next-line no-console
+        console.warn(
+          '[MMH] SESSION_SECRET is not set — using an insecure fallback for development only. ' +
+            'Do NOT use this in production.',
+        );
+      }
     }
     return FALLBACK_SECRET;
   }

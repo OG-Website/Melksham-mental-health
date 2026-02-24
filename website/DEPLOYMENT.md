@@ -57,7 +57,7 @@ Vercel is the recommended platform as it's created by the Next.js team and offer
      > ℹ️ The hash above is the built-in default — it enables login with the default admin password. To set a custom password run `cd website && node scripts/create-admin-hash.mjs 'YourPassword'` and paste the raw hash shown at the bottom of the output.
      > ⚠️ In the Vercel dashboard paste the raw hash **without** any backslash escaping.
      > ⚠️ If `ADMIN_PASSWORD_HASH` is omitted or contains a placeholder, the built-in default hash is used automatically.
-     > ⚠️ `SESSION_SECRET` must be at least 32 random characters. Generate one with:
+     > ⚠️ `SESSION_SECRET` should be at least 32 random characters. If omitted, a built-in fallback is used (functional but insecure). Set this in production. Generate one with:
      > `node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"`
 
 4. **Deploy**
