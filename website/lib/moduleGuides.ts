@@ -814,10 +814,156 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 9–50 PLACEHOLDER (full content added in sequence)
+  // MODULE 9
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 9,
+    topic: 'Trauma & Stress: Childhood Trauma & ACEs',
+    summary: 'How adverse childhood experiences shape brain development, physical health and life outcomes — the ACE framework, resilience and protective factors, and trauma-informed practice as the antidote.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Are ACEs?',
+        bullets: [
+          'Adverse Childhood Experiences: potentially traumatic events occurring before age 18',
+          'CDC-Kaiser Permanente ACE Study (1998): landmark research linking childhood adversity to adult disease',
+          '10 ACE categories: physical, sexual, emotional abuse; physical, emotional neglect; household dysfunction (witnessing violence, substance misuse, mental illness, incarceration, parental separation)',
+          'UK data: 47% of adults report at least 1 ACE; 9% report 4 or more (Public Health Wales, 2022)',
+          'BRANDED SLIDE: ACE categories listed in two columns, orange headers, MMH branding',
+        ],
+      },
+      {
+        title: 'Slide 2 — How ACEs Affect Brain Development',
+        bullets: [
+          'Toxic stress: repeated stress response activation without adequate recovery disrupts brain architecture',
+          'Hippocampus (memory and context): reduced volume in children with high ACE scores',
+          'Amygdala (threat detection): becomes hyperactive — always scanning for danger',
+          'Prefrontal cortex (planning, impulse control, reasoning): slower development under chronic stress',
+          'BRANDED SLIDE: brain diagram with affected regions highlighted in orange, labelled clearly',
+        ],
+      },
+      {
+        title: 'Slide 3 — Lifelong Health Consequences',
+        bullets: [
+          '4+ ACEs: 12× higher risk of suicide attempt, 7× higher risk of alcoholism (Public Health Wales)',
+          'Higher rates of: heart disease, cancer, diabetes, chronic lung disease, liver disease',
+          'Chronic inflammation from toxic stress — physical illness is not only behavioural consequence',
+          'Social consequences: lower educational attainment, unemployment, homelessness, contact with criminal justice system',
+          'BRANDED SLIDE: ACE pyramid graphic — adversity → disrupted development → disease → early death',
+        ],
+      },
+      {
+        title: 'Slide 4 — Resilience and Protective Factors',
+        bullets: [
+          'Resilience is NOT innate — it is built through relationships, environment, and opportunity',
+          'A single stable, warm, consistent adult relationship can significantly buffer the impact of ACEs',
+          'Protective factors: school connectedness, community belonging, economic stability, access to healthcare',
+          'Neural plasticity: the brain retains the capacity to change and heal throughout the lifespan',
+          'BRANDED SLIDE: protective factors shield graphic, warm orange tones',
+        ],
+      },
+      {
+        title: 'Slide 5 — Trauma-Informed Practice',
+        bullets: [
+          'Core question shift: from "What is wrong with you?" to "What happened to you?"',
+          'SAMHSA 6 principles: Safety, Trustworthiness, Peer Support, Collaboration, Empowerment, Cultural Sensitivity',
+          'Applicable everywhere: healthcare, education, social care, criminal justice, housing, community services',
+          'Breaking the cycle: trauma-informed parenting support significantly reduces intergenerational transmission',
+          'BRANDED SLIDE: six principles in hexagonal grid, MMH orange/black palette',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Are ACEs?
+"The ACE study is one of the most important pieces of public health research of the past 30 years, and it is still not widely enough known outside specialist fields. Conducted by the CDC and Kaiser Permanente in the United States, and extensively replicated in the UK, it demonstrated with extraordinary clarity that what happens to us in childhood has profound, measurable effects on our health across the entire lifespan.
+
+The ten ACE categories cover three broad domains: abuse, neglect, and household dysfunction. In Wales — which has conducted the most comprehensive UK ACE prevalence research — nearly half of all adults report at least one ACE. Nine percent report four or more. It is in that group where we see the most dramatic consequences."
+
+SLIDE 2 — How ACEs Affect Brain Development
+"Understanding what ACEs actually do to the developing brain is essential to understanding why their consequences are so long-lasting.
+
+The stress response — the fight-or-flight system — is designed to activate in response to threat, and then return to baseline once the threat has passed. In a safe environment, this is normal and even healthy. In a chronically unsafe or unpredictable environment, the stress response activates repeatedly without adequate recovery. We call this toxic stress.
+
+Over time, toxic stress literally reshapes the brain's architecture. The hippocampus — critical for memory and context — is smaller in children with high ACE scores. The amygdala — the brain's alarm system — becomes hyperactive, scanning constantly for danger. The prefrontal cortex — responsible for reasoning, impulse control, and planning — develops more slowly.
+
+These children are not naughty. They are not difficult. They are neurologically dysregulated because their brains have adapted to live in danger."
+
+SLIDE 3 — Lifelong Health Consequences
+"The health consequences of ACEs are not limited to mental health. People with four or more ACEs are 12 times more likely to attempt suicide. They are significantly more likely to develop heart disease, cancer, diabetes, and chronic lung disease. This is not only because of lifestyle factors such as smoking or drinking — although those play a role. It is also because chronic toxic stress in childhood triggers inflammatory processes that damage the body at a cellular level over decades.
+
+This reframes many of the people we encounter in health and social care settings who are labelled as 'hard to engage', 'chaotic', or 'non-compliant'. Many of them are people whose nervous systems were shaped by adversity, and who have never had the opportunity to heal."
+
+SLIDE 4 — Resilience and Protective Factors
+"Here is where the hope is — and it is genuine hope, not platitude. Resilience is not a fixed characteristic you either have or don't. It is built through relationships, through environment, through the presence of consistent, caring adults and supportive communities.
+
+The research is clear: a single stable, warm, consistent relationship with an adult — a grandparent, a teacher, a youth worker, a neighbour — can make a statistically significant difference to a child's life outcomes, even when ACE scores are high.
+
+Neural plasticity means the brain retains its capacity to change throughout life. Healing is not just possible — it is a normal response to the right conditions."
+
+SLIDE 5 — Trauma-Informed Practice
+"The most powerful shift that trauma-informed practice represents is this change in question: from 'What is wrong with you?' to 'What happened to you?' That shift changes everything about how we relate to someone who is struggling.
+
+Trauma-informed practice is not a specialist intervention requiring advanced clinical training. It is a lens that any professional — any person — can apply. It costs nothing. It prevents retraumatisation. And it builds the safety that genuine healing requires."`,
+    activity: `ACTIVITY — Protective Factors Mapping (20 minutes)
+Melksham Mental Health | Module 9 | Licensed Materials
+
+PURPOSE: Help participants identify what protects people from the impact of adversity, and how they can build or strengthen those factors.
+
+PART 1 — Individual Reflection (7 minutes):
+Ask participants to think about a time they faced significant difficulty — not necessarily childhood trauma, simply any period of genuine adversity. Write down privately:
+• Who or what helped most during this time?
+• What qualities did that person, place, or resource have?
+• What was missing that would have made a significant difference?
+• Did the difficulty change you — and if so, how?
+
+PART 2 — Small Group Discussion (8 minutes):
+In groups of 3–4, share your reflections (share only what feels comfortable). Together, identify common themes: what do protective factors have in common? What characteristics do they share?
+
+PART 3 — Whole Group Synthesis (5 minutes):
+Facilitator brings together key themes. Connect to ACE research: most of what participants identify as helpful (stable relationship, feeling safe, having someone who believed in them, economic security) maps directly onto the protective factors the evidence identifies.
+
+Closing question: What is one thing each of us could do — in our personal or professional lives — to be a protective factor for someone else?`,
+    discussionPrompts: [
+      'How does an understanding of ACEs change the way we think about people experiencing homelessness, addiction, or contact with the criminal justice system?',
+      'What would a genuinely trauma-informed school look like — what would be different about how staff respond to difficult behaviour?',
+      'How do we balance accountability with compassion when someone\'s harmful behaviour stems from unprocessed childhood trauma?',
+      'What can any individual do — as a neighbour, family member, community member, professional — to become a protective factor for a child?',
+    ],
+    resources: [
+      { label: 'Public Health Wales — ACE research hub', url: 'https://phw.nhs.wales/topics/adverse-childhood-experiences/' },
+      { label: 'NSPCC — understanding child abuse and neglect', url: 'https://www.nspcc.org.uk/what-is-child-abuse/' },
+      { label: 'NHS — children\'s mental health', url: 'https://www.nhs.uk/mental-health/children-and-young-adults/' },
+      { label: 'Centre for the Developing Child — Harvard (science of resilience)', url: 'https://developingchild.harvard.edu' },
+      { label: 'NSPCC Helpline: 0808 800 5000', url: 'https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/' },
+    ],
+    videos: [
+      { label: 'The ACE study — how childhood trauma affects health (TED Talk, Nadine Burke Harris)', url: 'https://www.youtube.com/watch?v=95ovIJ3dsNk' },
+      { label: 'Resilience: the biology of stress and the science of hope (documentary)', url: 'https://www.youtube.com/results?search_query=resilience+biology+stress+science+hope+documentary' },
+      { label: 'Building resilience in children — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=building+resilience+children+NHS' },
+    ],
+    powerPoint: `MODULE 9 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Key graphics required:
+— Slide 2: Brain diagram with hippocampus, amygdala, prefrontal cortex labelled and highlighted orange
+— Slide 3: ACE pyramid (CDC model) adapted with MMH branding
+— Slide 4: Protective factors shield graphic — warm orange tones
+— Slide 5: SAMHSA 6 principles hexagonal grid, MMH orange/black
+All slides: MMH logo bottom-right, crisis numbers footer, licence watermark
+Title slide: "Childhood Trauma & ACEs" white large text, Module 9 orange badge, MMH logo centred
+Activity slide: full orange header "Protective Factors Mapping"`,
+    tutorNotes: `SAFEGUARDING: Participants may be reflecting on their own childhood trauma, sometimes for the first time in an educational context. Provide space, do not push for disclosure, and have clear signposting to counselling support available. If a participant discloses that a child is currently at risk, follow mandatory safeguarding reporting procedures immediately.
+
+FACILITATION: This session contains both difficult material (ACE consequences) and genuinely hopeful material (resilience, neuroplasticity). Balance is essential — do not allow the session to become purely focused on damage and risk. The protective factors activity is as important as the risk data.
+
+LANGUAGE: Never use "damaged" to describe ACE-impacted individuals. Use person-first language. Emphasise that behaviour is often adaptive, not inherently problematic.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 10–50 PLACEHOLDER (full content added in sequence)
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
+    { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
