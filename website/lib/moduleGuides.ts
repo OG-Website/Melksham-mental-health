@@ -2734,10 +2734,152 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 22–50 PLACEHOLDER
+  // MODULE 22
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 22,
+    topic: 'Psychotic Disorders: Schizophrenia & Related Conditions',
+    summary: 'Schizophrenia and the psychosis spectrum — positive and negative symptoms, the dopamine hypothesis, antipsychotics, Early Intervention services, and how to engage safely and supportively.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Is Psychosis?',
+        bullets: [
+          'Psychosis: a loss of contact with shared reality — hallucinations, delusions, or severely disorganised thinking and behaviour',
+          'NOT the same as "split personality" — a persistent popular misconception with no clinical basis',
+          '1 in 100 people experience a psychotic episode in their lifetime; schizophrenia affects ~0.7% of the UK population',
+          'People with schizophrenia are far more likely to be the VICTIMS of violence than the perpetrators — the dangerous stereotype is harmful and wrong',
+          'BRANDED SLIDE: MMH black/orange, "1 in 100" hero stat, "not dangerous — often vulnerable" as bold tagline',
+        ],
+      },
+      {
+        title: 'Slide 2 — Positive and Negative Symptoms',
+        bullets: [
+          'POSITIVE symptoms (additions to experience): hallucinations (most commonly auditory), delusions, thought disorder, disorganised behaviour',
+          'NEGATIVE symptoms (reductions in function): flat affect, alogia (poverty of speech), avolition (lack of motivation), anhedonia, social withdrawal',
+          'Negative symptoms often more disabling long-term than positive — and more resistant to treatment',
+          'Cognitive symptoms: difficulties with memory, attention, executive function — significantly impair daily functioning',
+          'BRANDED SLIDE: positive vs negative symptom comparison table — clear two-column layout, MMH branding',
+        ],
+      },
+      {
+        title: 'Slide 3 — Causes',
+        bullets: [
+          'Dopamine hypothesis: excess dopamine transmission in subcortical areas underlies positive symptoms',
+          'Glutamate dysfunction: emerging evidence for NMDA receptor hypofunction — explains cognitive and negative symptoms',
+          'Genetic: ~80% heritability; relatives of people with schizophrenia have significantly elevated risk',
+          'Environmental: cannabis use (high-THC), urban birth, migration, childhood trauma, obstetric complications',
+          'BRANDED SLIDE: cause web — genetic + environmental interaction diagram, dopamine graphic',
+        ],
+      },
+      {
+        title: 'Slide 4 — Treatment',
+        bullets: [
+          'Antipsychotics: reduce positive symptoms in ~80% of people — do NOT cure, but significantly improve function',
+          'Clozapine: for treatment-resistant schizophrenia — most effective antipsychotic available; requires CPMS monitoring',
+          'CBTp (CBT for psychosis): NICE recommended — helps people make sense of experiences and develop coping strategies',
+          'Early Intervention in Psychosis (EIP): critical services — the sooner treatment begins, the better the long-term outcome',
+          'BRANDED SLIDE: EIP pathway — DUP (duration of untreated psychosis) → prognosis correlation chart',
+        ],
+      },
+      {
+        title: 'Slide 5 — Supporting Someone with Psychosis',
+        bullets: [
+          'Never argue with or reinforce a delusion — calmly acknowledge distress without confirming the false belief',
+          'Speak slowly and clearly; reduce sensory complexity; don\'t crowd or overwhelm',
+          'If someone is acutely unwell and at risk: call 999 or take them to A&E — do not attempt to manage alone',
+          'For family and carers: Rethink Mental Illness and Schizophrenia UK provide specialist support',
+          'BRANDED SLIDE: safe engagement protocol — DO / DO NOT two-column list, green/red, Rethink helpline number',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is Psychosis?
+"Psychosis is one of the most stigmatised mental health presentations in our culture — and also one of the most misunderstood. Let me address the most persistent misconception immediately: schizophrenia is not 'split personality'. That concept is a fiction popularised by a misreading of Bleuler's original work. Schizophrenia is a distinct clinical condition characterised by a partial loss of contact with shared reality.
+
+The second misconception I want to address is the one that causes the most harm: that people with schizophrenia are dangerous. The evidence consistently shows the opposite. People with schizophrenia are significantly more likely to be the victims of violence — abuse, assault, exploitation — than the perpetrators. The stereotype is not only wrong — it prevents people from seeking help, and it makes their lives materially harder."
+
+SLIDE 2 — Positive and Negative Symptoms
+"The positive/negative distinction is one of the most useful conceptual frameworks in psychosis. Positive symptoms are what we might call additions to experience — things that shouldn't be there: hearing voices that others can't hear, holding beliefs that aren't shared by anyone else in the person's environment, seeing things that are not there.
+
+Negative symptoms are reductions — things that should be there but aren't: the flatness of emotional expression, the poverty of speech, the profound loss of motivation and the withdrawal from social life. These are the symptoms that are hardest to treat and that cause the most long-term disability. They are also the symptoms that are most frequently read as laziness or indifference — which they are not."
+
+SLIDE 3 — Causes
+"The causes of schizophrenia represent one of the most complex gene-environment interactions in medicine. There is strong genetic loading — relatives of people with schizophrenia are at significantly elevated risk. But genetics alone is not destiny. The environmental factors that interact with genetic vulnerability — including cannabis use, childhood trauma, urban environment, social adversity — are critically important.
+
+The dopamine hypothesis has dominated the field for decades and provides the rationale for antipsychotic medication. But increasing evidence for glutamate system dysfunction is expanding the model — and providing a better neurobiological explanation for the cognitive and negative symptoms that dopamine-focused models struggled to account for."
+
+SLIDE 4 — Treatment
+"Antipsychotics reduce positive symptoms in around 80% of people who take them. They do not cure the condition, and they do not adequately address negative or cognitive symptoms. But they allow most people to maintain some degree of functional life that would otherwise be impossible.
+
+Early Intervention in Psychosis services are one of the most important developments in mental health provision in the last 30 years. The evidence is clear: every day of untreated psychosis matters. The faster treatment is initiated, the better the long-term outcome — in terms of relapse rates, functioning, and overall quality of life."
+
+SLIDE 5 — Supporting Someone with Psychosis
+"If you encounter someone who appears to be in a psychotic episode, the most important principle is to stay calm. Elevated emotional tone in the environment tends to escalate distress in someone who is already experiencing an altered reality. Speak slowly and clearly. Reduce sensory complexity. Acknowledge their distress without confirming the content of their delusions.
+
+Do not argue with a delusion. Not because the belief is too fragile to challenge, but because argument is never effective and often harmful. What the person needs is to feel safe, seen, and not alone."`,
+    activity: `ACTIVITY — Hearing Voices Simulation Exercise (20 minutes)
+Melksham Mental Health | Module 22 | Licensed Materials
+
+PURPOSE: Build empathy for the experience of auditory hallucinations by recreating a simplified version of the attentional challenge they present.
+
+NOTE: This is an empathy-building exercise, not a clinical tool. It is adapted from the Hearing Voices Network's awareness techniques.
+
+PART 1 — The Dual-Task Challenge (10 minutes):
+In pairs, person A reads a complex paragraph aloud from a printed card (prepared by facilitator — a passage about mental health from the course materials). While they read, person B whispers a running commentary into person A's ear: "You're doing this wrong. Everyone is watching you. What are you going to say next? Stop. They don't believe you. You should stop talking now."
+
+Person A tries to maintain the reading task while receiving the commentary.
+
+After 2 minutes, swap roles.
+
+PART 2 — Debrief (10 minutes):
+How did it feel to try to concentrate while hearing a continuous stream of comment? Was it possible to ignore? What happened to your confidence and focus?
+
+Now reflect: for many people who hear voices, this is the baseline experience of every waking hour — voices that are often hostile, commanding, or distressing. Voices that feel completely real and external, not internal.
+
+What do we understand differently now about:
+• Why someone with psychosis might appear distracted or detached?
+• Why positive symptoms are so disabling?
+• What "recovery" means in this context — which is often not the elimination of voices, but learning to relate to them differently?`,
+    discussionPrompts: [
+      'Where does the stereotype of "dangerous schizophrenic" come from, and what responsibilities do media organisations have in addressing it?',
+      'How does the experience of early psychosis feel from the inside — and why might someone be reluctant to tell anyone what is happening?',
+      'What would need to change in society for people with schizophrenia to be genuinely included in employment, community, and social life?',
+      'What is the role of family and carers in supporting someone through a psychotic episode — and what support do they need themselves?',
+    ],
+    resources: [
+      { label: 'Rethink Mental Illness — schizophrenia information and carer support', url: 'https://www.rethink.org/advice-and-information/about-mental-illness/learn-more-about-conditions/schizophrenia/' },
+      { label: 'Hearing Voices Network UK', url: 'https://www.hearing-voices.org' },
+      { label: 'Mind — psychosis', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/psychosis/' },
+      { label: 'NHS — schizophrenia', url: 'https://www.nhs.uk/mental-health/conditions/schizophrenia/' },
+      { label: 'Samaritans: 116 123 (24/7)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'What is schizophrenia? — TED-Ed (YouTube)', url: 'https://www.youtube.com/watch?v=K2sc_ck5BZU' },
+      { label: 'Hearing voices — lived experience (Hearing Voices Network, YouTube)', url: 'https://www.youtube.com/results?search_query=hearing+voices+lived+experience' },
+      { label: 'Early intervention in psychosis — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=early+intervention+psychosis+NHS' },
+    ],
+    powerPoint: `MODULE 22 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: "Not dangerous — often vulnerable" as bold tagline, "1 in 100" statistic, strong design
+Slide 2: Positive/negative symptom comparison table — clean, two-column, colour-coded headers
+Slide 4: DUP-to-prognosis chart — duration of untreated psychosis vs outcome correlation, orange curve
+Slide 5: DO/DO NOT engagement protocol — green tick / red cross columns, Rethink helpline prominent
+Activity slide: Hearing voices simulation — instructions clearly laid out, empathy framing at top
+All slides: Rethink helpline, Samaritans 116 123, MMH logo, licence watermark`,
+    tutorNotes: `SAFEGUARDING: If a participant discloses current psychotic symptoms — either their own or someone they live with — do not attempt to manage this in the group setting. Speak with them privately after the session, and provide NHS 111 mental health option and local crisis team contact. If there is immediate risk, call 999.
+
+HEARING VOICES ACTIVITY: This activity can be surprisingly powerful. Some participants find it more distressing than expected. Monitor the room during the exercise and be prepared to pause and check in. Offer the option to sit out if needed.
+
+LANGUAGE: Never use "psycho", "schizo", "crazy" or other stigmatising terms. Never describe someone as "a schizophrenic" — "a person with schizophrenia" is the correct form. Do not use "split personality" in any context.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 23–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 22, topic: 'Psychotic Disorders: Schizophrenia & Related Conditions', category: 'clinical', condition: 'schizophrenia spectrum and other psychotic disorders' },
+    { id: 23, topic: 'Personality Disorders: Cluster A & B', category: 'personality', condition: 'paranoid, schizoid, antisocial, borderline and histrionic personality disorders' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
