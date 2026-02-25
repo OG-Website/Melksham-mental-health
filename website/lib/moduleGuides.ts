@@ -1275,10 +1275,164 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 12–50 PLACEHOLDER
+  // MODULE 12
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 12,
+    topic: 'Mood Disorders: Bipolar Disorder',
+    summary: 'Bipolar I and II — what mania and depression actually feel like from inside; why it takes nearly a decade to diagnose; lithium and mood stabilisers; and how to support someone living with bipolar.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Is Bipolar Disorder?',
+        bullets: [
+          'Characterised by episodes of mania or hypomania alternating with depressive episodes',
+          'UK prevalence: ~2% of the population; affects men and women equally across all demographics',
+          'Bipolar I: full manic episodes (≥7 days, often requiring hospitalisation) + depressive episodes',
+          'Bipolar II: hypomanic episodes (shorter, less severe) + depressive episodes — NOT a milder form of Bipolar I',
+          'Average time from symptom onset to correct diagnosis: 9.5 years (Bipolar UK, 2023)',
+          'BRANDED SLIDE: MMH black/orange, "9.5 years" in large orange text — the diagnostic delay statistic',
+        ],
+      },
+      {
+        title: 'Slide 2 — Mania and Hypomania',
+        bullets: [
+          'Elevated or irritable mood, dramatically reduced need for sleep without fatigue',
+          'Grandiosity, racing thoughts, pressured (rapid, unstoppable) speech, distractibility',
+          'Increased goal-directed activity, severe impulsivity, high-risk behaviour (financial, sexual, business)',
+          'Psychotic features in severe mania: delusions of grandeur, hallucinations, complete loss of insight',
+          'BRANDED SLIDE: mania feature list with "INSIGHT IMPAIRED" callout in orange warning box',
+        ],
+      },
+      {
+        title: 'Slide 3 — The Depressive Phase',
+        bullets: [
+          'Bipolar depression is often more prolonged, severe, and treatment-resistant than unipolar depression',
+          'Identical symptom profile to MDD but antidepressants ALONE can trigger manic switch — diagnosis matters',
+          'Lifetime suicide risk: 20–30× higher than general population — bipolar carries the highest suicide risk of any psychiatric condition',
+          'Most people with bipolar spend more total time depressed than elevated — the disorder is predominantly depressive',
+          'BRANDED SLIDE: comparison bar chart — time in depression vs mania across bipolar subtypes',
+        ],
+      },
+      {
+        title: 'Slide 4 — Causes and Triggers',
+        bullets: [
+          'Strong genetic component: heritability estimated at 60–85% — one of the most heritable psychiatric conditions',
+          'Sleep disruption is the single strongest environmental trigger for both mania and depression',
+          'Substance misuse (especially cannabis, stimulants, alcohol) can trigger episodes and worsen course',
+          'Stressful life events often precipitate first episodes; later episodes may occur with less obvious triggers',
+          'BRANDED SLIDE: trigger web diagram with sleep at centre as primary trigger, MMH branded',
+        ],
+      },
+      {
+        title: 'Slide 5 — Treatment and Long-Term Management',
+        bullets: [
+          'Mood stabilisers: lithium (gold standard, 70+ years evidence), valproate, lamotrigine, quetiapine',
+          'Lithium reduces suicide risk by up to 80% — one of the most potent anti-suicide interventions in all medicine',
+          'Psychoeducation: learning personal early warning signs transforms long-term outcomes',
+          'Lifestyle: sleep regularity is non-negotiable; avoid alcohol and stimulants; maintain daily routine',
+          'BRANDED SLIDE: treatment pyramid — lifestyle base → mood stabiliser → psychoeducation → acute treatment at top',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is Bipolar Disorder?
+"Bipolar disorder is one of the most misunderstood and most frequently misdiagnosed conditions in mental health. The average person with bipolar disorder waits 9.5 years from their first episode to receiving the correct diagnosis. That is nearly a decade — often spent being treated for depression alone, with antidepressants that can trigger mania, and without the mood stabilisation that is essential.
+
+Two percent of the UK population has bipolar disorder. It affects men and women equally, across all demographics, and it is a lifelong condition that requires lifelong management — but with appropriate treatment and support, people with bipolar disorder lead full, productive, rich lives."
+
+SLIDE 2 — Mania and Hypomania
+"One of the most challenging aspects of mania is that in its early stages, it can feel wonderful. The person feels more energetic, more creative, more capable, more connected than they have in years. Ideas come rapidly. They need very little sleep and feel no fatigue. They start projects, make plans, feel invincible.
+
+As mania progresses, insight begins to erode — and that erosion is part of the illness itself. The person may make catastrophic financial decisions, enter into risky relationships, go days without sleep, alienate people around them — and have little or no awareness that anything is wrong. This is part of what makes it so frightening for families and carers, and so hard to interrupt."
+
+SLIDE 3 — The Depressive Phase
+"There is a common misconception that bipolar disorder is characterised mainly by dramatic highs. In reality, most people with bipolar spend significantly more time in depressive phases. And bipolar depression is often more severe, more persistent, and harder to treat than unipolar depression.
+
+The clinical implications of this are critical. Antidepressants given alone — without a mood stabiliser — can trigger a switch into mania or a rapid cycling pattern. This is why getting the diagnosis right is not merely academic. It changes the treatment completely. Misdiagnosis as unipolar depression, and subsequent prescription of antidepressants alone, can make things significantly worse."
+
+SLIDE 4 — Causes and Triggers
+"Bipolar disorder has a very strong genetic component — it is one of the most heritable psychiatric conditions we know. But genetics loads the gun; environment pulls the trigger. And among environmental triggers, sleep disruption is the most reliable and most researched.
+
+This is not a small lifestyle consideration. Sleep regularity — waking and sleeping at consistent times, even at weekends, even when on holiday — is clinically essential for people with bipolar disorder. It is one of the most powerful things they can do to stabilise their mood."
+
+SLIDE 5 — Treatment and Long-Term Management
+"Lithium has been used for bipolar disorder for over 70 years. It remains the gold standard because it is effective at preventing both manic and depressive episodes, and its anti-suicide effect is extraordinary — up to 80% reduction in suicide risk. It requires regular blood monitoring, and not everyone can tolerate it, but for those who can, it is genuinely life-changing.
+
+Psychoeducation — learning to recognise the personal, individual early warning signs that an episode is beginning — is perhaps equally important. The key is to build awareness before insight is impaired. That often means involving trusted others who can notice the signs before the person themselves does."`,
+    activity: `ACTIVITY — Early Warning Signs and Personal Mood Map (20 minutes)
+Melksham Mental Health | Module 12 | Licensed Materials
+
+PURPOSE: Understand the clinical concept of a "relapse signature" and why early recognition transforms outcomes in bipolar disorder.
+
+INTRODUCE: "Everyone's bipolar disorder has a personal signature — a pattern of early warning signs that an episode is beginning. These signs appear before the episode becomes severe, and — critically — before insight is impaired. Identifying and documenting these signs, and sharing them with trusted people, is one of the most powerful tools in long-term management."
+
+PART 1 — Introduction to the Mood Map (5 minutes):
+Explain the concept of the personal mood spectrum from -5 (severe depression) through 0 (stable) to +5 (full mania). Draw on whiteboard.
+
+Common early warning signs of upswing (hypomania emerging):
+• Sleeping less but feeling energised
+• Increased spending or planning
+• Racing thoughts or increased talkativeness
+• Feeling unusually confident or special
+• Becoming irritable or impatient
+
+Common early warning signs of downswing:
+• Sleeping more, not wanting to get up
+• Withdrawing from social contact
+• Losing interest in things that usually matter
+• Negative rumination intensifying
+• Physical slowness or heaviness
+
+PART 2 — Personal Worksheet (10 minutes):
+Participants complete privately (no sharing required):
+• What are my earliest signs of an upswing?
+• What are my earliest signs of a downswing?
+• Who in my life is most likely to notice before I do?
+• What three actions would I take if I noticed these signs?
+
+DEBRIEF (5 minutes):
+Why does early recognition matter so much in bipolar disorder? (Answer: because insight deteriorates precisely when it is most needed — which is why having a trusted other person involved in the plan is essential, not optional.)`,
+    discussionPrompts: [
+      'Why does bipolar disorder take an average of 9.5 years to be correctly diagnosed, and what would need to change to close that gap?',
+      'How does the cultural myth of the "creative genius" with bipolar (e.g., romanticised portrayals in media) help or harm people who actually live with the condition?',
+      'What can family members and close friends realistically offer in supporting someone with bipolar — and where are the limits of that support?',
+      'How should employers respond when a member of staff is in a manic or depressive episode — what are the legal and ethical obligations?',
+    ],
+    resources: [
+      { label: 'Bipolar UK — lived experience and support', url: 'https://www.bipolaruk.org' },
+      { label: 'Mind — bipolar disorder', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/bipolar-disorder/' },
+      { label: 'NHS — bipolar disorder overview', url: 'https://www.nhs.uk/mental-health/conditions/bipolar-disorder/' },
+      { label: 'Rethink Mental Illness — bipolar', url: 'https://www.rethink.org/advice-and-information/about-mental-illness/learn-more-about-conditions/bipolar-disorder/' },
+      { label: 'Samaritans: 116 123 (24/7)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'What is bipolar disorder? — TED-Ed (YouTube)', url: 'https://www.youtube.com/watch?v=RrWBhVlD1H8' },
+      { label: 'Living with bipolar — Bipolar UK (YouTube)', url: 'https://www.youtube.com/results?search_query=bipolar+UK+lived+experience' },
+      { label: 'Lithium for bipolar — how it works (YouTube)', url: 'https://www.youtube.com/results?search_query=lithium+bipolar+disorder+how+it+works' },
+    ],
+    powerPoint: `MODULE 12 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: "9.5 years" diagnostic delay — massive orange hero number, immediate impact
+Slide 2: Mania feature list — "INSIGHT IMPAIRED" warning callout box in orange border
+Slide 3: Time-in-phase bar chart — depression vs elevated in Bipolar I vs II — comparative
+Slide 4: Sleep trigger emphasis — "Sleep regularity is not optional — it is clinical" as pull quote
+Slide 5: Treatment pyramid — lifestyle foundation → mood stabiliser → psychoeducation
+Activity slide: Mood spectrum line (-5 to +5) printed for participants, warm/cold colour coding
+All slides: Samaritans 116 123 footer, MMH logo, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Bipolar disorder carries the highest lifetime suicide risk of any psychiatric condition. Be alert to disclosures of suicidal ideation throughout this session. If someone appears currently unwell — either elevated or deeply depressed — check in privately and follow safeguarding protocol.
+
+MEDICATION: Do not advise participants to start, stop, or change any medication under any circumstances. If someone raises medication questions, signpost to their GP or psychiatrist.
+
+FACILITATION: Do not present the manic phase as desirable or as a "gift". Many people with bipolar are distressed by the loss of insight that comes with mania, and by the damage episodes cause to their relationships and careers. Equally, do not present bipolar as incompatible with a full life — many people with bipolar thrive with appropriate support.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 13–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 12, topic: 'Mood Disorders: Bipolar Disorder', category: 'mood', condition: 'bipolar I and II disorders' },
+    { id: 13, topic: 'Mood Disorders: Seasonal & Persistent Depressive Disorders', category: 'mood', condition: 'seasonal affective disorder (SAD), dysthymia and cyclothymia' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
