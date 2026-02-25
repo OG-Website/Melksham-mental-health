@@ -2287,10 +2287,163 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 19–50 PLACEHOLDER
+  // MODULE 19
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 19,
+    topic: 'Sleep & Circadian Rhythm Disorders',
+    summary: 'The neuroscience of sleep and why it is the single most important pillar of mental health; insomnia, sleep apnoea, narcolepsy, parasomnias, and shift-work disorder; and CBT-I as the gold-standard treatment.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Why Sleep Matters',
+        bullets: [
+          'Sleep is the most potent mental health intervention available — yet chronically under-prioritised',
+          'Glymphatic system: the brain\'s waste-clearance system operates only during sleep — clearing beta-amyloid and other toxins',
+          'UK: 36% of adults struggle to sleep every week; one-third do not get recommended 7–9 hours (Sleep Council, 2023)',
+          'Mental health impact: a single night of poor sleep measurably increases anxiety, emotional reactivity, and negative bias',
+          'BRANDED SLIDE: MMH black/orange — glymphatic system brain diagram, "sleep is your brain\'s MOT"',
+        ],
+      },
+      {
+        title: 'Slide 2 — Insomnia',
+        bullets: [
+          'Clinical insomnia: difficulty initiating or maintaining sleep ≥3 nights/week for ≥3 months, causing daytime impairment',
+          'UK prevalence: ~30% of adults have insomnia symptoms; ~10% have clinical insomnia',
+          'Perpetuating factors: sleep anxiety, clock-watching, extended time in bed, irregular sleep schedule, napping',
+          'CBT-I (Cognitive Behavioural Therapy for Insomnia): NICE first-line — more effective than sleeping pills long-term',
+          'BRANDED SLIDE: perpetuating factors cycle diagram — insomnia → sleep anxiety → effort to sleep → arousal → insomnia',
+        ],
+      },
+      {
+        title: 'Slide 3 — Sleep Apnoea',
+        bullets: [
+          'Obstructive sleep apnoea (OSA): repeated upper airway collapse during sleep causing breathing pauses + arousals',
+          'UK prevalence: estimated 1.5 million undiagnosed cases — one of the most undertreated conditions in medicine',
+          'Symptoms: loud snoring, witnessed apnoeas, excessive daytime sleepiness, morning headaches, cognitive impairment',
+          'Mental health link: untreated OSA associated with 2–4× higher risk of depression and anxiety',
+          'Treatment: CPAP (continuous positive airway pressure) — highly effective when tolerated',
+          'BRANDED SLIDE: OSA awareness slide — "most undiagnosed major condition in UK" in orange callout',
+        ],
+      },
+      {
+        title: 'Slide 4 — Narcolepsy, Parasomnias & Circadian Disorders',
+        bullets: [
+          'Narcolepsy: sudden, irresistible sleep attacks + cataplexy (muscle weakness triggered by emotion) — autoimmune cause',
+          'Parasomnias: sleepwalking, night terrors, REM Sleep Behaviour Disorder — sleep behaviours outside normal',
+          'Circadian rhythm disorders: misalignment of internal clock with external schedule (shift work, jet lag, delayed sleep phase)',
+          'Delayed Sleep Phase Disorder: particularly common in adolescents — clinical, not laziness',
+          'BRANDED SLIDE: circadian rhythm clock graphic showing misalignment, MMH orange',
+        ],
+      },
+      {
+        title: 'Slide 5 — Sleep Hygiene & CBT-I',
+        bullets: [
+          'Sleep restriction therapy: consolidates sleep by initially reducing time in bed — paradoxically improves sleep quality',
+          'Stimulus control: bed only for sleep and sex — rebuilds the bed-sleep association',
+          'Cognitive restructuring: challenges beliefs like "I must get 8 hours" that generate performance anxiety',
+          'Sleep hygiene: consistent wake time, darkness, cool temperature, no screens 60 min before bed',
+          'BRANDED SLIDE: CBT-I components infographic — sleep restriction / stimulus control / cognitive / relaxation',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Why Sleep Matters
+"If I could prescribe one intervention for mental health above all others, it would be sleep. Not medication. Not therapy. Sleep. The research is unequivocal: sleep is foundational to every aspect of psychological functioning.
+
+There is a remarkable system in the brain called the glymphatic system. It operates primarily during deep sleep, clearing the metabolic waste products that accumulate during waking brain activity — including beta-amyloid, the protein associated with Alzheimer's disease. We do not have another system for doing this. The only way to clean the brain is to sleep.
+
+One disturbed night of sleep increases emotional reactivity, impairs the prefrontal cortex, and makes us more susceptible to anxiety and depression the following day. That is a measurable neurological effect from a single bad night."
+
+SLIDE 2 — Insomnia
+"Clinical insomnia affects around 10% of UK adults. It is not simply difficulty sleeping — it is difficulty sleeping that causes significant daytime impairment, that has persisted for months, and that the person has begun to organise their life around.
+
+The perpetuating factors for insomnia are often more important than the triggering factors. Someone might start sleeping badly because of stress. But what maintains the insomnia — sometimes for years — is the anxiety about sleep, the clock-watching at 3am, the long lie-ins trying to make up for lost sleep, and the catastrophic thinking about tomorrow's consequences. CBT-I addresses all of these directly."
+
+SLIDE 3 — Sleep Apnoea
+"Sleep apnoea is one of the most underdiagnosed conditions in the UK. The NHS estimates there are around 1.5 million undiagnosed cases. People with OSA are repeatedly woken through the night by their airway collapsing and cutting off their oxygen supply — sometimes hundreds of times per night — without having any memory of it. They present to their GP with exhaustion, depression, and cognitive problems. The sleep disorder is rarely identified.
+
+Treating OSA — with CPAP, which holds the airway open during sleep — resolves the associated depression and anxiety in a significant proportion of cases. Not because CPAP treats depression, but because it resolves the underlying sleep deprivation that was causing it."
+
+SLIDE 4 — Narcolepsy and Circadian Disorders
+"Narcolepsy is a rare but significant autoimmune condition in which the brain loses the neurons that maintain wakefulness. Sleep attacks can occur at any time — while eating, speaking, or driving. Cataplexy — sudden muscle weakness triggered by emotion, particularly laughter — can cause falls and is deeply disabling.
+
+Delayed Sleep Phase Disorder is worth particular mention because it is so frequently misunderstood. Young people who genuinely cannot fall asleep before 2am and cannot wake before 10am are not being lazy — they have a clinically recognised circadian disorder. School and work structures that require early morning performance are genuinely disabling for these individuals."
+
+SLIDE 5 — CBT-I
+"CBT-I is not intuitive. Sleep restriction therapy — the most effective component — requires initially spending less time in bed, which sounds counter-productive. But it works by building sleep pressure, concentrating sleep, and rebuilding confidence in the ability to sleep. Stimulus control rebuilds the brain's association between bed and sleep — an association that becomes eroded in chronic insomnia.
+
+These techniques require discipline and produce short-term discomfort for long-term gain. The evidence is outstanding: CBT-I outperforms sleeping medication in long-term outcomes, with no side effects and no risk of dependence."`,
+    activity: `ACTIVITY — Sleep Audit and Hygiene Plan (20 minutes)
+Melksham Mental Health | Module 19 | Licensed Materials
+
+PURPOSE: Identify individual sleep patterns and build a personalised evidence-based sleep improvement plan.
+
+PART 1 — Sleep Audit (8 minutes, private):
+Participants complete the following honestly:
+
+Timing:
+• What time do you typically get into bed?
+• What time do you typically fall asleep?
+• What time do you wake up — with/without alarm?
+• Do your weekday and weekend times differ significantly?
+
+Quality:
+• Do you wake during the night? How often?
+• Do you feel rested when you wake?
+• How alert do you feel in the afternoon?
+
+Behaviours:
+• Do you use screens in the hour before bed?
+• Do you consume caffeine after 2pm?
+• Do you exercise regularly? (If yes, what time?)
+• Do you nap during the day?
+
+PART 2 — Pairs Discussion (7 minutes):
+Compare patterns. Which behaviours are most likely impacting sleep quality? Using the evidence from the slides, identify 2–3 evidence-based changes each person could make.
+
+PART 3 — Debrief (5 minutes):
+Facilitator highlights the single most impactful and underused evidence-based change: consistent wake time. Waking at the same time every day — regardless of how you slept — is the single most powerful thing most people can do to improve their sleep over time. Ask: who knew this? Who already does it?`,
+    discussionPrompts: [
+      'Why do we live in a culture that systematically glorifies sleep deprivation — "I only need 5 hours" — when the evidence for sleep\'s importance is so clear?',
+      'What workplace and educational reforms would most significantly improve sleep health across the population?',
+      'How should GPs and mental health professionals change their assessment practices to routinely screen for undiagnosed sleep disorders?',
+      'How does shift work affect the mental health of workers in healthcare, transport, hospitality and emergency services — and what obligations do employers have?',
+    ],
+    resources: [
+      { label: 'Sleepio — NHS-backed digital CBT-I programme', url: 'https://www.sleepio.com' },
+      { label: 'NHS — insomnia overview', url: 'https://www.nhs.uk/conditions/insomnia/' },
+      { label: 'NHS — sleep apnoea', url: 'https://www.nhs.uk/conditions/sleep-apnoea/' },
+      { label: 'The Sleep Charity (UK)', url: 'https://thesleepcharity.org.uk' },
+      { label: 'Narcolepsy UK', url: 'https://www.narcolepsy.org.uk' },
+    ],
+    videos: [
+      { label: 'Why we sleep — Matthew Walker interview (YouTube)', url: 'https://www.youtube.com/results?search_query=matthew+walker+why+we+sleep+interview' },
+      { label: 'What is CBT-I? — Sleep Foundation (YouTube)', url: 'https://www.youtube.com/results?search_query=CBT+for+insomnia+explained' },
+      { label: 'Sleep apnoea explained — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=sleep+apnoea+explained+NHS' },
+    ],
+    powerPoint: `MODULE 19 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Brain glymphatic system diagram — atmospheric dark background, orange highlights
+Slide 2: Insomnia perpetuating cycle — circular diagram, orange arrows, "performance anxiety" labelled
+Slide 3: "1.5 million undiagnosed" — orange hero stat, OSA awareness
+Slide 4: Circadian clock showing delayed sleep phase in adolescents vs adults — warm visual
+Slide 5: CBT-I components — four quadrant infographic: sleep restriction / stimulus control / cognitive / hygiene
+Activity slide: Sleep audit table reproduced for participant completion
+All slides: MMH logo, The Sleep Charity reference, Samaritans 116 123, licence watermark`,
+    tutorNotes: `FACILITATION: Sleep deprivation is nearly universal in modern life. This session often produces strong personal resonance. Encourage open discussion but keep the focus analytical rather than personal — the goal is understanding sleep science and clinical presentations, not diagnosing participants.
+
+SLEEP RESTRICTION: Do not recommend sleep restriction therapy as a self-help intervention in this group setting — it should only be undertaken with professional guidance. Present it as a component of CBT-I for context.
+
+LANGUAGE: Do not refer to any participant's sleep patterns as "bad habits" — frame as "patterns that can be modified" using evidence-based approaches.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 20–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 19, topic: 'Sleep & Circadian Rhythm Disorders', category: 'clinical', condition: 'insomnia, narcolepsy, sleep apnea, parasomnias and circadian rhythm disruption' },
+    { id: 20, topic: 'Impulse-Control & Disruptive Disorders', category: 'clinical', condition: 'intermittent explosive disorder, conduct disorder, ODD, kleptomania and pyromania' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
