@@ -1429,10 +1429,160 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 13–50 PLACEHOLDER
+  // MODULE 13
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 13,
+    topic: 'Mood Disorders: Seasonal & Persistent Depressive Disorders',
+    summary: 'SAD, persistent depressive disorder (dysthymia) and cyclothymia — the longer, lower mood conditions that are chronically missed and undertreated, and the simple interventions that transform them.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Seasonal Affective Disorder (SAD)',
+        bullets: [
+          'Recurrent major depressive episodes with a clear seasonal pattern — typically autumn/winter onset, spring remission',
+          'UK prevalence: ~3% diagnosable SAD; up to 20% experience sub-syndromal "winter blues" (SADA)',
+          'Symptoms: low mood, hypersomnia (excessive sleep), carbohydrate craving, social withdrawal, fatigue',
+          'Cause: disrupted circadian rhythms and melatonin/serotonin dysregulation in reduced natural light',
+          'BRANDED SLIDE: split image — dark winter vs bright spring, mood line graph overlaid, MMH orange accent',
+        ],
+      },
+      {
+        title: 'Slide 2 — SAD Treatment',
+        bullets: [
+          'Light therapy: 10,000-lux broad-spectrum white lightbox, 20–30 minutes every morning — first-line',
+          'Effectiveness: 50–80% improvement with consistent morning light therapy (NICE CG90)',
+          'NOT a UV lamp or tanning light — specific light intensity is what matters',
+          'CBT adapted for SAD (CBT-SAD): addresses winter behavioural withdrawal patterns',
+          'SSRIs (sertraline, fluoxetine): effective for severe SAD; can be started prophylactically in September',
+          'BRANDED SLIDE: lightbox image with technical spec callout (10,000 lux, 20–30 mins, morning)',
+        ],
+      },
+      {
+        title: 'Slide 3 — Persistent Depressive Disorder (Dysthymia)',
+        bullets: [
+          'Low-grade but persistent depression lasting ≥2 years in adults (≥1 year in children)',
+          'UK prevalence: ~3% of adults; lifetime prevalence significantly higher',
+          'Key features: chronic low mood most of the day, most days — not meeting full MDD criteria but causing real impairment',
+          '"I\'ve always been like this" — the most common barrier to treatment; normalised over years or decades',
+          'BRANDED SLIDE: timeline graphic showing years of persistent low mood, orange annotation "THIS IS TREATABLE"',
+        ],
+      },
+      {
+        title: 'Slide 4 — Cyclothymia',
+        bullets: [
+          'Persistent mood instability: hypomanic and depressive symptoms below diagnostic threshold for Bipolar II',
+          'Duration requirement: ≥2 years in adults; symptoms present for at least half of that time',
+          'Prevalence: 0.4–2.5% of the population; emotional volatility often normalised as "just my personality"',
+          '15–50% progress to full Bipolar I or II disorder over time — monitoring is clinically important',
+          'BRANDED SLIDE: mood fluctuation graph showing cyclothymia pattern vs bipolar vs stable baseline',
+        ],
+      },
+      {
+        title: 'Slide 5 — Treatment and Self-Management',
+        bullets: [
+          'Behavioural activation: scheduling rewarding and purposeful activities — highly effective for dysthymia and SAD',
+          'Sleep and light regularity: most cost-effective intervention for both SAD and cyclothymia',
+          'CBT, DBT, schema therapy: effective across all three conditions',
+          'Medication: antidepressants for dysthymia and severe SAD; mood stabilisers for cyclothymia',
+          'Validation: years of moderate suffering deserve professional recognition and active treatment',
+          'BRANDED SLIDE: self-management toolkit infographic — light, sleep, activity, connection, therapy',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Seasonal Affective Disorder
+"SAD is often treated as a mild inconvenience — 'I get a bit low in winter, doesn't everyone?' For some people, it genuinely is mild. For others, it is a severely disabling condition that reliably wipes out months of every year, year after year, often for decades. Three percent of the UK population has diagnosable SAD. That is roughly 2 million people.
+
+The cause is one of the better-understood mechanisms in psychiatry: reduced light in autumn and winter disrupts the master circadian clock in the hypothalamus, leading to overproduction of melatonin and reduced serotonin synthesis. Essentially, the brain gets the wrong seasonal message."
+
+SLIDE 2 — SAD Treatment
+"Light therapy is one of the more underused effective treatments in medicine. Between 50 and 80% of people with SAD improve significantly with a 10,000-lux white lightbox used for 20 to 30 minutes first thing in the morning. Not a UV lamp — not a tanning light. The evidence is specifically for broad-spectrum white light at 10,000 lux used in the morning, because that is when it has the greatest effect on the circadian clock.
+
+Lightboxes cost between £30 and £200. They are available without prescription. If someone you know describes the same depressive pattern every winter, suggesting a lightbox trial is one of the most genuinely useful things you can do."
+
+SLIDE 3 — Persistent Depressive Disorder
+"Persistent depressive disorder — formerly called dysthymia — is probably the most underdiagnosed condition in this entire programme. It is characterised by a low-grade, chronic depression that persists for years or decades. The person typically does not seek help because they have normalised it. 'I've always been a bit down. I'm just a pessimist. That's just how I am.'
+
+This is a treatable medical condition. Years of grey, joyless, low-energy functioning are not inevitable. Not a personality trait. Not just introversion. They are symptoms of a condition that has a name, a cause, and effective treatments. The challenge is helping people believe that there is a genuinely different way of feeling available to them."
+
+SLIDE 4 — Cyclothymia
+"Cyclothymia describes persistent emotional volatility — a pattern of mild ups and mild downs that has been present for years without reaching the threshold for bipolar diagnosis. People often describe it as 'just how I am' — emotional, sensitive, up and down. Friends and family may have adapted around it.
+
+Without recognition and support, between 15 and 50% of people with cyclothymia will go on to develop full bipolar disorder. This is not inevitable — but it underlines why identifying it matters, and why people with cyclothymia benefit from mood monitoring and prophylactic support."
+
+SLIDE 5 — Treatment and Self-Management
+"Across all three of these conditions, behavioural activation is one of the most consistently effective interventions. Rather than waiting to feel motivated before acting, behavioural activation reverses the sequence: act first, and let mood follow. Deliberately scheduling activities that provide a sense of achievement, connection, and pleasure — even when motivation is absent — begins to shift the mood over time.
+
+The core message I want to leave this module with is this: a lifetime of moderate, grinding, persistent suffering is not inevitable. These conditions are real, they have names, and they have treatments. The first step is recognising that what someone is experiencing is a condition, not a personality."`,
+    activity: `ACTIVITY — Light, Rhythm and Mood Audit (20 minutes)
+Melksham Mental Health | Module 13 | Licensed Materials
+
+PURPOSE: Explore how everyday lifestyle factors — particularly light exposure and sleep regularity — directly affect mood, and identify practical changes participants can make or recommend.
+
+PART 1 — Self-Audit (7 minutes, private):
+Participants privately complete a brief audit:
+
+Light exposure:
+• How much natural light do you get on a typical winter weekday?
+• What time do you first go outside, or near a window?
+• Do you notice your mood/energy change with the seasons?
+
+Sleep and rhythm:
+• What time do you typically wake on weekdays vs weekends?
+• (Note: a >90-minute difference = "social jet lag" — associated with mood disruption)
+• Do you use screens in the hour before bed?
+• Is your sleep consistent or highly variable?
+
+Activity:
+• How does your level of physical and social activity change in winter?
+• Do you have planned outdoor activities or do you tend to hibernate?
+
+PART 2 — Pairs Discussion (8 minutes):
+Compare your audit with a partner. What patterns do you notice? Which factors feel most modifiable?
+
+PART 3 — Whole Group (5 minutes):
+Facilitator draws out key insights. Introduce "sleep hygiene as mood medicine": consistent wake time, morning light, reduced evening screens. These are evidence-based interventions that are free, accessible, and effective for everyone — not just people with diagnosable conditions.`,
+    discussionPrompts: [
+      'Why are SAD and persistent depressive disorder so commonly missed in GP consultations, and what would improve their identification?',
+      'How does the modern indoor lifestyle and reduced natural light exposure interact with the rising rates of depression — and what could be done at a societal level?',
+      'What is the difference between a personality trait ("I\'m naturally a pessimist") and a treatable depressive condition — and how do we have that conversation sensitively?',
+      'How might someone with dysthymia respond emotionally to being told that their years of low mood are a diagnosable, treatable condition — and how do we support that response?',
+    ],
+    resources: [
+      { label: 'Mind — Seasonal Affective Disorder', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/seasonal-affective-disorder-sad/' },
+      { label: 'NHS — SAD overview', url: 'https://www.nhs.uk/mental-health/conditions/seasonal-affective-disorder-sad/' },
+      { label: 'SADA — Seasonal Affective Disorder Association', url: 'https://www.sada.org.uk' },
+      { label: 'NHS — Persistent depressive disorder', url: 'https://www.nhs.uk/mental-health/conditions/dysthymia/' },
+      { label: 'Bipolar UK — cyclothymia resources', url: 'https://www.bipolaruk.org' },
+    ],
+    videos: [
+      { label: 'What is seasonal affective disorder? — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=seasonal+affective+disorder+NHS+explained' },
+      { label: 'Light therapy for SAD — how it works (YouTube)', url: 'https://www.youtube.com/results?search_query=light+therapy+SAD+how+it+works' },
+      { label: 'Behavioural activation for depression — explained (YouTube)', url: 'https://www.youtube.com/results?search_query=behavioural+activation+depression+explained' },
+    ],
+    powerPoint: `MODULE 13 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Split winter/summer image with mood line overlay — atmospheric, MMH branded header
+Slide 2: Lightbox image with prominent spec callout — "10,000 LUX | 20–30 MINS | MORNING ONLY"
+Slide 3: Timeline of persistent low mood — years marked, "THIS IS TREATABLE" annotation in orange
+Slide 4: Mood graph comparing cyclothymia / Bipolar II / stable baseline — clear labels
+Slide 5: Self-management toolkit wheel — 5 segments: light, sleep, activity, connection, therapy
+Activity slide: Self-audit table for participants — light / sleep / activity columns
+All slides: MMH logo, Samaritans 116 123 footer, licence watermark`,
+    tutorNotes: `FACILITATION: Dysthymia often produces a powerful moment of recognition in participants who have never considered that their long-term low mood might be a condition rather than a character trait. This can be both relieving and grief-inducing — handle with care and allow space. Do not rush past this moment.
+
+LIGHT THERAPY: Be precise — this is 10,000-lux broad-spectrum white light used in the morning. Not a UV lamp or tanning light. Do not confuse participants with incorrect product recommendations.
+
+LANGUAGE: Avoid implying that cyclothymia or dysthymia are "not real" depression because they are sub-threshold. Duration and chronic impairment are real, and deserve real treatment.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 14–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 13, topic: 'Mood Disorders: Seasonal & Persistent Depressive Disorders', category: 'mood', condition: 'seasonal affective disorder (SAD), dysthymia and cyclothymia' },
+    { id: 14, topic: 'Anxiety Disorders: Generalised Anxiety Disorder', category: 'anxiety', condition: 'generalised anxiety disorder (GAD)' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
