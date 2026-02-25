@@ -2440,10 +2440,156 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 20–50 PLACEHOLDER
+  // MODULE 20
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 20,
+    topic: 'Impulse-Control & Disruptive Disorders',
+    summary: 'IED, conduct disorder, ODD, and impulse-control conditions — understanding the neuroscience of impulse regulation, why these disorders are so often misread as moral failures, and evidence-based support.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Are Impulse-Control Disorders?',
+        bullets: [
+          'A group of conditions characterised by failure to resist impulses, drives, or urges to perform acts that are harmful to self or others',
+          'Common thread: the urge overwhelms the inhibitory capacity of the prefrontal cortex',
+          'Not a moral failing or lack of character — a dysregulation of the neurological systems governing impulse control',
+          'Often co-occur with ADHD, bipolar disorder, substance use, trauma, and childhood adversity',
+          'BRANDED SLIDE: brain diagram — prefrontal cortex (inhibition) vs limbic system (impulse), orange labels',
+        ],
+      },
+      {
+        title: 'Slide 2 — Intermittent Explosive Disorder (IED)',
+        bullets: [
+          'Recurrent outbursts of uncontrollable aggression — grossly disproportionate to the provocation',
+          'After the outburst: often remorse, embarrassment, and confusion about the intensity of the response',
+          'UK lifetime prevalence: ~5% — far more common than widely recognised',
+          'Neurological basis: underactive orbitofrontal cortex + hyperactive amygdala — the "alarm with no off switch"',
+          'Risk factors: head injury, ACEs, male sex, 18–35 age group, family history',
+          'BRANDED SLIDE: brain alarm diagram — amygdala firing, prefrontal cortex failing to inhibit',
+        ],
+      },
+      {
+        title: 'Slide 3 — Conduct Disorder & ODD',
+        bullets: [
+          'Oppositional Defiant Disorder (ODD): persistent pattern of angry/irritable mood, argumentative behaviour, vindictiveness — in children',
+          'Conduct Disorder: violation of others\' rights, serious rules, or social norms — persistent pattern',
+          'Both most commonly reflect unmet needs, attachment disruption, trauma exposure, or neurodevelopmental difference',
+          '"This child is difficult" vs "This child is dysregulated and needs something they are not getting"',
+          'BRANDED SLIDE: reframing table — "difficult behaviour" vs "unmet need" — two columns',
+        ],
+      },
+      {
+        title: 'Slide 4 — Kleptomania, Pyromania and Pathological Gambling',
+        bullets: [
+          'Kleptomania: recurrent failure to resist impulses to steal items not needed for personal use or financial value',
+          'Pyromania: recurrent, deliberate fire-setting for tension relief or pleasure — extremely rare in pure form',
+          'All characterised by the cycle: tension/arousal → acting on impulse → relief/pleasure → guilt/remorse',
+          'All require specialist assessment — do not attempt to manage in generalist settings without support',
+          'Gambling disorder classified as a behavioural addiction — shares neural pathways with substance use disorder',
+          'BRANDED SLIDE: impulse cycle diagram — tension → action → relief → guilt → tension',
+        ],
+      },
+      {
+        title: 'Slide 5 — Treatment Approaches',
+        bullets: [
+          'DBT (Dialectical Behaviour Therapy): evidence base for emotional dysregulation and impulse control',
+          'CBT: identifying triggers, developing interrupt strategies, building tolerance of frustration',
+          'Pharmacological: SSRIs, mood stabilisers, and naltrexone (for impulse-related conditions) in specialist care',
+          'Treating underlying conditions: ADHD, bipolar, trauma — addressing co-morbidities often transforms presentation',
+          'Environmental and systemic: for children — parenting support, school SEMH, trauma-informed practice',
+          'BRANDED SLIDE: DBT skills overview — mindfulness, distress tolerance, emotion regulation, interpersonal effectiveness',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Are Impulse-Control Disorders?
+"Every single person in this room has experienced an impulse they needed to resist. The ability to inhibit impulses — to feel an urge and choose not to act on it — is one of the most demanding cognitive functions the human brain performs. It is located primarily in the prefrontal cortex, and it develops slowly through childhood and into adulthood.
+
+When that system is disrupted — by neurodevelopment, by trauma, by brain injury, by genetics — the result is not a moral failing. It is a clinical condition. Understanding this distinction is the foundation of everything we cover today."
+
+SLIDE 2 — Intermittent Explosive Disorder
+"IED affects approximately 5% of the UK population over a lifetime — far more common than most people realise. The person with IED does not have generally poor impulse control. They may function very well in most areas of life. But in response to specific triggers, their amygdala fires intensely and their orbitofrontal cortex fails to apply the brake.
+
+Crucially, people with IED almost always feel profound remorse after an outburst. They are often confused and frightened by the intensity of their own responses. This is not someone who is comfortable with their aggression — it is someone who is living with a neurological dysregulation that has enormous consequences for their relationships and self-esteem."
+
+SLIDE 3 — Conduct Disorder and ODD
+"When we encounter a child with conduct disorder or ODD, the most important question to ask is not 'what is wrong with this child?' but 'what happened to this child, and what are they not getting that they need?'
+
+The behaviour — the defiance, the aggression, the rule-breaking — is almost always a communication. It communicates: I am not safe. I do not feel seen. Nobody is in charge and it feels terrifying. Or: I was harmed and I learned that I must be the one who is powerful. These are adaptive responses to difficult circumstances, not innate bad character."
+
+SLIDE 4 — Kleptomania and Other Impulse Disorders
+"Kleptomania and pyromania are genuinely rare in their pure clinical forms — and they are frequently confused in public understanding with opportunistic theft or fire-setting. The clinical condition is specific: a tension that builds, is relieved only by acting on the impulse, and is followed by remorse. The items stolen in kleptomania are typically not needed or valued. The fire in pyromania is not for financial gain or revenge.
+
+These are not excuses for harmful behaviour. They are explanations that should inform how we respond — clinically, legally, and humanely."
+
+SLIDE 5 — Treatment
+"DBT is the most evidence-based approach for the emotional dysregulation and impulse control difficulties that underlie most of these conditions. Originally developed for borderline personality disorder, its skills — mindfulness, distress tolerance, emotion regulation, interpersonal effectiveness — have robust evidence across a wide range of presentations.
+
+Perhaps the most important treatment message for this group: address the underlying conditions. Many of the people who appear to have an impulse-control problem primarily have undiagnosed ADHD, untreated bipolar disorder, or unprocessed trauma. Treat what is driving the dysregulation, and the surface behaviour often changes significantly."`,
+    activity: `ACTIVITY — The Impulse Regulation Gap (20 minutes)
+Melksham Mental Health | Module 20 | Licensed Materials
+
+PURPOSE: Build understanding of the neurology of impulse regulation and develop practical interrupt strategies that can be used personally or recommended to clients.
+
+PART 1 — The Gap Between Stimulus and Response (7 minutes):
+Viktor Frankl: "Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom."
+
+Introduce the concept of the "impulse gap": the milliseconds-to-seconds window between an impulse arriving and the action. Impulse control is the skill of expanding and using that gap.
+
+Pairs exercise: Identify a situation where you have felt a strong impulse to do or say something that you later wished you had paused before acting on. (No sharing required — this is private reflection.) What helped you pause in similar moments? What made it harder?
+
+PART 2 — TIPP Skills from DBT (8 minutes):
+Introduce TIPP as a DBT distress tolerance skill for managing intense emotions before they escalate to impulsive action:
+T — Temperature: cold water on face activates the diving reflex, rapidly reducing heart rate
+I — Intense exercise: 20 minutes of vigorous exercise metabolises stress hormones physically
+P — Paced breathing: slow exhale (longer than inhale) activates parasympathetic system
+P — Progressive muscle relaxation: release muscular tension that accompanies emotional arousal
+
+In pairs: Try paced breathing together (4-count in, 6-count out, 4 repetitions). Notice the effect.
+
+PART 3 — Debrief (5 minutes):
+What biological mechanisms explain why these techniques work? (Heart rate variability, vagal tone, cortisol metabolism.) Why is it important to practise these when calm, not just when in crisis?`,
+    discussionPrompts: [
+      'What are the consequences — for individuals, families, and society — of treating conduct disorder and ODD as moral failures rather than clinical presentations requiring support?',
+      'How should the criminal justice system respond differently to people whose offending is directly driven by impulse-control disorders?',
+      'What is the relationship between trauma and impulse dysregulation — and how does addressing trauma change the clinical picture?',
+      'What does a trauma-informed classroom look like for a child with ODD or conduct disorder?',
+    ],
+    resources: [
+      { label: 'Mind — managing difficult emotions', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/wellbeing/managing-difficult-emotions/' },
+      { label: 'Young Minds — conduct and behaviour in children', url: 'https://www.youngminds.org.uk' },
+      { label: 'NHS — conduct disorder in children', url: 'https://www.nhs.uk/mental-health/children-and-young-adults/conditions/conduct-disorder/' },
+      { label: 'GamCare — gambling support helpline: 0808 8020 133', url: 'https://www.gamcare.org.uk' },
+      { label: 'DBT Self Help UK', url: 'https://www.dbtselfhelp.com' },
+    ],
+    videos: [
+      { label: 'DBT skills overview (YouTube)', url: 'https://www.youtube.com/results?search_query=DBT+skills+overview+dialectical+behaviour+therapy' },
+      { label: 'What is IED? — intermittent explosive disorder explained (YouTube)', url: 'https://www.youtube.com/results?search_query=intermittent+explosive+disorder+explained' },
+      { label: 'Conduct disorder in children — clinical explanation (YouTube)', url: 'https://www.youtube.com/results?search_query=conduct+disorder+children+explained+clinical' },
+    ],
+    powerPoint: `MODULE 20 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Brain diagram — amygdala vs prefrontal cortex, impulse vs inhibition balance, orange labels
+Slide 2: "Alarm with no off switch" metaphor — visual alarm graphic, orange/red on black
+Slide 3: Reframing table — "difficult child" vs "dysregulated child with unmet needs" — clear comparison
+Slide 4: Impulse cycle — tension/action/relief/guilt circular diagram, orange flow arrows
+Slide 5: DBT skills diamond — four sections, each skill named, brief description
+Activity slide: TIPP skills card — T/I/P/P listed with brief description for each
+All slides: MMH logo, GamCare 0808 8020 133, Samaritans 116 123 footer, licence watermark`,
+    tutorNotes: `FACILITATION: The reframing of conduct disorder and ODD — from moral failure to clinical presentation — can generate strong reactions. Some participants may have experience of children or young people whose behaviour they found very challenging. Validate their experience while maintaining the neurodevelopmental and trauma-informed lens throughout.
+
+LANGUAGE: Avoid describing any person as "a conduct disorder" or "an ODD". Use "a child experiencing conduct disorder" or "a young person diagnosed with ODD". Never use "bad", "evil", "dangerous", or "unteachable" in any context.
+
+GAMBLING: If any participant discloses a personal gambling problem, signpost to GamCare (0808 8020 133) privately.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 21–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 20, topic: 'Impulse-Control & Disruptive Disorders', category: 'clinical', condition: 'intermittent explosive disorder, conduct disorder, ODD, kleptomania and pyromania' },
+    { id: 21, topic: 'Substance Use & Addiction', category: 'clinical', condition: 'substance use disorder, alcohol dependence, drug addiction and gambling disorder' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
