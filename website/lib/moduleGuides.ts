@@ -1998,10 +1998,157 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 17–50 PLACEHOLDER
+  // MODULE 17
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 17,
+    topic: 'Dissociative & Somatic Disorders',
+    summary: 'Dissociation as a trauma response — from everyday detachment to DID; somatic symptom disorder; depersonalisation/derealisation; and trauma-informed therapeutic approaches.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Is Dissociation?',
+        bullets: [
+          'Dissociation: a disconnection between thoughts, feelings, actions, sense of identity, and/or memory',
+          'Normal dissociation: daydreaming, losing track of time, "highway hypnosis" — universal experiences',
+          'Pathological dissociation: a spectrum from depersonalisation/derealisation to dissociative amnesia to DID',
+          'Almost always a response to trauma — the mind\'s protection mechanism against overwhelming experience',
+          'BRANDED SLIDE: dissociation spectrum diagram — mild/normal at left, DID at right, MMH orange gradient',
+        ],
+      },
+      {
+        title: 'Slide 2 — Depersonalisation/Derealisation Disorder',
+        bullets: [
+          'Depersonalisation: feeling detached from one\'s own body, thoughts, feelings — "watching myself from outside"',
+          'Derealisation: the external world feels unreal, dreamlike, foggy, or artificial',
+          'UK prevalence: ~1–2% persistent; transient episodes in 50%+ of general population',
+          'Triggers: stress, sleep deprivation, anxiety, trauma, cannabis use, panic attacks',
+          'BRANDED SLIDE: first-person quote descriptions — "like watching myself in a film" — white italic text on black',
+        ],
+      },
+      {
+        title: 'Slide 3 — Dissociative Identity Disorder',
+        bullets: [
+          'DID: presence of two or more distinct identity states, each with its own name, history, characteristics',
+          'Previously "Multiple Personality Disorder" — name changed to better reflect the dissociative nature',
+          'Exclusively associated with severe, chronic early childhood trauma — develops as a survival adaptation',
+          'Not "split personality" in the Hollywood sense — transitions ("switches") are often subtle and not theatrical',
+          'BRANDED SLIDE: accurate vs myth comparison — two columns, common misconceptions addressed',
+        ],
+      },
+      {
+        title: 'Slide 4 — Somatic Symptom Disorder',
+        bullets: [
+          'Real, often severe physical symptoms that cannot be fully explained by a medical condition',
+          'Previously "psychosomatic" — a term now avoided as it implies symptoms are imagined or faked (they are not)',
+          'Symptoms: pain, fatigue, neurological symptoms, GI problems — often multiple, changing, persistent',
+          'Disproportionate distress and preoccupation with the symptoms drives significant impairment',
+          'BRANDED SLIDE: "symptoms are REAL — distress is REAL — they are not imagined" as centred callout',
+        ],
+      },
+      {
+        title: 'Slide 5 — Trauma-Informed Treatment',
+        bullets: [
+          'Stabilisation is always first — safety, grounding, daily structure before any exploration of trauma',
+          'Phase-based treatment: phase 1 (stabilisation) → phase 2 (trauma processing) → phase 3 (integration)',
+          'EMDR, TF-CBT, schema therapy: adapted for dissociative presentations with specialist training',
+          'Grounding techniques: essential tools for managing dissociative episodes in daily life',
+          'DID specifically requires specialist trauma service input — not appropriate for generalist settings',
+          'BRANDED SLIDE: three-phase treatment pathway, MMH orange step graphic',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is Dissociation?
+"Dissociation is one of the most elegant protective mechanisms the human mind has. When an experience is too overwhelming to process fully — too painful, too terrifying, too incomprehensible — the mind can create a kind of internal distance between the person and the experience. It is like a psychological circuit breaker.
+
+At mild levels, we all dissociate: daydreaming, losing track of time while driving, becoming absorbed in a film. At pathological levels, dissociation can involve losing hours or days, finding yourself in places you don't remember going, or feeling fundamentally disconnected from your own body and sense of self."
+
+SLIDE 2 — Depersonalisation/Derealisation
+"Depersonalisation and derealisation are far more common than most people realise. Brief episodes — triggered by extreme stress, anxiety, or sleep deprivation — affect more than half the population at some point. The persistent disorder affects 1–2% and can be extremely distressing.
+
+People often describe it as 'watching myself from outside my body', 'feeling like I'm not real', or 'the world looks like a film set'. The experience is very difficult to describe and this often compounds distress — people feel unable to explain what is wrong, and may worry that they are losing their mind. They are not."
+
+SLIDE 3 — Dissociative Identity Disorder
+"DID is one of the most misrepresented conditions in popular culture. The Hollywood version is theatrical, dramatic, and largely fictional. The clinical reality is more subtle — and more understandable when seen through the lens of what it is: a survival adaptation to severe, chronic childhood trauma.
+
+DID develops when a young child's nervous system cannot integrate overwhelming traumatic experience into a single coherent sense of self. Different aspects of experience and identity become partitioned. The person may have different identity states with different names, voices, ages, or memories. This is not performance. It is the extraordinary resilience of a mind that found the only possible way to survive."
+
+SLIDE 4 — Somatic Symptom Disorder
+"Somatic Symptom Disorder is perhaps the most medically mismanaged condition in this programme. Patients with SSD often spend years cycling through medical investigations that find nothing, receiving implicit or explicit messages that their symptoms are not real — that they are imagining them, exaggerating them, or seeking secondary gain.
+
+Let me be absolutely clear: the symptoms are real. The pain is real. The fatigue is real. The neurological symptoms are real. What is real is the connection between psychological distress and physical experience — something that medicine has known since the early 20th century and still, in practice, struggles to apply."
+
+SLIDE 5 — Treatment
+"The common thread across all dissociative and somatic presentations is the importance of safety and stabilisation before any deeper work begins. You cannot process what you cannot tolerate. You cannot integrate trauma if the present moment is not yet safe enough to be in.
+
+For anyone presenting with significant dissociation, the standard recommendation is specialist trauma services. In general practice settings, the priority is to provide stability, reduce shame, and ensure appropriate onward referral."`,
+    activity: `ACTIVITY — Grounding for Dissociation (20 minutes)
+Melksham Mental Health | Module 17 | Licensed Materials
+
+PURPOSE: Equip participants with specific grounding tools for supporting someone who is experiencing a dissociative episode — and for managing dissociation in themselves.
+
+INTRODUCE: "Dissociative episodes can look like many things: a person who goes very still and distant, someone who does not respond to their name, someone who appears confused about where they are, or someone who is unusually calm following a distressing disclosure. The first task is always to gently reconnect them with the present moment."
+
+PART 1 — When Someone Is Dissociating (5 minutes):
+What NOT to do:
+• Do not raise your voice or add urgency — this increases arousal, not safety
+• Do not touch without permission — physical touch can be triggering
+• Do not discuss the traumatic content or push for more disclosure
+
+What TO do:
+• Gentle, calm voice: "You're in the room with me right now. Can you hear my voice?"
+• Orient to the present: "What day is it today? What can you see around you?"
+• Use sensory grounding: "Can you feel the chair beneath you? Can you press your feet into the floor?"
+• Physical anchor: offer a cool glass of water or a textured object to hold
+
+PART 2 — Sensory Grounding Practice (10 minutes):
+Practice in pairs the facilitator script above — one person reads the grounding script, the other experiences being guided through it. Then swap.
+
+Afterwards: How did it feel to be guided like that? What helped most? What would you change?
+
+PART 3 — Debrief (5 minutes):
+Key principle: grounding works by engaging the sensory-present system. Dissociation is, neurologically, a disconnection from the here-and-now — grounding re-establishes that connection. These tools can be used outside of a clinical context by anyone.`,
+    discussionPrompts: [
+      'Why is it so important to stop using the word "psychosomatic" to describe somatic symptom disorder — what message does that word send to patients?',
+      'How might a professional without specialist training respond helpfully — and avoid causing harm — to someone who discloses DID?',
+      'What does the existence of DID tell us about the capacity of the human mind to survive extraordinary adversity?',
+      'How do we create clinical environments where people with dissociative disorders feel safe enough to disclose their experience?',
+    ],
+    resources: [
+      { label: 'Mind — dissociation and dissociative disorders', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/dissociation-and-dissociative-disorders/' },
+      { label: 'Depersonalisation Research Unit — IoP', url: 'https://www.depersonalisation.org.uk' },
+      { label: 'ISSTD — International Society for the Study of Trauma and Dissociation', url: 'https://www.isst-d.org' },
+      { label: 'NHS — somatic symptom disorder', url: 'https://www.nhs.uk/mental-health/conditions/somatic-symptom-disorder/' },
+      { label: 'Samaritans: 116 123 (24/7)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'Dissociation explained — Mind UK (YouTube)', url: 'https://www.youtube.com/results?search_query=dissociation+explained+mind+uk' },
+      { label: 'Understanding DID — clinical explanation (YouTube)', url: 'https://www.youtube.com/results?search_query=dissociative+identity+disorder+clinical+explanation' },
+      { label: 'Somatic symptoms and mental health — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=somatic+symptom+disorder+mental+health+NHS' },
+    ],
+    powerPoint: `MODULE 17 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Dissociation spectrum — gradient bar from "normal daydream" to "DID", MMH styled
+Slide 2: First-person experience quotes — atmospheric, italic white text, dark background, no clinical diagrams
+Slide 3: Myth vs reality two-column comparison — clear, orange headers per column
+Slide 4: "SYMPTOMS ARE REAL" as full centred callout slide — bold, clear, compassionate
+Slide 5: Three-phase treatment pathway — Stabilise → Process → Integrate — orange step graphic
+Activity slide: Grounding script reproduced for participant reference
+All slides: MMH logo, Samaritans 116 123 footer, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Discussions of dissociation, DID, and somatic disorders can be highly activating for trauma survivors. Watch for any participant who goes very still, appears glazed, or becomes unresponsive — this may indicate a dissociative episode. Use the grounding protocol from the activity. Do not continue the session until the person is re-oriented.
+
+DID: If a participant discloses DID, respond warmly and matter-of-factly. Do not express shock or fascination. Do not ask to "meet" other parts. Follow up privately with appropriate safeguarding and referral.
+
+SOMATIC DISORDER: Emphasise throughout that symptoms are real and that the mind-body connection is normal human physiology — not a weakness or a moral failing.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 18–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 17, topic: 'Dissociative & Somatic Disorders', category: 'clinical', condition: 'dissociative disorders (DID, depersonalisation) and somatic symptom disorder' },
+    { id: 18, topic: 'Eating Disorders & Body Image', category: 'clinical', condition: 'anorexia nervosa, bulimia nervosa, binge eating disorder, ARFID and body image' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
