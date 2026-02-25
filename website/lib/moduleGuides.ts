@@ -33,6 +33,8 @@ export interface ModuleGuide {
   discussionPrompts: string[];
   resources: { label: string; url: string }[];
   tutorNotes: string;
+  powerPoint?: string;
+  videos?: { label: string; url: string }[];
 }
 
 export const SESSION_BREAKDOWN: SessionSegment[] = [
@@ -374,10 +376,152 @@ LANGUAGE: In the UK, "learning disability" refers to intellectual disability. "L
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 6–50: Concise but complete guides
+  // MODULE 6
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 6,
+    topic: 'Trauma & Stress: Acute Stress and Adjustment Disorders',
+    summary: 'How the mind responds to sudden trauma and major life changes — recognising acute stress disorder and adjustment disorder, and the evidence-based strategies to stabilise and recover.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Are Stress-Related Disorders?',
+        bullets: [
+          'Acute Stress Disorder (ASD): severe distress within 3 days–1 month of a traumatic event (DSM-5)',
+          'Adjustment Disorder: emotional/behavioural symptoms following an identifiable life stressor',
+          'UK prevalence: adjustment disorder affects up to 2% of adults per year (Mental Health Foundation, 2023)',
+          'Neither condition is weakness — both are the nervous system\'s natural response to overwhelming change',
+          'BRANDED SLIDE: MMH orange header bar, logo bottom-right, white body text on dark background',
+        ],
+      },
+      {
+        title: 'Slide 2 — Recognising the Signs',
+        bullets: [
+          'ASD: intrusive memories, emotional numbing, dissociation, avoidance, hypervigilance',
+          'Adjustment Disorder: tearfulness, anxiety, hopelessness, poor concentration, social withdrawal',
+          'Physical symptoms: insomnia, appetite disruption, headaches, palpitations, fatigue',
+          'Both can escalate to PTSD or major depression without timely support',
+          'BRANDED SLIDE: two-column layout — ASD symptoms left, Adjustment right, orange divider',
+        ],
+      },
+      {
+        title: 'Slide 3 — Common Triggers',
+        bullets: [
+          'Single traumatic events: road traffic accidents, assault, sudden bereavement, medical emergencies',
+          'Major life transitions: redundancy, divorce, serious illness diagnosis, relocation',
+          'Cumulative stress: multiple smaller stressors can be as destabilising as one major event',
+          'Individual vulnerability: prior trauma, social isolation, financial insecurity, lack of support',
+          'BRANDED SLIDE: trigger wheel infographic with MMH colour palette',
+        ],
+      },
+      {
+        title: 'Slide 4 — Evidence-Based Interventions',
+        bullets: [
+          'Psychological First Aid (PFA): Safety → Calm → Connectedness → Self-efficacy → Hope',
+          'Trauma-focused CBT for ASD — NICE recommended to prevent progression to PTSD',
+          'Problem-focused vs emotion-focused coping — matching strategy to situation type',
+          'Grounding techniques: 5-4-3-2-1 sensory anchoring, box breathing, safe-place visualisation',
+          'BRANDED SLIDE: PFA five-step ladder graphic in MMH orange/white/black',
+        ],
+      },
+      {
+        title: 'Slide 5 — Recovery, Resilience and Referral',
+        bullets: [
+          'Post-traumatic growth: many people report positive change — deeper relationships, new priorities',
+          'Stabilisation before processing: grounding and routine before trauma work begins',
+          'When to refer: symptoms beyond 4 weeks, significant functional impairment, suicidal ideation',
+          'UK crisis support: NHS Talking Therapies (self-referral) | Samaritans 116 123 | Mind helpline',
+          'BRANDED SLIDE: recovery pathway flowchart with MMH branding and crisis numbers clearly displayed',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Are Stress-Related Disorders?
+"Welcome to Module 6. Today we look at what happens to our minds and bodies when life throws something overwhelming at us — not everyday pressure, but the kind of events that stop us in our tracks.
+
+Acute Stress Disorder develops within the first month following a traumatic event. Adjustment Disorder is broader: it is the mental health response to any significant life stressor — a redundancy, a divorce, a diagnosis. Both are common, both are real, and both are treatable. Neither is a sign of personal weakness. They are the nervous system doing exactly what it evolved to do: respond to threat. The problem is when that response gets stuck."
+
+SLIDE 2 — Recognising the Signs
+"Let's look at what these conditions actually look and feel like from the inside.
+
+ASD can feel like early PTSD: memories of the event flooding back uninvited, a sense of unreality or numbness, avoiding anything that reminds you of what happened, being constantly on edge or startled by small things.
+
+Adjustment Disorder often presents more quietly: a persistent inability to cope with something that — on paper — should be manageable. Tearfulness that appears from nowhere. Inability to concentrate. A growing distance from the people around you.
+
+Ask the group: Has anyone ever had a reaction to a stressful event that felt much bigger than they expected? That disproportionate response is often exactly what these conditions feel like — and it is important to normalise it."
+
+SLIDE 3 — Common Triggers
+"The most important thing to understand about Adjustment Disorder is that the trigger does not need to be objectively catastrophic. What matters is the meaning of that event to that person. Losing a job may feel manageable to someone with financial security and a strong support network. For someone already under pressure — financially, relationally, physically — it can be the tipping point.
+
+Cumulative stress is particularly dangerous and consistently underestimated. It is rarely one thing — it is twelve things in a row. Each one feels manageable individually, but together they overwhelm the system."
+
+SLIDE 4 — Evidence-Based Interventions
+"Psychological First Aid is the recommended immediate response — and critically, it is something any of us can provide without clinical training. The five principles are: ensure safety, promote calm, connect the person to support, help them feel capable of coping, and offer hope. These are human actions. You do not need a qualification to do this.
+
+For formal treatment, trauma-focused CBT has the strongest evidence base for ASD and significantly reduces the risk of progression to PTSD. Grounding techniques — which we will practise in the activity — are tools from trauma therapy that anyone can use, any time."
+
+SLIDE 5 — Recovery, Resilience and Referral
+"I want to end this module on a genuinely hopeful note. The evidence on post-traumatic growth is robust: many people who go through serious adversity report emerging with deeper relationships, a clearer sense of priorities, and a greater appreciation for life. This is not inevitable, and we should never use it to minimise suffering. But it is a real possibility worth naming.
+
+Know when to refer: if symptoms persist beyond four weeks, if the person is struggling significantly with daily functioning, or if there is any expression of suicidal ideation — refer to NHS Talking Therapies or your local mental health team."`,
+    activity: `ACTIVITY — Stress Mapping (20 minutes)
+Melksham Mental Health | Module 6 | Licensed Materials
+
+MATERIALS: Printed A4 timeline worksheets (MMH branded) or plain paper
+
+INSTRUCTIONS TO READ ALOUD:
+"We are going to do a short reflective exercise. This is entirely private — you will not be asked to share details, only insights.
+
+Draw a horizontal line across your page representing the last 12 months. On this line, mark the significant events of the past year — positive and negative. For each event, place a dot above the line if it increased your overall sense of wellbeing, or below the line if it depleted it. Connect the dots to create a line graph of your year.
+
+Now look at your map. Where were you most depleted? What was happening during those periods? What — or who — helped you begin to recover?
+
+Add a second layer: at each low point, circle the resources you had available: people, routines, professional support, financial stability. What was present? What was missing?
+
+Take 5 minutes to reflect privately. Then share one insight with a partner — not the details of events themselves, but something you noticed about your own resilience patterns: when it showed up, when it was harder to find."
+
+DEBRIEF (5 minutes, whole group):
+What common patterns did we notice? What resources seem to make the biggest difference when we are depleted? How might we build more of those resources deliberately?`,
+    discussionPrompts: [
+      'How do we distinguish a normal stress response from one that needs professional support — and who should make that judgement call?',
+      'Why do some people find it genuinely difficult to acknowledge that a life change has affected their mental health?',
+      'What could employers do differently to support staff who are going through major life transitions?',
+      'What does resilience actually mean to you personally — is it returning to where you were, or is it something different?',
+    ],
+    resources: [
+      { label: 'Mind — Stress', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/stress/' },
+      { label: 'NHS — Adjustment Disorder', url: 'https://www.nhs.uk/mental-health/conditions/adjustment-disorder/' },
+      { label: 'NHS Talking Therapies (self-referral)', url: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
+      { label: 'Samaritans 116 123 (24/7, free)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'NHS — What is acute stress disorder? (YouTube)', url: 'https://www.youtube.com/results?search_query=acute+stress+disorder+NHS' },
+      { label: 'Mind — Understanding stress (YouTube)', url: 'https://www.youtube.com/results?search_query=Mind+charity+understanding+stress' },
+      { label: 'Psychological First Aid — WHO training video', url: 'https://www.youtube.com/results?search_query=psychological+first+aid+WHO' },
+    ],
+    powerPoint: `MODULE 6 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black background (#0a0a0a), orange accents (#f97316), white text (#ffffff)
+Font headers: Bold sans-serif (Montserrat or system equivalent), 36pt
+Font body: Regular sans-serif, 18pt
+Logo: MMH logo bottom-right every slide, 80px height
+Slide count: 5 content slides + title slide + Q&A slide = 7 total
+Title slide: Module number large (orange), topic title white, MMH logo centred, tagline "Licenced Training Materials — Not for Redistribution"
+Each content slide: Orange header bar top, slide title in white, bullet points body, slide number bottom-left
+Activity slide: Full-width orange banner "Group Activity", instructions in white on dark background
+Watermark: "© Melksham Mental Health — Licensed" faint diagonal on every slide`,
+    tutorNotes: `SAFEGUARDING: Participants may be going through their own major life changes right now. Normalise distress without minimising it. If someone appears to be in acute crisis during the session, speak to them privately afterwards and follow your organisation's safeguarding protocol. Have Samaritans (116 123) and local crisis line numbers visible throughout.
+
+FACILITATION: The stress-mapping activity can surface significant personal material. Remind the group before the activity that sharing is always optional and that the exercise is for personal reflection only. Watch for anyone becoming visibly distressed.
+
+LICENCE: These materials are licensed to the registered user only. Not for redistribution, resale, or delivery by unlicensed practitioners.
+
+BRANDING: All slides must use the MMH brand template. Do not alter fonts, colours, or logo placement.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 7–50 PLACEHOLDER (full content added in sequence)
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 6, topic: 'Trauma & Stress: Acute Stress and Adjustment Disorders', category: 'trauma', condition: 'acute stress disorder and adjustment disorders' },
+    { id: 7, topic: 'Trauma & Stress: PTSD and Complex PTSD', category: 'trauma', condition: 'post-traumatic stress disorder (PTSD) and complex PTSD (C-PTSD)' },
     { id: 7, topic: 'Trauma & Stress: PTSD and Complex PTSD', category: 'trauma', condition: 'post-traumatic stress disorder (PTSD) and complex PTSD (C-PTSD)' },
     { id: 8, topic: 'Trauma & Stress: Domestic & Intimate Partner Violence', category: 'trauma', condition: 'domestic and intimate partner violence and its mental health impact' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
