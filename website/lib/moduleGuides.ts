@@ -3020,10 +3020,154 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 24–50 PLACEHOLDER
+  // MODULE 24
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 24,
+    topic: 'Personality Disorders: Cluster C & Others',
+    summary: 'Narcissistic, avoidant, dependent, and obsessive-compulsive personality disorders — the anxious/fearful cluster, the narcissistic wound, and therapeutic approaches that build genuine psychological flexibility.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Cluster C Overview',
+        bullets: [
+          'Cluster C: "anxious and fearful" — avoidant, dependent, and obsessive-compulsive personality disorders',
+          'Most common cluster in community settings — less dramatic presentations but significant long-term suffering',
+          'Common thread: pervasive anxiety, fear of negative evaluation, need for control or certainty, avoidance of distress',
+          'Highly responsive to treatment: CBT, ACT, and schema therapy all have good evidence',
+          'BRANDED SLIDE: Cluster C overview — three conditions in triangular layout, MMH orange',
+        ],
+      },
+      {
+        title: 'Slide 2 — Avoidant & Dependent Personality Disorders',
+        bullets: [
+          'Avoidant PD: social inhibition, feelings of inadequacy, hypersensitivity to negative evaluation — desperate for connection but too afraid to pursue it',
+          'Dependent PD: excessive need for care, submissive and clinging behaviour, fear of separation, difficulty making independent decisions',
+          'Both rooted in attachment patterns — avoidant in anxious attachment, dependent in insecure/anxious attachment',
+          'Key therapeutic challenge: building a secure base from which to develop autonomy and social confidence',
+          'BRANDED SLIDE: attachment type → personality pattern diagram, MMH styled',
+        ],
+      },
+      {
+        title: 'Slide 3 — Obsessive-Compulsive Personality Disorder',
+        bullets: [
+          'OCPD (NOT the same as OCD): preoccupation with order, perfectionism, and control at the expense of flexibility, openness, and efficiency',
+          'Key features: rigidity, need for control, workaholism, hoarding of worn-out objects, stubbornness, excessive conscientiousness',
+          'Often ego-syntonic: the person does not experience the traits as problematic — others do',
+          'Unlike OCD: no intrusive unwanted thoughts or compulsions to undo anxiety — the traits feel like virtues',
+          'BRANDED SLIDE: OCPD vs OCD clear comparison — two-column, MMH branding',
+        ],
+      },
+      {
+        title: 'Slide 4 — Narcissistic Personality Disorder',
+        bullets: [
+          'Grandiosity, need for admiration, lack of empathy — but underneath: extreme fragility and vulnerability to shame',
+          'NPD prevalence: ~1% of general population; much higher in clinical settings',
+          'The "narcissistic wound": beneath the grandiosity is typically a profound deficit in self-esteem and a terror of being found inadequate',
+          'Challenging to treat because the presenting traits (superiority, entitlement) defend against engaging with the underlying pain',
+          'BRANDED SLIDE: NPD iceberg graphic — grandiosity above water, fragility/shame below',
+        ],
+      },
+      {
+        title: 'Slide 5 — Treatment Across Cluster C & NPD',
+        bullets: [
+          'CBT: challenges core beliefs about self and others; builds more adaptive coping strategies',
+          'ACT: builds psychological flexibility and values-based living despite anxiety',
+          'Schema Therapy: accesses and reworks the underlying schemas that drive the personality patterns',
+          'Group therapy: provides in-vivo relational experience that is central to change for many of these presentations',
+          'Prognosis: Cluster C disorders are among the most treatable — outcome research is encouraging',
+          'BRANDED SLIDE: treatment progression diagram — safety → challenge → growth → integration',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Cluster C Overview
+"The Cluster C presentations are arguably the most common personality disorder presentations in outpatient mental health settings, and they are also the most treatable. The person with an avoidant personality disorder is not unavailable to connection — they desperately want it. They simply find the perceived risk of rejection or humiliation so overwhelming that they withdraw before they can be hurt.
+
+The person with dependent personality disorder is not weak or immature. They are managing a profound attachment wound through a strategy of staying close to and deferring to whoever seems able to provide the care they need. It works, until it doesn't."
+
+SLIDE 2 — Avoidant and Dependent PD
+"Both avoidant and dependent personality disorders can be understood through the lens of attachment theory. Avoidant PD often develops in the context of anxious attachment — where connection was accompanied by the threat of rejection, humiliation, or abandonment. The solution: don't try, so you can't fail.
+
+Dependent PD develops where the early experience was of being taken care of in a way that did not support the development of autonomy — or where independence was dangerous. The solution: stay close, agree with everything, and never allow yourself to be alone."
+
+SLIDE 3 — OCPD
+"OCPD is one of the most important distinctions in the whole programme — the confusion with OCD is widespread and leads to mismanagement. In OCD, the person is tormented by unwanted intrusive thoughts and performs compulsions to reduce anxiety. They experience their OCD as alien and distressing.
+
+In OCPD, the traits — the rigid adherence to rules, the perfectionism, the need for control — feel entirely natural and right to the person. They are ego-syntonic. It is usually the people around them who are most affected. Treatment is very different precisely because the person may not experience their traits as a problem at all."
+
+SLIDE 4 — Narcissistic Personality Disorder
+"The iceberg is the most useful metaphor for NPD. Above the waterline, what you see is grandiosity, entitlement, a need for admiration, and what appears to be an absence of empathy. Below the waterline — invisible to almost everyone, often including the person themselves — is an extremely fragile sense of self, a profound vulnerability to shame, and a terror of being seen as inadequate or ordinary.
+
+The grandiosity is not the opposite of shame. It is its management strategy. Understanding this is essential for anyone who works with or is affected by someone with NPD — because it explains why challenges to the grandiosity produce such explosive or devastating responses."
+
+SLIDE 5 — Treatment
+"Schema therapy has particularly strong evidence for NPD — because it reaches below the defensive structure to access the vulnerable schema underneath. The work requires enormous patience and consistency from the therapist: the presenting traits are designed, at a deep neurological level, to protect the person from exactly the kind of vulnerability that therapeutic work requires.
+
+Group therapy has unique value for Cluster C presentations — because the relational patterns that need to change can be observed and worked with in real time, with real people, in a safe and structured environment."`,
+    activity: `ACTIVITY — Core Belief Exploration (20 minutes)
+Melksham Mental Health | Module 24 | Licensed Materials
+
+PURPOSE: Understand how core beliefs about self and others drive the personality patterns in Cluster C and NPD, and begin to identify how these beliefs might be modified through therapeutic work.
+
+INTRODUCE: "Core beliefs are the deepest level of thought in the CBT model — the fundamental assumptions about ourselves, others, and the world that shape how we interpret every situation. Beck identified two clusters particularly associated with personality difficulties: helplessness ('I am incapable, vulnerable, incompetent') and unlovability ('I am unacceptable, inferior, different from others')."
+
+PART 1 — Mapping Core Beliefs to Presentations (8 minutes):
+In small groups, take each of the four presentations from this module and identify the likely core belief or beliefs:
+• Avoidant PD: likely core belief about self? About others?
+• Dependent PD: likely core belief about self? About independence?
+• OCPD: likely core belief about control? About uncertainty?
+• NPD: what is the surface belief? What is the underlying belief?
+
+PART 2 — What Maintains Them? (7 minutes):
+If core beliefs form in childhood and are maintained over a lifetime, what keeps them going? What are the processing patterns that prevent updating?
+
+Key concepts:
+• Schema maintenance: seeking evidence that confirms the belief; dismissing disconfirming evidence
+• Emotional reasoning: "I feel inadequate, therefore I am inadequate"
+• Safety behaviours: avoidance prevents the person from discovering that their feared outcome would not actually materialise
+
+PART 3 — Debrief (5 minutes):
+How does understanding core beliefs change how you interpret surface behaviour? When you encounter someone who appears arrogant, clingy, rigid, or avoidant — what might be the core belief driving that presentation?`,
+    discussionPrompts: [
+      'How should we respond to the popular cultural use of "narcissist" as a casual pejorative, given that NPD is a genuine clinical condition with significant underlying pain?',
+      'What does the avoidant personality disorder presentation tell us about the way our culture handles rejection, failure, and social evaluation?',
+      'What are the specific challenges in delivering group therapy for personality disorder presentations — and why is the group experience so valuable?',
+      'How do we help someone with OCPD engage with treatment when they may not experience their traits as a problem?',
+    ],
+    resources: [
+      { label: 'Mind — personality disorders', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/personality-disorders/' },
+      { label: 'Schema Therapy UK — find a therapist', url: 'https://www.schematherapy.co.uk' },
+      { label: 'ACT for personality disorders — Association for Contextual Behavioural Science', url: 'https://contextualscience.org' },
+      { label: 'NHS — personality disorder treatment', url: 'https://www.nhs.uk/mental-health/conditions/personality-disorder/treatment/' },
+      { label: 'Samaritans: 116 123 (24/7)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'What is narcissistic personality disorder? — TED-Ed (YouTube)', url: 'https://www.youtube.com/results?search_query=narcissistic+personality+disorder+explained' },
+      { label: 'Schema therapy explained (YouTube)', url: 'https://www.youtube.com/results?search_query=schema+therapy+for+personality+disorders' },
+      { label: 'Avoidant personality disorder — clinical explanation (YouTube)', url: 'https://www.youtube.com/results?search_query=avoidant+personality+disorder+explained' },
+    ],
+    powerPoint: `MODULE 24 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 2: Attachment type → personality pattern diagram — secure/anxious/avoidant attachment types linking to presentations
+Slide 3: OCPD vs OCD comparison — clear two-column table, differentiation at a glance
+Slide 4: NPD iceberg — grandiosity above waterline, fragility/shame below, atmospheric ocean blue-black background
+Slide 5: Treatment progression — safety → challenge → growth → integration, step diagram
+Activity slide: Core belief exploration worksheet — four presentations, columns for self-belief/other-belief
+All slides: MMH logo, Samaritans 116 123, licence watermark`,
+    tutorNotes: `FACILITATION: Personality disorder topics can provoke strong reactions when participants are in or have been in relationships with people who have these presentations. Maintain clinical neutrality — these sessions are not about making retrospective diagnoses of people in participants' lives. Keep the focus on understanding the condition and how to support someone who has it.
+
+NPD: This topic generates particular reactivity given the current cultural use of "narcissist". Acknowledge this directly — the clinical diagnosis is far more nuanced and more compassionate than the popular use of the term.
+
+OCPD/OCD DISTINCTION: Test this with a quick check-in: can participants state clearly what the key difference is? This is an exam-standard differentiation.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 25–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 24, topic: 'Personality Disorders: Cluster C & Others', category: 'personality', condition: 'narcissistic, avoidant, dependent and obsessive-compulsive personality disorders' },
+    { id: 25, topic: 'Neurocognitive Disorders', category: 'neuro', condition: 'dementia, Alzheimer\'s disease, Parkinson\'s disease and delirium' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
