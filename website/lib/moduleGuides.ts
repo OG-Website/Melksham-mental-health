@@ -3164,10 +3164,152 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 25–50 PLACEHOLDER
+  // MODULE 25
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 25,
+    topic: 'Neurocognitive Disorders',
+    summary: 'Dementia, Alzheimer\'s disease, Parkinson\'s disease, and delirium — understanding cognitive decline, distinguishing dementia from delirium, person-centred care, and supporting carers.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — The Scale of Dementia',
+        bullets: [
+          '1 in 3 people born today will develop dementia in their lifetime',
+          'UK: ~900,000 people currently living with dementia; projected to reach 1.6 million by 2040 (Alzheimer\'s Society)',
+          'Dementia: an umbrella term for progressive neurological conditions causing cognitive decline severe enough to interfere with daily life',
+          'Most common types: Alzheimer\'s (60–70%), vascular dementia, Lewy body dementia, frontotemporal dementia',
+          'BRANDED SLIDE: "1 in 3" as massive orange hero statistic, MMH black background',
+        ],
+      },
+      {
+        title: 'Slide 2 — Alzheimer\'s and Vascular Dementia',
+        bullets: [
+          'Alzheimer\'s: progressive accumulation of beta-amyloid plaques and tau tangles → neuron death; starts in hippocampus',
+          'Early Alzheimer\'s: short-term memory loss, word-finding difficulties, repeated questions, getting lost in familiar places',
+          'Vascular dementia: step-wise cognitive decline following TIAs or strokes — cardiovascular risk factors are modifiable',
+          '14 modifiable risk factors for dementia: hearing loss, depression, physical inactivity, smoking, obesity (Lancet Commission, 2024)',
+          'BRANDED SLIDE: Alzheimer\'s brain progression scan series, MMH branded overlay',
+        ],
+      },
+      {
+        title: 'Slide 3 — Lewy Body and Frontotemporal Dementia',
+        bullets: [
+          'Lewy Body Dementia (LBD): visual hallucinations, Parkinsonism, fluctuating cognition, REM sleep disorder — often misdiagnosed',
+          'CRITICAL: people with LBD have severe adverse reactions to antipsychotics — can be fatal; medication awareness is essential',
+          'Frontotemporal dementia (FTD): personality and behavioural changes before memory loss — often misdiagnosed as psychiatric disorder',
+          'FTD onset often in 45–65 age group — affects working-age adults and is frequently misidentified for years',
+          'BRANDED SLIDE: LBD safety warning — "ANTIPSYCHOTICS POTENTIALLY FATAL IN LEWY BODY DEMENTIA" in orange alert box',
+        ],
+      },
+      {
+        title: 'Slide 4 — Delirium: Acute Confusion',
+        bullets: [
+          'Delirium: acute, fluctuating disturbance of attention and cognition — a medical emergency, NOT dementia',
+          'Causes: infection, medication, dehydration, pain, surgery, organ failure — always has a reversible cause',
+          'Key distinguishing feature: SUDDEN onset, fluctuating, often reversible — dementia is gradual and progressive',
+          'Hyperactive delirium (agitated, confused) and hypoactive delirium (quiet, withdrawn) — hypoactive frequently missed',
+          'BRANDED SLIDE: delirium vs dementia comparison table — onset / course / attention / reversibility',
+        ],
+      },
+      {
+        title: 'Slide 5 — Person-Centred Care',
+        bullets: [
+          'Tom Kitwood\'s person-centred care model: focus on the person\'s identity, history, preferences — not just the diagnosis',
+          'Meeting psychological needs: love/attachment, inclusion, occupation, identity, comfort',
+          'Behaviours that challenge: communication of unmet need — not wilful difficulty',
+          'Supporting carers: 700,000 people in UK caring for someone with dementia — carer mental health is a priority',
+          'BRANDED SLIDE: Kitwood flower — five psychological needs in petals, MMH orange on dark background',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — The Scale of Dementia
+"Dementia is one of the defining public health challenges of our time. 900,000 people in the UK are currently living with dementia. That number is projected to nearly double by 2040. One in three people born today will develop dementia in their lifetime. This affects us all — as potential patients, as carers, as family members, as professionals, and as a society that needs to decide how we value and care for people in the later stages of life.
+
+Understanding dementia — what it is, what it isn't, how to communicate effectively with someone who has it, and how to support the people who care for them — is not a specialist skill. It is a fundamental life skill."
+
+SLIDE 2 — Alzheimer's and Vascular Dementia
+"Alzheimer's disease begins in the hippocampus — the brain region critical for forming new memories. This is why the earliest and most characteristic symptom is short-term memory loss. The person can often remember events from 40 years ago with vivid detail, but cannot remember what they had for breakfast.
+
+The 2024 Lancet Commission identified 14 modifiable risk factors that account for approximately 45% of dementia cases. Twelve of these are addressable at a population level — including managing hearing loss, treating depression, reducing cardiovascular risk. This is extraordinary: nearly half of dementia cases may be preventable or delayed through changes we have the capacity to make."
+
+SLIDE 3 — Lewy Body and FTD
+"Lewy Body Dementia is critically important for anyone working in care settings to understand. People with LBD can have potentially fatal reactions to antipsychotics — including commonly prescribed medications like haloperidol that might otherwise be considered appropriate for an agitated or distressed patient. This is not a theoretical risk. It is documented, preventable, and requires absolute awareness in every clinical and care setting.
+
+Frontotemporal dementia presents a different challenge: it predominantly affects personality, behaviour, and social functioning before memory, and it typically strikes at a younger age than other dementias. A person in their mid-50s who becomes disinhibited, impulsive, or socially inappropriate may be in the early stages of FTD — and may spend years being managed as a psychiatric condition before the neurological picture becomes clear."
+
+SLIDE 4 — Delirium
+"Delirium is one of the most important clinical distinctions in geriatric medicine and it is frequently missed. Delirium is acute confusion — it comes on suddenly, it fluctuates through the day, and it is caused by something specific and treatable. A urinary tract infection in an 80-year-old can produce a state of profound confusion, hallucinations, and agitation that might be mistaken for dementia or psychosis. Treat the UTI, and the delirium resolves.
+
+Hypoactive delirium — where the person becomes quiet and withdrawn rather than agitated — is particularly frequently missed, because it is less disruptive. The person simply seems 'a bit off'. This is dangerous: the underlying cause still requires identification and treatment."
+
+SLIDE 5 — Person-Centred Care
+"Tom Kitwood's person-centred care model is one of the most important conceptual contributions to dementia care. The central insight is this: even as memory and cognition decline, personhood does not. The person with dementia retains their identity, their emotional life, their need for love and belonging, their preferences, their sense of humour, and their sense of dignity.
+
+When a person with dementia behaves in a way that appears challenging — shouting, refusing care, becoming agitated — the person-centred approach asks: what unmet need is this communicating? Usually it is something very simple: pain, fear, the need for the toilet, loneliness, being approached in a way that feels threatening. Meeting the need resolves the behaviour, far more effectively and ethically than restraint or sedation."`,
+    activity: `ACTIVITY — Life Story Work (20 minutes)
+Melksham Mental Health | Module 25 | Licensed Materials
+
+PURPOSE: Experience the power of life story and identity in dementia care; understand how knowing someone's personal history transforms the quality of care they receive.
+
+INTRODUCE: "Life story work is a person-centred dementia care approach that builds a rich, detailed picture of a person's life history, preferences, relationships, and meaning. It provides care staff, family, and volunteers with the knowledge they need to provide truly personalised support — and it reminds everyone, including the person with dementia, that they are a full human being with a rich history."
+
+PART 1 — Pairs Exercise: My Life Story (8 minutes):
+In pairs, take 4 minutes each to share some of your life story with your partner — as if you were creating a life story document for your care:
+• Where were you born? Where did you grow up?
+• What did you do for work? What were you proud of?
+• What are the most important relationships in your life?
+• What do you love? Music? Particular foods? Activities?
+• What comforts you when you are distressed?
+• What are you afraid of? What would you want people to know about you?
+
+PART 2 — Reflection (7 minutes):
+How would knowing this information change how a care worker interacted with you if you had dementia? What specific comfort could be offered, based on what you just shared, if you were confused and distressed?
+
+PART 3 — Debrief (5 minutes):
+Life story work is transformative for both the person with dementia and the staff who provide care. When you know that the person shouting for "Mary" is calling for their mother who died 50 years ago, you respond entirely differently than if you know nothing about them. Person-centred care begins with knowing who the person is.`,
+    discussionPrompts: [
+      'How does the current care system fail people with dementia and their carers — and what would a genuinely good dementia care infrastructure look like?',
+      'What is our societal relationship with cognitive decline and ageing — and how do the values of productivity and independence shape how we respond to dementia?',
+      'What does advance care planning look like for someone with dementia — and why is it so important and so underused?',
+      'How can communities and neighbourhoods become more dementia-friendly — and what would that look like in Melksham specifically?',
+    ],
+    resources: [
+      { label: 'Alzheimer\'s Society — UK charity and helpline: 0333 150 3456', url: 'https://www.alzheimers.org.uk' },
+      { label: 'Dementia UK — Admiral Nurses helpline: 0800 888 6678', url: 'https://www.dementiauk.org' },
+      { label: 'NHS — dementia guide', url: 'https://www.nhs.uk/conditions/dementia/' },
+      { label: 'Carers UK helpline: 0808 808 7777', url: 'https://www.carersuk.org' },
+      { label: 'Lewy Body Society — LBD information', url: 'https://www.lewybody.org' },
+    ],
+    videos: [
+      { label: 'Understanding Alzheimer\'s — Alzheimer\'s Society (YouTube)', url: 'https://www.youtube.com/results?search_query=understanding+alzheimers+disease+alzheimers+society' },
+      { label: 'Person-centred dementia care — Tom Kitwood (YouTube)', url: 'https://www.youtube.com/results?search_query=person+centred+dementia+care+Kitwood' },
+      { label: 'What is delirium? — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=what+is+delirium+NHS+explained' },
+    ],
+    powerPoint: `MODULE 25 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: "1 in 3" — massive hero statistic, warm/dignified tone
+Slide 3: LBD antipsychotic warning — orange alert box, bold text: "ANTIPSYCHOTICS POTENTIALLY FATAL IN LBD"
+Slide 4: Delirium vs Dementia comparison table — onset / course / reversibility / attention — clean tabular format
+Slide 5: Kitwood flower — five psychological needs in petals: love/attachment/occupation/inclusion/identity/comfort — MMH orange
+Activity slide: Life story prompt questions for participant use
+All slides: Alzheimer's Society 0333 150 3456, Dementia UK 0800 888 6678, MMH logo, licence watermark`,
+    tutorNotes: `FACILITATION: Many participants will have caring experience or personal family experience of dementia. This is a topic that generates deep emotional responses. Allow space for reflection. The life story activity can be moving — this is appropriate and valuable.
+
+LBD MEDICATION WARNING: Emphasise this to any participant working in care settings. This is potentially life-saving clinical knowledge.
+
+LANGUAGE: "A person with dementia" not "a dementia sufferer" or "demented". Always lead with personhood. Never describe cognitive decline as "just getting old" — dementia is a pathological process, not a normal feature of ageing.
+
+CARERS: Acknowledge the enormous physical and emotional burden on carers. Signpost to Carers UK and Dementia UK Admiral Nurses.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 26–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 25, topic: 'Neurocognitive Disorders', category: 'neuro', condition: 'dementia, Alzheimer\'s disease, Parkinson\'s disease and delirium' },
+    { id: 26, topic: 'Mental Health & Chronic Physical Conditions', category: 'social', condition: 'the bidirectional relationship between chronic physical illness and mental health' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
