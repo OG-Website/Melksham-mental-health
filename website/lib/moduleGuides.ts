@@ -1721,10 +1721,149 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 15–50 PLACEHOLDER
+  // MODULE 15
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 15,
+    topic: 'Anxiety Disorders: Phobias & Panic Disorder',
+    summary: 'Specific phobias, social anxiety disorder, and panic disorder — the fear-avoidance cycle, what a panic attack feels like neurologically, and the graduated exposure therapy that resolves them.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Phobias: Types and Prevalence',
+        bullets: [
+          'Specific phobia: intense, irrational fear of a specific object, situation, or activity that is avoided at significant cost',
+          'Most common: animals (particularly spiders/dogs), heights, blood/injury/needles, flying, enclosed spaces',
+          'Social anxiety disorder (social phobia): intense fear of social situations and scrutiny by others',
+          'UK prevalence: specific phobias ~10% of adults; social anxiety ~7% (NICE, 2022)',
+          'BRANDED SLIDE: phobia categories listed with icons, MMH orange accents on black',
+        ],
+      },
+      {
+        title: 'Slide 2 — Social Anxiety Disorder',
+        bullets: [
+          'Fear of being negatively judged, humiliated, or embarrassed in social situations',
+          'Often described as: going red, saying something stupid, others thinking I\'m boring/weird/incompetent',
+          'Can affect speaking in meetings, eating in public, phone calls, dating, job interviews',
+          'Average onset: 13 years; often misidentified as shyness — most people never seek treatment',
+          'BRANDED SLIDE: social anxiety thought cycle diagram — situation → self-consciousness → safety behaviours → confirmation of fear',
+        ],
+      },
+      {
+        title: 'Slide 3 — Panic Disorder',
+        bullets: [
+          'Recurrent unexpected panic attacks + persistent fear of further attacks + change in behaviour to avoid them',
+          'Panic attack: sudden onset of intense fear peaking within 10 minutes — palpitations, sweating, trembling, shortness of breath, chest pain, dizziness, derealisation, fear of dying',
+          'UK prevalence: 1.2–3.5% of adults; panic attacks without disorder much more common (~15%)',
+          'Often misdiagnosed as cardiac emergency — extremely frightening but not physically dangerous',
+          'BRANDED SLIDE: panic attack symptom body diagram — physical symptoms mapped to body outline, orange labels',
+        ],
+      },
+      {
+        title: 'Slide 4 — The Fear-Avoidance Cycle',
+        bullets: [
+          'Avoidance provides immediate relief but strengthens the association between stimulus and fear',
+          'The brain learns: "I escaped, therefore I was in danger" — reinforcing the threat appraisal',
+          'Agoraphobia: avoidance of situations where escape might be difficult — often develops secondary to panic disorder',
+          'Safety behaviours (e.g., sitting near exits, checking exits before entering) maintain anxiety in the long term',
+          'BRANDED SLIDE: fear-avoidance cycle diagram, orange arrows, avoidance labelled as "short-term relief / long-term trap"',
+        ],
+      },
+      {
+        title: 'Slide 5 — Graduated Exposure Therapy',
+        bullets: [
+          'Gold standard treatment across all phobias and panic disorder — NICE recommended',
+          'Fear hierarchy: ranked list of feared situations from least to most scary (0–100 SUDS scale)',
+          'Graded exposure: systematic, supported approach to feared situations without escape — each step repeated until anxiety reduces',
+          'Interoceptive exposure (for panic): deliberately inducing sensations (spin, hyperventilate) to reduce fear of them',
+          'Outcome: ~90% of specific phobias significantly improve with exposure therapy',
+          'BRANDED SLIDE: exposure hierarchy ladder graphic, steps labelled, MMH orange rungs',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Phobias: Types and Prevalence
+"Phobias are the most common mental health condition. Around one in ten UK adults has a specific phobia. Most never seek treatment because they have arranged their life around avoidance — and avoidance works, until it doesn't. Until the spider is in the room and you can't leave. Until the blood test is essential and you faint. Until your world has shrunk to the places where you never encounter the feared thing.
+
+Social anxiety disorder is particularly important to understand because it is so commonly dismissed as shyness or introversion. It is neither. It is a persistent, specific fear of social situations that causes real impairment — affecting careers, relationships, education, and quality of life for millions of people who have never received treatment."
+
+SLIDE 2 — Social Anxiety Disorder
+"Social anxiety is not about not liking people. Most people with social anxiety want very much to connect with others — the anxiety is precisely about how others will perceive them. The terror is of humiliation: of saying something stupid, of visibly going red, of being exposed as somehow inadequate.
+
+What maintains social anxiety is the same thing that maintains all phobias: avoidance and safety behaviours. Not making eye contact, speaking very quietly, rehearsing conversations in advance, leaving early, declining invitations — each behaviour provides temporary relief and permanently strengthens the anxiety."
+
+SLIDE 3 — Panic Disorder
+"A panic attack is one of the most frightening experiences a person can have. The physical sensations — racing heart, difficulty breathing, chest pain, dizziness, a feeling of unreality — are so severe that most people who experience their first panic attack call an ambulance, convinced they are having a heart attack or dying.
+
+It is important to be clear: panic attacks are not physically dangerous. They cannot harm the heart, and they will always pass — typically within 10 minutes. What makes them so disabling is not the attacks themselves but the anticipatory anxiety: the constant fear of having another one, and the increasingly elaborate avoidance strategies people build to try to prevent them."
+
+SLIDE 4 — The Fear-Avoidance Cycle
+"Avoidance is the engine that powers all anxiety disorders. Each time you avoid a feared situation, you get immediate relief — which teaches the brain that the threat was real and that avoidance was the right response. The association between stimulus and fear grows stronger. The world gets smaller.
+
+Safety behaviours are a subtler form of avoidance. The person with social anxiety who never makes eye contact feels temporarily protected — but they never discover that eye contact would not actually be catastrophic. The feared outcome never gets tested. That is the key insight that drives exposure therapy."
+
+SLIDE 5 — Graduated Exposure Therapy
+"Graduated exposure is one of the most effective psychological interventions in existence. The principle is straightforward: systematic, supported approach to feared situations without escape, repeated until the anxiety reduces. The brain learns — through direct experience, not through argument — that the feared outcome does not materialise, or that it is manageable.
+
+For specific phobias, a single therapist-assisted exposure session can produce clinically significant improvement. For social anxiety and panic disorder, a structured 12–16 session course of CBT with exposure components produces lasting change in 60–80% of people. The work is uncomfortable. The results are transformative."`,
+    activity: `ACTIVITY — Building an Exposure Hierarchy (20 minutes)
+Melksham Mental Health | Module 15 | Licensed Materials
+
+PURPOSE: Understand how exposure hierarchies are constructed and practise the technique using a low-stakes example — demonstrates the core mechanism of exposure therapy.
+
+INTRODUCE: "An exposure hierarchy is the roadmap for graduated exposure therapy. It is a ranked list of feared situations — from least scary at the bottom to most scary at the top. Treatment works by systematically working up the hierarchy, staying in each situation until the anxiety reduces, then moving to the next step."
+
+PART 1 — Introducing SUDS (5 minutes):
+Introduce the Subjective Units of Distress scale (0 = no anxiety, 100 = maximum imaginable anxiety). This is the unit of measurement throughout exposure work. Ask participants to calibrate their scale: what would a 10 feel like? A 50? A 90?
+
+PART 2 — Small Group Exercise (10 minutes):
+In groups of 3–4, take a common phobia (options: public speaking, or flying, or needles — pre-written on cards). Build an exposure hierarchy of 8–10 steps together:
+• What would 0–20 SUDS exposure look like? (e.g., for flying: watching a plane take off on YouTube)
+• 20–40? (e.g., visiting an airport without flying)
+• 40–60? (e.g., boarding a plane and disembarking)
+• 60–80? (e.g., short domestic flight with a trusted companion)
+• 80–100? (e.g., long-haul flight alone)
+
+PART 3 — Debrief (5 minutes):
+What makes a good exposure hierarchy? (Gradual, specific, repeated until anxiety reduces, NO safety behaviours during exposure.) Why is the order important? (Habituation at each level before escalating.) Why must the person NEVER escape during exposure? (Escape teaches the brain the threat was real.)`,
+    discussionPrompts: [
+      'When does healthy caution (avoiding genuinely dangerous situations) become phobic avoidance — and how do we make that distinction?',
+      'Why is social anxiety so commonly dismissed as shyness or personality, and what are the consequences of that misidentification?',
+      'What is the role of childhood experiences — overprotective parenting, bullying, embarrassing experiences — in the development of phobias?',
+      'Exposure therapy requires approaching the feared thing — how do we support someone through the short-term discomfort to reach the long-term benefit?',
+    ],
+    resources: [
+      { label: 'Anxiety UK — phobia support', url: 'https://www.anxietyuk.org.uk/our-services/anxiety-information/anxiety-disorders/phobia/' },
+      { label: 'Mind — panic attacks and panic disorder', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/anxiety-and-panic-attacks/panic-attacks/' },
+      { label: 'NHS — social anxiety disorder', url: 'https://www.nhs.uk/mental-health/conditions/social-anxiety/' },
+      { label: 'No Panic UK helpline: 0300 772 9844', url: 'https://www.nopanic.org.uk' },
+      { label: 'NHS Talking Therapies (self-referral)', url: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
+    ],
+    videos: [
+      { label: 'How phobias are formed and treated — TED-Ed (YouTube)', url: 'https://www.youtube.com/results?search_query=how+phobias+are+formed+ted-ed' },
+      { label: 'What happens during a panic attack — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=what+happens+during+panic+attack+NHS' },
+      { label: 'Exposure therapy explained — Anxiety UK (YouTube)', url: 'https://www.youtube.com/results?search_query=exposure+therapy+explained+anxiety' },
+    ],
+    powerPoint: `MODULE 15 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 3: Panic attack body diagram — human silhouette with symptoms radiating outward, orange labels
+Slide 4: Fear-avoidance cycle — circular flow diagram, "short-term relief / long-term trap" label in orange
+Slide 5: Exposure hierarchy ladder — 8 rungs, lowest at bottom, most feared at top, orange rungs on dark background
+Activity slide: SUDS scale (0–100) and blank hierarchy ladder template for participants
+All slides: MMH logo, Samaritans 116 123 footer, No Panic 0300 772 9844 also in footer for this module, licence watermark`,
+    tutorNotes: `FACILITATION: Panic attacks can be triggered by discussion about panic attacks — this is a real clinical phenomenon (interoceptive conditioning). If someone appears to be experiencing anxiety during this session, ground them gently: "Let's take a slow breath together. You are safe." Do not dramatise.
+
+EXPOSURE ACTIVITY: Emphasise that this is an intellectual exercise, not actual exposure. Nobody should feel genuinely anxious during the activity — the goal is to understand the technique, not to practise it.
+
+SOCIAL ANXIETY: This is likely to be the most personally resonant topic for a significant proportion of participants. Handle with care and explicitly normalise the experience of social anxiety.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 16–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 15, topic: 'Anxiety Disorders: Phobias & Panic Disorder', category: 'anxiety', condition: 'specific phobias, social anxiety disorder and panic disorder' },
+    { id: 16, topic: 'Anxiety Disorders: OCD & Related Conditions', category: 'anxiety', condition: 'obsessive-compulsive disorder (OCD), body dysmorphic disorder and related conditions' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
