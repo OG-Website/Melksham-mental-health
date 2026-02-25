@@ -1579,10 +1579,152 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 14–50 PLACEHOLDER
+  // MODULE 14
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 14,
+    topic: 'Anxiety Disorders: Generalised Anxiety Disorder',
+    summary: 'The nature of chronic, pervasive worry in GAD — why intolerance of uncertainty drives it, the physical and cognitive symptoms, and the full evidence-based treatment toolkit.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Is GAD?',
+        bullets: [
+          'Persistent, excessive, uncontrollable worry about multiple areas of daily life — not ordinary stress',
+          'UK prevalence: 5–6% of adults; most common anxiety disorder; more prevalent in women (2:1 ratio)',
+          'Worry is disproportionate to the realistic likelihood of feared outcomes and significantly impairs functioning',
+          'Onset often gradual in early adulthood; tends to be chronic and fluctuating without treatment',
+          'BRANDED SLIDE: MMH black/orange, worry word cloud in white — money, health, family, work, world',
+        ],
+      },
+      {
+        title: 'Slide 2 — Symptoms',
+        bullets: [
+          'PSYCHOLOGICAL: excessive worry, difficulty controlling it, feeling on edge or keyed up, irritability',
+          'PHYSICAL: muscle tension, fatigue, sleep disturbance (difficulty falling or staying asleep), headaches, GI symptoms',
+          'COGNITIVE: poor concentration, mind going blank, catastrophising, mental hypervigilance',
+          'BEHAVIOURAL: avoidance, reassurance-seeking, over-preparing, procrastination, checking behaviours',
+          'BRANDED SLIDE: four-quadrant symptom grid — psychological/physical/cognitive/behavioural, orange headers',
+        ],
+      },
+      {
+        title: 'Slide 3 — The Psychology of Worry',
+        bullets: [
+          'Core feature: intolerance of uncertainty — the inability to tolerate not knowing how something will resolve',
+          '"What if" thinking: automatic escalation to worst-case outcomes regardless of probability',
+          'Worry-as-coping belief: "If I worry enough, I can prevent bad things happening / stay prepared"',
+          'The paradox: worry feels useful and responsible — which is why it is so hard to stop',
+          'BRANDED SLIDE: worry cycle diagram — trigger → "what if" thought → anxiety → worry → temporary relief → sensitisation',
+        ],
+      },
+      {
+        title: 'Slide 4 — Evidence-Based Treatments',
+        bullets: [
+          'CBT: gold standard — mapping worry cycles, challenging catastrophic thinking, reducing avoidance',
+          'Acceptance and Commitment Therapy (ACT): accepts uncertainty; focuses on values-based action despite anxiety',
+          'Mindfulness-Based Cognitive Therapy (MBCT): reduces rumination, builds present-moment awareness',
+          'Medication: SSRIs/SNRIs (sertraline, venlafaxine) — first-line pharmacological treatment',
+          'BRANDED SLIDE: treatment comparison chart — CBT / ACT / MBCT / medication, evidence ratings',
+        ],
+      },
+      {
+        title: 'Slide 5 — Self-Management Strategies',
+        bullets: [
+          'Worry time: schedule a fixed 20-minute daily worry window — contains worry instead of letting it colonise the day',
+          'Progressive muscle relaxation and diaphragmatic breathing — directly counter the physical anxiety response',
+          'Exercise: one of the most effective non-pharmacological interventions for anxiety — 30 min 3×/week',
+          'Caffeine and alcohol both significantly worsen anxiety symptoms — lifestyle matters clinically',
+          'BRANDED SLIDE: self-management toolkit — worry time clock graphic, breathing diagram, lifestyle icons',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is GAD?
+"Everyone worries. Worry in itself is adaptive — it prepares us for difficulty, motivates action, and can protect us from real threats. GAD is what happens when that system runs on high alert constantly, about multiple areas of life simultaneously, in a way that is disproportionate, uncontrollable, and significantly impairing.
+
+Five to six percent of UK adults have GAD. It is the most common anxiety disorder in this country. Many more people live with significant anxiety that does not quite meet diagnostic criteria but is still significantly affecting their quality of life and their capacity to function."
+
+SLIDE 2 — Symptoms
+"One of the most important things to understand about GAD is that the physical symptoms are frequently the presenting complaint. People come to their GP with persistent headaches, GI problems, muscle tension, fatigue, or insomnia — and the anxiety driving all of those symptoms is not asked about or identified.
+
+The behavioural symptoms are often the most overlooked: the constant reassurance-seeking, the over-preparation, the avoidance of anything that might activate worry. These behaviours are sensible responses to anxiety in the short term, but they maintain and strengthen GAD in the long term."
+
+SLIDE 3 — The Psychology of Worry
+"At the psychological heart of GAD is intolerance of uncertainty. This is the key insight from the cognitive model. The person with GAD cannot tolerate the experience of not knowing how something will turn out — so they worry as a way of feeling in control, of staying prepared, of avoiding being caught off guard.
+
+Worry feels responsible. It feels like caring. It feels like competence. 'If I worry about it, at least I'm taking it seriously. If I stop worrying, something bad might happen.' This belief keeps the system running. The treatment has to gently challenge not just the content of worries, but the function they serve."
+
+SLIDE 4 — Evidence-Based Treatments
+"CBT for GAD is highly effective and is the NICE-recommended first-line psychological treatment. It works by mapping the worry cycle, identifying the unhelpful thinking patterns that drive it, testing whether the catastrophic outcomes actually happen, and reducing the avoidance and reassurance-seeking that maintain the anxiety.
+
+ACT takes a different but complementary approach: instead of challenging thoughts, it teaches acceptance of uncertainty as an unavoidable part of life, and helps the person commit to valued action even in the presence of anxiety. Both approaches have strong evidence bases."
+
+SLIDE 5 — Self-Management Strategies
+"Worry time is one of the most counterintuitive but effective self-management tools for GAD. The idea is to designate a specific 20-minute window each day — say, 5pm — as the designated worry time. When worries appear at other times, the person notes them and defers them to worry time. This sounds too simple to work. The evidence says otherwise — it significantly reduces the pervasiveness of worry without eliminating it.
+
+Physical exercise deserves emphasis here — it is one of the most consistently effective non-pharmacological interventions for anxiety, reducing cortisol, increasing GABA activity, and improving sleep. It is also free and available immediately."`,
+    activity: `ACTIVITY — Mapping the Worry Cycle (20 minutes)
+Melksham Mental Health | Module 14 | Licensed Materials
+
+MATERIALS: Worry cycle worksheets (MMH branded) or plain paper
+
+INTRODUCE: "We are going to map one recurring worry through the cycle to understand how it works and what keeps it going. This is a core CBT technique."
+
+Draw the worry cycle on a whiteboard:
+TRIGGER EVENT → "WHAT IF...?" THOUGHT → ANXIETY (body sensations) → WORRY BEHAVIOUR (avoid / check / reassure) → TEMPORARY RELIEF → INCREASED SENSITISATION OVER TIME → (back to triggers more easily)
+
+PART 1 — Individual Mapping (8 minutes, private):
+Each participant identifies one recurring worry and maps it through the cycle:
+• What is the trigger? (A situation, a thought, a physical sensation)
+• What is the "what if" thought? (The catastrophic version)
+• What do I feel in my body when this happens?
+• What do I do to reduce the anxiety? (Avoid, check, research, seek reassurance, over-prepare)
+• What happens to the worry in the longer term?
+
+PART 2 — Pairs Discussion (7 minutes):
+Share what you noticed — not necessarily the content of the worry, but the pattern. How does the relief-seeking behaviour maintain the cycle? What would happen if you resisted the urge to seek relief?
+
+PART 3 — Whole Group (5 minutes):
+Key insight: the opposite of avoidance is approach; the opposite of reassurance-seeking is tolerating uncertainty. Both are uncomfortable in the short term and liberating in the long term. This is the CBT principle of habituation — anxiety reduces when you stay with it rather than escaping.`,
+    discussionPrompts: [
+      'How do we distinguish healthy vigilance and reasonable concern from GAD-level anxiety — and who should be making that distinction?',
+      'What role does the 24-hour news cycle, social media and the always-on culture play in the rising rates of anxiety disorders?',
+      'Why might someone with GAD be reluctant to give up their worry — what function is it serving, and how do we address that therapeutically?',
+      'What workplace adjustments make the most significant difference for someone living with GAD?',
+    ],
+    resources: [
+      { label: 'Mind — Generalised Anxiety Disorder', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/anxiety-and-panic-attacks/generalised-anxiety-disorder-gad/' },
+      { label: 'NHS — GAD overview', url: 'https://www.nhs.uk/mental-health/conditions/generalised-anxiety-disorder/' },
+      { label: 'Anxiety UK — support and information', url: 'https://www.anxietyuk.org.uk' },
+      { label: 'NHS Talking Therapies (self-referral)', url: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
+      { label: 'No More Panic — UK community and resources', url: 'https://www.nomorepanic.co.uk' },
+    ],
+    videos: [
+      { label: 'How anxiety works in the brain — TED-Ed (YouTube)', url: 'https://www.youtube.com/watch?v=ZidGozDhOjg' },
+      { label: 'CBT for anxiety — worry postponement technique (YouTube)', url: 'https://www.youtube.com/results?search_query=CBT+worry+postponement+anxiety+technique' },
+      { label: 'What is GAD? — Mind UK (YouTube)', url: 'https://www.youtube.com/results?search_query=generalised+anxiety+disorder+Mind+UK' },
+    ],
+    powerPoint: `MODULE 14 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Word cloud of worry topics — "health money family work world relationships future" in white/grey on black, MMH orange header
+Slide 3: Worry cycle diagram — circular flow with labels at each stage, orange arrows
+Slide 5: Self-management toolkit — worry time clock icon, breathing diagram, exercise icon — infographic style
+Activity slide: Worry cycle worksheet reproduced for participant use
+IMPORTANT: These slides should feel structured and reassuring — not alarmist. Design communicates "this is understandable and treatable"
+All slides: MMH logo, Samaritans 116 123 footer, licence watermark`,
+    tutorNotes: `FACILITATION: Many participants will have personal experience of anxiety. This is one of the most relatable sessions in the programme. Normalise anxiety explicitly — it is a universal human experience; GAD is when the system runs out of appropriate proportion and control. Use the worry cycle diagram to make the psychology tangible and non-threatening.
+
+LANGUAGE: Avoid "just relax" or "stop worrying" — these are experienced as dismissive and unhelpful. Acknowledge that worry feels functional and even virtuous, even when it isn't.
+
+ACTIVITY: Keep the mapping analytical rather than immersive — observe the pattern rather than inhabit the worry. Some participants may find this activating; if so, bring attention back to the breath and the room.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 15–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 14, topic: 'Anxiety Disorders: Generalised Anxiety Disorder', category: 'anxiety', condition: 'generalised anxiety disorder (GAD)' },
+    { id: 15, topic: 'Anxiety Disorders: Phobias & Panic Disorder', category: 'anxiety', condition: 'specific phobias, social anxiety disorder and panic disorder' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
