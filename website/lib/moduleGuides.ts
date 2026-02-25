@@ -1860,10 +1860,148 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 16–50 PLACEHOLDER
+  // MODULE 16
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 16,
+    topic: 'Anxiety Disorders: OCD & Related Conditions',
+    summary: 'OCD demystified — the obsession-compulsion cycle, intrusive thoughts, Body Dysmorphic Disorder, hoarding, and how ERP therapy breaks the cycle.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Is OCD?',
+        bullets: [
+          'Obsessive-Compulsive Disorder: recurrent obsessions (intrusive, unwanted thoughts/images/urges) + compulsions (mental or physical acts performed to neutralise them)',
+          'UK prevalence: ~1–2% of adults; affects men and women equally; onset typically late teens to early 20s',
+          'NOT about cleanliness or tidiness — obsessions can cover contamination, harm, blasphemy, sexuality, symmetry, relationship doubts, intrusive violent images',
+          'OCD is ego-dystonic: the thoughts are experienced as alien, repugnant, and deeply distressing to the person',
+          'BRANDED SLIDE: OCD obsession categories listed — contamination / harm / religion / symmetry / sexual / relationship, MMH orange accents',
+        ],
+      },
+      {
+        title: 'Slide 2 — The OCD Cycle',
+        bullets: [
+          'Intrusive thought → catastrophic appraisal ("this means something terrible about me") → intense anxiety',
+          'Compulsion: any behaviour or mental ritual performed to reduce anxiety or prevent feared outcome',
+          'Relief is temporary; anxiety returns more quickly; compulsions escalate over time',
+          'Time spent: severe OCD can occupy 8+ hours per day, rendering normal functioning impossible',
+          'BRANDED SLIDE: OCD cycle diagram — obsession → appraisal → anxiety → compulsion → relief → sensitisation',
+        ],
+      },
+      {
+        title: 'Slide 3 — Intrusive Thoughts',
+        bullets: [
+          '90–94% of non-clinical populations report intrusive unwanted thoughts — the content is often indistinguishable from OCD obsessions',
+          'The difference: in OCD, the person attaches catastrophic significance to the thought ("having this thought means I am dangerous")',
+          '"Pure O" OCD: primarily mental obsessions and mental compulsions — no visible rituals; often goes unrecognised',
+          'Common Pure O themes: harming loved ones, blasphemy, paedophilia (ego-dystonic and deeply distressing)',
+          'BRANDED SLIDE: comparison — "everyone has intrusive thoughts" vs "OCD attaches special meaning to them"',
+        ],
+      },
+      {
+        title: 'Slide 4 — Body Dysmorphic Disorder & Hoarding',
+        bullets: [
+          'BDD: preoccupation with perceived defect in appearance that is not observable or appears minor to others',
+          'BDD prevalence: ~2% of UK adults; rates of 9–12% in cosmetic surgery settings',
+          'BDD-related compulsions: mirror checking, camouflaging, reassurance-seeking, avoiding mirrors entirely',
+          'Hoarding disorder: persistent difficulty discarding possessions regardless of actual value; significant impairment',
+          'BRANDED SLIDE: BDD and hoarding as OCD-spectrum conditions — diagram showing relationship',
+        ],
+      },
+      {
+        title: 'Slide 5 — Treatment: ERP and Beyond',
+        bullets: [
+          'ERP (Exposure and Response Prevention): NICE gold standard — exposure to triggers WITHOUT performing compulsions',
+          'Purpose: experience anxiety rising, then naturally reducing — learns that feared catastrophe does not occur and anxiety is tolerable',
+          'Cognitive therapy: challenges the meaning attached to intrusive thoughts (defusion techniques)',
+          'Medication: high-dose SSRIs (clomipramine, SSRIs) — effective adjunct; higher doses needed than for depression',
+          'BRANDED SLIDE: ERP principle diagram — anxiety spike, response prevention, natural habituation curve',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is OCD?
+"OCD is one of the most misrepresented conditions in popular culture. 'I'm so OCD about tidiness' has become a casual phrase — one that trivialises a genuinely debilitating condition. Real OCD is about intrusive, unwanted thoughts that arrive uninvited and cause intense distress, and the compulsive responses people perform to try to neutralise them. It is not about being neat. It can be about having terrifying thoughts about harming people you love, and spending hours every day trying to undo the perceived damage of having those thoughts.
+
+This distinction matters clinically and it matters for stigma. People with OCD are not dangerous. They are often among the most gentle, conscientious, scrupulous people you will meet — the very content of their obsessions reflects what they most care about and most fear becoming."
+
+SLIDE 2 — The OCD Cycle
+"The cycle of OCD is elegant and brutal. An intrusive thought arrives. The person attaches catastrophic significance to it: 'the fact that this thought occurred means something terrible about me.' That appraisal generates intense anxiety. The compulsion is performed — checking, washing, repeating a phrase, seeking reassurance — and the anxiety temporarily reduces.
+
+But the cycle tightens over time. Compulsions have to be performed more thoroughly, more times, in more specific ways to achieve the same relief. The triggers multiply. The time consumed increases. Severe OCD can consume the entire day, leaving no capacity for work, relationships, or self-care."
+
+SLIDE 3 — Intrusive Thoughts
+"One of the most important and therapeutic psychoeducational points in this session is this: between 90 and 94% of the general population report experiencing intrusive, unwanted thoughts — including thoughts about harm, sexuality, blasphemy, and violence. The content is often identical to OCD obsessions.
+
+What distinguishes OCD is not the thought itself but the meaning attached to it. The person with OCD believes: 'having this thought means I am capable of acting on it; it says something fundamental about who I am.' This misappraisal, and the compulsive response to it, is the OCD — not the thought.
+
+This insight is both clinically important and often deeply relieving to people with OCD who have carried their thoughts in secret shame for years."
+
+SLIDE 4 — BDD and Hoarding
+"Body Dysmorphic Disorder sits within the OCD spectrum. A person with BDD is preoccupied with a perceived physical defect — often facial features, skin, or hair — that is invisible or minor to everyone around them. They may spend hours checking mirrors, covering the perceived flaw, or avoiding social situations entirely.
+
+BDD is particularly important to know about in cosmetic and aesthetic settings. Research suggests that 9–12% of people seeking cosmetic procedures have BDD — for whom surgery will not resolve the underlying distress and may worsen it."
+
+SLIDE 5 — Treatment
+"ERP — Exposure and Response Prevention — is the NICE-recommended first-line treatment. The principle is counterintuitive: you encounter the trigger, you allow the anxiety to rise, and you do not perform the compulsion. You stay with the anxiety. And — this is the key discovery — the anxiety reduces on its own. It always does. The brain learns, through direct experience, that the feared outcome does not materialise and that anxiety is survivable.
+
+The work is profoundly uncomfortable in the short term. The outcomes are extraordinary."`,
+    activity: `ACTIVITY — Defusing from Intrusive Thoughts (20 minutes)
+Melksham Mental Health | Module 16 | Licensed Materials
+
+INTRODUCE: "This activity comes from Acceptance and Commitment Therapy (ACT) and addresses one of the core features of OCD — the tendency to fuse with thoughts and treat them as meaningful signals about our identity. Defusion is the art of observing thoughts without being defined by them."
+
+PART 1 — The Leaf on the Stream (7 minutes):
+Guided mindfulness visualisation — read slowly aloud:
+"Close your eyes or lower your gaze. Imagine you are sitting by a slow, gentle stream. Leaves float by on the surface. Whenever you notice a thought — any thought — place it gently on a leaf and watch it float downstream. You don't need to do anything with the thought. You don't need to figure it out, agree with it, or argue with it. Just notice it, and let it float."
+
+Run for 4–5 minutes. Then: "Slowly bring your attention back to the room."
+
+PART 2 — Pairs Discussion (8 minutes):
+What happened when you placed thoughts on leaves? Did certain thoughts feel more 'sticky'? What happened when you tried to just let them float rather than engage with them?
+
+Connect to OCD: in OCD, thoughts are not placed on leaves — they are grabbed, inspected from every angle, treated as incredibly important, and responded to urgently. The leaf metaphor illustrates what defusion looks like in practice.
+
+PART 3 — Debrief (5 minutes):
+Key insight: having a thought is not the same as acting on it, being defined by it, or agreeing with it. Thoughts are mental events — not facts, not instructions, not identity. The capacity to notice a thought without reacting to it is a skill that can be learned.`,
+    discussionPrompts: [
+      'Why does popular culture so persistently trivialise OCD as "just being clean and organised" — and what is the harm of this framing?',
+      'How would you respond if someone disclosed OCD thoughts with themes of harming others — what do they need to hear?',
+      'What are the particular challenges of treating "Pure O" OCD where compulsions are mental rather than visible?',
+      'How can cosmetic and aesthetic practitioners better identify BDD and respond appropriately without causing harm?',
+    ],
+    resources: [
+      { label: 'OCD Action — UK charity', url: 'https://www.ocdaction.org.uk' },
+      { label: 'OCD UK — information and support', url: 'https://www.ocduk.org' },
+      { label: 'Mind — OCD', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/obsessive-compulsive-disorder-ocd/' },
+      { label: 'NHS — OCD treatment', url: 'https://www.nhs.uk/mental-health/conditions/obsessive-compulsive-disorder-ocd/treatment/' },
+      { label: 'BDD Foundation', url: 'https://bddfoundation.org' },
+    ],
+    videos: [
+      { label: 'What is OCD really? — TED-Ed (YouTube)', url: 'https://www.youtube.com/watch?v=DhlRgwdDc-E' },
+      { label: 'ERP therapy for OCD explained — OCD UK (YouTube)', url: 'https://www.youtube.com/results?search_query=ERP+therapy+OCD+explained' },
+      { label: 'Intrusive thoughts — everyone has them (YouTube)', url: 'https://www.youtube.com/results?search_query=intrusive+thoughts+everyone+has+them+OCD' },
+    ],
+    powerPoint: `MODULE 16 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 2: OCD cycle — circular diagram, obsession/appraisal/anxiety/compulsion/relief clearly labelled, orange arrows
+Slide 3: Comparison slide — "90–94% of people have intrusive thoughts" vs "OCD attaches special meaning" — two columns
+Slide 5: ERP anxiety curve — spike up without compulsion → natural reduction curve → lower baseline, orange curve on dark background
+Activity slide: Stream/leaves visualisation — atmospheric nature image with dark overlay, guided text
+All slides: OCD Action helpline, MMH logo, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Some participants may disclose intrusive thoughts during or after this session for the first time. Receive these calmly, without shock. Normalise the experience of intrusive thoughts while signposting to appropriate professional support for OCD. Do not attempt to assess or diagnose.
+
+FACILITATION: This session requires sensitivity. The OCD obsession themes (harm to loved ones, paedophilia, blasphemy) can be distressing to hear about. Present them factually and without moral commentary — the clinical point is that the ego-dystonic nature of these thoughts is what defines OCD. People with these thoughts are not dangerous.
+
+LANGUAGE: Never describe OCD as a "quirk" or as positive ("at least you're very organised"). Never use it as a descriptor for general tidiness.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 17–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 16, topic: 'Anxiety Disorders: OCD & Related Conditions', category: 'anxiety', condition: 'obsessive-compulsive disorder (OCD), body dysmorphic disorder and related conditions' },
+    { id: 17, topic: 'Dissociative & Somatic Disorders', category: 'clinical', condition: 'dissociative disorders (DID, depersonalisation) and somatic symptom disorder' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
