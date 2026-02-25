@@ -518,11 +518,153 @@ BRANDING: All slides must use the MMH brand template. Do not alter fonts, colour
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 7–50 PLACEHOLDER (full content added in sequence)
+  // MODULE 7
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 7,
+    topic: 'Trauma & Stress: PTSD and Complex PTSD',
+    summary: 'How trauma becomes trapped in the brain and body; the distinction between PTSD and C-PTSD; and the NICE-recommended therapies — EMDR and TF-CBT — that support genuine, lasting recovery.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Is PTSD?',
+        bullets: [
+          'Post-Traumatic Stress Disorder: develops after direct or witnessed exposure to a traumatic event',
+          'UK prevalence: ~4% of adults; 1 in 3 people who experience trauma develop PTSD (NHS England, 2023)',
+          'Higher rates in: emergency workers (~20%), veterans (~17%), survivors of sexual violence (~50%)',
+          'PTSD is not weakness — it is the threat-detection system failing to switch off after danger has passed',
+          'BRANDED SLIDE: MMH black/orange, brain graphic showing amygdala highlighted',
+        ],
+      },
+      {
+        title: 'Slide 2 — The Four Symptom Clusters',
+        bullets: [
+          'RE-EXPERIENCING: flashbacks, nightmares, intrusive memories — sensory, vivid, felt as present',
+          'AVOIDANCE: staying away from people, places, sounds, smells, or feelings that trigger memories',
+          'NEGATIVE COGNITION/MOOD: shame, guilt, emotional numbing, persistent negative beliefs about self',
+          'HYPERAROUSAL: constant alertness, exaggerated startle, irritability, concentration problems, insomnia',
+          'BRANDED SLIDE: four-quadrant grid, one cluster per quadrant, MMH orange headers',
+        ],
+      },
+      {
+        title: 'Slide 3 — Complex PTSD (C-PTSD)',
+        bullets: [
+          'Develops from prolonged, repeated interpersonal trauma: childhood abuse, domestic violence, torture, trafficking',
+          'ICD-11 (2018) recognises C-PTSD as distinct from PTSD — not yet in DSM-5 but widely accepted clinically',
+          'Core PTSD symptoms PLUS: severe emotional dysregulation, profound shame/self-blame, relational difficulties',
+          'Often misdiagnosed as BPD, bipolar disorder, or treatment-resistant depression — average 6 years to correct diagnosis',
+          'BRANDED SLIDE: Venn diagram — PTSD circle, C-PTSD additional features outside, overlap shown',
+        ],
+      },
+      {
+        title: 'Slide 4 — Trauma in the Body',
+        bullets: [
+          '"The body keeps the score" — trauma is physiological, not only psychological (van der Kolk, 2014)',
+          'Nervous system dysregulation: freeze, fight, flight, and fawn survival responses',
+          'Physical manifestations: chronic pain, GI problems, fatigue, immune dysfunction, early cardiovascular disease',
+          'Window of Tolerance: the zone of nervous system activation where trauma processing is possible',
+          'BRANDED SLIDE: nervous system window diagram, MMH branded with orange threshold lines',
+        ],
+      },
+      {
+        title: 'Slide 5 — NICE-Recommended Treatments',
+        bullets: [
+          'EMDR (Eye Movement Desensitisation and Reprocessing) — NICE recommended, strong RCT evidence',
+          'Trauma-Focused CBT (TF-CBT) — NICE recommended, extensively evidenced across populations',
+          'Stabilisation before processing — safety and grounding must come first, always',
+          'Medication: SSRIs (sertraline, paroxetine) can help symptoms but are not curative — not first-line',
+          'BRANDED SLIDE: treatment pathway timeline graphic, NICE badge, MMH branding',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is PTSD?
+"PTSD was formally recognised in the context of Vietnam War veterans, but trauma is as old as human experience. What we now understand is that PTSD develops when the brain's threat-processing system becomes overwhelmed. Normally, memories are processed and filed in the past — with context, distance, and reduced emotional charge. In PTSD, the traumatic memory stays live. It does not get filed. It remains accessible as a present threat.
+
+About 4% of UK adults have PTSD at any given time. In populations with repeated trauma exposure — survivors of sexual violence, domestic abuse, emergency service workers, military personnel — that figure is significantly higher."
+
+SLIDE 2 — The Four Symptom Clusters
+"The four symptom clusters of PTSD each have a logic to them when you understand what the nervous system is trying to do.
+
+Re-experiencing keeps the person alert to the threat — the flashbacks are the brain's attempt to ensure the person does not get caught off guard again. Avoidance is a natural protective response — if the memory is so painful, of course you try to stay away from triggers. Negative changes in cognition and mood are the belief system updating to match a dangerous world: 'the world is unsafe', 'I am broken', 'it was my fault'. Hyperarousal is the constant surveillance state — never fully relaxing, because the threat might return at any moment.
+
+The problem is that all four responses, while they made sense during the traumatic experience, become self-perpetuating and disabling in the aftermath."
+
+SLIDE 3 — Complex PTSD
+"Complex PTSD develops when trauma is not a single event but a prolonged experience — years of childhood abuse, sustained domestic violence, long-term captivity. The nervous system adapts to live in a state of chronic, inescapable threat.
+
+Beyond the core PTSD symptoms, the additional features of C-PTSD — profound shame and self-blame, the deep sense of being permanently damaged or different from others, extreme difficulty forming or maintaining trusting relationships — are not personality defects. They are survival adaptations. They made sense in the traumatic environment. Understanding that is often the first thing that begins to shift how a survivor sees themselves."
+
+SLIDE 4 — Trauma in the Body
+"Bessel van der Kolk's work changed how the field thinks about trauma. The insight is that trauma is not merely a psychological phenomenon — it is physiological. The body literally keeps the score. Survivors often carry trauma in chronic pain, persistently tight muscles, a digestive system that never settles, a startle response that never switches off.
+
+The Window of Tolerance is a key therapeutic concept. It describes the zone of nervous system activation in which processing is actually possible — not so calm that the person is dissociated from the material, and not so activated that they are overwhelmed by it. Effective trauma therapy works carefully within that window, expanding it gradually over time."
+
+SLIDE 5 — NICE-Recommended Treatments
+"NICE recommends both EMDR and Trauma-Focused CBT for PTSD, and the evidence for both is strong. The goal of both therapies is the same: to help the person integrate the traumatic memory — not erase it, but transform it so that it becomes a memory of the past rather than a present threat.
+
+EMDR uses bilateral stimulation — typically guided eye movements — while the person holds aspects of the traumatic memory in mind. The mechanism is still being researched, but the outcomes data is excellent. Before any trauma processing begins in either approach, stabilisation is essential: safety, grounding, a therapeutic relationship. You cannot process what you cannot yet tolerate."`,
+    activity: `ACTIVITY — Grounding Toolkit (20 minutes)
+Melksham Mental Health | Module 7 | Licensed Materials
+
+PURPOSE: Equip participants with evidence-based grounding techniques used in trauma-informed care. These are tools for daily use, not just for people with PTSD.
+
+INTRODUCE: "Grounding techniques bring us back into the present moment when we feel overwhelmed, activated, or flooded by difficult memories or emotions. They work by engaging the sensory system — pulling attention into the body and the environment. These are tools used in trauma therapy, but they are useful for everyone."
+
+PART 1 — 5-4-3-2-1 Sensory Grounding (5 minutes):
+Read aloud: "Look around the room. Name 5 things you can see. Touch 4 things around you and notice their texture. Listen carefully for 3 distinct sounds. Identify 2 things you can smell. Notice 1 thing you can taste. Take a slow breath."
+Practice together. Ask: How did that feel? What changed in your body?
+
+PART 2 — Box Breathing (5 minutes):
+"Breathe in for 4 counts. Hold for 4. Exhale for 4. Hold for 4. Repeat 4 times."
+Practice together. Explain: this activates the parasympathetic nervous system, directly counteracting the fight-or-flight stress response. Used by military, emergency services, and elite athletes.
+
+PART 3 — Safe Place Visualisation (5 minutes):
+"Close your eyes if comfortable, or lower your gaze. Picture a place — real or imagined — where you feel completely safe and at ease. Fill in the sensory details: what do you see? What sounds are there? What does the air feel like? Spend a moment allowing your body to respond to this place."
+After 3 minutes: "Gently bring your attention back to the room."
+
+DEBRIEF (5 minutes): Which technique felt most useful? When in your daily life — or professional practice — could you use these? How might you introduce these to someone you are supporting?`,
+    discussionPrompts: [
+      'Why has PTSD historically been associated mainly with combat veterans, when trauma affects many different populations including survivors of abuse, refugees, and emergency workers?',
+      'What does "healing from trauma" actually mean — is full recovery possible, or is it more about learning to live differently alongside what happened?',
+      'How might the physical symptoms of trauma — chronic pain, GI problems, fatigue — be misunderstood or mismanaged in medical settings?',
+      'What would a genuinely trauma-informed community, school, or workplace look like in practice — and what would need to change to create one?',
+    ],
+    resources: [
+      { label: 'Mind — PTSD', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/post-traumatic-stress-disorder-ptsd/' },
+      { label: 'NHS — PTSD overview and treatment', url: 'https://www.nhs.uk/mental-health/conditions/post-traumatic-stress-disorder-ptsd/' },
+      { label: 'EMDR Association UK — find a therapist', url: 'https://emdrassociation.org.uk' },
+      { label: 'Combat Stress (veteran PTSD)', url: 'https://combatstress.org.uk' },
+      { label: 'Rape Crisis England & Wales', url: 'https://rapecrisis.org.uk' },
+    ],
+    videos: [
+      { label: 'How PTSD changes the brain — TED-Ed (YouTube)', url: 'https://www.youtube.com/watch?v=mc7oKkFWOzc' },
+      { label: 'EMDR explained — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=EMDR+therapy+explained+NHS' },
+      { label: 'Bessel van der Kolk — The Body Keeps the Score (lecture)', url: 'https://www.youtube.com/results?search_query=bessel+van+der+kolk+body+keeps+score+lecture' },
+    ],
+    powerPoint: `MODULE 7 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black background (#0a0a0a), orange accents (#f97316), white text (#ffffff)
+Slides: Title + 5 content + Activity + Q&A = 8 slides total
+Slide 1 Title: "PTSD & Complex PTSD" | Module 7 | MMH logo centred | Licence watermark diagonal
+Slide 2: Four-quadrant grid graphic — Re-experiencing / Avoidance / Negative Cognition / Hyperarousal, each in MMH orange bordered box
+Slide 3: Venn diagram — PTSD and C-PTSD — orange on black
+Slide 4: Window of Tolerance diagram — hyper/hypo arousal zones, window highlighted in orange
+Slide 5: Treatment pathway — stabilisation → processing → integration — timeline format
+Slide 6: NICE badge prominently — EMDR and TF-CBT in orange callout boxes
+Activity slide: Full orange banner "Grounding Toolkit Practice"
+Brand footer: "© Melksham Mental Health | Licensed Training | Not for Redistribution" every slide`,
+    tutorNotes: `SAFEGUARDING — HIGH RISK SESSION: This session is likely to trigger personal disclosures of past trauma. Do not attempt any trauma processing work in the group setting. If someone becomes distressed: acknowledge them calmly and warmly, do not push for details, offer to speak privately after the session, and follow your organisation's safeguarding protocol. Have crisis numbers visible throughout — Samaritans 116 123, local crisis line.
+
+GROUNDING ACTIVITY: The grounding activity is appropriate for all participants. However, some trauma survivors find visualisation activating — offer the sensory grounding as an alternative if needed. Never require anyone to close their eyes.
+
+LANGUAGE: Avoid using "traumatised" casually or as a metaphor. Use "survivor" rather than "victim" unless the individual uses that term themselves. Do not use graphic descriptions of traumatic events under any circumstances.
+
+LICENCE: These materials are licensed to the registered user only. Not for redistribution, resale, or delivery by unlicensed practitioners.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 8–50 PLACEHOLDER (full content added in sequence)
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 7, topic: 'Trauma & Stress: PTSD and Complex PTSD', category: 'trauma', condition: 'post-traumatic stress disorder (PTSD) and complex PTSD (C-PTSD)' },
-    { id: 7, topic: 'Trauma & Stress: PTSD and Complex PTSD', category: 'trauma', condition: 'post-traumatic stress disorder (PTSD) and complex PTSD (C-PTSD)' },
     { id: 8, topic: 'Trauma & Stress: Domestic & Intimate Partner Violence', category: 'trauma', condition: 'domestic and intimate partner violence and its mental health impact' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
