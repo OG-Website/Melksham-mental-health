@@ -2876,10 +2876,154 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 23–50 PLACEHOLDER
+  // MODULE 23
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 23,
+    topic: 'Personality Disorders: Cluster A & B',
+    summary: 'Paranoid, schizoid, antisocial, borderline (BPD), and histrionic personality disorders — understanding the attachment and trauma origins, what life feels like from inside, and therapeutic approaches.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Are Personality Disorders?',
+        bullets: [
+          'A persistent pattern of inner experience and behaviour that deviates markedly from cultural expectations, is pervasive and inflexible, causes distress or functional impairment',
+          'UK prevalence: ~10% of adults have a personality disorder; most common in mental health settings and criminal justice',
+          'DSM-5: 10 specific personality disorders in 3 clusters; ICD-11 moves to dimensional severity model',
+          'CRITICAL FRAMING: personality disorders are best understood as adaptations to early adversity — not character defects',
+          'BRANDED SLIDE: three clusters overview diagram — A (odd/eccentric), B (dramatic/erratic), C (anxious/fearful), MMH orange',
+        ],
+      },
+      {
+        title: 'Slide 2 — Cluster A: Paranoid, Schizoid, Schizotypal',
+        bullets: [
+          'Paranoid: pervasive distrust and suspiciousness — believes others are exploiting, harming, or deceiving them',
+          'Schizoid: detachment from social relationships; restricted emotional expression; preference for solitude',
+          'Schizotypal: acute discomfort with close relationships; cognitive/perceptual distortions; eccentric behaviour',
+          'Cluster A closely related to schizophrenia spectrum — higher prevalence in biological relatives of people with psychosis',
+          'BRANDED SLIDE: Cluster A feature table with key differentiators, MMH styled',
+        ],
+      },
+      {
+        title: 'Slide 3 — Antisocial Personality Disorder',
+        bullets: [
+          'Persistent disregard for and violation of others\' rights; deceitfulness, impulsivity, aggression, recklessness',
+          'UK prevalence: ~3% of men, ~1% of women; significantly over-represented in prison population (~50–65%)',
+          'NOT the same as psychopathy — a narrower construct characterised by lack of empathy and remorselessness',
+          'Strong relationship with childhood abuse, neglect, and conduct disorder — risk factors are largely environmental',
+          'BRANDED SLIDE: ASPD vs psychopathy comparison — misconceptions addressed, MMH branding',
+        ],
+      },
+      {
+        title: 'Slide 4 — Borderline Personality Disorder',
+        bullets: [
+          'BPD: intense and unstable emotions, self-image, and relationships; impulsivity; fear of abandonment; chronic emptiness; self-harm',
+          'UK prevalence: ~1–2% of general population; ~20% of psychiatric inpatients',
+          'Trauma association: 70–90% of people with BPD report childhood abuse or neglect',
+          'Severe stigma within healthcare settings — professionals often reluctant to work with BPD, leading to worse outcomes',
+          'DBT (Dialectical Behaviour Therapy): gold standard — specifically developed for BPD by Marsha Linehan (who had BPD herself)',
+          'BRANDED SLIDE: BPD features infographic — emotional intensity graph, relationship pattern cycle',
+        ],
+      },
+      {
+        title: 'Slide 5 — Therapeutic Approaches',
+        bullets: [
+          'DBT: mindfulness + distress tolerance + emotion regulation + interpersonal effectiveness',
+          'MBT (Mentalisation-Based Treatment): focuses on improving ability to understand mental states in self and others',
+          'Schema Therapy: addresses deep maladaptive patterns (schemas) formed in childhood',
+          'Therapeutic stance: non-judgmental, consistent, boundaried, warm — not reactive or punitive',
+          'Recovery is possible: BPD has one of the best prognoses of any serious personality disorder with appropriate treatment',
+          'BRANDED SLIDE: three therapies comparison — DBT / MBT / Schema, key features each, evidence ratings',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Are Personality Disorders?
+"Personality disorders are among the most stigmatised diagnoses in mental health — and that stigma exists not only in the general public but within healthcare settings themselves. I want to reframe this from the outset.
+
+Personality disorders represent patterns of thinking, feeling, and relating that were originally adaptive. They developed in response to early environments that were unsafe, unpredictable, or abusive. The patterns made sense then. They cause problems now because they are applied to all relationships and all situations, regardless of whether those conditions still apply.
+
+They are adaptations, not character defects. That distinction matters enormously for how we approach people who have these diagnoses."
+
+SLIDE 2 — Cluster A
+"The Cluster A personality disorders share a common thread: difficulty trusting others and discomfort with intimacy. In paranoid PD, that manifests as suspiciousness and the belief that others have harmful intentions. In schizoid PD, it manifests as a genuine preference for solitude and limited emotional connection. In schizotypal, there are odd perceptual experiences and eccentric thinking that sit just below the threshold of psychosis.
+
+These presentations are often lonely. The person may want connection but find it fundamentally unsafe or incomprehensible."
+
+SLIDE 3 — Antisocial Personality Disorder
+"ASPD is the most misrepresented personality disorder in popular culture, largely because of its conflation with psychopathy. Most people with ASPD are not psychopathic. They have significant impulsivity, a history of rule-breaking and harm to others, and difficulty maintaining consistent prosocial behaviour — but they are not without empathy or emotional responsiveness.
+
+The criminal justice over-representation should prompt reflection on causation: the ACE profile of people with ASPD typically involves severe childhood abuse, neglect, instability, and conduct disorder. We imprison the consequences of childhoods we failed to protect."
+
+SLIDE 4 — Borderline Personality Disorder
+"BPD is simultaneously one of the most common and most poorly managed diagnoses in mental health services. The stigma is extraordinary — research shows that clinicians change their attitudes and willingness to help significantly when the diagnosis of BPD is disclosed. That is the opposite of what the evidence requires.
+
+Marsha Linehan — the developer of DBT — disclosed publicly in 2011 that she had received a diagnosis of schizophrenia earlier in life, and later understood her presentation as what would now be called BPD. Her development of DBT was therefore not only academic — it was personal. DBT works because it was designed from the inside out."
+
+SLIDE 5 — Therapeutic Approaches
+"DBT, MBT, and Schema Therapy all share a common quality: they require the therapist to maintain a consistently non-judgmental, warm, boundaried presence with someone whose early experience of relationship was that it was dangerous, unpredictable, or punishing. The therapeutic relationship IS the treatment in many ways. Recovery from personality disorders is real, well-evidenced, and more common than many clinicians believe."`,
+    activity: `ACTIVITY — Schema Identification (20 minutes)
+Melksham Mental Health | Module 23 | Licensed Materials
+
+PURPOSE: Understand the concept of early maladaptive schemas — the deep belief patterns that schema therapy addresses — and begin to see how these might inform personality disorder presentations.
+
+INTRODUCE: "Schemas are deep patterns of thought and feeling about ourselves, others, and the world that form in childhood in response to early experience. When early environments are consistently unsafe, unreliable, or emotionally neglectful, the schemas that form can be profound and rigid. Schema therapy is a way of identifying and gradually changing these deep patterns."
+
+PART 1 — The 18 Schemas (7 minutes):
+Present a simplified list of the major early maladaptive schemas (from Young et al.):
+• Abandonment/Instability: "People I love will always leave me"
+• Mistrust/Abuse: "Others will hurt, abuse or humiliate me"
+• Emotional Deprivation: "My emotional needs will never be met"
+• Defectiveness/Shame: "I am fundamentally flawed and unlovable"
+• Failure: "I will always fail"
+• Dependence: "I can't cope without help"
+• Subjugation: "I must suppress what I want to avoid punishment"
+• Unrelenting Standards: "I must meet very high standards or I will be worthless"
+
+In pairs, discuss: Which of these do you see most frequently in the people you work with or support? Which might underlie some of the presentations we've covered in today's module?
+
+PART 2 — Schema Origins (8 minutes):
+Where might each schema come from in terms of childhood experience? What kind of early environment might produce "Abandonment/Instability" as a core belief? "Defectiveness/Shame"?
+
+Whole group discussion (5 minutes): How does understanding the schema origin change how you respond to the surface behaviour?`,
+    discussionPrompts: [
+      'How is the current healthcare system failing people with personality disorders — and what would a genuinely helpful service look like?',
+      'What is the difference between a personality disorder and a personality — and who gets to make that judgement?',
+      'How does BPD stigma in clinical settings manifest in practice — what does it look like, and what are the consequences?',
+      'What training do all mental health professionals need in working with personality disorders, and why is this currently inadequate?',
+    ],
+    resources: [
+      { label: 'Mind — personality disorders', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/personality-disorders/' },
+      { label: 'Rethink — personality disorders', url: 'https://www.rethink.org/advice-and-information/about-mental-illness/learn-more-about-conditions/personality-disorders/' },
+      { label: 'EUPD Resources — BPD UK', url: 'https://www.eupd.co.uk' },
+      { label: 'DBT Self-Help — skills and resources', url: 'https://www.dbtselfhelp.com' },
+      { label: 'NHS — personality disorders', url: 'https://www.nhs.uk/mental-health/conditions/personality-disorder/' },
+    ],
+    videos: [
+      { label: 'What is borderline personality disorder? — TED-Ed (YouTube)', url: 'https://www.youtube.com/results?search_query=borderline+personality+disorder+explained+ted' },
+      { label: 'Marsha Linehan — developing DBT (YouTube)', url: 'https://www.youtube.com/results?search_query=Marsha+Linehan+DBT+interview' },
+      { label: 'Schema therapy explained (YouTube)', url: 'https://www.youtube.com/results?search_query=schema+therapy+explained' },
+    ],
+    powerPoint: `MODULE 23 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Three-cluster overview — A/B/C in three hexagons, brief descriptors, MMH orange styling
+Slide 4: BPD emotional intensity graph — peaks and troughs on timeline, relationship cycle diagram
+Slide 5: DBT/MBT/Schema comparison table — evidence ratings per therapy
+Activity slide: Schema list as handout reference card — clean, readable, MMH branded
+All slides: MMH logo, Samaritans 116 123, licence watermark`,
+    tutorNotes: `SAFEGUARDING: BPD is strongly associated with self-harm and suicide. Follow all Module 10 safeguarding protocols. Have Samaritans (116 123) visible throughout.
+
+LANGUAGE: Never describe anyone as "a borderline" or use the term dismissively. The term EUPD (Emotionally Unstable Personality Disorder) is used in some NHS settings — acknowledge this. Person-first language always. Never describe anyone with any personality disorder as "untreatable" or "difficult" — the evidence does not support this and it causes direct harm.
+
+SCHEMA ACTIVITY: Keep this at an analytical and compassionate distance — this is about understanding patients and clients, not self-diagnosis. Ensure the group understands they are exploring schemas as a conceptual tool.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 24–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 23, topic: 'Personality Disorders: Cluster A & B', category: 'personality', condition: 'paranoid, schizoid, antisocial, borderline and histrionic personality disorders' },
+    { id: 24, topic: 'Personality Disorders: Cluster C & Others', category: 'personality', condition: 'narcissistic, avoidant, dependent and obsessive-compulsive personality disorders' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
