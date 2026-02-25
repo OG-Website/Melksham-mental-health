@@ -2586,10 +2586,158 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 21–50 PLACEHOLDER
+  // MODULE 21
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 21,
+    topic: 'Substance Use & Addiction',
+    summary: 'The neuroscience of addiction — why it is a brain disorder, not a moral failing; alcohol, drugs, and behavioural addictions; harm reduction, motivational interviewing, and recovery-focused approaches.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Addiction as a Brain Disorder',
+        bullets: [
+          'Addiction: compulsive substance use or behaviour despite significant negative consequences',
+          'Neurobiological basis: hijacking of the dopamine reward system — the same system that motivates survival behaviours',
+          'UK: ~3 million people with alcohol use disorder; ~300,000 people dependent on heroin or crack cocaine (OHID, 2023)',
+          '"Just stop" advice fails because it ignores the neurobiology — addiction structurally changes the brain',
+          'BRANDED SLIDE: dopamine reward pathway diagram — nucleus accumbens, VTA — MMH orange highlights',
+        ],
+      },
+      {
+        title: 'Slide 2 — Types of Substance Use Disorder',
+        bullets: [
+          'Alcohol: most harmful substance in UK by total societal impact; dependence develops in 1 in 4 regular heavy drinkers',
+          'Opioids: prescription opioid misuse rising sharply — not only illicit heroin; pharmacological dependence vs psychological addiction',
+          'Cannabis: increasingly potent strains; clear association with psychosis in vulnerable individuals, particularly high-THC products',
+          'Stimulants: cocaine, MDMA, amphetamines — primarily psychological dependence; significant mental health consequences',
+          'BRANDED SLIDE: UK substance landscape overview — alcohol, opioids, cannabis, stimulants with key statistics',
+        ],
+      },
+      {
+        title: 'Slide 3 — Co-occurring Mental Health Disorders',
+        bullets: [
+          '"Dual diagnosis": mental health disorder + substance use disorder — the rule in specialist settings, not the exception',
+          'Self-medication: many people use substances to manage anxiety, depression, trauma, or psychosis symptoms',
+          'Chicken-and-egg: substances cause mental health problems AND mental health problems drive substance use',
+          'Integrated treatment: addressing both simultaneously produces significantly better outcomes than sequential treatment',
+          'BRANDED SLIDE: dual diagnosis overlap diagram — mental health disorders circle + substance use circle, large intersection',
+        ],
+      },
+      {
+        title: 'Slide 4 — Harm Reduction',
+        bullets: [
+          'Harm reduction: pragmatic, evidence-based approaches to minimise damage without requiring abstinence as a precondition',
+          'Examples: needle exchange, naloxone distribution, supervised consumption rooms, drug checking services',
+          'UK: naloxone (opioid reversal agent) available free to anyone at risk or whose family member is at risk',
+          'Abstinence vs harm reduction: not either/or — the goal is to save lives and improve wellbeing using the best available evidence',
+          'BRANDED SLIDE: harm reduction principle — meeting people where they are, not where we want them to be',
+        ],
+      },
+      {
+        title: 'Slide 5 — Motivational Interviewing & Recovery',
+        bullets: [
+          'Motivational Interviewing (MI): collaborative conversation style that elicits and strengthens intrinsic motivation to change',
+          'Core MI spirit: Partnership, Acceptance, Compassion, Evocation (PACE)',
+          'Stages of change (Prochaska): pre-contemplation → contemplation → preparation → action → maintenance',
+          'Recovery is non-linear — relapse is not failure; it is a normal part of the change process for most people',
+          'BRANDED SLIDE: stages of change wheel with MI skills mapped to each stage',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Addiction as a Brain Disorder
+"Addiction is not a moral failing. This statement may sound simple, but it contradicts a deeply embedded cultural belief that people who become addicted simply lack willpower or character. That belief is not only wrong — it is harmful, because it drives shame and stigma that are the biggest barriers to treatment-seeking.
+
+Addiction hijacks the brain's dopamine reward system — the same system that evolved to ensure we eat, drink water, and reproduce. Substances and addictive behaviours produce dopamine surges that dwarf those of normal survival activities. Over time, the brain adapts — natural rewards feel flat, and the substance becomes the primary motivator for behaviour. This is not a choice. It is a structural change in the brain that has an established neurobiology."
+
+SLIDE 2 — Types of Substance Use Disorder
+"Alcohol is the most harmful substance in the UK when you account for total societal damage — to individuals, families, and public services. One in four people who drink heavily regularly will develop alcohol use disorder. Alcohol withdrawal is also one of the few withdrawals that can be medically fatal — alongside benzodiazepines — which is why medical supervision is essential.
+
+Cannabis deserves specific mention because of the significant increase in potency of available products over the past two decades. High-THC cannabis has clear causal associations with psychosis, particularly in people with genetic vulnerability and adolescent users."
+
+SLIDE 3 — Co-occurring Disorders
+"When I say that dual diagnosis is the rule rather than the exception in specialist addiction settings, I mean this statistically: the majority of people presenting for addiction treatment have a co-occurring mental health condition. Most commonly anxiety, depression, and PTSD — but also personality disorders and psychosis.
+
+Self-medication is the key clinical concept here. People use substances to manage experiences that feel otherwise unmanageable. Treating the substance use without addressing what it was managing is one of the main reasons that treatment fails. Integrated care — addressing both simultaneously — is what the evidence supports."
+
+SLIDE 4 — Harm Reduction
+"Harm reduction sometimes feels controversial, but it is simply pragmatic public health. People are going to use drugs. Some of them are going to die unless we provide services that keep them alive until they are ready and able to engage with treatment. Needle exchange services have dramatically reduced HIV transmission in this country. Naloxone distribution saves lives from opioid overdose. These are not endorsements of drug use — they are acknowledgements of reality.
+
+Naloxone — the opioid reversal agent — is available free from many pharmacies to anyone whose family member or close contact uses opioids. This fact is not widely known. Sharing it costs nothing and can save a life."
+
+SLIDE 5 — Motivational Interviewing and Recovery
+"Motivational Interviewing is one of the most important communication skills in mental health and addiction work. The core insight is that people change when they discover their own reasons to change — not when they are lectured at, threatened, or shamed. The MI practitioner's role is not to provide the motivation but to draw out the person's own values, goals, and reasons for change.
+
+Recovery is not a destination — it is a process. Most people relapse. This does not mean treatment has failed. It means they are in the normal, non-linear process of change that characterises human behaviour. The question is never whether someone has relapsed, but whether they remain engaged with the possibility of change."`,
+    activity: `ACTIVITY — Motivational Interviewing Practice (20 minutes)
+Melksham Mental Health | Module 21 | Licensed Materials
+
+PURPOSE: Experience the difference between a confrontational conversation about change and a motivational interviewing conversation; understand why MI produces better outcomes.
+
+PART 1 — What NOT to Do (3 minutes):
+Facilitator reads aloud a script of a confrontational, directive conversation about alcohol:
+"You really need to cut down. You know it's bad for you. Why can't you just stop? You need to take this seriously."
+
+Ask the group: How does it feel to be on the receiving end of that conversation? What is your instinctive response? (Expected: defensive, resistant, shut down.)
+
+This is the righting reflex — the natural human impulse to correct and advise. It almost always triggers resistance.
+
+PART 2 — The OARS Framework (5 minutes):
+Introduce OARS — the core MI technique:
+O — Open questions: "What concerns you about your drinking?" not "Do you drink too much?"
+A — Affirmations: acknowledge strengths and efforts genuinely: "You've thought a lot about this."
+R — Reflective listening: reflect back what you hear — the feeling behind the words
+S — Summarise: "So if I understand you, you're worried about your health but feel like cutting down would be very hard right now."
+
+PART 3 — Practice in Pairs (7 minutes):
+One person plays the role of someone ambivalent about change (alcohol, smoking, or exercise — their choice). The other practises OARS: one open question, one reflection, one affirmation.
+
+Then swap roles.
+
+PART 4 — Debrief (5 minutes):
+What felt different about being listened to in this way? What made it hard to resist offering advice? Key principle: resistance is information, not obstruction — it tells you where the person is in their change process.`,
+    discussionPrompts: [
+      'Why does society respond so differently to addiction to illegal substances versus addiction to alcohol — and what does that inconsistency reveal?',
+      'What would genuinely integrated addiction and mental health services look like — and why are they so rare in the current NHS structure?',
+      'How do we maintain compassion for someone whose addiction is significantly harming people around them — including children?',
+      'What is the role of the environment — poverty, unemployment, housing instability, adverse childhood experiences — in the development of addiction?',
+    ],
+    resources: [
+      { label: 'Talk to Frank — drug information and support', url: 'https://www.talktofrank.com' },
+      { label: 'Drinkaware — alcohol support', url: 'https://www.drinkaware.co.uk' },
+      { label: 'FRANK helpline: 0300 123 6600', url: 'https://www.talktofrank.com/get-help/find-support-near-you' },
+      { label: 'Turning Point — UK addiction services', url: 'https://www.turning-point.co.uk' },
+      { label: 'SMART Recovery UK (evidence-based self-help)', url: 'https://www.smartrecovery.org.uk' },
+    ],
+    videos: [
+      { label: 'Everything you know about addiction is wrong — Johann Hari TED (YouTube)', url: 'https://www.youtube.com/watch?v=PY9DcIMGxMs' },
+      { label: 'Motivational interviewing in 5 minutes (YouTube)', url: 'https://www.youtube.com/results?search_query=motivational+interviewing+explained+5+minutes' },
+      { label: 'The neuroscience of addiction — NIDA (YouTube)', url: 'https://www.youtube.com/results?search_query=neuroscience+addiction+dopamine+explained' },
+    ],
+    powerPoint: `MODULE 21 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Dopamine pathway brain diagram — reward circuit highlighted, nucleus accumbens and VTA labelled in orange
+Slide 3: Dual diagnosis Venn — large intersection zone, "this is the rule, not the exception" annotation
+Slide 4: Harm reduction principle — "meeting people where they are" as pull quote in orange italic
+Slide 5: Stages of change wheel — Prochaska model, MMH orange styling
+Activity slide: OARS framework card — O/A/R/S with brief explanation each, reference card format
+All slides: FRANK 0300 123 6600, Samaritans 116 123, MMH logo, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Participants may disclose active substance use — their own or a family member's — during this session. Receive disclosures compassionately and without judgement. Provide relevant helpline numbers. If a child is at risk due to a carer's substance use, follow mandatory safeguarding procedures.
+
+FACILITATION: Adopt the MI spirit throughout this session — model the approach you are teaching. If group members express judgement about "addicts", explore this gently rather than challenging it directly.
+
+LANGUAGE: "Person with addiction" or "person who uses drugs" — not "addict", "junkie", or "alcoholic". These labels increase shame and reduce treatment-seeking.
+
+ALCOHOL: Be aware that some participants may have concerning levels of alcohol use. Do not draw attention to this. FRANK helpline is confidential and appropriate for self-referral.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 22–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 21, topic: 'Substance Use & Addiction', category: 'clinical', condition: 'substance use disorder, alcohol dependence, drug addiction and gambling disorder' },
+    { id: 22, topic: 'Psychotic Disorders: Schizophrenia & Related Conditions', category: 'clinical', condition: 'schizophrenia spectrum and other psychotic disorders' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
