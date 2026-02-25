@@ -662,10 +662,162 @@ LICENCE: These materials are licensed to the registered user only. Not for redis
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 8–50 PLACEHOLDER (full content added in sequence)
+  // MODULE 8
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 8,
+    topic: 'Trauma & Stress: Domestic & Intimate Partner Violence',
+    summary: 'The mental health impact of domestic abuse and coercive control; trauma bonding and why leaving is complex; and how to respond safely, supportively, and without judgement.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Scale and Definition',
+        bullets: [
+          '1 in 4 women and 1 in 6 men experience domestic abuse in their lifetime in England and Wales (ONS, 2023)',
+          '2 women killed every week in England and Wales by a current or former partner (femicide census)',
+          'Domestic abuse: physical, sexual, emotional, psychological, and financial abuse',
+          'Coercive control: a pattern of isolating, humiliating, and controlling behaviour — criminal offence since 2015 (Serious Crime Act)',
+          'BRANDED SLIDE: MMH black/orange, statistics as large callout numbers in orange',
+        ],
+      },
+      {
+        title: 'Slide 2 — Mental Health Consequences',
+        bullets: [
+          'PTSD: 64% of survivors experience PTSD symptoms (Women\'s Aid, 2022)',
+          'Depression and anxiety: almost universal; often misdiagnosed in primary care without asking about context',
+          'Complex PTSD from sustained interpersonal trauma and systematic coercive control',
+          'Children who witness domestic abuse: ACE with lasting impact on development, behaviour, and mental health',
+          'BRANDED SLIDE: data visualisation — mental health consequences wheel, MMH branded',
+        ],
+      },
+      {
+        title: 'Slide 3 — Coercive Control',
+        bullets: [
+          'Strips autonomy over everyday life — who the person sees, what they wear, their access to money',
+          'Tactics: isolation from friends/family, financial control, monitoring movements, gaslighting, humiliation',
+          'Technology-facilitated abuse: tracking apps, smart home devices, hacking, monitoring messages',
+          'Victim may not recognise it as abuse — reality has been systematically distorted',
+          'BRANDED SLIDE: coercive control tactics infographic wheel, MMH branding',
+        ],
+      },
+      {
+        title: 'Slide 4 — Trauma Bonding: Why People Stay',
+        bullets: [
+          'Leaving is the most dangerous time — risk of homicide increases dramatically at the point of separation',
+          'Trauma bond: powerful attachment formed through cycles of tension, explosion, honeymoon, and calm',
+          'Intermittent reinforcement (reward unpredictability) mirrors the neurology of gambling addiction',
+          'Financial dependency, housing, immigration status, children, isolation all create real barriers to leaving',
+          'BRANDED SLIDE: the abuse cycle diagram — four stages — orange on black',
+        ],
+      },
+      {
+        title: 'Slide 5 — How to Respond Safely',
+        bullets: [
+          'Believe them — never challenge, minimise, or express disbelief',
+          'Do not tell them what to do — support their autonomy; coercive control has already taken that',
+          'Do NOT contact the perpetrator — this can escalate danger significantly and without warning',
+          'National Domestic Abuse Helpline: 0808 2000 247 (Refuge, free, 24/7)',
+          'BRANDED SLIDE: safe response protocol — green/red checklist in MMH style, helpline numbers prominent',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Scale and Definition
+"Domestic abuse is one of the most common forms of trauma in the UK and one of the most underreported. The statistics are stark: one in four women and one in six men will experience it in their lifetime. On average, two women are killed every week in England and Wales by a current or former partner.
+
+Coercive control — a pattern of behaviour that controls every aspect of a person's life without necessarily involving physical violence — was made a criminal offence in 2015. This was a landmark moment, because it recognised what survivors had always known: that the most damaging form of abuse is often psychological, not physical."
+
+SLIDE 2 — Mental Health Consequences
+"The mental health impact of domestic abuse is severe and wide-ranging. Nearly two-thirds of survivors experience PTSD symptoms. Depression and anxiety are almost universal. One of the most damaging aspects of how we currently respond to this is that survivors frequently present to GPs and mental health services with depression or anxiety — and nobody asks about their home circumstances. The underlying cause goes unidentified, and the treatment is inadequate.
+
+Children who live with domestic abuse — even if they are never directly harmed — are experiencing one of the most significant adverse childhood experiences. The nervous system impact begins very early and is long-lasting."
+
+SLIDE 3 — Coercive Control
+"Coercive control is the aspect of domestic abuse that is hardest to explain to those who have not experienced it, and — critically — hardest to identify from inside it. It works by gradually, systematically dismantling a person's sense of reality, their relationships with family and friends, their access to money, and their confidence in their own perceptions.
+
+Gaslighting — making someone doubt their own memory and judgement — is central to coercive control. The survivor may genuinely not recognise what is happening as abuse, especially if it began subtly and escalated slowly. This is not stupidity. It is the consequence of sustained psychological manipulation."
+
+SLIDE 4 — Trauma Bonding
+"I want to spend time on this because it is the most misunderstood aspect of domestic abuse. The question 'why doesn't she just leave?' has caused enormous harm. The answer has multiple layers.
+
+First: leaving is the most dangerous moment. The risk of serious harm and killing increases dramatically at the point of separation — perpetrators often escalate when they feel they are losing control.
+
+Second: trauma bonding. The cycle of tension, explosion, honeymoon and calm creates intermittent reinforcement — exactly the neurological mechanism that makes gambling addictive. The brain becomes conditioned to anticipate and hope for the honeymoon phase. The love is real. The bond is real. Understanding this should generate compassion, not judgment."
+
+SLIDE 5 — How to Respond Safely
+"If someone discloses to you, there are three things you must never do: challenge or disbelieve them, tell them what they should do, and contact the perpetrator.
+
+The reason you do not contact the perpetrator should be obvious — but it is worth stating clearly. Any contact, even well-intentioned ('I need you to know I'm worried about your partner'), can tell the perpetrator that their partner has disclosed. This can escalate to serious harm.
+
+What you can do: listen, believe, validate, and signpost. The National Domestic Abuse Helpline — 0808 2000 247 — is free, 24 hours a day, run by Refuge, and staffed by specialist advisers."`,
+    activity: `ACTIVITY — Recognising Coercive Control (20 minutes)
+Melksham Mental Health | Module 8 | Licensed Materials
+
+MATERIALS: Case study cards (4 scenarios — prepared by facilitator in advance, see below)
+
+INSTRUCTIONS:
+Divide into groups of 3–4. Each group receives one scenario card describing a relationship. Some clearly depict coercive control; some are ambiguous; some describe healthy relationships with normal conflict.
+
+Groups discuss for 10 minutes:
+1. What patterns, if any, are present in this relationship?
+2. What might the person in this scenario be experiencing emotionally?
+3. If this person disclosed to you, what would your most helpful response be?
+
+Whole-group debrief (10 minutes):
+Share key observations. Facilitator addresses common misconceptions:
+• "It's not abuse if it's not physical" — FALSE: coercive control is the most damaging form
+• "He can't be a victim" — FALSE: men experience domestic abuse at significant rates
+• "She must have done something to provoke it" — NEVER an appropriate response
+• "They seem happy/normal in public" — coercive control thrives on public performance
+
+SCENARIO CARDS GUIDANCE:
+Scenario A: clearly coercive — financial control, isolation, monitoring
+Scenario B: ambiguous — controlling behaviour that could be read as caring concern
+Scenario C: healthy conflict — disagreement resolved through communication
+Scenario D: emotional and psychological abuse without physical violence`,
+    discussionPrompts: [
+      'What cultural and societal factors make it harder for men, or people in same-sex relationships, to disclose domestic abuse and be believed?',
+      'How could healthcare professionals better identify domestic abuse when it presents as depression, anxiety, or unexplained physical symptoms?',
+      'What does genuinely trauma-informed support look like for a domestic abuse survivor — what does it include and what does it avoid?',
+      'How do we shift the public conversation from "why doesn\'t she leave?" to "why does he abuse?" — and why does that shift matter?',
+    ],
+    resources: [
+      { label: 'National Domestic Abuse Helpline: 0808 2000 247 (24/7)', url: 'https://www.nationaldahelpline.org.uk' },
+      { label: 'Women\'s Aid — resources for survivors', url: 'https://www.womensaid.org.uk' },
+      { label: 'ManKind Initiative (male survivors)', url: 'https://mankind.org.uk' },
+      { label: 'Galop (LGBT+ domestic abuse)', url: 'https://galop.org.uk' },
+      { label: 'SafeLives — research, tools and DASH risk assessment', url: 'https://safelives.org.uk' },
+    ],
+    videos: [
+      { label: 'Coercive control explained — Women\'s Aid (YouTube)', url: 'https://www.youtube.com/results?search_query=coercive+control+explained+women%27s+aid' },
+      { label: 'Why victims stay — TED Talk (YouTube)', url: 'https://www.youtube.com/results?search_query=why+domestic+violence+victims+don%27t+leave+ted+talk' },
+      { label: 'Trauma bonding explained (YouTube)', url: 'https://www.youtube.com/results?search_query=trauma+bonding+domestic+abuse+explained' },
+    ],
+    powerPoint: `MODULE 8 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff) — full MMH brand
+Slides: Title + 5 content + Activity + Q&A = 8 total
+Slide 1: Large orange statistics — "1 in 4" "1 in 6" "2 per week" as hero numbers
+Slide 4: Abuse cycle diagram — four stages in circular format, MMH orange on black
+Slide 5: Green/red safe response checklist — DO / DO NOT columns clearly delineated
+Activity slide: Orange banner "Case Study Activity", group instructions white on black
+Crisis numbers displayed at the BOTTOM of EVERY slide in small text
+Brand footer: "© Melksham Mental Health | Licensed Training | Not for Redistribution"
+Watermark: faint diagonal "LICENSED — NOT FOR REDISTRIBUTION" on every slide`,
+    tutorNotes: `SAFEGUARDING — CRITICAL: There are likely to be survivors of domestic abuse in the group — both current and historical. Do not require any personal disclosure at any point. If someone discloses during or after the session: listen, believe, do not push for details, and follow your organisation's safeguarding protocol. NEVER contact the perpetrator under any circumstances.
+
+MANDATORY REPORTING: If a participant discloses that a child is currently at risk of harm, you must follow safeguarding procedures immediately. This overrides confidentiality.
+
+FACILITATION: Maintain an empowering, non-judgmental tone throughout. Survivors are not defined by what happened to them. Do not allow any language that could be interpreted as placing responsibility for the abuse on the survivor.
+
+CASE STUDIES: Case study scenarios should describe behavioural patterns and emotional dynamics — NOT graphic violence or sexual abuse. Test scenarios with a colleague before use.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 9–50 PLACEHOLDER (full content added in sequence)
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 8, topic: 'Trauma & Stress: Domestic & Intimate Partner Violence', category: 'trauma', condition: 'domestic and intimate partner violence and its mental health impact' },
+    { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
