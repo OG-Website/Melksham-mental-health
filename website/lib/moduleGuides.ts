@@ -960,10 +960,176 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 10–50 PLACEHOLDER (full content added in sequence)
+  // MODULE 10
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 10,
+    topic: 'Trauma & Stress: Self-harm & Suicide Prevention',
+    summary: 'Understanding self-harm and suicidal thoughts without stigma; safe-messaging principles for professionals and communities; how to ask directly and respond supportively; UK crisis resources.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Understanding Self-harm',
+        bullets: [
+          'Self-harm: deliberate injury to one\'s own body as a way of coping with overwhelming distress — not attention-seeking',
+          'UK: 1 in 6 young people self-harms; also prevalent in adults, frequently hidden and under-reported',
+          'Functions: releasing unbearable emotional pain, feeling real when numb, self-punishment, regaining sense of control',
+          'Most people who self-harm feel profound shame — it is rarely disclosed; rarely performed for an audience',
+          'BRANDED SLIDE: MMH black/orange, compassionate framing — "a coping strategy, not a character flaw"',
+        ],
+      },
+      {
+        title: 'Slide 2 — Understanding Suicidal Thoughts',
+        bullets: [
+          'Suicidal ideation: more common than widely understood — ~20% of people experience it at some point in their lives',
+          'Having suicidal thoughts ≠ acting on them — thoughts exist on a spectrum from passive to active with plan',
+          'UK: ~6,000 deaths by suicide per year; men account for ~75% (ONS 2023)',
+          'Risk factors: previous attempt (single strongest predictor), mental illness, substance misuse, isolation, recent loss',
+          'BRANDED SLIDE: spectrum diagram from passive ideation to active plan, clearly labelled, orange gradient',
+        ],
+      },
+      {
+        title: 'Slide 3 — Safe Messaging Principles',
+        bullets: [
+          'Do NOT describe or name methods — method exposure can increase risk, particularly in vulnerable people',
+          'Do NOT present suicide as a solution, romantic, inevitable, or as the result of a single cause',
+          'Language matters: "died by suicide" ✓ | "committed suicide" ✗ | "successful suicide" ✗',
+          'ALWAYS include crisis resources alongside any content on suicide or self-harm',
+          'BRANDED SLIDE: DO / DO NOT two-column checklist, green tick / red cross, MMH styling',
+        ],
+      },
+      {
+        title: 'Slide 4 — How to Ask and Respond',
+        bullets: [
+          'Asking directly about suicide does NOT plant the idea or increase risk — evidence consistently shows it REDUCES risk',
+          'Direct question: "Are you thinking about suicide?" or "Are you having thoughts of ending your life?"',
+          'Listen fully — do not minimise ("you have so much to live for"), advise, or immediately refer',
+          'Stay present; help them access support; follow up; document if in a professional role',
+          'BRANDED SLIDE: four-step response model — Ask → Listen → Stay → Support, orange step graphic',
+        ],
+      },
+      {
+        title: 'Slide 5 — Crisis Resources & Safety Planning',
+        bullets: [
+          'Samaritans: 116 123 — free, 24/7, confidential (any reason, any time)',
+          'NHS 111 mental health option — available 24/7 across England for urgent mental health crisis',
+          'PAPYRUS HOPELINEUK (under 35s): 0800 068 4141 | CALM (men/under 35s): 0800 58 58 58 (5pm–midnight)',
+          'Safety planning: personal warning signs → coping strategies → people to call → reasons for living',
+          'BRANDED SLIDE: crisis numbers in large orange text, safety plan template thumbnail, MMH logo',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Understanding Self-harm
+"Before we begin, I want to acknowledge the weight of this session's content. Some of you may have personal experience of self-harm — your own or someone close to you. This is a space of complete non-judgement, and nothing personal is required of you at any point.
+
+Self-harm is a coping mechanism. That is the most important framing I can offer. It is usually the only available response to a moment of overwhelming, unbearable distress. It is almost never about attention-seeking — in fact, the opposite is true: most people who self-harm go to significant lengths to hide it, and feel profound shame about it.
+
+Understanding self-harm as a coping strategy — not a character flaw, not manipulation — is the foundation of being able to support someone."
+
+SLIDE 2 — Understanding Suicidal Thoughts
+"Suicidal ideation is far more common than most people realise. Research suggests around one in five people will experience suicidal thoughts at some point in their lives. Having those thoughts is not the same as acting on them. Most people who have suicidal thoughts never attempt suicide.
+
+In the UK, around 6,000 people die by suicide each year. Three-quarters of them are men. That gender gap is one of the most significant and underexplored public health inequalities we have — and it is directly connected to the way our culture teaches men to handle emotional pain."
+
+SLIDE 3 — Safe Messaging
+"Safe messaging is not censorship — it is harm reduction. The evidence is clear that describing specific methods of suicide, even in a cautionary context, can increase risk in people who are already vulnerable. This is called the Werther effect, named after a surge in suicides following the publication of Goethe's novel in 1774.
+
+The language we use carries enormous weight. 'Committed suicide' implies that suicide is a crime. 'Completed suicide' implies that other attempts were failures. 'Died by suicide' is the recommended, accurate, non-stigmatising term. Small words matter."
+
+SLIDE 4 — How to Ask and Respond
+"I want to address the most persistent myth in suicide prevention directly: asking someone about suicide does not plant the idea or make it more likely. This myth stops people from asking the question that could save a life.
+
+The evidence — from multiple studies across multiple decades — consistently shows that direct, compassionate questioning about suicide reduces risk. It opens a door. It communicates: I can handle hearing the truth. You are not alone with this.
+
+When someone discloses suicidal thoughts, the most helpful response is to listen — fully, without immediately trying to fix it or argue them out of it. Do not say 'you have so much to live for' — however well-intentioned, this often increases shame. Say: 'Thank you for telling me. I'm here. Let's think together about what you need right now.'"
+
+SLIDE 5 — Crisis Resources and Safety Planning
+"Everyone in this room should have the Samaritans number committed to memory: 116 123. Free. Available every single day of the year, 24 hours a day. No crisis is too small.
+
+NHS 111 now has a mental health option available 24 hours a day across England — this is a significant expansion of access that not enough people know about.
+
+Safety planning is a collaborative, practical process. It is not a contract not to attempt suicide — evidence suggests those contracts are ineffective and can increase shame. It is a personalised roadmap: what are my warning signs, what coping strategies help me, who can I call, what are my reasons to stay. It externalises knowledge that is hardest to access when most needed."`,
+    activity: `ACTIVITY — Breaking Down Barriers to Asking (20 minutes)
+Melksham Mental Health | Module 10 | Licensed Materials
+
+PURPOSE: Build genuine confidence in asking directly about suicidal thoughts — the single most important skill this session teaches.
+
+PART 1 — What Stops Us? (5 minutes):
+In pairs, discuss: What would stop you from asking someone directly if you were worried they might be thinking about suicide? Make a list of your barriers.
+
+Collect responses on a whiteboard. Common themes will include:
+• Fear of planting the idea
+• Fear of getting it wrong or making it worse
+• Not knowing what to say next
+• Fear of upsetting them
+• Professional liability concerns
+• Personal discomfort with the topic
+
+PART 2 — Myth Busting (5 minutes):
+Facilitator addresses each barrier with the evidence:
+• "Planting the idea" — 50+ years of research shows direct questioning reduces, not increases, risk
+• "Getting it wrong" — the greatest risk is not asking at all
+• "What to say next" — you do not need to fix it; being present and listening is enough
+• "Upsetting them" — people who are asked about suicide almost universally report feeling relieved and less alone
+• Professional liability — in most professional contexts, not asking when warning signs are present is the greater risk
+
+PART 3 — Practising the Question (10 minutes):
+In pairs, take turns practising saying these words out loud — because saying them aloud is different from reading them:
+"I've been worried about you. Are you thinking about suicide?"
+"Sometimes when people go through what you're going through, they have thoughts of ending their life. Has that been true for you?"
+"I want to ask you something directly because I care about you — are you thinking about harming yourself?"
+
+After each practice: How did it feel to say those words? What made it easier or harder? What changed with repetition?`,
+    discussionPrompts: [
+      'Why are men in the UK so much more likely to die by suicide than women — and what would meaningful change look like?',
+      'How has media coverage of suicide changed in recent years, and what further improvements to safe messaging would make a difference?',
+      'What does our culture need to change to make it genuinely easier for people to disclose suicidal thoughts without fear of judgement or consequences?',
+      'What is the difference between someone who is asking for help and someone who is in immediate danger — and how do we respond appropriately to both?',
+    ],
+    resources: [
+      { label: 'Samaritans: 116 123 (free, 24/7)', url: 'https://www.samaritans.org' },
+      { label: 'PAPYRUS HOPELINEUK (under 35s): 0800 068 4141', url: 'https://www.papyrus-uk.org' },
+      { label: 'CALM (men and under 35s): 0800 58 58 58', url: 'https://www.thecalmzone.net' },
+      { label: 'Zero Suicide Alliance — free online training (20 min)', url: 'https://www.zerosuicidealliance.com' },
+      { label: 'Mind — understanding suicidal feelings', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/suicidal-feelings/' },
+      { label: 'Samaritans safe messaging guidelines for media', url: 'https://www.samaritans.org/about-samaritans/research-policy/safe-reporting-suicide/guidelines-media/' },
+    ],
+    videos: [
+      { label: 'How to ask about suicide — Zero Suicide Alliance training (YouTube)', url: 'https://www.youtube.com/results?search_query=zero+suicide+alliance+training' },
+      { label: 'CALM — why men don\'t talk (YouTube)', url: 'https://www.youtube.com/results?search_query=CALM+why+men+dont+talk+suicide' },
+      { label: 'Understanding self-harm — Mind UK (YouTube)', url: 'https://www.youtube.com/results?search_query=mind+charity+understanding+self+harm' },
+    ],
+    powerPoint: `MODULE 10 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+CRITICAL: Crisis numbers displayed at bottom of EVERY slide — Samaritans 116 123 always visible
+Slide 3: DO/DO NOT checklist — green tick column left, red cross column right, clear and bold
+Slide 4: Four-step response model — Ask → Listen → Stay → Support — step graphic in orange
+Slide 5: Crisis numbers in extra-large orange text — this slide to be a resource leave-behind
+Activity slide: "Breaking Down Barriers" — barrier list on left, evidence on right
+ALL slides: sensitivity note in small text — "Safe space. Nothing personal required."
+Watermark: "© Melksham Mental Health | Licensed | Not for Redistribution"`,
+    tutorNotes: `SAFEGUARDING — CRITICAL SESSION: This is the highest-risk session in the programme. You MUST be prepared to respond to disclosures of current suicidal ideation.
+
+IF SOMEONE DISCLOSES CURRENT SUICIDAL THOUGHTS:
+1. Acknowledge warmly and calmly — "Thank you for telling me. I'm glad you did."
+2. Ask directly: "Are you safe right now?"
+3. Do not leave them alone if they are in immediate danger
+4. Call 999 if there is immediate risk to life
+5. Follow your organisation's safeguarding protocol
+6. Document the disclosure and your response
+
+FACILITATION: Do not describe any methods of self-harm or suicide at any point. Discuss them only in abstract terms (e.g., "harmful means"). Follow Samaritans' Media Guidelines throughout this session.
+
+DEBRIEF: Allow at least 5 minutes at the end of the session for participants to ground themselves. Acknowledge the emotional weight of the content. Display Samaritans (116 123) and NHS 111 throughout.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 11–50 PLACEHOLDER (full content added in sequence)
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
+    { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
