@@ -13,6 +13,12 @@ export interface User {
   gdprConsentDate: string;
   createdAt: string;
   interests: number[]; // module IDs
+  /** Whether this user has been granted access to course content */
+  courseAccess: boolean;
+  /** Whether this user has submitted an application for course access */
+  courseAccessApplied: boolean;
+  /** ISO timestamp when the application was submitted */
+  courseAccessAppliedAt?: string;
 }
 
 export type PublicUser = Omit<User, 'passwordHash'>;
@@ -31,7 +37,13 @@ function readUsers(): User[] {
     const filePath = getUsersFilePath();
     if (!fs.existsSync(filePath)) return [];
     const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as User[];
+    const users = JSON.parse(raw) as User[];
+    // Back-fill new fields for users created before this feature was added
+    return users.map((u) => ({
+      ...u,
+      courseAccess: u.courseAccess ?? false,
+      courseAccessApplied: u.courseAccessApplied ?? false,
+    }));
   } catch {
     return [];
   }
@@ -85,6 +97,8 @@ function getAdminUser(): User | null {
     gdprConsentDate: '2024-01-01T00:00:00.000Z',
     createdAt: '2024-01-01T00:00:00.000Z',
     interests: [],
+    courseAccess: true,
+    courseAccessApplied: true,
   };
 }
 
@@ -148,6 +162,8 @@ export async function createUser(
     gdprConsentDate: new Date().toISOString(),
     createdAt: new Date().toISOString(),
     interests: [],
+    courseAccess: false,
+    courseAccessApplied: false,
   };
   const users = readUsers();
   users.push(user);
@@ -212,4 +228,27 @@ export function toPublicUser(user: User): PublicUser {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { passwordHash: _ph, ...publicUser } = user;
   return publicUser;
+}
+
+/** Submit a course access application for a regular user. */
+export function applyCourseAccess(userId: string): boolean {
+  const users = readUsers();
+  const idx = users.findIndex((u) => u.id === userId);
+  if (idx === -1) return false;
+  if (users[idx].courseAccess) return true; // already approved
+  users[idx].courseAccessApplied = true;
+  users[idx].courseAccessAppliedAt = new Date().toISOString();
+  writeUsers(users);
+  return true;
+}
+
+/** Admin approves (or revokes) course access for a user. */
+export function setCourseAccess(userId: string, approved: boolean): boolean {
+  const users = readUsers();
+  const idx = users.findIndex((u) => u.id === userId);
+  if (idx === -1) return false;
+  users[idx].courseAccess = approved;
+  if (approved) users[idx].courseAccessApplied = true;
+  writeUsers(users);
+  return true;
 }

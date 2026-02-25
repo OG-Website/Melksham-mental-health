@@ -2,10 +2,11 @@ import { getIronSession } from 'iron-session';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { FaBook, FaLock, FaUsers, FaHeart, FaRobot } from 'react-icons/fa';
+import { FaBook, FaLock, FaUsers, FaHeart, FaRobot, FaClock, FaCheckCircle } from 'react-icons/fa';
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById, getAllMembers } from '@/lib/users';
 import LogoutButton from '@/components/LogoutButton';
+import { AdminApproveButton } from '@/components/CourseAccessApplyButton';
 
 export const metadata = {
   title: 'Member Portal | Melksham Mental Health',
@@ -113,13 +114,42 @@ export default async function PortalPage() {
       {/* Quick actions */}
       <div className="flex flex-wrap gap-3 justify-center mb-12">
         <Link href="/courses" className="metal-button metal-button--small">
-          <FaBook /> Browse Courses
+          <FaBook /> {user.courseAccess ? 'My Courses' : 'Course Programme'}
         </Link>
         <Link href="/portal/change-password" className="metal-button metal-button--small">
           <FaLock /> Change Password
         </Link>
         <LogoutButton />
       </div>
+
+      {/* Course access status banner for regular users */}
+      {!user.isAdmin && !user.courseAccess && (
+        <div className="mb-12 border border-orange-500/40 rounded-lg px-5 py-5 text-left">
+          <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
+            {user.courseAccessApplied ? (
+              <><FaClock className="inline mr-2 text-orange-400" />Your Course Access Application</>
+            ) : (
+              <><FaBook className="inline mr-2 text-orange-400" />Apply for Course Access</>
+            )}
+          </h2>
+          {user.courseAccessApplied ? (
+            <p className="text-zinc-300 text-sm">
+              Your application has been submitted and is being reviewed. You&apos;ll be notified once approved.
+              Live sessions will be hosted on our secure portal.
+            </p>
+          ) : (
+            <>
+              <p className="text-zinc-300 text-sm mb-4">
+                Our 50-module mental health programme is delivered as live, facilitated sessions.
+                Apply below to request access — we review every application personally.
+              </p>
+              <Link href="/courses" className="inline-flex items-center gap-2 text-sm font-bold text-orange-300 border border-orange-500/60 px-3 py-1.5 rounded-full hover:bg-orange-600/20 transition-colors">
+                Apply for Access →
+              </Link>
+            </>
+          )}
+        </div>
+      )}
 
       {/* Member's own course interests */}
       {!user.isAdmin && (
@@ -153,6 +183,35 @@ export default async function PortalPage() {
       {/* Admin dashboard */}
       {user.isAdmin && members && (
         <>
+          {/* Course access applications */}
+          {(() => {
+            const pending = members.filter((m) => m.courseAccessApplied && !m.courseAccess);
+            return pending.length > 0 ? (
+              <div className="mb-12">
+                <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-orange-500/50 pb-2">
+                  <FaClock className="inline mr-2 text-orange-400" />
+                  Course Access Applications ({pending.length})
+                </h2>
+                <div className="space-y-3">
+                  {pending.map((m) => (
+                    <div key={m.id} className="flex flex-wrap items-center gap-4 border border-zinc-700 rounded-lg px-4 py-3">
+                      <div className="flex-1 min-w-0">
+                        <p className="text-white font-semibold text-sm">{m.name}</p>
+                        <a href={`mailto:${m.email}`} className="text-orange-400 text-xs hover:underline">{m.email}</a>
+                        {m.courseAccessAppliedAt && (
+                          <p className="text-zinc-500 text-xs mt-0.5">
+                            Applied {new Date(m.courseAccessAppliedAt).toLocaleDateString('en-GB')}
+                          </p>
+                        )}
+                      </div>
+                      <AdminApproveButton userId={m.id} currentAccess={m.courseAccess} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null;
+          })()}
+
           <div className="mb-12">
             <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
               <FaUsers className="inline mr-2 text-orange-400" />
@@ -168,6 +227,7 @@ export default async function PortalPage() {
                       <th className="py-2 pr-4 font-semibold">Name</th>
                       <th className="py-2 pr-4 font-semibold">Email</th>
                       <th className="py-2 pr-4 font-semibold">Joined</th>
+                      <th className="py-2 pr-4 font-semibold">Course Access</th>
                       <th className="py-2 font-semibold">Interested In</th>
                     </tr>
                   </thead>
@@ -182,6 +242,17 @@ export default async function PortalPage() {
                         </td>
                         <td className="py-2 pr-4 text-zinc-500 text-xs">
                           {new Date(m.createdAt).toLocaleDateString('en-GB')}
+                        </td>
+                        <td className="py-2 pr-4">
+                          {m.courseAccess ? (
+                            <span className="inline-flex items-center gap-1 text-green-400 text-xs font-semibold">
+                              <FaCheckCircle /> Approved
+                            </span>
+                          ) : m.courseAccessApplied ? (
+                            <AdminApproveButton userId={m.id} currentAccess={false} />
+                          ) : (
+                            <span className="text-zinc-600 text-xs">Not applied</span>
+                          )}
                         </td>
                         <td className="py-2">
                           {m.interests.length === 0
