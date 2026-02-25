@@ -2145,10 +2145,152 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 18–50 PLACEHOLDER
+  // MODULE 18
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 18,
+    topic: 'Eating Disorders & Body Image',
+    summary: 'Anorexia, bulimia, binge eating disorder, and ARFID — the psychology of disordered eating, the life-threatening medical consequences of anorexia, and what recovery-focused support looks like.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Are Eating Disorders?',
+        bullets: [
+          'NOT a lifestyle choice; NOT vanity — serious mental health conditions with the highest mortality of any psychiatric disorder',
+          'Eating disorders affect 1.25 million people in the UK (Beat, 2023) — all genders, ages, and ethnicities',
+          'Core types: Anorexia Nervosa, Bulimia Nervosa, Binge Eating Disorder, ARFID, Other Specified',
+          'Food is the symptom — the eating behaviour is the coping mechanism for underlying distress',
+          'BRANDED SLIDE: "highest mortality of any psychiatric disorder" as orange hero statistic',
+        ],
+      },
+      {
+        title: 'Slide 2 — Anorexia Nervosa',
+        bullets: [
+          'Severe restriction of energy intake → significantly low body weight relative to expected minimum',
+          'Intense fear of gaining weight OR persistent behaviour interfering with weight gain, even at very low weight',
+          'Disturbed body image: sees self as fat when objectively dangerously underweight',
+          'Medical consequences: cardiac arrhythmia, bone density loss, electrolyte imbalance, kidney failure — any of which can be fatal',
+          'BRANDED SLIDE: medical consequences body diagram with organ labels, clinical urgency tone',
+        ],
+      },
+      {
+        title: 'Slide 3 — Bulimia & Binge Eating Disorder',
+        bullets: [
+          'Bulimia: recurrent binge episodes followed by compensatory behaviours (purging, fasting, excessive exercise)',
+          'Binge Eating Disorder (BED): recurrent binges without compensatory behaviour — most common eating disorder',
+          'Both associated with profound shame, secrecy, and impact on self-worth tied to eating/body',
+          'BED: often misunderstood as "just overeating" — a serious mental health condition with significant medical risk',
+          'BRANDED SLIDE: three-condition comparison table — Anorexia / Bulimia / BED — key features each',
+        ],
+      },
+      {
+        title: 'Slide 4 — ARFID and Body Image',
+        bullets: [
+          'ARFID (Avoidant/Restrictive Food Intake Disorder): extreme restriction NOT driven by weight/shape concerns',
+          'ARFID drivers: sensory sensitivity, fear of choking/vomiting, lack of interest in food — common in autism/ADHD',
+          'Body image: a spectrum from healthy appreciation to clinical body dysmorphia — media and social comparison significant factors',
+          'Social media and filtered images: systematic distortion of normal body appearance with real clinical consequences',
+          'BRANDED SLIDE: ARFID vs Anorexia comparison — key differentiators clearly shown',
+        ],
+      },
+      {
+        title: 'Slide 5 — Treatment and Recovery',
+        bullets: [
+          'FBT (Family-Based Treatment): gold standard for young people with anorexia — parents take control of renourishment',
+          'CBT-E (Enhanced CBT): gold standard for adults — addresses cognitive maintenance of eating disorder',
+          'Medical monitoring: eating disorders are medical emergencies at low weight — coordination with GP/physician essential',
+          'BEAT helpline: 0808 801 0677 — specialist eating disorder charity, free helpline',
+          'Recovery is possible — but takes time, specialist support, and patience with setbacks',
+          'BRANDED SLIDE: recovery pathway — GP → CAMHS/eating disorder service → CBT-E/FBT, BEAT helpline prominent',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Are Eating Disorders?
+"Eating disorders kill more people than any other mental health condition. That statistic bears repeating: anorexia nervosa has the highest mortality rate of any psychiatric disorder. And yet eating disorders are still widely dismissed as a lifestyle choice, a phase, or a form of vanity. That misunderstanding costs lives.
+
+1.25 million people in the UK have an eating disorder. They affect all genders — although men are significantly underdiagnosed and underserved. They affect all ages, from pre-teen children to adults in their 70s. They are not about food. Food is the symptom. The eating disorder is the coping strategy for something far more fundamental."
+
+SLIDE 2 — Anorexia Nervosa
+"Anorexia is a condition in which starvation is the management strategy for unbearable psychological distress. The control over food and body provides a sense of safety, competence, and identity that feels unavailable any other way. The person sees themselves as overweight when they are dangerously underweight — not as delusion exactly, but as a profound distortion of self-perception driven by the disorder.
+
+The medical consequences are severe and can be fatal. Cardiac arrhythmia from electrolyte imbalance is the most common cause of death. At very low weight, the body is in a medical emergency — and treatment requires medical stabilisation before psychological work can begin."
+
+SLIDE 3 — Bulimia and Binge Eating Disorder
+"Bulimia is characterised by an out-of-control relationship with food — episodes of binge eating followed by compensatory behaviour to undo it. The shame and secrecy surrounding bulimia is often profound. Many people with bulimia have been managing it for years, sometimes decades, before they tell anyone.
+
+Binge Eating Disorder is the most common eating disorder and the most misunderstood. It is frequently dismissed as a failure of self-control. It is not. Like all eating disorders, the binge is a coping mechanism — for loneliness, shame, anxiety, emptiness, or trauma — and the shame that follows perpetuates the cycle."
+
+SLIDE 4 — ARFID and Body Image
+"ARFID is particularly important to understand in the context of autism and ADHD, where sensory sensitivities around food are common. It is not the same as fussy eating. It significantly impairs nutrition, growth, and social functioning. And it requires a completely different treatment approach to other eating disorders.
+
+On body image: the research on social media and filtered images is now quite clear. Regular exposure to digitally altered, filtered, and curated body images is associated with increased body dissatisfaction, disordered eating, and depression — particularly in young people. This is not merely anecdotal. It is a public health issue."
+
+SLIDE 5 — Treatment and Recovery
+"Recovery from eating disorders is absolutely possible. It takes time, it is non-linear, and it requires specialist input. The key messages for anyone supporting someone with an eating disorder are: early intervention improves outcomes dramatically, medical safety must be assessed alongside psychological support, and recovery is measured in months and years, not weeks.
+
+BEAT — Beat Eating Disorders — is the UK's leading eating disorder charity. Their helpline (0808 801 0677) is staffed by specialists and is free."`,
+    activity: `ACTIVITY — Examining Our Relationship with Food and Body (20 minutes)
+Melksham Mental Health | Module 18 | Licensed Materials
+
+PURPOSE: Build self-awareness about cultural and personal body image messages; understand how these shape attitudes to food and body without pathologising normal variation.
+
+NOTE TO FACILITATOR: This activity does NOT ask about personal eating behaviour. Participants are never asked to share specific information about their own relationship with food. Frame all discussion at a cultural and reflective level.
+
+PART 1 — Media Analysis (8 minutes):
+In small groups, discuss: What images of bodies do we see most commonly in mainstream media, social media, and advertising? What is their effect? What is systematically absent from these images?
+
+Consider: What body types, ages, ethnicities, disabilities, and sizes are represented versus invisible? What message does this send about what bodies are "acceptable"?
+
+PART 2 — Cultural Messages About Food (7 minutes):
+What messages about food did you receive growing up? From family, from culture, from religion, from peers? Examples: "clean your plate", "comfort eating", "treat yourself", "nothing tastes as good as skinny feels", "food is love".
+
+How do these cultural messages shape how we think and feel about food as adults? What impact might they have on someone vulnerable to an eating disorder?
+
+PART 3 — Debrief (5 minutes):
+What one change in how we talk about food and bodies — in our personal lives, in our professional practice, in our communities — could make a meaningful difference to the people around us?`,
+    discussionPrompts: [
+      'Why are men with eating disorders so underdiagnosed, and what cultural factors make it harder for them to seek or receive appropriate help?',
+      'What is the responsibility of social media platforms for the impact of filtered and curated body images on mental health?',
+      'How can parents and schools support healthy body image in children and young people without creating unhealthy preoccupation with food and weight?',
+      'What does genuinely recovery-focused language and attitude look like for a professional supporting someone with an eating disorder?',
+    ],
+    resources: [
+      { label: 'Beat Eating Disorders helpline: 0808 801 0677', url: 'https://www.beateatingdisorders.org.uk' },
+      { label: 'Mind — eating problems', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/eating-problems/' },
+      { label: 'NHS — eating disorders overview', url: 'https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/behaviours/eating-disorders/overview/' },
+      { label: 'Men Get Eating Disorders Too', url: 'https://mengetedstoo.co.uk' },
+      { label: 'ARFID Awareness UK', url: 'https://arfidawarenessuk.org' },
+    ],
+    videos: [
+      { label: 'What is anorexia? — TED-Ed (YouTube)', url: 'https://www.youtube.com/results?search_query=anorexia+explained+ted-ed' },
+      { label: 'Eating disorders in men — Beat (YouTube)', url: 'https://www.youtube.com/results?search_query=eating+disorders+men+Beat+charity' },
+      { label: 'ARFID explained — Beat (YouTube)', url: 'https://www.youtube.com/results?search_query=ARFID+explained+eating+disorder' },
+    ],
+    powerPoint: `MODULE 18 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+CRITICAL: NO body size imagery, no weight data presented graphically, no triggering visual content
+Slide 1: "Highest mortality of any psychiatric disorder" — orange hero text, high impact
+Slide 2: Medical consequences diagram — body silhouette with organ labels (heart, kidneys, bones), clinical
+Slide 3: Three-condition comparison table — Anorexia / Bulimia / BED — clean, readable
+Slide 5: Treatment pathway and BEAT helpline — 0808 801 0677 in large orange text
+Activity slide: Media analysis prompt questions — clean, discussion-facilitation format
+All slides: Beat helpline in footer alongside Samaritans, MMH logo, licence watermark`,
+    tutorNotes: `SAFEGUARDING — HIGH SENSITIVITY: There are very likely to be people in the group with current or historical eating disorders. This session should NEVER include discussion of specific weights, calorie numbers, food quantities, or purging methods. Keep all discussion at a conceptual level.
+
+SAFE MESSAGING: Apply the same principles as suicide safe messaging — avoid detailed descriptions of specific behaviours. Focus on the psychological experience, not the behaviour itself.
+
+LANGUAGE: Never describe eating disorders using terms like "just eating more" or "just needing more willpower". Never comment on anyone's body. Do not express admiration for thinness or "discipline" in relation to eating.
+
+ACTIVITY: Watch for participants becoming distressed or unusually quiet during this activity. If someone appears activated, check in privately after the session and signpost to Beat (0808 801 0677).
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 19–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 18, topic: 'Eating Disorders & Body Image', category: 'clinical', condition: 'anorexia nervosa, bulimia nervosa, binge eating disorder, ARFID and body image' },
+    { id: 19, topic: 'Sleep & Circadian Rhythm Disorders', category: 'clinical', condition: 'insomnia, narcolepsy, sleep apnea, parasomnias and circadian rhythm disruption' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
