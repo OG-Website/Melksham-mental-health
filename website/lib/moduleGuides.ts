@@ -1126,10 +1126,159 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 11–50 PLACEHOLDER (full content added in sequence)
+  // MODULE 11
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 11,
+    topic: 'Mood Disorders: Major Depression',
+    summary: 'Major depressive disorder in full — the complete symptom picture, biopsychosocial causes, what it actually feels like from inside, and the full evidence-based treatment pathway.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Is Major Depression?',
+        bullets: [
+          'More than sadness: a pervasive change in mood, thinking, body, and behaviour lasting 2+ weeks',
+          'Core diagnostic criteria: depressed mood most of the day AND/OR loss of interest or pleasure (anhedonia)',
+          'UK: 1 in 6 people experience a depressive episode in their lifetime; ~3.3% of adults at any time (NHS, 2023)',
+          'Most common mental health condition in the UK — yet still widely misunderstood and undertreated',
+          'BRANDED SLIDE: MMH black/orange, "1 in 6" as hero statistic in large orange text',
+        ],
+      },
+      {
+        title: 'Slide 2 — The Full Symptom Picture',
+        bullets: [
+          'EMOTIONAL: persistent low mood, hopelessness, worthlessness, excessive guilt, emptiness, irritability',
+          'COGNITIVE: poor concentration, memory impairment, negative automatic thoughts, suicidal ideation',
+          'PHYSICAL: profound fatigue, insomnia or hypersomnia, appetite change (loss or increase), psychomotor retardation or agitation',
+          'BEHAVIOURAL: social withdrawal, reduced activity, neglecting responsibilities, self-neglect',
+          'BRANDED SLIDE: four-quadrant symptom grid — emotional/cognitive/physical/behavioural — MMH orange headers',
+        ],
+      },
+      {
+        title: 'Slide 3 — Causes: The Biopsychosocial Model',
+        bullets: [
+          'BIOLOGICAL: neurotransmitter dysregulation (serotonin, dopamine, noradrenaline), genetic predisposition, chronic inflammation',
+          'PSYCHOLOGICAL: negative cognitive schemas (Beck), rumination, perfectionism, early attachment disruption',
+          'SOCIAL: adverse life events, chronic stress, poverty, social isolation, discrimination, abuse, bereavement',
+          'The "chemical imbalance" narrative alone is an oversimplification — social context is essential',
+          'BRANDED SLIDE: biopsychosocial triangle graphic with examples in each segment, MMH branded',
+        ],
+      },
+      {
+        title: 'Slide 4 — What Depression Actually Feels Like',
+        bullets: [
+          'Often described as greyness, numbness, or absence — not sadness but the disappearance of feeling',
+          '"Wearing a lead suit" — exhaustion that sleep does not repair',
+          'Anhedonia: previously enjoyed activities feel hollow, pointless, inaccessible',
+          'Cognitive symptoms frequently most disabling: can\'t concentrate, can\'t decide, negative thoughts feel like facts',
+          'BRANDED SLIDE: quote-style slide with first-person descriptors in large white italic text on black',
+        ],
+      },
+      {
+        title: 'Slide 5 — Evidence-Based Treatment',
+        bullets: [
+          'NICE Step 1–4 model: guided self-help → CBT/counselling → antidepressants → specialist care',
+          'CBT: gold-standard psychological therapy — challenges negative thinking and reduces avoidance',
+          'SSRIs: effective for moderate–severe depression; 6–12 months minimum course; not first-line for mild',
+          'Exercise: 30 min aerobic activity 3×/week has antidepressant effect equivalent to medication for mild-moderate depression (NICE)',
+          'BRANDED SLIDE: NICE stepped care pyramid, MMH branding, treatment options at each level labelled',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is Major Depression?
+"Depression is the most common mental health condition in the UK — and arguably the most misunderstood. When someone says they are depressed, they are often met with responses like 'just push through it' or 'try to be more positive'. Those responses reflect a fundamental misunderstanding of what major depression actually is.
+
+This is not ordinary sadness. This is not a bad week. This is a condition that changes the entire way a person's brain functions — their ability to feel, think, remember, sleep, eat, and move through the world. One in six of us will experience a depressive episode in our lifetime. Most will wait far too long before seeking help, and many will never receive the treatment that could change their lives."
+
+SLIDE 2 — The Full Symptom Picture
+"I want to walk through the full symptom picture because depression is so much more than low mood.
+
+The cognitive symptoms are often the most disabling in terms of daily functioning. You cannot do your job, maintain relationships, or make decisions when your concentration is severely impaired, when your memory is failing, and when every thought is filtered through a lens of absolute negativity that feels completely real.
+
+The physical symptoms are often the most medically puzzling. Profound fatigue that no amount of sleep relieves. An appetite that either disappears completely or becomes compulsive. A body that moves more slowly or more restlessly than usual. These are not secondary features — they are core to the condition."
+
+SLIDE 3 — Causes: The Biopsychosocial Model
+"The simplest explanation for depression — that it is a 'chemical imbalance' — has done significant harm by removing the social and psychological dimensions from the picture. More recent research has significantly complicated and in some cases challenged the serotonin hypothesis.
+
+What we do know, clearly, is that adverse life events — loss, trauma, chronic stress, poverty, discrimination, isolation — are among the strongest predictors of depression. Depression is a human response to unbearable circumstances, as well as a biological condition. Understanding both dimensions is essential for appropriate treatment and for reducing the stigma that still prevents people from seeking help."
+
+SLIDE 4 — What Depression Actually Feels Like
+"This slide is here because empathy requires understanding — and understanding requires getting closer to what this actually feels like from the inside.
+
+People with depression frequently describe it not as intense sadness but as absence. A greyness where colour used to be. A disconnection from everything — from people they love, from activities that used to bring pleasure, from any sense of a future. Anhedonia — the inability to feel pleasure — is one of the cruellest aspects of depression. You do not merely feel sad. You feel nothing. And feeling nothing, for a person who used to feel everything, can be its own particular despair."
+
+SLIDE 5 — Evidence-Based Treatment
+"Depression is one of the most treatable conditions in mental health. The NICE stepped care model is designed to match treatment intensity to severity — guided self-help at the mild end, psychological therapy, antidepressants, and specialist input for the most severe presentations.
+
+Exercise has surprisingly strong evidence as an antidepressant intervention. Three sessions of aerobic exercise per week has been shown to have antidepressant effects comparable to medication for mild to moderate depression. This is not a substitute for clinical treatment in severe cases — but it is a genuine, accessible adjunct, and a reason to take lifestyle seriously in the recovery conversation."`,
+    activity: `ACTIVITY — Challenging Negative Automatic Thoughts (20 minutes)
+Melksham Mental Health | Module 11 | Licensed Materials
+
+BACKGROUND: CBT identifies negative automatic thoughts (NATs) as a key mechanism maintaining depression. The thought record is one of the most widely used CBT tools — it helps people examine the evidence for and against unhelpful thoughts, and develop more balanced, realistic alternatives.
+
+INTRODUCE: "Depression doesn't just change how we feel — it fundamentally changes how we think. Negative thoughts feel completely real and completely factual when we are depressed. The thought record is a tool from cognitive behavioural therapy that helps us examine those thoughts from a slightly different angle."
+
+PART 1 — Common NATs in Depression (5 minutes):
+Share a list of common depression-related automatic thoughts:
+• "I'm a burden to everyone around me"
+• "Things will never get better"
+• "I can't do anything right"
+• "Nobody actually cares about me"
+• "I don't deserve to feel better"
+Ask participants to notice (privately) which feel familiar — from their own experience or from people they have supported.
+
+PART 2 — The Thought Record in Pairs (10 minutes):
+In pairs, take one thought from the list and work through it together:
+1. What is the evidence that this thought is 100% true?
+2. What is the evidence against it, or that complicates it?
+3. What would you say to a close friend who had this thought?
+4. What is a more balanced, realistic alternative thought?
+
+DEBRIEF (5 minutes):
+What was that process like? What made it difficult? (Key insight: the depressed brain fights hard against positive reframes — this is normal, and it gets easier with practice.)`,
+    discussionPrompts: [
+      'Why do so many people wait years — sometimes decades — before seeking help for depression, and what are the most significant barriers?',
+      'How do cultural background, gender expectations, and age affect how depression is expressed, recognised, and treated?',
+      'What is the role of social factors — poverty, isolation, discrimination — in depression, and can psychological therapy alone adequately address these causes?',
+      'What does genuine, full recovery from depression look like — and how does a person know when they have reached it?',
+    ],
+    resources: [
+      { label: 'Mind — depression', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/depression/' },
+      { label: 'NHS — depression in adults', url: 'https://www.nhs.uk/mental-health/conditions/depression-in-adults/overview/' },
+      { label: 'NHS Talking Therapies self-referral', url: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
+      { label: 'CALM helpline: 0800 58 58 58 (5pm–midnight)', url: 'https://www.thecalmzone.net' },
+      { label: 'Samaritans: 116 123 (24/7)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'What is depression? — TED-Ed (YouTube)', url: 'https://www.youtube.com/watch?v=z-IR48Mb3W0' },
+      { label: 'Living with depression — Mind UK (YouTube)', url: 'https://www.youtube.com/results?search_query=living+with+depression+mind+uk' },
+      { label: 'CBT for depression explained — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=CBT+for+depression+explained+NHS' },
+    ],
+    powerPoint: `MODULE 11 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: "1 in 6" hero statistic — massive orange text on black, high impact
+Slide 2: Four-quadrant symptom grid — emotional/cognitive/physical/behavioural in MMH orange bordered boxes
+Slide 3: Biopsychosocial triangle — biological, psychological, social at each point, MMH branded
+Slide 4: Quote-style slide — first-person depression descriptions in large italic white text, atmospheric
+Slide 5: NICE stepped care pyramid, each step labelled, treatment options annotated, NICE badge
+Activity slide: Thought record template reproduced on slide for participants to follow
+All slides: Samaritans 116 123 in footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Depression and suicidal ideation co-occur frequently. Be alert to distress during the cognitive symptoms section and the activity. If anyone discloses thoughts of self-harm or suicide, apply Module 10 safeguarding protocols immediately.
+
+FACILITATION: Some participants will have lived experience of depression — their own or a close family member's. Validate this explicitly. Do not allow dismissive attitudes ("just get on with it") to go unchallenged. Lived experience is a form of expertise.
+
+CBT ACTIVITY: The thought record can feel confrontational or ineffective when someone is deeply depressed. Normalise this — it is a skill that takes practice, and the point is to understand the technique, not to immediately feel better.
+
+LANGUAGE: Avoid "suffering from" — prefer "living with" or "experiencing" depression. Do not suggest exercise or lifestyle as cures for severe depression.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULES 12–50 PLACEHOLDER
   // ─────────────────────────────────────────────────────────────
   ...([
-    { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
+    { id: 12, topic: 'Mood Disorders: Bipolar Disorder', category: 'mood', condition: 'bipolar I and II disorders' },
     { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
     { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
     { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
