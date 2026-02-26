@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { getIronSession } from 'iron-session';
 import { cookies } from 'next/headers';
-import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeacher } from 'react-icons/fa';
 import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeacher, FaUserPlus } from 'react-icons/fa';
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById } from '@/lib/users';
 import CourseInterestButton from '@/components/CourseInterestButton';
+import CourseAccessApplyButton from '@/components/CourseAccessApplyButton';
 export const metadata = {
   title: 'Mental Health Courses | Melksham Mental Health',
   description: 'A comprehensive 50-module mental health course covering every major condition, social issue, and life-stage challenge. Evidence-based, peer-informed, and built for real people.',
@@ -84,10 +84,8 @@ export default async function CoursesPage() {
   const isLoggedIn = session.isLoggedIn && !!session.userId;
   const user = isLoggedIn ? findUserById(session.userId) : null;
   const userInterests = new Set(user?.interests ?? []);
-  const isAdmin = session.isAdmin;
-  const alreadyApplied = user?.courseAccessApplied ?? false;
   const isAdmin = session.isAdmin ?? false;
-  const hasCourseAccess = isAdmin || (user?.courseAccess ?? false);
+  const alreadyApplied = user?.courseAccessApplied ?? false;
 
   return (
     <div>
@@ -104,8 +102,8 @@ export default async function CoursesPage() {
           Designed for real people — whether you&apos;re seeking to understand your own experiences, support someone you care about, or build professional knowledge.
         </p>
 
-        {/* Apply banner for non-admin members */}
-        {!isAdmin && (
+        {/* Apply banner for logged-in non-admin members */}
+        {isLoggedIn && !isAdmin && (
           <div className="mb-12 border border-orange-500/40 rounded-lg px-6 py-5 text-left max-w-2xl mx-auto">
             <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
               Request to Join a Course
@@ -193,7 +191,6 @@ export default async function CoursesPage() {
                         </p>
                         <div className="flex flex-wrap items-center gap-3 mt-2">
                           {isAdmin && (
-                          {hasCourseAccess && (
                             <Link
                               href={`/courses/${mod.id}`}
                               className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-orange-500/60 text-orange-300 hover:bg-orange-600/20 transition-colors"
@@ -201,14 +198,12 @@ export default async function CoursesPage() {
                               <FaChalkboardTeacher className="text-xs" /> Open Module
                             </Link>
                           )}
-                          {!isAdmin && (
                           {isLoggedIn && !isAdmin ? (
                             <CourseInterestButton
                               moduleId={mod.id}
                               initialInterested={userInterests.has(mod.id)}
                               isAdmin={isAdmin}
                             />
-                          )}
                           ) : !isLoggedIn ? (
                             <Link
                               href="/portal/register"
