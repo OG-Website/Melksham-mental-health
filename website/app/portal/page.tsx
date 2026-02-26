@@ -151,17 +151,17 @@ export default async function PortalPage() {
         </div>
       )}
 
-      {/* Member's own course interests */}
+      {/* Member's own course requests */}
       {!user.isAdmin && (
         <div className="mb-12">
           <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
-            Your Course Interests
+            Your Course Requests
           </h2>
           {user.interests.length === 0 ? (
             <p className="text-zinc-400 text-sm">
-              You haven&apos;t expressed interest in any courses yet.{' '}
+              You haven&apos;t requested any courses yet.{' '}
               <Link href="/courses" className="text-orange-400 underline">Browse courses</Link> and
-              click &ldquo;I&apos;m Interested&rdquo; on any module you&apos;d like to attend.
+              click &ldquo;Request to Join&rdquo; on any module you&apos;d like to attend.
             </p>
           ) : (
             <ul className="space-y-2 text-left">
@@ -228,7 +228,7 @@ export default async function PortalPage() {
                       <th className="py-2 pr-4 font-semibold">Email</th>
                       <th className="py-2 pr-4 font-semibold">Joined</th>
                       <th className="py-2 pr-4 font-semibold">Course Access</th>
-                      <th className="py-2 font-semibold">Interested In</th>
+                      <th className="py-2 font-semibold">Course Requests</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-zinc-800">
@@ -274,7 +274,7 @@ export default async function PortalPage() {
 
           <div className="mb-12">
             <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
-              Most Popular Modules (by Interest)
+              Most Requested Modules
             </h2>
             {topInterests.length === 0 ? (
               <p className="text-zinc-400 text-sm">No course interests recorded yet.</p>

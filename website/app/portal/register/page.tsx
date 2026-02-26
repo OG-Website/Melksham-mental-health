@@ -59,7 +59,7 @@ export default function RegisterPage() {
           Create Your Account
         </h1>
         <p className="text-zinc-300 mb-8 text-sm">
-          Join the members portal to access course content and express your learning interests.
+          Join the members portal to browse our 50-module course programme and request to join sessions.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5 text-left">
