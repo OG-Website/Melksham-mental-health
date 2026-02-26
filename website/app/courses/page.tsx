@@ -5,6 +5,7 @@ import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeache
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById } from '@/lib/users';
 import CourseInterestButton from '@/components/CourseInterestButton';
+import CourseAccessApplyButton from '@/components/CourseAccessApplyButton';
 export const metadata = {
   title: 'Mental Health Courses | Melksham Mental Health',
   description: 'A comprehensive 50-module mental health course covering every major condition, social issue, and life-stage challenge. Evidence-based, peer-informed, and built for real people.',
@@ -84,7 +85,7 @@ export default async function CoursesPage() {
   const user = isLoggedIn ? findUserById(session.userId) : null;
   const userInterests = new Set(user?.interests ?? []);
   const isAdmin = session.isAdmin ?? false;
-  const hasCourseAccess = isAdmin || (user?.courseAccess ?? false);
+  const alreadyApplied = user?.courseAccessApplied ?? false;
 
   return (
     <div>
@@ -100,6 +101,30 @@ export default async function CoursesPage() {
         <p className="text-zinc-300 mb-12 max-w-2xl mx-auto">
           Designed for real people — whether you&apos;re seeking to understand your own experiences, support someone you care about, or build professional knowledge.
         </p>
+
+        {/* Apply banner for logged-in non-admin members */}
+        {isLoggedIn && !isAdmin && (
+          <div className="mb-12 border border-orange-500/40 rounded-lg px-6 py-5 text-left max-w-2xl mx-auto">
+            <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
+              Request to Join a Course
+            </h2>
+            <p className="text-zinc-300 text-sm mb-4">
+              Browse the modules below and click <strong className="text-orange-300">Request to Join</strong> on any you&apos;d
+              like to attend. Our team will contact you to confirm your place.
+              {alreadyApplied && (
+                <span className="block mt-2 text-orange-300 font-semibold">
+                  ✓ Your programme application has been submitted — we&apos;ll be in touch soon.
+                </span>
+              )}
+            </p>
+            {!alreadyApplied && (
+              <div className="flex flex-wrap items-center gap-4">
+                <CourseAccessApplyButton alreadyApplied={alreadyApplied} />
+                <span className="text-zinc-500 text-xs">or apply for the full programme above</span>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Course stats */}
         <div className="flex flex-wrap justify-center gap-8 mb-16">
@@ -157,11 +182,15 @@ export default async function CoursesPage() {
                             {mod.topic}
                           </h3>
                         </div>
+                        <div className="flex items-center gap-2 mb-2 text-orange-400 text-xs font-semibold">
+                          <FaClock className="text-xs" />
+                          <span>2 hours · Facilitated group session</span>
+                        </div>
                         <p className="text-zinc-300 text-sm leading-relaxed mb-2">
                           {mod.summary}
                         </p>
                         <div className="flex flex-wrap items-center gap-3 mt-2">
-                          {hasCourseAccess && (
+                          {isAdmin && (
                             <Link
                               href={`/courses/${mod.id}`}
                               className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-orange-500/60 text-orange-300 hover:bg-orange-600/20 transition-colors"

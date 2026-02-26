@@ -46,6 +46,66 @@ export const SESSION_BREAKDOWN: SessionSegment[] = [
   { time: '100–120 min', label: 'Wrap-up, reflection & resources' },
 ];
 
+/** Static map of module ID → PPTX filename (files served from /course-materials/) */
+const PPTX_FILES: Record<number, string> = {
+  1: 'Module_01_Foundations_of_Mental_Health.pptx',
+  2: 'Module_02_Introduction_to_Mental-Health_Disorders.pptx',
+  3: 'Module_03_Neurodevelopmental_Disorders_Autism_Spectrum.pptx',
+  4: 'Module_04_Neurodevelopmental_Disorders_ADHD.pptx',
+  5: 'Module_05_Neurodevelopmental_Disorders_Intellectual_and_Learning_.pptx',
+  6: 'Module_06_Trauma_and_Stress_Acute_Stress_and_Adjustment_Disorders.pptx',
+  7: 'Module_07_Trauma_and_Stress_PTSD_and_Complex_PTSD.pptx',
+  8: 'Module_08_Trauma_and_Stress_Domestic_and_Intimate_Partner_Violenc.pptx',
+  9: 'Module_09_Trauma_and_Stress_Childhood_Trauma_and_ACEs.pptx',
+  10: 'Module_10_Trauma_and_Stress_Self-harm_and_Suicide_Prevention.pptx',
+  11: 'Module_11_Mood_Disorders_Major_Depression.pptx',
+  12: 'Module_12_Mood_Disorders_Bipolar_Disorder.pptx',
+  13: 'Module_13_Mood_Disorders_Seasonal_and_Persistent_Depressive_Disor.pptx',
+  14: 'Module_14_Anxiety_Disorders_Generalised_Anxiety_Disorder.pptx',
+  15: 'Module_15_Anxiety_Disorders_Phobias_and_Panic_Disorder.pptx',
+  16: 'Module_16_Anxiety_Disorders_OCD_and_Related_Conditions.pptx',
+  17: 'Module_17_Dissociative_and_Somatic_Disorders.pptx',
+  18: 'Module_18_Eating_Disorders_and_Body_Image.pptx',
+  19: 'Module_19_Sleep_and_Circadian_Rhythm_Disorders.pptx',
+  20: 'Module_20_Impulse-Control_and_Disruptive_Disorders.pptx',
+  21: 'Module_21_Substance_Use_and_Addiction.pptx',
+  22: 'Module_22_Psychotic_Disorders_Schizophrenia_and_Related_Condition.pptx',
+  23: 'Module_23_Personality_Disorders_Cluster_A_and_B.pptx',
+  24: 'Module_24_Personality_Disorders_Cluster_C_and_Others.pptx',
+  25: 'Module_25_Neurocognitive_Disorders.pptx',
+  26: 'Module_26_Mental_Health_and_Chronic_Physical_Conditions.pptx',
+  27: 'Module_27_Workplace_Mental_Health_and_Burnout.pptx',
+  28: 'Module_28_Social_Isolation_and_Loneliness.pptx',
+  29: 'Module_29_Financial_Stress_and_Mental_Health.pptx',
+  30: 'Module_30_Relationships_and_Attachment.pptx',
+  31: 'Module_31_Parenting_Stress_and_Paternal_Mental_Health.pptx',
+  32: 'Module_32_Maternal_Mental_Health_and_Perinatal_Disorders.pptx',
+  33: 'Module_33_Child_and_Adolescent_Mental_Health.pptx',
+  34: 'Module_34_Older_Adult_Mental_Health.pptx',
+  35: 'Module_35_LGBTQIA_Plus_Mental_Health.pptx',
+  36: 'Module_36_Racism_Discrimination_and_Intersectionality.pptx',
+  37: 'Module_37_Gender_and_Sexuality.pptx',
+  38: 'Module_38_Sexual_Violence_and_Trauma.pptx',
+  39: 'Module_39_Grief_Loss_and_Bereavement.pptx',
+  40: 'Module_40_Chronic_Pain_and_Pain_Management.pptx',
+  41: 'Module_41_Sleep_Hygiene_and_Circadian_Health.pptx',
+  42: 'Module_42_Nutrition_Exercise_and_Mental_Health.pptx',
+  43: 'Module_43_Mindfulness_Meditation_and_Breathwork.pptx',
+  44: 'Module_44_Creative_Arts_and_Expressive_Therapies.pptx',
+  45: 'Module_45_Technology_and_Mental_Health.pptx',
+  46: 'Module_46_Climate_Anxiety_and_Eco-distress.pptx',
+  47: 'Module_47_Spirituality_and_Meaning.pptx',
+  48: 'Module_48_Mens_Mental_Health_and_Masculinity.pptx',
+  49: 'Module_49_Military_and_Veteran_Mental_Health.pptx',
+  50: 'Module_50_Prison_Legal_System_and_Mental_Health.pptx',
+};
+
+/** Returns the public URL path for the PPTX file for a given module ID, or null if not found. */
+export function getModulePptxPath(moduleId: number): string | null {
+  const filename = PPTX_FILES[moduleId];
+  return filename ? `/course-materials/${filename}` : null;
+}
+
 export const moduleGuides: ModuleGuide[] = [
   // ─────────────────────────────────────────────────────────────
   // MODULE 1

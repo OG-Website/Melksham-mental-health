@@ -45,7 +45,7 @@ export default function CourseInterestButton({ moduleId, initialInterested, isAd
       <button
         onClick={toggle}
         disabled={loading}
-        aria-label={interested ? 'Remove interest' : "I'm interested in this module"}
+        aria-label={interested ? 'Cancel request' : 'Request to join this module'}
         className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border transition-all disabled:opacity-50 ${
           interested
             ? 'bg-orange-600/30 border-orange-500/60 text-orange-300 hover:bg-orange-600/20'
@@ -53,7 +53,7 @@ export default function CourseInterestButton({ moduleId, initialInterested, isAd
         }`}
       >
         {interested ? <FaHeart className="text-orange-400" /> : <FaRegHeart />}
-        {loading ? 'Saving…' : interested ? 'Interested' : "I'm Interested"}
+        {loading ? 'Saving…' : interested ? 'Requested ✓' : 'Request to Join'}
       </button>
       {error && <span className="text-red-400 text-xs ml-1">{error}</span>}
     </div>

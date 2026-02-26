@@ -12,10 +12,10 @@ import {
   FaLink,
   FaStickyNote,
   FaClock,
+  FaDownload,
 } from 'react-icons/fa';
 import { sessionOptions, type SessionData } from '@/lib/session';
-import { findUserById } from '@/lib/users';
-import { getModuleGuide, SESSION_BREAKDOWN } from '@/lib/moduleGuides';
+import { getModuleGuide, SESSION_BREAKDOWN, getModulePptxPath } from '@/lib/moduleGuides';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -39,10 +39,8 @@ export default async function ModuleGuidePage({ params }: Props) {
     redirect(`/portal/login?next=/courses/${(await params).id}`);
   }
 
-  // Access gate — non-approved users are redirected back to the courses page
-  const user = findUserById(session.userId);
-  const hasCourseAccess = session.isAdmin || (user?.courseAccess ?? false);
-  if (!hasCourseAccess) {
+  // Access gate — full module detail is admin-only
+  if (!session.isAdmin) {
     redirect('/courses');
   }
 
@@ -53,6 +51,7 @@ export default async function ModuleGuidePage({ params }: Props) {
   const guide = getModuleGuide(moduleId);
   if (!guide) notFound();
 
+  const pptxPath = getModulePptxPath(moduleId);
   const prevId = moduleId > 1 ? moduleId - 1 : null;
   const nextId = moduleId < 50 ? moduleId + 1 : null;
 
@@ -72,9 +71,20 @@ export default async function ModuleGuidePage({ params }: Props) {
           {guide.topic}
         </h1>
         <p className="text-zinc-300 text-base leading-relaxed max-w-3xl">{guide.summary}</p>
-        <div className="flex items-center gap-2 mt-4 text-orange-400 text-sm font-semibold">
-          <FaClock className="text-xs" />
-          <span>2-hour session · Evidence-based · Facilitated group programme</span>
+        <div className="flex flex-wrap items-center gap-4 mt-4">
+          <div className="flex items-center gap-2 text-orange-400 text-sm font-semibold">
+            <FaClock className="text-xs" />
+            <span>2-hour session · Evidence-based · Facilitated group programme</span>
+          </div>
+          {pptxPath && (
+            <a
+              href={pptxPath}
+              download
+              className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-orange-500/60 text-orange-300 hover:bg-orange-600/20 transition-colors"
+            >
+              <FaDownload className="text-xs" /> Download PowerPoint
+            </a>
+          )}
         </div>
       </div>
 
