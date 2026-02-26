@@ -4025,6 +4025,696 @@ DOMESTIC ABUSE: If the discussion turns to controlling or abusive relationships,
 
 LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 31
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 31,
+    topic: 'Parenting Stress & Paternal Mental Health',
+    summary: 'The mental health impact of parenting including paternal postnatal depression, parenting stress across the life course, and support available for fathers and co-parents.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Parenting and Mental Health: The Invisible Struggle',
+        bullets: [
+          '1 in 10 new fathers experience postnatal depression — the same rate as mothers (PANDAS Foundation)',
+          'Paternal postnatal depression (PPND) is almost entirely absent from routine UK screening programmes',
+          'Children with depressed parents are 2-3x more likely to develop mental health problems themselves',
+          'Parenting stress is a significant risk factor for depression and anxiety across the whole life course',
+          'BRANDED SLIDE: "Fathers get it too" in large orange text; 1-in-10 as hero statistic on black background',
+        ],
+      },
+      {
+        title: 'Slide 2 — How PPND Presents in Fathers',
+        bullets: [
+          'Classic PPND: low mood, withdrawal, inability to bond with baby, feeling irrelevant or excluded',
+          'How it often presents in men: irritability, overworking, increased alcohol use, emotional numbing',
+          'Risk factors: own history of depression, relationship difficulties, financial stress, sleep deprivation',
+          'Screening gap: fathers are almost never asked about their mental health at postnatal appointments',
+          'BRANDED SLIDE: two-column symptoms table — typical vs how it presents in men — orange/white on black',
+        ],
+      },
+      {
+        title: 'Slide 3 — Parenting Stress Across the Life Course',
+        bullets: [
+          'New parenthood: sleep deprivation, loss of identity and freedom, couple relationship strain',
+          'Toddler years: relentlessness, isolation, the invisible weight of emotional labour',
+          'Parenting teenagers: acute worry, conflict, fear for safety, loss of control',
+          'Parenting children with additional needs: significantly elevated rates of depression and anxiety in parents',
+          'BRANDED SLIDE: life-course timeline from birth to empty nest with orange stress markers at each stage',
+        ],
+      },
+      {
+        title: 'Slide 4 — What Works',
+        bullets: [
+          'Peer support groups for new dads: strongest evidence — normalises shared experience, breaks isolation',
+          'Couple communication: relationship quality is the strongest predictor of parental mental health outcomes',
+          'Practical support: equitable sharing of domestic labour, accepting help when offered',
+          'Professional support: PANDAS helpline, Talking Therapies, GP assessment — early intervention is key',
+          'BRANDED SLIDE: "Ask fathers too" call to action in orange; PANDAS 0808 1961 776 prominent',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Support for Parents',
+        bullets: [
+          'PANDAS Foundation: PND support for mothers AND fathers — 0808 1961 776 (Mon-Sun 9am-8pm, free)',
+          'Dad Matters: peer support for new and expectant fathers with mental health needs',
+          'Family Lives: general parenting support helpline — 0808 800 2222',
+          'Home-Start: volunteer support for families with under-5s who are struggling',
+          'BRANDED SLIDE: four resource cards with logos and phone numbers; PANDAS most prominent',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - Parenting and Mental Health
+"We talk a great deal about postnatal depression in mothers — and rightly so. But there is a significant group whose mental health is almost entirely invisible in the system: fathers and co-parents. One in ten new fathers experiences postnatal depression. The same rate as mothers. And yet most screening, most services, and most awareness campaigns are targeted exclusively at women.
+
+The consequences of this blind spot are serious. Paternal depression affects the quality of parenting, the couple relationship, and child development itself. Children with depressed parents have two to three times the risk of developing mental health problems. Paternal mental health is a family mental health issue."
+
+SLIDE 2 - How PPND Presents
+"Paternal postnatal depression often looks very different from the classic picture. Rather than tearfulness and withdrawal, fathers more commonly present with irritability, overworking, increased alcohol use, and an emotional numbness that gets dismissed as not being engaged.
+
+The screening gap is stark. Mothers are routinely assessed with the Edinburgh Postnatal Depression Scale. Fathers are almost never asked how they are. A simple question — 'And how are you finding it?' — could open the door to support that changes outcomes for the whole family."
+
+SLIDE 3 - Life Course
+"Parenting stress does not end when the postnatal period ends. It shifts. The relentlessness of toddlerhood — loss of sleep, adult identity, couple intimacy and freedom — is a significant mental health challenge. The adolescent years bring acute worry, conflict, and helplessness. And then the empty nest — frequently overlooked as a mental health transition. When the last child leaves, many parents experience profound loss of purpose that can trigger depression."
+
+SLIDE 4 - What Works
+"The evidence is strongest for peer support. Groups of new fathers normalise the experience and break isolation in ways individual therapy often cannot. Knowing other dads feel the same is enormously powerful. Couple communication is the single strongest predictor of parental mental health outcomes. For anyone at clinical threshold, NHS Talking Therapies and GP assessment are the first step."
+
+SLIDE 5 - Resources
+"PANDAS Foundation — 0808 1961 776 — free, seven days a week, 9am to 8pm. Dad Matters provides peer support for new fathers. Family Lives has a general parenting line on 0808 800 2222. Home-Start provides volunteer home visiting for families with under-5s who are struggling."`,
+    activity: `ACTIVITY - The Cost of Keeping It Together (20 minutes)
+Melksham Mental Health | Module 31 | Licensed Materials
+
+PURPOSE: Explore the hidden costs of parenting stress and the cultural pressures that prevent parents — especially fathers — from seeking help.
+
+INTRODUCE: "There is enormous pressure on parents to appear to be coping. 'How are you doing?' is rarely answered honestly. This activity explores what gets hidden and why."
+
+PART 1 - Role Cards (3 minutes, individual):
+Participants receive one of four role cards and read privately:
+Card A: New father, 6 weeks after birth, not sleeping, feeling irrelevant, resentful, ashamed of these feelings
+Card B: Parent of a teenager with an eating disorder — exhausted, isolated, protecting privacy
+Card C: Single parent, working full-time, worried about money, no family support, 'managing'
+Card D: Father whose last child left home two months ago — loss of purpose, not sure who he is
+
+PART 2 - Two Answers (10 minutes in pairs):
+Person A holds their role card. Person B asks: "How are you? How's everything at home?"
+Person A answers twice:
+1. What they would ACTUALLY say (surface answer)
+2. What they WISH they could say (honest answer)
+Then swap.
+
+PART 3 - Debrief (7 minutes):
+What made the honest answer hard? What would have made it safe?
+Key message: The gap between what we say and what we feel is where mental illness grows.`,
+    discussionPrompts: [
+      'Why is paternal postnatal depression so under-recognised — and whose responsibility is it to change this?',
+      'What cultural messages about fatherhood make it hardest for men to admit they are struggling?',
+      'How does parental mental health affect child development — and what does this mean for early intervention?',
+      'What would parent-responsive mental health services look like in practice?',
+    ],
+    resources: [
+      { label: 'PANDAS Foundation — PND support: 0808 1961 776 (Mon-Sun 9am-8pm)', url: 'https://www.pandasfoundation.org.uk' },
+      { label: 'Dad Matters — peer support for fathers', url: 'https://www.dadmatters.org.uk' },
+      { label: 'Family Lives — parenting helpline: 0808 800 2222', url: 'https://www.familylives.org.uk' },
+      { label: 'Home-Start — volunteer support for families', url: 'https://www.home-start.org.uk' },
+      { label: 'NHS — postnatal depression overview', url: 'https://www.nhs.uk/mental-health/conditions/post-natal-depression/' },
+    ],
+    videos: [
+      { label: 'Paternal postnatal depression — Dad Matters (YouTube)', url: 'https://www.youtube.com/results?search_query=paternal+postnatal+depression+fathers+PPND+UK' },
+      { label: 'New dad mental health — PANDAS Foundation (YouTube)', url: 'https://www.youtube.com/results?search_query=new+dad+mental+health+PANDAS+foundation+perinatal' },
+      { label: 'Parenting stress and mental health (YouTube)', url: 'https://www.youtube.com/results?search_query=parenting+stress+mental+health+invisible+struggle' },
+    ],
+    powerPoint: `MODULE 31 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: 'Fathers get it too' in large orange; 1-in-10 statistic on black
+Slide 2: Two-column PPND table — typical vs male presentation — orange headers
+Slide 3: Life-course timeline from birth to empty nest with orange markers
+Slide 4: 'Ask fathers too' in orange; PANDAS 0808 1961 776 prominent
+Slide 5: Four resource cards — PANDAS, Dad Matters, Family Lives, Home-Start
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Parenting discussions can surface acute distress. Have PANDAS (0808 1961 776) and Samaritans (116 123) visible.
+
+FACILITATION: Parenting is both rewarding and genuinely hard — hold both truths. Role-play can surface unexpected emotion; create safety for this.
+
+LANGUAGE: Use 'parent' and 'co-parent' as well as 'father' to include all family structures.
+
+CROSS-REFERENCE: Module 32 covers maternal mental health. These modules work well together.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 32
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 32,
+    topic: 'Maternal Mental Health & Perinatal Disorders',
+    summary: 'Postpartum depression, perinatal anxiety, postpartum psychosis and birth trauma — the full spectrum of maternal mental health, evidence-based treatments, and how to support affected women.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — The Full Spectrum of Perinatal Mental Health',
+        bullets: [
+          '1 in 5 women experience a perinatal mental health problem; only 50% receive any support (Maternal MH Alliance)',
+          'Economic cost: untreated perinatal mental illness costs the UK £8.1 billion per birth cohort (Centre for MH)',
+          'Conditions: perinatal depression, anxiety, tokophobia, birth trauma/PTSD, postpartum psychosis',
+          'Perinatal = from conception to one year after birth — a period of profound biological and psychological change',
+          'BRANDED SLIDE: perinatal timeline from conception to 12 months with conditions mapped across it in orange',
+        ],
+      },
+      {
+        title: 'Slide 2 — Postpartum Depression',
+        bullets: [
+          'Affects ~10-15% of new mothers; rates doubled between 2010 and 2021 (BMJ research)',
+          'Distinct from baby blues (days 2-4, mild, brief) — PPD is persistent, debilitating, requires treatment',
+          'Core features: inability to bond with baby, profound guilt and shame, intrusive thoughts',
+          'NICE recommends Edinburgh Postnatal Depression Scale (EPDS) screening at 4-6 weeks and 3-4 months',
+          'BRANDED SLIDE: PPD vs baby blues comparison table; EPDS reference; MMH branding',
+        ],
+      },
+      {
+        title: 'Slide 3 — Birth Trauma & PTSD',
+        bullets: [
+          '4-5% of women who give birth develop PTSD; up to 30% have significant PTSD symptoms (Birth Trauma Association)',
+          'Birth trauma is subjective — complications, loss of control, feeling unheard, emergency procedures',
+          'Symptoms: flashbacks, nightmares, avoidance of healthcare settings, hypervigilance',
+          '"But the baby is fine" is one of the most harmful dismissals in perinatal care',
+          'BRANDED SLIDE: "But the baby is fine" challenged; birth trauma reality in white/orange on black',
+        ],
+      },
+      {
+        title: 'Slide 4 — Postpartum Psychosis',
+        bullets: [
+          'Rare but serious: 1-2 in 1,000 new mothers — almost always requires hospital admission',
+          'Rapid onset within 2 weeks of birth: hallucinations, delusions, confusion, mania',
+          'Medical emergency: if suspected, call 999 or go to A&E immediately — highly treatable',
+          'High risk in women with bipolar disorder or personal/family history of postpartum psychosis',
+          'BRANDED SLIDE: "CALL 999 — Postpartum Psychosis is a Medical Emergency" in bold orange — unmissable',
+        ],
+      },
+      {
+        title: 'Slide 5 — Treatment & UK Support',
+        bullets: [
+          'First-line: CBT, interpersonal therapy, peer support; many SSRIs safe during breastfeeding',
+          'Specialist Perinatal Mental Health Teams: community-based integrated care in most of England',
+          'Mother and Baby Units (MBUs): inpatient with baby — 19 in England; life-changing care',
+          'PANDAS: 0808 1961 776; APNI: 0207 386 0868 — specialist helplines',
+          'BRANDED SLIDE: MBU map of England; PANDAS and APNI numbers in large orange',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - The Full Spectrum
+"The perinatal period — from conception through to a year after birth — is one of the highest-risk periods for mental health problems across a woman's entire life. One in five women experiences a perinatal mental health problem. Only around half of those women receive any support. The economic cost is estimated at eight-point-one billion pounds per birth cohort. This is a major, under-addressed public health challenge."
+
+SLIDE 2 - Postpartum Depression
+"Postpartum depression is distinct from the baby blues. The baby blues affect most new mothers in the first few days — mild weepiness resolving by around day five. PPD is persistent, often beginning within weeks and continuing for months.
+
+The inability to bond with the baby — the absence of the love you expected to feel — is one of the most shame-laden experiences in perinatal mental health. Intrusive thoughts about harm to the baby are present in most cases of PPD and are ego-dystonic: distressing precisely because they are contrary to everything the person wants. They are a symptom, not a risk factor for action."
+
+SLIDE 3 - Birth Trauma
+"Birth trauma is defined by the subjective experience — not the medical outcome. A birth can go obstetric textbook and still be profoundly traumatic if the woman felt out of control, unheard, or violated. Four to five percent develop full PTSD; up to 30% have significant symptoms. 'But the baby is fine' is one of the most harmful responses — it invalidates the experience and prevents help-seeking."
+
+SLIDE 4 - Postpartum Psychosis
+"Postpartum psychosis is rare but a psychiatric emergency. It develops rapidly — within the first two weeks — with hallucinations, delusions, and profound disorientation. If you suspect it, call 999. This is treatable; with prompt response, most women make a full recovery. The danger is delay."
+
+SLIDE 5 - Resources
+"Specialist Perinatal Mental Health Teams exist in most of England. Mother and Baby Units keep mothers and babies together during inpatient care. PANDAS on 0808 1961 776 and APNI on 0207 386 0868 provide specialist helpline support."`,
+    activity: `ACTIVITY - Recognition Practice (20 minutes)
+Melksham Mental Health | Module 32 | Licensed Materials
+
+PURPOSE: Build skills in recognising perinatal mental health conditions and responding compassionately.
+
+INTRODUCE: "Perinatal mental health is still surrounded by shame. New mothers are often expected to be happy above all else. This activity builds recognition and response skills."
+
+PART 1 - What Is This? (5 minutes):
+Present 6 brief case descriptions. Participants identify the condition:
+1. Crying on day 3, resolves by day 6 — [Baby blues]
+2. Five weeks post-birth, no bond with baby, intrusive thoughts, guilt — [PPD]
+3. Flashbacks of emergency C-section, avoids midwife, nightmares — [Birth trauma/PTSD]
+4. Two weeks post-birth, seeing people, believing baby replaced — [Postpartum psychosis — CALL 999]
+5. Anxious about baby's breathing, checking constantly, cannot sleep — [Perinatal anxiety]
+6. Tearful, overwhelmed, significantly improved by day 5 — [Baby blues]
+
+PART 2 - Supportive Response (10 minutes in pairs):
+"A friend has told you she feels nothing for her baby and is scared she is a terrible mother."
+Draft: what would you say? What would you NOT say? What practical help could you offer?
+Key messages: don't minimise; don't say 'enjoy every moment'; DO mention PANDAS; DO offer practical help.
+
+PART 3 - Debrief (5 minutes):
+Why do so many women suffer in silence? What cultural changes would help most?`,
+    discussionPrompts: [
+      'Why does the cultural narrative that new mothers should feel only joy make perinatal mental health worse — and whose responsibility is it to challenge this?',
+      '"But the baby is fine" — why is this harmful, and what should we say instead?',
+      'What barriers prevent women from disclosing perinatal mental health struggles to healthcare professionals?',
+      'How would you support a friend or family member you suspected was experiencing postpartum depression?',
+    ],
+    resources: [
+      { label: 'PANDAS Foundation — perinatal mental health: 0808 1961 776', url: 'https://www.pandasfoundation.org.uk' },
+      { label: 'APNI — postnatal illness support: 0207 386 0868', url: 'https://apni.org' },
+      { label: 'Birth Trauma Association', url: 'https://www.birthtraumaassociation.org.uk' },
+      { label: 'Maternal Mental Health Alliance', url: 'https://maternalmentalhealthalliance.org' },
+      { label: 'NHS — postpartum psychosis (emergency information)', url: 'https://www.nhs.uk/mental-health/conditions/post-partum-psychosis/' },
+    ],
+    videos: [
+      { label: 'Postpartum depression explained — NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=postpartum+depression+explained+NHS+postnatal' },
+      { label: 'Birth trauma and PTSD (YouTube)', url: 'https://www.youtube.com/results?search_query=birth+trauma+PTSD+Birth+Trauma+Association+UK' },
+      { label: 'Postpartum psychosis — what to look for (YouTube)', url: 'https://www.youtube.com/results?search_query=postpartum+psychosis+signs+emergency+UK' },
+    ],
+    powerPoint: `MODULE 32 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Perinatal timeline from conception to 12 months with conditions in orange
+Slide 2: PPD vs baby blues comparison table; EPDS reference
+Slide 3: 'But the baby is fine' challenged — birth trauma reality in white/orange on black
+Slide 4: 'CALL 999 — Postpartum Psychosis is a Medical Emergency' in large bold orange
+Slide 5: MBU map of England; PANDAS 0808 1961 776, APNI 0207 386 0868 in orange
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Postpartum psychosis is a medical emergency. If anyone discloses current acute symptoms, escalate to emergency services immediately.
+
+INTRUSIVE THOUGHTS: Emphasise that intrusive thoughts about harm to baby in PPD are ego-dystonic and NOT predictive of action. This is critical — misunderstanding this prevents women from disclosing.
+
+LANGUAGE: 'Perinatal' not just 'postnatal' to include antenatal onset. Non-shaming language throughout.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 33
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 33,
+    topic: 'Child & Adolescent Mental Health',
+    summary: 'Mental health in children and young people — the most common conditions, risk and protective factors, early warning signs, evidence-based interventions, and navigating CAMHS.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — The Scale of Child & Adolescent Mental Health Problems',
+        bullets: [
+          '1 in 5 children aged 8-16 had a probable mental disorder in England in 2023 (NHS Digital)',
+          'Half of all adult mental health conditions begin by age 14; three-quarters by age 24 (WHO)',
+          'CAMHS waiting times crisis: average 18 weeks after referral; many wait over a year',
+          'Most common: anxiety (41%), behavioural disorders (30%), depression (20%)',
+          'BRANDED SLIDE: "Half of all adult MH conditions begin by age 14" in large orange — early intervention imperative',
+        ],
+      },
+      {
+        title: 'Slide 2 — Risk & Protective Factors',
+        bullets: [
+          'Risk: ACEs, bullying, poverty, parental mental illness, social media, peer rejection',
+          'Social media: girls aged 11-17 who use it heavily are 2x more likely to have mental health problems (UCL)',
+          'Protective: safe attachment relationships, school connectedness, one trusted adult, physical activity',
+          'Resilience is relational — "one safe adult changes everything"',
+          'BRANDED SLIDE: risk/protective scales; resilience quote in orange',
+        ],
+      },
+      {
+        title: 'Slide 3 — Common Conditions in Young People',
+        bullets: [
+          'Anxiety: most common CYP condition — often presents as physical symptoms (headaches, stomach aches, school refusal)',
+          'Depression: often presents as irritability not sadness in adolescents; self-harm risk',
+          'Self-harm: 1 in 5 young women aged 16-24 have self-harmed; serves as emotion regulation',
+          'Eating disorders: peak onset 14-17; anorexia has highest mortality of any mental disorder',
+          'BRANDED SLIDE: four condition cards with UK prevalence; warning signs for each',
+        ],
+      },
+      {
+        title: 'Slide 4 — Early Warning Signs & How to Help',
+        bullets: [
+          'Changes in sleep, appetite, school performance, friendships, social withdrawal',
+          'Physical complaints without medical cause are often anxiety in children',
+          'What to do: stay calm, listen without judgement, believe them, normalise help-seeking',
+          'What NOT to say: "everyone feels like that", "you have nothing to worry about", "snap out of it"',
+          'BRANDED SLIDE: "What to say / What NOT to say" side-by-side in orange and red on black',
+        ],
+      },
+      {
+        title: 'Slide 5 — CAMHS & UK Resources',
+        bullets: [
+          'CAMHS: NHS specialist care — referral via GP or school SENCO',
+          'Mental Health Support Teams: NHS-funded teams in schools — covering 35%+ of pupils in England',
+          'YoungMinds Parents Helpline: 0808 802 5544 (free Mon-Fri); Crisis Messenger: text YM to 85258',
+          'Kooth: free online counselling for 11-25 year olds — no referral, no waiting list',
+          'BRANDED SLIDE: YoungMinds 0808 802 5544, Kooth QR code, CAMHS referral pathway',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - The Scale
+"Half of all adult mental health conditions first emerge by age 14. Three-quarters by age 24. If we want to prevent adult mental ill-health, we must invest in childhood and adolescence. In England in 2023, one in five children aged 8-16 had a probable mental disorder. And the CAMHS system is chronically overwhelmed — average waiting times are 18 weeks. Many children wait over a year. In that time, conditions worsen and the window for early intervention closes."
+
+SLIDE 2 - Risk and Protective Factors
+"The most powerful risk factors are adverse childhood experiences — ACEs. Abuse, neglect, domestic violence, parental substance use. The more ACEs, the higher the risk. Social media's impact on girls aged 11-17 is one of the most well-evidenced recent findings — heavy use doubles their risk.
+
+The most protective factor is simple: one safe, responsive, consistent adult. One person who listens and believes. This is something anyone in this room can provide."
+
+SLIDE 3 - Common Conditions
+"Anxiety is the most common condition in children — and often presents as physical symptoms rather than visible worry. A child with persistent headaches and stomach aches without medical cause may be experiencing clinical anxiety.
+
+Depression in adolescence frequently presents as irritability rather than sadness. Self-harm affects roughly one in five young women aged 16-24 — it functions as emotion regulation. Eating disorders peak at 14-17 and anorexia has the highest mortality of any mental disorder."
+
+SLIDE 4 - Warning Signs
+"Early warning signs are changes — from how the young person usually is. The most important thing an adult can do is stay calm and listen. Not fix. Not minimise. Simply be present and believe what you hear. Young people consistently say being believed is the most important thing."
+
+SLIDE 5 - Resources
+"YoungMinds Parents Helpline — 0808 802 5544, free. YoungMinds Crisis Messenger — text YM to 85258. Kooth — free, no referral, no waiting list for 11-25s. CAMHS via GP or school SENCO."`,
+    activity: `ACTIVITY - What Would You Say? (20 minutes)
+Melksham Mental Health | Module 33 | Licensed Materials
+
+PURPOSE: Build practical skills in having supportive conversations with young people about mental health.
+
+INTRODUCE: "Young people tell us the most helpful thing an adult does is listen and believe them. The most unhelpful thing is minimising or immediately trying to fix it."
+
+PART 1 - Helpful vs Unhelpful (5 minutes):
+Rate each response:
+1. "Everyone feels like that at your age" — [Unhelpful]
+2. "Thank you for telling me. That sounds really hard." — [Helpful]
+3. "You have nothing to be anxious about!" — [Unhelpful]
+4. "I am always here. Do you want to talk more?" — [Helpful]
+5. "Are you doing this for attention?" — [Harmful]
+6. "I will get you some help. But first — I just want to hear how you are feeling." — [Helpful]
+
+PART 2 - Scenario in Pairs (10 minutes):
+"A 14-year-old has told you they have been cutting themselves. They beg you not to tell anyone."
+Work through:
+- What is your immediate response?
+- What would you say first?
+- How do you explain you may need to involve another adult, while preserving trust?
+- What support resources would you mention?
+
+PART 3 - Debrief (5 minutes):
+Confidentiality has limits when safety is at risk — but HOW you explain this matters. Stay calm; the relationship comes first.`,
+    discussionPrompts: [
+      'The UK has some of the longest CAMHS waiting times in Europe — what are the consequences and what would fix it?',
+      'What is the responsibility of schools in child mental health — and what resources do they actually need?',
+      'How has social media changed the mental health landscape for young people, and what should individuals, families, platforms and government do?',
+      'What does a mentally healthy childhood look like — and how achievable is it in the UK today?',
+    ],
+    resources: [
+      { label: 'YoungMinds Parents Helpline: 0808 802 5544 (free Mon-Fri 9.30am-4pm)', url: 'https://www.youngminds.org.uk/parent/parents-helpline/' },
+      { label: 'YoungMinds Crisis Text: text YM to 85258 (24/7)', url: 'https://www.youngminds.org.uk/young-person/crisis-messenger/' },
+      { label: 'Kooth — free online counselling for 11-25 (no referral needed)', url: 'https://www.kooth.com' },
+      { label: 'Mind — children and young people', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/children-young-people/' },
+      { label: 'NHS CAMHS — referral via GP or school SENCO', url: 'https://www.nhs.uk/mental-health/children-and-young-adults/' },
+    ],
+    videos: [
+      { label: "Children's mental health crisis UK — BBC (YouTube)", url: 'https://www.youtube.com/results?search_query=children+mental+health+crisis+UK+CAMHS+BBC' },
+      { label: 'Social media and teen mental health (YouTube)', url: 'https://www.youtube.com/results?search_query=social+media+teen+mental+health+anxious+generation+UK' },
+      { label: 'Talking to young people about mental health — YoungMinds (YouTube)', url: 'https://www.youtube.com/results?search_query=how+to+talk+young+people+mental+health+youngminds+UK' },
+    ],
+    powerPoint: `MODULE 33 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: 'Half of adult MH conditions begin by age 14' in large orange on black
+Slide 2: Risk/protective scales; 'one safe adult changes everything' in orange
+Slide 3: Four condition cards (anxiety/depression/self-harm/eating disorders) with stats
+Slide 4: 'What to say / What NOT to say' two-column in orange and red
+Slide 5: YoungMinds 0808 802 5544, Kooth QR code, CAMHS pathway
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: This module covers self-harm. For any disclosure of a young person currently at risk, follow safeguarding protocols immediately.
+
+FACILITATION: Parents may have current concerns about their children — signpost to YoungMinds Parents Helpline rather than attempting case consultations.
+
+LANGUAGE: Avoid 'attention-seeking'. Use 'communicating distress'. Never dismiss self-harm as trivial.
+
+WAITING TIMES: Acknowledge the CAMHS crisis honestly. Offer Kooth as a bridge while waiting.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 34
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 34,
+    topic: 'Older Adult Mental Health',
+    summary: 'Depression, anxiety, cognitive decline and suicide risk in older adults — why mental health in later life is under-recognised, under-treated, and the specific factors that shape it.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Mental Health in Later Life: The Hidden Crisis',
+        bullets: [
+          '14.1% of adults aged 70+ have a depressive disorder; 10.9% have an anxiety disorder (WHO)',
+          'Around 1 in 6 suicide deaths in the UK occur in people aged 60+ — yet older adult mental health is massively underfunded',
+          'Depression in older adults is routinely attributed to "just getting old" — a dismissal that costs lives',
+          'Older adults are least likely to receive psychological therapy despite clear evidence it works',
+          'BRANDED SLIDE: "Under-recognised. Under-treated. Under-valued." in white/orange on black',
+        ],
+      },
+      {
+        title: 'Slide 2 — Risk Factors Unique to Later Life',
+        bullets: [
+          'Bereavement: cumulative loss of spouse, friends, siblings, peers — compounding grief over decades',
+          'Physical illness: chronic pain, disability, and declining function create and maintain depression',
+          'Social isolation: widowhood, loss of driving, reduced mobility, death of social network',
+          'Elder abuse: 1 in 6 people aged 60+ globally — financial, physical, emotional abuse by carers/family',
+          'BRANDED SLIDE: four risk factor categories in orange-bordered boxes; elder abuse statistic highlighted',
+        ],
+      },
+      {
+        title: 'Slide 3 — Suicide Risk in Older Adults',
+        bullets: [
+          'Suicide in older adults: more planned, more lethal, fewer prior attempts than in younger age groups',
+          'Men aged 50-64 have the highest suicide rate in the UK (ONS 2022)',
+          'Warning signs: giving away possessions, saying goodbye, expressions of hopelessness, increasing isolation',
+          'Older adults rarely present to services before a suicidal act — proactive outreach is essential',
+          'BRANDED SLIDE: older male suicide rate in large orange; warning signs listed; Samaritans number prominent',
+        ],
+      },
+      {
+        title: 'Slide 4 — What Good Care Looks Like',
+        bullets: [
+          'Psychological therapies work equally well in older adults — CBT, life review, reminiscence therapy all effective',
+          'Social prescribing, befriending, Men in Sheds, walking groups — evidence-based for isolation',
+          'Exercise: antidepressant effects equivalent to medication in older adults (NICE evidence)',
+          'Person-centred care: dignity, autonomy and purpose — especially important in care home settings',
+          'BRANDED SLIDE: "Age is not a reason to withhold therapy" in bold orange; NICE summary',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources for Older Adults',
+        bullets: [
+          'Age UK: helpline 0800 055 6112 (free Mon-Fri 9am-5pm) — welfare advice, befriending, social activities',
+          'Silver Line: 0800 4 70 80 90 (free, 24/7) — confidential helpline for older people',
+          "Men in Sheds (UK Men's Sheds Association): community connection proven to reduce older men's isolation",
+          'Samaritans: 116 123 — specific resources for older people at samaritans.org',
+          'BRANDED SLIDE: Silver Line 0800 4 70 80 90, Age UK 0800 055 6112 in large orange; Sheds info',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - The Hidden Crisis
+"Older people's mental health is one of the most neglected areas of mental health care in the UK. Despite 14% of adults over 70 having a diagnosable depressive disorder, depression in older people is routinely dismissed as 'just getting old.' This attribution is both wrong and deadly.
+
+Around one in six suicide deaths in the UK occur in people over 60. Men aged 50-64 have the highest suicide rate of any demographic. And yet the vast majority of awareness campaigns and clinical investment is directed at younger populations. This represents a significant failure of care."
+
+SLIDE 2 - Risk Factors
+"The risk factors in later life are specific and cumulative. Bereavement — not one loss but a succession over decades. Physical illness and disability: pain that does not relent, bodies that no longer do what they used to. Social isolation: widowhood, loss of driving, death of the social network you spent a lifetime building. And elder abuse — one in six older adults globally experiences it, often perpetrated by the people closest to them."
+
+SLIDE 3 - Suicide Risk
+"Suicide in older adults is more planned and more lethal than in younger age groups. Warning signs: giving possessions away, final-feeling goodbyes, expressions of being a burden, increasing withdrawal. Older adults rarely present to services before a suicidal act — which means proactive, routine questioning by GPs, care workers, and family is essential."
+
+SLIDE 4 - Good Care
+"Psychological therapies work equally well in older adults. CBT, life review therapy, and reminiscence therapy all have evidence. Exercise has antidepressant effects equivalent to medication. Social prescribing connects people to community activities and befriending. 'Age is not a reason to withhold therapy' should be a baseline standard — it is not currently."
+
+SLIDE 5 - Resources
+"The Silver Line — 0800 4 70 80 90 — free, 24 hours a day, for older people. Age UK on 0800 055 6112. Men in Sheds for older men's community and connection. Samaritans on 116 123 with specific older people resources."`,
+    activity: `ACTIVITY - Ageism & Mental Health (20 minutes)
+Melksham Mental Health | Module 34 | Licensed Materials
+
+PURPOSE: Identify how ageist assumptions cause older adult mental health to go unrecognised; build person-centred responses.
+
+INTRODUCE: "Ageism — assumptions based on age — shapes how older people's mental health is treated in the most consequential ways. This activity examines those assumptions."
+
+PART 1 - True/False/It Depends (5 minutes):
+1. Depression is a normal part of ageing — [False]
+2. Therapy doesn't work as well for older people — [False: equally effective]
+3. It's natural to feel sad when you lose health and independence — [It depends: grief is understandable; clinical depression needs treatment]
+4. Suicidal thoughts in old age are understandable given losses — [False: warrants a clinical response at any age]
+5. Older people are less interested in talking about emotions — [False: a generalisation with no evidence base]
+
+PART 2 - Case Discussion (10 minutes in groups):
+"Margaret, 78. Her husband died 8 months ago. She has stopped attending the garden club she loved. Her GP noted she is not eating well. When her daughter asked if she was okay, she said: 'I'm just tired. It's what happens at my age.'"
+- What signs are present?
+- What might a clinician dismiss as 'normal ageing'?
+- What does Margaret need?
+- How would you respond to 'it's just my age'?
+
+PART 3 - Debrief (5 minutes):
+Key message: Every symptom of depression deserves a clinical response regardless of age. The phrase "it's what happens at your age" is one of the deadliest in our language.`,
+    discussionPrompts: [
+      "Why is depression in older adults so routinely dismissed as 'just getting old' — what does this tell us about how our society values older people?",
+      'Why do men aged 50-64 have the highest suicide rate in the UK, and what specific interventions might help?',
+      'What would age-inclusive mental health services look like — and how different are they from the current system?',
+      'How can communities support older adult mental health without being patronising or overprotective?',
+    ],
+    resources: [
+      { label: 'Age UK — helpline: 0800 055 6112 (free Mon-Fri 9am-5pm)', url: 'https://www.ageuk.org.uk' },
+      { label: 'Silver Line helpline: 0800 4 70 80 90 (free, 24/7)', url: 'https://www.thesilverline.org.uk' },
+      { label: "Men in Sheds — UK Men's Sheds Association", url: 'https://menssheds.org.uk' },
+      { label: 'Samaritans — older people and suicide resources', url: 'https://www.samaritans.org/how-we-can-help/older-people/' },
+      { label: 'Campaign to End Loneliness — older adult resources', url: 'https://www.campaigntoendloneliness.org' },
+    ],
+    videos: [
+      { label: 'Older adult mental health — Age UK (YouTube)', url: 'https://www.youtube.com/results?search_query=older+adult+mental+health+depression+Age+UK' },
+      { label: "Men's Sheds and mental health (YouTube)", url: 'https://www.youtube.com/results?search_query=mens+sheds+mental+health+community+older+men+BBC' },
+      { label: 'Suicide in older adults — prevention (YouTube)', url: 'https://www.youtube.com/results?search_query=suicide+older+men+prevention+research+UK+ONS' },
+    ],
+    powerPoint: `MODULE 34 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: 'Under-recognised. Under-treated. Under-valued.' in white/orange — powerful opener
+Slide 2: Four risk factor boxes (bereavement/illness/isolation/elder abuse) orange borders
+Slide 3: Older male suicide statistic in large orange; warning signs; Samaritans 116 123
+Slide 4: 'Age is not a reason to withhold therapy' in bold orange; NICE recommendations
+Slide 5: Silver Line 0800 4 70 80 90, Age UK 0800 055 6112 in large orange
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Significant suicide risk in older adults. Have Age UK (0800 055 6112) and Samaritans (116 123) visible.
+
+ELDER ABUSE: Disclosures are a safeguarding matter — follow your protocol and refer to adult safeguarding at the local council.
+
+FACILITATION: Some participants may have parents in decline or recently lost them. Create space for this.
+
+LANGUAGE: 'Older adult' not 'elderly'. Avoid infantilising language. Older adults have full personhood and agency.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 35
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 35,
+    topic: 'LGBTQIA+ Mental Health',
+    summary: "Why LGBTQIA+ people experience higher rates of mental health problems — minority stress theory, the role of discrimination and rejection, and affirming approaches to support and care.",
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — The Evidence: Higher Rates, Not Different People',
+        bullets: [
+          'LGB people are 2-3x more likely to experience depression, anxiety, self-harm and suicidal ideation (Mind)',
+          'Trans and non-binary people: 88% report distress, 84% have self-harmed, 45% have attempted suicide (Stonewall)',
+          'Critical: elevated rates are NOT caused by being LGBTQIA+ — they are caused by minority stress: discrimination and rejection',
+          'In cultures without homophobia, LGBTQIA+ people show no elevated mental health risk',
+          'BRANDED SLIDE: "The problem is not being LGBTQIA+. The problem is discrimination." in white/orange on black',
+        ],
+      },
+      {
+        title: 'Slide 2 — Minority Stress Theory',
+        bullets: [
+          "Meyer's Minority Stress Model: external stressors (discrimination, violence) + internal stressors (concealment, internalised stigma)",
+          'Internalised homophobia/transphobia: absorbing society\'s negative messages about your own identity — a major depression driver',
+          'Concealment: the exhausting labour of hiding your identity in unsafe environments',
+          'Microaggressions: cumulative effect of repeated small incidents of stigma is equivalent to major trauma',
+          'BRANDED SLIDE: minority stress model diagram — external/internal stressors to health outcomes in orange',
+        ],
+      },
+      {
+        title: 'Slide 3 — Specific Challenges',
+        bullets: [
+          'LGBTQIA+ homeless youth: 24% of youth homeless population in UK — often due to family rejection',
+          'Conversion therapy: still practiced in the UK; linked to suicide and severe psychological harm',
+          'Trans healthcare: NHS GIC waiting times of 3-5+ years; gender dysphoria is treatable but access is blocked',
+          'Intersectionality: being LGBTQIA+ and a person of colour, disabled, or from a religious community compounds challenges',
+          'BRANDED SLIDE: conversion therapy status; GIC waiting times; youth homelessness in orange callout boxes',
+        ],
+      },
+      {
+        title: 'Slide 4 — Affirming Approaches',
+        bullets: [
+          "LGBTQIA+-affirming therapy: uses the person's identity as a source of strength — not something to change",
+          'Family acceptance: the most evidence-based intervention — significantly reduces suicide risk in LGBTQIA+ young people',
+          'Community and Pride: LGBTQIA+ community spaces and peer support are genuinely protective',
+          'Healthcare: use correct pronouns and names; ask, do not assume; identity is not the problem',
+          'BRANDED SLIDE: affirming vs non-affirming care comparison; "identity is not the problem" in orange',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources',
+        bullets: [
+          'Switchboard: 0800 0119 100 (Mon-Fri 10am-10pm, Sat-Sun 10am-6pm) — LGBTQIA+ helpline',
+          'LGBT Foundation: 0345 3 30 30 30 — national helpline and services',
+          'Stonewall: advocacy, resources, workplace equality — stonewall.org.uk',
+          'Gendered Intelligence: trans-led support and education — genderedintelligence.co.uk',
+          'BRANDED SLIDE: Switchboard 0800 0119 100, LGBT Foundation 0345 3 30 30 30; Stonewall, GI logos',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - The Evidence
+"The evidence is clear. LGB people are two to three times more likely to experience depression, anxiety and suicidal ideation. For trans and non-binary people, 88% have experienced distress and 84% have self-harmed.
+
+These elevated rates are not caused by being LGBTQIA+. They are caused by discrimination, rejection, and stigma. In cultures and communities where homophobia and transphobia are absent, LGBTQIA+ people show no elevated mental health risk. The problem is not the identity. The problem is how the world treats people because of it."
+
+SLIDE 2 - Minority Stress
+"Ilan Meyer's minority stress model gives us the framework. External stressors: discrimination, harassment, rejection, violence. Internal stressors that develop in response: concealment — the exhausting labour of hiding who you are — and internalised stigma, absorbing society's negative messages until you believe them yourself.
+
+Effective therapy for LGBTQIA+ people cannot be neutral about identity. It must be actively affirming."
+
+SLIDE 3 - Specific Challenges
+"LGBTQIA+ young people make up around 24% of the youth homeless population — often because of family rejection. Conversion therapy is still practiced in the UK despite clear evidence it causes serious psychological harm and is associated with elevated suicide risk.
+
+Trans people face an NHS gender identity service in crisis. First appointment waiting times have reached five years. Living with gender dysphoria while waiting years for any treatment is severe and preventable harm."
+
+SLIDE 4 - Affirming Approaches
+"The most evidence-based intervention for LGBTQIA+ mental health is family acceptance. When a family accepts their LGBTQIA+ young person, suicide risk drops dramatically. Community connection is similarly protective. For practitioners: use the name and pronouns the person asks for. Do not assume heterosexuality. Identity is not the problem to solve."
+
+SLIDE 5 - Resources
+"Switchboard — 0800 0119 100. LGBT Foundation — 0345 3 30 30 30. Gendered Intelligence for trans-specific support. Stonewall for advocacy and workplace resources."`,
+    activity: `ACTIVITY - Minority Stress Mapping (20 minutes)
+Melksham Mental Health | Module 35 | Licensed Materials
+
+PURPOSE: Make visible how minority stress operates and accumulates; build skills in providing affirming support.
+
+INTRODUCE: "Minority stress is not one dramatic event — it is the cumulative weight of thousands of small and large experiences of being othered, rejected, or dismissed."
+
+PART 1 - Building the Timeline (8 minutes):
+In small groups, build a timeline for Jordan — a 16-year-old who has just realised they are gay. Map from age 8 to 18:
+- What do they hear about LGBTQIA+ people at school, at home, online?
+- What do they hide, and at what cost?
+- What happens when they tell a friend? A parent?
+Be honest and realistic — not all outcomes are positive.
+
+PART 2 - Turning Points (7 minutes):
+Identify three moments in Jordan's timeline:
+1. A negative turning point (increases risk)
+2. A neutral one (could go either way)
+3. A positive one (genuinely protective)
+For the positive: what happens? Who does what?
+
+PART 3 - Debrief (5 minutes):
+Key message: Every person in this room has the capacity to be a positive turning point in a young LGBTQIA+ person's life. You do not need the same identity. You just need to be safe, affirming, and consistent.`,
+    discussionPrompts: [
+      "What is the most effective thing allies can do to support LGBTQIA+ people's mental health — and what do unhelpful 'allies' sometimes do instead?",
+      'Why has the campaign to ban conversion therapy in the UK faced such resistance, and what does this tell us about the political landscape?',
+      'How should NHS services change to better meet the mental health needs of trans and non-binary people, given current GIC waiting times?',
+      'What does an LGBTQIA+-affirming school, family, or workplace actually look and feel like in practice?',
+    ],
+    resources: [
+      { label: 'Switchboard LGBTQIA+ helpline: 0800 0119 100 (Mon-Fri 10am-10pm)', url: 'https://switchboard.lgbt' },
+      { label: 'LGBT Foundation national helpline: 0345 3 30 30 30', url: 'https://lgbt.foundation' },
+      { label: 'Stonewall — LGBTQIA+ rights and resources', url: 'https://www.stonewall.org.uk' },
+      { label: 'Gendered Intelligence — trans support and education', url: 'https://genderedintelligence.co.uk' },
+      { label: 'Mind — LGBTQIA+ mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/lgbtqia-mental-health/' },
+    ],
+    videos: [
+      { label: 'Minority stress theory and LGBTQ mental health (YouTube)', url: 'https://www.youtube.com/results?search_query=minority+stress+theory+LGBTQ+mental+health+Meyer' },
+      { label: 'LGBTQ+ mental health in the UK — Stonewall (YouTube)', url: 'https://www.youtube.com/results?search_query=LGBTQ+mental+health+UK+Stonewall+statistics' },
+      { label: 'Trans mental health and NHS waiting times (YouTube)', url: 'https://www.youtube.com/results?search_query=trans+mental+health+NHS+gender+identity+clinic+waiting+UK' },
+    ],
+    powerPoint: `MODULE 35 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: 'The problem is not being LGBTQIA+. The problem is discrimination.' — central in white/orange
+Slide 2: Minority stress model diagram — external/internal stressors leading to health outcomes
+Slide 3: Conversion therapy, GIC waiting times, youth homelessness in orange callout boxes
+Slide 4: Affirming vs non-affirming care; 'identity is not the problem' in orange
+Slide 5: Switchboard 0800 0119 100, LGBT Foundation 0345 3 30 30 30; Stonewall, GI logos
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Significant suicide and self-harm risk in LGBTQIA+ people. For acute distress linked to identity or rejection, apply safeguarding protocols and signpost to Switchboard (0800 0119 100) and Samaritans (116 123).
+
+FACILITATION: LGBTQIA+ people may be present. Be visibly affirming — neutral is not safe when identity is under attack.
+
+LANGUAGE: Use the vocabulary the person uses for themselves. Do not 'both-sides' conversion therapy.
+
+RELIGION: Acknowledge complexity respectfully while maintaining that LGBTQIA+ identities are not disorders and that support must be affirming.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
 ];
 
 /** Look up a single module guide by ID */
