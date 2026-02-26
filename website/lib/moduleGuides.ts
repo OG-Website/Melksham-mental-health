@@ -3306,160 +3306,725 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
 
   // ─────────────────────────────────────────────────────────────
-  // MODULES 26–50 PLACEHOLDER
+  // MODULE 26
   // ─────────────────────────────────────────────────────────────
-  ...([
-    { id: 26, topic: 'Mental Health & Chronic Physical Conditions', category: 'social', condition: 'the bidirectional relationship between chronic physical illness and mental health' },
-    { id: 9, topic: 'Trauma & Stress: Childhood Trauma & ACEs', category: 'trauma', condition: 'adverse childhood experiences (ACEs) and their lifelong impact' },
-    { id: 10, topic: 'Trauma & Stress: Self-harm & Suicide Prevention', category: 'trauma', condition: 'self-harm, suicidal ideation, and safe-messaging suicide prevention' },
-    { id: 11, topic: 'Mood Disorders: Major Depression', category: 'mood', condition: 'major depressive disorder' },
-    { id: 12, topic: 'Mood Disorders: Bipolar Disorder', category: 'mood', condition: 'bipolar I and II disorders' },
-    { id: 13, topic: 'Mood Disorders: Seasonal & Persistent Depressive Disorders', category: 'mood', condition: 'seasonal affective disorder (SAD), dysthymia and cyclothymia' },
-    { id: 14, topic: 'Anxiety Disorders: Generalised Anxiety Disorder', category: 'anxiety', condition: 'generalised anxiety disorder (GAD)' },
-    { id: 15, topic: 'Anxiety Disorders: Phobias & Panic Disorder', category: 'anxiety', condition: 'specific phobias, social anxiety disorder and panic disorder' },
-    { id: 16, topic: 'Anxiety Disorders: OCD & Related Conditions', category: 'anxiety', condition: 'obsessive-compulsive disorder (OCD), body dysmorphic disorder and related conditions' },
-    { id: 17, topic: 'Dissociative & Somatic Disorders', category: 'clinical', condition: 'dissociative disorders (DID, depersonalisation) and somatic symptom disorder' },
-    { id: 18, topic: 'Eating Disorders & Body Image', category: 'clinical', condition: 'anorexia nervosa, bulimia nervosa, binge eating disorder, ARFID and body image' },
-    { id: 19, topic: 'Sleep & Circadian Rhythm Disorders', category: 'clinical', condition: 'insomnia, narcolepsy, sleep apnea, parasomnias and circadian rhythm disruption' },
-    { id: 20, topic: 'Impulse-Control & Disruptive Disorders', category: 'clinical', condition: 'intermittent explosive disorder, conduct disorder, ODD, kleptomania and pyromania' },
-    { id: 21, topic: 'Substance Use & Addiction', category: 'clinical', condition: 'substance use disorder, alcohol dependence, drug addiction and gambling disorder' },
-    { id: 22, topic: 'Psychotic Disorders: Schizophrenia & Related Conditions', category: 'clinical', condition: 'schizophrenia spectrum and other psychotic disorders' },
-    { id: 23, topic: 'Personality Disorders: Cluster A & B', category: 'personality', condition: 'paranoid, schizoid, antisocial, borderline and histrionic personality disorders' },
-    { id: 24, topic: 'Personality Disorders: Cluster C & Others', category: 'personality', condition: 'narcissistic, avoidant, dependent and obsessive-compulsive personality disorders' },
-    { id: 25, topic: 'Neurocognitive Disorders', category: 'neuro', condition: 'dementia, Alzheimer\'s disease, Parkinson\'s disease and delirium' },
-    { id: 26, topic: 'Mental Health & Chronic Physical Conditions', category: 'social', condition: 'the bidirectional relationship between chronic physical illness and mental health' },
-    { id: 27, topic: 'Workplace Mental Health & Burnout', category: 'social', condition: 'occupational stress, burnout and workplace mental health' },
-    { id: 28, topic: 'Social Isolation & Loneliness', category: 'social', condition: 'loneliness, social isolation and their mental health consequences' },
-    { id: 29, topic: 'Financial Stress & Mental Health', category: 'social', condition: 'poverty, financial stress, debt and their relationship to mental illness' },
-    { id: 30, topic: 'Relationships & Attachment', category: 'social', condition: 'attachment theory, healthy relationships, codependency and relational trauma' },
-    { id: 31, topic: 'Parenting Stress & Paternal Mental Health', category: 'social', condition: 'parenting-related stress, paternal postnatal depression and anxiety' },
-    { id: 32, topic: 'Maternal Mental Health & Perinatal Disorders', category: 'social', condition: 'postpartum depression, perinatal anxiety, postpartum psychosis and birth trauma' },
-    { id: 33, topic: 'Child & Adolescent Mental Health', category: 'identity', condition: 'mental health disorders in children and adolescents including anxiety, depression and self-harm' },
-    { id: 34, topic: 'Older Adult Mental Health', category: 'identity', condition: 'depression, anxiety, dementia and suicide risk in older adults' },
-    { id: 35, topic: 'LGBTQIA+ Mental Health', category: 'identity', condition: 'minority stress, discrimination and mental health in LGBTQIA+ people' },
-    { id: 36, topic: 'Racism, Discrimination & Intersectionality', category: 'identity', condition: 'racism as a determinant of mental health and intersectional approaches to care' },
-    { id: 37, topic: 'Gender & Sexuality', category: 'identity', condition: 'gender dysphoria, gender-based violence and sexuality-related mental health' },
-    { id: 38, topic: 'Sexual Violence & Trauma', category: 'identity', condition: 'sexual assault, rape trauma syndrome, coercive control and recovery' },
-    { id: 39, topic: 'Grief, Loss & Bereavement', category: 'wellbeing', condition: 'grief, bereavement, complicated grief and disenfranchised loss' },
-    { id: 40, topic: 'Chronic Pain & Pain Management', category: 'wellbeing', condition: 'chronic pain, its mental health impact and psychological pain management' },
-    { id: 41, topic: 'Sleep Hygiene & Circadian Health', category: 'wellbeing', condition: 'healthy sleep, sleep hygiene and the relationship between sleep and mental health' },
-    { id: 42, topic: 'Nutrition, Exercise & Mental Health', category: 'wellbeing', condition: 'the role of diet, physical activity and lifestyle in mental health' },
-    { id: 43, topic: 'Mindfulness, Meditation & Breathwork', category: 'wellbeing', condition: 'mindfulness-based approaches, meditation and breathwork for mental health' },
-    { id: 44, topic: 'Creative Arts & Expressive Therapies', category: 'wellbeing', condition: 'art therapy, music therapy, movement and writing as therapeutic tools' },
-    { id: 45, topic: 'Technology & Mental Health: Screen Time, Gaming & Social Media', category: 'modern', condition: 'problematic technology use, gaming disorder and social media\'s mental health impact' },
-    { id: 46, topic: 'Climate Anxiety & Eco-distress', category: 'modern', condition: 'climate anxiety, eco-grief and mental health in the context of environmental crisis' },
-    { id: 47, topic: 'Spirituality & Meaning', category: 'modern', condition: 'spirituality, religion, meaning-making and mental health' },
-    { id: 48, topic: "Men's Mental Health & Masculinity", category: 'modern', condition: "masculine norms, help-seeking barriers and men's mental health" },
-    { id: 49, topic: 'Military & Veteran Mental Health', category: 'modern', condition: 'combat-related PTSD, moral injury, traumatic brain injury and veteran mental health' },
-    { id: 50, topic: 'Prison, Legal System & Mental Health', category: 'modern', condition: 'mental health in the criminal justice system, incarceration and reentry' },
-  ] as { id: number; topic: string; category: string; condition: string }[]).map((m) => {
-  // Extract the sub-topic after the colon (e.g. "PTSD" from "Trauma & Stress: PTSD").
-  // Fall back to the full topic if there is no colon, ensuring no undefined in strings.
-  const subTopic = m.topic.includes(':')
-    ? (m.topic.split(':').pop()?.trim() ?? m.topic)
-    : m.topic;
-
-  return {
-    id: m.id,
-    topic: m.topic,
-    summary: `Evidence-based 2-hour session on ${m.condition}. Includes facilitated discussion, interactive activity, and UK-specific resources.`,
+  {
+    id: 26,
+    topic: 'Mental Health & Chronic Physical Conditions',
+    summary: 'The bidirectional relationship between chronic physical illness and mental health — how each worsens the other, the evidence for integrated care, and practical strategies for supporting people with co-morbid conditions.',
     sessionBreakdown: SESSION_BREAKDOWN,
     slideOutline: [
       {
-        title: `Understanding ${m.topic}`,
+        title: 'Slide 1 — The Vicious Cycle',
         bullets: [
-          `Definition and diagnostic criteria for ${m.condition}`,
-          'Prevalence and who is affected in the UK',
-          'Common signs, symptoms and lived experience',
+          "People with a long-term physical condition are 2-3x more likely to experience depression or anxiety (NHS England / King's Fund)",
+          '~15 million people in the UK live with a long-term condition; mental ill-health affects 30-50% of them',
+          'The relationship is bidirectional: mental illness worsens physical outcomes; physical illness worsens mental health',
+          'Depression reduces medication adherence, self-care and exercise — directly accelerating physical disease',
+          "BRANDED SLIDE: two interlocking orange circles labelled 'Physical' and 'Mental' on black; '2-3x' as hero statistic",
         ],
       },
       {
-        title: 'Causes & Contributing Factors',
+        title: 'Slide 2 — Key Conditions & Their Mental Health Impact',
         bullets: [
-          'Biological and neurological factors',
-          'Psychological and cognitive factors',
-          'Social, environmental and systemic factors',
+          'Diabetes: 3x higher depression rates; depression raises blood glucose via cortisol and poor self-management',
+          'Cardiovascular disease: depression doubles risk of a second heart attack; post-MI depression is a major mortality predictor',
+          'Cancer: 25-30% prevalence of clinical anxiety or depression; fear of recurrence persists years after treatment',
+          'Chronic pain: 30-50% of chronic pain patients have comorbid depression or anxiety; pain catastrophising maintains both',
+          'BRANDED SLIDE: four condition cards (diabetes / CVD / cancer / pain) each with statistic — orange bordered boxes on black',
         ],
       },
       {
-        title: 'Evidence-Based Treatments & Interventions',
+        title: 'Slide 3 — Why the Link Exists',
         bullets: [
-          'NICE-recommended treatments and therapies',
-          'Medication options where applicable',
-          'Self-help strategies and peer support',
+          'Biological: chronic inflammation (raised CRP, IL-6) directly affects brain chemistry and drives depression',
+          'Psychological: grief at diagnosis, loss of identity and role, fear of death, helplessness and catastrophising',
+          'Social: financial stress, reduced employment, social withdrawal, carer burden, isolation',
+          'Iatrogenic: some medications (steroids, beta-blockers, interferon) can directly cause depressive symptoms',
+          'BRANDED SLIDE: biopsychosocial triangle with chronic illness examples in each segment — MMH orange headers',
         ],
       },
       {
-        title: 'Supporting Someone with ' + subTopic,
+        title: 'Slide 4 — Integrated Care: What Works',
         bullets: [
-          'What to say (and what NOT to say)',
-          'Practical day-to-day support strategies',
-          'When and how to seek professional help',
+          'NICE CG91: routine depression screening for all patients with diabetes or coronary heart disease',
+          'Collaborative care models (mental health clinician embedded in physical health team): ~20% improvement in outcomes',
+          'CBT and ACT adapted for chronic conditions address both psychological distress and health behaviours',
+          'Peer support: lived-experience volunteers reduce isolation and improve engagement in ways clinical input alone cannot',
+          "BRANDED SLIDE: interconnected circles — GP / mental health / physical health / peer support — 'Integrated Care' header in orange",
         ],
       },
       {
-        title: 'UK Resources & Next Steps',
+        title: 'Slide 5 — UK Resources & Next Steps',
         bullets: [
-          'NHS services and waiting list realities',
-          'Third-sector organisations and helplines',
-          'Self-referral pathways (IAPT/Talking Therapies)',
+          'NHS Talking Therapies: includes a long-term conditions pathway — self-referral, no GP needed',
+          'Every Mind Matters (NHS): self-care plans and tools adapted for physical health challenges',
+          'Condition-specific charities: Diabetes UK, British Heart Foundation, Versus Arthritis — all have mental health resources',
+          'Wiltshire: AWP NHS Trust Talking Therapies — 0300 303 1320 for self-referral',
+          'BRANDED SLIDE: QR codes to NHS Talking Therapies and Every Mind Matters; Wiltshire number prominent',
         ],
       },
     ],
-    deliveryScript: `MODULE ${m.id} — ${m.topic}
+    deliveryScript: `SLIDE 1 - The Vicious Cycle
+"Let's start with a statistic that surprises most people. If you have a long-term physical health condition - diabetes, heart disease, chronic pain, cancer, COPD - you are two to three times more likely to develop depression or anxiety than the general population. Fifteen million people in the UK live with a long-term condition. That means tens of millions of people are navigating both physical and mental ill-health simultaneously, often with services that treat these as entirely separate problems.
 
-INTRODUCTION (10 min)
-"Welcome back. Today we are covering ${m.condition}. As always, this is a safe and confidential space. Some of what we discuss may resonate personally — that is completely fine. Please take care of yourself throughout.
+The relationship is not one-directional. Depression makes physical conditions worse - it drains the energy and motivation needed for medication, clinic attendance, exercise and self-management. And physical conditions worsen mental health through pain, fatigue, loss of identity, and fear of the future. Understanding this cycle is the first step to breaking it."
 
-Our objectives for today are: to understand what ${m.condition} looks like in real life; to explore the evidence on causes and treatments; and to build practical skills for supporting ourselves and others."
+SLIDE 2 - Key Conditions
+"Let me make this concrete. Depression in diabetes is not just about the burden of management - the physiological link runs deep: depression elevates cortisol, which raises blood glucose directly. Post-MI depression is one of the strongest predictors of a second heart attack - stronger than many traditional cardiac risk factors. In cancer care, up to 30% of patients have clinically significant anxiety or depression, and fear of recurrence often persists for years after successful treatment. These are not minor psychological reactions. They are co-morbid conditions that require treatment in their own right."
 
-MAIN CONTENT (40 min)
-[SLIDE 1 — Understanding]
-"Let's start with what we're actually talking about. ${subTopic} affects a significant proportion of the UK population and yet is still widely misunderstood. [Share relevant UK prevalence statistics from the slide.] The lived experience varies enormously between individuals — always remember that a diagnosis is a starting point for understanding, not a complete description of a person."
+SLIDE 3 - Why the Link Exists
+"Three sets of mechanisms explain the link. Biologically: chronic inflammation - which underlies most long-term physical conditions - also drives depression. Psychologically: a diagnosis of chronic illness involves real, profound loss - loss of the health you had, of the future you imagined, of the person you thought you were. That grief is legitimate and deserves proper support. Socially: chronic illness frequently brings financial hardship, reduced work capacity, strain on relationships, and profound isolation.
 
-[SLIDE 2 — Causes]
-"No mental health condition has a single cause. We use the biopsychosocial model — biology, psychology and social factors all interact. For ${m.condition}, [describe the key causal factors on the slide]. The important message is: this is not a character flaw. There are real, understandable reasons why people develop these difficulties."
+There is also an iatrogenic dimension worth naming: some medications prescribed for physical conditions - including steroids, certain beta-blockers, and interferon - can directly cause or worsen depressive symptoms. This is essential knowledge for anyone supporting someone with a chronic condition."
 
-[SLIDE 3 — Treatments]
-"NICE guidelines provide clear recommendations for treatment. [Walk through the slide content.] Psychological therapies — particularly CBT, which is available through the NHS Talking Therapies service — are first-line for many conditions. Waiting times can be long; third-sector organisations can often provide support more quickly."
+SLIDE 4 - What Works
+"NICE guidance is clear: people with diabetes and people with coronary heart disease should be routinely screened for depression. In practice, this rarely happens consistently. Mental health is still treated as an add-on rather than a core component of chronic disease management.
 
-[SLIDE 4 — Supporting Someone]
-"If someone you know is living with ${m.condition}, the most important thing is to listen without judgement. Avoid phrases like 'just cheer up', 'other people have it worse' or 'have you tried yoga?' — however well-intentioned, these minimise the person's experience. Instead: 'I'm here', 'I believe you', 'what would help right now?'"
+The evidence for integrated care is compelling. When a mental health practitioner is embedded in a physical health team, outcomes improve by around 20% across both physical and mental health measures. Cognitive behavioural therapy adapted for chronic conditions - sometimes called 'CBT for physical health problems' - addresses both the psychological distress and the health behaviours simultaneously. Peer support, connecting someone with the same condition who has found a way to live well, reduces isolation and instils hope in ways that clinical input alone cannot."
 
-[SLIDE 5 — Resources]
-"Before we move to the activity, let's map the support landscape. [Walk through the resources slide.] NHS Talking Therapies (formerly IAPT) accepts self-referrals in most areas — participants don't need a GP referral. Encourage everyone to look up their local service."`,
-    activity: `ACTIVITY — Scenario Cards (20 min)
+SLIDE 5 - Resources
+"NHS Talking Therapies now includes a specific long-term conditions pathway - adapted CBT that takes physical health directly into account. Self-referral, no GP needed. In Wiltshire, the AWP Talking Therapies service accepts self-referrals on 0300 303 1320. Condition-specific charities - Diabetes UK, the British Heart Foundation, Versus Arthritis - all have mental health resources and peer support programmes. Encourage everyone in the room to look up their local Talking Therapies service today."`,
+    activity: `ACTIVITY - The Inner Life of Chronic Illness (20 minutes)
+Melksham Mental Health | Module 26 | Licensed Materials
 
-Prepare 6 scenario cards, each describing a person experiencing ${m.condition} in a realistic everyday situation.
+PURPOSE: Build genuine empathy for the psychological experience of chronic physical illness; challenge the assumption that physical and mental health are separate domains.
 
-Example format:
-"Alex is 34 and has been struggling with [related symptom]. They recently confided in a friend. The friend wants to help but isn't sure what to say."
+INTRODUCE: "Managing a long-term physical health condition is not just a medical challenge - it is a psychological, emotional, and social one. This activity invites you to explore what that experience actually feels like from the inside."
 
-Groups of 3-4 choose a card and:
-1. Identify the signs present in the scenario (5 min)
-2. Draft what a supportive response might look, sound and feel like (5 min)
-3. Share back with the room, facilitated group discussion (10 min)
+PART 1 - Pairs Interview (8 minutes):
+In pairs, take 4 minutes each. Person A asks Person B:
+Imagine you've just been told you have a condition requiring daily medication, regular clinic appointments, dietary changes, and careful self-monitoring for the rest of your life. How does that land emotionally? What do you imagine losing? What would be hardest? Who would you tell, and how?
+Then swap.
 
-Tutor reflects on what was noticed and any common themes.`,
+PART 2 - Group Mapping on Whiteboard (7 minutes):
+Gather the group's responses and map them:
+- What losses came up?
+- What fears?
+- What practical burdens?
+- What effects on relationships and work?
+- What would ACTUALLY help?
+
+PART 3 - Debrief (5 minutes):
+Key reflection: "Everything on this board is a mental health need. The person sitting in your GP surgery with poorly controlled diabetes may be struggling with grief, fear, hopelessness and isolation - not just blood sugar. How does recognising this change how we approach them?"
+
+TUTOR NOTE: If participants have personal experience of chronic illness, invite them to share if comfortable - lived experience is the most powerful teaching in this room.`,
     discussionPrompts: [
-      `What barriers stop people with ${m.condition} from seeking help, and how could those barriers be reduced?`,
-      'How does stigma around this condition specifically manifest, and what can individuals do to challenge it?',
-      'What has surprised you most about what you have learned today?',
-      'What will you do differently as a result of this session?',
+      'Why do physical health services so routinely fail to address the mental health of people with long-term conditions, and what would genuinely integrated care actually look like in practice?',
+      "How does the cultural expectation that people with chronic illness should 'stay positive' or 'be brave' affect their willingness to talk about emotional struggle?",
+      'What can peer support offer that clinical services fundamentally cannot?',
+      'How would you approach a conversation with someone who seems to be struggling emotionally with their physical health condition?',
     ],
     resources: [
-      { label: 'NHS Mental Health Services', url: 'https://www.nhs.uk/mental-health/' },
-      { label: 'Mind — Information & Support', url: 'https://www.mind.org.uk/information-support/' },
-      { label: 'NHS Talking Therapies (Self-referral)', url: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
-      { label: 'Samaritans (24/7)', url: 'https://www.samaritans.org' },
+      { label: 'NHS Talking Therapies - long-term conditions pathway', url: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
+      { label: 'Every Mind Matters - NHS self-care tools', url: 'https://www.nhs.uk/every-mind-matters/' },
+      { label: 'Mind - physical health and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/physical-activity-and-your-mental-health/' },
+      { label: 'Diabetes UK - emotional wellbeing', url: 'https://www.diabetes.org.uk/living-with-diabetes/emotional-wellbeing' },
+      { label: 'British Heart Foundation - mental health after heart attack', url: 'https://www.bhf.org.uk/informationsupport/heart-matters-magazine/wellbeing/depression' },
     ],
-    tutorNotes: `SAFEGUARDING: Module ${m.id} covers ${m.condition}. Be prepared for personal disclosures. Have Samaritans (116 123), NHS 111 mental health option, and your local crisis line number visible. Follow your organisation's safeguarding protocol.
+    videos: [
+      { label: 'Living with a long-term condition and mental health - NHS (YouTube)', url: 'https://www.youtube.com/results?search_query=living+with+long+term+condition+mental+health+NHS' },
+      { label: 'Depression and diabetes explained - Diabetes UK (YouTube)', url: 'https://www.youtube.com/results?search_query=depression+diabetes+emotional+wellbeing+diabetes+uk' },
+      { label: "Integrated care for long-term conditions - King's Fund (YouTube)", url: 'https://www.youtube.com/results?search_query=integrated+care+long+term+conditions+mental+health+kings+fund' },
+    ],
+    powerPoint: `MODULE 26 POWERPOINT SPECIFICATION - Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Two interlocking circles 'Physical' and 'Mental' with bidirectional orange arrows; '2-3x' as large hero statistic in orange
+Slide 2: Four condition cards (diabetes/CVD/cancer/pain) each with key statistic in orange bordered boxes
+Slide 3: Biopsychosocial triangle with chronic illness examples at each point
+Slide 4: Integrated care model - four interconnected circles for GP/MH/PH/peer support
+Slide 5: QR codes to NHS Talking Therapies and Every Mind Matters; AWP number 0300 303 1320
+All slides: Samaritans 116 123 in footer, MMH skull logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Chronic illness and mental health is deeply personal. Many participants will have lived experience as a patient or carer. Be attentive to emotional responses - particularly around grief, fear of death and loss. Apply standard safeguarding protocols for serious disclosures.
 
-FACILITATION: Encourage questions throughout. If the group goes quiet, use a paired sharing exercise before whole-group discussion. Validate all contributions. Close the session by naming the strength it takes to engage with difficult topics.
+FACILITATION: The pairs interview can surface powerful emotions. Create space for this; do not rush. The debrief question about blood sugar and grief is the heart of the session - give it time.
 
-SLIDES: Tutor should add current UK statistics from NHS Digital, Mind or MH Foundation to the slides before the session. Figures change; always verify before delivery.`,
-  };
-}),
+LANGUAGE: Avoid "suffering from" - prefer "living with". Never imply that positive thinking alone is sufficient treatment for depression in chronic illness. Acknowledge genuine grief.
+
+STATISTICS: Update prevalence figures from NHS Digital, King's Fund and NICE before each delivery - these are regularly revised.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 27
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 27,
+    topic: 'Workplace Mental Health & Burnout',
+    summary: 'Occupational stress, burnout and workplace mental health - recognising the signs, understanding the causes, and building workplaces where people can thrive rather than merely survive.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — The Scale of Workplace Mental Health',
+        bullets: [
+          'Mental health problems are the leading cause of sickness absence in the UK - 17 million working days lost per year (CIPD)',
+          'Cost to UK employers: 56 billion per year in lost productivity, presenteeism and staff turnover (Deloitte 2022)',
+          '1 in 6 workers experience a mental health problem in any given week (Mind)',
+          '60% of employees say they have experienced a mental health problem due to work (Mind)',
+          "BRANDED SLIDE: '17 million days' as hero statistic in massive orange text on black; MMH branding",
+        ],
+      },
+      {
+        title: 'Slide 2 — What is Burnout?',
+        bullets: [
+          'WHO ICD-11: burnout is an occupational phenomenon - exhaustion, cynicism, and reduced professional efficacy',
+          'Three dimensions: emotional exhaustion, depersonalisation (cynicism / detachment), and reduced personal accomplishment',
+          'Burnout vs. depression: burnout is context-specific (work); depression pervades all areas of life',
+          'Risk factors: excessive workload, lack of control, insufficient reward, poor community, unfairness, values mismatch (Maslach & Leiter)',
+          "BRANDED SLIDE: Maslach's three burnout dimensions as three pillars - orange headers on black",
+        ],
+      },
+      {
+        title: 'Slide 3 — Toxic Work Environments',
+        bullets: [
+          'WHO: poor job design, excessive demands, lack of autonomy, job insecurity and discrimination all harm mental health',
+          'Long working hours: 55+ hours per week associated with 35% higher risk of stroke and 17% higher risk of heart disease (Lancet)',
+          'Presenteeism: working while unwell costs UK employers more than absenteeism - estimated 25.9 billion/year',
+          'Discrimination, bullying, and harassment are significant drivers of workplace mental ill-health',
+          'BRANDED SLIDE: six toxic work factors listed in red-bordered boxes on dark background',
+        ],
+      },
+      {
+        title: 'Slide 4 — What Organisations & Individuals Can Do',
+        bullets: [
+          'Organisational: flexible working, manageable workloads, psychological safety, trained managers, Employee Assistance Programmes',
+          'NICE NG212: employers should conduct risk assessments for work-related mental health and implement reasonable adjustments',
+          'Mental health first aiders: trained staff who provide first-line support and signpost to services',
+          'Individual strategies: boundary-setting, job crafting, peer support, early help-seeking, self-care',
+          'BRANDED SLIDE: employer / employee two-column action list in MMH orange and white on black',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources & Rights',
+        bullets: [
+          'Acas: free advice on workplace rights and mental health adjustments - 0300 123 1100',
+          "Mind's Workplace Wellbeing Programme - free resources for employers and employees",
+          'NHS Talking Therapies: self-referral, includes work-focused CBT',
+          'Employee rights: reasonable adjustments under Equality Act 2010; fit notes for mental health conditions',
+          "BRANDED SLIDE: three key resources with logos; workers' rights summary box in orange",
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - The Scale of Workplace Mental Health
+"Work is one of the most significant factors shaping our mental health. We spend more of our waking hours at work than almost anywhere else. And the statistics are stark: mental health problems are now the leading cause of sickness absence in the UK - 17 million working days lost every year. The cost to employers is estimated at 56 billion pounds annually in lost productivity, staff turnover, and the hidden cost of presenteeism - people dragging themselves into work while mentally unwell and operating at a fraction of their capacity.
+
+This is not a personal failure. When 60% of employees report that work has caused or worsened their mental health problems, the problem is systemic, not individual."
+
+SLIDE 2 - Burnout
+"Burnout was officially recognised by the World Health Organisation in 2019 as an occupational phenomenon - important because that framing locates the problem in the work environment rather than in the individual. Burnout has three dimensions: emotional exhaustion - being utterly depleted; depersonalisation or cynicism - becoming emotionally detached, going through the motions; and reduced professional efficacy - the sense that what you do no longer makes any difference.
+
+The critical distinction from depression: burnout is context-specific. Remove the person from the toxic work environment, and burnout often resolves. Depression pervades every area of life. Both require support, but the interventions differ significantly."
+
+SLIDE 3 - Toxic Work Environments
+"The World Health Organisation is clear: excessive workloads, poor job design, lack of control, job insecurity, discrimination, and harassment are not personal problems - they are workplace hazards with measurable mental health consequences. Working more than 55 hours a week is associated with a 35% higher risk of stroke. Presenteeism - turning up while mentally unwell - actually costs UK employers more than absenteeism, because people who are struggling operate at dramatically reduced effectiveness for far longer than they take off sick.
+
+We need to stop framing workplace mental health primarily as a matter of individual resilience. Resilience training in toxic workplaces is like teaching people to swim faster in a riptide."
+
+SLIDE 4 - What Works
+"What the evidence supports: flexible working; manageable workloads; psychological safety - the ability to speak up without fear; trained managers who recognise distress and respond with support rather than performance management; Employee Assistance Programmes with genuinely confidential and accessible support.
+
+NICE guidance for employers is explicit: conduct risk assessments for work-related mental health problems and implement reasonable adjustments. This is not optional good practice - it is a legal and ethical obligation.
+
+For individuals: boundary-setting is not a luxury - it is a professional survival skill. Job crafting - reshaping your role toward your strengths - has strong evidence for protecting against burnout. And early help-seeking makes an enormous difference; the longer burnout progresses, the longer recovery takes."
+
+SLIDE 5 - Resources
+"Acas provides free, confidential advice on workplace rights and how to request mental health adjustments - on 0300 123 1100. Under the Equality Act 2010, employers have a legal duty to make reasonable adjustments for mental health conditions. NHS Talking Therapies offers work-focused CBT that directly addresses workplace anxiety and stress. And Mind's Workplace Wellbeing Programme provides free evidence-based resources for both employers and employees."`,
+    activity: `ACTIVITY - Spotting the Warning Signs (20 minutes)
+Melksham Mental Health | Module 27 | Licensed Materials
+
+PURPOSE: Build skills in recognising early warning signs of burnout and workplace mental health problems in colleagues, and practise having supportive conversations.
+
+INTRODUCE: "The earlier burnout is caught, the faster recovery is. This activity builds the skill of noticing - in ourselves and in the people around us at work."
+
+PART 1 - Warning Signs Brainstorm (5 minutes):
+As a group, brainstorm all the signs that someone might be struggling with workplace mental health or burnout. Write them all on the board:
+Prompts if needed: changes in behaviour, attendance patterns, quality of work, social withdrawal, irritability, tearfulness, physical symptoms, comments they make.
+
+PART 2 - Scenario Discussion in Pairs (10 minutes):
+Read this scenario: "Jamie has been your colleague for three years. Recently they have been arriving late, leaving early, and making mistakes they would never normally make. In meetings they are quiet where they used to be engaged. They snapped at a client last week - completely out of character. When you ask how they are, they say 'fine, just tired'."
+
+In pairs, discuss:
+1. What signs are present? What might be going on?
+2. What would you say to Jamie? Draft the opening line of a conversation.
+3. What wouldn't you say - and why?
+
+PART 3 - Debrief (5 minutes):
+Share opening lines from the pairs. Key message: The most powerful thing you can do is notice and name it with care. "I've noticed you seem a bit different lately - are you okay?" can be the most important sentence someone hears all year.
+
+TUTOR NOTE: Some participants will recognise themselves in Jamie. This is valuable and normal - create space for that recognition without forcing disclosure.`,
+    discussionPrompts: [
+      'Is resilience training in toxic workplaces ethical - and what does it tell us about how organisations frame responsibility for workplace mental health?',
+      'What stops most people from disclosing mental health struggles at work, and what would actually need to change for that to feel safe?',
+      'What is the difference between a mentally healthy workplace and a workplace that just looks like one - and how would you tell them apart?',
+      'If you were designing a new organisation from scratch with mental health as a founding principle, what would it look like?',
+    ],
+    resources: [
+      { label: 'Mind - Workplace Wellbeing Programme', url: 'https://www.mind.org.uk/workplace/mental-health-at-work/' },
+      { label: 'Acas - mental health at work guidance (0300 123 1100)', url: 'https://www.acas.org.uk/supporting-mental-health-at-work' },
+      { label: 'NICE NG212 - mental health at work', url: 'https://www.nice.org.uk/guidance/ng212' },
+      { label: 'NHS Talking Therapies self-referral', url: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/' },
+      { label: 'Health & Safety Executive - work-related stress', url: 'https://www.hse.gov.uk/stress/' },
+    ],
+    videos: [
+      { label: 'What is burnout? - WHO definition explained (YouTube)', url: 'https://www.youtube.com/results?search_query=burnout+WHO+definition+occupational+mental+health+explained' },
+      { label: 'Psychological safety at work - Google Project Aristotle (YouTube)', url: 'https://www.youtube.com/results?search_query=psychological+safety+workplace+google+project+aristotle' },
+      { label: 'Workplace mental health - Mind UK (YouTube)', url: 'https://www.youtube.com/results?search_query=mental+health+at+work+mind+uk+employer' },
+    ],
+    powerPoint: `MODULE 27 POWERPOINT SPECIFICATION - Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '17 million days' as massive orange hero statistic; '56 billion cost' as secondary stat; MMH branding
+Slide 2: Three burnout pillars (exhaustion / cynicism / reduced efficacy) as orange-bordered columns
+Slide 3: Six toxic work factors in red-edged warning boxes on dark background
+Slide 4: Two-column employer/employee action list in orange and white
+Slide 5: Acas logo, Mind logo, NHS logo with key numbers; workers' rights summary
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Burnout and workplace mental health discussions can surface acute distress, particularly if someone is currently in a difficult work situation. Be attentive to signs of serious anxiety or depression during this session.
+
+FACILITATION: The Jamie scenario usually generates rich discussion. Some participants will identify strongly. Create space for personal reflection without forcing disclosure. The 'resilience training in toxic workplaces' slide can prompt strong reactions - this is productive.
+
+LANGUAGE: Consistently locate responsibility at the systemic/organisational level, not solely with the individual. Avoid framing burnout as weakness or poor coping.
+
+LEGAL NOTE: Signpost participants to Acas and the Equality Act for workplace rights - but note that this session is educational and does not constitute employment law advice.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 28
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 28,
+    topic: 'Social Isolation & Loneliness',
+    summary: 'The mental health consequences of loneliness and social isolation - who is affected, why it is so damaging, and evidence-based approaches to rebuilding connection.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Loneliness: A Public Health Crisis',
+        bullets: [
+          'UK: 3.83 million people say they are always or often lonely (Campaign to End Loneliness / ONS)',
+          'Loneliness is as damaging to health as smoking 15 cigarettes a day (Holt-Lunstad meta-analysis)',
+          'Loneliness increases risk of depression by 2x, anxiety by 1.7x, and early death by 26% (Campaign to End Loneliness)',
+          'COVID-19 significantly worsened loneliness across all age groups; young adults and older adults most affected',
+          "BRANDED SLIDE: '15 cigarettes a day' comparison as striking hero statistic in orange on black",
+        ],
+      },
+      {
+        title: 'Slide 2 — Loneliness vs Social Isolation',
+        bullets: [
+          'Social isolation: objective lack of social contact or social network',
+          'Loneliness: subjective distressing experience of inadequate or unsatisfying social connection',
+          'You can be isolated without feeling lonely; you can feel profoundly lonely in a crowd or marriage',
+          'Different causes require different interventions - addressing isolation =/= addressing loneliness',
+          "BRANDED SLIDE: Venn diagram - 'Social Isolation' (objective) and 'Loneliness' (subjective) with overlap zone",
+        ],
+      },
+      {
+        title: 'Slide 3 — Who is Most Affected',
+        bullets: [
+          'Older adults: 1.4 million over-65s in UK chronically lonely; widowhood, health decline, loss of driving',
+          'Young adults (16-24): counterintuitively, now the loneliest age group in the UK (ONS 2021)',
+          'New parents; people with mental health problems; people with long-term conditions; carers',
+          'Rural populations, ethnic minority communities, LGBTQIA+ people; people recently bereaved or divorced',
+          'BRANDED SLIDE: silhouette icons of different demographic groups with statistics',
+        ],
+      },
+      {
+        title: 'Slide 4 — Evidence-Based Interventions',
+        bullets: [
+          'Social prescribing: GPs link patients to community activities, arts, volunteering - strong evidence for loneliness',
+          'Group activities with shared purpose (befriending, walking groups, community gardens) more effective than one-to-one support',
+          "CBT for loneliness: addresses negative social cognitions ('nobody wants me here') that maintain isolation",
+          'Technology: video calls reduce loneliness in older adults, but not a substitute for in-person connection',
+          'BRANDED SLIDE: social prescribing pathway diagram - GP to link worker to community activity',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources & Community',
+        bullets: [
+          'Campaign to End Loneliness: evidence-based resources and local connection map',
+          'Silver Line: 0800 4 70 80 90 - free confidential helpline for older people (24/7)',
+          'Age UK: befriending services and community groups nationwide',
+          'NHS Social Prescribing: ask your GP to refer to a link worker',
+          'BRANDED SLIDE: local Melksham community assets + national resources with phone numbers',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - Loneliness as a Public Health Crisis
+"In 2018, the UK appointed the world's first Minister for Loneliness. That fact alone tells you something significant: loneliness has become a public health problem of sufficient scale that it requires a government ministerial portfolio. Nearly four million people in the UK say they are always or often lonely. And the consequences are not merely emotional - they are physiological. Research by Julianne Holt-Lunstad found that loneliness is as damaging to physical health as smoking 15 cigarettes a day. It increases the risk of early death by 26%.
+
+This is not weakness. This is not failing to try hard enough. This is a fundamental human need - for connection, belonging, and being known by others - that is going unmet for millions of people."
+
+SLIDE 2 - Loneliness vs Isolation
+"It's important to distinguish between social isolation and loneliness, because they are different problems requiring different responses. Social isolation is objective: you don't have much social contact. Loneliness is subjective: it's the painful experience of feeling your social connections are insufficient or unsatisfying.
+
+You can be socially isolated and not feel lonely - some people genuinely thrive in solitude. And - and this is important - you can feel profoundly lonely in a room full of people, in a marriage, at a party. What matters is the quality and meaning of connection, not the quantity of contact. Addressing isolation by forcing people into social situations doesn't reliably address loneliness - and can sometimes make it worse."
+
+SLIDE 3 - Who is Most Affected
+"When most people imagine a lonely person, they picture an elderly person living alone. And it's true that 1.4 million over-65s in the UK are chronically lonely - widowhood, declining health, loss of mobility and driving all contribute to this.
+
+But there's a finding that surprises most people: in the UK, the loneliest age group is now 16-24 year olds. Young adults, despite being the most digitally connected generation in history, report the highest rates of loneliness. This tells us something profound: digital connection and social media do not reliably meet the fundamental human need for belonging. Knowing someone's Instagram feed is not the same as being known."
+
+SLIDE 4 - What Works
+"Social prescribing is one of the most promising developments in addressing loneliness. Rather than prescribing medication, a GP refers a patient to a link worker who connects them to community activities - a walking group, a community garden, a befriending service. The evidence is strong: shared purposeful activity, particularly with a group that has something in common, is significantly more effective for loneliness than one-to-one clinical support.
+
+CBT for loneliness addresses the cognitive dimension - the negative social beliefs that maintain isolation ('I'm not interesting', 'nobody wants me here', 'I'll only embarrass myself'). These beliefs become self-fulfilling prophecies when left unchallenged."
+
+SLIDE 5 - Resources
+"The Silver Line is a free, confidential helpline for older people - 0800 4 70 80 90, available 24 hours a day. Age UK has befriending services that match volunteers with lonely older adults. NHS Social Prescribing is available through any GP surgery - ask to be referred to a link worker. And locally in Wiltshire, there are a range of community activities and befriending services - encourage participants to find out what's available in their area."`,
+    activity: `ACTIVITY - The Quality of Connection (20 minutes)
+Melksham Mental Health | Module 28 | Licensed Materials
+
+PURPOSE: Explore the difference between quantity of social contact and quality of connection; build awareness of our own social needs and the signs of loneliness in others.
+
+INTRODUCE: "Loneliness is about the quality of our connections, not the quantity. This activity helps us get specific about what genuine connection actually feels, looks and sounds like - and notice when it's missing."
+
+PART 1 - Individual Reflection (5 minutes, silent):
+Give participants a minute to reflect quietly on these questions (do not share yet):
+- Think of a moment when you felt genuinely connected to someone. What was happening? What made it feel connecting?
+- Now think of a time you felt lonely - even surrounded by people. What was missing?
+
+PART 2 - Small Groups: Connection vs Presence (8 minutes):
+In groups of 3-4, discuss:
+What is the difference between being present with someone and feeling genuinely connected to them? What creates genuine connection?
+Build a list: what are the ingredients of a truly connecting interaction?
+
+PART 3 - Debrief: Designing for Connection (7 minutes):
+Share the lists. Tutor facilitates reflection:
+- If these are the ingredients of connection, what stops them happening in everyday life?
+- What environments, cultures, or habits create them - and what destroys them?
+- What one thing could you do this week to offer genuine connection to someone who might need it?
+
+TUTOR NOTE: Some participants may find this activity surfaces their own loneliness. Create safety for that. The exercise is not about fixing people - it is about building empathy and awareness.`,
+    discussionPrompts: [
+      'Why are young adults - the most digitally connected generation in history - also among the loneliest, and what does this tell us about the limits of social media?',
+      'What is the difference between solitude (chosen and restorative) and loneliness (unchosen and painful), and why does the distinction matter?',
+      'What responsibility do communities, employers, and the state have in addressing loneliness - and what are the limits of individual action?',
+      'How do we build genuine connection in a culture that is moving faster, more online, and more privatised - and what local examples give you hope?',
+    ],
+    resources: [
+      { label: 'Campaign to End Loneliness - evidence and resources', url: 'https://www.campaigntoendloneliness.org' },
+      { label: 'Silver Line helpline for older people: 0800 4 70 80 90 (24/7)', url: 'https://www.thesilverline.org.uk' },
+      { label: 'Age UK - befriending and community activities', url: 'https://www.ageuk.org.uk/services/befriending-services/' },
+      { label: 'Mind - loneliness and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/loneliness/' },
+      { label: 'NHS Social Prescribing - find a link worker', url: 'https://www.england.nhs.uk/personalisedcare/social-prescribing/' },
+    ],
+    videos: [
+      { label: 'The loneliness epidemic - BBC (YouTube)', url: 'https://www.youtube.com/results?search_query=loneliness+epidemic+UK+mental+health+BBC' },
+      { label: 'Social prescribing explained - NHS England (YouTube)', url: 'https://www.youtube.com/results?search_query=social+prescribing+NHS+England+link+worker+explained' },
+      { label: 'Why loneliness is a public health crisis - Vivek Murthy (YouTube)', url: 'https://www.youtube.com/results?search_query=Vivek+Murthy+loneliness+public+health+crisis' },
+    ],
+    powerPoint: `MODULE 28 POWERPOINT SPECIFICATION - Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '15 cigarettes a day' striking comparison stat in large orange text; '3.83 million lonely' as secondary stat
+Slide 2: Venn diagram - Social Isolation (objective) and Loneliness (subjective) in orange circles on black
+Slide 3: Demographic silhouettes with statistics - varied groups across age/life stage
+Slide 4: Social prescribing pathway - GP to link worker to community - simple clear diagram in orange
+Slide 5: Silver Line 0800 4 70 80 90 prominent; local Melksham assets listed; QR code
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Loneliness is deeply personal and can be acute. Some participants may disclose significant isolation. Be ready to signpost to Silver Line (0800 4 70 80 90) or Samaritans (116 123) for anyone in acute distress.
+
+FACILITATION: The individual reflection part of the activity requires genuine stillness - allow the silence. Some participants will find this module unexpectedly emotional; this is appropriate and valuable. Do not pathologise it.
+
+YOUNG ADULTS: The finding that 16-24 year olds are the loneliest group often generates surprise and lively discussion - use this productively. Avoid framing social media as simply bad; explore the distinction between connection and contact.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 29
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 29,
+    topic: 'Financial Stress & Mental Health',
+    summary: 'How money problems cause and maintain mental ill-health, and how mental ill-health causes money problems - breaking the debt-depression cycle with evidence-based financial and psychological support.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Money & Mental Health: The Scale',
+        bullets: [
+          '46% of people in problem debt also have a mental health problem (Money and Mental Health Policy Institute)',
+          'People with mental health problems are 3.5x more likely to be in problem debt',
+          'UK household debt: average unsecured debt per UK adult is over 4,000 pounds; 9 million people in serious financial difficulty',
+          'Financial stress is one of the most common triggers for mental health crisis presentations in A&E',
+          "BRANDED SLIDE: '46%' as large orange statistic; 'Money & Mental Health' in white on black",
+        ],
+      },
+      {
+        title: 'Slide 2 — How Financial Stress Harms Mental Health',
+        bullets: [
+          'Chronic financial stress activates the HPA axis (stress hormones) continuously - same pathway as trauma',
+          'Scarcity mindset: financial stress consumes cognitive bandwidth, reducing decision-making capacity',
+          'Shame and stigma: debt is still heavily stigmatised - people hide it, which prevents help-seeking',
+          'Sleep disruption, anxiety, hypervigilance, avoidance (not opening letters) are core responses to debt',
+          "BRANDED SLIDE: 'Scarcity Mindset' diagram - cognitive bandwidth drain illustrated with orange",
+        ],
+      },
+      {
+        title: 'Slide 3 — How Mental Illness Causes Financial Problems',
+        bullets: [
+          'Depression reduces work capacity, causing income loss and missed bills',
+          'Mania in bipolar disorder: impulsive spending during manic episodes can destroy financial stability',
+          'ADHD: impulsivity and executive function difficulties make financial management genuinely harder',
+          'Avoidance: anxiety drives people to stop opening letters, checking accounts, engaging with creditors',
+          'BRANDED SLIDE: bidirectional arrows diagram - mental illness to financial problems to mental illness (vicious cycle)',
+        ],
+      },
+      {
+        title: 'Slide 4 — Breaking the Cycle',
+        bullets: [
+          'Integrated support: debt advice and mental health support delivered together is most effective',
+          'StepChange, Citizens Advice and Money Helper offer free confidential debt advice',
+          "Mental health 'breathing space': Debt Respite Scheme gives 60 days protection from creditor action for people with mental health crisis",
+          'Benefits: many people with mental health problems are not claiming entitlements (PIP, ESA, Universal Credit) - welfare rights advice is key',
+          "BRANDED SLIDE: 'Breathing Space' scheme headline with key steps; StepChange and Citizens Advice logos",
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources',
+        bullets: [
+          'StepChange Debt Charity: free debt advice - 0800 138 1111',
+          'Citizens Advice: free advice on debt, benefits, rights - 0800 144 8848',
+          'Money Helper (MoneyHelper.org.uk): free government-backed financial guidance',
+          'Money and Mental Health Policy Institute: research and policy advocacy',
+          'BRANDED SLIDE: four key resources with phone numbers prominently displayed in orange on black',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - The Scale
+"Money and mental health are profoundly linked - and the relationship runs in both directions. Forty-six percent of people in problem debt also have a mental health problem. That is not a coincidence - that is a systematic relationship between two of the most stigmatised and difficult experiences in contemporary British life.
+
+Nine million people in the UK are in serious financial difficulty. Average unsecured debt per adult is over four thousand pounds. And financial stress is one of the most common triggers for crisis presentations in emergency departments - not because A&E can solve debt, but because financial distress pushes people to breaking point."
+
+SLIDE 2 - How Financial Stress Harms Mental Health
+"Chronic financial stress is physiologically similar to chronic trauma. It activates the HPA axis - the cortisol stress response - continuously. Living with debt means never being fully calm. Waking up at 3am calculating whether you can make rent is not a psychological failing; it is what a human nervous system does when it is under sustained threat.
+
+The work of Sendhil Mullainathan and Eldar Shafir on scarcity is compelling: financial stress consumes cognitive bandwidth. People in financial difficulty have measurably less mental capacity for everything else - decision-making, planning, relationships, parenting. This is not character - it is cognitive architecture. And the shame that surrounds debt silences people and prevents them from getting help that exists and is often free."
+
+SLIDE 3 - How Mental Illness Causes Financial Problems
+"The other direction matters just as much. Depression makes working full-time impossible for many people - income drops, bills pile up. A manic episode in bipolar disorder can result in thousands of pounds of impulsive spending in a matter of days. ADHD makes financial management genuinely neurologically harder - impulsivity, difficulty with forward planning, and time blindness all create vulnerability to debt.
+
+Anxiety drives avoidance - and avoidance of debt letters, bank statements, and creditor calls is one of the most damaging financial behaviours there is. It feels like it reduces anxiety in the moment; it makes the situation catastrophically worse over time. Understanding that avoidance is anxiety's mechanism - not a character flaw - is essential for anyone supporting someone in debt."
+
+SLIDE 4 - Breaking the Cycle
+"The most effective interventions integrate debt advice and mental health support. When someone sitting with Citizens Advice has both their debt plan and a mental health referral on the table at the same time, outcomes are substantially better than either service working in isolation.
+
+The Mental Health Breathing Space scheme - created in 2021 - is genuinely transformative for people in crisis. It gives up to 60 days of protection from creditor action, including enforcement action, while someone receives mental health treatment. If you know someone in mental health crisis who is also in debt, this scheme could be the most important thing you tell them about today."
+
+SLIDE 5 - Resources
+"StepChange Debt Charity provides free, confidential debt advice - 0800 138 1111. Citizens Advice covers debt, benefits, employment rights and much more - 0800 144 8848. MoneyHelper is a free government-backed service combining money guidance with mental health awareness. And the Money and Mental Health Policy Institute conducts brilliant research and advocates for better-integrated services."`,
+    activity: `ACTIVITY - The Debt Spiral (20 minutes)
+Melksham Mental Health | Module 29 | Licensed Materials
+
+PURPOSE: Build understanding of how debt and mental health interact in a self-reinforcing spiral; practise compassionate, non-judgemental responses to financial disclosure.
+
+INTRODUCE: "Debt is one of the last remaining taboos. Most people would find it easier to tell someone they have depression than to tell them they are in debt. This activity explores that stigma and its consequences."
+
+PART 1 - The Spiral Mapping (8 minutes):
+As a group, build a 'debt spiral' on the board. Start with: 'Sarah loses her job due to depression.'
+Add consequences and reactions, building the spiral step by step. Participants suggest what happens next:
+- Bills not paid -> letters arrive -> anxiety rises -> letters go unopened -> late fees added -> more debt
+- Shame increases -> withdraws from friends -> loneliness deepens -> depression worsens -> less able to work
+Keep going until the group sees the full spiral. How did we get here from a single starting point?
+
+PART 2 - The Breaking Point: Supportive Response (7 minutes):
+In pairs: "A close friend has just told you they are in serious debt and have been hiding it for two years. They are ashamed and frightened."
+Draft: What is the first thing you would say? What would you NOT say? What practical help could you offer?
+
+PART 3 - Debrief (5 minutes):
+Key messages:
+- Non-judgement and compassion are the most important first responses
+- Practical signposting (StepChange, Citizens Advice) is enormously helpful
+- Never shame - it makes everything worse
+- The Breathing Space scheme may be the most important thing someone hears
+
+TUTOR NOTE: Some participants may have personal experience of debt. Be attentive and create safety without forcing disclosure.`,
+    discussionPrompts: [
+      'Why is debt still so heavily stigmatised in the UK, and how does that stigma make the mental health consequences worse?',
+      'Is austerity and the welfare system a mental health issue - and if so, what responsibilities does that create for mental health professionals and advocates?',
+      "What would a truly integrated financial and mental health support service look like - and why don't we have one yet?",
+      'What practical things could you do to support someone you know who is struggling financially without making them feel judged or inadequate?',
+    ],
+    resources: [
+      { label: 'StepChange Debt Charity - free debt advice: 0800 138 1111', url: 'https://www.stepchange.org' },
+      { label: 'Citizens Advice - debt, benefits, rights: 0800 144 8848', url: 'https://www.citizensadvice.org.uk' },
+      { label: 'MoneyHelper - free financial guidance', url: 'https://www.moneyhelper.org.uk' },
+      { label: 'Money and Mental Health Policy Institute', url: 'https://www.moneyandmentalhealth.org' },
+      { label: 'Mental Health Breathing Space (Debt Respite) Scheme - GOV.UK', url: 'https://www.gov.uk/guidance/debt-respite-breathing-space-scheme-creditors-and-mental-health-crisis-moratorium' },
+    ],
+    videos: [
+      { label: 'Money and mental health - the link explained (YouTube)', url: 'https://www.youtube.com/results?search_query=money+mental+health+debt+anxiety+depression+UK' },
+      { label: 'Mental Health Breathing Space scheme explained (YouTube)', url: 'https://www.youtube.com/results?search_query=mental+health+breathing+space+debt+respite+scheme+UK+explained' },
+      { label: 'Scarcity mindset and poverty - Sendhil Mullainathan (YouTube)', url: 'https://www.youtube.com/results?search_query=scarcity+mindset+poverty+cognitive+bandwidth+Mullainathan' },
+    ],
+    powerPoint: `MODULE 29 POWERPOINT SPECIFICATION - Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '46%' as massive orange statistic; 'Money & Mental Health' header in white on black
+Slide 2: Scarcity mindset diagram - cognitive bandwidth bar depleted by financial stress
+Slide 3: Bidirectional vicious cycle arrows - mental illness to debt to mental illness
+Slide 4: Mental Health Breathing Space scheme - 60 days, key steps, prominent orange callout box
+Slide 5: Four resources with phone numbers in large orange text on black
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Financial distress is closely linked to suicidal ideation - debt is a major risk factor. Be alert to signs of acute distress during this module. Have Samaritans (116 123) and local crisis line numbers visible and share them proactively.
+
+FACILITATION: The spiral-mapping activity can feel unexpectedly confronting. Give it time - the moment when participants see how a single job loss cascades into a full mental health crisis is a powerful learning moment.
+
+CONFIDENTIALITY: If participants disclose current financial crisis, signpost immediately to StepChange (0800 138 1111) and the Breathing Space scheme. Do not offer financial advice yourself.
+
+BENEFITS: Note that many people with mental health problems are not claiming benefits they are entitled to. Signpost to Citizens Advice for welfare rights advice.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 30
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 30,
+    topic: 'Relationships & Attachment',
+    summary: 'Attachment theory, healthy relationship skills, codependency, relational trauma, and how our earliest bonds shape our adult mental health and relationships throughout life.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Attachment: Wired for Connection',
+        bullets: [
+          "Bowlby's attachment theory: humans are biologically driven to form close bonds - this is not weakness, it is survival",
+          'Four attachment styles: secure, anxious-preoccupied, dismissive-avoidant, fearful-avoidant (disorganised)',
+          'Attachment style is largely formed in the first year of life through the responsiveness of primary caregivers',
+          '~55% of adults have secure attachment; ~45% have insecure attachment styles (research consensus)',
+          'BRANDED SLIDE: four attachment style descriptions in four quadrants - orange headers on black',
+        ],
+      },
+      {
+        title: 'Slide 2 — Attachment in Adult Relationships',
+        bullets: [
+          'Secure attachment: comfortable with intimacy and autonomy; tolerates conflict without catastrophising',
+          'Anxious attachment: fear of abandonment; hypervigilance to relationship cues; protest behaviours',
+          'Avoidant attachment: discomfort with intimacy; dismisses emotional needs; self-reliance as defence',
+          'Disorganised attachment: trauma-linked; both drawn to and frightened by closeness; associated with BPD',
+          'BRANDED SLIDE: adult relationship patterns for each style with real-world examples',
+        ],
+      },
+      {
+        title: 'Slide 3 — Codependency & Relational Patterns',
+        bullets: [
+          'Codependency: excessive emotional reliance on another person; losing self in a relationship',
+          "Enabling: supporting behaviours (e.g. addiction, avoidance) that maintain the other person's problems",
+          'Enmeshment: loss of individual identity within a relationship; difficulty knowing where you end and they begin',
+          'Healthy interdependence vs codependency: two whole people choosing to be together vs two incomplete people needing to be',
+          'BRANDED SLIDE: two circles for healthy interdependence (overlapping but separate) vs enmeshment (one circle)',
+        ],
+      },
+      {
+        title: 'Slide 4 — Relational Trauma & Healing',
+        bullets: [
+          'Relational trauma: harm caused by people who were supposed to provide safety - parents, partners, carers',
+          'Effects: difficulty trusting, hypervigilance in relationships, self-blame, shame, emotional dysregulation',
+          'Earned secure attachment: through safe relationships and therapy, insecure adults can develop secure attachment',
+          'Evidence-based approaches: Emotionally Focused Therapy (EFT), Attachment-Based CBT, schema therapy',
+          "BRANDED SLIDE: 'Earned Secure Attachment' as hopeful headline in orange - recovery is possible",
+        ],
+      },
+      {
+        title: 'Slide 5 — Relationship Support in the UK',
+        bullets: [
+          "Relate: UK's largest relationship counselling service - 0300 100 1234",
+          'NHS Talking Therapies: includes couples therapy and individual therapy for relationship difficulties',
+          'The Mix: relationship support for under-25s - 0808 808 4994',
+          'Refuge and SafeLives: support for those experiencing domestic abuse in relationships',
+          'BRANDED SLIDE: Relate logo, Refuge logo, The Mix logo with numbers in orange on black',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - Attachment: Wired for Connection
+"John Bowlby's attachment theory is one of the most important and well-evidenced frameworks in psychology. His central insight was simple and profound: human beings are biologically wired for close emotional bonds. This is not weakness - it is how our species survives. Infants who form close attachments to responsive caregivers survive; those who do not are in danger. Our entire social and emotional architecture is built around this fundamental need.
+
+The attachment style we develop in infancy - largely shaped by how consistently and sensitively our primary caregivers responded to our needs - creates an internal working model: a set of beliefs and expectations about relationships that we carry into every relationship for the rest of our lives. About 55% of adults have secure attachment. The remaining 45% have insecure styles that can create recurring difficulties in relationships - not because of moral failing, but because of early experience."
+
+SLIDE 2 - Attachment in Adult Relationships
+"Each attachment style shows up distinctively in adult relationships. Secure attachment: 'I can be close to you without losing myself. I can tolerate disagreement without catastrophising. I trust that you will come back.'
+
+Anxious or preoccupied attachment: 'I need constant reassurance that you love me. When you're quiet, I assume it's my fault. I'm hypervigilant to any sign you might leave.' This pattern often creates the dynamic it most fears - exhausting partners and pushing them away.
+
+Avoidant attachment: 'I don't need anyone. I prefer to handle things myself. Emotional intimacy feels uncomfortable and threatening.' Often the result of caregivers who consistently dismissed or minimised emotional needs.
+
+Disorganised attachment is associated with early trauma - the caregiver was simultaneously the source of danger and comfort. Adults with this pattern often want and fear closeness simultaneously - it is associated with borderline personality disorder and complex PTSD."
+
+SLIDE 3 - Codependency
+"Codependency describes a relationship pattern where someone's sense of identity, wellbeing and self-worth becomes excessively tied to another person - usually a partner, family member, or friend who has their own struggles. The codependent person organises their life around managing, fixing or enabling the other person.
+
+The distinction that matters most: healthy interdependence looks like two whole, separate people choosing to be in a relationship together. Codependency looks like two people who feel they cannot function independently - who need the relationship to feel complete, valid, or safe. Codependency often develops in families with addiction, mental illness, or abuse - where children learned that their value came from managing other people's emotions."
+
+SLIDE 4 - Relational Trauma and Healing
+"The most damaging trauma is often relational trauma - harm inflicted by the people who were supposed to provide safety. When the caregiver is both the source of danger and the only available source of comfort, the child's attachment system cannot resolve the conflict. The result is disorganised attachment - and often, a lifetime of difficulty trusting anyone who gets close.
+
+The hopeful message - and this is important - is earned secure attachment. Adults who had insecure or traumatic early attachment can develop secure attachment through safe, responsive relationships and through therapy. The brain retains plasticity. Healing is possible. Emotionally Focused Therapy, schema therapy, and attachment-based CBT all have strong evidence for helping adults develop more secure relational patterns."
+
+SLIDE 5 - Resources
+"Relate is the UK's leading relationship counselling service - 0300 100 1234. NHS Talking Therapies includes both individual therapy for relationship difficulties and couples counselling. The Mix provides relationship support for young people under 25. And for anyone in a relationship involving domestic abuse, Refuge and SafeLives provide specialist support."`,
+    activity: `ACTIVITY - Mapping My Attachment (20 minutes)
+Melksham Mental Health | Module 30 | Licensed Materials
+
+PURPOSE: Build personal awareness of attachment patterns and how they show up in relationships; develop language for relational needs and responses.
+
+INTRODUCE: "We all have an attachment style - a set of largely automatic patterns in how we relate to people who matter to us. This activity invites gentle self-exploration. Nothing you discover about yourself here is fixed - awareness is the beginning of change."
+
+PART 1 - Attachment Style Self-Assessment (8 minutes, individual and private):
+Give participants a simple attachment style description card for each of the four styles. Ask them to read all four and reflect privately:
+Which description resonates most with how you tend to behave in close relationships?
+- What reassures you?
+- What triggers anxiety or withdrawal?
+- What do you find hardest to ask for?
+This is private - participants do not share unless they choose to.
+
+PART 2 - Pairs: Relational Needs (7 minutes):
+In pairs, without disclosing your attachment style, discuss:
+In a healthy relationship, what do you most need? (Security? Space? Reassurance? Honesty? Predictability?)
+What makes you feel safe in a relationship? What makes you feel unsafe?
+
+PART 3 - Debrief (5 minutes):
+Key messages:
+- Knowing your attachment style is not a diagnosis - it is information
+- All attachment styles developed as adaptations to our early environment; none is a character flaw
+- Secure attachment is available to everyone, at any age, through safe relationships and/or therapy
+
+TUTOR NOTE: Do not require anyone to share their attachment style. This is a private self-exploration tool. If participants ask 'which is best', the answer is: secure, but every style has its strengths and every person can move toward greater security.`,
+    discussionPrompts: [
+      'How much of your relationship patterns do you think come from your early experiences - and how much is changeable?',
+      "What does 'healthy interdependence' look like in practice - and how does it differ from either codependency or emotional detachment?",
+      'How can understanding attachment theory change the way we approach conflict in relationships?',
+      'What would a relationship-literate society look like - and where should relationship education begin?',
+    ],
+    resources: [
+      { label: 'Relate - relationship counselling: 0300 100 1234', url: 'https://www.relate.org.uk' },
+      { label: 'Attachment theory explained - Psychology Today', url: 'https://www.psychologytoday.com/gb/basics/attachment' },
+      { label: 'The Mix - relationships for under-25s: 0808 808 4994', url: 'https://www.themix.org.uk/sex-and-relationships' },
+      { label: 'Refuge - domestic abuse support: 0808 2000 247', url: 'https://www.refuge.org.uk' },
+      { label: 'NHS - relationship counselling and couples therapy', url: 'https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/relationship-counselling/' },
+    ],
+    videos: [
+      { label: 'Attachment theory explained - TED talk (YouTube)', url: 'https://www.youtube.com/results?search_query=attachment+theory+explained+adult+relationships+TED' },
+      { label: 'Secure vs insecure attachment - how it shows up in relationships (YouTube)', url: 'https://www.youtube.com/results?search_query=secure+insecure+attachment+adult+relationships+explained' },
+      { label: 'What is earned secure attachment? (YouTube)', url: 'https://www.youtube.com/results?search_query=earned+secure+attachment+healing+insecure+attachment' },
+    ],
+    powerPoint: `MODULE 30 POWERPOINT SPECIFICATION - Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Four attachment style quadrants with descriptions - orange headers on black; Bowlby quote
+Slide 2: Adult relationship patterns per attachment style - real-world speech bubbles
+Slide 3: Two circles diagram - healthy interdependence (separate but overlapping) vs enmeshment (merged)
+Slide 4: 'Earned Secure Attachment' in large orange text; hopeful recovery message central
+Slide 5: Relate 0300 100 1234, Refuge 0808 2000 247, The Mix 0808 808 4994 in orange
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Discussions of relationships and attachment frequently surface disclosures of domestic abuse, childhood trauma, or relational trauma. Be attentive, apply standard protocols, and have Refuge (0808 2000 247) and NSPCC numbers ready.
+
+FACILITATION: The attachment style self-assessment can be confronting. Emphasise throughout that no style is a character flaw - all are adaptive responses to early experience. Create safety for the private reflection component.
+
+LANGUAGE: Avoid "dysfunctional" for attachment styles - prefer "insecure" or "anxious/avoidant". Emphasise that all styles are changeable with support.
+
+DOMESTIC ABUSE: If the discussion turns to controlling or abusive relationships, do not attempt to manage this within the group - follow safeguarding protocols and signpost individually.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
 ];
 
 /** Look up a single module guide by ID */
