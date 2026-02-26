@@ -5,7 +5,6 @@ import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeache
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById } from '@/lib/users';
 import CourseInterestButton from '@/components/CourseInterestButton';
-import CourseAccessApplyButton from '@/components/CourseAccessApplyButton';
 export const metadata = {
   title: 'Mental Health Courses | Melksham Mental Health',
   description: 'A comprehensive 50-module mental health course covering every major condition, social issue, and life-stage challenge. Evidence-based, peer-informed, and built for real people.',
@@ -86,7 +85,6 @@ export default async function CoursesPage() {
   const userInterests = new Set(user?.interests ?? []);
   const isAdmin = session.isAdmin ?? false;
   const hasCourseAccess = isAdmin || (user?.courseAccess ?? false);
-  const alreadyApplied = user?.courseAccessApplied ?? false;
 
   return (
     <div>
@@ -194,20 +192,6 @@ export default async function CoursesPage() {
             </div>
           );
         })}
-
-        {/* Course application banner for logged-in non-approved members */}
-        {isLoggedIn && !hasCourseAccess && (
-          <div className="mb-12 border border-orange-500/40 rounded-lg px-5 py-5 text-left">
-            <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
-              Apply to Join Live Sessions
-            </h2>
-            <p className="text-zinc-300 text-sm mb-4">
-              Our 50-module programme is delivered as live, facilitated group sessions.
-              Apply below — we review every application personally.
-            </p>
-            <CourseAccessApplyButton alreadyApplied={alreadyApplied} />
-          </div>
-        )}
 
         {/* CTA for non-logged-in visitors */}
         {!isLoggedIn && (
