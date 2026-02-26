@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaArrowRight, FaExclamationTriangle, FaHeart, FaLifeRing } from 'react-icons/fa';
+import { FaArrowRight, FaExclamationTriangle, FaHeart, FaLifeRing, FaBookOpen, FaStar } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -66,6 +66,30 @@ export default function Home() {
             <FaLifeRing /> Crisis Help
           </Link>
         </div>
+
+        {/* Course launch promo */}
+        <section aria-labelledby="course-promo-heading" className="mt-16 border border-primary/50 rounded-xl px-6 py-8 text-left bg-primary/5">
+          <div className="flex items-center gap-3 mb-3">
+            <FaStar className="text-primary text-xl flex-shrink-0" />
+            <p className="section-kicker" style={{ marginBottom: 0 }}>Now Live</p>
+          </div>
+          <h2 id="course-promo-heading" className="text-2xl md:text-3xl font-black text-white mb-3 normal-case tracking-normal">
+            50-Module Mental Health Course Programme
+          </h2>
+          <p className="text-zinc-200 text-base leading-relaxed mb-5">
+            Our brand new Members Portal is live — with <strong className="text-white">50 evidence-based modules</strong> covering
+            every major mental health topic: anxiety, depression, trauma, burnout, relationships, grief, and beyond.
+            Live facilitated sessions. Real support. Built from lived experience.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/portal/register" className="metal-button metal-button--small">
+              <FaBookOpen /> Join the Portal
+            </Link>
+            <Link href="/portal/login" className="metal-button metal-button--small">
+              <FaArrowRight /> Member Login
+            </Link>
+          </div>
+        </section>
 
         <div className="mt-16 pt-8 border-t-4 border-error/70">
           <h2 className="text-3xl font-black text-white mb-4 normal-case tracking-normal flex items-center gap-3 justify-center">
