@@ -2,7 +2,7 @@ import { getIronSession } from 'iron-session';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { FaBook, FaLock, FaUsers, FaHeart, FaRobot, FaClock, FaCheckCircle } from 'react-icons/fa';
+import { FaBook, FaLock, FaUsers, FaHeart, FaRobot, FaClock, FaCheckCircle, FaPencilAlt, FaHandHoldingHeart, FaComments } from 'react-icons/fa';
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById, getAllMembers } from '@/lib/users';
 import LogoutButton from '@/components/LogoutButton';
@@ -115,6 +115,15 @@ export default async function PortalPage() {
       <div className="flex flex-wrap gap-3 justify-center mb-12">
         <Link href="/courses" className="metal-button metal-button--small">
           <FaBook /> {user.courseAccess ? 'My Courses' : 'Course Programme'}
+        </Link>
+        <Link href="/portal/diary" className="metal-button metal-button--small">
+          <FaPencilAlt /> My Diary
+        </Link>
+        <Link href="/portal/wall" className="metal-button metal-button--small">
+          <FaComments /> Community Wall
+        </Link>
+        <Link href="/portal/self-referral" className="metal-button metal-button--small">
+          <FaHandHoldingHeart /> Self-Referral Links
         </Link>
         <Link href="/portal/change-password" className="metal-button metal-button--small">
           <FaLock /> Change Password

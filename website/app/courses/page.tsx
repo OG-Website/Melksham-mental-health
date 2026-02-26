@@ -1,12 +1,10 @@
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 import { getIronSession } from 'iron-session';
 import { cookies } from 'next/headers';
-import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeacher, FaLock } from 'react-icons/fa';
+import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeacher, FaUserPlus } from 'react-icons/fa';
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById } from '@/lib/users';
 import CourseInterestButton from '@/components/CourseInterestButton';
-import CourseAccessApplyButton from '@/components/CourseAccessApplyButton';
 export const metadata = {
   title: 'Mental Health Courses | Melksham Mental Health',
   description: 'A comprehensive 50-module mental health course covering every major condition, social issue, and life-stage challenge. Evidence-based, peer-informed, and built for real people.',
@@ -79,52 +77,14 @@ const categories = [
 ];
 
 export default async function CoursesPage() {
-  // Server-side auth check — middleware also guards this route
+  // Check session — page is PUBLIC but logged-in users get extra features
   const cookieStore = await cookies();
   const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
-  if (!session.isLoggedIn || !session.userId) {
-    redirect('/portal/login?next=/courses');
-  }
-  const user = findUserById(session.userId);
+  const isLoggedIn = session.isLoggedIn && !!session.userId;
+  const user = isLoggedIn ? findUserById(session.userId) : null;
   const userInterests = new Set(user?.interests ?? []);
-  const isAdmin = session.isAdmin;
+  const isAdmin = session.isAdmin ?? false;
   const hasCourseAccess = isAdmin || (user?.courseAccess ?? false);
-
-  // ── Access gate: non-approved users see a locked page ──────────────────────
-  if (!hasCourseAccess) {
-    const alreadyApplied = user?.courseAccessApplied ?? false;
-    return (
-      <div>
-        <div className="page-content">
-          <div className="max-w-xl mx-auto text-center py-16">
-            <FaLock className="text-orange-400 text-5xl mx-auto mb-6" />
-            <p className="section-kicker">Course Programme</p>
-            <h1 className="text-3xl md:text-4xl font-black text-white mb-4 normal-case tracking-normal">
-              Courses — Access Required
-            </h1>
-            <p className="text-zinc-300 text-base leading-relaxed mb-8">
-              Our 50-module mental health programme is delivered as live, facilitated group sessions.
-              To ensure the best experience and a safe environment, course access is by application.
-            </p>
-            <div className="border border-zinc-700 rounded-lg px-6 py-6 text-left mb-8">
-              <h2 className="text-white font-black text-base mb-3 normal-case tracking-normal">What happens when you apply?</h2>
-              <ul className="space-y-2 text-zinc-300 text-sm">
-                <li>• Your application is reviewed personally by our team</li>
-                <li>• You&apos;ll receive access to all 50 course modules</li>
-                <li>• Live facilitated sessions will be scheduled on our secure portal</li>
-                <li>• You&apos;ll receive email confirmation once approved</li>
-              </ul>
-            </div>
-            <CourseAccessApplyButton alreadyApplied={alreadyApplied} />
-            <p className="text-zinc-500 text-xs mt-6">
-              Questions?{' '}
-              <Link href="/contact" className="text-orange-400 underline">Contact us</Link>
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -201,17 +161,28 @@ export default async function CoursesPage() {
                           {mod.summary}
                         </p>
                         <div className="flex flex-wrap items-center gap-3 mt-2">
-                          <Link
-                            href={`/courses/${mod.id}`}
-                            className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-orange-500/60 text-orange-300 hover:bg-orange-600/20 transition-colors"
-                          >
-                            <FaChalkboardTeacher className="text-xs" /> Open Module
-                          </Link>
-                          <CourseInterestButton
-                            moduleId={mod.id}
-                            initialInterested={userInterests.has(mod.id)}
-                            isAdmin={isAdmin}
-                          />
+                          {hasCourseAccess && (
+                            <Link
+                              href={`/courses/${mod.id}`}
+                              className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-orange-500/60 text-orange-300 hover:bg-orange-600/20 transition-colors"
+                            >
+                              <FaChalkboardTeacher className="text-xs" /> Open Module
+                            </Link>
+                          )}
+                          {isLoggedIn && !isAdmin ? (
+                            <CourseInterestButton
+                              moduleId={mod.id}
+                              initialInterested={userInterests.has(mod.id)}
+                              isAdmin={isAdmin}
+                            />
+                          ) : !isLoggedIn ? (
+                            <Link
+                              href="/portal/register"
+                              className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-zinc-600 text-zinc-400 hover:border-orange-500/60 hover:text-orange-400 transition-colors"
+                            >
+                              <FaUserPlus className="text-xs" /> Register to Apply
+                            </Link>
+                          ) : null}
                         </div>
                       </div>
                     </div>
@@ -221,6 +192,26 @@ export default async function CoursesPage() {
             </div>
           );
         })}
+
+        {/* CTA for non-logged-in visitors */}
+        {!isLoggedIn && (
+          <div className="mb-12 border border-orange-500/40 rounded-lg px-5 py-5 text-center">
+            <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
+              Want to Attend These Sessions?
+            </h2>
+            <p className="text-zinc-300 text-sm mb-4">
+              Create a free account to register your interest and apply for live course access.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link href="/portal/register" className="metal-button metal-button--small">
+                <FaUserPlus /> Create Free Account
+              </Link>
+              <Link href="/portal/login?next=/courses" className="metal-button metal-button--small" style={{ background: 'linear-gradient(180deg,#4a4a4a 0%,#2a2a2a 100%)', borderColor: '#666' }}>
+                Sign In
+              </Link>
+            </div>
+          </div>
+        )}
 
         {/* CTA */}
         <div className="mt-16 mb-12">

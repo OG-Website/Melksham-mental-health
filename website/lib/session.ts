@@ -56,7 +56,7 @@ export function getSessionOptions(): SessionOptions {
       secure: process.env.NODE_ENV === 'production',
       httpOnly: true,
       sameSite: 'lax',
-      maxAge: 60 * 60 * 24 * 7, // 7 days
+      // No maxAge — session cookie expires when the browser is closed
     },
   };
 }
@@ -73,7 +73,7 @@ export const sessionOptions: SessionOptions = {
     secure: process.env.NODE_ENV === 'production',
     httpOnly: true,
     sameSite: 'lax',
-    maxAge: 60 * 60 * 24 * 7,
+    // No maxAge — session cookie expires when the browser is closed
   },
 } as SessionOptions;
 
