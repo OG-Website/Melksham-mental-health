@@ -4715,6 +4715,721 @@ RELIGION: Acknowledge complexity respectfully while maintaining that LGBTQIA+ id
 
 LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 36
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 36,
+    topic: 'Racism, Discrimination & Mental Health',
+    summary: 'Racism and racial discrimination as determinants of mental health — the evidence, mechanisms, intersectionality, and how to provide culturally competent, anti-racist mental health support.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Racism as a Mental Health Issue',
+        bullets: [
+          'Black, Asian and minority ethnic people in the UK have significantly higher rates of serious mental illness, compulsory detention, and crisis presentations (NHS Race and Health Observatory)',
+          'Black people are 4x more likely to be detained under the Mental Health Act than white people (CQC 2023)',
+          'Racism — direct, structural and internalised — is a significant, evidence-based cause of mental ill-health',
+          'People from ethnic minority backgrounds are also less likely to access mental health services and more likely to drop out',
+          'BRANDED SLIDE: "4x more likely to be detained" in large orange — structural racism in mental health made visible',
+        ],
+      },
+      {
+        title: 'Slide 2 — How Racism Harms Mental Health',
+        bullets: [
+          'Direct racism: racial harassment, violence, and discrimination are acute traumatic stressors',
+          'Racial trauma: cumulative psychological harm from repeated exposure to racism — shares features with PTSD',
+          'Hypervigilance: constant alertness to potential racial threat is physiologically and psychologically exhausting',
+          'Internalised racism: absorbing society\'s negative messages about one\'s racial identity — causes shame, self-doubt, depression',
+          'BRANDED SLIDE: racial trauma pathway — external racism to internal stress response to mental health outcomes',
+        ],
+      },
+      {
+        title: 'Slide 3 — Structural Racism in Mental Health Services',
+        bullets: [
+          'Over-representation of Black people in compulsory detention, seclusion and police-involved crisis responses',
+          'Under-representation in early intervention, psychological therapies, and voluntary community services',
+          'Diagnostic disparities: Black men more likely to be diagnosed with schizophrenia; less likely to be diagnosed with depression',
+          'Workforce: mental health workforce does not reflect the diversity of the communities it serves',
+          'BRANDED SLIDE: detention vs therapy access disparity diagram — systemic inequity made visible',
+        ],
+      },
+      {
+        title: 'Slide 4 — Culturally Competent & Anti-Racist Care',
+        bullets: [
+          'Cultural humility: a practitioner stance of ongoing learning, rather than a fixed "competence" to achieve',
+          'Community-based support: faith communities, cultural organisations, and peer support are often more trusted than NHS',
+          'Culturally adapted therapies: greater effectiveness when therapy acknowledges cultural context, not just translates language',
+          'Anti-racist practice: actively examining and challenging racist assumptions in assessments, formulations, and systems',
+          'BRANDED SLIDE: cultural humility cycle — self-reflection, learning, adapting, accountability — in orange',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources & Organisations',
+        bullets: [
+          'NHS Race and Health Observatory: research, advocacy, policy recommendations',
+          'Nafsiyat Intercultural Therapy Centre (London): specialist intercultural psychotherapy',
+          'Samaritans: 116 123 — actively working to improve outreach to ethnic minority communities',
+          'Mind: information on race and mental health; local culturally specific services directory',
+          'BRANDED SLIDE: key organisations with logos; call to action "ask your local service what they are doing to address racial disparities"',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - Racism as a Mental Health Issue
+"Let me start with a statistic that should disturb every person working in or around mental health services in the UK. Black people are four times more likely to be detained under the Mental Health Act than white people. They are more likely to arrive at mental health services via the police or the criminal justice system. They are less likely to receive psychological therapy. They are more likely to be placed in seclusion.
+
+This is not explained by higher prevalence of mental illness in Black communities. It is explained by structural racism operating within the mental health system itself. Racism — direct, structural, and internalised — is an evidence-based cause of mental ill-health, and it deserves to be named as such."
+
+SLIDE 2 - How Racism Harms Mental Health
+"Direct experiences of racism — racial harassment, discrimination, and violence — are acute traumatic stressors. But the mental health impact of racism is not only about dramatic incidents. Racial trauma describes the cumulative psychological harm of repeated exposure to racist events, microaggressions, and the constant anticipation of racism.
+
+The hypervigilance that develops — the state of permanent alertness to potential racial threat, of having to calculate safety in every interaction — is physiologically expensive. It activates the same stress response as direct threat. Over time, it is profoundly depleting. And internalised racism — absorbing society's negative messages about one's own racial identity — is a significant driver of depression, shame, and diminished self-worth."
+
+SLIDE 3 - Structural Racism in Services
+"The data on structural racism within mental health services is stark and consistent. Black people are over-represented in every coercive, restrictive measure the system uses. They are under-represented in every voluntary, therapeutic, and early intervention pathway.
+
+The diagnostic disparities are also significant. Black men are significantly more likely to be diagnosed with schizophrenia and less likely to be diagnosed with depression — even when presenting with similar symptoms. This matters because it affects what treatment is offered. Schizophrenia diagnoses lead toward medication and containment; depression diagnoses lead toward therapy and support. These are different trajectories with profoundly different outcomes."
+
+SLIDE 4 - Anti-Racist Care
+"Cultural humility — as distinct from cultural competence — is an important shift in how we frame this. Cultural competence implies a set of knowledge and skills you can acquire and then possess. Cultural humility is an ongoing practice of self-reflection, curiosity, and learning. It acknowledges that the practitioner's cultural lens shapes their assessments and formulations in ways they may not be fully aware of.
+
+Community-based support — faith communities, cultural organisations, Black-led mental health organisations — is often more accessible and more trusted by ethnic minority communities than statutory services. Culturally adapted therapies, which incorporate the cultural context rather than simply translating the language, show significantly greater effectiveness."
+
+SLIDE 5 - Resources
+"The NHS Race and Health Observatory publishes excellent research and policy recommendations on racial health disparities. Nafsiyat in London provides specialist intercultural psychotherapy. Mind has a directory of locally based, culturally specific mental health services. And Samaritans is actively working to improve its outreach and accessibility to ethnic minority communities."`,
+    activity: `ACTIVITY - Racial Disparities: Understanding the System (20 minutes)
+Melksham Mental Health | Module 36 | Licensed Materials
+
+PURPOSE: Build understanding of structural racism in mental health services and develop skills in culturally humble practice.
+
+INTRODUCE: "This activity examines the evidence on racial disparities in mental health care and asks us to think about what anti-racist practice actually looks like in the services we work in or use."
+
+PART 1 - Data Analysis in Small Groups (7 minutes):
+Each group receives a data card showing one of the following disparities:
+Card A: Black people are 4x more likely to be detained under the MHA than white people
+Card B: Black people are significantly less likely to be referred to or complete psychological therapy
+Card C: Black men are more likely to be diagnosed with schizophrenia, less likely with depression, than white men with similar presentations
+Card D: Mental health crises in Black communities are more likely to involve police than clinical staff
+
+Groups discuss: What might explain this disparity? What are its consequences? What would need to change?
+
+PART 2 - Whole Group Share (8 minutes):
+Each group reports back. Tutor draws out the distinction between:
+- Explanations that locate the problem in communities (e.g. "cultural mistrust")
+- Explanations that locate the problem in systems and services (e.g. structural racism, workforce diversity, diagnostic bias)
+Key question: Which set of explanations leads to more effective action?
+
+PART 3 - Debrief (5 minutes):
+What is one concrete thing you could do — in your workplace, community, or personal practice — to contribute to more equitable mental health care?`,
+    discussionPrompts: [
+      'How do we distinguish between explanations for racial mental health disparities that locate the problem in communities versus those that locate it in systems — and why does that distinction matter for action?',
+      'What is the difference between cultural competence and cultural humility, and why does it matter for mental health practice?',
+      'How should mental health services actively address the over-representation of Black people in compulsory detention and the under-representation in therapy?',
+      'What role does anti-racist practice play in mental health — and what does it actually look like day-to-day in a clinical or community setting?',
+    ],
+    resources: [
+      { label: 'NHS Race and Health Observatory', url: 'https://www.nhsrho.org' },
+      { label: 'Mind — race and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/racism-and-mental-health/' },
+      { label: 'Nafsiyat Intercultural Therapy Centre', url: 'https://www.nafsiyat.org.uk' },
+      { label: 'Rethink Mental Illness — race and mental health resources', url: 'https://www.rethink.org/advice-and-information/living-with-mental-illness/wellbeing-physical-health/black-asian-and-minority-ethnic-mental-health/' },
+      { label: 'Samaritans — 116 123 (free, 24/7)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'Race and mental health disparities in the UK — NHS RHO (YouTube)', url: 'https://www.youtube.com/results?search_query=race+mental+health+disparities+UK+NHS+Race+Health+Observatory' },
+      { label: 'Racial trauma and its mental health impact (YouTube)', url: 'https://www.youtube.com/results?search_query=racial+trauma+mental+health+impact+explained+UK' },
+      { label: 'Anti-racist mental health practice (YouTube)', url: 'https://www.youtube.com/results?search_query=anti+racist+mental+health+practice+cultural+humility' },
+    ],
+    powerPoint: `MODULE 36 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '4x more likely to be detained' in large orange — structural racism made visible; NHS RHO source cited
+Slide 2: Racial trauma pathway diagram — external racism to stress response to mental health outcomes in orange
+Slide 3: Detention vs therapy access disparity — side-by-side comparison showing over/under-representation
+Slide 4: Cultural humility cycle — self-reflection / learning / adapting / accountability in orange circle
+Slide 5: NHS RHO, Mind, Nafsiyat logos; call to action on equitable services
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Some participants may disclose experiences of racial trauma or discrimination that are acutely distressing. Apply standard safeguarding protocols. Be particularly attentive if any participant appears to be in current distress.
+
+FACILITATION: This module may generate discomfort for white participants unfamiliar with structural racism analysis. Hold the space without backing away from the evidence. The distinction between individual bias and structural racism is important and worth time. Participants from ethnic minority backgrounds may have strong personal responses — create safety and do not require sharing.
+
+LANGUAGE: 'Racism' is the correct clinical and policy term — do not soften to 'unconscious bias' when structural racism is the more accurate frame. Use 'ethnic minority' or community-specific terms preferred by participants.
+
+DATA: The CQC Mental Health Act monitoring report is updated annually — check for current figures before delivery.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 37
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 37,
+    topic: 'Gender, Sexuality & Mental Health',
+    summary: 'How gender norms, gender-based violence, sexuality, and gendered experiences of healthcare shape mental health — for all genders, including the specific mental health challenges faced by women and non-binary people.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Gender & the Mental Health Gap',
+        bullets: [
+          'Women are twice as likely as men to be diagnosed with depression and anxiety (NHS Digital)',
+          'Men die by suicide at three times the rate of women in the UK (ONS 2022)',
+          'Both patterns are shaped by gender norms: how society defines what it means to be a man or a woman',
+          'Non-binary and gender non-conforming people experience significantly elevated rates of mental distress',
+          'BRANDED SLIDE: two statistics side by side — women 2x more depression; men 3x higher suicide rate — orange on black',
+        ],
+      },
+      {
+        title: 'Slide 2 — Why Women Experience More Mental Illness',
+        bullets: [
+          'Gendered trauma: women are more likely to experience sexual violence, domestic abuse, childhood sexual abuse',
+          'Caregiving burden: women still perform the majority of unpaid care — children, elderly parents, partners',
+          'Economic inequality: lower pay, more precarious employment, higher poverty rates create chronic stress',
+          'Healthcare bias: women\'s physical and mental health symptoms are more frequently dismissed by clinicians',
+          'BRANDED SLIDE: four contributing factor boxes — trauma / care burden / economic stress / healthcare bias',
+        ],
+      },
+      {
+        title: 'Slide 3 — Why Men Die by Suicide More',
+        bullets: [
+          'Masculine norms: "man up", emotional stoicism, self-reliance — suppress help-seeking until crisis point',
+          'Men are less likely to talk about distress, less likely to see a GP for mental health, less likely to engage with therapy',
+          'Higher lethality: men more often use more lethal methods when attempting suicide',
+          'CALM (Campaign Against Living Miserably): leading UK charity challenging masculine norms around help-seeking',
+          'BRANDED SLIDE: "Man up" culture vs CALM\'s "It\'s okay to not be okay" — orange contrast on black',
+        ],
+      },
+      {
+        title: 'Slide 4 — Gender-Based Violence & Mental Health',
+        bullets: [
+          '1 in 3 women worldwide will experience physical or sexual violence in their lifetime (WHO)',
+          'Domestic abuse affects 1 in 4 women and 1 in 6 men in the UK at some point (ONS)',
+          'PTSD, depression, anxiety, dissociation and substance use are all common sequelae of gender-based violence',
+          'Coercive control: psychological abuse without physical violence — chronic trauma with serious mental health consequences',
+          'BRANDED SLIDE: domestic abuse prevalence statistics; coercive control definition; Refuge and SafeLives logos',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources',
+        bullets: [
+          'CALM: 0800 58 58 58 (5pm-midnight daily) — men\'s mental health and suicide prevention',
+          'Refuge: 0808 2000 247 (free, 24/7) — domestic abuse support for women and children',
+          'SafeLives: research and training on domestic abuse — safelives.org.uk',
+          'NHS talking therapies: includes trauma-focused CBT and EMDR for gender-based violence survivors',
+          'BRANDED SLIDE: CALM 0800 58 58 58, Refuge 0808 2000 247 in large orange; NHS EMDR reference',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - The Gender Mental Health Gap
+"There are two striking statistics that set up this module. Women are twice as likely as men to be diagnosed with depression and anxiety. Men die by suicide at three times the rate of women. Both patterns reflect not biological inevitability but the consequences of gender — of how society constructs what it means to be a man or a woman, and what is allowed, expected, and available to each.
+
+If we want to understand women's mental health, we need to understand gendered trauma, economic inequality, and caregiving burden. If we want to understand men's suicide risk, we need to understand masculine norms that prohibit help-seeking until crisis point. Gender is not incidental to mental health — it is constitutive of it."
+
+SLIDE 2 - Why Women Experience More Mental Illness
+"Women are disproportionately exposed to the most powerful risk factors for mental ill-health. Sexual violence, childhood sexual abuse, and domestic abuse — all of which are gendered in their prevalence — are among the most potent trauma exposures we know. Women still carry the majority of unpaid care work in the UK — children, elderly parents, partners — often while also working. This is a chronic stress burden that is structurally produced, not chosen.
+
+Add to this the consistent finding that women's symptoms are more likely to be dismissed by clinicians — the pattern of women being told their pain is 'anxiety' before physical causes are investigated, of mental health presentations being minimised or attributed to 'hormones' — and you have a system that compounds the disadvantage."
+
+SLIDE 3 - Men and Suicide
+"Men die by suicide at three times the rate of women. This is not a biological fact — it is a social one. Masculine norms that define strength as emotional self-sufficiency, that frame help-seeking as weakness, that tell men to 'man up' — these norms kill people. Men are less likely to recognise their own distress, less likely to talk to anyone about it, less likely to contact a GP or mental health service. By the time many men reach a service, they are in acute crisis.
+
+CALM — the Campaign Against Living Miserably — has done extraordinary work challenging these norms. Their central message is simple: it is okay to not be okay. This is not a minor attitude shift. For many men, it is literally life-saving."
+
+SLIDE 4 - Gender-Based Violence
+"One in three women globally will experience physical or sexual violence in their lifetime. In the UK, one in four women and one in six men will experience domestic abuse. The mental health consequences — PTSD, depression, anxiety, dissociation, substance use — are severe and often chronic.
+
+Coercive control deserves specific attention. Psychological abuse — isolation, financial control, degradation, constant monitoring — without physical violence is a recognised form of domestic abuse since 2015. It creates a chronic traumatic environment that produces profound psychological harm, often over years. Survivors frequently do not recognise it as abuse because there are no visible injuries."
+
+SLIDE 5 - Resources
+"CALM on 0800 58 58 58 is the UK's leading men's mental health charity, open 5pm to midnight every day. Refuge on 0808 2000 247 provides 24/7 support for women and children affected by domestic abuse. NHS Talking Therapies includes trauma-focused CBT and EMDR for survivors of gender-based violence."`,
+    activity: `ACTIVITY - Gender Norms & Mental Health (20 minutes)
+Melksham Mental Health | Module 37 | Licensed Materials
+
+PURPOSE: Explore how internalised gender norms shape emotional expression, help-seeking, and mental health; build awareness of how these norms harm all genders.
+
+INTRODUCE: "We all carry messages about how we are supposed to feel and express emotion based on our gender. These messages are so deeply internalised that we often don't notice them — until we examine them directly."
+
+PART 1 - Messages We Received (5 minutes, individual):
+Participants reflect privately on messages they received in childhood about emotion and gender:
+What were you told — directly or indirectly — about how someone of your gender is supposed to feel and express emotion?
+Examples: 'boys don't cry', 'be strong for others', 'don't be so emotional', 'good girls are caring', 'men handle their own problems'
+Write 2-3 messages down.
+
+PART 2 - Impact Analysis in Pairs (8 minutes):
+Share your messages with a partner (only if comfortable). Discuss:
+- How might these messages have shaped your relationship with your own emotional life?
+- How might they affect whether and how someone seeks help for mental health problems?
+- For the opposite gender's messages: what consequences do you see these having?
+
+PART 3 - Debrief (7 minutes):
+What messages were most common across the group? Which ones carry the most mental health risk?
+Key message: Gender norms are not personal quirks — they are culturally transmitted frameworks that have measurable mental health consequences. Challenging them is a public health act.`,
+    discussionPrompts: [
+      'Why do women experience higher rates of diagnosed depression and anxiety while men have higher suicide rates — and what does this tell us about how gender shapes both the experience of distress and the response to it?',
+      'What specific changes to how we raise boys could reduce men\'s suicide rates — and why is this so difficult to achieve at scale?',
+      'How does coercive control differ from "a difficult relationship" — and why is the distinction clinically and legally important?',
+      'What does gender-responsive mental health care look like — and how different is it from the current standard?',
+    ],
+    resources: [
+      { label: "CALM — men's mental health: 0800 58 58 58 (5pm-midnight daily)", url: 'https://www.thecalmzone.net' },
+      { label: 'Refuge — domestic abuse: 0808 2000 247 (free, 24/7)', url: 'https://www.refuge.org.uk' },
+      { label: 'SafeLives — domestic abuse research and training', url: 'https://safelives.org.uk' },
+      { label: 'Mind — gender and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/mental-health-facts-statistics/' },
+      { label: "Men's Health Forum — mental health resources", url: 'https://www.menshealthforum.org.uk/mental-health' },
+    ],
+    videos: [
+      { label: "Men's mental health and masculinity — CALM (YouTube)", url: "https://www.youtube.com/results?search_query=men+mental+health+masculinity+CALM+UK+man+up" },
+      { label: 'Gender and mental health disparities explained (YouTube)', url: 'https://www.youtube.com/results?search_query=gender+mental+health+disparities+women+men+explained+UK' },
+      { label: 'Coercive control and mental health impact (YouTube)', url: 'https://www.youtube.com/results?search_query=coercive+control+mental+health+impact+domestic+abuse+UK' },
+    ],
+    powerPoint: `MODULE 37 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Two statistics — '2x more depression in women' and '3x higher suicide in men' side by side in orange
+Slide 2: Four contributing factor boxes — trauma / care burden / economic stress / healthcare bias
+Slide 3: 'Man up' culture crossed out; CALM 'It\'s okay to not be okay' in orange
+Slide 4: Domestic abuse prevalence; coercive control definition box; Refuge and SafeLives logos
+Slide 5: CALM 0800 58 58 58, Refuge 0808 2000 247 in large orange
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: This module covers domestic abuse and gender-based violence. Be prepared for personal disclosures. Have Refuge (0808 2000 247), Samaritans (116 123), and your local IDVA service numbers ready. Follow safeguarding protocols.
+
+FACILITATION: The gender norms activity can be powerful and sometimes confronting. Create safety for the individual reflection. Men in the group may feel implicated by the statistics — hold this with care, acknowledging that gender norms harm men too.
+
+DOMESTIC ABUSE: If anyone discloses current domestic abuse, do not attempt to manage this within the group session. Signpost individually to Refuge or local IDVA services.
+
+LANGUAGE: 'Gender-based violence' is the correct framing — acknowledging that it affects all genders while being clear about prevalence patterns. Avoid 'women are victims' framing; use 'women are disproportionately affected'.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 38
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 38,
+    topic: 'Sexual Violence & Trauma',
+    summary: 'Sexual assault, rape trauma syndrome, the long-term mental health consequences of sexual violence, safe disclosure practice, and specialist survivor support in the UK.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — The Scale of Sexual Violence',
+        bullets: [
+          '1 in 4 women and 1 in 18 men in England and Wales have experienced rape or sexual assault as adults (ONS)',
+          'Over 85% of sexual violence is committed by someone known to the victim — not a stranger',
+          'Only around 17% of survivors report to the police; conviction rates are extremely low',
+          'Sexual violence has significant, lasting mental health consequences for the majority of survivors',
+          'BRANDED SLIDE: "1 in 4 women" statistic in large orange; "85% known to victim" challenging stranger-danger myth',
+        ],
+      },
+      {
+        title: 'Slide 2 — Mental Health Consequences',
+        bullets: [
+          'PTSD: most common mental health consequence — affects 30-80% of survivors; flashbacks, nightmares, hypervigilance',
+          'Depression: significantly elevated; often linked to shame, self-blame, loss of trust',
+          'Complex PTSD: where abuse was prolonged, repeated, or by an intimate partner — includes identity disruption and affect dysregulation',
+          'Dissociation: depersonalisation, memory fragmentation — protective responses to overwhelming trauma',
+          'BRANDED SLIDE: PTSD, depression, complex PTSD and dissociation as four interconnected consequence boxes',
+        ],
+      },
+      {
+        title: 'Slide 3 — Shame, Blame & Disclosure',
+        bullets: [
+          'Self-blame is near-universal in survivors — a normal response to trauma, not evidence of guilt',
+          'Rape myths: "she was asking for it", "if it was that bad she would have fought back", "why didn\'t she leave" — all evidence-free and harmful',
+          'Trauma responses during assault: freezing, fawning, dissociation are normal neurobiological responses — NOT consent',
+          'Disclosure: most survivors tell someone before police — how that person responds critically shapes long-term outcomes',
+          'BRANDED SLIDE: rape myth debunking slide — each myth with evidence-based refutation; tact and sensitivity required',
+        ],
+      },
+      {
+        title: 'Slide 4 — Trauma-Informed & Specialist Support',
+        bullets: [
+          'Trauma-informed care: safety, trustworthiness, choice, collaboration, empowerment, and cultural sensitivity',
+          'Specialist support: Sexual Assault Referral Centres (SARCs) — medical, forensic, and emotional support in one place',
+          'Rape Crisis: specialist counselling, advocacy and support — national network, no police reporting required',
+          'Evidence-based treatments: trauma-focused CBT, EMDR, Prolonged Exposure — all effective for sexual trauma PTSD',
+          'BRANDED SLIDE: trauma-informed care six principles; Rape Crisis logo; SARC referral pathway diagram',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources for Survivors',
+        bullets: [
+          'Rape Crisis England & Wales: 0808 500 2222 (free, Mon-Sun 8am-midnight)',
+          'SARC finder: NHS 111 or sexualassaultclinics.nhs.uk — no police reporting required',
+          'SurvivorsUK: 0203 598 3898 — specialist support for male survivors',
+          'Galop: 0800 999 5428 — LGBTQIA+ survivors of sexual violence',
+          'BRANDED SLIDE: Rape Crisis 0808 500 2222, SurvivorsUK 0203 598 3898 in large orange; SARC finder QR code',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - The Scale
+"One in four women in England and Wales has experienced rape or sexual assault as an adult. One in eighteen men. These are not rare events. They are embedded in the fabric of everyday life — and the vast majority are committed by someone the survivor knows: a partner, family member, friend, or acquaintance. The stranger-in-an-alleyway scenario that dominates cultural narratives about sexual violence represents a small minority of cases.
+
+Only around 17% of survivors report to the police. Conviction rates for rape cases that are reported are extremely low. This means the overwhelming majority of sexual violence survivors navigate the aftermath without any formal justice — and often without any support."
+
+SLIDE 2 - Mental Health Consequences
+"The mental health consequences of sexual violence are significant and often long-lasting. PTSD affects between 30 and 80% of survivors — the range reflecting the variation in type, duration, relationship to perpetrator, and level of support received. Flashbacks, nightmares, and hypervigilance are the hallmark symptoms.
+
+Where violence was prolonged, repeated, or perpetrated by an intimate partner, complex PTSD is more likely. Complex PTSD includes everything in PTSD plus profound disruption to identity and sense of self, difficulty regulating emotions, and pervasive feelings of shame and worthlessness. Dissociation — the mental experience of being separated from your own body, emotions, or memories — is a common response to overwhelming trauma. It is protective in the moment; it can become entrenched."
+
+SLIDE 3 - Shame, Blame and Disclosure
+"Self-blame is almost universal in survivors of sexual violence. It is a normal psychological response to trauma — a way the mind attempts to reassert some sense of control ('if I caused it, I can prevent it happening again'). It is not evidence of guilt. It is evidence of trauma.
+
+Rape myths — that victims' clothing, behaviour, or relationship with the perpetrator implies consent; that 'real' rape involves physical resistance; that survivors who didn't fight back or who delayed reporting are unreliable — are all evidence-free, culturally produced, and harmful. Freezing during an assault — the tonic immobility response — is a neurobiological survival mechanism. It is not consent."
+
+SLIDE 4 - Trauma-Informed Support
+"Trauma-informed care is not primarily about knowing trauma interventions. It is about how you show up: creating safety, being trustworthy, offering choices, collaborating rather than prescribing. For survivors of sexual violence, where trust and autonomy have been violated, these elements are not optional extras — they are the foundation of any useful engagement.
+
+Sexual Assault Referral Centres provide medical care, forensic examination, emotional support, and advocacy in one place — crucially, without requiring police reporting. Rape Crisis provides specialist counselling and advocacy. Trauma-focused CBT and EMDR are both NICE-recommended and highly effective for sexual trauma PTSD."
+
+SLIDE 5 - Resources
+"Rape Crisis England and Wales — 0808 500 2222 — free, seven days a week, 8am to midnight. No police reporting required. SurvivorsUK provides specialist support specifically for male survivors on 0203 598 3898. Galop supports LGBTQIA+ survivors on 0800 999 5428. SARCs can be found via NHS 111 or the NHS website."`,
+    activity: `ACTIVITY - Safe Disclosure Practice (20 minutes)
+Melksham Mental Health | Module 38 | Licensed Materials
+
+CONTENT NOTE: This activity uses fictional scenarios and does not require personal disclosure. Alert participants at the start.
+
+PURPOSE: Practise trauma-informed first responses to disclosure of sexual violence; identify and challenge rape myths.
+
+INTRODUCE: "How someone responds when a survivor discloses sexual violence can significantly shape their recovery trajectory. This activity builds the skills for a safe, trauma-informed first response."
+
+PART 1 - Rape Myth Identification (5 minutes):
+Present six statements. Participants identify which are myths and explain why:
+1. "If she was really raped, she would have reported it straight away." [Myth: most survivors delay or never report — trauma responses explain this]
+2. "Rape by a partner is still rape." [Fact: marital rape has been a crime in England since 1992]
+3. "If she didn't fight back, it might not have been rape." [Myth: tonic immobility is a neurobiological freeze response, not consent]
+4. "Male survivors are rare." [Myth: 1 in 18 men — not rare]
+5. "What she was wearing contributed to it." [Myth: no evidence base; attire does not affect risk or negate consent]
+6. "Survivors often make false allegations." [Myth: false allegation rates are 2-3%, the same as other serious crimes]
+
+PART 2 - First Response Practice in Pairs (10 minutes):
+"A colleague has told you they were raped by someone they were dating six months ago. They have not told anyone else. They are not sure whether to report."
+Draft your first response. Include:
+- Your opening words (what would you say first?)
+- How you communicate belief and non-judgement
+- Whether you mention police, and how
+- What you offer next
+
+PART 3 - Debrief (5 minutes):
+Key principles of a safe first response: believe; don't interrogate; follow their lead; mention available support without pushing; maintain confidentiality except where there is risk.`,
+    discussionPrompts: [
+      'Why do so few survivors of sexual violence report to the police, and what would need to change about the justice system for this to shift?',
+      'How do rape myths operate in everyday conversations, workplaces, and media — and what is the most effective way to challenge them?',
+      'What is the difference between a trauma-informed response and a standard supportive response — and why does it matter specifically for survivors of sexual violence?',
+      'How should organisations (workplaces, schools, community groups) respond when a member discloses sexual violence?',
+    ],
+    resources: [
+      { label: 'Rape Crisis England & Wales: 0808 500 2222 (free, Mon-Sun 8am-midnight)', url: 'https://rapecrisis.org.uk' },
+      { label: 'SurvivorsUK — male survivors: 0203 598 3898', url: 'https://www.survivorsuk.org' },
+      { label: 'Galop — LGBTQIA+ survivors: 0800 999 5428', url: 'https://galop.org.uk' },
+      { label: 'NHS SARC finder — no police reporting required', url: 'https://www.nhs.uk/service-search/other-services/Rape-and-sexual-assault-referral-centres/LocationSearch/364' },
+      { label: 'SafeLives — coercive control and sexual abuse resources', url: 'https://safelives.org.uk' },
+    ],
+    videos: [
+      { label: 'What is rape trauma syndrome? (YouTube)', url: 'https://www.youtube.com/results?search_query=rape+trauma+syndrome+PTSD+sexual+violence+explained' },
+      { label: 'Tonic immobility and freeze response in assault (YouTube)', url: 'https://www.youtube.com/results?search_query=tonic+immobility+freeze+response+sexual+assault+trauma' },
+      { label: 'Rape Crisis — supporting survivors (YouTube)', url: 'https://www.youtube.com/results?search_query=Rape+Crisis+supporting+survivors+UK' },
+    ],
+    powerPoint: `MODULE 38 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '1 in 4 women' in large orange; '85% known to victim' challenging stranger myth
+Slide 2: Four consequence boxes — PTSD / depression / complex PTSD / dissociation — orange borders
+Slide 3: Rape myth debunking — each myth crossed out with evidence-based refutation in white
+Slide 4: Six trauma-informed care principles; SARC pathway; Rape Crisis logo
+Slide 5: Rape Crisis 0808 500 2222, SurvivorsUK 0203 598 3898, Galop 0800 999 5428 in large orange
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: This module carries significant risk of personal disclosure. Establish ground rules at the start including the right to step out. Have Rape Crisis (0808 500 2222), Samaritans (116 123), and your local SARC number ready. Apply safeguarding protocols for any disclosure involving current risk.
+
+CONTENT WARNINGS: Explicitly note at the start of the session that the content includes discussion of sexual violence. Offer participants the right to step outside at any point without explanation.
+
+FACILITATION: Do not require anyone to share personal experiences. The activity uses fictional scenarios specifically to avoid this. If a participant becomes distressed, allow them space and offer to speak privately after the session.
+
+RAPE MYTHS: The myth debunking slide should be delivered with care — not as a catalogue of horrors but as evidence-based correction of culturally harmful beliefs.
+
+MALE SURVIVORS: Explicitly acknowledge male survivors early in the session. The data shows 1 in 18 men — this is not rare and deserves naming.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 39
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 39,
+    topic: 'Grief, Loss & Bereavement',
+    summary: 'Normal and complicated grief, disenfranchised loss, the neuroscience of bereavement, evidence-based support, and how to hold space for people navigating profound loss.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — Grief Is Not an Illness',
+        bullets: [
+          'Around 600,000 people die in the UK each year; each death affects on average five close bereaved people',
+          'Grief is a normal, healthy response to loss — not a pathology, not something to be fixed',
+          'The Kübler-Ross five stages model is a cultural touchstone but is not evidence-based as a sequential process',
+          'Modern grief science: grief is non-linear, individual, influenced by relationship, circumstance, culture and support',
+          'BRANDED SLIDE: "Grief is not an illness. It is the price of love." in white/orange on black — affirming opener',
+        ],
+      },
+      {
+        title: 'Slide 2 — The Neuroscience of Grief',
+        bullets: [
+          'Grief activates the same brain regions as physical pain — social loss is neurologically experienced as physical hurt',
+          'Yearning and searching: the attachment system driving us to seek the person who is gone — profoundly disorienting',
+          'Grief brain: difficulty concentrating, memory problems, time distortion — normal neurological consequences of acute loss',
+          'Grief integrates over time: the relationship with the deceased continues to evolve; grief becomes part of identity, not erased',
+          'BRANDED SLIDE: brain scan showing grief activating pain regions; "continuing bonds" concept in orange',
+        ],
+      },
+      {
+        title: 'Slide 3 — Complicated Grief & Prolonged Grief Disorder',
+        bullets: [
+          'Prolonged Grief Disorder (PGD): grief that remains acutely debilitating after 12+ months (DSM-5-TR, 2022)',
+          'Affects ~10% of bereaved people; more common after sudden, traumatic, or violent death',
+          'Features: intense yearning that does not reduce, difficulty accepting the death, inability to engage in life',
+          'Treatment: Complicated Grief Treatment (CGT) — specialised evidence-based therapy with strong outcomes',
+          'BRANDED SLIDE: normal grief curve vs PGD trajectory; CGT treatment reference',
+        ],
+      },
+      {
+        title: 'Slide 4 — Disenfranchised Grief',
+        bullets: [
+          'Disenfranchised grief: losses that are not socially recognised or validated — miscarriage, pet death, estrangement, suicide',
+          'Suicide bereavement: surviving family and friends are at elevated risk of suicide themselves (3-4x general population)',
+          'Suicide bereavement carries unique stigma, shame, unanswerable questions, and complicated grief',
+          'Perinatal loss: miscarriage and stillbirth are profound losses; frequently minimised with "you can try again"',
+          'BRANDED SLIDE: four types of disenfranchised loss with brief description; suicide bereavement warning in orange',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources for Bereaved People',
+        bullets: [
+          'Cruse Bereavement Support: 0808 808 1677 (free, Mon-Fri 9.30am-5pm) — UK\'s leading bereavement charity',
+          'Winston\'s Wish: 08088 020 021 — specialist support for bereaved children and young people',
+          'Survivors of Bereavement by Suicide (SOBS): 0300 111 5065 — helpline and peer support groups',
+          'Child Bereavement UK: 0800 02 888 40 — support for families and professionals',
+          'BRANDED SLIDE: Cruse 0808 808 1677, SOBS 0300 111 5065, Winston\'s Wish 08088 020 021 in large orange',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - Grief Is Not an Illness
+"Let me start with something that sounds obvious but is culturally contested: grief is not an illness. It is a normal, healthy, human response to loss. It is, as the saying goes, the price of love. Six hundred thousand people die in the UK each year. Each death affects on average five people who were close to them. That is three million new bereaved people every year, navigating something our culture is often profoundly ill-equipped to hold.
+
+The Kübler-Ross stages model — denial, anger, bargaining, depression, acceptance — is the most widely known framework for grief. Most of you will have heard of it. It is also not evidence-based as a sequential process. People do not move through these stages in order. Many never experience some of them. The value of the model is not in its prescription of how grief should go, but in its normalisation that grief involves many different emotional states."
+
+SLIDE 2 - The Neuroscience of Grief
+"Modern neuroscience has given us important insights into what grief does to the brain. Social loss activates the same neural regions as physical pain — the anterior cingulate cortex, the insula. This is not metaphor. When you lose someone you love, you experience something neurologically similar to physical hurt. This helps explain why the body responds to grief as it does: fatigue, immune suppression, physical aching.
+
+The attachment system — the neurobiological drive to seek and stay close to those we love — does not switch off when someone dies. It keeps searching, keeps waiting, keeps expecting. This is the experience of yearning in grief: the persistent, disorienting sense that the person is absent when every part of you expects them to be present."
+
+SLIDE 3 - Complicated Grief
+"For most bereaved people, grief is painful but follows a trajectory toward integration over weeks and months. Prolonged Grief Disorder describes the roughly 10% of bereaved people for whom this does not happen — whose grief remains as acutely debilitating at twelve months or beyond as it was in the immediate aftermath. PGD is more common after sudden, traumatic, violent death, or when the death involved suicide.
+
+The good news: Complicated Grief Treatment, developed by Shear and colleagues, is a specialised and highly effective psychological therapy for PGD. It is not widely available in the UK yet, but awareness of its existence is growing."
+
+SLIDE 4 - Disenfranchised Grief
+"Disenfranchised grief describes losses that are not socially recognised, validated, or acknowledged — and therefore receive no social permission to grieve. Miscarriage. Pet death. The death of an estranged parent. The end of a relationship. Death by suicide.
+
+Suicide bereavement is one of the most complex grief experiences there is. Surviving family and friends are at three to four times the general population risk of suicide themselves. They carry shame, stigma, unanswerable questions about what they could have done differently. They often struggle to find people who understand. SOBS — Survivors of Bereavement by Suicide — exists specifically to meet this need."
+
+SLIDE 5 - Resources
+"Cruse Bereavement Support is the UK's leading bereavement charity — 0808 808 1677, free, Monday to Friday. SOBS — Survivors of Bereavement by Suicide — provides helpline and peer support groups for this specific and underserved community on 0300 111 5065. Winston's Wish provides specialist support for bereaved children on 08088 020 021."`,
+    activity: `ACTIVITY - Holding Space for Grief (20 minutes)
+Melksham Mental Health | Module 39 | Licensed Materials
+
+PURPOSE: Develop skills in sitting with grief rather than trying to fix it; challenge cultural discomfort with grief and learn what bereaved people actually need.
+
+INTRODUCE: "Our culture is deeply uncomfortable with grief. We tend to rush past it, offer silver linings, or try to fix it. This activity builds the skill of staying with someone in their grief — without fixing, minimising, or rushing."
+
+PART 1 - What NOT to Say (5 minutes):
+In pairs, read these common responses to bereavement and discuss why each is unhelpful:
+1. "They wouldn't want you to be sad."
+2. "At least they're not suffering anymore."
+3. "You should be over it by now — it's been six months."
+4. "Everything happens for a reason."
+5. "I know how you feel — I lost my dog last year."
+6. "You're so strong. I couldn't cope like you."
+What is the underlying impulse behind each? What does each one do to the bereaved person?
+
+PART 2 - What Bereaved People Actually Need (8 minutes):
+As a whole group, brainstorm what bereaved people say is most helpful. Tutor records on whiteboard.
+Common themes: presence without pressure to talk; practical help (food, childcare, errands); remembering and naming the deceased; following their lead; asking "how are you today?" not "are you over it?"
+Key message: you do not have to say the right thing. You have to show up and stay.
+
+PART 3 - Debrief (7 minutes):
+Why are we so uncomfortable with grief? What does it bring up in us? How can we become better at holding it — in ourselves and in others?`,
+    discussionPrompts: [
+      'How does our culture\'s discomfort with death and grief affect the support we are able to offer bereaved people?',
+      'What is disenfranchised grief, and what types of loss are most commonly denied social validation — and why?',
+      'Suicide bereavement carries unique stigma and risk. What do bereaved families need that they currently cannot access?',
+      'What does "grief integration" mean — and how is it different from "getting over it" or "moving on"?',
+    ],
+    resources: [
+      { label: "Cruse Bereavement Support: 0808 808 1677 (free, Mon-Fri 9.30am-5pm)", url: 'https://www.cruse.org.uk' },
+      { label: "Winston's Wish — bereaved children: 08088 020 021", url: 'https://www.winstonswish.org' },
+      { label: 'Survivors of Bereavement by Suicide (SOBS): 0300 111 5065', url: 'https://uksobs.org' },
+      { label: 'Child Bereavement UK: 0800 02 888 40', url: 'https://www.childbereavementuk.org' },
+      { label: 'Samaritans — 116 123 (free, 24/7)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'What grief actually does to your brain (YouTube)', url: 'https://www.youtube.com/results?search_query=grief+brain+neuroscience+what+happens+when+we+grieve' },
+      { label: 'Suicide bereavement — SOBS explained (YouTube)', url: 'https://www.youtube.com/results?search_query=suicide+bereavement+SOBS+survivors+UK+support' },
+      { label: 'Complicated grief and prolonged grief disorder (YouTube)', url: 'https://www.youtube.com/results?search_query=complicated+grief+prolonged+grief+disorder+treatment' },
+    ],
+    powerPoint: `MODULE 39 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: 'Grief is not an illness. It is the price of love.' in large white/orange on black — affirming opener
+Slide 2: Brain scan image showing grief activating pain centres; 'continuing bonds' concept
+Slide 3: Normal grief curve vs PGD trajectory; CGT treatment reference in orange
+Slide 4: Four disenfranchised loss types; suicide bereavement SOBS 0300 111 5065 callout in orange
+Slide 5: Cruse 0808 808 1677, SOBS 0300 111 5065, Winston's Wish 08088 020 021 in large orange
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Grief discussions frequently surface acute distress, particularly for recently bereaved participants. Suicide bereavement carries elevated suicide risk in survivors — be attentive. Have Samaritans (116 123), Cruse (0808 808 1677), and SOBS (0300 111 5065) ready.
+
+FACILITATION: Grief is present in every room you will ever deliver in. Create explicit permission for participants to step out if they need to. Do not rush the 'holding space' activity — the experience of being listened to without being fixed is itself therapeutic.
+
+LANGUAGE: 'Died' rather than 'passed away', 'lost', or 'passed'. Direct language reduces stigma and communicates that death can be named. 'Bereaved' not 'victim of bereavement'. Acknowledge all losses — including disenfranchised ones.
+
+STAGES MODEL: Acknowledge the Kübler-Ross model because participants will know it, but be clear about its limitations as a prescriptive framework. What matters is normalising the range of grief experiences, not prescribing a sequence.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 40
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 40,
+    topic: 'Chronic Pain & Mental Health',
+    summary: 'The bidirectional relationship between chronic pain and mental health — the biopsychosocial model of pain, psychological approaches to pain management, and supporting people living with persistent pain.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Slide 1 — What Is Chronic Pain?',
+        bullets: [
+          'Chronic pain: pain persisting for 3+ months, often beyond the healing of any original injury',
+          '~28 million adults in the UK live with chronic pain — more than 40% of the population (British Pain Society)',
+          'Chronic pain is not simply "more acute pain" — it involves neurological sensitisation, central sensitisation, and altered pain processing',
+          '30-50% of people with chronic pain have comorbid depression or anxiety (WHO)',
+          'BRANDED SLIDE: "28 million people in the UK" as hero statistic in orange; chronic pain is not a character failing',
+        ],
+      },
+      {
+        title: 'Slide 2 — The Biopsychosocial Model of Pain',
+        bullets: [
+          'Biomedical model: pain = tissue damage — inadequate for chronic pain where tissue is healed but pain persists',
+          'Biopsychosocial model: pain is shaped by biological, psychological, and social factors simultaneously',
+          'Pain catastrophising: magnifying pain, ruminating on it, feeling helpless — strongly predicts disability and distress',
+          'Fear-avoidance cycle: fearing pain leads to avoiding activity leads to deconditioning leads to more pain',
+          'BRANDED SLIDE: biopsychosocial pain model diagram with biological/psychological/social contributing factors',
+        ],
+      },
+      {
+        title: 'Slide 3 — How Chronic Pain Causes Mental Illness',
+        bullets: [
+          'Sleep disruption: chronic pain disrupts sleep; poor sleep lowers pain threshold — a reinforcing cycle',
+          'Loss of role, identity and function: unable to work, parent, or do the activities that defined you',
+          'Social isolation: pain limits mobility, activities, and social participation',
+          'Medication: some pain medications (opioids) can cause or worsen depression with prolonged use',
+          'BRANDED SLIDE: pain-depression-sleep triangle with bidirectional arrows — the reinforcing cycle',
+        ],
+      },
+      {
+        title: 'Slide 4 — Psychological Approaches That Work',
+        bullets: [
+          'Pain-focused CBT: addresses catastrophising, fear-avoidance, and activity levels — NICE recommended',
+          'Acceptance and Commitment Therapy (ACT): psychological flexibility and values-based living despite pain — strong evidence',
+          'Pain management programmes (PMPs): multidisciplinary group programmes — CBT + physio + education; highly effective',
+          'Mindfulness-Based Stress Reduction (MBSR): reduces pain interference and distress — NICE-recommended for some conditions',
+          'BRANDED SLIDE: four psychological approaches with brief description and evidence level — orange headers on black',
+        ],
+      },
+      {
+        title: 'Slide 5 — UK Resources for Chronic Pain',
+        bullets: [
+          'British Pain Society: patient information and specialist service directory — britishpainsociety.org',
+          'Versus Arthritis: 0800 5200 520 — support for arthritis and musculoskeletal pain including mental health resources',
+          'Pain UK: national alliance of pain charities — painuk.org',
+          'NHS: Pain Management Programmes — referral via GP; multidisciplinary approach',
+          'BRANDED SLIDE: Versus Arthritis 0800 5200 520, Pain UK, British Pain Society logos in orange',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 - What Is Chronic Pain?
+"Twenty-eight million adults in the UK — more than 40% of the population — live with chronic pain. This is not a niche condition. It is one of the most prevalent and most debilitating health challenges in the country. And yet chronic pain is chronically underserved by healthcare systems designed for acute illness.
+
+Chronic pain is not simply 'a lot of acute pain'. It is a different phenomenon. Where acute pain is a warning signal — 'there is damage, attend to it' — chronic pain persists after any original damage has healed. It involves changes to the nervous system itself: central sensitisation, where the pain system becomes hypersensitive and fires more readily. Understanding this distinction is fundamental to understanding how we treat it."
+
+SLIDE 2 - The Biopsychosocial Model
+"The traditional biomedical model of pain — pain equals tissue damage — fails comprehensively for chronic pain. If pain only reflected tissue damage, it would resolve when tissue heals. Often it does not. The biopsychosocial model provides a far more useful framework: pain is simultaneously shaped by biological processes, psychological states, and social context.
+
+Pain catastrophising — the tendency to magnify pain, ruminate on it, and feel helpless in response — is one of the strongest psychological predictors of pain-related disability. Not because it causes pain, but because it profoundly shapes the experience of and response to it. The fear-avoidance cycle is equally important: fearing that movement will worsen pain leads to avoiding activity, which leads to physical deconditioning, which creates more pain sensitivity, which increases fear."
+
+SLIDE 3 - How Chronic Pain Causes Mental Illness
+"The mechanisms through which chronic pain causes depression and anxiety are multiple and reinforcing. Sleep disruption is primary: pain wakes people, reduces sleep quality, and poor sleep in turn lowers pain threshold — a vicious cycle. Loss of role and identity — being unable to work, to parent as you want to, to do the activities that made you who you are — is a profound grief. Social isolation follows from reduced mobility and social participation. And long-term opioid use, while offering pain relief, carries its own risks of depression and dependency."
+
+SLIDE 4 - Psychological Approaches
+"Psychological treatment for chronic pain does not mean 'the pain is in your head'. It means that the psychological component of pain experience is real, measurable, and treatable. Pain-focused CBT addresses catastrophising, fear-avoidance, and pacing. Acceptance and Commitment Therapy helps people live a valued life despite pain, rather than waiting for pain to resolve before living. Pain Management Programmes — multidisciplinary group programmes combining CBT, physiotherapy, and education — have strong evidence and are available via NHS referral. MBSR has evidence for reducing pain interference and improving wellbeing."
+
+SLIDE 5 - Resources
+"British Pain Society provides patient information and a specialist service directory. Versus Arthritis has a helpline on 0800 5200 520. Pain Management Programmes are available via NHS referral through your GP. Pain UK provides information and links to specialist charities."`,
+    activity: `ACTIVITY - The Pain Experience (20 minutes)
+Melksham Mental Health | Module 40 | Licensed Materials
+
+PURPOSE: Build understanding of the psychological and social dimensions of chronic pain; develop skills in supporting someone living with persistent pain.
+
+INTRODUCE: "Chronic pain is one of the most isolating experiences there is — in part because it is invisible to others. This activity builds empathy and practical skills."
+
+PART 1 - Small Group Mapping (7 minutes):
+Groups map the psychological and social consequences of living with chronic pain for 5 years:
+- What do you lose? (work, activity, identity, relationships)
+- What psychological states develop? (frustration, hopelessness, shame, fear)
+- How does it affect the people around you?
+- What does the healthcare system offer — and what does it fail to offer?
+
+PART 2 - Helpful and Unhelpful Responses (8 minutes in pairs):
+A friend has chronic back pain. They have cancelled plans three times because of pain flares. They say: "I just can't face the constant explaining. People either don't believe me or they get frustrated with me."
+Draft:
+- What would you say?
+- What practical things could you do that would help?
+- What would NOT help?
+Key messages: believe the pain; don't suggest cures; offer flexibility; check in without pressure.
+
+PART 3 - Debrief (5 minutes):
+What does chronic pain teach us about the limits of the biomedical model? What would person-centred chronic pain support look like?`,
+    discussionPrompts: [
+      'Why is chronic pain so frequently under-treated and dismissed — particularly in women and marginalised groups — and what are the mental health consequences?',
+      'What is the difference between "curing" chronic pain and "managing" it well — and why does this distinction matter for patient expectations and treatment approaches?',
+      'How does the fear-avoidance cycle operate, and what does breaking it require from the person with pain and from healthcare professionals?',
+      'What would a truly integrated chronic pain service look like — one that takes both the physical and psychological dimensions seriously from the outset?',
+    ],
+    resources: [
+      { label: 'British Pain Society — patient information and service directory', url: 'https://www.britishpainsociety.org' },
+      { label: 'Versus Arthritis: 0800 5200 520 — pain and mental health support', url: 'https://www.versusarthritis.org' },
+      { label: 'Pain UK — national chronic pain alliance', url: 'https://www.painuk.org' },
+      { label: 'NHS Pain Management Programmes — referral via GP', url: 'https://www.nhs.uk/conditions/chronic-pain/' },
+      { label: 'Mind — chronic pain and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/physical-activity-and-your-mental-health/' },
+    ],
+    videos: [
+      { label: 'What is chronic pain? — biopsychosocial model explained (YouTube)', url: 'https://www.youtube.com/results?search_query=chronic+pain+biopsychosocial+model+explained+central+sensitisation' },
+      { label: 'ACT for chronic pain — acceptance and commitment therapy (YouTube)', url: 'https://www.youtube.com/results?search_query=ACT+acceptance+commitment+therapy+chronic+pain' },
+      { label: 'Chronic pain and depression — the link (YouTube)', url: 'https://www.youtube.com/results?search_query=chronic+pain+depression+mental+health+link+NHS' },
+    ],
+    powerPoint: `MODULE 40 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '28 million people in the UK' in large orange; chronic pain definition on black
+Slide 2: Biopsychosocial pain model diagram — biological/psychological/social factors converging
+Slide 3: Pain-depression-sleep triangle with bidirectional arrows — the reinforcing cycle
+Slide 4: Four psychological approaches (CBT/ACT/PMP/MBSR) with evidence level — orange headers
+Slide 5: Versus Arthritis 0800 5200 520, British Pain Society, Pain UK logos in orange
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Chronic pain is closely linked to depression and suicide risk. Be attentive to signs of serious distress, particularly from participants who themselves live with chronic pain. Have Samaritans (116 123) visible.
+
+FACILITATION: Many participants will have personal or family experience of chronic pain. The pain experience mapping activity can surface significant emotion — create space for this. If participants want to discuss their own pain management, acknowledge this while redirecting to signposting rather than clinical advice.
+
+LANGUAGE: Never use 'psychosomatic' as a dismissive term. Psychological factors in pain are real and biological. Avoid 'it's all in your head'. Use 'the nervous system has become sensitised' as a more accurate framing.
+
+OPIOIDS: Handle the opioid discussion carefully — some participants may be on long-term opioid therapy. The aim is awareness, not shame.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
 ];
 
 /** Look up a single module guide by ID */
