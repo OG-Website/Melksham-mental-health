@@ -5490,6 +5490,785 @@ OPIOIDS: Handle the opioid discussion carefully — some participants may be on 
 
 LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 41
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 41,
+    topic: 'Sleep Hygiene & Circadian Health',
+    summary: 'How sleep and circadian rhythms profoundly affect mental health; practical evidence-based strategies to improve sleep quality; the impact of shift work and screens.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Why Sleep Matters for Mental Health',
+        bullets: [
+          'Sleep deprivation impairs emotional regulation, memory consolidation, and decision-making',
+          'Chronic poor sleep is both a symptom and a cause of depression, anxiety, and bipolar disorder',
+          '1 in 3 adults in the UK regularly gets less than the recommended 7–9 hours (Sleep Council)',
+          'Insomnia is one of the strongest predictors of new-onset depression (NICE CG90)',
+        ],
+      },
+      {
+        title: 'The Circadian Clock',
+        bullets: [
+          'Circadian rhythms: the body\'s internal 24-hour biological clock governed by light exposure',
+          'Suprachiasmatic nucleus (SCN) in the hypothalamus regulates melatonin release',
+          'Disruption via shift work, jet lag, or irregular schedules increases depression and anxiety risk',
+          'Blue light from screens suppresses melatonin and delays sleep onset by up to 90 minutes',
+        ],
+      },
+      {
+        title: 'Sleep Architecture',
+        bullets: [
+          'Four stages: N1, N2, N3 (deep/slow-wave) and REM (rapid eye movement)',
+          'REM sleep is critical for emotional processing — disrupted REM increases emotional reactivity',
+          'Deep sleep (N3) consolidates memory and repairs the body; most deep sleep occurs early in the night',
+          'Alcohol and many medications suppress REM sleep, worsening emotional regulation',
+        ],
+      },
+      {
+        title: 'Shift Work & Social Jetlag',
+        bullets: [
+          'Social jetlag: the misalignment between biological clock and social schedule — affects ~70% of working population',
+          'Night shift workers have significantly higher rates of depression, anxiety, and metabolic disorders',
+          'Strategies for shift workers: blackout blinds, melatonin timing, anchor sleep periods',
+          'Employers have a duty of care regarding shift rotation and mental health risk (HSE guidelines)',
+        ],
+      },
+      {
+        title: 'Evidence-Based Sleep Hygiene & CBT-I',
+        bullets: [
+          'CBT for Insomnia (CBT-I): NICE first-line treatment — more effective than medication long-term',
+          'Sleep restriction therapy: temporarily limits time in bed to consolidate sleep drive',
+          'Stimulus control: bed only for sleep and sex; get up if awake for >20 minutes',
+          'Sleep hygiene basics: consistent wake time, cool/dark/quiet room, no caffeine after 2 pm, wind-down routine',
+          'Relaxation: progressive muscle relaxation, 4-7-8 breathing, guided imagery',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Why Sleep Matters for Mental Health
+"Let's begin with what might be the most underrated mental health intervention there is: sleep. Not a pill, not a therapy — just adequate, quality sleep.
+
+One in three adults in the UK regularly gets less than the recommended seven to nine hours. That's not a minor inconvenience. Sleep deprivation impairs the prefrontal cortex — the part of the brain responsible for emotional regulation, decision-making and impulse control. When we're sleep deprived, the amygdala — our emotional alarm system — becomes hyperreactive. Small frustrations become overwhelming. Anxiety spikes. The emotional world becomes harder to navigate.
+
+Critically, the relationship runs both ways. Poor sleep causes mental ill-health; mental ill-health worsens sleep. This bidirectional relationship creates cycles that can be very difficult to break — but breaking them is possible, and this module will show you how."
+
+SLIDE 2 — The Circadian Clock
+"Your body runs on a 24-hour internal clock — the circadian rhythm — governed by light signals received by a tiny cluster of cells in the hypothalamus called the suprachiasmatic nucleus. When light hits the retina in the morning, the clock resets and melatonin production is suppressed. As it gets dark, melatonin rises and sleep pressure builds.
+
+The problem is that modern life is working against this system constantly. Artificial light — especially the blue-wavelength light emitted by phones, tablets, and laptops — is read by the brain as daylight. Research shows it can delay melatonin onset by up to 90 minutes. So late-night scrolling isn't just taking time away from sleep — it's biochemically delaying sleep."
+
+SLIDE 3 — Sleep Architecture
+"Sleep is not a uniform state. It cycles through four stages: light sleep, deeper sleep, slow-wave deep sleep, and REM — rapid eye movement sleep. REM sleep is particularly important for mental health because this is where emotional memories are processed and consolidated. Matthew Walker, a sleep researcher at Berkeley, describes REM sleep as 'overnight therapy' — it takes the emotional sting out of difficult memories.
+
+Alcohol is particularly damaging to sleep architecture. It makes you fall asleep faster — which is why people use it as a sleep aid — but it suppresses REM sleep dramatically. You get the sedation without the processing. This is one mechanism by which alcohol dependence drives emotional dysregulation and worsening mental health."
+
+SLIDE 4 — Shift Work & Social Jetlag
+"Social jetlag affects the majority of working people. It's the difference between when your body wants to sleep and when your schedule forces you to. Even a one-hour mismatch has measurable effects on mood and metabolic health.
+
+For night shift workers the challenge is more severe. They are being asked to sleep during the body's active phase — when cortisol is high and melatonin is low. The rates of depression, anxiety, cardiovascular disease, and metabolic syndrome are significantly elevated in shift workers. This is not about personal resilience — it is about biology being forced to work against itself."
+
+SLIDE 5 — Evidence-Based Sleep Hygiene & CBT-I
+"CBT for Insomnia — CBT-I — is NICE's first-line recommended treatment for chronic insomnia. It is not simply 'sleep hygiene tips'. It is a structured programme that addresses the thoughts and behaviours that perpetuate poor sleep.
+
+Sleep restriction therapy is counterintuitive but highly effective: you temporarily limit the time you spend in bed to match how much you're actually sleeping, which consolidates sleep drive. Stimulus control is about re-associating the bed with sleepiness rather than wakefulness — if you've been lying awake for twenty minutes, get up. Go somewhere quiet and dim. Return only when sleepy.
+
+The basics of sleep hygiene: a consistent wake time is the single most powerful lever — not bedtime, wake time. Keep the bedroom cool, dark, and quiet. No caffeine after 2 pm. Create a wind-down routine. These are not suggestions — they are evidence-based practices that measurably improve sleep quality."`,
+    activity: `ACTIVITY — My Sleep Audit & Sleep Window (20 minutes)
+Melksham Mental Health | Module 41 | Licensed Materials
+
+PURPOSE: Help participants identify their personal sleep patterns and design an evidence-based improvement plan.
+
+INTRODUCE: "We're going to do a brief personal sleep audit. This is private — just for you. Be honest with yourself."
+
+PART 1 — Sleep Diary Snapshot (5 minutes):
+Participants write down or estimate for the past week:
+- Typical bedtime
+- Typical wake time
+- Estimated hours of actual sleep (not just time in bed)
+- Sleep quality: 1 (very poor) to 10 (excellent)
+- Any wake-ups? How many?
+- Caffeine intake and last cup time
+- Screen use in the last hour before bed (yes/no)
+- Alcohol in the last 3 hours before bed (yes/no)
+
+PART 2 — Identify Your Biggest Disruptors (5 minutes):
+Circle your top 2 disruptors from the list:
+• Irregular schedule     • Caffeine late in the day
+• Screen use at night    • Alcohol                
+• Stress/racing thoughts • Noise or light in bedroom
+• Shift work             • Caring responsibilities
+
+PART 3 — Design Your Sleep Window (7 minutes, pairs or small groups):
+Using CBT-I principles, design a basic 2-week sleep improvement plan:
+1. Set a fixed wake time (even weekends) — stick to it
+2. Calculate your sleep window: wake time minus 7 hours = bed time
+3. Choose one behavioural change (e.g., screens off 45 min before bed)
+4. Choose one wind-down ritual (e.g., reading, progressive relaxation, warm shower)
+
+PART 4 — Share One Change (3 minutes):
+Anyone willing to share: what is the ONE change you will try this week?`,
+    discussionPrompts: [
+      'Why do you think sleep deprivation has become so normalised in modern culture — and what does that tell us about how we value mental and physical health?',
+      'How does poor sleep intersect with other mental health problems covered in this course? Can you think of examples from your own experience or observations?',
+      'What structural changes (in workplaces, schools, healthcare) would most improve sleep health at a population level?',
+      'How should healthcare professionals approach sleep problems — as a primary issue or as a symptom of something else?',
+    ],
+    resources: [
+      { label: 'NHS — Sleep and tiredness: self-help tips', url: 'https://www.nhs.uk/live-well/sleep-and-tiredness/sleep-tips/' },
+      { label: 'NICE CG90 — Insomnia: CBT-I guidance', url: 'https://www.nice.org.uk/guidance/cg90' },
+      { label: 'Sleepio — NHS-endorsed digital CBT-I programme', url: 'https://www.sleepio.com' },
+      { label: 'Sleep Council UK — sleep health information', url: 'https://sleepcouncil.org.uk' },
+      { label: 'Mind — How sleep affects mental health', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/sleep-problems/' },
+    ],
+    videos: [
+      { label: 'Why we sleep — Matthew Walker TED Talk (YouTube)', url: 'https://www.youtube.com/results?search_query=matthew+walker+why+we+sleep+ted+talk' },
+      { label: 'CBT for Insomnia explained (YouTube)', url: 'https://www.youtube.com/results?search_query=CBT+insomnia+sleep+restriction+stimulus+control+explained' },
+      { label: 'Circadian rhythms and mental health (YouTube)', url: 'https://www.youtube.com/results?search_query=circadian+rhythms+mental+health+sleep+explained' },
+    ],
+    powerPoint: `MODULE 41 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '1 in 3 adults' as large orange statistic; sleep and mental health link on black background
+Slide 2: Circadian clock diagram — 24-hour cycle with melatonin curve; blue light disruption highlighted in red
+Slide 3: Sleep architecture diagram — 4 stages labelled; REM highlighted in orange
+Slide 4: Shift work infographic — biological vs social schedule misalignment; mental health consequences
+Slide 5: CBT-I framework — 5 components in orange on black; sleep restriction, stimulus control, hygiene, cognition, relaxation
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Sleep disturbance is a key warning sign for deteriorating mental health, including suicidal ideation (insomnia is an independent risk factor for suicide). If a participant describes severe, prolonged insomnia with distress, signpost to GP and keep Samaritans (116 123) visible.
+
+FACILITATION: Many participants will have personal experience of sleep problems. Validate this — poor sleep is not a character failing. Avoid framing it as simple willpower. Some participants may be carers or parents with broken sleep beyond their control — acknowledge structural barriers.
+
+SHIFT WORK: Handle sensitively. Some participants may be current shift workers. The goal is awareness and harm reduction strategies, not blame.
+
+MEDICATION: Some participants may be using prescription sleep medication or over-the-counter remedies. Do not advise on medication changes — redirect to GP.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 42
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 42,
+    topic: 'Nutrition, Exercise & Mental Health',
+    summary: 'The evidence linking physical activity and diet to mental health outcomes; practical guidance on movement and nutrition as accessible, effective tools for wellbeing.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Exercise as Medicine for the Mind',
+        bullets: [
+          'Physical activity reduces symptoms of depression by ~30% — comparable to antidepressants for mild-moderate depression (NICE PH44)',
+          'Mechanisms: endorphins, BDNF (brain-derived neurotrophic factor), cortisol reduction, social connection, improved sleep',
+          'Even walking 30 minutes 3× per week has significant measurable effects on depression and anxiety',
+          'Exercise is effective across all ages; reduces dementia risk by up to 30% (Lancet Commission)',
+        ],
+      },
+      {
+        title: 'Barriers to Exercise',
+        bullets: [
+          'Mental illness itself creates barriers: low motivation, fatigue, social anxiety, hopelessness',
+          'Depression\'s hallmark symptom is anhedonia — the loss of pleasure in previously enjoyed activities',
+          'Behavioural activation: starting small, with structure; exercise as a scheduled activity',
+          'Social prescribing: GPs can refer to exercise on prescription, walking groups, community sport',
+        ],
+      },
+      {
+        title: 'The Gut-Brain Axis',
+        bullets: [
+          'The gut produces ~90% of the body\'s serotonin; trillions of gut microbiota communicate with the brain via the vagus nerve',
+          'Gut microbiome diversity is associated with lower rates of depression and anxiety',
+          'Ultra-processed food diets are linked to higher depression risk; Mediterranean-style diets are protective',
+          'Emerging field of nutritional psychiatry — promising but evidence still developing; no single "superfood"',
+        ],
+      },
+      {
+        title: 'Key Nutritional Factors',
+        bullets: [
+          'Omega-3 fatty acids (oily fish, flaxseeds): anti-inflammatory; linked to lower depression risk',
+          'Vitamin D deficiency: strongly associated with depression; ~1 in 5 UK adults are deficient (NHS)',
+          'B vitamins (B12, folate): essential for neurotransmitter synthesis; low B12 linked to cognitive decline and depression',
+          'Iron deficiency: causes fatigue, poor concentration, low mood — particularly common in women',
+          'Ultra-processed foods: associated with 20–30% higher depression risk in observational studies',
+        ],
+      },
+      {
+        title: 'Practical Recommendations',
+        bullets: [
+          'UK Chief Medical Officers: 150 minutes moderate exercise per week OR 75 minutes vigorous',
+          'Any movement is better than none — breaking up sitting time has independent mental health benefits',
+          'Food first: prioritise varied whole foods; Mediterranean-style eating pattern is best-evidenced',
+          'Vitamin D: NHS recommends 10 micrograms supplement daily for all UK adults October–March',
+          'Social eating has mental health benefits beyond nutrition — shared meals strengthen connection',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Exercise as Medicine for the Mind
+"One of the most reliable, accessible, side-effect-free interventions for depression is also the most underused. Physical activity. NICE — the National Institute for Health and Care Excellence — recommends structured group exercise as a first-line treatment for mild to moderate depression. The evidence base is now substantial: a comprehensive meta-analysis found that exercise reduces depression symptoms by around 30%, comparable to antidepressants, without the side effects or the waiting lists.
+
+What's the mechanism? Several. Exercise triggers the release of endorphins — the natural opioids — and serotonin. More importantly, it stimulates the production of BDNF — brain-derived neurotrophic factor — sometimes called 'fertiliser for the brain'. BDNF promotes the growth of new neurons and strengthens synaptic connections, particularly in the hippocampus, which is involved in mood regulation and memory. Depression is associated with hippocampal shrinkage. Exercise literally helps rebuild it."
+
+SLIDE 2 — Barriers to Exercise
+"The cruel paradox of depression is that its core symptoms — low motivation, fatigue, anhedonia, social withdrawal — are exactly the barriers to the activity that would most help. This is not laziness. This is the illness itself.
+
+Behavioural activation is a CBT-based technique designed specifically for this. The principle: don't wait to feel motivated before acting. Act first; the motivation follows. Start with tiny, structured steps. A ten-minute walk. Three times a week. Put it in the diary as a non-negotiable appointment. The goal is not fitness — it's mood regulation.
+
+Social prescribing is a growing approach in UK primary care: GPs can refer patients to walking groups, community exercise programmes, or park run — all activities that combine movement with social connection. Both are independently protective against depression."
+
+SLIDE 3 — The Gut-Brain Axis
+"This is one of the most exciting — and one of the most overhyped — areas in mental health research. The gut-brain axis is the bidirectional communication system between the gut and the brain. Here's the extraordinary fact: approximately 90% of the body's serotonin is produced in the gut, not the brain. The vagus nerve carries signals both ways.
+
+The gut microbiome — the trillions of bacteria that live in the digestive system — plays a role in this communication. Research shows that people with more diverse gut microbiomes tend to have lower rates of depression and anxiety. Ultra-processed food diets reduce microbiome diversity; varied whole food diets support it.
+
+A word of caution: nutritional psychiatry is a genuinely promising field, but it is still emerging. The research is largely observational — it shows associations, not always causation. We should not replace proven treatments with dietary advice. But we can confidently say: what you eat affects how you feel, and that's worth taking seriously."
+
+SLIDE 4 — Key Nutritional Factors
+"There are several specific nutritional factors with decent evidence. Omega-3 fatty acids — found in oily fish, flaxseeds, and walnuts — are anti-inflammatory and have been consistently associated with lower depression risk in observational studies.
+
+Vitamin D deficiency is highly prevalent in the UK — around 1 in 5 adults — because our latitude means we don't get sufficient sun exposure for much of the year. Deficiency is strongly associated with low mood, fatigue, and depression. The NHS recommends that all UK adults supplement with 10 micrograms of vitamin D daily between October and March.
+
+Ultra-processed foods — those with long ingredient lists full of additives, emulsifiers, flavourings — are associated with a 20 to 30% higher risk of depression in large observational studies. We don't fully understand why, but gut microbiome disruption is one likely mechanism."
+
+SLIDE 5 — Practical Recommendations
+"The good news is that the recommendations here are straightforward and compatible with any budget. The UK Chief Medical Officers recommend 150 minutes of moderate activity per week — that's 30 minutes five days a week — or 75 minutes of vigorous activity. But any movement matters. Breaking up long periods of sitting with five-minute walks has measurable independent benefits.
+
+On food: a Mediterranean-style eating pattern — rich in vegetables, legumes, whole grains, olive oil, oily fish, and nuts, low in ultra-processed foods — is the best-evidenced dietary pattern for mental health. Supplement vitamin D through winter. Eat with other people when you can — social meals have mental health benefits that go beyond the food itself."`,
+    activity: `ACTIVITY — The Wellbeing Wheel: Movement & Food (20 minutes)
+Melksham Mental Health | Module 42 | Licensed Materials
+
+PURPOSE: Support participants to reflect on their own physical activity and dietary patterns and design one evidence-based change.
+
+INTRODUCE: "This is a private reflection activity. There is no right answer. The goal is awareness, not judgment."
+
+PART 1 — Movement Audit (5 minutes):
+Rate honestly (1–10) your current level of:
+- Weekly physical activity (total minutes)
+- Intensity (gentle/moderate/vigorous)
+- How much you enjoy your movement
+- How much movement you get for mental health vs physical fitness
+- Barriers you face (time, motivation, cost, access, health, anxiety about exercise)
+
+PART 2 — Food Reflection (5 minutes):
+Think about the past week:
+- How many portions of vegetables/fruit per day on average?
+- How often did you eat ultra-processed food (ready meals, crisps, fast food)?
+- Did you eat alone most of the time or with others?
+- Are there foods you eat when stressed that you know aren't helping?
+- Rate your overall diet quality: 1 (very poor) to 10 (excellent)
+
+PART 3 — One Commitment Each (7 minutes, small groups):
+Share with your group one movement and one food commitment:
+"This week I will [specific movement goal]."
+"This week I will [specific food goal]."
+Groups help each other make goals SMART: Specific, Measurable, Achievable, Relevant, Time-bound.
+
+PART 4 — Barrier Problem-Solving (3 minutes):
+Group identifies the most common barrier mentioned and brainstorms 3 practical solutions.`,
+    discussionPrompts: [
+      'Why is physical activity so underused as a mental health intervention despite strong evidence — what systemic and cultural barriers are in the way?',
+      'What does it mean to describe food and exercise as "medicine"? What are the risks of this framing as well as the benefits?',
+      'How do social inequalities (income, area, disability) affect access to healthy food and safe exercise spaces — and what should services do about this?',
+      'Have you personally experienced a link between what you eat or how much you move and your mental state? What did you notice?',
+    ],
+    resources: [
+      { label: 'NHS — Exercise for depression', url: 'https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/exercise-for-depression/' },
+      { label: 'Mind — Physical activity and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/physical-activity-and-your-mental-health/' },
+      { label: 'NICE PH44 — Exercise referral schemes', url: 'https://www.nice.org.uk/guidance/ph44' },
+      { label: 'NHS — Vitamin D: why we need it', url: 'https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-d/' },
+      { label: 'Mental Health Foundation — Diet and mental health', url: 'https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/food-and-mental-health' },
+    ],
+    videos: [
+      { label: 'Exercise and depression — the evidence (YouTube)', url: 'https://www.youtube.com/results?search_query=exercise+depression+evidence+NHS+mental+health' },
+      { label: 'Gut-brain axis explained (YouTube)', url: 'https://www.youtube.com/results?search_query=gut+brain+axis+mental+health+explained' },
+      { label: 'Nutritional psychiatry — what the research says (YouTube)', url: 'https://www.youtube.com/results?search_query=nutritional+psychiatry+depression+diet+evidence' },
+    ],
+    powerPoint: `MODULE 42 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '30% reduction in depression' as large orange statistic; exercise-as-medicine on black
+Slide 2: Behavioural activation cycle diagram — action precedes motivation; barrier list on right
+Slide 3: Gut-brain axis infographic — vagus nerve, microbiome, serotonin production percentage
+Slide 4: 5 nutritional factors icons with brief evidence summary; vitamin D highlighted
+Slide 5: Two clear columns — Movement recommendations | Food recommendations — on black
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Exercise and food discussions can trigger eating disorder symptoms in vulnerable participants. Avoid language about weight, calories, or body shape. Keep the focus entirely on mental health outcomes and wellbeing, never appearance or weight loss.
+
+FACILITATION: Some participants may have physical disabilities or health conditions that limit exercise. Be inclusive in language — use "movement" broadly, including chair-based exercise, swimming, or gardening. Acknowledge that access to safe exercise spaces is not equal.
+
+EATING DISORDERS: If any participant appears to be distressed by food discussions or exhibits signs of disordered eating, speak with them privately afterwards and signpost to Beat (0808 801 0677).
+
+POVERTY AND ACCESS: Many participants may be in financial difficulty. Avoid assumptions about access to gyms or expensive food. Highlight free resources: park run, NHS couch-to-5k app, walking.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 43
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 43,
+    topic: 'Mindfulness, Meditation & Breathwork',
+    summary: 'The neuroscience and clinical evidence for mindfulness; practical breathwork and meditation techniques; MBSR and MBCT in NHS settings.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'What Is Mindfulness?',
+        bullets: [
+          'Mindfulness: paying deliberate, non-judgemental attention to the present moment (Jon Kabat-Zinn)',
+          'Ancient roots in Buddhist contemplative practice; secularised and clinically validated from 1970s',
+          'Not relaxation, not emptying the mind — noticing thoughts without being consumed by them',
+          'Brain changes: regular practice thickens the prefrontal cortex and reduces amygdala reactivity',
+        ],
+      },
+      {
+        title: 'The Evidence Base',
+        bullets: [
+          'Mindfulness-Based Stress Reduction (MBSR): 8-week programme; strong evidence for anxiety, chronic pain, stress reduction',
+          'Mindfulness-Based Cognitive Therapy (MBCT): NICE-recommended for recurrent depression; reduces relapse by ~43% in 3+ episode depression',
+          'Over 700 RCTs published on mindfulness interventions; effect sizes comparable to antidepressants for anxiety',
+          'Caution: mindfulness is not appropriate for all; can be destabilising for trauma and some psychosis presentations',
+        ],
+      },
+      {
+        title: 'The Neuroscience',
+        bullets: [
+          'Default Mode Network (DMN): the "mind-wandering" network, active when not focused; overactive in depression (self-referential rumination)',
+          'Mindfulness reduces DMN activity — interrupts rumination loops',
+          'Insula activation increases: improves interoception (awareness of internal body states)',
+          'Anterior cingulate cortex: improved attention regulation and error monitoring',
+        ],
+      },
+      {
+        title: 'Breathwork Techniques',
+        bullets: [
+          'Physiological sigh: double inhale through nose, long exhale through mouth — fastest known way to reduce stress',
+          '4-7-8 breathing: inhale 4 counts, hold 7, exhale 8 — activates parasympathetic nervous system',
+          'Box breathing (4-4-4-4): used by military for high-stress situations; reduces cortisol rapidly',
+          'Diaphragmatic breathing: slow, deep, belly breathing — counters the shallow chest breathing of anxiety',
+        ],
+      },
+      {
+        title: 'Starting a Mindfulness Practice',
+        bullets: [
+          'Start with 5–10 minutes daily — consistency matters more than duration',
+          'Apps: Headspace, Calm, Insight Timer (free), NHS-approved Daylight for anxiety',
+          'MBCT available free via NHS Talking Therapies (formerly IAPT) in most areas',
+          'Body scan, breath awareness, mindful walking: three accessible starting points',
+          'Non-judgement is the key skill — noticing you\'ve wandered and gently returning IS the practice',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is Mindfulness?
+"Mindfulness has become one of those words that means everything and nothing — branded onto everything from yoga mats to corporate wellness programmes. So let's be precise about what it actually is.
+
+Jon Kabat-Zinn, who brought mindfulness into clinical medicine in the 1970s, defined it as 'paying attention in a particular way: on purpose, in the present moment, and non-judgementally.' Three elements. On purpose — it's deliberate, not accidental. In the present moment — not ruminating on the past or worrying about the future. And non-judgementally — noticing experience without immediately labelling it as good or bad.
+
+Mindfulness is not relaxation, although relaxation may be a byproduct. It is not about emptying your mind — that's not actually possible and is not the goal. It is about noticing the constant stream of thoughts and sensations without being swept away by them. Thoughts arise — you notice them — you return to the present moment. That's it."
+
+SLIDE 2 — The Evidence Base
+"Mindfulness-Based Cognitive Therapy — MBCT — is now a NICE-recommended treatment specifically for recurrent depression. The evidence is compelling: for people who have had three or more episodes of depression, MBCT reduces the rate of relapse by approximately 43%. That is a substantial effect for a non-pharmacological intervention.
+
+Mindfulness-Based Stress Reduction — MBSR — the original eight-week programme — has strong evidence for anxiety, chronic pain, cancer-related distress, and general stress reduction. Over 700 randomised controlled trials have now been published on mindfulness interventions.
+
+A caveat, and this is important: mindfulness is not appropriate for everyone. For people with unprocessed trauma, entering a state of body awareness and present-moment focus can be destabilising rather than helpful. For some people with psychosis, certain mindfulness practices can be unhelpful. Good clinical practice involves assessing readiness before prescribing mindfulness."
+
+SLIDE 3 — The Neuroscience
+"Why does mindfulness work? Neuroscience is beginning to show us. The Default Mode Network — the DMN — is the set of brain regions that are most active when we're not focused on a specific task. It's the mind-wandering network. In depression, the DMN is overactive, producing the repetitive self-referential thinking — rumination — that is a hallmark of the condition. 'I'm worthless. I've failed. Things will never improve.' Round and round.
+
+Mindfulness practice reduces DMN activity. It doesn't switch it off — that would be unhelpful — but it loosens the hold of that rumination loop. Regular practitioners show measurable thickening of the prefrontal cortex — the seat of executive function and emotional regulation — and reduced reactivity in the amygdala. The brain is literally being reshaped by practice."
+
+SLIDE 4 — Breathwork Techniques
+"Breathwork is perhaps the most immediately accessible tool in this module — because you can do it anywhere, any time, with no equipment and no training.
+
+The physiological sigh is a double inhale through the nose — a short sniff at the top of a normal inhale — followed by a long, slow exhale through the mouth. Research from Stanford shows it is the fastest known way to return the nervous system to a calm state. Your body does this spontaneously when you've been crying or stressed — it's an automatic reset.
+
+4-7-8 breathing: inhale for 4 counts, hold for 7, exhale for 8. The long exhale activates the parasympathetic nervous system — the 'rest and digest' system that is the antidote to the fight-or-flight stress response.
+
+Box breathing is used by US Navy SEALs in high-stress situations: 4 counts in, 4 hold, 4 out, 4 hold. The regularity creates calm regardless of the content of your thoughts."
+
+SLIDE 5 — Starting a Practice
+"The single most important thing about starting a mindfulness practice is consistency over duration. Five minutes every day beats 45 minutes once a week. The neural changes are driven by repetition.
+
+NHS Talking Therapies — the primary care psychological therapies service — provides MBCT in most areas of England, and it is free. There are also excellent apps: Headspace and Calm are popular and well-produced, though not free. Insight Timer is free and has thousands of guided meditations. The NHS-approved Daylight app is specifically designed for anxiety and is free to NHS users.
+
+When you sit down to practise and find your mind has wandered — which it will, constantly, especially at first — the moment you notice you've wandered is not a failure. It IS the practice. That moment of noticing, of gently returning — that is the exact mental muscle you are training."`,
+    activity: `ACTIVITY — Live Breathwork & Body Scan (20 minutes)
+Melksham Mental Health | Module 43 | Licensed Materials
+
+PURPOSE: Give participants a direct, embodied experience of breathwork and body scan mindfulness. Evidence shows brief experiential practice is more effective than purely didactic teaching.
+
+SAFETY NOTE: Always give participants explicit permission to opt out and observe if any technique feels uncomfortable. Never force any practice.
+
+PART 1 — Physiological Sigh (3 minutes):
+"We'll start with the simplest technique. If you're comfortable, close your eyes or soften your gaze downward.
+Take a normal breath in through your nose... and at the top, take one more short sniff in to fully expand the lungs.
+Now release slowly through your mouth — all the way out.
+Do this three times at your own pace."
+[Pause for practice]
+"Notice any change in how you feel compared to 3 minutes ago."
+
+PART 2 — Box Breathing (4 minutes):
+"Now we'll try box breathing. I'll count for you.
+Breathe in through your nose: 1... 2... 3... 4
+Hold: 1... 2... 3... 4
+Out through your mouth: 1... 2... 3... 4
+Hold: 1... 2... 3... 4
+We'll do four rounds together."
+[Guide through 4 rounds]
+
+PART 3 — Brief Body Scan (8 minutes):
+Guide a body scan starting at the feet and moving slowly upward. Use these prompts:
+"Notice the soles of your feet... the temperature, any pressure, any sensation... not trying to change anything, just noticing...
+Now your lower legs... calves... knees...
+[Continue moving upward through the body]
+If your mind wanders, that's completely normal — just gently bring your attention back without any self-criticism...
+When you're ready, take a deeper breath and open your eyes."
+
+PART 4 — Debrief (5 minutes):
+- What did you notice during the practice?
+- Was there anything difficult or uncomfortable?
+- Did anything shift, even slightly, in how you feel?`,
+    discussionPrompts: [
+      'What is the difference between mindfulness as a clinical intervention and mindfulness as a commercial wellness product — and does that distinction matter?',
+      'Why might mindfulness be unhelpful or even harmful for some people — and how should practitioners screen for this?',
+      'How accessible is mindfulness to people who are acutely unwell, in poverty, or without digital access? What are the equity issues?',
+      'Has anyone in the group tried a regular meditation practice? What helped it stick — or what got in the way?',
+    ],
+    resources: [
+      { label: 'NHS Talking Therapies — MBCT and mindfulness programmes', url: 'https://www.nhstalking therapies.nhs.uk' },
+      { label: 'Be Mindful — NICE-approved online MBSR course (low cost)', url: 'https://www.bemindful.co.uk' },
+      { label: 'Mind — Mindfulness information and resources', url: 'https://www.mind.org.uk/information-support/drugs-and-treatments/mindfulness/' },
+      { label: 'Insight Timer — free guided meditations app', url: 'https://insighttimer.com' },
+      { label: 'Mental Health Foundation — mindfulness report', url: 'https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/mindfulness' },
+    ],
+    videos: [
+      { label: 'What is mindfulness? — Jon Kabat-Zinn (YouTube)', url: 'https://www.youtube.com/results?search_query=jon+kabat+zinn+mindfulness+what+is+it' },
+      { label: 'The science of mindfulness — neuroscience explained (YouTube)', url: 'https://www.youtube.com/results?search_query=mindfulness+neuroscience+default+mode+network+amygdala' },
+      { label: 'Physiological sigh — Andrew Huberman (YouTube)', url: 'https://www.youtube.com/results?search_query=physiological+sigh+andrew+huberman+stress+reduction' },
+    ],
+    powerPoint: `MODULE 43 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Kabat-Zinn definition in large white text on black; three elements highlighted in orange
+Slide 2: '43% relapse reduction' as key orange statistic; MBCT vs standard care comparison
+Slide 3: Brain diagram — Default Mode Network highlighted; before/after mindfulness practice comparison
+Slide 4: Four breathwork techniques as cards — icons with count patterns in orange on black
+Slide 5: Starting guide — apps, NHS access, tips for consistency; simple steps on black background
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Mindfulness practice can surface difficult emotions or trauma memories, especially during body scan. Ensure participants know they can open their eyes, stop at any time, or step out. Have support signposting available. After the activity, allow a short grounding period before moving on.
+
+TRAUMA: Do not push body-based practices with participants who have disclosed trauma or PTSD. Offer open-eye, movement-based, or object-focused alternatives.
+
+PSYCHOSIS: Mindfulness is generally not recommended for people currently experiencing psychosis or who have a history of psychosis-related dissociation. If you know this about a participant, offer them an alternative activity.
+
+CULTURAL SENSITIVITY: Mindfulness has Buddhist roots. Some participants from certain religious backgrounds may have concerns. Acknowledge the secular clinical context clearly.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 44
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 44,
+    topic: 'Creative Arts & Expressive Therapies',
+    summary: 'How art, music, movement, and writing support mental health; evidence for arts therapies; hands-on expressive exercises accessible to everyone.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Why Creative Expression Matters',
+        bullets: [
+          'Creative expression allows processing of experiences that are difficult to put into words',
+          'Trauma is often stored somatically — art, movement and music can access non-verbal emotional material',
+          'Creativity activates reward pathways; flow states reduce rumination and anxiety',
+          'Social prescribing: arts and cultural activities prescribed by GPs to improve wellbeing (NHS England)',
+        ],
+      },
+      {
+        title: 'Art Therapy',
+        bullets: [
+          'Facilitated by HCPC-registered art therapists — distinct from art classes',
+          'Used in PTSD, eating disorders, dementia, autism, chronic pain, psychosis',
+          'Does not require artistic skill — process over product; the making matters, not the result',
+          'Evidence: significant reductions in PTSD symptoms; improved self-esteem and emotional regulation',
+        ],
+      },
+      {
+        title: 'Music Therapy',
+        bullets: [
+          'Active (playing/singing) and receptive (listening) approaches; facilitated by HCPC-registered therapists',
+          'Strong evidence in dementia: reduces agitation, improves mood, activates autobiographical memory',
+          'Used in autism, depression, anxiety, palliative care, acquired brain injury',
+          'Even informal music use — playlist creation, singing in groups — has measurable mood benefits',
+        ],
+      },
+      {
+        title: 'Movement & Writing Therapies',
+        bullets: [
+          'Dance/movement therapy: uses the body as a vehicle for emotional expression and integration',
+          'Five Rhythms, Biodanza, authentic movement — group movement practices with therapeutic principles',
+          'Expressive writing (Pennebaker paradigm): 15–20 minutes of free emotional writing over 3–4 days reduces distress and improves wellbeing',
+          'Journaling: accessible daily practice; reduces anxiety, improves mood, supports trauma processing',
+        ],
+      },
+      {
+        title: 'Accessing Arts Therapies in the UK',
+        bullets: [
+          'NHS: art therapy available via CMHT referral, in CAMHS, dementia care, eating disorder units',
+          'Social prescribing link workers: can connect to community arts projects, choirs, creative writing groups',
+          'Arts Council England: funds community arts and wellbeing projects',
+          'Online: Art Therapy Online; Open Arts; Cultural Care organisations',
+          'DIY approaches: sketchbooks, free-writing, playlists, movement — no referral needed',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Why Creative Expression Matters
+"Not everything that happens to us can be put into words. Trauma, grief, joy, love — the most profound human experiences are often the ones that language struggles to contain. Creative expression gives us other routes: through making, moving, sounding, writing.
+
+There's solid neuroscience behind this. Trauma is stored not just as narrative memory but as sensory and bodily experience — what Peter Levine calls 'somatic memory'. Talk therapy accesses the verbal parts of the brain. Art, music, and movement can reach the parts that language doesn't get to.
+
+And there's something else: creative flow. When we're absorbed in making something — painting, playing music, writing, dancing — the default mode network quietens. The rumination loop that drives anxiety and depression is interrupted. This isn't incidental to creativity. It is one of its primary mental health mechanisms."
+
+SLIDE 2 — Art Therapy
+"Art therapy is not an art class. The goal is not to produce good art — it's to use the process of making as a vehicle for exploring and expressing internal experience. HCPC-registered art therapists are clinically trained mental health professionals who happen to work with creative media.
+
+Art therapy has evidence across a remarkably wide range of presentations. For PTSD, it allows processing of traumatic material through imagery without needing to narrate it directly — which can be safer for some people. For eating disorders, it can help explore body image in non-verbal ways. For dementia, it provides connection and creative engagement long after verbal communication becomes limited.
+
+One of the most important things to communicate to participants who might be hesitant: you don't need to be able to draw. You do not need any artistic skill whatsoever. This is not about technical ability."
+
+SLIDE 3 — Music Therapy
+"Music and the brain have a remarkable relationship. Music activates more areas of the brain simultaneously than almost any other activity. It accesses autobiographical memory in profound ways — people with advanced dementia who may not recognise their family can often still sing every word of a song from their youth.
+
+Music therapy has some of its strongest evidence in dementia care: it significantly reduces agitation, improves mood, and temporarily restores communicative capacity. But it is also used with autism, depression, anxiety, premature infants in NICU, and people in palliative care.
+
+Even informal music use has measurable benefits. Creating playlists for different emotional states — what some researchers call 'musical first aid' — is an accessible, free mental health tool. Singing in groups combines music with social connection and physical benefits (controlled breathing, posture). The evidence for community choirs as a mental health intervention is growing."
+
+SLIDE 4 — Movement & Writing Therapies
+"Dance and movement therapy uses the body as the primary medium for therapeutic work. The premise is that mind and body are inseparable — that emotion is always physically expressed, even when suppressed. Dance therapists help clients become aware of and work with habitual movement patterns that may reflect psychological material.
+
+For those who find body-based work too exposing, expressive writing is a profoundly accessible alternative. James Pennebaker's research — starting in the 1980s and replicated hundreds of times since — showed that writing about difficult emotional experiences for just 15 to 20 minutes a day over three to four days produces measurable improvements in psychological wellbeing, immune function, and even academic performance. The key is to write about both the facts and the feelings — not just a diary of events, but emotional processing."
+
+SLIDE 5 — Accessing Arts Therapies in the UK
+"Arts therapies are available through the NHS — primarily via Community Mental Health Teams, CAMHS, eating disorder services, and dementia care settings — but access varies significantly by area. Social prescribing is expanding access: link workers in GP practices can refer people to community arts projects, choirs, creative writing workshops, and gallery programmes.
+
+For anyone who wants to start without a referral: a sketchbook and some pens, a free-writing notebook, a playlist, a dance in your kitchen — these are legitimate starting points. The therapeutic benefit is in the doing, not in the product, and not exclusively in the formal clinical setting."`,
+    activity: `ACTIVITY — Expressive Arts Taster (20 minutes)
+Melksham Mental Health | Module 44 | Licensed Materials
+
+PURPOSE: Give participants a direct, low-barrier experience of three expressive arts approaches. No skill required — process over product.
+
+SAFETY NOTE: These activities can evoke emotion. Participants have full permission to modify, skip, or simply observe. Remind the group of the ground rules.
+
+OPTION A — Visual Expression (7 minutes):
+Provide paper and pens/markers (or ask participants to draw on any available paper/phone notepad).
+Instruction: "Without thinking about it too hard, draw or doodle how you are feeling right now. This is not about artistic ability — it might be shapes, colours, scribbles, a symbol, or something representational. You have 5 minutes."
+After drawing, participants write one sentence underneath: "When I look at this, I notice..."
+Optional brief share: "Anyone who wants to, describe your image — not what it 'means', just what you notice."
+
+OPTION B — Free-Writing (7 minutes):
+Instruction: "Write continuously for 5 minutes. Start with 'Right now I feel...' and keep writing without stopping to edit or cross things out. If you run out of things to say, write 'I don't know what to write' until something else comes. No one will read this — this is only for you."
+After writing: fold the paper. Participants can take it away or destroy it.
+Brief reflection: "Did anything surprise you in what came out?"
+
+OPTION C — Sound/Music Response (6 minutes):
+Play a short piece of music (2–3 minutes — choose something ambient and non-triggering, e.g. slow classical, nature sounds, or a simple melodic piece).
+Instruction: "As you listen, let your attention rest on what the music evokes — images, memories, feelings, colours, textures. Just notice. Don't try to analyse."
+Afterwards: share one word that captures what the music brought up.`,
+    discussionPrompts: [
+      'Why do you think creative arts therapies are often seen as "soft" or less serious than talking therapies — and what does this reveal about how we value different ways of knowing and healing?',
+      'Have you ever used a creative activity (music, writing, drawing, dance) to process difficult feelings? What happened?',
+      'How might arts therapies be especially valuable for people who find verbal therapies difficult — for example, children, people with learning disabilities, trauma survivors, or those from cultures with less verbal therapeutic tradition?',
+      'What would it look like to make arts therapies genuinely accessible — not just a luxury for those with NHS referrals or who can pay privately?',
+    ],
+    resources: [
+      { label: 'British Association of Art Therapists (BAAT)', url: 'https://www.baat.org' },
+      { label: 'British Association for Music Therapy (BAMT)', url: 'https://www.bamt.org' },
+      { label: 'Association for Dance Movement Psychotherapy UK', url: 'https://www.admp.org.uk' },
+      { label: 'NHS — Social prescribing: arts and wellbeing', url: 'https://www.england.nhs.uk/personalisedcare/social-prescribing/' },
+      { label: 'Mental Health Foundation — the arts and mental health', url: 'https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/arts-and-mental-health' },
+    ],
+    videos: [
+      { label: 'What is art therapy? — BAAT introduction (YouTube)', url: 'https://www.youtube.com/results?search_query=what+is+art+therapy+BAAT+introduction' },
+      { label: 'Music therapy and dementia — the evidence (YouTube)', url: 'https://www.youtube.com/results?search_query=music+therapy+dementia+evidence+NHS' },
+      { label: 'Expressive writing and mental health — Pennebaker research (YouTube)', url: 'https://www.youtube.com/results?search_query=pennebaker+expressive+writing+mental+health+research' },
+    ],
+    powerPoint: `MODULE 44 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Creative arts collage imagery on black; 'process over product' as orange tagline
+Slide 2: Art therapy examples — abstract images; HCPC credential highlighted; 'no artistic skill needed'
+Slide 3: Music and brain activity diagram; dementia evidence statistic in large orange
+Slide 4: Two columns — Movement therapies | Writing therapies — Pennebaker stat highlighted
+Slide 5: Access pathway diagram — NHS referral, social prescribing, self-directed; orange flow chart
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Creative activities can unexpectedly surface distressing material — trauma memories, grief, or difficult emotions may arise without warning. Be attentive during and after the activity. Give participants time to ground themselves before moving on.
+
+FACILITATION: The key message to communicate repeatedly: no skill or experience required. Anticipate participants saying 'I can't draw' or 'I'm not creative'. Respond: 'You don't need to be. This is about expression, not quality.'
+
+TRAUMA CONSIDERATIONS: Expressive arts can be powerful for trauma processing, but should not be used as trauma therapy without appropriate training. If a participant begins to dissociate or appears overwhelmed, gently offer grounding (feet on floor, name three things you can see) and a break.
+
+DIVERSITY: Music and art have culturally specific meanings. Be sensitive to cultural context when using examples or playing music.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 45
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 45,
+    topic: 'Technology & Mental Health: Screen Time, Gaming & Social Media',
+    summary: 'Evidence on how smartphones, social media, and gaming affect mental health; digital addiction; gaming disorder; practical strategies for healthier technology use.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Technology and the Modern Mind',
+        bullets: [
+          'Average UK adult spends 6+ hours per day on screens; teenagers 7–9 hours (Ofcom 2023)',
+          'Smartphones are designed to maximise engagement — variable reward schedules mimic slot machine psychology',
+          'Digital technology has transformed social connection, work, health access — not inherently harmful',
+          'The question is not screens vs no screens but quality and context of use',
+        ],
+      },
+      {
+        title: 'Social Media & Mental Health',
+        bullets: [
+          'Meta internal research (2021): Instagram makes 32% of teenage girls feel worse about their bodies',
+          'Social comparison theory: upward comparison on curated feeds drives envy, inadequacy, depression',
+          'FOMO (fear of missing out) and constant availability increase anxiety and reduce downtime',
+          'Evidence is mixed: some studies show social connection benefits; passive scrolling is most harmful',
+          'Adolescent girls most vulnerable; association with self-harm and eating disorders is significant',
+        ],
+      },
+      {
+        title: 'Gaming & Gaming Disorder',
+        bullets: [
+          'WHO ICD-11 (2022): Gaming Disorder classified as a mental health condition — persistent gaming causing significant impairment',
+          'Estimated 1–3% of gamers meet criteria; risk factors include pre-existing depression, ADHD, social anxiety',
+          'Gaming has benefits: problem-solving, social connection, stress relief, accessibility for housebound people',
+          'Red flags: neglecting basic needs (food, sleep, hygiene), withdrawal symptoms, lying about gaming time, loss of interest in other activities',
+        ],
+      },
+      {
+        title: 'Mechanisms of Digital Harm',
+        bullets: [
+          'Dopamine dysregulation: variable reward schedules (likes, notifications) create compulsive checking',
+          'Blue light from screens disrupts melatonin and delays sleep onset (see Module 41)',
+          'Cyberbullying: 1 in 5 young people experience online harassment; significant mental health impact',
+          'Displacement of beneficial activities: screen time displaces sleep, exercise, face-to-face connection',
+          'Attention fragmentation: context-switching reduces deep focus capacity over time',
+        ],
+      },
+      {
+        title: 'Healthy Digital Habits',
+        bullets: [
+          'Digital boundaries: no screens in bed; phone-free mealtimes; screen-free hour before sleep',
+          'Intentional use: scheduled check-in times rather than continuous availability',
+          'Curate your feed: unfollow accounts that trigger comparison or distress; prioritise uplifting content',
+          'Digital detox: planned periods of reduced use — evidence shows mood improvements within 5–7 days',
+          'For young people: NICE and CMO guidelines recommend no screens for under-2s; limited supervised use under 5',
+          'Help resources: NHS gambling and tech addiction services; Childline for cyberbullying (0800 1111)',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Technology and the Modern Mind
+"We'll start by acknowledging something: technology is not the enemy. The internet has transformed access to mental health information, peer support communities, crisis helplines, and talking therapies. Smartphones enable connections across distances, support isolated people, and give access to tools — like mindfulness apps — that genuinely help. The question is never 'screens or no screens' but 'what kind of use, in what contexts, for how long, at what age'.
+
+That said — there are specific, evidence-based concerns about how certain technologies are designed and used. The average UK adult now spends over six hours a day on screens. Teenagers between seven and nine hours. And much of that time is being shaped by product design specifically engineered to maximise the time we spend on platforms — not because that time is good for us, but because it generates revenue."
+
+SLIDE 2 — Social Media & Mental Health
+"In 2021, Frances Haugen, a former Facebook data scientist turned whistleblower, published internal company research. One slide became infamous: it showed that Instagram makes 32% of teenage girls feel worse about their bodies — and that Facebook knew this. This wasn't an accident or an oversight. It was research conducted and then largely ignored because the alternative was a less engaging product.
+
+Social comparison is a deeply human tendency — we measure ourselves against others as a way of calibrating our own position. Social media turbocharges this in a particular way: we're comparing our real, complex, messy lives against carefully curated highlight reels. We see the holiday, the promotion, the new relationship. We don't see the arguments, the anxiety, the loneliness behind the photograph.
+
+Research consistently shows that passive scrolling — consuming content without actively connecting — is most associated with poor mental health outcomes. Active use — messaging friends, joining communities with shared interests — has more neutral or even positive effects."
+
+SLIDE 3 — Gaming & Gaming Disorder
+"Let's be careful about gaming. The dominant narrative in mainstream media is that gaming is harmful, particularly for young men. The evidence is more nuanced. For most people, gaming is a legitimate leisure activity that provides enjoyment, social connection, problem-solving, and stress relief. For some people who are housebound — due to disability, agoraphobia, or social anxiety — online gaming communities are a primary source of social connection and can be profoundly beneficial.
+
+Gaming Disorder was classified by the WHO in 2022 as a mental health condition: persistent, prioritised gaming that causes significant impairment in personal, family, social, educational, occupational, or other important areas. The estimated prevalence is around 1 to 3% of regular gamers — not trivial, but also not the majority. Pre-existing mental health conditions — particularly depression, ADHD, and social anxiety — significantly increase risk."
+
+SLIDE 4 — Mechanisms of Digital Harm
+"How does harmful technology use damage mental health? Several overlapping mechanisms. Variable reward schedules — the unpredictable delivery of likes, comments, notifications — activate the same dopamine pathways as gambling. The unpredictability is the feature, not the bug. It creates compulsive checking behaviour: 'just one more scroll.'
+
+Cyberbullying affects approximately 1 in 5 young people in the UK. Unlike traditional bullying it can follow victims into the home — the one place previously considered safe. The sense of exposure and helplessness associated with cyberbullying is strongly linked to depression, self-harm, and suicidal ideation.
+
+And there's the displacement problem: every hour spent scrolling is an hour not spent sleeping, exercising, or talking face-to-face — activities that have robust mental health benefits."
+
+SLIDE 5 — Healthy Digital Habits
+"The good news is that relatively modest behavioural changes have measurable positive effects on mental health. Studies show that reducing social media use to 30 minutes per day leads to significant reductions in loneliness and depression within three weeks. Digital detoxes — planned periods of 5 to 7 days with no or minimal social media — produce mood improvements that participants consistently report as significant.
+
+Some practical principles: treat your phone like a visitor, not a permanent resident. Create phone-free zones — the dinner table, the bedroom. Set specific times to check notifications rather than responding to every alert as it arrives. Audit your social media feeds: if someone's content consistently makes you feel inadequate or anxious, unfollow them. This is a small act of self-care with real impact."`,
+    activity: `ACTIVITY — My Digital Life Audit (20 minutes)
+Melksham Mental Health | Module 45 | Licensed Materials
+
+PURPOSE: Help participants build honest awareness of their technology use and identify specific, manageable changes.
+
+INTRODUCE: "Before we can change our digital habits, we need to understand them. Most people significantly underestimate how much time they spend on screens. We're going to do an honest audit."
+
+PART 1 — Screen Time Check (3 minutes):
+If participants have smartphones, ask them to check their weekly screen time report (Settings > Screen Time / Digital Wellbeing).
+- What is your daily average total screen time?
+- What are your top 3 most used apps?
+- How does the number compare to what you expected?
+Note: Participants who don't want to share their numbers absolutely don't have to.
+
+PART 2 — Impact Assessment (7 minutes, individual):
+For each of the following, rate honestly (1 = strongly disagree, 5 = strongly agree):
+- My phone use helps me feel connected to people
+- I often use my phone when I'm bored rather than for a specific reason
+- I check my phone first thing in the morning and last thing at night
+- Social media makes me feel better about myself
+- I have tried to reduce my screen time and found it difficult
+- My sleep is affected by phone/screen use
+- I feel anxious when I can't check my phone
+
+PART 3 — Behavioural Experiment Design (7 minutes, pairs):
+Design a 7-day digital experiment:
+Choose ONE specific change to try for 7 days. Examples:
+- No phone in the bedroom
+- Check social media only at 3 designated times per day (not continuously)
+- Delete one app for a week
+- No screens for 1 hour before bed
+- Unfollow 10 accounts that make you feel worse about yourself
+Partner A presents their experiment; Partner B helps make it specific and realistic.
+Swap.
+
+PART 3 — Group Reflection (3 minutes):
+What is the most common change people are planning? What barriers might get in the way?`,
+    discussionPrompts: [
+      'Who is responsible for the mental health harms associated with social media — individuals, parents, platforms, or governments? What should each be doing?',
+      'How do you think social media affects different generations differently? What do older adults miss that younger people don\'t notice, and vice versa?',
+      'Is "digital addiction" a useful concept — or does it pathologise normal behaviour in an increasingly digital world? Where is the line?',
+      'What does healthy technology use look like — and how realistic is that in a world where work, relationships, and services are increasingly mediated by screens?',
+    ],
+    resources: [
+      { label: 'NHS — Screen time and mental health', url: 'https://www.nhs.uk/mental-health/children-and-young-people/advice-for-parents/children-and-young-people-screen-time/' },
+      { label: 'Childline — cyberbullying support: 0800 1111', url: 'https://www.childline.org.uk/info-advice/bullying-abuse-safety/types-bullying/online-bullying/' },
+      { label: 'Internet Matters — digital wellbeing resources for families', url: 'https://www.internetmatters.org' },
+      { label: 'Mind — social media and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/online-mental-health/social-media-and-mental-health/' },
+      { label: 'Centre for Humane Technology — research and resources', url: 'https://www.humanetech.com' },
+    ],
+    videos: [
+      { label: 'The Social Dilemma — Netflix documentary trailer (YouTube)', url: 'https://www.youtube.com/results?search_query=social+dilemma+netflix+trailer+technology+mental+health' },
+      { label: 'Social media and teenage mental health — the evidence (YouTube)', url: 'https://www.youtube.com/results?search_query=social+media+teenage+mental+health+evidence+jonathan+haidt' },
+      { label: 'Gaming disorder — WHO classification explained (YouTube)', url: 'https://www.youtube.com/results?search_query=gaming+disorder+WHO+ICD11+explained' },
+    ],
+    powerPoint: `MODULE 45 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '6+ hours per day' as large orange statistic; phone screen imagery on black
+Slide 2: Social comparison diagram — real life vs social media highlight reel; 32% stat in orange
+Slide 3: Gaming: benefits vs Gaming Disorder criteria — two columns; WHO classification noted
+Slide 4: Four mechanisms infographic — dopamine loop, blue light, cyberbullying, displacement — icons in orange
+Slide 5: Healthy digital habits checklist — actionable steps on black; crisis contacts in orange
+All slides: Samaritans 116 123 footer, Childline 0800 1111 (for cyberbullying), MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Cyberbullying disclosures may arise during this session — particularly for younger participants. Respond with standard safeguarding protocols. Childline (0800 1111) is free and available 24/7 for under-18s. For adults, the Revenge Porn Helpline is 0345 6000 459.
+
+FACILITATION: Be aware that asking participants to check their screen time data can cause shame or embarrassment. Frame this as data, not judgment. If anyone's numbers feel alarming to them, remind them this is information — a starting point, not a verdict.
+
+GAMING: Challenge stigma around gaming — avoid framing all gaming as problematic. Many participants or their loved ones will game. The goal is harm reduction and awareness of warning signs.
+
+SOCIAL MEDIA: This topic can lead to heated discussion about platform responsibility vs individual responsibility. Facilitate both perspectives; avoid implying that people who struggle with social media are simply weak-willed.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
 ];
 
 /** Look up a single module guide by ID */
