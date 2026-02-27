@@ -34,7 +34,7 @@ body {
 
 /* Main content area with background texture */
 .main-content {
-  background-image: url('/background_1.png');
+  background-image: url('/main-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

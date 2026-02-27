@@ -18,8 +18,29 @@ from PyQt6.QtWidgets import (
     QStatusBar, QFileDialog
 )
 from PyQt6.QtCore import Qt, QTimer, pyqtSignal, QThread, QSize
-from PyQt6.QtGui import QFont, QColor, QIcon, QPixmap, QClipboard
+from PyQt6.QtGui import QFont, QColor, QIcon, QPixmap, QClipboard, QPainter, QPalette, QBrush
 from PyQt6.QtPrintSupport import QPrinter, QPrintDialog
+
+
+class BackgroundWidget(QWidget):
+    """QWidget subclass that paints a background image scaled to fill the widget (may distort aspect ratio)."""
+
+    def __init__(self, bg_path: str, parent=None):
+        super().__init__(parent)
+        if bg_path and Path(bg_path).exists():
+            self._bg_pixmap = QPixmap(bg_path)
+            if self._bg_pixmap.isNull():
+                print(f"Warning: failed to load background image: {bg_path}")
+        else:
+            if bg_path:
+                print(f"Warning: background image not found: {bg_path}")
+            self._bg_pixmap = QPixmap()
+
+    def paintEvent(self, event):
+        if not self._bg_pixmap.isNull():
+            painter = QPainter(self)
+            painter.drawPixmap(self.rect(), self._bg_pixmap)
+        super().paintEvent(event)
 
 from generator import ContentGenerator
 from formatter import PostFormatter
@@ -99,7 +120,8 @@ class MelkshamMentalHealthApp(QMainWindow):
 
     def init_ui(self):
         """Initialize the user interface"""
-        central_widget = QWidget()
+        bg_path = str(self.assets_path / "Bground-buttons" / "main background.png")
+        central_widget = BackgroundWidget(bg_path)
         self.setCentralWidget(central_widget)
         main_layout = QHBoxLayout()
         central_widget.setLayout(main_layout)
