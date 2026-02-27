@@ -5490,6 +5490,1561 @@ OPIOIDS: Handle the opioid discussion carefully — some participants may be on 
 
 LICENCE: Licensed to registered user only. Not for redistribution.`,
   },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 41
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 41,
+    topic: 'Sleep Hygiene & Circadian Health',
+    summary: 'How sleep and circadian rhythms profoundly affect mental health; practical evidence-based strategies to improve sleep quality; the impact of shift work and screens.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Why Sleep Matters for Mental Health',
+        bullets: [
+          'Sleep deprivation impairs emotional regulation, memory consolidation, and decision-making',
+          'Chronic poor sleep is both a symptom and a cause of depression, anxiety, and bipolar disorder',
+          '1 in 3 adults in the UK regularly gets less than the recommended 7–9 hours (Sleep Council)',
+          'Insomnia is one of the strongest predictors of new-onset depression (NICE CG90)',
+        ],
+      },
+      {
+        title: 'The Circadian Clock',
+        bullets: [
+          'Circadian rhythms: the body\'s internal 24-hour biological clock governed by light exposure',
+          'Suprachiasmatic nucleus (SCN) in the hypothalamus regulates melatonin release',
+          'Disruption via shift work, jet lag, or irregular schedules increases depression and anxiety risk',
+          'Blue light from screens suppresses melatonin and delays sleep onset by up to 90 minutes',
+        ],
+      },
+      {
+        title: 'Sleep Architecture',
+        bullets: [
+          'Four stages: N1, N2, N3 (deep/slow-wave) and REM (rapid eye movement)',
+          'REM sleep is critical for emotional processing — disrupted REM increases emotional reactivity',
+          'Deep sleep (N3) consolidates memory and repairs the body; most deep sleep occurs early in the night',
+          'Alcohol and many medications suppress REM sleep, worsening emotional regulation',
+        ],
+      },
+      {
+        title: 'Shift Work & Social Jetlag',
+        bullets: [
+          'Social jetlag: the misalignment between biological clock and social schedule — affects ~70% of working population',
+          'Night shift workers have significantly higher rates of depression, anxiety, and metabolic disorders',
+          'Strategies for shift workers: blackout blinds, melatonin timing, anchor sleep periods',
+          'Employers have a duty of care regarding shift rotation and mental health risk (HSE guidelines)',
+        ],
+      },
+      {
+        title: 'Evidence-Based Sleep Hygiene & CBT-I',
+        bullets: [
+          'CBT for Insomnia (CBT-I): NICE first-line treatment — more effective than medication long-term',
+          'Sleep restriction therapy: temporarily limits time in bed to consolidate sleep drive',
+          'Stimulus control: bed only for sleep and sex; get up if awake for >20 minutes',
+          'Sleep hygiene basics: consistent wake time, cool/dark/quiet room, no caffeine after 2 pm, wind-down routine',
+          'Relaxation: progressive muscle relaxation, 4-7-8 breathing, guided imagery',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Why Sleep Matters for Mental Health
+"Let's begin with what might be the most underrated mental health intervention there is: sleep. Not a pill, not a therapy — just adequate, quality sleep.
+
+One in three adults in the UK regularly gets less than the recommended seven to nine hours. That's not a minor inconvenience. Sleep deprivation impairs the prefrontal cortex — the part of the brain responsible for emotional regulation, decision-making and impulse control. When we're sleep deprived, the amygdala — our emotional alarm system — becomes hyperreactive. Small frustrations become overwhelming. Anxiety spikes. The emotional world becomes harder to navigate.
+
+Critically, the relationship runs both ways. Poor sleep causes mental ill-health; mental ill-health worsens sleep. This bidirectional relationship creates cycles that can be very difficult to break — but breaking them is possible, and this module will show you how."
+
+SLIDE 2 — The Circadian Clock
+"Your body runs on a 24-hour internal clock — the circadian rhythm — governed by light signals received by a tiny cluster of cells in the hypothalamus called the suprachiasmatic nucleus. When light hits the retina in the morning, the clock resets and melatonin production is suppressed. As it gets dark, melatonin rises and sleep pressure builds.
+
+The problem is that modern life is working against this system constantly. Artificial light — especially the blue-wavelength light emitted by phones, tablets, and laptops — is read by the brain as daylight. Research shows it can delay melatonin onset by up to 90 minutes. So late-night scrolling isn't just taking time away from sleep — it's biochemically delaying sleep."
+
+SLIDE 3 — Sleep Architecture
+"Sleep is not a uniform state. It cycles through four stages: light sleep, deeper sleep, slow-wave deep sleep, and REM — rapid eye movement sleep. REM sleep is particularly important for mental health because this is where emotional memories are processed and consolidated. Matthew Walker, a sleep researcher at Berkeley, describes REM sleep as 'overnight therapy' — it takes the emotional sting out of difficult memories.
+
+Alcohol is particularly damaging to sleep architecture. It makes you fall asleep faster — which is why people use it as a sleep aid — but it suppresses REM sleep dramatically. You get the sedation without the processing. This is one mechanism by which alcohol dependence drives emotional dysregulation and worsening mental health."
+
+SLIDE 4 — Shift Work & Social Jetlag
+"Social jetlag affects the majority of working people. It's the difference between when your body wants to sleep and when your schedule forces you to. Even a one-hour mismatch has measurable effects on mood and metabolic health.
+
+For night shift workers the challenge is more severe. They are being asked to sleep during the body's active phase — when cortisol is high and melatonin is low. The rates of depression, anxiety, cardiovascular disease, and metabolic syndrome are significantly elevated in shift workers. This is not about personal resilience — it is about biology being forced to work against itself."
+
+SLIDE 5 — Evidence-Based Sleep Hygiene & CBT-I
+"CBT for Insomnia — CBT-I — is NICE's first-line recommended treatment for chronic insomnia. It is not simply 'sleep hygiene tips'. It is a structured programme that addresses the thoughts and behaviours that perpetuate poor sleep.
+
+Sleep restriction therapy is counterintuitive but highly effective: you temporarily limit the time you spend in bed to match how much you're actually sleeping, which consolidates sleep drive. Stimulus control is about re-associating the bed with sleepiness rather than wakefulness — if you've been lying awake for twenty minutes, get up. Go somewhere quiet and dim. Return only when sleepy.
+
+The basics of sleep hygiene: a consistent wake time is the single most powerful lever — not bedtime, wake time. Keep the bedroom cool, dark, and quiet. No caffeine after 2 pm. Create a wind-down routine. These are not suggestions — they are evidence-based practices that measurably improve sleep quality."`,
+    activity: `ACTIVITY — My Sleep Audit & Sleep Window (20 minutes)
+Melksham Mental Health | Module 41 | Licensed Materials
+
+PURPOSE: Help participants identify their personal sleep patterns and design an evidence-based improvement plan.
+
+INTRODUCE: "We're going to do a brief personal sleep audit. This is private — just for you. Be honest with yourself."
+
+PART 1 — Sleep Diary Snapshot (5 minutes):
+Participants write down or estimate for the past week:
+- Typical bedtime
+- Typical wake time
+- Estimated hours of actual sleep (not just time in bed)
+- Sleep quality: 1 (very poor) to 10 (excellent)
+- Any wake-ups? How many?
+- Caffeine intake and last cup time
+- Screen use in the last hour before bed (yes/no)
+- Alcohol in the last 3 hours before bed (yes/no)
+
+PART 2 — Identify Your Biggest Disruptors (5 minutes):
+Circle your top 2 disruptors from the list:
+• Irregular schedule     • Caffeine late in the day
+• Screen use at night    • Alcohol                
+• Stress/racing thoughts • Noise or light in bedroom
+• Shift work             • Caring responsibilities
+
+PART 3 — Design Your Sleep Window (7 minutes, pairs or small groups):
+Using CBT-I principles, design a basic 2-week sleep improvement plan:
+1. Set a fixed wake time (even weekends) — stick to it
+2. Calculate your sleep window: wake time minus 7 hours = bed time
+3. Choose one behavioural change (e.g., screens off 45 min before bed)
+4. Choose one wind-down ritual (e.g., reading, progressive relaxation, warm shower)
+
+PART 4 — Share One Change (3 minutes):
+Anyone willing to share: what is the ONE change you will try this week?`,
+    discussionPrompts: [
+      'Why do you think sleep deprivation has become so normalised in modern culture — and what does that tell us about how we value mental and physical health?',
+      'How does poor sleep intersect with other mental health problems covered in this course? Can you think of examples from your own experience or observations?',
+      'What structural changes (in workplaces, schools, healthcare) would most improve sleep health at a population level?',
+      'How should healthcare professionals approach sleep problems — as a primary issue or as a symptom of something else?',
+    ],
+    resources: [
+      { label: 'NHS — Sleep and tiredness: self-help tips', url: 'https://www.nhs.uk/live-well/sleep-and-tiredness/sleep-tips/' },
+      { label: 'NICE CG90 — Insomnia: CBT-I guidance', url: 'https://www.nice.org.uk/guidance/cg90' },
+      { label: 'Sleepio — NHS-endorsed digital CBT-I programme', url: 'https://www.sleepio.com' },
+      { label: 'Sleep Council UK — sleep health information', url: 'https://sleepcouncil.org.uk' },
+      { label: 'Mind — How sleep affects mental health', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/sleep-problems/' },
+    ],
+    videos: [
+      { label: 'Why we sleep — Matthew Walker TED Talk (YouTube)', url: 'https://www.youtube.com/results?search_query=matthew+walker+why+we+sleep+ted+talk' },
+      { label: 'CBT for Insomnia explained (YouTube)', url: 'https://www.youtube.com/results?search_query=CBT+insomnia+sleep+restriction+stimulus+control+explained' },
+      { label: 'Circadian rhythms and mental health (YouTube)', url: 'https://www.youtube.com/results?search_query=circadian+rhythms+mental+health+sleep+explained' },
+    ],
+    powerPoint: `MODULE 41 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '1 in 3 adults' as large orange statistic; sleep and mental health link on black background
+Slide 2: Circadian clock diagram — 24-hour cycle with melatonin curve; blue light disruption highlighted in red
+Slide 3: Sleep architecture diagram — 4 stages labelled; REM highlighted in orange
+Slide 4: Shift work infographic — biological vs social schedule misalignment; mental health consequences
+Slide 5: CBT-I framework — 5 components in orange on black; sleep restriction, stimulus control, hygiene, cognition, relaxation
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Sleep disturbance is a key warning sign for deteriorating mental health, including suicidal ideation (insomnia is an independent risk factor for suicide). If a participant describes severe, prolonged insomnia with distress, signpost to GP and keep Samaritans (116 123) visible.
+
+FACILITATION: Many participants will have personal experience of sleep problems. Validate this — poor sleep is not a character failing. Avoid framing it as simple willpower. Some participants may be carers or parents with broken sleep beyond their control — acknowledge structural barriers.
+
+SHIFT WORK: Handle sensitively. Some participants may be current shift workers. The goal is awareness and harm reduction strategies, not blame.
+
+MEDICATION: Some participants may be using prescription sleep medication or over-the-counter remedies. Do not advise on medication changes — redirect to GP.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 42
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 42,
+    topic: 'Nutrition, Exercise & Mental Health',
+    summary: 'The evidence linking physical activity and diet to mental health outcomes; practical guidance on movement and nutrition as accessible, effective tools for wellbeing.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Exercise as Medicine for the Mind',
+        bullets: [
+          'Physical activity reduces symptoms of depression by ~30% — comparable to antidepressants for mild-moderate depression (NICE PH44)',
+          'Mechanisms: endorphins, BDNF (brain-derived neurotrophic factor), cortisol reduction, social connection, improved sleep',
+          'Even walking 30 minutes 3× per week has significant measurable effects on depression and anxiety',
+          'Exercise is effective across all ages; reduces dementia risk by up to 30% (Lancet Commission)',
+        ],
+      },
+      {
+        title: 'Barriers to Exercise',
+        bullets: [
+          'Mental illness itself creates barriers: low motivation, fatigue, social anxiety, hopelessness',
+          'Depression\'s hallmark symptom is anhedonia — the loss of pleasure in previously enjoyed activities',
+          'Behavioural activation: starting small, with structure; exercise as a scheduled activity',
+          'Social prescribing: GPs can refer to exercise on prescription, walking groups, community sport',
+        ],
+      },
+      {
+        title: 'The Gut-Brain Axis',
+        bullets: [
+          'The gut produces ~90% of the body\'s serotonin; trillions of gut microbiota communicate with the brain via the vagus nerve',
+          'Gut microbiome diversity is associated with lower rates of depression and anxiety',
+          'Ultra-processed food diets are linked to higher depression risk; Mediterranean-style diets are protective',
+          'Emerging field of nutritional psychiatry — promising but evidence still developing; no single "superfood"',
+        ],
+      },
+      {
+        title: 'Key Nutritional Factors',
+        bullets: [
+          'Omega-3 fatty acids (oily fish, flaxseeds): anti-inflammatory; linked to lower depression risk',
+          'Vitamin D deficiency: strongly associated with depression; ~1 in 5 UK adults are deficient (NHS)',
+          'B vitamins (B12, folate): essential for neurotransmitter synthesis; low B12 linked to cognitive decline and depression',
+          'Iron deficiency: causes fatigue, poor concentration, low mood — particularly common in women',
+          'Ultra-processed foods: associated with 20–30% higher depression risk in observational studies',
+        ],
+      },
+      {
+        title: 'Practical Recommendations',
+        bullets: [
+          'UK Chief Medical Officers: 150 minutes moderate exercise per week OR 75 minutes vigorous',
+          'Any movement is better than none — breaking up sitting time has independent mental health benefits',
+          'Food first: prioritise varied whole foods; Mediterranean-style eating pattern is best-evidenced',
+          'Vitamin D: NHS recommends 10 micrograms supplement daily for all UK adults October–March',
+          'Social eating has mental health benefits beyond nutrition — shared meals strengthen connection',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Exercise as Medicine for the Mind
+"One of the most reliable, accessible, side-effect-free interventions for depression is also the most underused. Physical activity. NICE — the National Institute for Health and Care Excellence — recommends structured group exercise as a first-line treatment for mild to moderate depression. The evidence base is now substantial: a comprehensive meta-analysis found that exercise reduces depression symptoms by around 30%, comparable to antidepressants, without the side effects or the waiting lists.
+
+What's the mechanism? Several. Exercise triggers the release of endorphins — the natural opioids — and serotonin. More importantly, it stimulates the production of BDNF — brain-derived neurotrophic factor — sometimes called 'fertiliser for the brain'. BDNF promotes the growth of new neurons and strengthens synaptic connections, particularly in the hippocampus, which is involved in mood regulation and memory. Depression is associated with hippocampal shrinkage. Exercise literally helps rebuild it."
+
+SLIDE 2 — Barriers to Exercise
+"The cruel paradox of depression is that its core symptoms — low motivation, fatigue, anhedonia, social withdrawal — are exactly the barriers to the activity that would most help. This is not laziness. This is the illness itself.
+
+Behavioural activation is a CBT-based technique designed specifically for this. The principle: don't wait to feel motivated before acting. Act first; the motivation follows. Start with tiny, structured steps. A ten-minute walk. Three times a week. Put it in the diary as a non-negotiable appointment. The goal is not fitness — it's mood regulation.
+
+Social prescribing is a growing approach in UK primary care: GPs can refer patients to walking groups, community exercise programmes, or park run — all activities that combine movement with social connection. Both are independently protective against depression."
+
+SLIDE 3 — The Gut-Brain Axis
+"This is one of the most exciting — and one of the most overhyped — areas in mental health research. The gut-brain axis is the bidirectional communication system between the gut and the brain. Here's the extraordinary fact: approximately 90% of the body's serotonin is produced in the gut, not the brain. The vagus nerve carries signals both ways.
+
+The gut microbiome — the trillions of bacteria that live in the digestive system — plays a role in this communication. Research shows that people with more diverse gut microbiomes tend to have lower rates of depression and anxiety. Ultra-processed food diets reduce microbiome diversity; varied whole food diets support it.
+
+A word of caution: nutritional psychiatry is a genuinely promising field, but it is still emerging. The research is largely observational — it shows associations, not always causation. We should not replace proven treatments with dietary advice. But we can confidently say: what you eat affects how you feel, and that's worth taking seriously."
+
+SLIDE 4 — Key Nutritional Factors
+"There are several specific nutritional factors with decent evidence. Omega-3 fatty acids — found in oily fish, flaxseeds, and walnuts — are anti-inflammatory and have been consistently associated with lower depression risk in observational studies.
+
+Vitamin D deficiency is highly prevalent in the UK — around 1 in 5 adults — because our latitude means we don't get sufficient sun exposure for much of the year. Deficiency is strongly associated with low mood, fatigue, and depression. The NHS recommends that all UK adults supplement with 10 micrograms of vitamin D daily between October and March.
+
+Ultra-processed foods — those with long ingredient lists full of additives, emulsifiers, flavourings — are associated with a 20 to 30% higher risk of depression in large observational studies. We don't fully understand why, but gut microbiome disruption is one likely mechanism."
+
+SLIDE 5 — Practical Recommendations
+"The good news is that the recommendations here are straightforward and compatible with any budget. The UK Chief Medical Officers recommend 150 minutes of moderate activity per week — that's 30 minutes five days a week — or 75 minutes of vigorous activity. But any movement matters. Breaking up long periods of sitting with five-minute walks has measurable independent benefits.
+
+On food: a Mediterranean-style eating pattern — rich in vegetables, legumes, whole grains, olive oil, oily fish, and nuts, low in ultra-processed foods — is the best-evidenced dietary pattern for mental health. Supplement vitamin D through winter. Eat with other people when you can — social meals have mental health benefits that go beyond the food itself."`,
+    activity: `ACTIVITY — The Wellbeing Wheel: Movement & Food (20 minutes)
+Melksham Mental Health | Module 42 | Licensed Materials
+
+PURPOSE: Support participants to reflect on their own physical activity and dietary patterns and design one evidence-based change.
+
+INTRODUCE: "This is a private reflection activity. There is no right answer. The goal is awareness, not judgment."
+
+PART 1 — Movement Audit (5 minutes):
+Rate honestly (1–10) your current level of:
+- Weekly physical activity (total minutes)
+- Intensity (gentle/moderate/vigorous)
+- How much you enjoy your movement
+- How much movement you get for mental health vs physical fitness
+- Barriers you face (time, motivation, cost, access, health, anxiety about exercise)
+
+PART 2 — Food Reflection (5 minutes):
+Think about the past week:
+- How many portions of vegetables/fruit per day on average?
+- How often did you eat ultra-processed food (ready meals, crisps, fast food)?
+- Did you eat alone most of the time or with others?
+- Are there foods you eat when stressed that you know aren't helping?
+- Rate your overall diet quality: 1 (very poor) to 10 (excellent)
+
+PART 3 — One Commitment Each (7 minutes, small groups):
+Share with your group one movement and one food commitment:
+"This week I will [specific movement goal]."
+"This week I will [specific food goal]."
+Groups help each other make goals SMART: Specific, Measurable, Achievable, Relevant, Time-bound.
+
+PART 4 — Barrier Problem-Solving (3 minutes):
+Group identifies the most common barrier mentioned and brainstorms 3 practical solutions.`,
+    discussionPrompts: [
+      'Why is physical activity so underused as a mental health intervention despite strong evidence — what systemic and cultural barriers are in the way?',
+      'What does it mean to describe food and exercise as "medicine"? What are the risks of this framing as well as the benefits?',
+      'How do social inequalities (income, area, disability) affect access to healthy food and safe exercise spaces — and what should services do about this?',
+      'Have you personally experienced a link between what you eat or how much you move and your mental state? What did you notice?',
+    ],
+    resources: [
+      { label: 'NHS — Exercise for depression', url: 'https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/exercise-for-depression/' },
+      { label: 'Mind — Physical activity and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/physical-activity-and-your-mental-health/' },
+      { label: 'NICE PH44 — Exercise referral schemes', url: 'https://www.nice.org.uk/guidance/ph44' },
+      { label: 'NHS — Vitamin D: why we need it', url: 'https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-d/' },
+      { label: 'Mental Health Foundation — Diet and mental health', url: 'https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/food-and-mental-health' },
+    ],
+    videos: [
+      { label: 'Exercise and depression — the evidence (YouTube)', url: 'https://www.youtube.com/results?search_query=exercise+depression+evidence+NHS+mental+health' },
+      { label: 'Gut-brain axis explained (YouTube)', url: 'https://www.youtube.com/results?search_query=gut+brain+axis+mental+health+explained' },
+      { label: 'Nutritional psychiatry — what the research says (YouTube)', url: 'https://www.youtube.com/results?search_query=nutritional+psychiatry+depression+diet+evidence' },
+    ],
+    powerPoint: `MODULE 42 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '30% reduction in depression' as large orange statistic; exercise-as-medicine on black
+Slide 2: Behavioural activation cycle diagram — action precedes motivation; barrier list on right
+Slide 3: Gut-brain axis infographic — vagus nerve, microbiome, serotonin production percentage
+Slide 4: 5 nutritional factors icons with brief evidence summary; vitamin D highlighted
+Slide 5: Two clear columns — Movement recommendations | Food recommendations — on black
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Exercise and food discussions can trigger eating disorder symptoms in vulnerable participants. Avoid language about weight, calories, or body shape. Keep the focus entirely on mental health outcomes and wellbeing, never appearance or weight loss.
+
+FACILITATION: Some participants may have physical disabilities or health conditions that limit exercise. Be inclusive in language — use "movement" broadly, including chair-based exercise, swimming, or gardening. Acknowledge that access to safe exercise spaces is not equal.
+
+EATING DISORDERS: If any participant appears to be distressed by food discussions or exhibits signs of disordered eating, speak with them privately afterwards and signpost to Beat (0808 801 0677).
+
+POVERTY AND ACCESS: Many participants may be in financial difficulty. Avoid assumptions about access to gyms or expensive food. Highlight free resources: park run, NHS couch-to-5k app, walking.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 43
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 43,
+    topic: 'Mindfulness, Meditation & Breathwork',
+    summary: 'The neuroscience and clinical evidence for mindfulness; practical breathwork and meditation techniques; MBSR and MBCT in NHS settings.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'What Is Mindfulness?',
+        bullets: [
+          'Mindfulness: paying deliberate, non-judgemental attention to the present moment (Jon Kabat-Zinn)',
+          'Ancient roots in Buddhist contemplative practice; secularised and clinically validated from 1970s',
+          'Not relaxation, not emptying the mind — noticing thoughts without being consumed by them',
+          'Brain changes: regular practice thickens the prefrontal cortex and reduces amygdala reactivity',
+        ],
+      },
+      {
+        title: 'The Evidence Base',
+        bullets: [
+          'Mindfulness-Based Stress Reduction (MBSR): 8-week programme; strong evidence for anxiety, chronic pain, stress reduction',
+          'Mindfulness-Based Cognitive Therapy (MBCT): NICE-recommended for recurrent depression; reduces relapse by ~43% in 3+ episode depression',
+          'Over 700 RCTs published on mindfulness interventions; effect sizes comparable to antidepressants for anxiety',
+          'Caution: mindfulness is not appropriate for all; can be destabilising for trauma and some psychosis presentations',
+        ],
+      },
+      {
+        title: 'The Neuroscience',
+        bullets: [
+          'Default Mode Network (DMN): the "mind-wandering" network, active when not focused; overactive in depression (self-referential rumination)',
+          'Mindfulness reduces DMN activity — interrupts rumination loops',
+          'Insula activation increases: improves interoception (awareness of internal body states)',
+          'Anterior cingulate cortex: improved attention regulation and error monitoring',
+        ],
+      },
+      {
+        title: 'Breathwork Techniques',
+        bullets: [
+          'Physiological sigh: double inhale through nose, long exhale through mouth — fastest known way to reduce stress',
+          '4-7-8 breathing: inhale 4 counts, hold 7, exhale 8 — activates parasympathetic nervous system',
+          'Box breathing (4-4-4-4): used by military for high-stress situations; reduces cortisol rapidly',
+          'Diaphragmatic breathing: slow, deep, belly breathing — counters the shallow chest breathing of anxiety',
+        ],
+      },
+      {
+        title: 'Starting a Mindfulness Practice',
+        bullets: [
+          'Start with 5–10 minutes daily — consistency matters more than duration',
+          'Apps: Headspace, Calm, Insight Timer (free), NHS-approved Daylight for anxiety',
+          'MBCT available free via NHS Talking Therapies (formerly IAPT) in most areas',
+          'Body scan, breath awareness, mindful walking: three accessible starting points',
+          'Non-judgement is the key skill — noticing you\'ve wandered and gently returning IS the practice',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is Mindfulness?
+"Mindfulness has become one of those words that means everything and nothing — branded onto everything from yoga mats to corporate wellness programmes. So let's be precise about what it actually is.
+
+Jon Kabat-Zinn, who brought mindfulness into clinical medicine in the 1970s, defined it as 'paying attention in a particular way: on purpose, in the present moment, and non-judgementally.' Three elements. On purpose — it's deliberate, not accidental. In the present moment — not ruminating on the past or worrying about the future. And non-judgementally — noticing experience without immediately labelling it as good or bad.
+
+Mindfulness is not relaxation, although relaxation may be a byproduct. It is not about emptying your mind — that's not actually possible and is not the goal. It is about noticing the constant stream of thoughts and sensations without being swept away by them. Thoughts arise — you notice them — you return to the present moment. That's it."
+
+SLIDE 2 — The Evidence Base
+"Mindfulness-Based Cognitive Therapy — MBCT — is now a NICE-recommended treatment specifically for recurrent depression. The evidence is compelling: for people who have had three or more episodes of depression, MBCT reduces the rate of relapse by approximately 43%. That is a substantial effect for a non-pharmacological intervention.
+
+Mindfulness-Based Stress Reduction — MBSR — the original eight-week programme — has strong evidence for anxiety, chronic pain, cancer-related distress, and general stress reduction. Over 700 randomised controlled trials have now been published on mindfulness interventions.
+
+A caveat, and this is important: mindfulness is not appropriate for everyone. For people with unprocessed trauma, entering a state of body awareness and present-moment focus can be destabilising rather than helpful. For some people with psychosis, certain mindfulness practices can be unhelpful. Good clinical practice involves assessing readiness before prescribing mindfulness."
+
+SLIDE 3 — The Neuroscience
+"Why does mindfulness work? Neuroscience is beginning to show us. The Default Mode Network — the DMN — is the set of brain regions that are most active when we're not focused on a specific task. It's the mind-wandering network. In depression, the DMN is overactive, producing the repetitive self-referential thinking — rumination — that is a hallmark of the condition. 'I'm worthless. I've failed. Things will never improve.' Round and round.
+
+Mindfulness practice reduces DMN activity. It doesn't switch it off — that would be unhelpful — but it loosens the hold of that rumination loop. Regular practitioners show measurable thickening of the prefrontal cortex — the seat of executive function and emotional regulation — and reduced reactivity in the amygdala. The brain is literally being reshaped by practice."
+
+SLIDE 4 — Breathwork Techniques
+"Breathwork is perhaps the most immediately accessible tool in this module — because you can do it anywhere, any time, with no equipment and no training.
+
+The physiological sigh is a double inhale through the nose — a short sniff at the top of a normal inhale — followed by a long, slow exhale through the mouth. Research from Stanford shows it is the fastest known way to return the nervous system to a calm state. Your body does this spontaneously when you've been crying or stressed — it's an automatic reset.
+
+4-7-8 breathing: inhale for 4 counts, hold for 7, exhale for 8. The long exhale activates the parasympathetic nervous system — the 'rest and digest' system that is the antidote to the fight-or-flight stress response.
+
+Box breathing is used by US Navy SEALs in high-stress situations: 4 counts in, 4 hold, 4 out, 4 hold. The regularity creates calm regardless of the content of your thoughts."
+
+SLIDE 5 — Starting a Practice
+"The single most important thing about starting a mindfulness practice is consistency over duration. Five minutes every day beats 45 minutes once a week. The neural changes are driven by repetition.
+
+NHS Talking Therapies — the primary care psychological therapies service — provides MBCT in most areas of England, and it is free. There are also excellent apps: Headspace and Calm are popular and well-produced, though not free. Insight Timer is free and has thousands of guided meditations. The NHS-approved Daylight app is specifically designed for anxiety and is free to NHS users.
+
+When you sit down to practise and find your mind has wandered — which it will, constantly, especially at first — the moment you notice you've wandered is not a failure. It IS the practice. That moment of noticing, of gently returning — that is the exact mental muscle you are training."`,
+    activity: `ACTIVITY — Live Breathwork & Body Scan (20 minutes)
+Melksham Mental Health | Module 43 | Licensed Materials
+
+PURPOSE: Give participants a direct, embodied experience of breathwork and body scan mindfulness. Evidence shows brief experiential practice is more effective than purely didactic teaching.
+
+SAFETY NOTE: Always give participants explicit permission to opt out and observe if any technique feels uncomfortable. Never force any practice.
+
+PART 1 — Physiological Sigh (3 minutes):
+"We'll start with the simplest technique. If you're comfortable, close your eyes or soften your gaze downward.
+Take a normal breath in through your nose... and at the top, take one more short sniff in to fully expand the lungs.
+Now release slowly through your mouth — all the way out.
+Do this three times at your own pace."
+[Pause for practice]
+"Notice any change in how you feel compared to 3 minutes ago."
+
+PART 2 — Box Breathing (4 minutes):
+"Now we'll try box breathing. I'll count for you.
+Breathe in through your nose: 1... 2... 3... 4
+Hold: 1... 2... 3... 4
+Out through your mouth: 1... 2... 3... 4
+Hold: 1... 2... 3... 4
+We'll do four rounds together."
+[Guide through 4 rounds]
+
+PART 3 — Brief Body Scan (8 minutes):
+Guide a body scan starting at the feet and moving slowly upward. Use these prompts:
+"Notice the soles of your feet... the temperature, any pressure, any sensation... not trying to change anything, just noticing...
+Now your lower legs... calves... knees...
+[Continue moving upward through the body]
+If your mind wanders, that's completely normal — just gently bring your attention back without any self-criticism...
+When you're ready, take a deeper breath and open your eyes."
+
+PART 4 — Debrief (5 minutes):
+- What did you notice during the practice?
+- Was there anything difficult or uncomfortable?
+- Did anything shift, even slightly, in how you feel?`,
+    discussionPrompts: [
+      'What is the difference between mindfulness as a clinical intervention and mindfulness as a commercial wellness product — and does that distinction matter?',
+      'Why might mindfulness be unhelpful or even harmful for some people — and how should practitioners screen for this?',
+      'How accessible is mindfulness to people who are acutely unwell, in poverty, or without digital access? What are the equity issues?',
+      'Has anyone in the group tried a regular meditation practice? What helped it stick — or what got in the way?',
+    ],
+    resources: [
+      { label: 'NHS Talking Therapies — MBCT and mindfulness programmes', url: 'https://www.nhstalking therapies.nhs.uk' },
+      { label: 'Be Mindful — NICE-approved online MBSR course (low cost)', url: 'https://www.bemindful.co.uk' },
+      { label: 'Mind — Mindfulness information and resources', url: 'https://www.mind.org.uk/information-support/drugs-and-treatments/mindfulness/' },
+      { label: 'Insight Timer — free guided meditations app', url: 'https://insighttimer.com' },
+      { label: 'Mental Health Foundation — mindfulness report', url: 'https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/mindfulness' },
+    ],
+    videos: [
+      { label: 'What is mindfulness? — Jon Kabat-Zinn (YouTube)', url: 'https://www.youtube.com/results?search_query=jon+kabat+zinn+mindfulness+what+is+it' },
+      { label: 'The science of mindfulness — neuroscience explained (YouTube)', url: 'https://www.youtube.com/results?search_query=mindfulness+neuroscience+default+mode+network+amygdala' },
+      { label: 'Physiological sigh — Andrew Huberman (YouTube)', url: 'https://www.youtube.com/results?search_query=physiological+sigh+andrew+huberman+stress+reduction' },
+    ],
+    powerPoint: `MODULE 43 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Kabat-Zinn definition in large white text on black; three elements highlighted in orange
+Slide 2: '43% relapse reduction' as key orange statistic; MBCT vs standard care comparison
+Slide 3: Brain diagram — Default Mode Network highlighted; before/after mindfulness practice comparison
+Slide 4: Four breathwork techniques as cards — icons with count patterns in orange on black
+Slide 5: Starting guide — apps, NHS access, tips for consistency; simple steps on black background
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Mindfulness practice can surface difficult emotions or trauma memories, especially during body scan. Ensure participants know they can open their eyes, stop at any time, or step out. Have support signposting available. After the activity, allow a short grounding period before moving on.
+
+TRAUMA: Do not push body-based practices with participants who have disclosed trauma or PTSD. Offer open-eye, movement-based, or object-focused alternatives.
+
+PSYCHOSIS: Mindfulness is generally not recommended for people currently experiencing psychosis or who have a history of psychosis-related dissociation. If you know this about a participant, offer them an alternative activity.
+
+CULTURAL SENSITIVITY: Mindfulness has Buddhist roots. Some participants from certain religious backgrounds may have concerns. Acknowledge the secular clinical context clearly.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 44
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 44,
+    topic: 'Creative Arts & Expressive Therapies',
+    summary: 'How art, music, movement, and writing support mental health; evidence for arts therapies; hands-on expressive exercises accessible to everyone.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Why Creative Expression Matters',
+        bullets: [
+          'Creative expression allows processing of experiences that are difficult to put into words',
+          'Trauma is often stored somatically — art, movement and music can access non-verbal emotional material',
+          'Creativity activates reward pathways; flow states reduce rumination and anxiety',
+          'Social prescribing: arts and cultural activities prescribed by GPs to improve wellbeing (NHS England)',
+        ],
+      },
+      {
+        title: 'Art Therapy',
+        bullets: [
+          'Facilitated by HCPC-registered art therapists — distinct from art classes',
+          'Used in PTSD, eating disorders, dementia, autism, chronic pain, psychosis',
+          'Does not require artistic skill — process over product; the making matters, not the result',
+          'Evidence: significant reductions in PTSD symptoms; improved self-esteem and emotional regulation',
+        ],
+      },
+      {
+        title: 'Music Therapy',
+        bullets: [
+          'Active (playing/singing) and receptive (listening) approaches; facilitated by HCPC-registered therapists',
+          'Strong evidence in dementia: reduces agitation, improves mood, activates autobiographical memory',
+          'Used in autism, depression, anxiety, palliative care, acquired brain injury',
+          'Even informal music use — playlist creation, singing in groups — has measurable mood benefits',
+        ],
+      },
+      {
+        title: 'Movement & Writing Therapies',
+        bullets: [
+          'Dance/movement therapy: uses the body as a vehicle for emotional expression and integration',
+          'Five Rhythms, Biodanza, authentic movement — group movement practices with therapeutic principles',
+          'Expressive writing (Pennebaker paradigm): 15–20 minutes of free emotional writing over 3–4 days reduces distress and improves wellbeing',
+          'Journaling: accessible daily practice; reduces anxiety, improves mood, supports trauma processing',
+        ],
+      },
+      {
+        title: 'Accessing Arts Therapies in the UK',
+        bullets: [
+          'NHS: art therapy available via CMHT referral, in CAMHS, dementia care, eating disorder units',
+          'Social prescribing link workers: can connect to community arts projects, choirs, creative writing groups',
+          'Arts Council England: funds community arts and wellbeing projects',
+          'Online: Art Therapy Online; Open Arts; Cultural Care organisations',
+          'DIY approaches: sketchbooks, free-writing, playlists, movement — no referral needed',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Why Creative Expression Matters
+"Not everything that happens to us can be put into words. Trauma, grief, joy, love — the most profound human experiences are often the ones that language struggles to contain. Creative expression gives us other routes: through making, moving, sounding, writing.
+
+There's solid neuroscience behind this. Trauma is stored not just as narrative memory but as sensory and bodily experience — what Peter Levine calls 'somatic memory'. Talk therapy accesses the verbal parts of the brain. Art, music, and movement can reach the parts that language doesn't get to.
+
+And there's something else: creative flow. When we're absorbed in making something — painting, playing music, writing, dancing — the default mode network quietens. The rumination loop that drives anxiety and depression is interrupted. This isn't incidental to creativity. It is one of its primary mental health mechanisms."
+
+SLIDE 2 — Art Therapy
+"Art therapy is not an art class. The goal is not to produce good art — it's to use the process of making as a vehicle for exploring and expressing internal experience. HCPC-registered art therapists are clinically trained mental health professionals who happen to work with creative media.
+
+Art therapy has evidence across a remarkably wide range of presentations. For PTSD, it allows processing of traumatic material through imagery without needing to narrate it directly — which can be safer for some people. For eating disorders, it can help explore body image in non-verbal ways. For dementia, it provides connection and creative engagement long after verbal communication becomes limited.
+
+One of the most important things to communicate to participants who might be hesitant: you don't need to be able to draw. You do not need any artistic skill whatsoever. This is not about technical ability."
+
+SLIDE 3 — Music Therapy
+"Music and the brain have a remarkable relationship. Music activates more areas of the brain simultaneously than almost any other activity. It accesses autobiographical memory in profound ways — people with advanced dementia who may not recognise their family can often still sing every word of a song from their youth.
+
+Music therapy has some of its strongest evidence in dementia care: it significantly reduces agitation, improves mood, and temporarily restores communicative capacity. But it is also used with autism, depression, anxiety, premature infants in NICU, and people in palliative care.
+
+Even informal music use has measurable benefits. Creating playlists for different emotional states — what some researchers call 'musical first aid' — is an accessible, free mental health tool. Singing in groups combines music with social connection and physical benefits (controlled breathing, posture). The evidence for community choirs as a mental health intervention is growing."
+
+SLIDE 4 — Movement & Writing Therapies
+"Dance and movement therapy uses the body as the primary medium for therapeutic work. The premise is that mind and body are inseparable — that emotion is always physically expressed, even when suppressed. Dance therapists help clients become aware of and work with habitual movement patterns that may reflect psychological material.
+
+For those who find body-based work too exposing, expressive writing is a profoundly accessible alternative. James Pennebaker's research — starting in the 1980s and replicated hundreds of times since — showed that writing about difficult emotional experiences for just 15 to 20 minutes a day over three to four days produces measurable improvements in psychological wellbeing, immune function, and even academic performance. The key is to write about both the facts and the feelings — not just a diary of events, but emotional processing."
+
+SLIDE 5 — Accessing Arts Therapies in the UK
+"Arts therapies are available through the NHS — primarily via Community Mental Health Teams, CAMHS, eating disorder services, and dementia care settings — but access varies significantly by area. Social prescribing is expanding access: link workers in GP practices can refer people to community arts projects, choirs, creative writing workshops, and gallery programmes.
+
+For anyone who wants to start without a referral: a sketchbook and some pens, a free-writing notebook, a playlist, a dance in your kitchen — these are legitimate starting points. The therapeutic benefit is in the doing, not in the product, and not exclusively in the formal clinical setting."`,
+    activity: `ACTIVITY — Expressive Arts Taster (20 minutes)
+Melksham Mental Health | Module 44 | Licensed Materials
+
+PURPOSE: Give participants a direct, low-barrier experience of three expressive arts approaches. No skill required — process over product.
+
+SAFETY NOTE: These activities can evoke emotion. Participants have full permission to modify, skip, or simply observe. Remind the group of the ground rules.
+
+OPTION A — Visual Expression (7 minutes):
+Provide paper and pens/markers (or ask participants to draw on any available paper/phone notepad).
+Instruction: "Without thinking about it too hard, draw or doodle how you are feeling right now. This is not about artistic ability — it might be shapes, colours, scribbles, a symbol, or something representational. You have 5 minutes."
+After drawing, participants write one sentence underneath: "When I look at this, I notice..."
+Optional brief share: "Anyone who wants to, describe your image — not what it 'means', just what you notice."
+
+OPTION B — Free-Writing (7 minutes):
+Instruction: "Write continuously for 5 minutes. Start with 'Right now I feel...' and keep writing without stopping to edit or cross things out. If you run out of things to say, write 'I don't know what to write' until something else comes. No one will read this — this is only for you."
+After writing: fold the paper. Participants can take it away or destroy it.
+Brief reflection: "Did anything surprise you in what came out?"
+
+OPTION C — Sound/Music Response (6 minutes):
+Play a short piece of music (2–3 minutes — choose something ambient and non-triggering, e.g. slow classical, nature sounds, or a simple melodic piece).
+Instruction: "As you listen, let your attention rest on what the music evokes — images, memories, feelings, colours, textures. Just notice. Don't try to analyse."
+Afterwards: share one word that captures what the music brought up.`,
+    discussionPrompts: [
+      'Why do you think creative arts therapies are often seen as "soft" or less serious than talking therapies — and what does this reveal about how we value different ways of knowing and healing?',
+      'Have you ever used a creative activity (music, writing, drawing, dance) to process difficult feelings? What happened?',
+      'How might arts therapies be especially valuable for people who find verbal therapies difficult — for example, children, people with learning disabilities, trauma survivors, or those from cultures with less verbal therapeutic tradition?',
+      'What would it look like to make arts therapies genuinely accessible — not just a luxury for those with NHS referrals or who can pay privately?',
+    ],
+    resources: [
+      { label: 'British Association of Art Therapists (BAAT)', url: 'https://www.baat.org' },
+      { label: 'British Association for Music Therapy (BAMT)', url: 'https://www.bamt.org' },
+      { label: 'Association for Dance Movement Psychotherapy UK', url: 'https://www.admp.org.uk' },
+      { label: 'NHS — Social prescribing: arts and wellbeing', url: 'https://www.england.nhs.uk/personalisedcare/social-prescribing/' },
+      { label: 'Mental Health Foundation — the arts and mental health', url: 'https://www.mentalhealth.org.uk/explore-mental-health/a-z-topics/arts-and-mental-health' },
+    ],
+    videos: [
+      { label: 'What is art therapy? — BAAT introduction (YouTube)', url: 'https://www.youtube.com/results?search_query=what+is+art+therapy+BAAT+introduction' },
+      { label: 'Music therapy and dementia — the evidence (YouTube)', url: 'https://www.youtube.com/results?search_query=music+therapy+dementia+evidence+NHS' },
+      { label: 'Expressive writing and mental health — Pennebaker research (YouTube)', url: 'https://www.youtube.com/results?search_query=pennebaker+expressive+writing+mental+health+research' },
+    ],
+    powerPoint: `MODULE 44 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Creative arts collage imagery on black; 'process over product' as orange tagline
+Slide 2: Art therapy examples — abstract images; HCPC credential highlighted; 'no artistic skill needed'
+Slide 3: Music and brain activity diagram; dementia evidence statistic in large orange
+Slide 4: Two columns — Movement therapies | Writing therapies — Pennebaker stat highlighted
+Slide 5: Access pathway diagram — NHS referral, social prescribing, self-directed; orange flow chart
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Creative activities can unexpectedly surface distressing material — trauma memories, grief, or difficult emotions may arise without warning. Be attentive during and after the activity. Give participants time to ground themselves before moving on.
+
+FACILITATION: The key message to communicate repeatedly: no skill or experience required. Anticipate participants saying 'I can't draw' or 'I'm not creative'. Respond: 'You don't need to be. This is about expression, not quality.'
+
+TRAUMA CONSIDERATIONS: Expressive arts can be powerful for trauma processing, but should not be used as trauma therapy without appropriate training. If a participant begins to dissociate or appears overwhelmed, gently offer grounding (feet on floor, name three things you can see) and a break.
+
+DIVERSITY: Music and art have culturally specific meanings. Be sensitive to cultural context when using examples or playing music.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 45
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 45,
+    topic: 'Technology & Mental Health: Screen Time, Gaming & Social Media',
+    summary: 'Evidence on how smartphones, social media, and gaming affect mental health; digital addiction; gaming disorder; practical strategies for healthier technology use.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Technology and the Modern Mind',
+        bullets: [
+          'Average UK adult spends 6+ hours per day on screens; teenagers 7–9 hours (Ofcom 2023)',
+          'Smartphones are designed to maximise engagement — variable reward schedules mimic slot machine psychology',
+          'Digital technology has transformed social connection, work, health access — not inherently harmful',
+          'The question is not screens vs no screens but quality and context of use',
+        ],
+      },
+      {
+        title: 'Social Media & Mental Health',
+        bullets: [
+          'Meta internal research (2021): Instagram makes 32% of teenage girls feel worse about their bodies',
+          'Social comparison theory: upward comparison on curated feeds drives envy, inadequacy, depression',
+          'FOMO (fear of missing out) and constant availability increase anxiety and reduce downtime',
+          'Evidence is mixed: some studies show social connection benefits; passive scrolling is most harmful',
+          'Adolescent girls most vulnerable; association with self-harm and eating disorders is significant',
+        ],
+      },
+      {
+        title: 'Gaming & Gaming Disorder',
+        bullets: [
+          'WHO ICD-11 (2022): Gaming Disorder classified as a mental health condition — persistent gaming causing significant impairment',
+          'Estimated 1–3% of gamers meet criteria; risk factors include pre-existing depression, ADHD, social anxiety',
+          'Gaming has benefits: problem-solving, social connection, stress relief, accessibility for housebound people',
+          'Red flags: neglecting basic needs (food, sleep, hygiene), withdrawal symptoms, lying about gaming time, loss of interest in other activities',
+        ],
+      },
+      {
+        title: 'Mechanisms of Digital Harm',
+        bullets: [
+          'Dopamine dysregulation: variable reward schedules (likes, notifications) create compulsive checking',
+          'Blue light from screens disrupts melatonin and delays sleep onset (see Module 41)',
+          'Cyberbullying: 1 in 5 young people experience online harassment; significant mental health impact',
+          'Displacement of beneficial activities: screen time displaces sleep, exercise, face-to-face connection',
+          'Attention fragmentation: context-switching reduces deep focus capacity over time',
+        ],
+      },
+      {
+        title: 'Healthy Digital Habits',
+        bullets: [
+          'Digital boundaries: no screens in bed; phone-free mealtimes; screen-free hour before sleep',
+          'Intentional use: scheduled check-in times rather than continuous availability',
+          'Curate your feed: unfollow accounts that trigger comparison or distress; prioritise uplifting content',
+          'Digital detox: planned periods of reduced use — evidence shows mood improvements within 5–7 days',
+          'For young people: NICE and CMO guidelines recommend no screens for under-2s; limited supervised use under 5',
+          'Help resources: NHS gambling and tech addiction services; Childline for cyberbullying (0800 1111)',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Technology and the Modern Mind
+"We'll start by acknowledging something: technology is not the enemy. The internet has transformed access to mental health information, peer support communities, crisis helplines, and talking therapies. Smartphones enable connections across distances, support isolated people, and give access to tools — like mindfulness apps — that genuinely help. The question is never 'screens or no screens' but 'what kind of use, in what contexts, for how long, at what age'.
+
+That said — there are specific, evidence-based concerns about how certain technologies are designed and used. The average UK adult now spends over six hours a day on screens. Teenagers between seven and nine hours. And much of that time is being shaped by product design specifically engineered to maximise the time we spend on platforms — not because that time is good for us, but because it generates revenue."
+
+SLIDE 2 — Social Media & Mental Health
+"In 2021, Frances Haugen, a former Facebook data scientist turned whistleblower, published internal company research. One slide became infamous: it showed that Instagram makes 32% of teenage girls feel worse about their bodies — and that Facebook knew this. This wasn't an accident or an oversight. It was research conducted and then largely ignored because the alternative was a less engaging product.
+
+Social comparison is a deeply human tendency — we measure ourselves against others as a way of calibrating our own position. Social media turbocharges this in a particular way: we're comparing our real, complex, messy lives against carefully curated highlight reels. We see the holiday, the promotion, the new relationship. We don't see the arguments, the anxiety, the loneliness behind the photograph.
+
+Research consistently shows that passive scrolling — consuming content without actively connecting — is most associated with poor mental health outcomes. Active use — messaging friends, joining communities with shared interests — has more neutral or even positive effects."
+
+SLIDE 3 — Gaming & Gaming Disorder
+"Let's be careful about gaming. The dominant narrative in mainstream media is that gaming is harmful, particularly for young men. The evidence is more nuanced. For most people, gaming is a legitimate leisure activity that provides enjoyment, social connection, problem-solving, and stress relief. For some people who are housebound — due to disability, agoraphobia, or social anxiety — online gaming communities are a primary source of social connection and can be profoundly beneficial.
+
+Gaming Disorder was classified by the WHO in 2022 as a mental health condition: persistent, prioritised gaming that causes significant impairment in personal, family, social, educational, occupational, or other important areas. The estimated prevalence is around 1 to 3% of regular gamers — not trivial, but also not the majority. Pre-existing mental health conditions — particularly depression, ADHD, and social anxiety — significantly increase risk."
+
+SLIDE 4 — Mechanisms of Digital Harm
+"How does harmful technology use damage mental health? Several overlapping mechanisms. Variable reward schedules — the unpredictable delivery of likes, comments, notifications — activate the same dopamine pathways as gambling. The unpredictability is the feature, not the bug. It creates compulsive checking behaviour: 'just one more scroll.'
+
+Cyberbullying affects approximately 1 in 5 young people in the UK. Unlike traditional bullying it can follow victims into the home — the one place previously considered safe. The sense of exposure and helplessness associated with cyberbullying is strongly linked to depression, self-harm, and suicidal ideation.
+
+And there's the displacement problem: every hour spent scrolling is an hour not spent sleeping, exercising, or talking face-to-face — activities that have robust mental health benefits."
+
+SLIDE 5 — Healthy Digital Habits
+"The good news is that relatively modest behavioural changes have measurable positive effects on mental health. Studies show that reducing social media use to 30 minutes per day leads to significant reductions in loneliness and depression within three weeks. Digital detoxes — planned periods of 5 to 7 days with no or minimal social media — produce mood improvements that participants consistently report as significant.
+
+Some practical principles: treat your phone like a visitor, not a permanent resident. Create phone-free zones — the dinner table, the bedroom. Set specific times to check notifications rather than responding to every alert as it arrives. Audit your social media feeds: if someone's content consistently makes you feel inadequate or anxious, unfollow them. This is a small act of self-care with real impact."`,
+    activity: `ACTIVITY — My Digital Life Audit (20 minutes)
+Melksham Mental Health | Module 45 | Licensed Materials
+
+PURPOSE: Help participants build honest awareness of their technology use and identify specific, manageable changes.
+
+INTRODUCE: "Before we can change our digital habits, we need to understand them. Most people significantly underestimate how much time they spend on screens. We're going to do an honest audit."
+
+PART 1 — Screen Time Check (3 minutes):
+If participants have smartphones, ask them to check their weekly screen time report (Settings > Screen Time / Digital Wellbeing).
+- What is your daily average total screen time?
+- What are your top 3 most used apps?
+- How does the number compare to what you expected?
+Note: Participants who don't want to share their numbers absolutely don't have to.
+
+PART 2 — Impact Assessment (7 minutes, individual):
+For each of the following, rate honestly (1 = strongly disagree, 5 = strongly agree):
+- My phone use helps me feel connected to people
+- I often use my phone when I'm bored rather than for a specific reason
+- I check my phone first thing in the morning and last thing at night
+- Social media makes me feel better about myself
+- I have tried to reduce my screen time and found it difficult
+- My sleep is affected by phone/screen use
+- I feel anxious when I can't check my phone
+
+PART 3 — Behavioural Experiment Design (7 minutes, pairs):
+Design a 7-day digital experiment:
+Choose ONE specific change to try for 7 days. Examples:
+- No phone in the bedroom
+- Check social media only at 3 designated times per day (not continuously)
+- Delete one app for a week
+- No screens for 1 hour before bed
+- Unfollow 10 accounts that make you feel worse about yourself
+Partner A presents their experiment; Partner B helps make it specific and realistic.
+Swap.
+
+PART 3 — Group Reflection (3 minutes):
+What is the most common change people are planning? What barriers might get in the way?`,
+    discussionPrompts: [
+      'Who is responsible for the mental health harms associated with social media — individuals, parents, platforms, or governments? What should each be doing?',
+      'How do you think social media affects different generations differently? What do older adults miss that younger people don\'t notice, and vice versa?',
+      'Is "digital addiction" a useful concept — or does it pathologise normal behaviour in an increasingly digital world? Where is the line?',
+      'What does healthy technology use look like — and how realistic is that in a world where work, relationships, and services are increasingly mediated by screens?',
+    ],
+    resources: [
+      { label: 'NHS — Screen time and mental health', url: 'https://www.nhs.uk/mental-health/children-and-young-people/advice-for-parents/children-and-young-people-screen-time/' },
+      { label: 'Childline — cyberbullying support: 0800 1111', url: 'https://www.childline.org.uk/info-advice/bullying-abuse-safety/types-bullying/online-bullying/' },
+      { label: 'Internet Matters — digital wellbeing resources for families', url: 'https://www.internetmatters.org' },
+      { label: 'Mind — social media and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/online-mental-health/social-media-and-mental-health/' },
+      { label: 'Centre for Humane Technology — research and resources', url: 'https://www.humanetech.com' },
+    ],
+    videos: [
+      { label: 'The Social Dilemma — Netflix documentary trailer (YouTube)', url: 'https://www.youtube.com/results?search_query=social+dilemma+netflix+trailer+technology+mental+health' },
+      { label: 'Social media and teenage mental health — the evidence (YouTube)', url: 'https://www.youtube.com/results?search_query=social+media+teenage+mental+health+evidence+jonathan+haidt' },
+      { label: 'Gaming disorder — WHO classification explained (YouTube)', url: 'https://www.youtube.com/results?search_query=gaming+disorder+WHO+ICD11+explained' },
+    ],
+    powerPoint: `MODULE 45 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '6+ hours per day' as large orange statistic; phone screen imagery on black
+Slide 2: Social comparison diagram — real life vs social media highlight reel; 32% stat in orange
+Slide 3: Gaming: benefits vs Gaming Disorder criteria — two columns; WHO classification noted
+Slide 4: Four mechanisms infographic — dopamine loop, blue light, cyberbullying, displacement — icons in orange
+Slide 5: Healthy digital habits checklist — actionable steps on black; crisis contacts in orange
+All slides: Samaritans 116 123 footer, Childline 0800 1111 (for cyberbullying), MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Cyberbullying disclosures may arise during this session — particularly for younger participants. Respond with standard safeguarding protocols. Childline (0800 1111) is free and available 24/7 for under-18s. For adults, the Revenge Porn Helpline is 0345 6000 459.
+
+FACILITATION: Be aware that asking participants to check their screen time data can cause shame or embarrassment. Frame this as data, not judgment. If anyone's numbers feel alarming to them, remind them this is information — a starting point, not a verdict.
+
+GAMING: Challenge stigma around gaming — avoid framing all gaming as problematic. Many participants or their loved ones will game. The goal is harm reduction and awareness of warning signs.
+
+SOCIAL MEDIA: This topic can lead to heated discussion about platform responsibility vs individual responsibility. Facilitate both perspectives; avoid implying that people who struggle with social media are simply weak-willed.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 46
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 46,
+    topic: 'Climate Anxiety & Eco-distress',
+    summary: 'Understanding climate anxiety and eco-grief as legitimate psychological responses; evidence-based approaches to managing climate-related distress without paralysis.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'What Is Climate Anxiety?',
+        bullets: [
+          'Climate anxiety: chronic fear of environmental doom, often accompanied by grief, anger, guilt and helplessness',
+          'Distinguished from clinical anxiety disorder — it is a rational response to a real threat',
+          '68% of UK adults say climate change causes them significant worry (YouGov 2021); highest in 18–34 age group',
+          'Eco-grief: mourning for lost ecosystems, species, and futures — legitimate and growing',
+          'Climate emotions range from anxiety to grief to guilt to rage — all are valid and normal',
+        ],
+      },
+      {
+        title: 'Who Is Most Affected?',
+        bullets: [
+          'Young people aged 16–25: 59% say they are very or extremely worried about climate change (Lancet 2021 global survey)',
+          'Indigenous and Global South communities: frontline experience of climate impacts',
+          'Environmental workers, scientists, and activists: vicarious and direct exposure to loss',
+          'People with pre-existing anxiety or depression: amplification of existing distress',
+          'Communities hit by flooding, wildfires, or extreme weather: acute trauma and loss',
+        ],
+      },
+      {
+        title: 'The Psychology of Climate Distress',
+        bullets: [
+          'Anticipatory grief: mourning losses that haven\'t yet fully happened but feel certain',
+          'Solastalgia: distress caused by change in one\'s home environment (Glenn Albrecht)',
+          'Paralysis vs action: anxiety can either motivate change or produce hopeless immobility',
+          'Denial and dissociation: psychological defences against unbearable information',
+          'Collective vs individual burden: internalising systemic problems as personal failure',
+        ],
+      },
+      {
+        title: 'Evidence-Based Approaches',
+        bullets: [
+          'Acknowledge the validity of climate emotions — do not pathologise or dismiss',
+          'Climate Cafés and Good Grief Network: peer support for climate distress',
+          'Values-based action: connecting distress to purposeful engagement rather than avoidance',
+          'ACT principles: accepting difficult feelings, choosing values-based action, defusing catastrophic thoughts',
+          'Community connection: shared action reduces isolation and builds agency',
+          'Self-compassion: systemic problems are not individual moral failures',
+        ],
+      },
+      {
+        title: 'UK Resources & Support',
+        bullets: [
+          'Climate Psychology Alliance: clinician support and public resources — climatepsychologyalliance.org',
+          'Good Grief Network — 10-step peer support programme for climate distress',
+          'Force of Nature — mental health tools for young climate activists',
+          'Active Hope (Joanna Macy): work that reconnects with the world',
+          'Samaritans 116 123 — if distress becomes overwhelming',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — What Is Climate Anxiety?
+"Climate anxiety is not a disorder. Let's start there. When 68% of UK adults report significant worry about climate change, we are not dealing with an irrational phobia. We are dealing with a rational psychological response to a genuinely alarming situation. The question is not how to make the fear go away — it is how to live well and act meaningfully in the presence of that fear.
+
+Climate anxiety sits within a broader field of climate-related psychological experiences. Eco-grief is mourning for what is being lost — species, ecosystems, predictable seasons, a sense of a liveable future. Climate rage is anger at governments, corporations, and systems that continue to choose profit over survival. Climate guilt is the individual's sense of complicity. All of these are real, valid, and increasingly prevalent — especially in younger people who understand that they will live through the consequences of decisions being made now."
+
+SLIDE 2 — Who Is Most Affected?
+"The Lancet published a landmark global survey in 2021 looking at climate distress in young people aged 16 to 25 across ten countries. Fifty-nine percent described themselves as very or extremely worried about climate change. Eighty-three percent said people had failed to take care of the planet. Sixty-eight percent said the future was frightening.
+
+These are not young people with clinical anxiety disorders — these are young people accurately perceiving a threat. The psychological burden falls disproportionately on those who are least responsible for the problem and most exposed to its consequences: people in the Global South, Indigenous communities, and the next generation."
+
+SLIDE 3 — The Psychology of Climate Distress
+"The Australian philosopher Glenn Albrecht coined the term solastalgia to describe the distress caused by change in one's home environment — the sense of loss felt by communities watching their landscape change irreversibly. This is a useful concept for anyone who has seen flooding devastate a familiar place, or drought transform agricultural land.
+
+One of the central psychological challenges of climate distress is the tension between action and paralysis. Anxiety can be a mobilising force — it can drive people to campaign, change behaviour, connect with community. But when it becomes overwhelming and the scale of the problem feels unbearable, it often tips into hopeless immobility. The psychological task is not to eliminate the anxiety but to channel it."
+
+SLIDE 4 — Evidence-Based Approaches
+"The therapeutic literature on climate distress is still developing, but several approaches show promise. Acceptance and Commitment Therapy is particularly well-suited: it works with the principle that difficult emotions don't need to be eliminated before living a meaningful life. We can feel afraid and act anyway. We can feel grief and still choose engagement.
+
+The Good Grief Network's 10-step peer support programme — modelled loosely on 12-step principles but specific to climate distress — has helped thousands of people move from isolation in their climate feelings to collective purpose. The key insight: this is not a problem for individuals to solve alone. It is a collective crisis that requires collective response."
+
+SLIDE 5 — UK Resources
+"The Climate Psychology Alliance brings together mental health practitioners working specifically on climate-related distress. They offer resources for both individuals and clinicians. Force of Nature has developed practical psychological tools specifically for young climate activists at risk of burnout. The Good Grief Network operates groups online and in person.
+
+For anyone whose climate distress tips into something more acute — intrusive thoughts, sleep disruption, inability to function — standard mental health support is appropriate: NHS Talking Therapies, GP referral, Samaritans 116 123 in acute distress."`,
+    activity: `ACTIVITY — Climate Emotions Mapping & Values Clarification (20 minutes)
+Melksham Mental Health | Module 46 | Licensed Materials
+
+PURPOSE: Create a safe space to name and normalise climate emotions; connect distress to purposeful values-based action.
+
+INTRODUCE: "Climate distress is often experienced in silence — people feel embarrassed or overwhelmed by how strongly they feel. This activity creates space to name these feelings without judgment."
+
+PART 1 — Emotions Check-In (5 minutes):
+On a sheet of paper, participants draw a simple body outline (or just write without drawing).
+In or around the body, write words for any climate-related emotions you carry:
+Examples: dread, grief, rage, despair, numbness, guilt, overwhelm, helplessness, urgency, love for the world, fear for the future
+
+Where do you feel these emotions in your body?
+How long have you carried them?
+
+PART 2 — What Matters Most (7 minutes, individual then share):
+"Climate anxiety is often a signal about what we love and value."
+Write answers to:
+- What do I most fear losing (specific — a place, a species, a future for someone I love)?
+- What do I want to protect?
+- What kind of person do I want to be in this crisis?
+
+Optional share in pairs: "The thing I care most about protecting is..."
+
+PART 3 — One Step From Fear to Action (5 minutes, small groups):
+Using the ACT framework: feelings are information, not instructions; values point to action.
+Groups brainstorm: given what I care about, what ONE small action could I take this month that feels meaningful?
+- Join a community project
+- Change one behaviour I've been avoiding
+- Have a conversation I've been putting off
+- Find a climate grief group
+- Simply allow myself to feel this without shame
+
+PART 4 — Collective Naming (3 minutes):
+Group calls out words for how it feels to talk about this together. Tutor reflects back: "This is not a room full of anxious people — this is a room full of people who care deeply."`,
+    discussionPrompts: [
+      'Is climate anxiety a mental health problem — or is it the appropriate response of a healthy mind to a genuine emergency? What are the implications of each framing?',
+      'How can mental health professionals support people with climate distress without pathologising valid emotional responses?',
+      'What is the difference between climate anxiety that motivates action and climate anxiety that leads to paralysis — and what determines which direction it goes?',
+      'How should we talk to children and young people about climate change without inducing fear — or is fear sometimes an honest and appropriate response?',
+    ],
+    resources: [
+      { label: 'Climate Psychology Alliance — UK resources and clinician directory', url: 'https://www.climatepsychologyalliance.org' },
+      { label: 'Good Grief Network — peer support for climate distress', url: 'https://www.goodgriefnetwork.org' },
+      { label: 'Force of Nature — mental health tools for climate activists', url: 'https://www.forceofnature.xyz' },
+      { label: 'Mind — eco-anxiety and climate mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/nature-and-mental-health/' },
+      { label: 'Samaritans — 116 123 (24/7 free)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'What is climate anxiety? — BBC explainer (YouTube)', url: 'https://www.youtube.com/results?search_query=climate+anxiety+eco+distress+BBC+explainer' },
+      { label: 'Good Grief Network — how it works (YouTube)', url: 'https://www.youtube.com/results?search_query=good+grief+network+climate+distress+peer+support' },
+      { label: 'Active Hope — Joanna Macy on climate grief (YouTube)', url: 'https://www.youtube.com/results?search_query=joanna+macy+active+hope+climate+grief' },
+    ],
+    powerPoint: `MODULE 46 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '68% of UK adults' as large orange statistic on black; climate emotions word cloud in white
+Slide 2: Global South/young people disproportionate impact graphic; Lancet 59% stat in orange
+Slide 3: Solastalgia definition slide; paralysis vs action diagram — two-direction arrows
+Slide 4: ACT framework for climate distress — 3 steps in orange on black; Good Grief Network reference
+Slide 5: UK resources list — Climate Psychology Alliance, Good Grief Network, Force of Nature — orange links
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Climate distress can intensify existing depression and suicidal ideation, particularly in young people. Monitor the room during the emotions activity. Normalise distress but be attentive to anyone who appears overwhelmed. Have Samaritans (116 123) visible.
+
+FACILITATION: Create genuine psychological safety for this topic. Some participants may feel embarrassed by the depth of their feelings — or conversely, may be dismissive of others' distress. Hold space for the full range without shaming or minimising.
+
+POLITICAL SENSITIVITY: Climate change is a political topic. Keep facilitation focused on psychological wellbeing rather than political debate. The module is about emotional response to climate change, not about policy positions.
+
+HOPELESSNESS: Be attentive to participants who express profound hopelessness. Normalise grief and anxiety; distinguish this from clinical hopelessness that warrants mental health referral.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 47
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 47,
+    topic: 'Spirituality, Religion & Mental Health',
+    summary: 'Exploring the complex relationship between spirituality, religion and mental health; protective and risk factors; how mental health services can engage respectfully with spiritual worldviews.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Defining Spirituality & Religion',
+        bullets: [
+          'Spirituality: a personal sense of meaning, connection, and transcendence — broader than religion',
+          'Religion: organised belief systems, practices, communities and doctrines',
+          '55% of UK adults describe themselves as non-religious (British Social Attitudes 2023), yet many report spiritual experiences',
+          'Spirituality and mental health research spans diverse traditions: Christianity, Islam, Judaism, Hinduism, Buddhism, secular spirituality',
+          'The two are distinct but overlapping; both can be protective or harmful depending on context',
+        ],
+      },
+      {
+        title: 'Spirituality as a Protective Factor',
+        bullets: [
+          'Religious attendance associated with lower rates of depression, suicide, and substance misuse in multiple large studies',
+          'Mechanisms: community belonging, structured meaning-making, coping rituals, hope',
+          'Prayer and meditation share neurological features; both activate calm and reduce cortisol',
+          'Sense of purpose and coherence in suffering — "this has meaning" — is a significant buffer against despair',
+          'Forgiveness practices: associated with reduced anger, lower blood pressure, improved mental health',
+        ],
+      },
+      {
+        title: 'When Religion & Spirituality Harm',
+        bullets: [
+          'Religious trauma: spiritual abuse, shame-based theology, rejection, and coercive control in religious contexts',
+          'LGBTQ+ people in non-affirming religious communities: significantly elevated depression, anxiety, and suicide risk',
+          'Conversion therapy: banned in England (2023) but still practiced globally; causes severe psychological harm',
+          'Scrupulosity: OCD variant characterised by religious obsessions and compulsions',
+          'Spiritual bypassing: using spiritual beliefs to avoid addressing psychological problems',
+        ],
+      },
+      {
+        title: 'Mental Health Services & Spiritual Care',
+        bullets: [
+          'NICE guidelines: spiritual/religious beliefs should be explored as part of holistic assessment',
+          'NHS Chaplaincy: spiritual and pastoral care available in most NHS hospitals and hospices',
+          'Cultural competence: understanding diverse faith traditions and not pathologising normal religious experiences',
+          'Distinguishing spiritual experience from psychosis: critical and often complex clinical assessment',
+          'Collaborative care: working with faith communities, chaplains, and community leaders',
+        ],
+      },
+      {
+        title: 'UK Resources & Signposting',
+        bullets: [
+          'Mind — Spirituality and mental health resources',
+          'NHS Chaplaincy services — available in hospitals; some community chaplains',
+          'Spiritual Crisis Network — support for spiritual emergencies and unusual experiences',
+          'Survivors Voice (religious trauma and spiritual abuse support)',
+          'Mermaids and Stonewall — LGBTQ+ support including for those in religious contexts',
+          'Samaritans 116 123 — 24/7 support regardless of belief',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Defining Spirituality & Religion
+"This is one of the most personal topics we will cover in this course — and one of the most important to handle with care. Spirituality and religion touch our deepest questions: what is the meaning of my life, why do I suffer, what happens when I die, am I connected to something larger than myself?
+
+Let's be precise about the terms. Religion refers to organised systems of belief, practice, community, and doctrine — Christianity, Islam, Judaism, Hinduism, Buddhism, and so on. Spirituality is broader: a sense of meaning, purpose, connection, and transcendence that may or may not involve organised religion. Many people who describe themselves as non-religious — and in the UK that's now a majority — nonetheless report spiritual experiences: a sense of awe in nature, a feeling of connection to something larger, a search for meaning that goes beyond the material.
+
+Both can profoundly affect mental health, and they can do so in strikingly different directions."
+
+SLIDE 2 — Spirituality as a Protective Factor
+"The research is clear: active religious participation is associated with lower rates of depression, suicide, and substance misuse. These are robust findings across multiple studies and multiple traditions. Why?
+
+Several mechanisms operate simultaneously. Community belonging — having a group of people who share your worldview and care about your wellbeing — is one of the strongest protective factors against mental ill-health. Structured meaning-making — the capacity to say 'my suffering has meaning within a larger narrative' — is a profound buffer against despair. The existential question 'why is this happening to me?' is one of the most destabilising questions a human being can face, and religious and spiritual frameworks offer answers.
+
+Prayer and meditation share neurological features — they both activate the parasympathetic nervous system, reduce cortisol, and promote calm. Whether or not you believe in the metaphysical claims involved, the psychological and physiological effects are real and measurable."
+
+SLIDE 3 — When Religion & Spirituality Harm
+"The relationship between religion and mental health is not straightforwardly positive. Religious communities can also be sites of profound harm.
+
+Religious trauma is a growing area of clinical attention — a pattern of psychological harm resulting from spiritual abuse, shame-based theology, coercive religious control, or the experience of religious rejection. People who have been told they are sinful, shameful, or damned — particularly in childhood — can carry that damage into adulthood in ways that present clinically as depression, anxiety, complex PTSD, and difficulties with self-worth.
+
+LGBTQ+ people in non-affirming religious contexts face dramatically elevated rates of depression, anxiety, self-harm, and suicide. Conversion therapy — the practice of attempting to change someone's sexual orientation or gender identity — was banned in England in 2023, but continues to operate globally and causes severe psychological harm. This is not a matter of opinion: it is a matter of evidence."
+
+SLIDE 4 — Mental Health Services & Spiritual Care
+"NICE guidelines are clear that spiritual and religious beliefs should be explored as part of holistic mental health assessment. This is not about endorsing any particular belief — it's about understanding what matters to this person, what their worldview is, and how their spiritual life is affecting their mental health.
+
+One of the most complex clinical challenges in this area is distinguishing spiritual experience from psychosis. Hearing the voice of God, receiving visions, or having profound experiences of divine presence are reported across many religious traditions — and are entirely normal within those contexts. The same experience, in a different context, might be a symptom of a first episode of psychosis. Good clinical practice requires cultural competence, consultation with faith community leaders, and careful functional assessment rather than reflexive pathologising."
+
+SLIDE 5 — UK Resources
+"The Spiritual Crisis Network supports people having unusual spiritual experiences — including spiritual emergencies — that may be frightening or overwhelming. NHS Chaplaincy provides pastoral and spiritual care in hospitals; some areas have community chaplains. The NHS also has multi-faith chaplaincy resources for patients of all traditions.
+
+For people who have experienced harm in religious contexts, Survivors Voice provides specific support. For LGBTQ+ people navigating religious identities, both Stonewall and Mermaids have dedicated resources."`,
+    activity: `ACTIVITY — Spiritual Lifeline (20 minutes)
+Melksham Mental Health | Module 47 | Licensed Materials
+
+PURPOSE: Enable participants to explore the role of spirituality and meaning in their own lives and consider how this intersects with mental health. This activity is deeply personal and entirely voluntary.
+
+SAFETY NOTE: This activity can evoke strong emotion. Respect everyone's privacy. Nothing shared here should be judged or challenged.
+
+INTRODUCE: "This is a personal exploration — not a test of belief, not a debate. There are no right answers."
+
+PART 1 — Personal Meaning Map (8 minutes, individual):
+Draw or write your "meaning map" — the sources of meaning, purpose, and transcendence in your life (religious or secular):
+- What gives your life a sense of purpose?
+- Where do you turn when things are very hard?
+- Do you have any practices that help you feel connected (prayer, meditation, time in nature, ritual, community)?
+- What do you believe happens after death? Does this affect how you live?
+- Has your sense of meaning or spirituality ever changed significantly?
+
+PART 2 — Spiritual Timelines (5 minutes, pairs):
+Share (only what you are comfortable sharing): one moment when your sense of meaning or spirituality supported you, and one time when a religious or spiritual experience added to your distress (or one time when the absence of a spiritual framework felt like a loss).
+
+PART 3 — Reflections on Practice (5 minutes, small groups):
+As future practitioners:
+- How would you approach the topic of religion and spirituality in a mental health assessment?
+- What would you need to know about someone's faith to support them well?
+- What are the risks of ignoring someone's spiritual worldview in therapy?
+
+PART 4 — Group Debrief (2 minutes):
+One word from each person describing something they'll carry from this activity.`,
+    discussionPrompts: [
+      'How should mental health practitioners navigate their own religious beliefs (or lack of them) when working with clients from different traditions?',
+      'Where is the line between religious experience and psychosis — and who has the authority to draw it?',
+      'How has the decline of organised religion in the UK affected the mental health landscape — for better or worse?',
+      'What obligations do faith communities have towards members with mental health difficulties — and what are the limits of what they can or should provide?',
+    ],
+    resources: [
+      { label: 'Mind — spirituality and mental health', url: 'https://www.mind.org.uk/information-support/tips-for-everyday-living/spirituality-and-mental-health/' },
+      { label: 'Spiritual Crisis Network — support for spiritual emergencies', url: 'https://spiritualcrisisnetwork.uk' },
+      { label: 'NHS Chaplaincy — spiritual care in the NHS', url: 'https://www.england.nhs.uk/chaplaincy/' },
+      { label: 'Stonewall — LGBTQ+ support including religious contexts', url: 'https://www.stonewall.org.uk' },
+      { label: 'Samaritans — 116 123 (24/7, no belief required)', url: 'https://www.samaritans.org' },
+    ],
+    videos: [
+      { label: 'Spirituality and mental health — NHS perspective (YouTube)', url: 'https://www.youtube.com/results?search_query=spirituality+mental+health+NHS+religion+wellbeing' },
+      { label: 'Religious trauma syndrome explained (YouTube)', url: 'https://www.youtube.com/results?search_query=religious+trauma+syndrome+mental+health+explained' },
+      { label: 'Distinguishing spiritual experience from psychosis (YouTube)', url: 'https://www.youtube.com/results?search_query=spiritual+experience+psychosis+difference+clinical+assessment' },
+    ],
+    powerPoint: `MODULE 47 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: Spirituality vs religion definition diagram — Venn overlap; '55% non-religious' UK stat in orange
+Slide 2: Community/meaning/prayer — three protective mechanisms as icons on black
+Slide 3: Religious harm categories — trauma, LGBTQ+ rejection, conversion therapy — with ban date highlighted
+Slide 4: Clinical framework — distinguishing spiritual experience from psychosis; NICE guidance note
+Slide 5: UK resources — Spiritual Crisis Network, NHS Chaplaincy, Stonewall — orange links on black
+All slides: Samaritans 116 123 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: This session may surface disclosures of religious abuse, LGBTQ+ rejection in faith contexts, or spiritual crises. Respond with standard safeguarding protocols and warm signposting. Do not attempt to resolve theological questions or validate or challenge specific beliefs.
+
+FACILITATION: You are likely to have participants with a wide range of religious and non-religious views. The goal is not consensus — it is respectful exploration. Be particularly careful not to allow dismissive comments about religious belief, or to allow any tradition to be singled out for criticism.
+
+YOUR OWN BELIEFS: Be transparent about the role of your own beliefs (if any) and model respectful curiosity. This is not a space for proselytising or for debunking.
+
+LGBTQ+ PARTICIPANTS: Be attentive to any participants who are both LGBTQ+ and religious. This intersection can involve significant ongoing pain. Affirm both identities.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 48
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 48,
+    topic: "Men's Mental Health & Masculinity",
+    summary: "How masculinity norms shape men's relationship with mental health; the statistics on male suicide; evidence-based approaches to engaging men in mental health support.",
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: "The Male Mental Health Crisis",
+        bullets: [
+          'Men account for 75% of all UK suicides — approximately 4,000 deaths per year (ONS 2022)',
+          'Men are significantly less likely to seek help: only 36% of NHS Talking Therapies referrals are male',
+          'Middle-aged men (45–59) are the highest-risk group for suicide in the UK',
+          'Men are more likely to use alcohol and drugs to cope with emotional distress',
+          'Men die earlier than women in part due to poorer mental and physical health help-seeking',
+        ],
+      },
+      {
+        title: 'Masculinity & Help-Seeking',
+        bullets: [
+          'Traditional masculinity norms: self-reliance, stoicism, emotional control, toughness, provider role',
+          'Alexithymia: difficulty identifying and describing emotional states — more prevalent in men',
+          'The phrase "man up" encapsulates the cultural pressure to suppress vulnerability',
+          '"Boys don\'t cry": messages received in childhood shape adult help-seeking across a lifetime',
+          'Male identity closely tied to work — redundancy, retirement, and failure become existential threats',
+        ],
+      },
+      {
+        title: 'What Works for Men',
+        bullets: [
+          'Activity-based engagement: men often talk better while doing something (walking, sport, DIY)',
+          '"Shed" model: Men\'s Sheds movement — practical activity + peer connection = mental health benefit',
+          'Peer support: other men sharing experience — normalises help-seeking without clinical framing',
+          'Language adjustment: "stress management" and "performance" often more accessible than "mental health"',
+          'Trusted messengers: GPs, coaches, employers, male friends — more effective than clinical advertising',
+        ],
+      },
+      {
+        title: 'Intersectionality: Which Men?',
+        bullets: [
+          'Black men face stigma within cultural norms and racism within mental health services — double barrier',
+          'Working-class men: economic insecurity, limited time, cost barriers, cultural stoicism',
+          'Young men (15–24): second highest suicide rate group; social media, isolation, academic and social pressures',
+          'LGBTQ+ men: higher rates of depression, anxiety, and suicide than heterosexual men',
+          'Men in prison: 70% of prison population has two or more mental health conditions',
+        ],
+      },
+      {
+        title: 'UK Services & Campaigns',
+        bullets: [
+          'Campaign Against Living Miserably (CALM): 0800 58 58 58 — specifically for men',
+          'Movember Foundation: funds male mental health research and community programmes',
+          "Men's Sheds Association UK — community sheds as mental health resource",
+          'Andy\'s Man Club — peer support groups across the UK; free; every Monday',
+          'Heads Together: royally-backed campaign normalising mental health conversations for men',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — The Male Mental Health Crisis
+"Seventy-five percent of all suicide deaths in the UK are male. That is approximately 4,000 men every year — more than eleven men every single day. This is one of the starkest public health statistics in the country, and it is largely invisible in public discourse.
+
+Meanwhile, men account for only 36% of referrals to NHS Talking Therapies — despite experiencing mental health difficulties at rates broadly comparable to women. The gap between need and help-seeking is enormous. And it is not explained by men having fewer mental health problems — it is explained by a set of cultural, social, and structural factors that make it much harder for men to reach out, and much harder for services to reach in."
+
+SLIDE 2 — Masculinity & Help-Seeking
+"To understand why men don't seek help, we need to understand masculinity — not as biology but as a social construction that is taught, enforced, and internalised from early childhood.
+
+Traditional masculinity norms cluster around certain themes: self-reliance (real men handle their own problems), stoicism (real men don't show weakness), emotional control (real men don't cry), and the provider role (a man's worth is measured by what he provides). These are not just individual beliefs — they are socially enforced. Deviation is punished with ridicule and exclusion.
+
+Alexithymia — difficulty identifying and describing emotional states — is significantly more prevalent in men. This is not a fixed biological trait. It is the predictable result of teaching boys from infancy that emotional expression is unacceptable. You cannot seek help for feelings you have never been allowed to name."
+
+SLIDE 3 — What Works for Men
+"The evidence on effective male engagement in mental health support points consistently towards a few principles. Activity-based engagement is one of the most important: many men find it easier to talk about difficult things while doing something physical — walking, fixing a car, working with wood. The direct face-to-face therapeutic gaze of traditional talking therapy can feel confrontational or exposing; side-by-side activity removes that.
+
+The Men's Sheds movement has spread across the UK for exactly this reason. Men gather in sheds to build things, fix things, and work on projects. Peer conversation happens naturally. Mental health support happens without a clinical label. The evidence for improvements in loneliness, depression, and social isolation from Men's Sheds is growing.
+
+Andy's Man Club — free peer support groups meeting every Monday across the UK — uses the same principle: men talking to men, in a non-clinical setting, without professional facilitation. This normalises help-seeking in a way that clinical services often can't."
+
+SLIDE 4 — Intersectionality: Which Men?
+"We need to be careful not to talk about 'men' as a monolith. The barriers and risks are not uniform across men.
+
+Black men face a double burden: the cultural stigma around mental health that operates within many Black communities — 'strong Black man' narratives — and the racism they encounter within mental health services, including over-diagnosis with psychosis and under-diagnosis with depression. Working-class men face economic barriers, time pressures, and cultural environments where vulnerability is particularly costly. LGBTQ+ men experience higher rates of depression, anxiety, and suicide than heterosexual men — with the additional strain of navigating identity in a world that is still hostile to queerness."
+
+SLIDE 5 — UK Services & Campaigns
+"CALM — the Campaign Against Living Miserably — runs a free helpline specifically designed for men: 0800 58 58 58, open from 5 pm to midnight every day. Andy's Man Club meets every Monday in locations across the UK — free, peer-facilitated, and specifically for men over 18.
+
+Movember funds male mental health programmes globally and has been significant in normalising conversations about men's mental health. The Men's Sheds Association has over 600 sheds across the UK. These are not clinical services — they are community resources that reach men who would never walk into a GP surgery or therapy room."`,
+    activity: `ACTIVITY — The Man Box (20 minutes)
+Melksham Mental Health | Module 48 | Licensed Materials
+
+PURPOSE: Use the 'Man Box' framework to explore how masculinity norms are taught and enforced; develop strategies for supporting men in breaking free from them.
+
+INTRODUCE: "The 'Man Box' is a concept developed by anti-violence educator Paul Kivel to describe the rigid social rules that define 'real' manhood. We're going to map it together and then think about how it affects mental health."
+
+PART 1 — Build the Man Box (7 minutes, small groups):
+Each group draws a large box on a piece of paper.
+INSIDE the box — write messages that define "real" masculinity (what men are told they should be/do/feel):
+Examples: strong, provider, don't cry, tough, in control, sexual, never ask for help, fix things, take it like a man...
+
+OUTSIDE the box — write what happens to men who break these rules:
+Examples: wimp, weak, gay (used pejoratively), soft, loser, failure...
+
+Groups share their boxes: "Does this feel familiar?"
+
+PART 2 — Impact on Mental Health (5 minutes):
+Pairs discuss: How does living inside the man box affect mental health?
+Consider: Help-seeking, emotional expression, relationships, identity when the box's demands can't be met (e.g. redundancy, illness, ageing), coping strategies (alcohol, anger, withdrawal)
+
+PART 3 — Service Design Challenge (5 minutes, small groups):
+"You have been commissioned to design a mental health service that actually reaches men who would never normally seek help. It has a budget for one intervention."
+Groups have 3 minutes to design their intervention. Present in 30 seconds each.
+Debrief: what principles emerge? (Activity-based, peer-led, in trusted environments, reframed language)
+
+PART 4 — Closing Reflection (3 minutes):
+Anyone in the room who identifies as male (if comfortable): what is one message from the man box you are actively trying to unlearn?`,
+    discussionPrompts: [
+      "Why do men die by suicide at nearly three times the rate of women — and why has this gap been so persistent despite decades of mental health awareness campaigns?",
+      "Is traditional masculinity itself a risk factor for mental ill-health — or is it a protective identity that services need to engage with rather than challenge?",
+      "How should mental health services be redesigned to be more accessible and culturally relevant to men?",
+      "What is the role of fathers, male role models, and schools in building emotionally literate boys — and what would this look like in practice?",
+    ],
+    resources: [
+      { label: "CALM — Campaign Against Living Miserably: 0800 58 58 58", url: "https://www.thecalmzone.net" },
+      { label: "Andy's Man Club — free peer support every Monday", url: "https://andysmanclub.co.uk" },
+      { label: "Men's Sheds Association UK", url: "https://menssheds.org.uk" },
+      { label: "Movember Foundation — men's mental health", url: "https://uk.movember.com" },
+      { label: "Mind — men and mental health", url: "https://www.mind.org.uk/information-support/tips-for-everyday-living/men-and-mental-health/" },
+    ],
+    videos: [
+      { label: "The Man Box — masculinity and mental health explained (YouTube)", url: "https://www.youtube.com/results?search_query=man+box+masculinity+mental+health+men+suicide" },
+      { label: "Andy's Man Club — how it works (YouTube)", url: "https://www.youtube.com/results?search_query=andys+man+club+peer+support+men+mental+health" },
+      { label: "CALM — male suicide and prevention (YouTube)", url: "https://www.youtube.com/results?search_query=CALM+male+suicide+prevention+UK" },
+    ],
+    powerPoint: `MODULE 48 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '75% of UK suicides are male' as large orange statistic; '4,000 men per year' on black
+Slide 2: Man Box diagram — inside/outside rules illustrated; alexithymia definition highlighted
+Slide 3: Three evidence-based approaches — activity-based, peer support, language reframe — orange icons
+Slide 4: Four intersections — Black men, working-class, LGBTQ+, young men — brief barriers listed
+Slide 5: CALM 0800 58 58 58, Andy's Man Club, Men's Sheds logos — orange on black
+All slides: Samaritans 116 123, CALM 0800 58 58 58 footer, MMH logo bottom-right, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Male suicide is a core topic of this module. If any participant is personally affected — whether themselves or a bereavement — respond with sensitivity and standard signposting. CALM (0800 58 58 58) is specifically designed for men; Samaritans (116 123) for everyone.
+
+FACILITATION: Be aware of the gender composition of your group. If predominantly male, create psychological safety for personal reflection. If mixed, manage group dynamics so that men do not feel watched or judged. The Man Box activity should feel illuminating, not accusatory.
+
+WOMEN IN THE GROUP: Avoid framing this as 'men's problems vs women's' — women are often gatekeepers and key supports in men's help-seeking. Frame as a shared societal issue.
+
+DIVERSITY: Challenge stereotypes while acknowledging statistical patterns. 'Men' is not monolithic.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 49
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 49,
+    topic: 'Military & Veteran Mental Health',
+    summary: 'The psychological impact of military service; PTSD, moral injury, and transition challenges; specialist UK veteran mental health services.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'The Mental Health Burden of Military Service',
+        bullets: [
+          'UK armed forces: approximately 150,000 regular personnel; 2.4 million veterans in England',
+          'Combat-related PTSD affects approximately 6–7% of UK veterans — higher for those in combat roles',
+          'Alcohol misuse is significantly elevated: approximately 67% of male service personnel drink at hazardous levels (KCL research)',
+          'Veterans are at higher suicide risk than the general population, particularly under-24s who have deployed',
+          'Mental health stigma in military culture is a significant barrier — seeking help is seen as weakness',
+        ],
+      },
+      {
+        title: 'PTSD in Military Contexts',
+        bullets: [
+          'Military PTSD: flashbacks, nightmares, hypervigilance, avoidance — driven by combat, IED incidents, witnessing death',
+          'Delayed onset PTSD: symptoms often emerge after leaving service, not during it — average gap 14 years',
+          'Complex PTSD (C-PTSD): prolonged exposure to traumatic conditions; added features of emotional dysregulation, identity disruption, shame',
+          'Evidence-based treatments: EMDR, trauma-focused CBT — NICE recommended; effective for military populations',
+          'Comorbidities: depression, alcohol misuse, chronic pain, traumatic brain injury often co-occur',
+        ],
+      },
+      {
+        title: 'Moral Injury',
+        bullets: [
+          'Moral injury: psychological harm from perpetrating, witnessing, or failing to prevent acts that violate one\'s moral code',
+          'Different from PTSD — driven by guilt, shame, and betrayal rather than fear',
+          'Common in military: killing in combat, civilian casualties, orders followed that felt wrong, comrades lost due to command decisions',
+          'Also affects medics, peacekeepers, and intelligence personnel',
+          'Moral injury increases suicide risk independently of PTSD',
+        ],
+      },
+      {
+        title: 'Transition: Leaving Service',
+        bullets: [
+          'Leaving the military involves loss of identity, purpose, structure, and community simultaneously',
+          'Transition to civilian life: unemployment, homelessness, and relationship breakdown are elevated',
+          '6% of UK prison population is veterans; overrepresentation linked to untreated mental health and transition failure',
+          'Reserve forces and their families: often overlooked; lack access to same welfare support as regulars',
+          'Families of serving personnel: secondary trauma, deployment anxiety, frequent relocation',
+        ],
+      },
+      {
+        title: 'UK Veteran Support Services',
+        bullets: [
+          'Combat Stress: 0800 138 1619 — specialist veteran mental health charity; therapy and crisis support',
+          'Op COURAGE: NHS specialist veteran mental health service — nationwide',
+          'SSAFA: Armed Forces charity — welfare and mental health support',
+          'Veterans\' Gateway: 0808 802 1212 — first point of contact for veteran support',
+          'Samaritans: 116 123 — also offer specific veteran support programmes',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — The Mental Health Burden of Military Service
+"There are approximately 2.4 million veterans in England. Many served in conflicts in Northern Ireland, the Falklands, the Gulf, Bosnia, Iraq, and Afghanistan. They return to civilian life carrying experiences that most of us will never encounter — and they often do so in silence.
+
+Combat-related PTSD affects approximately 6 to 7% of UK veterans — but this rises significantly for those who served in front-line combat roles. Alcohol misuse is dramatically elevated: research from King's College London found that approximately 67% of male service personnel drink at hazardous levels. Mental health stigma in military culture is profound — seeking help is seen as weakness, as a threat to career, and as letting down your unit.
+
+The critical fact about veteran mental health: it often doesn't surface until years after leaving service. The average gap between experiencing a traumatic event in service and seeking treatment is 14 years. Services need to be designed with this long latency in mind."
+
+SLIDE 2 — PTSD in Military Contexts
+"Military PTSD follows the familiar pattern of intrusion, avoidance, hyperarousal, and negative cognitions — but the content is specific to military experience: flashbacks to IED explosions, nightmares of combat, hypervigilance in crowded public spaces, inability to drive without scanning for threats.
+
+Delayed onset is a feature that distinguishes military PTSD from some other presentations. During service, the demands of operational life, the social support of the unit, and the sense of purpose can contain symptoms. When someone leaves — loses the structure, the identity, the camaraderie — the containment goes, and the symptoms emerge.
+
+The treatments work. EMDR — Eye Movement Desensitisation and Reprocessing — and trauma-focused CBT have strong evidence for military PTSD. The challenge is getting veterans into treatment. Op COURAGE — the NHS specialist veteran mental health service — provides a dedicated pathway."
+
+SLIDE 3 — Moral Injury
+"Moral injury is a concept that has transformed our understanding of veteran mental health. It was developed by psychiatrist Jonathan Shay and later by Brett Litz and colleagues to describe psychological harm that results from actions — or failures to act — that violate deeply held moral beliefs.
+
+It is distinct from PTSD. PTSD is driven by fear — the nervous system response to life-threatening events. Moral injury is driven by guilt and shame — 'I did something wrong', 'I should have done something', 'the people in command betrayed us', 'innocent people died because of decisions I made or followed.' These are moral and existential wounds, not primarily anxiety disorders.
+
+Moral injury increases suicide risk independently of PTSD. It responds less well to standard PTSD treatments and requires therapeutic approaches that address meaning, shame, and moral reckoning."
+
+SLIDE 4 — Transition: Leaving Service
+"Leaving military service is one of the most psychologically disorienting transitions a person can make. The military provides total structure: it tells you where to be, what to wear, what to do, who your community is, and why your life matters. Leaving means losing all of that simultaneously.
+
+Rates of unemployment, homelessness, and relationship breakdown are significantly elevated in the veteran population in the immediate post-service period. Six percent of the UK prison population is veterans — a profound overrepresentation that reflects untreated mental health, the effects of alcohol misuse, and the failure of transition support.
+
+Reserve forces — those who serve part-time — and their families are often invisible in this conversation. They may deploy to combat zones and return home with traumatic stress, but then return to civilian employment without any structured welfare support."
+
+SLIDE 5 — UK Veteran Support Services
+"Combat Stress is the UK's leading veteran mental health charity. They provide specialist therapy including for PTSD and moral injury, and a crisis line on 0800 138 1619 available 24/7. Op COURAGE is the NHS's dedicated veteran mental health service — referrals via GP or self-referral. Veterans' Gateway on 0808 802 1212 is a single point of contact that can direct veterans and families to appropriate support across a wide range of needs."`,
+    activity: `ACTIVITY — Understanding Moral Injury (20 minutes)
+Melksham Mental Health | Module 49 | Licensed Materials
+
+PURPOSE: Develop a nuanced understanding of moral injury distinct from PTSD; build skills in supporting veterans and others with moral injury.
+
+INTRODUCE: "Moral injury is a concept that applies beyond the military — it is relevant to anyone who has acted in ways that violated their values, or witnessed such actions. But it is most clearly understood through military experience."
+
+PART 1 — Case Study Analysis (8 minutes, small groups):
+Read and discuss two scenarios:
+
+SCENARIO A — Corporal James, 34:
+James served in Afghanistan. During a patrol, a decision was made by his commanding officer to call in an air strike on a compound suspected of harbouring insurgents. Three civilians, including two children, were killed. James was present and followed orders. He has flashbacks, not to the event itself, but to the faces of the children. He drinks heavily. He says: "I wasn't afraid. I was just wrong."
+- Is this PTSD? Moral injury? Both?
+- What does James need? What might not help?
+
+SCENARIO B — Corporal Sarah, 28:
+Sarah served as a medic. On three occasions, she was ordered to continue moving during contact and leave injured comrades who later died. She is tortured by the thought that she could have saved them if she had stayed. She has since left the forces. She says: "I followed my training. I still feel like a coward."
+- What moral injuries does Sarah carry?
+- How would you approach a conversation with her?
+
+PART 2 — Distinguishing PTSD from Moral Injury (5 minutes):
+Groups complete a two-column table:
+Left: PTSD features (fear-based, flashbacks, hypervigilance, avoidance)
+Right: Moral injury features (guilt/shame, violation of values, betrayal by leaders, "I did wrong")
+Where do they overlap?
+
+PART 3 — What Would Help? (5 minutes):
+Groups discuss: what therapeutic approaches might address moral injury that standard PTSD treatment might not?
+(Consider: narrative therapy, meaning-making, forgiveness, ethical reflection, community, spiritual care)
+
+PART 4 — Reflection (2 minutes):
+"Who else — beyond military personnel — experiences moral injury?"`,
+    discussionPrompts: [
+      'Why does mental health stigma remain so powerful in military culture — and what would have to change, culturally and structurally, for this to shift?',
+      'Is moral injury a psychological disorder, a moral crisis, a spiritual wound — or all three? What are the treatment implications of each framing?',
+      'How should the state balance its duty of care to veterans with the political need not to highlight the psychological costs of the wars it fights?',
+      'What does the overrepresentation of veterans in prison tell us about the adequacy of transition support and the criminal justice system?',
+    ],
+    resources: [
+      { label: 'Combat Stress — veteran mental health charity: 0800 138 1619', url: 'https://www.combatstress.org.uk' },
+      { label: "Op COURAGE — NHS specialist veteran mental health service", url: 'https://www.nhs.uk/nhs-services/armed-forces-and-veterans-healthcare/' },
+      { label: "Veterans' Gateway — 0808 802 1212", url: 'https://www.veteransgateway.org.uk' },
+      { label: 'SSAFA — Armed Forces charity', url: 'https://www.ssafa.org.uk' },
+      { label: 'Samaritans — veteran-specific support programmes', url: 'https://www.samaritans.org/support-us/our-campaigns/armed-forces/' },
+    ],
+    videos: [
+      { label: 'What is moral injury? — Jonathan Shay explained (YouTube)', url: 'https://www.youtube.com/results?search_query=moral+injury+veterans+jonathan+shay+explained' },
+      { label: 'Op COURAGE — NHS veteran mental health service (YouTube)', url: 'https://www.youtube.com/results?search_query=Op+COURAGE+NHS+veteran+mental+health+service' },
+      { label: 'PTSD in veterans — treatment and recovery (YouTube)', url: 'https://www.youtube.com/results?search_query=PTSD+veterans+UK+treatment+recovery+EMDR' },
+    ],
+    powerPoint: `MODULE 49 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '2.4 million veterans in England' in large orange; '75% male suicide' stat cross-reference
+Slide 2: Military PTSD infographic — delayed onset timeline; treatment options in orange
+Slide 3: Moral injury vs PTSD — two-column comparison table; guilt/shame vs fear highlighted
+Slide 4: Transition challenges — identity loss, unemployment, prison stat — timeline diagram
+Slide 5: Combat Stress 0800 138 1619, Op COURAGE, Veterans' Gateway 0808 802 1212 — orange on black
+All slides: Combat Stress 0800 138 1619 and Samaritans 116 123 footer, MMH logo, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Veterans are a high-risk group for suicide. If any participant discloses significant distress, current suicidal ideation, or active military trauma, respond with warmth, do not probe for details, and signpost to Combat Stress (0800 138 1619, 24/7) and Samaritans (116 123).
+
+VETERANS IN THE ROOM: Be attentive to any participants with military backgrounds. This session can be triggering. Allow veterans to opt out of discussions or activities at any point without explanation.
+
+MORAL INJURY: The moral injury case studies involve civilian casualties. Handle with care and sensitivity. The goal is understanding, not simulation of trauma.
+
+POLITICS: Avoid political commentary on specific military operations or conflicts. The module is about psychological welfare, not foreign policy.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // MODULE 50
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: 50,
+    topic: 'Prison, the Legal System & Mental Health',
+    summary: 'Mental health in the criminal justice system; the disproportionate burden of mental illness in prison; pathways into and out of the cycle of offending and detention.',
+    sessionBreakdown: SESSION_BREAKDOWN,
+    slideOutline: [
+      {
+        title: 'Mental Health & the Criminal Justice System',
+        bullets: [
+          '70% of people entering prison have two or more mental health conditions (Prison Reform Trust)',
+          'The prison population is a concentration of the most disadvantaged: childhood trauma, poverty, abuse, addiction, homelessness',
+          'Prison itself causes and worsens mental illness: isolation, violence, loss of autonomy, uncertainty',
+          '10 times more people with severe mental illness are in prison than in psychiatric hospitals in the UK',
+          'Self-harm in prison is at record levels: 69,000+ incidents per year (HMPPS 2022)',
+        ],
+      },
+      {
+        title: 'The Pipeline: From Adversity to Prison',
+        bullets: [
+          '24% of UK prisoners were in care as children (compared to 1% of the general population)',
+          'ACEs (Adverse Childhood Experiences): the more ACEs, the higher the likelihood of offending and incarceration',
+          'Neurodevelopmental conditions: 25–30% of offenders have ADHD; autism is significantly overrepresented',
+          'Learning disabilities: estimated 7–10% of prison population have a learning disability — often unidentified',
+          'Homelessness to prison pipeline: over 40% of people leaving prison have nowhere to live',
+        ],
+      },
+      {
+        title: 'Mental Health in Prison',
+        bullets: [
+          'Depression, anxiety, and PTSD are all far more prevalent in prison than in the general population',
+          'Substance misuse: over 60% of people in prison have a drug dependency',
+          'Suicide in prison: rate is approximately 10× higher than in the general population (Ministry of Justice)',
+          'ACCT (Assessment, Care in Custody and Teamwork): the key suicide prevention framework in English prisons',
+          'Women in prison: particularly high rates of abuse history, self-harm, and severe mental illness',
+        ],
+      },
+      {
+        title: 'Pathways to Change',
+        bullets: [
+          'Liaison and Diversion schemes: identify mental health needs at point of arrest/court; divert to treatment',
+          'Mental Health Treatment Requirements (MHTR): community sentence alternative to prison for people with mental illness',
+          'Psychologically Informed Planned Environments (PIPEs): therapeutic prison environments for complex needs',
+          'Prison healthcare: NHS provides healthcare in prisons — but staffing, access, and quality vary enormously',
+          'Release planning: without housing, benefits, and mental health support on release, reoffending is almost inevitable',
+        ],
+      },
+      {
+        title: 'UK Resources & Advocacy',
+        bullets: [
+          'Prison Reform Trust — research, advocacy, and family support',
+          'Revolving Doors Agency — campaign for better mental health and criminal justice links',
+          'Nacro — rehabilitation and mental health support for people in the criminal justice system',
+          'Prisoner Advice Service: 0808 802 0060 — legal advice and welfare support',
+          'Samaritans in prison: listener schemes — trained prisoners provide peer support',
+        ],
+      },
+    ],
+    deliveryScript: `SLIDE 1 — Mental Health & the Criminal Justice System
+"Seventy percent of people entering prison in the UK have two or more mental health conditions. Read that again. Not ten percent. Not twenty. Seventy. The prison population is not a random cross-section of society. It is a concentration of people who have experienced the most severe adversity — childhood abuse and neglect, poverty, homelessness, addiction, neurodevelopmental difficulties — and who have received the least mental health support throughout their lives.
+
+There are currently approximately 85,000 people in English and Welsh prisons. That means we are imprisoning more people with severe mental illness than we are treating in psychiatric hospitals. This is not an accident or an oversight. It is the consequence of decades of community mental health underfunding, housing shortages, and a criminal justice system that has become a de facto mental health system — one profoundly ill-equipped to provide care."
+
+SLIDE 2 — The Pipeline: From Adversity to Prison
+"The pathway from childhood adversity to adult imprisonment is well-documented. Twenty-four percent of UK prisoners were in local authority care as children — compared to 1% of the general population. The relationship between adverse childhood experiences — abuse, neglect, household dysfunction — and later offending is one of the most robust findings in criminological research.
+
+Neurodevelopmental conditions are dramatically overrepresented. Approximately 25 to 30% of offenders have ADHD. Autism is significantly overrepresented. Learning disabilities — often unidentified — affect an estimated 7 to 10% of the prison population. People who could not access support from educational and health systems end up inside a system that is even less equipped to support them."
+
+SLIDE 3 — Mental Health in Prison
+"Prison does not treat mental illness. In many cases, it causes it. The features of the prison environment — isolation, unpredictability, violence, loss of autonomy, separation from family — are the very features most destructive to mental health.
+
+The suicide rate in prison is approximately ten times higher than in the general population. Self-harm incidents in English and Welsh prisons exceeded 69,000 in a single year. Women in prison have particularly high rates of severe mental illness, sexual abuse histories, and self-harm — and yet women's prisons have consistently received fewer mental health resources than men's.
+
+The ACCT system — Assessment, Care in Custody and Teamwork — is the primary suicide prevention framework in English prisons. It involves regular monitoring of at-risk prisoners. It is imperfect and understaffed, but it is the main safety net."
+
+SLIDE 4 — Pathways to Change
+"The evidence on what actually reduces the cycle of imprisonment is clear, even if the political will to implement it is not. Liaison and Diversion schemes — which identify mental health needs at the point of arrest or court appearance and divert people into treatment rather than prison — are cost-effective and reduce reoffending. Mental Health Treatment Requirements allow courts to mandate mental health treatment as a condition of a community sentence, keeping people out of prison entirely.
+
+Release planning is perhaps the single most critical intervention. When someone leaves prison without housing, without benefits that have been set up, without a mental health appointment, and without social support — reoffending within a year is the most likely outcome. The revolving door is not a metaphor. It is a policy choice."
+
+SLIDE 5 — UK Resources & Advocacy
+"The Prison Reform Trust does vital research and advocacy work on mental health in the criminal justice system — their reports are essential reading for anyone working in this area. Revolving Doors Agency campaigns specifically on the link between mental illness, substance misuse, and repeated contact with the criminal justice system. Nacro provides rehabilitation and mental health support.
+
+The Samaritans listener scheme trains prisoners to provide peer emotional support to fellow inmates — this is one of the most effective mental health interventions in prisons, precisely because it uses the peer trust that clinical services often lack."`,
+    activity: `ACTIVITY — The Revolving Door: A System Mapping Exercise (20 minutes)
+Melksham Mental Health | Module 50 | Licensed Materials
+
+PURPOSE: Help participants understand the systemic pathways that lead to and perpetuate imprisonment; develop critical thinking about intervention points.
+
+INTRODUCE: "The term 'revolving door' describes the experience of people who cycle repeatedly through the criminal justice system — arrest, court, prison, release, repeat. We're going to map the system to understand why this happens — and where it could be interrupted."
+
+PART 1 — Build the Timeline (8 minutes, small groups):
+Groups map a fictional person's journey from childhood to repeated imprisonment:
+Character: Marcus, 32. In care from age 8. Excluded from school at 14. First arrest at 16 (theft). First prison sentence at 19. Released; no housing. Homeless within a month. Second arrest. Released again. Currently on his fourth sentence.
+
+At each stage, groups mark:
+- What mental health / support needs were present?
+- What systems did Marcus encounter?
+- What did each system fail to do?
+- Where was the missed opportunity for intervention?
+
+PART 2 — Intervention Design (7 minutes):
+Groups choose ONE intervention point from their map and design a specific evidence-based intervention:
+- What problem does it address?
+- Who delivers it?
+- What does it cost?
+- What outcome would you measure?
+
+PART 3 — Present & Debrief (5 minutes):
+Each group shares their intervention. Whole group: where is the highest-leverage intervention point across all the options presented?
+
+Note to tutor: Common high-leverage points include: early childhood support, care leaver mental health, Liaison and Diversion at arrest/court, and post-release housing and benefits support.`,
+    discussionPrompts: [
+      'Is it ethical to imprison people whose offending is directly caused by severe mental illness or neurodevelopmental conditions — and if not, what should we do instead?',
+      'Why does the UK continue to imprison people with severe mental illness at such high rates despite the evidence that prison worsens mental health and increases reoffending?',
+      'What would a genuinely rehabilitative criminal justice system look like — and what would have to change, politically and financially, to achieve it?',
+      'How should mental health professionals engage with the criminal justice system without becoming instruments of surveillance and control?',
+    ],
+    resources: [
+      { label: 'Prison Reform Trust — research and family support', url: 'https://prisonreformtrust.org.uk' },
+      { label: 'Revolving Doors Agency — mental health and criminal justice', url: 'https://www.revolving-doors.org.uk' },
+      { label: 'Nacro — rehabilitation and reintegration support', url: 'https://www.nacro.org.uk' },
+      { label: 'Prisoner Advice Service: 0808 802 0060', url: 'https://www.prisoneradvice.org.uk' },
+      { label: 'Samaritans Listener Scheme in prisons', url: 'https://www.samaritans.org/about-samaritans/our-work/our-work-in-prisons/' },
+    ],
+    videos: [
+      { label: 'Mental health in prison — the crisis (YouTube)', url: 'https://www.youtube.com/results?search_query=mental+health+prison+UK+crisis+reform' },
+      { label: 'Liaison and Diversion — how it works (YouTube)', url: 'https://www.youtube.com/results?search_query=liaison+diversion+criminal+justice+mental+health+NHS' },
+      { label: 'ACEs and the pipeline to prison (YouTube)', url: 'https://www.youtube.com/results?search_query=adverse+childhood+experiences+ACEs+prison+pipeline+UK' },
+    ],
+    powerPoint: `MODULE 50 POWERPOINT SPECIFICATION — Melksham Mental Health
+Brand: Black (#0a0a0a), orange (#f97316), white (#ffffff)
+Slide 1: '70% of prisoners have 2+ mental health conditions' as full-width orange statistic on black
+Slide 2: Pipeline diagram — ACEs to care to exclusion to prison; each stage in orange on black
+Slide 3: Mental health statistics — depression, PTSD, suicide rate comparison infographic
+Slide 4: Intervention pathway — Liaison & Diversion, MHTR, PIPE, release planning — flow diagram in orange
+Slide 5: Resources list — Prison Reform Trust, Revolving Doors, Nacro, Prisoner Advice Service — orange links
+All slides: Samaritans 116 123 footer, Prisoner Advice Service 0808 802 0060, MMH logo, licence watermark`,
+    tutorNotes: `SAFEGUARDING: Some participants may have personal experience of the criminal justice system — as offenders, as victims, or as family members. Hold space for this without probing. The case study activity uses a fictional character but may feel very close to home for some. Allow people to opt out.
+
+FACILITATION: This module can provoke strong reactions — both compassion and punitive attitudes towards people who have offended. Facilitate without silencing either, but ensure the evidence is heard: most people in prison have experienced profound disadvantage and have received virtually no support.
+
+VICTIM PERSPECTIVE: Be sensitive to participants who have been victims of crime. The module's focus on offender mental health should not be framed as dismissing or minimising harm to victims.
+
+POLITICAL SENSITIVITY: Criminal justice is politically contested. Focus on mental health evidence rather than partisan positions on sentencing or rehabilitation policy.
+
+LICENCE: Licensed to registered user only. Not for redistribution.`,
+  },
 ];
 
 /** Look up a single module guide by ID */
