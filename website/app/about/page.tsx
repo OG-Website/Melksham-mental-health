@@ -112,6 +112,41 @@ export default function AboutPage() {
             <Link href="/resources/crisis" className="underline font-semibold">See our Crisis Help page</Link> for more resources.
           </p>
         </div>
+
+        {/* Research sources */}
+        <div className="mt-12 pt-6 border-t border-zinc-700 text-left">
+          <h2 className="text-sm font-black text-zinc-400 mb-3 normal-case tracking-normal">Research Sources Referenced</h2>
+          <p className="text-zinc-500 text-xs mb-2">
+            The research references woven into this story draw on evidence from trusted sources. Key resources for further reading:
+          </p>
+          <ul className="space-y-1 text-xs text-zinc-500">
+            <li>•{' '}
+              <a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/loneliness/loneliness-and-mental-health/" target="_blank" rel="noopener noreferrer" className="text-orange-400/70 hover:text-orange-400 underline">
+                Mind UK — Loneliness and Mental Health
+              </a>
+            </li>
+            <li>•{' '}
+              <a href="https://www.mentalhealth.org.uk/a-to-z/c/children-and-young-people" target="_blank" rel="noopener noreferrer" className="text-orange-400/70 hover:text-orange-400 underline">
+                Mental Health Foundation — Children, Trauma and Resilience
+              </a>
+            </li>
+            <li>•{' '}
+              <a href="https://www.nspcc.org.uk/preventing-abuse/child-abuse-and-neglect/child-sexual-abuse/effects-of-child-sexual-abuse/" target="_blank" rel="noopener noreferrer" className="text-orange-400/70 hover:text-orange-400 underline">
+                NSPCC — Effects of Child Sexual Abuse
+              </a>
+            </li>
+            <li>•{' '}
+              <a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/peer-support/about-peer-support/" target="_blank" rel="noopener noreferrer" className="text-orange-400/70 hover:text-orange-400 underline">
+                Mind UK — About Peer Support
+              </a>
+            </li>
+            <li>•{' '}
+              <a href="https://www.nhs.uk/mental-health/self-help/tips-and-support/loneliness/" target="_blank" rel="noopener noreferrer" className="text-orange-400/70 hover:text-orange-400 underline">
+                NHS — Loneliness and Mental Health Support
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
