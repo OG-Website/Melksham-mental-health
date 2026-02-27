@@ -26,10 +26,10 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-4 normal-case tracking-normal">Trauma, Rebellion and Substance Use</h2>
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-4 normal-case tracking-normal">Personal Challenges and Substance Use</h2>
             <div className="space-y-4 text-base text-zinc-100 leading-relaxed">
-              <p>Life at home was chaotic and, at times, violent. I experienced physical abuse and sexual abuse at a young age. Several meta-analyses show that childhood sexual abuse is strongly linked with adult depression, anxiety disorders and other psychological symptoms. Studies also find that survivors of childhood trauma are 15 times more likely to attempt suicide and four times more likely to develop an alcohol-related disorder. Without a stable father figure, I became a rebellious teenager — drifting between relatives&apos; homes, running away and experimenting with drugs.</p>
-              <p>I was a &ldquo;city boy&rdquo; living in rural Cornwall and I often felt misunderstood. Not being happy at home, boredom and my personality pushed me towards being the instigator of drugs. Sometimes I lived with my uncle, whose partner treated me terribly; other times I slept on sofas or stayed in temporary accommodation. Romantic relationships came and went, leaving me feeling more alone.</p>
+              <p>I remember home life being as incredible as it could be, and I was given everything. I still faced different obstacles growing up and, at times, I didn&apos;t know how to ask for help, so I drifted towards drink and drugs.</p>
+              <p>I was a &ldquo;city boy&rdquo; living in rural Cornwall and I often felt misunderstood. Boredom and my personality pushed me towards being the instigator of drugs. Romantic relationships came and went, leaving me feeling more alone.</p>
             </div>
           </div>
 
