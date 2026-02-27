@@ -28,30 +28,30 @@ export default function Header() {
             <Image src="/logo.png" alt="Melksham Mental Health Logo" width={400} height={130} className="h-20 md:h-24 w-auto drop-shadow-2xl" priority />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1 flex-wrap justify-end">
+          <nav className="hidden xl:flex items-center gap-1 justify-end">
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path} className="nav-link">
                 {item.name}
               </Link>
             ))}
-            <Link href="/license" className="nav-link nav-link--cta">
+            <Link href="/portal/register" className="nav-link nav-link--cta">
               <FaSkull /> Join Now
             </Link>
           </nav>
 
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden brand-icon-button" aria-label="Toggle menu">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="brand-icon-button xl:!hidden" aria-label="Toggle menu">
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
         {isMenuOpen && (
-          <nav className="lg:hidden pb-4 border-t border-primary/30 mt-2 pt-4 space-y-2">
+          <nav className="xl:hidden pb-4 border-t border-primary/30 mt-2 pt-4 space-y-2">
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path} className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>
                 {item.name}
               </Link>
             ))}
-            <Link href="/license" className="block metal-button mt-2" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/portal/register" className="block metal-button mt-2" onClick={() => setIsMenuOpen(false)}>
               <FaSkull /> Join Now
             </Link>
           </nav>
