@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaArrowLeft, FaQuestionCircle, FaEnvelope, FaCheckCircle } from 'react-icons/fa';
 import type { HelpMessage } from '@/lib/helpMessages';
+import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
 
 interface Props {
   initialMessages: HelpMessage[];
@@ -139,7 +140,7 @@ export default function HelpClient({ initialMessages, userName }: Props) {
 
                 {msg.adminReply ? (
                   <div className="bg-orange-900/20 border border-orange-500/30 rounded-lg px-4 py-3 mt-3">
-                    <p className="text-orange-300 text-xs font-semibold mb-1 uppercase tracking-wide">Reply from Rob Johnston</p>
+                    <p className="text-orange-300 text-xs font-semibold mb-1 uppercase tracking-wide">Reply from Melksham Mental Health</p>
                     <p className="text-zinc-200 text-sm leading-relaxed whitespace-pre-wrap">{msg.adminReply}</p>
                     {msg.respondedAt && (
                       <p className="text-zinc-500 text-xs mt-2">
@@ -167,8 +168,8 @@ export default function HelpClient({ initialMessages, userName }: Props) {
           or the Wiltshire crisis line{' '}
           <a href="tel:08009530110" className="text-orange-400 underline">0800 953 0110</a> (24/7).
           You can also email us directly at{' '}
-          <a href="mailto:Melksham-mental-health@outlook.com" className="text-orange-400 underline">
-            Melksham-mental-health@outlook.com
+          <a href={CONTACT_EMAIL_HREF} className="text-orange-400 underline">
+            {CONTACT_EMAIL}
           </a>.
         </p>
       </div>

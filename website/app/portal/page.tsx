@@ -8,6 +8,7 @@ import { findUserById, getAllMembers } from '@/lib/users';
 import LogoutButton from '@/components/LogoutButton';
 import { AdminApproveButton } from '@/components/CourseAccessApplyButton';
 import { getAllMessages } from '@/lib/helpMessages';
+import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
 
 export const metadata = {
   title: 'Member Portal | Melksham Mental Health',
@@ -409,8 +410,8 @@ export default async function PortalPage() {
           <p>• <strong>Shout:</strong> Text <a href="sms:85258" className="text-orange-400 underline font-semibold">SHOUT to 85258</a> (24/7 text support)</p>
           <p>• <strong>Wiltshire Crisis Line:</strong> <a href="tel:08009530110" className="text-orange-400 underline font-semibold">0800 953 0110</a> (24/7, free)</p>
           <p>• <strong>Melksham Mental Health:</strong>{' '}
-            <a href="mailto:Melksham-mental-health@outlook.com" className="text-orange-400 underline font-semibold">
-              Melksham-mental-health@outlook.com
+            <a href={CONTACT_EMAIL_HREF} className="text-orange-400 underline font-semibold">
+              {CONTACT_EMAIL}
             </a>
           </p>
         </div>

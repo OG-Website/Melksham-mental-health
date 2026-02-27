@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,8 +30,8 @@ export default function Footer() {
 
         <div className="mt-5 pt-4 border-t border-primary/30 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-muted">
           <p>© {currentYear} Melksham Mental Health. All rights reserved.</p>
-          <a href="mailto:Melksham-mental-health@outlook.com" className="hover:text-secondary transition-colors flex items-center gap-1">
-            Melksham-mental-health@outlook.com
+          <a href={CONTACT_EMAIL_HREF} className="hover:text-secondary transition-colors flex items-center gap-1">
+            {CONTACT_EMAIL}
           </a>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
