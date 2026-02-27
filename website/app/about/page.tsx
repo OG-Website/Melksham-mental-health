@@ -26,7 +26,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-4 normal-case tracking-normal">Trauma, Rebellion and Substance Use</h2>
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-4 normal-case tracking-normal">Personal Challenges and Substance Use</h2>
             <div className="space-y-4 text-base text-zinc-100 leading-relaxed">
               <p>I remember home life being as incredible as it could be, and I was given everything. I still faced different obstacles growing up and, at times, I didn&apos;t know how to ask for help, so I drifted towards drink and drugs.</p>
               <p>I was a &ldquo;city boy&rdquo; living in rural Cornwall and I often felt misunderstood. Boredom and my personality pushed me towards being the instigator of drugs. Romantic relationships came and went, leaving me feeling more alone.</p>
