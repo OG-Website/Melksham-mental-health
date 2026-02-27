@@ -2,7 +2,7 @@ import { getIronSession } from 'iron-session';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { FaBook, FaLock, FaUsers, FaHeart, FaRobot, FaClock, FaCheckCircle, FaPencilAlt, FaHandHoldingHeart, FaComments, FaQuestionCircle, FaExclamationTriangle, FaEnvelope } from 'react-icons/fa';
+import { FaBook, FaLock, FaUsers, FaHeart, FaRobot, FaClock, FaCheckCircle, FaPencilAlt, FaHandHoldingHeart, FaComments, FaQuestionCircle, FaExclamationTriangle, FaEnvelope, FaSitemap } from 'react-icons/fa';
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById, getAllMembers } from '@/lib/users';
 import LogoutButton from '@/components/LogoutButton';
@@ -142,6 +142,11 @@ export default async function PortalPage() {
         <Link href="/portal/change-password" className="metal-button metal-button--small">
           <FaLock /> Change Password
         </Link>
+        {user.isAdmin && (
+          <Link href="/portal/admin" className="metal-button metal-button--small">
+            <FaSitemap /> Site Overview
+          </Link>
+        )}
         <LogoutButton />
       </div>
 
