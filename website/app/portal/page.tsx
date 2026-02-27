@@ -2,11 +2,12 @@ import { getIronSession } from 'iron-session';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { FaBook, FaLock, FaUsers, FaHeart, FaRobot, FaClock, FaCheckCircle, FaPencilAlt, FaHandHoldingHeart, FaComments } from 'react-icons/fa';
+import { FaBook, FaLock, FaUsers, FaHeart, FaRobot, FaClock, FaCheckCircle, FaPencilAlt, FaHandHoldingHeart, FaComments, FaQuestionCircle, FaExclamationTriangle, FaEnvelope } from 'react-icons/fa';
 import { sessionOptions, type SessionData } from '@/lib/session';
 import { findUserById, getAllMembers } from '@/lib/users';
 import LogoutButton from '@/components/LogoutButton';
 import { AdminApproveButton } from '@/components/CourseAccessApplyButton';
+import { getAllMessages } from '@/lib/helpMessages';
 
 export const metadata = {
   title: 'Member Portal | Melksham Mental Health',
@@ -82,6 +83,7 @@ export default async function PortalPage() {
 
   // Admin gets a view of all members and their interests
   const members = user.isAdmin ? getAllMembers() : null;
+  const helpMessages = user.isAdmin ? getAllMessages() : null;
 
   // Build interest summary for admin: moduleId → count
   const interestCount: Record<number, number> = {};
@@ -119,12 +121,22 @@ export default async function PortalPage() {
         <Link href="/portal/diary" className="metal-button metal-button--small">
           <FaPencilAlt /> My Diary
         </Link>
+        {!user.isAdmin && (
+          <Link href="/portal/my-story" className="metal-button metal-button--small">
+            <FaHeart /> My Story
+          </Link>
+        )}
         <Link href="/portal/wall" className="metal-button metal-button--small">
           <FaComments /> Community Wall
         </Link>
         <Link href="/portal/self-referral" className="metal-button metal-button--small">
           <FaHandHoldingHeart /> Self-Referral Links
         </Link>
+        {!user.isAdmin && (
+          <Link href="/portal/help" className="metal-button metal-button--small">
+            <FaQuestionCircle /> Help &amp; Questions
+          </Link>
+        )}
         <Link href="/portal/change-password" className="metal-button metal-button--small">
           <FaLock /> Change Password
         </Link>
@@ -304,6 +316,65 @@ export default async function PortalPage() {
               </ul>
             )}
           </div>
+
+          {/* Member help messages */}
+          {helpMessages && helpMessages.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
+                <FaEnvelope className="inline mr-2 text-orange-400" />
+                Member Help &amp; Questions ({helpMessages.filter((m) => !m.respondedAt).length} unread)
+              </h2>
+              <div className="space-y-4">
+                {helpMessages.map((msg) => (
+                  <div key={msg.id} className={`border rounded-lg px-5 py-4 text-left ${msg.respondedAt ? 'border-zinc-700' : 'border-orange-500/50'}`}>
+                    <div className="flex items-start justify-between gap-3 mb-1">
+                      <div>
+                        <p className="text-white font-semibold text-sm">{msg.userName}</p>
+                        <a href={`mailto:${msg.userEmail}`} className="text-orange-400 text-xs hover:underline">{msg.userEmail}</a>
+                      </div>
+                      <span className="text-zinc-500 text-xs flex-shrink-0">
+                        {new Date(msg.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                      </span>
+                    </div>
+                    <p className="text-orange-300 font-semibold text-sm mt-2">{msg.subject}</p>
+                    <p className="text-zinc-300 text-sm leading-relaxed mt-1 whitespace-pre-wrap">{msg.message}</p>
+                    {msg.adminReply ? (
+                      <div className="mt-3 bg-orange-900/20 border border-orange-500/30 rounded px-3 py-2">
+                        <p className="text-orange-300 text-xs font-semibold mb-1">Your reply:</p>
+                        <p className="text-zinc-200 text-sm">{msg.adminReply}</p>
+                      </div>
+                    ) : (
+                      <p className="text-zinc-600 text-xs italic mt-2">Not yet replied — reply via email: <a href={`mailto:${msg.userEmail}?subject=Re: ${encodeURIComponent(msg.subject)}`} className="text-orange-400 hover:underline">{msg.userEmail}</a></p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Member stories */}
+          {(() => {
+            const withStories = members!.filter((m) => m.story && m.story.trim().length > 0);
+            return withStories.length > 0 ? (
+              <div className="mb-12">
+                <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
+                  <FaHeart className="inline mr-2 text-orange-400" />
+                  Member Stories ({withStories.length})
+                </h2>
+                <div className="space-y-4">
+                  {withStories.map((m) => (
+                    <div key={m.id} className="border border-zinc-700 rounded-lg px-5 py-4 text-left">
+                      <div className="flex items-center gap-3 mb-2">
+                        <p className="text-white font-semibold text-sm">{m.name}</p>
+                        <a href={`mailto:${m.email}`} className="text-orange-400 text-xs hover:underline">{m.email}</a>
+                      </div>
+                      <p className="text-zinc-300 text-sm leading-relaxed whitespace-pre-wrap line-clamp-4">{m.story}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null;
+          })()}
         </>
       )}
 
@@ -319,6 +390,32 @@ export default async function PortalPage() {
           An AI-powered virtual facilitator modelled on lived experience will guide you through
           each course module at your own pace. Fully interactive, compassionate, and available
           whenever you need it. We&apos;re working on it.
+        </p>
+      </div>
+
+      {/* Crisis help — always shown in portal */}
+      <div className="mt-10 pt-8 border-t-4 border-error/70 text-left">
+        <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal flex items-center gap-2">
+          <FaExclamationTriangle className="text-error" /> Crisis &amp; Urgent Support
+        </h2>
+        <p className="text-zinc-300 text-sm mb-3">
+          If you are in crisis at any time, please reach out to one of the following services immediately.
+          They are free, confidential, and available 24/7.
+        </p>
+        <div className="space-y-2 text-sm text-zinc-200 mb-4">
+          <p>• <strong>Emergency:</strong> Call <a href="tel:999" className="text-orange-400 underline font-semibold">999</a></p>
+          <p>• <strong>Samaritans:</strong> <a href="tel:116123" className="text-orange-400 underline font-semibold">116 123</a> (24/7, free)</p>
+          <p>• <strong>NHS 111:</strong> <a href="tel:111" className="text-orange-400 underline font-semibold">111</a> — select the mental health option (24/7)</p>
+          <p>• <strong>Shout:</strong> Text <a href="sms:85258" className="text-orange-400 underline font-semibold">SHOUT to 85258</a> (24/7 text support)</p>
+          <p>• <strong>Wiltshire Crisis Line:</strong> <a href="tel:08009530110" className="text-orange-400 underline font-semibold">0800 953 0110</a> (24/7, free)</p>
+          <p>• <strong>Melksham Mental Health:</strong>{' '}
+            <a href="mailto:Melksham-mental-health@outlook.com" className="text-orange-400 underline font-semibold">
+              Melksham-mental-health@outlook.com
+            </a>
+          </p>
+        </div>
+        <p className="text-zinc-500 text-xs">
+          This portal provides peer support only and does not replace emergency services or professional care.
         </p>
       </div>
     </div>

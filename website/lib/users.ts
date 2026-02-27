@@ -19,6 +19,8 @@ export interface User {
   courseAccessApplied: boolean;
   /** ISO timestamp when the application was submitted */
   courseAccessAppliedAt?: string;
+  /** Member's personal story — visible only to them and the admin */
+  story?: string;
 }
 
 export type PublicUser = Omit<User, 'passwordHash'>;
@@ -238,6 +240,17 @@ export function applyCourseAccess(userId: string): boolean {
   if (users[idx].courseAccess) return true; // already approved
   users[idx].courseAccessApplied = true;
   users[idx].courseAccessAppliedAt = new Date().toISOString();
+  writeUsers(users);
+  return true;
+}
+
+/** Save or update a member's personal story. */
+export function updateStory(userId: string, story: string): boolean {
+  if (userId === 'admin') return false;
+  const users = readUsers();
+  const idx = users.findIndex((u) => u.id === userId);
+  if (idx === -1) return false;
+  users[idx].story = story.trim().slice(0, 10000);
   writeUsers(users);
   return true;
 }
