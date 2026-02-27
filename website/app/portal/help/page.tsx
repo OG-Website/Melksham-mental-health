@@ -18,6 +18,9 @@ export default async function HelpPage() {
   if (!session.isLoggedIn || !session.userId) {
     redirect('/portal/login?next=/portal/help');
   }
+  if (session.isAdmin) {
+    redirect('/portal');
+  }
 
   const user = findUserById(session.userId);
   if (!user) redirect('/portal/login');

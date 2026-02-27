@@ -32,18 +32,22 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json() as {
-      subject?: string;
-      message?: string;
+      subject?: unknown;
+      message?: unknown;
       // Admin reply fields
-      messageId?: string;
-      adminReply?: string;
+      messageId?: unknown;
+      adminReply?: unknown;
     };
 
     // Admin replying to a message
     if (session.isAdmin) {
-      const { messageId, adminReply } = body;
-      if (!messageId || !adminReply?.trim()) {
-        return NextResponse.json({ error: 'messageId and adminReply are required.' }, { status: 400 });
+      const messageId = body.messageId;
+      const adminReply = body.adminReply;
+      if (typeof messageId !== 'string' || !messageId.trim()) {
+        return NextResponse.json({ error: 'messageId is required.' }, { status: 400 });
+      }
+      if (typeof adminReply !== 'string' || !adminReply.trim()) {
+        return NextResponse.json({ error: 'adminReply is required.' }, { status: 400 });
       }
       const ok = replyToMessage(messageId, adminReply);
       if (!ok) return NextResponse.json({ error: 'Message not found.' }, { status: 404 });
@@ -51,9 +55,13 @@ export async function POST(request: Request) {
     }
 
     // Member submitting a new message
-    const { subject, message } = body;
-    if (!subject?.trim() || !message?.trim()) {
-      return NextResponse.json({ error: 'Subject and message are required.' }, { status: 400 });
+    const subject = body.subject;
+    const message = body.message;
+    if (typeof subject !== 'string' || !subject.trim()) {
+      return NextResponse.json({ error: 'Subject is required.' }, { status: 400 });
+    }
+    if (typeof message !== 'string' || !message.trim()) {
+      return NextResponse.json({ error: 'Message is required.' }, { status: 400 });
     }
 
     const user = findUserById(session.userId);

@@ -73,7 +73,7 @@ export default function MyStoryClient({ initialStory, userName }: Props) {
           </label>
           <textarea
             value={story}
-            onChange={(e) => setStory(e.target.value)}
+            onChange={(e) => setStory(e.target.value.slice(0, 10000))}
             rows={18}
             maxLength={10000}
             placeholder="Share as much or as little as you feel comfortable with. There's no right or wrong way to tell your story…"

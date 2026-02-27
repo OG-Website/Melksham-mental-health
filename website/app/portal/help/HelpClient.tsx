@@ -35,7 +35,10 @@ export default function HelpClient({ initialMessages, userName }: Props) {
       if (!res.ok || !data.ok) {
         setError(data.error ?? 'Failed to send. Please try again.');
       } else {
-        if (data.message) setMessages((prev) => [data.message!, ...prev]);
+        if (data.message) {
+          const newMsg = data.message;
+          setMessages((prev) => [newMsg, ...prev]);
+        }
         setSubject('');
         setMessage('');
         setSuccess(true);

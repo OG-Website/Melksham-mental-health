@@ -9,7 +9,7 @@ export default function SupportPage() {
   return (
     <div>
       <div className="page-content">
-        <p className="section-kicker">Page 3 — Get Support</p>
+        <p className="section-kicker">Get Support</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">You don't need the right words.</h1>
         <p className="text-lg text-zinc-100 mb-12">If you're here, that's enough.</p>
 

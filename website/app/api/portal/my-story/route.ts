@@ -32,8 +32,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Admin account does not have a story page.' }, { status: 403 });
     }
 
-    const body = await request.json() as { story?: string };
-    const story = (body.story ?? '').trim();
+    const body = await request.json() as { story?: unknown };
+    const rawStory = body.story;
+    if (rawStory !== undefined && rawStory !== null && typeof rawStory !== 'string') {
+      return NextResponse.json({ error: 'Invalid request: story must be a string.' }, { status: 400 });
+    }
+    const story = ((rawStory as string | undefined | null) ?? '').trim();
 
     const ok = updateStory(session.userId, story);
     if (!ok) return NextResponse.json({ error: 'Could not save story.' }, { status: 500 });

@@ -9,6 +9,7 @@ import LogoutButton from '@/components/LogoutButton';
 import { AdminApproveButton } from '@/components/CourseAccessApplyButton';
 import { getAllMessages } from '@/lib/helpMessages';
 import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { AdminHelpReplyForm } from '@/components/AdminHelpReplyForm';
 
 export const metadata = {
   title: 'Member Portal | Melksham Mental Health',
@@ -319,37 +320,46 @@ export default async function PortalPage() {
           </div>
 
           {/* Member help messages */}
-          {helpMessages && helpMessages.length > 0 && (
+          {helpMessages && (
             <div className="mb-12">
               <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
                 <FaEnvelope className="inline mr-2 text-orange-400" />
                 Member Help &amp; Questions ({helpMessages.filter((m) => !m.respondedAt).length} unread)
               </h2>
-              <div className="space-y-4">
-                {helpMessages.map((msg) => (
-                  <div key={msg.id} className={`border rounded-lg px-5 py-4 text-left ${msg.respondedAt ? 'border-zinc-700' : 'border-orange-500/50'}`}>
-                    <div className="flex items-start justify-between gap-3 mb-1">
-                      <div>
-                        <p className="text-white font-semibold text-sm">{msg.userName}</p>
-                        <a href={`mailto:${msg.userEmail}`} className="text-orange-400 text-xs hover:underline">{msg.userEmail}</a>
+              {helpMessages.length === 0 ? (
+                <p className="text-zinc-500 text-sm">No help messages received yet.</p>
+              ) : (
+                <div className="space-y-4">
+                  {helpMessages.map((msg) => (
+                    <div key={msg.id} className={`border rounded-lg px-5 py-4 text-left ${msg.respondedAt ? 'border-zinc-700' : 'border-orange-500/50'}`}>
+                      <div className="flex items-start justify-between gap-3 mb-1">
+                        <div>
+                          <p className="text-white font-semibold text-sm">{msg.userName}</p>
+                          <a href={`mailto:${encodeURIComponent(msg.userEmail)}`} className="text-orange-400 text-xs hover:underline">{msg.userEmail}</a>
+                        </div>
+                        <span className="text-zinc-500 text-xs flex-shrink-0">
+                          {new Date(msg.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </span>
                       </div>
-                      <span className="text-zinc-500 text-xs flex-shrink-0">
-                        {new Date(msg.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
-                      </span>
+                      <p className="text-orange-300 font-semibold text-sm mt-2">{msg.subject}</p>
+                      <p className="text-zinc-300 text-sm leading-relaxed mt-1 whitespace-pre-wrap">{msg.message}</p>
+                      {msg.adminReply ? (
+                        <div className="mt-3 bg-orange-900/20 border border-orange-500/30 rounded px-3 py-2">
+                          <p className="text-orange-300 text-xs font-semibold mb-1">Your reply:</p>
+                          <p className="text-zinc-200 text-sm">{msg.adminReply}</p>
+                        </div>
+                      ) : (
+                        <AdminHelpReplyForm
+                          messageId={msg.id}
+                          userEmail={msg.userEmail}
+                          userSubject={msg.subject}
+                          hasReply={!!msg.adminReply}
+                        />
+                      )}
                     </div>
-                    <p className="text-orange-300 font-semibold text-sm mt-2">{msg.subject}</p>
-                    <p className="text-zinc-300 text-sm leading-relaxed mt-1 whitespace-pre-wrap">{msg.message}</p>
-                    {msg.adminReply ? (
-                      <div className="mt-3 bg-orange-900/20 border border-orange-500/30 rounded px-3 py-2">
-                        <p className="text-orange-300 text-xs font-semibold mb-1">Your reply:</p>
-                        <p className="text-zinc-200 text-sm">{msg.adminReply}</p>
-                      </div>
-                    ) : (
-                      <p className="text-zinc-600 text-xs italic mt-2">Not yet replied — reply via email: <a href={`mailto:${msg.userEmail}?subject=Re: ${encodeURIComponent(msg.subject)}`} className="text-orange-400 hover:underline">{msg.userEmail}</a></p>
-                    )}
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
@@ -407,7 +417,9 @@ export default async function PortalPage() {
           <p>• <strong>Emergency:</strong> Call <a href="tel:999" className="text-orange-400 underline font-semibold">999</a></p>
           <p>• <strong>Samaritans:</strong> <a href="tel:116123" className="text-orange-400 underline font-semibold">116 123</a> (24/7, free)</p>
           <p>• <strong>NHS 111:</strong> <a href="tel:111" className="text-orange-400 underline font-semibold">111</a> — select the mental health option (24/7)</p>
-          <p>• <strong>Shout:</strong> Text <a href="sms:85258" className="text-orange-400 underline font-semibold">SHOUT to 85258</a> (24/7 text support)</p>
+          <p>• <strong>Shout:</strong> Text{' '}
+            <a href="sms:85258" className="text-orange-400 underline font-semibold">SHOUT to 85258</a>
+            {' '}on your mobile (24/7 — if link does not open, text SHOUT to 85258 manually)</p>
           <p>• <strong>Wiltshire Crisis Line:</strong> <a href="tel:08009530110" className="text-orange-400 underline font-semibold">0800 953 0110</a> (24/7, free)</p>
           <p>• <strong>Melksham Mental Health:</strong>{' '}
             <a href={CONTACT_EMAIL_HREF} className="text-orange-400 underline font-semibold">

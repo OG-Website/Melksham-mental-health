@@ -7,7 +7,7 @@ export default function BlogPage() {
   return (
     <div>
       <div className="page-content">
-        <p className="section-kicker">Page 5 — Blog</p>
+        <p className="section-kicker">Blog</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-8 normal-case tracking-normal">
           Real Stories. Real Struggles. Real Growth.
         </h1>
