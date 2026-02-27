@@ -10,7 +10,7 @@ export default function ResourcesPage() {
   return (
     <div>
       <div className="page-content">
-        <p className="section-kicker">Page 4 — Resources</p>
+        <p className="section-kicker">Resources</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">You don't have to figure this out alone.</h1>
         <p className="text-lg text-zinc-100 mb-6">Sometimes support means talking. Sometimes it means reading something that helps you feel understood.</p>
         <p className="text-zinc-100 mb-12">If you're unsure where to start, reach out and we'll help you find the right direction.</p>

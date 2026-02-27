@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <div>
       <div className="page-content">
-        <p className="section-kicker">Page 7 — Contact</p>
+        <p className="section-kicker">Contact</p>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">Get In Touch</h1>
         <p className="text-lg text-zinc-100 mb-6">If you would like to reach out, you can contact us by email or via our private Facebook group below. We aim to respond as soon as possible.</p>
         <p className="text-zinc-100 mb-12">Thank you for being here. If you're reading this, you're still fighting — and that matters.</p>

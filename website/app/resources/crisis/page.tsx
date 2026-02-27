@@ -10,7 +10,7 @@ export default function CrisisHelpPage() {
     <div>
       <div className="page-content">
         <div className="border-t-4 border-error/70 pt-8">
-          <p className="section-kicker">Page 6 — Crisis Help</p>
+        <p className="section-kicker">Crisis Help</p>
           <h1 className="text-4xl md:text-5xl font-black text-white mb-8 normal-case tracking-normal flex items-center gap-3 justify-center">
             <FaExclamationTriangle className="text-error" /> If you are in immediate danger
           </h1>
