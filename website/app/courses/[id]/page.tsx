@@ -9,10 +9,13 @@ import {
   FaLink,
   FaListUl,
   FaPenFancy,
+  FaSearch,
   FaStickyNote,
   FaUsers,
 } from 'react-icons/fa';
-import { getModuleGuide, getModulePptxPath, SESSION_BREAKDOWN } from '@/lib/moduleGuides';
+import { getModuleGuide, SESSION_BREAKDOWN } from '@/lib/moduleGuides';
+import { getModuleResearch } from '@/lib/moduleResearch';
+import { getCourseDeckDownloadPath } from '@/lib/courseDecks';
 import { loadCurrentSessionUser } from '@/lib/portalAuth';
 
 interface Props {
@@ -45,8 +48,17 @@ export default async function ModuleGuidePage({ params }: Props) {
 
   const guide = getModuleGuide(moduleId);
   if (!guide) notFound();
+  const research = getModuleResearch(moduleId);
+  const reviewedLabel = research
+    ? new Date(`${research.reviewedOn}T00:00:00`).toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+    : null;
 
-  const pptxPath = getModulePptxPath(moduleId);
+  const studentDeckPath = getCourseDeckDownloadPath(moduleId, 'student');
+  const tutorDeckPath = getCourseDeckDownloadPath(moduleId, 'tutor');
   const prevId = moduleId > 1 ? moduleId - 1 : null;
   const nextId = moduleId < 50 ? moduleId + 1 : null;
 
@@ -69,17 +81,79 @@ export default async function ModuleGuidePage({ params }: Props) {
             <FaClock className="text-xs" />
             <span>2-hour session · Evidence-based · Facilitated group programme</span>
           </div>
-          {pptxPath && (
-            <a
-              href={pptxPath}
-              download
-              className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-orange-500/60 text-orange-300 hover:bg-orange-600/20 transition-colors"
-            >
-              <FaDownload className="text-xs" /> Download PowerPoint
-            </a>
-          )}
+          <a
+            href={studentDeckPath}
+            className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-orange-500/60 text-orange-300 hover:bg-orange-600/20 transition-colors"
+          >
+            <FaDownload className="text-xs" /> Download Student Deck
+          </a>
+          <a
+            href={tutorDeckPath}
+            className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full border border-zinc-600 text-zinc-200 hover:border-orange-500/60 hover:text-orange-300 transition-colors"
+          >
+            <FaChalkboardTeacher className="text-xs" /> Download Tutor Deck
+          </a>
         </div>
+        <p className="text-zinc-500 text-xs mt-3 max-w-3xl">
+          The student deck contains learner-facing slides only. The tutor deck is admin-only and includes delivery
+          notes, safeguarding prompts, and module-specific presenter guidance.
+        </p>
+        {research && reviewedLabel ? (
+          <p className="text-zinc-400 text-xs mt-2 max-w-3xl">
+            This module was reviewed against current source material on {reviewedLabel}. The evidence priorities and
+            reviewed links below also feed the regenerated tutor and student decks.
+          </p>
+        ) : null}
       </div>
+
+      {research && reviewedLabel ? (
+        <section className="mb-12">
+          <h2 className="section-heading flex items-center gap-2 mb-4">
+            <FaSearch className="text-orange-400" /> Current Evidence Review
+          </h2>
+          <div className="border border-zinc-700 rounded-xl p-5 bg-black/30">
+            <p className="text-[11px] tracking-[0.18em] uppercase text-orange-300 font-bold mb-3">
+              Reviewed {reviewedLabel}
+            </p>
+            <p className="text-zinc-200 text-sm leading-relaxed max-w-4xl mb-5">{research.summary}</p>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-white font-black text-sm mb-3 normal-case tracking-normal">Teaching Priorities</h3>
+                <ol className="space-y-2">
+                  {research.teachingPriorities.map((priority, index) => (
+                    <li key={priority} className="flex gap-3 items-start">
+                      <span className="text-orange-400 font-black text-sm min-w-[1.5rem] mt-0.5">{index + 1}.</span>
+                      <span className="text-zinc-200 text-sm leading-relaxed">{priority}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div>
+                <h3 className="text-white font-black text-sm mb-3 normal-case tracking-normal">Reviewed Source Set</h3>
+                <ul className="space-y-3">
+                  {research.sources.map((source) => (
+                    <li key={source.url}>
+                      <div className="inline-flex items-center rounded-full border border-zinc-600 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-zinc-400 mb-1">
+                        {source.type}
+                      </div>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-orange-400 hover:text-orange-300 text-sm font-semibold underline-offset-2 hover:underline transition-colors"
+                      >
+                        {source.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="mb-12">
         <h2 className="section-heading flex items-center gap-2 mb-4">
@@ -100,7 +174,7 @@ export default async function ModuleGuidePage({ params }: Props) {
           <FaListUl className="text-orange-400" /> Slide Outline
         </h2>
         <p className="text-zinc-400 text-sm mb-5 italic">
-          Use these slide titles and bullet points to build your PowerPoint/Keynote deck. Add current UK statistics before each delivery.
+          These outlines feed the generated student and tutor decks and show the session flow at a glance.
         </p>
         <div className="space-y-4">
           {guide.slideOutline.map((slide, index) => (

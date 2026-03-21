@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "portal:import": "node scripts/import-portal-users.mjs"
+    "portal:import": "node scripts/import-portal-users.mjs",
+    "courses:generate": "node scripts/generate-course-decks.mjs"
   },
   "dependencies": {
     "@stripe/stripe-js": "^8.6.0",
@@ -30,6 +31,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.0",
+    "pptxgenjs": "^4.0.1",
     "tailwindcss": "^4",
     "typescript": "5.9.3",
     "wait-on": "^8.0.1"

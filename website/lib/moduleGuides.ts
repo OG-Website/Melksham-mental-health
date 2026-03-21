@@ -117,7 +117,7 @@ export const moduleGuides: ModuleGuide[] = [
     sessionBreakdown: SESSION_BREAKDOWN,
     slideOutline: [
       { title: 'What Is Mental Health?', bullets: ['WHO definition: "a state of well-being in which every individual realises his or her own potential"', 'Mental health exists on a spectrum — not just illness vs wellness', 'Everyone has mental health, just as everyone has physical health'] },
-      { title: 'Scale of the Challenge', bullets: ['970 million people worldwide live with a mental disorder (WHO 2019)', '1 in 4 people in the UK will experience a mental health problem in any given year (Mind)', 'Mental ill-health costs the UK economy £105bn per year (Centre for Mental Health)'] },
+      { title: 'Scale of the Challenge', bullets: ['Nearly 1 in 7 people worldwide were living with a mental disorder in 2021 (WHO, 2025 fact sheet)', '1 in 4 people in the UK will experience a mental health problem in any given year (Mental Health Foundation)', 'Poor mental health is estimated to cost the economy at least £300bn a year in England (Centre for Mental Health, 2024)'] },
       { title: 'Understanding Stigma', bullets: ['Stigma = negative stereotypes and discrimination', 'Self-stigma: internalising shame, delaying help-seeking', 'Structural stigma: barriers in healthcare, employment, media'] },
       { title: 'The Biopsychosocial Model', bullets: ['Biological: genetics, brain chemistry, physical health', 'Psychological: thoughts, emotions, behaviour patterns', 'Social: relationships, housing, employment, culture'] },
       { title: 'Protective Factors', bullets: ['Strong social connections', 'Regular physical activity and good sleep', 'Sense of purpose and meaning', 'Access to support and talking therapies'] },
@@ -131,9 +131,9 @@ Let's start with a question: what do you think mental health actually means? Pau
 The World Health Organization defines it as 'a state of well-being in which every individual realises his or her own potential, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community.' Notice that definition says nothing about the absence of distress — it's about thriving, not just surviving."
 
 SLIDE 2 — Scale of the Challenge
-"970 million people worldwide are living with a mental health disorder. In the UK, one in four of us will experience a mental health problem in any given year — so look around this room. It touches almost everyone, directly or indirectly.
+"Nearly one in seven people around the world were living with a mental disorder in 2021. In the UK, one in four of us will experience a mental health problem in any given year — so look around this room. It touches almost everyone, directly or indirectly.
 
-The cost to the economy is staggering — over £105 billion per year — but the human cost is what we're really here to talk about. These are our family members, friends, colleagues, neighbours."
+The cost to the economy is staggering — at least £300 billion a year in England alone — but the human cost is what we're really here to talk about. These are our family members, friends, colleagues, neighbours."
 
 SLIDE 3 — Understanding Stigma
 "Stigma is the single biggest barrier to people getting help. It comes in two forms: external stigma — the negative attitudes others hold — and self-stigma, which is often worse. Self-stigma is when someone has absorbed those negative messages and believes them about themselves. They think 'I'm weak' or 'I should just get on with it' and so they don't reach out.
@@ -175,10 +175,10 @@ We'll take five minutes at the end for anyone who wants to share their 'one smal
       'What does "recovery" mean to you — does it mean going back to how you were before, or something else?',
     ],
     resources: [
-      { label: 'Mind — What is mental health?', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/mental-health-problems-introduction/about-mental-health-problems/' },
+      { label: 'WHO — Mental disorders fact sheet', url: 'https://www.who.int/news-room/fact-sheets/detail/mental-disorders' },
       { label: 'NHS — 5 Steps to Mental Wellbeing', url: 'https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/five-steps-to-mental-wellbeing/' },
       { label: 'Mental Health Foundation — Statistics', url: 'https://www.mentalhealth.org.uk/explore-mental-health/statistics' },
-      { label: 'Time to Change — Stigma', url: 'https://www.time-to-change.org.uk/mental-health-and-stigma' },
+      { label: 'NHS — Mental health services and urgent support', url: 'https://www.nhs.uk/nhs-services/mental-health-services/' },
     ],
     tutorNotes: `SAFEGUARDING: If any participant discloses personal distress or crisis during this introductory session, acknowledge calmly, offer to speak privately afterwards, and signpost to your organisation's safeguarding lead. Keep Samaritans (116 123) and local crisis line numbers visible throughout.
 
@@ -1043,7 +1043,7 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
         bullets: [
           'Suicidal ideation: more common than widely understood — ~20% of people experience it at some point in their lives',
           'Having suicidal thoughts ≠ acting on them — thoughts exist on a spectrum from passive to active with plan',
-          'UK: ~6,000 deaths by suicide per year; men account for ~75% (ONS 2023)',
+          'England and Wales: 6,190 suicides were registered in 2024; around three-quarters were male (ONS 2025 bulletin)',
           'Risk factors: previous attempt (single strongest predictor), mental illness, substance misuse, isolation, recent loss',
           'BRANDED SLIDE: spectrum diagram from passive ideation to active plan, clearly labelled, orange gradient',
         ],
@@ -1073,7 +1073,7 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
         bullets: [
           'Samaritans: 116 123 — free, 24/7, confidential (any reason, any time)',
           'NHS 111 mental health option — available 24/7 across England for urgent mental health crisis',
-          'PAPYRUS HOPELINEUK (under 35s): 0800 068 4141 | CALM (men/under 35s): 0800 58 58 58 (5pm–midnight)',
+          'PAPYRUS HOPELINE247: 0800 068 4141 | CALM: 0800 58 58 58 (5pm–midnight)',
           'Safety planning: personal warning signs → coping strategies → people to call → reasons for living',
           'BRANDED SLIDE: crisis numbers in large orange text, safety plan template thumbnail, MMH logo',
         ],
@@ -1089,7 +1089,7 @@ Understanding self-harm as a coping strategy — not a character flaw, not manip
 SLIDE 2 — Understanding Suicidal Thoughts
 "Suicidal ideation is far more common than most people realise. Research suggests around one in five people will experience suicidal thoughts at some point in their lives. Having those thoughts is not the same as acting on them. Most people who have suicidal thoughts never attempt suicide.
 
-In the UK, around 6,000 people die by suicide each year. Three-quarters of them are men. That gender gap is one of the most significant and underexplored public health inequalities we have — and it is directly connected to the way our culture teaches men to handle emotional pain."
+In 2024, 6,190 suicides were registered in England and Wales. Around three-quarters were male. That gender gap is one of the most significant and underexplored public health inequalities we have — and it is directly connected to the way our culture teaches men to handle emotional pain."
 
 SLIDE 3 — Safe Messaging
 "Safe messaging is not censorship — it is harm reduction. The evidence is clear that describing specific methods of suicide, even in a cautionary context, can increase risk in people who are already vulnerable. This is called the Werther effect, named after a surge in suicides following the publication of Goethe's novel in 1774.
@@ -1148,10 +1148,11 @@ After each practice: How did it feel to say those words? What made it easier or 
     ],
     resources: [
       { label: 'Samaritans: 116 123 (free, 24/7)', url: 'https://www.samaritans.org' },
-      { label: 'PAPYRUS HOPELINEUK (under 35s): 0800 068 4141', url: 'https://www.papyrus-uk.org' },
+      { label: 'PAPYRUS HOPELINE247: 0800 068 4141', url: 'https://www.papyrus-uk.org' },
       { label: 'CALM (men and under 35s): 0800 58 58 58', url: 'https://www.thecalmzone.net' },
       { label: 'Zero Suicide Alliance — free online training (20 min)', url: 'https://www.zerosuicidealliance.com' },
-      { label: 'Mind — understanding suicidal feelings', url: 'https://www.mind.org.uk/information-support/types-of-mental-health-problems/suicidal-feelings/' },
+      { label: 'NHS — where to get help for self-harm', url: 'https://www.nhs.uk/conditions/self-harm/' },
+      { label: 'ONS — suicide registrations in England and Wales (latest bulletin)', url: 'https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/suicidesintheunitedkingdom/latest' },
       { label: 'Samaritans safe messaging guidelines for media', url: 'https://www.samaritans.org/about-samaritans/research-policy/safe-reporting-suicide/guidelines-media/' },
     ],
     videos: [
