@@ -103,6 +103,18 @@ CONTACT_EMAIL=Melksham-mental-health@outlook.com
 NEXT_PUBLIC_GA_ID=G-...
 ```
 
+For portal auth in production, also set:
+
+```env
+DATABASE_URL=postgresql://user:password@host:5432/database
+SESSION_SECRET=<random string of at least 32 characters>
+ADMIN_EMAIL=hello@tradeathem.co.uk
+ADMIN_PASSWORD_HASH=$2b$12$...
+ADMIN_NAME=Rob Johnston
+```
+
+Local-only development can still fall back to `data/portal-users.json`, but production should use `DATABASE_URL` so member accounts persist across redeploys.
+
 ## 💳 Stripe Setup
 
 1. **Create Stripe Account**: https://stripe.com

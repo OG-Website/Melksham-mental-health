@@ -1,8 +1,6 @@
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { sessionOptions, type SessionData } from '@/lib/session';
 import { getUserEntries } from '@/lib/diary';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import DiaryClient from './DiaryClient';
 
 export const metadata = {
@@ -11,14 +9,12 @@ export const metadata = {
 };
 
 export default async function DiaryPage() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  const { user } = await loadCurrentSessionUser();
 
-  if (!session.isLoggedIn || !session.userId) {
+  if (!user) {
     redirect('/portal/login?next=/portal/diary');
   }
 
-  const entries = getUserEntries(session.userId);
-
-  return <DiaryClient initialEntries={entries} userName={session.name} />;
+  const entries = getUserEntries(user.id);
+  return <DiaryClient initialEntries={entries} userName={user.name} />;
 }

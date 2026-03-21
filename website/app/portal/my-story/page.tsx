@@ -1,28 +1,21 @@
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { sessionOptions, type SessionData } from '@/lib/session';
-import { findUserById } from '@/lib/users';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import MyStoryClient from './MyStoryClient';
 
 export const metadata = {
   title: 'My Story | Melksham Mental Health Portal',
-  description: 'Your personal story — a private space to share your journey.',
+  description: 'Your personal story - a private space to share your journey.',
 };
 
 export default async function MyStoryPage() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  const { user } = await loadCurrentSessionUser();
 
-  if (!session.isLoggedIn || !session.userId) {
+  if (!user) {
     redirect('/portal/login?next=/portal/my-story');
   }
-  if (session.isAdmin) {
+  if (user.isAdmin) {
     redirect('/portal');
   }
-
-  const user = findUserById(session.userId);
-  if (!user) redirect('/portal/login');
 
   return <MyStoryClient initialStory={user.story ?? ''} userName={user.name} />;
 }

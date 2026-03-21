@@ -14,6 +14,21 @@
 - [ ] Mobile responsiveness verified
 - [ ] Performance optimization done
 
+## Portal Persistence Requirements
+
+For the members portal to work safely in production, configure these environment variables before deploying:
+
+- `DATABASE_URL` - required so member accounts and stories are stored in Postgres and survive redeploys
+- `SESSION_SECRET` - required for encrypted portal sessions; use a random value with at least 32 characters
+- `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`, `ADMIN_NAME` - admin credentials remain environment-based
+
+If you have a recoverable JSON export of existing member accounts, import it with:
+
+```bash
+cd website
+npm run portal:import -- ./data/portal-users.json
+```
+
 ## Deployment Options
 
 ### Option 1: Vercel (Recommended)

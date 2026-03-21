@@ -1,12 +1,11 @@
 import { NextResponse } from 'next/server';
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
-import { sessionOptions, type SessionData } from '@/lib/session';
+import { portalApiErrorResponse } from '@/lib/portalApi';
+import { savePortalSession } from '@/lib/portalAuth';
 import { createUser } from '@/lib/users';
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json() as {
+    const body = (await request.json()) as {
       email?: string;
       password?: string;
       name?: string;
@@ -26,21 +25,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: result.error }, { status: 400 });
     }
 
-    const { user } = result;
-    const cookieStore = await cookies();
-    const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
-    session.userId = user.id;
-    session.email = user.email;
-    session.name = user.name;
-    session.isAdmin = false;
-    session.isLoggedIn = true;
-    await session.save();
+    await savePortalSession(result.user);
 
     return NextResponse.json({
       ok: true,
-      user: { id: user.id, email: user.email, name: user.name, isAdmin: false },
+      user: {
+        id: result.user.id,
+        email: result.user.email,
+        name: result.user.name,
+        isAdmin: result.user.isAdmin,
+      },
     });
-  } catch {
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+  } catch (error) {
+    return portalApiErrorResponse(error);
   }
 }

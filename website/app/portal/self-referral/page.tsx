@@ -1,9 +1,7 @@
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { FaArrowLeft, FaExternalLinkAlt, FaExclamationTriangle } from 'react-icons/fa';
-import { sessionOptions, type SessionData } from '@/lib/session';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
 
 export const metadata = {
   title: 'Self-Referral & Support Links | Melksham Mental Health Portal',
@@ -203,10 +201,9 @@ const selfReferralLinks = [
 ];
 
 export default async function SelfReferralPage() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  const { user } = await loadCurrentSessionUser();
 
-  if (!session.isLoggedIn || !session.userId) {
+  if (!user) {
     redirect('/portal/login?next=/portal/self-referral');
   }
 

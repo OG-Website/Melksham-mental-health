@@ -1,11 +1,13 @@
 import { NextResponse } from 'next/server';
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
-import { sessionOptions, type SessionData } from '@/lib/session';
+import { portalApiErrorResponse } from '@/lib/portalApi';
+import { getPortalSession } from '@/lib/portalAuth';
 
 export async function POST() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
-  session.destroy();
-  return NextResponse.json({ ok: true });
+  try {
+    const session = await getPortalSession();
+    session.destroy();
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    return portalApiErrorResponse(error);
+  }
 }

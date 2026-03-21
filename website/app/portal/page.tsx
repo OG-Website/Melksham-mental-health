@@ -1,10 +1,8 @@
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { FaBook, FaLock, FaUsers, FaHeart, FaRobot, FaClock, FaCheckCircle, FaPencilAlt, FaHandHoldingHeart, FaComments, FaQuestionCircle, FaExclamationTriangle, FaEnvelope, FaSitemap } from 'react-icons/fa';
-import { sessionOptions, type SessionData } from '@/lib/session';
-import { findUserById, getAllMembers } from '@/lib/users';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
+import { getAllMembers } from '@/lib/users';
 import LogoutButton from '@/components/LogoutButton';
 import { AdminApproveButton } from '@/components/CourseAccessApplyButton';
 import { getAllMessages } from '@/lib/helpMessages';
@@ -71,20 +69,13 @@ const MODULE_TOPICS: Record<number, string> = {
 };
 
 export default async function PortalPage() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  const { user } = await loadCurrentSessionUser();
 
-  if (!session.isLoggedIn || !session.userId) {
-    redirect('/portal/login');
-  }
-
-  const user = findUserById(session.userId);
   if (!user) {
     redirect('/portal/login');
   }
 
-  // Admin gets a view of all members and their interests
-  const members = user.isAdmin ? getAllMembers() : null;
+  const members = user.isAdmin ? await getAllMembers() : null;
   const helpMessages = user.isAdmin ? getAllMessages() : null;
 
   // Build interest summary for admin: moduleId → count

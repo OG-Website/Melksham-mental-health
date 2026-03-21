@@ -1,9 +1,6 @@
 import Link from 'next/link';
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import { FaExclamationTriangle, FaBookOpen, FaUsers, FaClock, FaChalkboardTeacher, FaUserPlus } from 'react-icons/fa';
-import { sessionOptions, type SessionData } from '@/lib/session';
-import { findUserById } from '@/lib/users';
+import { loadOptionalSessionUser } from '@/lib/portalAuth';
 import CourseInterestButton from '@/components/CourseInterestButton';
 import CourseAccessApplyButton from '@/components/CourseAccessApplyButton';
 export const metadata = {
@@ -79,12 +76,10 @@ const categories = [
 
 export default async function CoursesPage() {
   // Check session — page is PUBLIC but logged-in users get extra features
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
-  const isLoggedIn = session.isLoggedIn && !!session.userId;
-  const user = isLoggedIn ? findUserById(session.userId) : null;
+  const { user } = await loadOptionalSessionUser();
+  const isLoggedIn = !!user;
   const userInterests = new Set(user?.interests ?? []);
-  const isAdmin = session.isAdmin ?? false;
+  const isAdmin = user?.isAdmin ?? false;
   const alreadyApplied = user?.courseAccessApplied ?? false;
 
   return (

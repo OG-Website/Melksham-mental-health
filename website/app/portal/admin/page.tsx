@@ -1,5 +1,3 @@
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import fs from 'fs';
@@ -22,7 +20,9 @@ import {
   FaCheckCircle,
   FaTimesCircle,
 } from 'react-icons/fa';
-import { sessionOptions, type SessionData } from '@/lib/session';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
+import { getPortalUsersStorageDetails } from '@/lib/portalConfig';
+import { getPortalUsersTableStats } from '@/lib/portalDb';
 import { getAllMembers } from '@/lib/users';
 import { getAllMessages } from '@/lib/helpMessages';
 
@@ -124,6 +124,8 @@ const USER_FIELDS = [
   { field: 'courseAccessApplied', type: 'boolean', desc: 'true = member has submitted an application for course access' },
   { field: 'courseAccessAppliedAt', type: 'ISO 8601 string (optional)', desc: 'UTC timestamp when the course access application was submitted' },
   { field: 'story', type: 'string (optional, max 10 000 chars)', desc: "Member's personal story — private, visible only to the member and admin" },
+  { field: 'loginCount', type: 'number', desc: 'Number of successful member logins recorded for this account' },
+  { field: 'lastLoginAt', type: 'ISO 8601 string (optional)', desc: 'UTC timestamp of the most recent successful login' },
 ];
 
 const DIARY_FIELDS = [
@@ -140,32 +142,63 @@ const DIARY_FIELDS = [
 ];
 
 export default async function AdminOverviewPage() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  const { user } = await loadCurrentSessionUser();
 
-  if (!session.isLoggedIn || !session.isAdmin) {
+  if (!user || !user.isAdmin) {
     redirect('/portal');
   }
 
   const isProduction = process.env.NODE_ENV === 'production';
-
-  const usersPath = process.env.USERS_DATA_PATH ?? (isProduction ? '/tmp/mmh-users.json' : 'data/portal-users.json');
+  const usersStorage = getPortalUsersStorageDetails();
+  const usersPath = usersStorage.location;
   const diaryPath = process.env.DIARY_DATA_PATH ?? (isProduction ? '/tmp/mmh-diary.json' : 'data/diary.json');
   const wallPath = process.env.WALL_DATA_PATH ?? (isProduction ? '/tmp/mmh-wall.json' : 'data/wall.json');
   const helpPath = process.env.HELP_DATA_PATH ?? (isProduction ? '/tmp/mmh-help.json' : 'data/help-messages.json');
 
-  const usersInfo = getFileInfo(usersPath);
+  const usersInfo = usersStorage.mode === 'database'
+    ? { exists: true, ...(await getPortalUsersTableStats()) }
+    : getFileInfo(usersPath);
   const diaryInfo = getFileInfo(diaryPath);
   const wallInfo = getFileInfo(wallPath);
   const helpInfo = getFileInfo(helpPath);
 
-  const members = getAllMembers();
+  const members = await getAllMembers();
   const helpMessages = getAllMessages();
   const pendingHelp = helpMessages.filter((m) => !m.respondedAt).length;
   const pendingCourseApps = members.filter((m) => m.courseAccessApplied && !m.courseAccess).length;
   const totalInterests = members.reduce((acc, m) => acc + m.interests.length, 0);
 
   const totalStorageBytes = usersInfo.sizeBytes + diaryInfo.sizeBytes + wallInfo.sizeBytes + helpInfo.sizeBytes;
+  const storageItems = [
+    {
+      label: 'Member Accounts',
+      path: usersPath,
+      info: usersInfo,
+      icon: <FaUsers className="text-orange-400" />,
+      existsLabel: usersStorage.mode === 'database' ? 'Database ready' : 'File exists',
+    },
+    {
+      label: 'Diary Entries',
+      path: diaryPath,
+      info: diaryInfo,
+      icon: <FaPencilAlt className="text-orange-400" />,
+      existsLabel: 'File exists',
+    },
+    {
+      label: 'Community Wall Posts',
+      path: wallPath,
+      info: wallInfo,
+      icon: <FaComments className="text-orange-400" />,
+      existsLabel: 'File exists',
+    },
+    {
+      label: 'Help Messages',
+      path: helpPath,
+      info: helpInfo,
+      icon: <FaQuestionCircle className="text-orange-400" />,
+      existsLabel: 'File exists',
+    },
+  ];
 
   return (
     <div className="page-content">
@@ -221,9 +254,9 @@ export default async function AdminOverviewPage() {
             <div>
               <p className="text-red-200 font-semibold mb-1">⚠️ Ephemeral Storage Warning</p>
               <p className="text-red-300">
-                All data files are stored in Vercel&apos;s <code className="bg-black/40 px-1 rounded">/tmp</code> directory.
+                Member accounts now use Postgres when <code className="bg-black/40 px-1 rounded">DATABASE_URL</code> is configured.
                 This storage is <strong>ephemeral</strong> — it is wiped whenever a new deployment is made or a new serverless
-                function instance spins up. <strong>Member accounts, diary entries, wall posts and help messages will be lost on each deployment.</strong>
+                function instance spins up. <strong>Diary entries, wall posts and help messages can still be lost on each deployment until they are migrated too.</strong>
               </p>
               <p className="text-red-300 mt-2">
                 To persist data across deployments without MongoDB or Railway, consider:
@@ -237,19 +270,14 @@ export default async function AdminOverviewPage() {
         )}
 
         <div className="space-y-3">
-          {[
-            { label: 'Member Accounts', path: usersPath, info: usersInfo, icon: <FaUsers className="text-orange-400" /> },
-            { label: 'Diary Entries', path: diaryPath, info: diaryInfo, icon: <FaPencilAlt className="text-orange-400" /> },
-            { label: 'Community Wall Posts', path: wallPath, info: wallInfo, icon: <FaComments className="text-orange-400" /> },
-            { label: 'Help Messages', path: helpPath, info: helpInfo, icon: <FaQuestionCircle className="text-orange-400" /> },
-          ].map((item) => (
+          {storageItems.map((item) => (
             <div key={item.label} className="border border-zinc-700 rounded-lg px-4 py-3 text-left text-sm">
               <div className="flex items-center gap-2 mb-1">
                 {item.icon}
                 <span className="text-white font-semibold">{item.label}</span>
                 {item.info.exists ? (
                   <span className="inline-flex items-center gap-1 text-green-400 text-xs ml-auto">
-                    <FaCheckCircle /> File exists
+                    <FaCheckCircle /> {item.existsLabel}
                   </span>
                 ) : (
                   <span className="inline-flex items-center gap-1 text-zinc-500 text-xs ml-auto">
@@ -267,12 +295,12 @@ export default async function AdminOverviewPage() {
         </div>
 
         <div className="mt-4 border border-zinc-700 rounded-lg px-4 py-3 text-sm text-left">
-          <p className="text-zinc-300 font-semibold mb-2">Vercel /tmp Limits</p>
+          <p className="text-zinc-300 font-semibold mb-2">Portal storage notes</p>
           <ul className="space-y-1 text-zinc-400 text-xs">
             <li>• <strong className="text-white">/tmp size limit:</strong> 512 MB total (shared across all active function instances)</li>
             <li>• <strong className="text-white">Data persistence:</strong> Within a single serverless instance warm invocation only</li>
             <li>• <strong className="text-white">Data loss trigger:</strong> Any new deployment wipes /tmp on the next cold start</li>
-            <li>• <strong className="text-white">Admin account:</strong> Always persists — configured via ADMIN_EMAIL / ADMIN_PASSWORD_HASH env vars (never stored in /tmp)</li>
+            <li>• <strong className="text-white">Admin account:</strong> Configured via ADMIN_EMAIL / ADMIN_PASSWORD_HASH env vars and never stored in the member table</li>
             <li>• <strong className="text-white">Estimated capacity:</strong> ~1 user record ≈ 500 bytes → ~1 million records in 512 MB, but do not rely on this in production</li>
           </ul>
         </div>
@@ -289,12 +317,12 @@ export default async function AdminOverviewPage() {
             <p className="text-white font-semibold mb-2">Vercel Hosting (Current Setup)</p>
             <ul className="space-y-1 text-zinc-300 text-xs">
               <li>• <strong className="text-white">Platform:</strong> Vercel Serverless (Next.js)</li>
-              <li>• <strong className="text-white">Storage:</strong> /tmp JSON files — ephemeral, resets on deployment</li>
+              <li>• <strong className="text-white">Storage:</strong> Postgres for member accounts, file-based JSON for diary, wall, and help</li>
               <li>• <strong className="text-white">Bandwidth (Hobby):</strong> 100 GB / month</li>
               <li>• <strong className="text-white">Bandwidth (Pro):</strong> 1 TB / month</li>
               <li>• <strong className="text-white">Concurrent requests:</strong> Auto-scaled — no fixed limit</li>
               <li>• <strong className="text-white">Serverless function timeout:</strong> 10 s (Hobby) / 60 s (Pro)</li>
-              <li>• <strong className="text-white">Practical user limit (current storage):</strong> Unlimited while under 512 MB — but data is lost on redeploy</li>
+              <li>• <strong className="text-white">Practical member limit:</strong> Driven by your Postgres plan for accounts and by file storage for diary, wall, and help data</li>
             </ul>
           </div>
           <div className="border border-orange-500/40 rounded-lg px-4 py-3 bg-orange-900/10">
@@ -364,7 +392,7 @@ export default async function AdminOverviewPage() {
               step: '1. Registration',
               path: '/portal/register',
               icon: <FaUsers className="text-orange-400 flex-shrink-0" />,
-              desc: 'Visitor fills in: Full Name, Email, Password (min 8 chars), Confirm Password. Must tick the GDPR data consent checkbox. On submit, POST /api/auth/register validates inputs, hashes password with bcrypt (cost 12), stores user in /tmp/mmh-users.json (prod) or data/portal-users.json (dev), creates an iron-session cookie and redirects to /courses.',
+              desc: 'Visitor fills in: Full Name, Email, Password (min 8 chars), Confirm Password. Must tick the GDPR data consent checkbox. On submit, POST /api/auth/register validates inputs, hashes password with bcrypt (cost 12), stores the member in Postgres via DATABASE_URL (or data/portal-users.json in local dev), creates an iron-session cookie and redirects to /courses.',
             },
             {
               step: '2. Login',
@@ -440,7 +468,7 @@ export default async function AdminOverviewPage() {
           User Data Structure
         </h2>
         <p className="text-zinc-400 text-xs mb-3">
-          Each member account in <code className="bg-black/40 px-1 rounded">mmh-users.json</code> contains the following fields:
+          Each member account in <code className="bg-black/40 px-1 rounded">portal_users</code> (or <code className="bg-black/40 px-1 rounded">data/portal-users.json</code> in local development) contains the following fields:
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-xs text-left">
@@ -496,7 +524,7 @@ export default async function AdminOverviewPage() {
             <strong className="text-white">Help messages</strong> (mmh-help.json): id, userId, userName, userEmail, subject (max 200 chars), message (max 5,000 chars), createdAt, respondedAt?, adminReply?
           </p>
           <p className="text-zinc-400">
-            <strong className="text-white">Admin account</strong>: NOT stored in JSON files — read from ADMIN_EMAIL / ADMIN_PASSWORD_HASH / ADMIN_NAME environment variables on every request. Always persists across deployments.
+            <strong className="text-white">Admin account</strong>: NOT stored in the member table — read from ADMIN_EMAIL / ADMIN_PASSWORD_HASH / ADMIN_NAME environment variables on every request.
           </p>
         </div>
       </section>
@@ -540,7 +568,7 @@ export default async function AdminOverviewPage() {
             <p><strong className="text-white">Data shared with third parties:</strong> Never — no analytics, no advertising, no data sale.</p>
             <p><strong className="text-white">Member data access:</strong> Each member can only access their own diary, story and help messages. Admin can access all member data for operational purposes.</p>
             <p><strong className="text-white">Data deletion:</strong> Members can request account deletion by emailing Melksham-mental-health@outlook.com. Admin manually removes the user record from the JSON file.</p>
-            <p><strong className="text-white">Data retention:</strong> Data is retained while the member account is active. On Vercel (production), data in /tmp may be wiped on each deployment regardless.</p>
+            <p><strong className="text-white">Data retention:</strong> Member accounts are retained while the account is active when DATABASE_URL is configured. File-based portal data may still be wiped on redeploy until migrated.</p>
             <p><strong className="text-white">Security:</strong> All pages served over HTTPS (Vercel automatic SSL). Session tokens encrypted with iron-session (AES-256). Passwords hashed with bcrypt (cost 12). Dummy bcrypt compare on unknown email to prevent timing attacks.</p>
           </div>
         </div>

@@ -1,9 +1,6 @@
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { sessionOptions, type SessionData } from '@/lib/session';
-import { findUserById } from '@/lib/users';
 import { getUserMessages } from '@/lib/helpMessages';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import HelpClient from './HelpClient';
 
 export const metadata = {
@@ -12,20 +9,15 @@ export const metadata = {
 };
 
 export default async function HelpPage() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  const { user } = await loadCurrentSessionUser();
 
-  if (!session.isLoggedIn || !session.userId) {
+  if (!user) {
     redirect('/portal/login?next=/portal/help');
   }
-  if (session.isAdmin) {
+  if (user.isAdmin) {
     redirect('/portal');
   }
 
-  const user = findUserById(session.userId);
-  if (!user) redirect('/portal/login');
-
-  const messages = getUserMessages(session.userId);
-
+  const messages = getUserMessages(user.id);
   return <HelpClient initialMessages={messages} userName={user.name} />;
 }

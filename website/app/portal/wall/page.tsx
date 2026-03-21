@@ -1,8 +1,6 @@
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { sessionOptions, type SessionData } from '@/lib/session';
 import { getRecentPosts } from '@/lib/wall';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import WallClient from './WallClient';
 
 export const metadata = {
@@ -11,10 +9,9 @@ export const metadata = {
 };
 
 export default async function WallPage() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  const { user } = await loadCurrentSessionUser();
 
-  if (!session.isLoggedIn || !session.userId) {
+  if (!user) {
     redirect('/portal/login?next=/portal/wall');
   }
 
@@ -23,8 +20,8 @@ export default async function WallPage() {
   return (
     <WallClient
       initialPosts={posts}
-      currentUserId={session.userId}
-      isAdmin={session.isAdmin}
+      currentUserId={user.id}
+      isAdmin={user.isAdmin}
     />
   );
 }

@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
 import fs from 'fs';
-import { sessionOptions, type SessionData } from '@/lib/session';
+import { portalApiErrorResponse } from '@/lib/portalApi';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
+import { getPortalUsersStorageDetails } from '@/lib/portalConfig';
+import { getPortalUsersTableStats } from '@/lib/portalDb';
 
 function getFileStats(filePath: string): { exists: boolean; sizeBytes: number; entries: number } {
   try {
@@ -17,43 +18,60 @@ function getFileStats(filePath: string): { exists: boolean; sizeBytes: number; e
 }
 
 export async function GET() {
-  const cookieStore = await cookies();
-  const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+  try {
+    const { user } = await loadCurrentSessionUser();
 
-  if (!session.isLoggedIn || !session.isAdmin) {
-    return NextResponse.json({ error: 'Unauthorised' }, { status: 401 });
+    if (!user || !user.isAdmin) {
+      return NextResponse.json({ error: 'Unauthorised' }, { status: 401 });
+    }
+
+    const isProduction = process.env.NODE_ENV === 'production';
+    const usersStorage = getPortalUsersStorageDetails();
+    const diaryPath = process.env.DIARY_DATA_PATH ?? (isProduction ? '/tmp/mmh-diary.json' : 'data/diary.json');
+    const wallPath = process.env.WALL_DATA_PATH ?? (isProduction ? '/tmp/mmh-wall.json' : 'data/wall.json');
+    const helpPath = process.env.HELP_DATA_PATH ?? (isProduction ? '/tmp/mmh-help.json' : 'data/help-messages.json');
+
+    const usersStats = usersStorage.mode === 'database'
+      ? { exists: true, ...(await getPortalUsersTableStats()) }
+      : getFileStats(usersStorage.location);
+
+    return NextResponse.json({
+      environment: isProduction ? 'production' : 'development',
+      storageType: usersStorage.mode === 'database'
+        ? 'hybrid: postgres for member accounts, file-based JSON for diary/wall/help'
+        : 'file-based JSON (development fallback)',
+      storageNote: usersStorage.mode === 'database'
+        ? 'Member accounts persist in Postgres via DATABASE_URL. Diary, wall, and help data are still stored in file-based JSON.'
+        : usersStorage.description,
+      files: {
+        users: {
+          path: usersStorage.location,
+          mode: usersStorage.mode,
+          durable: usersStorage.durable,
+          ...usersStats,
+        },
+        diary: { path: diaryPath, mode: 'file', durable: false, ...getFileStats(diaryPath) },
+        wall: { path: wallPath, mode: 'file', durable: false, ...getFileStats(wallPath) },
+        help: { path: helpPath, mode: 'file', durable: false, ...getFileStats(helpPath) },
+      },
+      vercelLimits: {
+        tmpStorageMax: '512 MB total across file-based /tmp data',
+        functionMemory: '1024 MB (Hobby) / 3009 MB (Pro)',
+        maxBandwidthHobby: '100 GB / month',
+        maxBandwidthPro: '1 TB / month',
+        concurrentExecutions: 'Auto-scaled by Vercel',
+        note: usersStorage.mode === 'database'
+          ? 'Member accounts no longer rely on /tmp. Diary, wall, and help data still do unless they are migrated as well.'
+          : 'Production portal auth requires DATABASE_URL. The JSON fallback is intended for local development only.',
+      },
+      userCapacity: {
+        estimatedMaxUsers: usersStorage.mode === 'database'
+          ? 'Member-account capacity now depends on your Postgres plan rather than /tmp storage.'
+          : 'Local JSON fallback only. Production should use Postgres for durable member accounts.',
+        recommendation: 'Use DATABASE_URL for persistent member accounts and add a migration/export step if you need to preserve existing JSON member data.',
+      },
+    });
+  } catch (error) {
+    return portalApiErrorResponse(error);
   }
-
-  const isProduction = process.env.NODE_ENV === 'production';
-
-  const usersPath = process.env.USERS_DATA_PATH ?? (isProduction ? '/tmp/mmh-users.json' : 'data/portal-users.json');
-  const diaryPath = process.env.DIARY_DATA_PATH ?? (isProduction ? '/tmp/mmh-diary.json' : 'data/diary.json');
-  const wallPath = process.env.WALL_DATA_PATH ?? (isProduction ? '/tmp/mmh-wall.json' : 'data/wall.json');
-  const helpPath = process.env.HELP_DATA_PATH ?? (isProduction ? '/tmp/mmh-help.json' : 'data/help-messages.json');
-
-  return NextResponse.json({
-    environment: isProduction ? 'production' : 'development',
-    storageType: 'file-based JSON',
-    storageNote: isProduction
-      ? 'Data is stored in Vercel /tmp — this is ephemeral and is wiped on each new deployment. Data persists across warm re-invocations of the same serverless instance but is NOT guaranteed to persist between deployments.'
-      : 'Data is stored in the local data/ directory (development mode).',
-    files: {
-      users: { path: usersPath, ...getFileStats(usersPath) },
-      diary: { path: diaryPath, ...getFileStats(diaryPath) },
-      wall: { path: wallPath, ...getFileStats(wallPath) },
-      help: { path: helpPath, ...getFileStats(helpPath) },
-    },
-    vercelLimits: {
-      tmpStorageMax: '512 MB total across all /tmp files',
-      functionMemory: '1024 MB (Hobby) / 3009 MB (Pro)',
-      maxBandwidthHobby: '100 GB / month',
-      maxBandwidthPro: '1 TB / month',
-      concurrentExecutions: 'Auto-scaled by Vercel',
-      note: 'Vercel Hobby: unlimited serverless function invocations, 100 GB bandwidth/month. /tmp storage is 512 MB shared across all active function instances.',
-    },
-    userCapacity: {
-      estimatedMaxUsers: 'Theoretically unlimited while /tmp storage < 512 MB. A typical user record is ~500 bytes; 512 MB /tmp ≈ ~1,000,000 user records. In practice, Vercel /tmp resets on deploy so all data is lost. Use a persistent database for production.',
-      recommendation: 'For production persistence without MongoDB or Railway, use Vercel KV (free tier: 256 MB Redis), Vercel Postgres (free tier: 256 MB), or Turso (free SQLite, 500 MB). Alternatively, export/import the JSON files manually after each deployment.',
-    },
-  });
 }

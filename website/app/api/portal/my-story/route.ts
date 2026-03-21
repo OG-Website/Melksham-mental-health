@@ -1,48 +1,43 @@
 import { NextResponse } from 'next/server';
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
-import { sessionOptions, type SessionData } from '@/lib/session';
-import { findUserById, updateStory } from '@/lib/users';
+import { portalApiErrorResponse } from '@/lib/portalApi';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
+import { updateStory } from '@/lib/users';
 
-/** GET /api/portal/my-story — fetch the current user's story */
 export async function GET() {
   try {
-    const cookieStore = await cookies();
-    const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
-    if (!session.isLoggedIn || !session.userId) {
+    const { user } = await loadCurrentSessionUser();
+    if (!user) {
       return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 });
     }
-    const user = findUserById(session.userId);
-    if (!user) return NextResponse.json({ error: 'User not found.' }, { status: 404 });
+
     return NextResponse.json({ story: user.story ?? '' });
-  } catch {
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+  } catch (error) {
+    return portalApiErrorResponse(error);
   }
 }
 
-/** POST /api/portal/my-story — save the current user's story */
 export async function POST(request: Request) {
   try {
-    const cookieStore = await cookies();
-    const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
-    if (!session.isLoggedIn || !session.userId) {
+    const { user } = await loadCurrentSessionUser();
+    if (!user) {
       return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 });
     }
-    if (session.isAdmin) {
+    if (user.isAdmin) {
       return NextResponse.json({ error: 'Admin account does not have a story page.' }, { status: 403 });
     }
 
-    const body = await request.json() as { story?: unknown };
+    const body = (await request.json()) as { story?: unknown };
     const rawStory = body.story;
     if (rawStory !== undefined && rawStory !== null && typeof rawStory !== 'string') {
       return NextResponse.json({ error: 'Invalid request: story must be a string.' }, { status: 400 });
     }
-    const story = ((rawStory as string | undefined | null) ?? '').trim();
 
-    const ok = updateStory(session.userId, story);
+    const story = ((rawStory as string | undefined | null) ?? '').trim();
+    const ok = await updateStory(user.id, story);
     if (!ok) return NextResponse.json({ error: 'Could not save story.' }, { status: 500 });
+
     return NextResponse.json({ ok: true });
-  } catch {
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+  } catch (error) {
+    return portalApiErrorResponse(error);
   }
 }

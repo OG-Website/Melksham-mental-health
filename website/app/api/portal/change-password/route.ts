@@ -1,19 +1,17 @@
 import { NextResponse } from 'next/server';
-import { getIronSession } from 'iron-session';
-import { cookies } from 'next/headers';
-import { sessionOptions, type SessionData } from '@/lib/session';
+import { portalApiErrorResponse } from '@/lib/portalApi';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import { changePassword } from '@/lib/users';
 
 export async function POST(request: Request) {
   try {
-    const cookieStore = await cookies();
-    const session = await getIronSession<SessionData>(cookieStore, sessionOptions);
+    const { user } = await loadCurrentSessionUser();
 
-    if (!session.isLoggedIn || !session.userId) {
+    if (!user) {
       return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 });
     }
 
-    const body = await request.json() as {
+    const body = (await request.json()) as {
       currentPassword?: string;
       newPassword?: string;
     };
@@ -23,13 +21,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Current and new passwords are required.' }, { status: 400 });
     }
 
-    const result = await changePassword(session.userId, currentPassword, newPassword);
+    const result = await changePassword(user.id, currentPassword, newPassword);
     if (!result.success) {
       return NextResponse.json({ error: result.error }, { status: 400 });
     }
 
     return NextResponse.json({ ok: true });
-  } catch {
-    return NextResponse.json({ error: 'An unexpected error occurred.' }, { status: 500 });
+  } catch (error) {
+    return portalApiErrorResponse(error);
   }
 }
