@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FaLock, FaEnvelope, FaUser, FaEye, FaEyeSlash, FaShieldAlt } from 'react-icons/fa';
+import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
 
 function getRegisterErrorMessage(message?: string): string {
   if (!message) return 'Registration failed. Please try again.';
@@ -179,8 +180,8 @@ export default function RegisterPage() {
                   content and so that we can contact you about courses you express an interest in.
                   Your data will <strong className="text-white">never be sold or shared</strong> with
                   any third party. You can request deletion of your account at any time by emailing{' '}
-                  <a href="mailto:Melksham-mental-health@outlook.com" className="text-orange-400 underline">
-                    Melksham-mental-health@outlook.com
+                  <a href={CONTACT_EMAIL_HREF} className="text-orange-400 underline">
+                    {CONTACT_EMAIL}
                   </a>.
                 </p>
                 <label className="flex items-start gap-2 cursor-pointer">

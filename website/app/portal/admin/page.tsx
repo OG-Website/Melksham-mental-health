@@ -25,6 +25,7 @@ import { getPortalUsersStorageDetails } from '@/lib/portalConfig';
 import { getPortalUsersTableStats } from '@/lib/portalDb';
 import { getAllMembers } from '@/lib/users';
 import { getAllMessages } from '@/lib/helpMessages';
+import { CONTACT_EMAIL } from '@/lib/constants';
 
 export const metadata = {
   title: 'Site Overview | Melksham Mental Health Admin',
@@ -61,7 +62,7 @@ const SITE_TREE = [
       { path: '/community', label: 'Community', desc: 'Community overview page' },
       { path: '/community/stories', label: 'Community Stories', desc: 'Anonymised lived-experience stories shared by the community' },
       { path: '/blog', label: 'Blog', desc: 'Articles and mental health content' },
-      { path: '/contact', label: 'Contact', desc: 'Contact form — emails to Melksham-mental-health@outlook.com' },
+      { path: '/contact', label: 'Contact', desc: `Contact form - emails to ${CONTACT_EMAIL}` },
       { path: '/courses', label: 'Courses', desc: '50-module mental health course listing — members can browse and request to join modules' },
       { path: '/privacy', label: 'Privacy Policy', desc: 'Data policy and GDPR information' },
       { path: '/terms', label: 'Terms', desc: 'Terms of service' },
@@ -567,7 +568,7 @@ export default async function AdminOverviewPage() {
             <p><strong className="text-white">Data never stored:</strong> Plain-text passwords (bcrypt hashed with cost 12 only), payment card details.</p>
             <p><strong className="text-white">Data shared with third parties:</strong> Never — no analytics, no advertising, no data sale.</p>
             <p><strong className="text-white">Member data access:</strong> Each member can only access their own diary, story and help messages. Admin can access all member data for operational purposes.</p>
-            <p><strong className="text-white">Data deletion:</strong> Members can request account deletion by emailing Melksham-mental-health@outlook.com. Admin manually removes the user record from the JSON file.</p>
+            <p><strong className="text-white">Data deletion:</strong> Members can request account deletion by emailing {CONTACT_EMAIL}. Admin manually removes the user record from the JSON file.</p>
             <p><strong className="text-white">Data retention:</strong> Member accounts are retained while the account is active when DATABASE_URL is configured. File-based portal data may still be wiped on redeploy until migrated.</p>
             <p><strong className="text-white">Security:</strong> All pages served over HTTPS (Vercel automatic SSL). Session tokens encrypted with iron-session (AES-256). Passwords hashed with bcrypt (cost 12). Dummy bcrypt compare on unknown email to prevent timing attacks.</p>
           </div>

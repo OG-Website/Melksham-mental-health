@@ -1,3 +1,5 @@
+import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+
 export const metadata = {
   title: "Privacy Policy | Melksham Mental Health",
   description: "Privacy policy for Melksham Mental Health website and services.",
@@ -78,8 +80,8 @@ export default function PrivacyPage() {
             </ul>
             <p className="text-white mt-4">
               To exercise these rights, contact us at{' '}
-              <a href="mailto:Melksham-mental-health@outlook.com" className="text-secondary hover:text-primary">
-                Melksham-mental-health@outlook.com
+              <a href={CONTACT_EMAIL_HREF} className="text-secondary hover:text-primary">
+                {CONTACT_EMAIL}
               </a>
             </p>
           </section>
@@ -116,8 +118,8 @@ export default function PrivacyPage() {
             </p>
             <p className="text-white mt-4">
               Email:{' '}
-              <a href="mailto:Melksham-mental-health@outlook.com" className="text-secondary hover:text-primary">
-                Melksham-mental-health@outlook.com
+              <a href={CONTACT_EMAIL_HREF} className="text-secondary hover:text-primary">
+                {CONTACT_EMAIL}
               </a>
             </p>
           </section>

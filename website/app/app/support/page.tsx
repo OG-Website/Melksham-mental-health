@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
 
 export const metadata = {
   title: 'Get Support | Melksham Mental Health',
@@ -10,8 +11,8 @@ export default function SupportPage() {
     <div>
       <div className="page-content">
         <p className="section-kicker">Get Support</p>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">You don't need the right words.</h1>
-        <p className="text-lg text-zinc-100 mb-12">If you're here, that's enough.</p>
+        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 normal-case tracking-normal">You don&apos;t need the right words.</h1>
+        <p className="text-lg text-zinc-100 mb-12">If you&apos;re here, that&apos;s enough.</p>
 
         <div className="mt-12">
           <h2 className="text-3xl font-black text-white mb-6 normal-case tracking-normal">What We Offer</h2>
@@ -22,7 +23,7 @@ export default function SupportPage() {
             <p>• Honest conversations.</p>
             <p>• Signposting to professional services when needed.</p>
           </div>
-          <p className="text-zinc-100 text-lg">We won't try to fix you. We won't minimise what you're feeling. We will listen.</p>
+          <p className="text-zinc-100 text-lg">We won&apos;t try to fix you. We won&apos;t minimise what you&apos;re feeling. We will listen.</p>
         </div>
 
         <div className="mt-16 pt-8 border-t-4 border-error/70">
@@ -40,7 +41,7 @@ export default function SupportPage() {
           <p className="text-lg text-zinc-100 mb-8">Contact us through the website form or email. We aim to respond as quickly as possible, but this is a peer-led service.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="metal-button metal-button--small pulse-attention">Contact Form</Link>
-            <a href="mailto:Melksham-mental-health@outlook.com" className="metal-button metal-button--small">Email Us</a>
+            <a href={CONTACT_EMAIL_HREF} className="metal-button metal-button--small">{CONTACT_EMAIL}</a>
           </div>
         </div>
       </div>

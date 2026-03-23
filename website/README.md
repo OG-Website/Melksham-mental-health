@@ -95,9 +95,21 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 # License Product ID (create in Stripe Dashboard)
 STRIPE_LICENSE_PRICE_ID=price_...
 
-# Email Configuration (optional)
+# Email Configuration
+NEXT_PUBLIC_CONTACT_EMAIL=hello@melksham-mentalhealth.us
+CONTACT_EMAIL=hello@melksham-mentalhealth.us
+MAIL_FROM_EMAIL=Melksham Mental Health <hello@melksham-mentalhealth.us>
+
+# Optional provider 1: Resend
 RESEND_API_KEY=re_...
-CONTACT_EMAIL=Melksham-mental-health@outlook.com
+RESEND_FROM_EMAIL=Melksham Mental Health <noreply@melksham-mentalhealth.us>
+
+# Optional provider 2: SMTP
+SMTP_HOST=smtp.privateemail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=hello@melksham-mentalhealth.us
+SMTP_PASSWORD=<app-or-mailbox-password>
 
 # Analytics (optional)
 NEXT_PUBLIC_GA_ID=G-...
@@ -160,7 +172,7 @@ The sticky crisis banner is always visible and provides:
 
 ## 📧 Contact & Support
 
-- **Email**: Melksham-mental-health@outlook.com
+- **Email**: hello@melksham-mentalhealth.us
 - **Facebook**: /melkshammentalhealth
 - **Website**: melksham-mentalhealth.us
 
