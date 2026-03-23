@@ -54,7 +54,7 @@ export function getPortalUsersStorageDetails(): {
     location: getUsersFilePath(),
     durable: false,
     description: isProductionEnvironment()
-      ? 'Production requires DATABASE_URL. The local JSON fallback is development-only.'
+      ? 'DATABASE_URL is missing in production. Portal auth is disabled until Postgres is configured.'
       : 'Local JSON fallback for development only.',
   };
 }

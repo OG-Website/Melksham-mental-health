@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { portalApiErrorResponse } from '@/lib/portalApi';
 import { savePortalSession } from '@/lib/portalAuth';
+import { sendPortalWelcomeEmail } from '@/lib/portalEmail';
 import { createUser } from '@/lib/users';
 
 export async function POST(request: Request) {
@@ -26,6 +27,13 @@ export async function POST(request: Request) {
     }
 
     await savePortalSession(result.user);
+    const emailResult = await sendPortalWelcomeEmail({
+      name: result.user.name,
+      email: result.user.email,
+    });
+    if (!emailResult.sent) {
+      console.warn('[MMH portal] Welcome email was not sent:', emailResult.reason ?? 'unknown reason');
+    }
 
     return NextResponse.json({
       ok: true,
@@ -35,6 +43,7 @@ export async function POST(request: Request) {
         name: result.user.name,
         isAdmin: result.user.isAdmin,
       },
+      welcomeEmailSent: emailResult.sent,
     });
   } catch (error) {
     return portalApiErrorResponse(error);

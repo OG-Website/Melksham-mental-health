@@ -5,6 +5,20 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FaLock, FaEnvelope, FaUser, FaEye, FaEyeSlash, FaShieldAlt } from 'react-icons/fa';
 
+function getRegisterErrorMessage(message?: string): string {
+  if (!message) return 'Registration failed. Please try again.';
+
+  if (message.includes('DATABASE_URL')) {
+    return 'Portal registration is temporarily unavailable due to server configuration. Please contact support.';
+  }
+
+  if (message.includes('SESSION_SECRET')) {
+    return 'Portal registration is temporarily unavailable due to session configuration. Please contact support.';
+  }
+
+  return message;
+}
+
 export default function RegisterPage() {
   const router = useRouter();
 
@@ -39,7 +53,7 @@ export default function RegisterPage() {
       });
       const data = await res.json() as { ok?: boolean; error?: string };
       if (!res.ok || !data.ok) {
-        setError(data.error ?? 'Registration failed. Please try again.');
+        setError(getRegisterErrorMessage(data.error));
       } else {
         router.push('/courses');
         router.refresh();
@@ -122,7 +136,7 @@ export default function RegisterPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full bg-black/60 border border-zinc-600 focus:border-orange-500 rounded-lg pl-10 pr-10 py-3 text-white placeholder-zinc-500 focus:outline-none transition-colors"
-                placeholder="••••••••"
+                placeholder="********"
               />
               <button
                 type="button"
@@ -150,12 +164,11 @@ export default function RegisterPage() {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className="w-full bg-black/60 border border-zinc-600 focus:border-orange-500 rounded-lg pl-10 pr-4 py-3 text-white placeholder-zinc-500 focus:outline-none transition-colors"
-                placeholder="••••••••"
+                placeholder="********"
               />
             </div>
           </div>
 
-          {/* GDPR / Data Consent */}
           <div className="border border-zinc-700 rounded-lg p-4 bg-black/30">
             <div className="flex items-start gap-3">
               <FaShieldAlt className="text-orange-400 mt-0.5 flex-shrink-0" />
@@ -193,7 +206,7 @@ export default function RegisterPage() {
             disabled={loading || !gdprConsent}
             className="metal-button w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {loading ? 'Creating account…' : 'Create Account'}
+            {loading ? 'Creating account...' : 'Create Account'}
           </button>
         </form>
 

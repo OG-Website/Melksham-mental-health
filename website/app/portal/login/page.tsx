@@ -5,10 +5,23 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FaLock, FaEnvelope, FaEye, FaEyeSlash } from 'react-icons/fa';
 
+function getLoginErrorMessage(message?: string): string {
+  if (!message) return 'Login failed. Please try again.';
+
+  if (message.includes('DATABASE_URL')) {
+    return 'Portal login is temporarily unavailable due to server configuration. Please contact support.';
+  }
+
+  if (message.includes('SESSION_SECRET')) {
+    return 'Portal login is temporarily unavailable due to session configuration. Please contact support.';
+  }
+
+  return message;
+}
+
 function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  // Guard against open-redirect: only allow same-origin relative paths
   const rawNext = searchParams.get('next') ?? '/portal';
   const next =
     rawNext.startsWith('/') && !rawNext.startsWith('//') && !rawNext.includes('://')
@@ -33,7 +46,7 @@ function LoginForm() {
       });
       const data = await res.json() as { ok?: boolean; error?: string };
       if (!res.ok || !data.ok) {
-        setError(data.error ?? 'Login failed. Please try again.');
+        setError(getLoginErrorMessage(data.error));
       } else {
         router.push(next);
         router.refresh();
@@ -96,7 +109,7 @@ function LoginForm() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full bg-black/60 border border-zinc-600 focus:border-orange-500 rounded-lg pl-10 pr-10 py-3 text-white placeholder-zinc-500 focus:outline-none transition-colors"
-                placeholder="••••••••"
+                placeholder="********"
               />
               <button
                 type="button"
@@ -114,7 +127,7 @@ function LoginForm() {
             disabled={loading}
             className="metal-button w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {loading ? 'Signing in…' : 'Sign In'}
+            {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
 

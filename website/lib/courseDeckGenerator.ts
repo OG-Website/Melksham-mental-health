@@ -43,6 +43,43 @@ function normalizeText(value: string): string {
   return value.replace(/\r\n/g, '\n').replace(/\r/g, '\n').trim();
 }
 
+const UK_SPELLING_RULES: Array<[RegExp, string]> = [
+  [/\bbehavioral\b/gi, 'behavioural'],
+  [/\bbehaviorally\b/gi, 'behaviourally'],
+  [/\bbehavior\b/gi, 'behaviour'],
+  [/\bbehaviors\b/gi, 'behaviours'],
+  [/\bcounseling\b/gi, 'counselling'],
+  [/\bcounselor\b/gi, 'counsellor'],
+  [/\bcounselors\b/gi, 'counsellors'],
+  [/\borganize\b/gi, 'organise'],
+  [/\borganized\b/gi, 'organised'],
+  [/\borganizing\b/gi, 'organising'],
+  [/\borganization\b/gi, 'organisation'],
+  [/\borganizations\b/gi, 'organisations'],
+  [/\bprogram\b/gi, 'programme'],
+  [/\bprograms\b/gi, 'programmes'],
+  [/\bcenter\b/gi, 'centre'],
+  [/\bcenters\b/gi, 'centres'],
+  [/\bmodeling\b/gi, 'modelling'],
+  [/\bmodeled\b/gi, 'modelled'],
+];
+
+function preserveCase(source: string, target: string): string {
+  if (source.toUpperCase() === source) return target.toUpperCase();
+  if (source[0] && source[0] === source[0].toUpperCase()) {
+    return target[0].toUpperCase() + target.slice(1);
+  }
+  return target;
+}
+
+function toUkEnglish(value: string): string {
+  let result = value;
+  for (const [pattern, replacement] of UK_SPELLING_RULES) {
+    result = result.replace(pattern, (match) => preserveCase(match, replacement));
+  }
+  return result;
+}
+
 function chunkArray<T>(items: T[], chunkSize: number): T[][] {
   if (items.length === 0) return [[]];
   const chunks: T[][] = [];
@@ -98,8 +135,9 @@ function safeDomain(url: string): string {
 function parseSlideNumberToken(token: string): number[] {
   const cleaned = token.replace(/\band\b/gi, '&').replace(/[–—]/g, '-');
   const numbers = new Set<number>();
+  const normalizedDelimiters = cleaned.replace(/[\u2013\u2014]/g, '-');
 
-  for (const rawPart of cleaned.split(/[,&]/)) {
+  for (const rawPart of normalizedDelimiters.split(/[,&]/)) {
     const part = rawPart.trim();
     if (!part) continue;
 
@@ -146,6 +184,27 @@ function buildSlideScriptMap(deliveryScript: string): SlideScriptMap {
   }
 
   if (notesBySlide.size === 0 && script) {
+    const normalisedScript = script.replace(/[\u2013\u2014]/g, '-');
+    const safePattern = /(?:^|\n)SLIDE(?:S)?\s+([0-9,&\-\s]+)\s+-\s*(.+?)\n([\s\S]*?)(?=\nSLIDE(?:S)?\s+[0-9]|\s*$)/g;
+    let safeMatch = safePattern.exec(normalisedScript);
+
+    while (safeMatch) {
+      const slideNumbers = parseSlideNumberToken(safeMatch[1]);
+      const noteTitle = safeMatch[2].trim();
+      const noteBody = safeMatch[3].trim();
+      const note = `${noteTitle}\n\n${noteBody}`.trim();
+
+      for (const slideNumber of slideNumbers) {
+        const existing = notesBySlide.get(slideNumber) ?? [];
+        existing.push(note);
+        notesBySlide.set(slideNumber, existing);
+      }
+
+      safeMatch = safePattern.exec(normalisedScript);
+    }
+  }
+
+  if (notesBySlide.size === 0 && script) {
     notesBySlide.set(1, [script]);
   }
 
@@ -153,14 +212,14 @@ function buildSlideScriptMap(deliveryScript: string): SlideScriptMap {
 }
 
 function buildAgendaBullets(sessionBreakdown: SessionSegment[]): string[] {
-  return sessionBreakdown.map((segment) => `${segment.time}: ${segment.label}`);
+  return sessionBreakdown.map((segment) => toUkEnglish(`${segment.time}: ${segment.label}`));
 }
 
 function buildLearningFocusBullets(guide: ModuleGuide): string[] {
   const headlineSlides = guide.slideOutline.slice(0, 4).map((slide) => slide.title);
-  const focusBullets = headlineSlides.map((title) => `Explore ${title}`);
-  focusBullets.push('Apply the module activity in a practical, structured way');
-  focusBullets.push('Leave with UK support and signposting options');
+  const focusBullets = headlineSlides.map((title) => toUkEnglish(`Explore ${title}`));
+  focusBullets.push(toUkEnglish('Apply the module activity in a practical, structured way'));
+  focusBullets.push(toUkEnglish('Leave with UK support and signposting options'));
   return focusBullets.slice(0, 6);
 }
 
@@ -180,22 +239,22 @@ function buildResearchSummaryText(research: ModuleResearch): string {
     `Reviewed on: ${formatReviewDate(research.reviewedOn)}`,
     '',
     'Evidence summary',
-    research.summary,
+    toUkEnglish(research.summary),
     '',
     'Teaching priorities',
-    ...research.teachingPriorities.map((priority, index) => `${index + 1}. ${priority}`),
+    ...research.teachingPriorities.map((priority, index) => `${index + 1}. ${toUkEnglish(priority)}`),
   ].join('\n');
 }
 
 function buildResearchSourceBullets(research: ModuleResearch): string[] {
-  return research.sources.map((source) => `${source.label} (${safeDomain(source.url)})`);
+  return research.sources.map((source) => `${toUkEnglish(source.label)} (${safeDomain(source.url)})`);
 }
 
 function buildResearchNotes(research: ModuleResearch): string[] {
   return [
     `Reviewed on\n${formatReviewDate(research.reviewedOn)}`,
-    `Evidence summary\n${research.summary}`,
-    `Teaching priorities\n${research.teachingPriorities.join('\n')}`,
+    `Evidence summary\n${toUkEnglish(research.summary)}`,
+    `Teaching priorities\n${research.teachingPriorities.map((priority) => toUkEnglish(priority)).join('\n')}`,
     `Reviewed sources\n${research.sources.map((source) => `${source.label}\n${source.url}`).join('\n\n')}`,
   ];
 }
@@ -213,24 +272,32 @@ function buildActivityPreview(activity: string): string[] {
     .map((line) => line.replace(/^[-*]\s*/, '').replace(/^\d+\.\s*/, ''));
 
   return bulletCandidates.length > 0
-    ? bulletCandidates
-    : ['Reflect privately', 'Follow the facilitator prompts', 'Share only if you feel comfortable'];
+    ? bulletCandidates.map((entry) => toUkEnglish(entry))
+    : [
+      toUkEnglish('Reflect privately'),
+      toUkEnglish('Follow the facilitator prompts'),
+      toUkEnglish('Share only if you feel comfortable'),
+    ];
 }
 
 function getActivityTitle(activity: string): string {
   const firstLine = normalizeText(activity).split('\n')[0]?.trim() ?? 'Interactive Activity';
-  return firstLine.replace(/^ACTIVITY\s+[—-]\s*/i, '') || 'Interactive Activity';
+  const normalisedFirstLine = firstLine.replace(/[\u2013\u2014]/g, '-');
+  if (normalisedFirstLine !== firstLine) {
+    return toUkEnglish(normalisedFirstLine.replace(/^ACTIVITY\s+-\s*/i, '') || 'Interactive Activity');
+  }
+  return toUkEnglish(firstLine.replace(/^ACTIVITY\s+[—-]\s*/i, '') || 'Interactive Activity');
 }
 
 function buildTutorBriefText(guide: ModuleGuide): string {
   const parts = [
-    `Summary\n${guide.summary}`,
+    `Summary\n${toUkEnglish(guide.summary)}`,
     `Session flow\n${buildAgendaBullets(guide.sessionBreakdown).join('\n')}`,
-    `Facilitation priorities\n${guide.tutorNotes}`,
+    `Facilitation priorities\n${toUkEnglish(guide.tutorNotes)}`,
   ];
 
   if (guide.powerPoint) {
-    parts.push(`Module-specific slide brief\n${guide.powerPoint}`);
+    parts.push(`Module-specific slide brief\n${toUkEnglish(guide.powerPoint)}`);
   }
 
   return parts.join('\n\n');
@@ -319,7 +386,7 @@ function addBaseSlideChrome(
     margin: 0,
   });
 
-  slide.addText(title, {
+  slide.addText(toUkEnglish(title), {
     x: 0.6,
     y: 0.48,
     w: 9.4,
@@ -409,7 +476,8 @@ function addBulletSlide(
   addBaseSlideChrome(pptx, slide, guide, audience, title);
   addLogoToSlide(slide, logoPath);
 
-  const runs = bullets.flatMap((bullet) => [
+  const normalizedBullets = bullets.map((bullet) => toUkEnglish(bullet));
+  const runs = normalizedBullets.flatMap((bullet) => [
     { text: bullet, options: { bullet: { indent: 18 } } },
     { text: '\n' },
   ]);
@@ -419,7 +487,7 @@ function addBulletSlide(
     y: 1.35,
     w: 11.3,
     h: 5.3,
-    fontSize: bullets.some((bullet) => bullet.length > 110) ? 16 : 18,
+    fontSize: normalizedBullets.some((bullet) => bullet.length > 110) ? 16 : 18,
     color: COLORS.text,
     margin: 0.06,
     breakLine: false,
@@ -441,7 +509,7 @@ function addTextSlide(
   addBaseSlideChrome(pptx, slide, guide, audience, title);
   addLogoToSlide(slide, logoPath);
 
-  slide.addText(body, {
+  slide.addText(toUkEnglish(body), {
     x: 0.85,
     y: 1.32,
     w: options?.columnNote ? 8.25 : 11.2,
@@ -465,7 +533,7 @@ function addTextSlide(
       fill: { color: COLORS.backgroundAlt, transparency: 4 },
     });
 
-    slide.addText(options.columnNote, {
+    slide.addText(toUkEnglish(options.columnNote), {
       x: 9.65,
       y: 1.72,
       w: 2.35,
@@ -509,7 +577,7 @@ function addTitleSlide(
     margin: 0,
   });
 
-  slide.addText(guide.topic, {
+  slide.addText(toUkEnglish(guide.topic), {
     x: 0.78,
     y: 1.55,
     w: 9.8,
@@ -521,7 +589,7 @@ function addTitleSlide(
     fit: 'shrink',
   });
 
-  slide.addText(guide.summary, {
+  slide.addText(toUkEnglish(guide.summary), {
     x: 0.8,
     y: 2.95,
     w: 8.6,
@@ -678,7 +746,7 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
         guide,
         audience,
         'Key Evidence and Practice Points',
-        research.teachingPriorities,
+        research.teachingPriorities.map((priority) => toUkEnglish(priority)),
         logoPath,
       );
     }
@@ -760,7 +828,7 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
     guide,
     audience,
     'Discussion and Reflection',
-    guide.discussionPrompts,
+    guide.discussionPrompts.map((prompt) => toUkEnglish(prompt)),
     logoPath,
   );
   addTutorNotes(discussionSlide, [
@@ -776,7 +844,7 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
       guide,
       audience,
       'Optional Video Support',
-      guide.videos.map((video) => `${video.label} (${safeDomain(video.url)})`),
+      guide.videos.map((video) => `${toUkEnglish(video.label)} (${safeDomain(video.url)})`),
       logoPath,
     );
     addTutorNotes(
@@ -792,7 +860,7 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
     guide,
     audience,
     'Resources and Signposting',
-    guide.resources.map((resource) => `${resource.label} (${safeDomain(resource.url)})`),
+    guide.resources.map((resource) => `${toUkEnglish(resource.label)} (${safeDomain(resource.url)})`),
     logoPath,
   );
   addTutorNotes(

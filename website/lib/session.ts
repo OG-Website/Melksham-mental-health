@@ -1,5 +1,5 @@
 import type { SessionOptions } from 'iron-session';
-import { PortalConfigError, isProductionEnvironment } from '@/lib/portalConfig';
+import { isProductionEnvironment, PortalConfigError } from '@/lib/portalConfig';
 
 export interface SessionData {
   userId: string;
@@ -14,30 +14,34 @@ export const PORTAL_SESSION_COOKIE_NAME = 'mmh-portal-session';
 
 function getSecret(): string {
   const secret = process.env.SESSION_SECRET?.trim();
+  const isProd = isProductionEnvironment();
 
   if (!secret) {
-    if (isProductionEnvironment()) {
+    if (isProd) {
       throw new PortalConfigError(
-        'SESSION_SECRET must be set in production for portal sessions. ' +
-          'Generate a random secret of at least 32 characters and add it to your environment.',
+        'SESSION_SECRET is required in production for secure portal sessions. ' +
+          'Set a random 32+ character value before allowing sign-up or login.',
       );
     }
 
     if (!(globalThis as Record<string, unknown>).__mmhSessionWarnShown) {
       (globalThis as Record<string, unknown>).__mmhSessionWarnShown = true;
       console.warn(
-        '[MMH] SESSION_SECRET is not set - using an insecure fallback for development only. ' +
-          'Do NOT use this in production.',
+        '[MMH] SESSION_SECRET is not set - using an insecure fallback for development. ' +
+          'Set SESSION_SECRET to a random 32+ character value.',
       );
     }
-
     return FALLBACK_SECRET;
   }
 
-  if (isProductionEnvironment() && secret.length < 32) {
-    throw new PortalConfigError(
-      'SESSION_SECRET must be at least 32 characters long in production.',
-    );
+  if (isProd && secret.length < 32) {
+    if (!(globalThis as Record<string, unknown>).__mmhSessionShortWarnShown) {
+      (globalThis as Record<string, unknown>).__mmhSessionShortWarnShown = true;
+      console.warn(
+        '[MMH] SESSION_SECRET is shorter than 32 characters in production. ' +
+          'Portal sessions still work, but you should rotate to a stronger secret immediately.',
+      );
+    }
   }
 
   return secret;
