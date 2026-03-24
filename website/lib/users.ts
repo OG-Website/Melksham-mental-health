@@ -29,7 +29,7 @@ type UserRecord = Partial<User> & Pick<User, 'id' | 'email' | 'passwordHash' | '
 
 const DUMMY_HASH = '$2b$12$dummy.hash.for.timing.x.xUJGwnBxHjJ7tYcaHKNHQ8i2eSHuuq';
 
-const DEFAULT_ADMIN_EMAIL = 'hello@tradeathem.co.uk';
+const DEFAULT_ADMIN_EMAIL = 'hello@melksham-mentalhealth.us';
 const DEFAULT_ADMIN_HASH =
   '$2b$12$JdbYVuAuLAZXHt6VwH88O.MdPzOCuP4PmCsZUrvl8EVCAOlbZEYBa';
 

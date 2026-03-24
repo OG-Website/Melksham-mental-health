@@ -120,7 +120,7 @@ For portal auth in production, also set:
 ```env
 DATABASE_URL=postgresql://user:password@host:5432/database
 SESSION_SECRET=<random string of at least 32 characters>
-ADMIN_EMAIL=hello@tradeathem.co.uk
+ADMIN_EMAIL=hello@melksham-mentalhealth.us
 ADMIN_PASSWORD_HASH=$2b$12$...
 ADMIN_NAME=Rob Johnston
 ```

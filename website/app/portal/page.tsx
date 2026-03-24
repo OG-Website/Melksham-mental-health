@@ -8,6 +8,8 @@ import { AdminApproveButton } from '@/components/CourseAccessApplyButton';
 import { getAllMessages } from '@/lib/helpMessages';
 import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
 import { AdminHelpReplyForm } from '@/components/AdminHelpReplyForm';
+import { getAdminBroadcastNotes } from '@/lib/adminBroadcasts';
+import { AdminBroadcastForm } from '@/components/AdminBroadcastForm';
 
 export const metadata = {
   title: 'Member Portal | Melksham Mental Health',
@@ -77,6 +79,7 @@ export default async function PortalPage() {
 
   const members = user.isAdmin ? await getAllMembers() : null;
   const helpMessages = user.isAdmin ? getAllMessages() : null;
+  const broadcastNotes = user.isAdmin ? getAdminBroadcastNotes(12) : null;
 
   // Build interest summary for admin: moduleId → count
   const interestCount: Record<number, number> = {};
@@ -289,6 +292,37 @@ export default async function PortalPage() {
                 </table>
               </div>
             )}
+          </div>
+
+          <div className="mb-12">
+            <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
+              <FaEnvelope className="inline mr-2 text-orange-400" />
+              Send Email &amp; Notes To All Members
+            </h2>
+            <AdminBroadcastForm memberCount={members.length} />
+            <div className="mt-4 border border-zinc-700 rounded-lg p-4 text-left">
+              <p className="text-zinc-300 text-xs font-semibold mb-2">Recent admin broadcasts</p>
+              {!broadcastNotes || broadcastNotes.length === 0 ? (
+                <p className="text-zinc-500 text-xs">No broadcasts have been sent yet.</p>
+              ) : (
+                <div className="space-y-3">
+                  {broadcastNotes.map((note) => (
+                    <div key={note.id} className="border border-zinc-800 rounded-lg p-3">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1">
+                        <p className="text-white text-sm font-semibold">{note.subject}</p>
+                        <span className="text-zinc-500 text-xs">
+                          {new Date(note.createdAt).toLocaleString('en-GB')}
+                        </span>
+                      </div>
+                      <p className="text-zinc-400 text-xs mb-2">
+                        From {note.sentByName} ({note.sentByEmail}) | Recipients: {note.totalRecipients} | Sent: {note.sentCount} | Failed: {note.failedCount}
+                      </p>
+                      <p className="text-zinc-300 text-sm whitespace-pre-wrap">{note.message}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="mb-12">

@@ -5,6 +5,21 @@ interface WelcomeEmailInput {
   email: string;
 }
 
+interface AdminBroadcastEmailInput {
+  recipients: string[];
+  subject: string;
+  message: string;
+}
+
+interface EmailPayload {
+  from: string;
+  to: string[];
+  subject: string;
+  text: string;
+  html: string;
+  bcc?: string[];
+}
+
 interface PortalEmailResult {
   sent: boolean;
   provider: 'resend' | 'smtp' | 'none';
@@ -47,7 +62,7 @@ function getFromAddress(): string {
   const explicit = process.env.RESEND_FROM_EMAIL?.trim();
   if (explicit) return explicit;
 
-  return 'Rob at Milton Mental Health <hello@melksham-mentalhealth.us>';
+  return 'Rob at Melksham Mental Health <hello@melksham-mentalhealth.us>';
 }
 
 function getSupportAddress(): string {
@@ -63,115 +78,27 @@ function escapeHtml(value: string): string {
     .replace(/'/g, '&#039;');
 }
 
-export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<PortalEmailResult> {
-  const supportEmail = getSupportAddress();
-  const safeSupportEmail = escapeHtml(supportEmail);
-  const from = getFromAddress();
-  const portalLoginUrl = 'https://melksham-mentalhealth.us/portal/login';
-
-  const payload = {
-    from,
-    to: [input.email.toLowerCase().trim()],
-    subject: 'Hello, thank you for joining the Milton Mental Health forum',
-    text:
-      'Hello, thank you for joining the Milton Mental Health forum.\n\n' +
-      'Thank you for registering for the Members Portal.\n\n' +
-      'What the portal is:\n' +
-      'The portal is your secure member space for training, support resources, and progress tools.\n\n' +
-      'How to use the portal:\n' +
-      `1. Sign in here: ${portalLoginUrl}\n` +
-      '2. Open your learning modules and review each section in order.\n' +
-      '3. Request access to additional courses from your portal account.\n' +
-      '4. Update your interests so your content stays relevant.\n' +
-      '5. Use diary and story features to record reflections and personal progress.\n' +
-      '6. Return regularly to continue your learning journey and track updates.\n\n' +
-      'If you need help with login, access, or course support, contact us and we will assist.\n' +
-      `Support email: ${supportEmail}\n\n` +
-      'Rob at Milton Mental Health\n' +
-      'Real Struggles. Real Support.\n',
-    html: `
-      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#0a0a0a;padding:24px 12px;">
-        <tr>
-          <td align="center">
-            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:640px;background:linear-gradient(180deg,#1a1a1a 0%,#0a0a0a 100%);border:2px solid #ff6600;border-radius:12px;overflow:hidden;">
-              <tr>
-                <td style="background:#111111 url('https://melksham-mentalhealth.us/background_1.png') center/cover no-repeat;padding:28px 24px;border-bottom:2px solid #ff6600;">
-                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                    <tr>
-                      <td style="vertical-align:middle;">
-                        <p style="margin:0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ffcc99;">
-                          Members Portal
-                        </p>
-                        <h1 style="margin:8px 0 0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:30px;line-height:1.15;text-transform:uppercase;color:#ff9900;">
-                          Hello, Thank You For Joining The Milton Mental Health Forum
-                        </h1>
-                      </td>
-                      <td align="right" style="vertical-align:middle;">
-                        <img src="https://melksham-mentalhealth.us/logo.png" width="110" alt="Milton Mental Health" style="display:block;border:0;outline:none;text-decoration:none;height:auto;max-width:110px;">
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:28px 24px;font-family:'Arial Black',Impact,Arial,sans-serif;color:#ffffff;">
-                  <p style="margin:0 0 14px;font-size:16px;line-height:1.6;color:#ffffff;">
-                    Hello, thank you for joining the Members Portal.
-                  </p>
-                  <p style="margin:0 0 18px;font-size:15px;line-height:1.6;color:#ffcc99;">
-                    This portal is your secure member space for course learning, support tools, and personal progress tracking.
-                  </p>
-                  <p style="margin:0 0 10px;font-size:14px;line-height:1.5;color:#ff9900;text-transform:uppercase;letter-spacing:1px;">
-                    How to use your portal
-                  </p>
-                  <ul style="margin:0 0 22px 18px;padding:0;font-size:14px;line-height:1.65;color:#ffffff;">
-                    <li style="margin:0 0 8px;">Sign in and review your assigned learning modules in order.</li>
-                    <li style="margin:0 0 8px;">Request course access for additional training pathways.</li>
-                    <li style="margin:0 0 8px;">Update your interests so your learning stays relevant.</li>
-                    <li style="margin:0 0 8px;">Use diary and story tools to record reflection and progress.</li>
-                    <li style="margin:0;">Return regularly to continue your course journey.</li>
-                  </ul>
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 22px;">
-                    <tr>
-                      <td style="border-radius:6px;background:#ff6600;background-image:linear-gradient(180deg,#ff6600 0%,#ff8800 100%);">
-                        <a href="${portalLoginUrl}" style="display:inline-block;padding:12px 18px;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:14px;line-height:1;text-transform:uppercase;letter-spacing:1px;color:#ffffff;text-decoration:none;">
-                          Sign In To Portal
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                  <p style="margin:0;font-size:14px;line-height:1.6;color:#ffcc99;">
-                    Need help? Email
-                    <a href="mailto:${safeSupportEmail}" style="color:#ff9900;text-decoration:underline;">${safeSupportEmail}</a>.
-                  </p>
-                  <p style="margin:14px 0 0;font-size:14px;line-height:1.6;color:#ffffff;">
-                    From Rob at Milton Mental Health.
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:16px 24px;border-top:1px solid #2a2a2a;background:#080808;">
-                  <p style="margin:0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:12px;line-height:1.5;text-transform:uppercase;letter-spacing:1px;color:#ffb36f;">
-                    Real Struggles. Real Support.
-                  </p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    `,
-  };
-
+async function sendWithConfiguredProvider(payload: EmailPayload): Promise<PortalEmailResult> {
   const apiKey = getResendApiKey();
   if (apiKey) {
+    const resendBody: Record<string, unknown> = {
+      from: payload.from,
+      to: payload.to,
+      subject: payload.subject,
+      text: payload.text,
+      html: payload.html,
+    };
+    if (payload.bcc && payload.bcc.length > 0) {
+      resendBody.bcc = payload.bcc;
+    }
+
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify(resendBody),
     });
 
     if (response.ok) {
@@ -239,4 +166,185 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
       reason: (error as Error).message || 'SMTP delivery failed.',
     };
   }
+}
+
+export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<PortalEmailResult> {
+  const supportEmail = getSupportAddress();
+  const safeSupportEmail = escapeHtml(supportEmail);
+  const from = getFromAddress();
+  const portalLoginUrl = 'https://melksham-mentalhealth.us/portal/login';
+
+  const payload: EmailPayload = {
+    from,
+    to: [input.email.toLowerCase().trim()],
+    subject: 'Hello, thank you for joining the Melksham Mental Health forum',
+    text:
+      'Hello, thank you for joining the Melksham Mental Health forum.\n\n' +
+      'Thank you for registering for the Members Portal.\n\n' +
+      'What the portal is:\n' +
+      'The portal is your secure member space for training, support resources, and progress tools.\n\n' +
+      'How to use the portal:\n' +
+      `1. Sign in here: ${portalLoginUrl}\n` +
+      '2. Open your learning modules and review each section in order.\n' +
+      '3. Request access to additional courses from your portal account.\n' +
+      '4. Update your interests so your content stays relevant.\n' +
+      '5. Use diary and story features to record reflections and personal progress.\n' +
+      '6. Return regularly to continue your learning journey and track updates.\n\n' +
+      'If you need help with login, access, or course support, contact us and we will assist.\n' +
+      `Support email: ${supportEmail}\n\n` +
+      'From Rob at Melksham Mental Health\n' +
+      'Real Struggles. Real Support.\n',
+    html: `
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#0a0a0a;padding:24px 12px;">
+        <tr>
+          <td align="center">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:640px;background:linear-gradient(180deg,#1a1a1a 0%,#0a0a0a 100%);border:2px solid #ff6600;border-radius:12px;overflow:hidden;">
+              <tr>
+                <td style="background:#111111 url('https://melksham-mentalhealth.us/background_1.png') center/cover no-repeat;padding:28px 24px;border-bottom:2px solid #ff6600;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td style="vertical-align:middle;">
+                        <p style="margin:0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ffcc99;">
+                          Members Portal
+                        </p>
+                        <h1 style="margin:8px 0 0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:30px;line-height:1.15;text-transform:uppercase;color:#ff9900;">
+                          Hello, Thank You For Joining The Melksham Mental Health Forum
+                        </h1>
+                      </td>
+                      <td align="right" style="vertical-align:middle;">
+                        <img src="https://melksham-mentalhealth.us/logo.png" width="110" alt="Melksham Mental Health" style="display:block;border:0;outline:none;text-decoration:none;height:auto;max-width:110px;">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:28px 24px;font-family:'Arial Black',Impact,Arial,sans-serif;color:#ffffff;">
+                  <p style="margin:0 0 14px;font-size:16px;line-height:1.6;color:#ffffff;">
+                    Hello, thank you for joining the Members Portal.
+                  </p>
+                  <p style="margin:0 0 18px;font-size:15px;line-height:1.6;color:#ffcc99;">
+                    This portal is your secure member space for course learning, support tools, and personal progress tracking.
+                  </p>
+                  <p style="margin:0 0 10px;font-size:14px;line-height:1.5;color:#ff9900;text-transform:uppercase;letter-spacing:1px;">
+                    How to use your portal
+                  </p>
+                  <ul style="margin:0 0 22px 18px;padding:0;font-size:14px;line-height:1.65;color:#ffffff;">
+                    <li style="margin:0 0 8px;">Sign in and review your assigned learning modules in order.</li>
+                    <li style="margin:0 0 8px;">Request course access for additional training pathways.</li>
+                    <li style="margin:0 0 8px;">Update your interests so your learning stays relevant.</li>
+                    <li style="margin:0 0 8px;">Use diary and story tools to record reflection and progress.</li>
+                    <li style="margin:0;">Return regularly to continue your course journey.</li>
+                  </ul>
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 22px;">
+                    <tr>
+                      <td style="border-radius:6px;background:#ff6600;background-image:linear-gradient(180deg,#ff6600 0%,#ff8800 100%);">
+                        <a href="${portalLoginUrl}" style="display:inline-block;padding:12px 18px;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:14px;line-height:1;text-transform:uppercase;letter-spacing:1px;color:#ffffff;text-decoration:none;">
+                          Sign In To Portal
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                  <p style="margin:0;font-size:14px;line-height:1.6;color:#ffcc99;">
+                    Need help? Email
+                    <a href="mailto:${safeSupportEmail}" style="color:#ff9900;text-decoration:underline;">${safeSupportEmail}</a>.
+                  </p>
+                  <p style="margin:14px 0 0;font-size:14px;line-height:1.6;color:#ffffff;">
+                    From Rob at Melksham Mental Health.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:16px 24px;border-top:1px solid #2a2a2a;background:#080808;">
+                  <p style="margin:0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:12px;line-height:1.5;text-transform:uppercase;letter-spacing:1px;color:#ffb36f;">
+                    Real Struggles. Real Support.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    `,
+  };
+
+  return sendWithConfiguredProvider(payload);
+}
+
+export async function sendPortalAdminBroadcastEmail(
+  input: AdminBroadcastEmailInput,
+): Promise<PortalEmailResult> {
+  const recipients = Array.from(
+    new Set(input.recipients.map((value) => value.toLowerCase().trim()).filter(Boolean)),
+  );
+  if (recipients.length === 0) {
+    return { sent: false, provider: 'none', reason: 'No member recipient emails were provided.' };
+  }
+
+  const supportEmail = getSupportAddress();
+  const safeSupportEmail = escapeHtml(supportEmail);
+  const from = getFromAddress();
+  const subject = input.subject.trim() || 'Portal update from Melksham Mental Health';
+  const message = input.message.trim();
+  const safeMessage = escapeHtml(message).replace(/\r?\n/g, '<br />');
+
+  const payload: EmailPayload = {
+    from,
+    to: [supportEmail],
+    bcc: recipients,
+    subject,
+    text:
+      'Hello,\n\n' +
+      'Please see this update from the Melksham Mental Health portal:\n\n' +
+      `${message}\n\n` +
+      `Need support? Contact ${supportEmail}\n\n` +
+      'From Rob at Melksham Mental Health\n' +
+      'Real Struggles. Real Support.\n',
+    html: `
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#0a0a0a;padding:24px 12px;">
+        <tr>
+          <td align="center">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:640px;background:linear-gradient(180deg,#1a1a1a 0%,#0a0a0a 100%);border:2px solid #ff6600;border-radius:12px;overflow:hidden;">
+              <tr>
+                <td style="background:#111111 url('https://melksham-mentalhealth.us/background_1.png') center/cover no-repeat;padding:26px 24px;border-bottom:2px solid #ff6600;">
+                  <p style="margin:0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ffcc99;">
+                    Members Portal Update
+                  </p>
+                  <h1 style="margin:8px 0 0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:28px;line-height:1.2;text-transform:uppercase;color:#ff9900;">
+                    ${escapeHtml(subject)}
+                  </h1>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:26px 24px;font-family:'Arial Black',Impact,Arial,sans-serif;color:#ffffff;">
+                  <p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:#ffcc99;">
+                    Hello, please see this update from Melksham Mental Health:
+                  </p>
+                  <div style="margin:0 0 16px;padding:14px;border:1px solid #ff6600;border-radius:8px;background:#101010;font-size:14px;line-height:1.7;color:#ffffff;">
+                    ${safeMessage}
+                  </div>
+                  <p style="margin:0;font-size:14px;line-height:1.6;color:#ffcc99;">
+                    Need support? Email
+                    <a href="mailto:${safeSupportEmail}" style="color:#ff9900;text-decoration:underline;">${safeSupportEmail}</a>.
+                  </p>
+                  <p style="margin:12px 0 0;font-size:14px;line-height:1.6;color:#ffffff;">
+                    From Rob at Melksham Mental Health.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:16px 24px;border-top:1px solid #2a2a2a;background:#080808;">
+                  <p style="margin:0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:12px;line-height:1.5;text-transform:uppercase;letter-spacing:1px;color:#ffb36f;">
+                    Real Struggles. Real Support.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    `,
+  };
+
+  return sendWithConfiguredProvider(payload);
 }

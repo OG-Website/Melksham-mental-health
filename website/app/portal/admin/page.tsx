@@ -106,6 +106,7 @@ const SITE_TREE = [
       { path: '/api/portal/my-story', label: 'GET/POST /api/portal/my-story', desc: 'Save or retrieve member personal story' },
       { path: '/api/portal/course-access', label: 'POST /api/portal/course-access', desc: 'Apply for course access (member) or approve/revoke (admin)' },
       { path: '/api/portal/change-password', label: 'POST /api/portal/change-password', desc: 'Change member password' },
+      { path: '/api/portal/admin/broadcast', label: 'POST /api/portal/admin/broadcast', desc: 'Admin-only: send one email/note to all registered members and save broadcast note history' },
       { path: '/api/portal/admin/stats', label: 'GET /api/portal/admin/stats', desc: 'Admin-only: live file sizes, entry counts, storage paths, Vercel limits' },
     ],
   },
