@@ -47,7 +47,7 @@ function getFromAddress(): string {
   const explicit = process.env.RESEND_FROM_EMAIL?.trim();
   if (explicit) return explicit;
 
-  return 'Melksham Mental Health <hello@melksham-mentalhealth.us>';
+  return 'Rob at Milton Mental Health <hello@melksham-mentalhealth.us>';
 }
 
 function getSupportAddress(): string {
@@ -64,8 +64,6 @@ function escapeHtml(value: string): string {
 }
 
 export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<PortalEmailResult> {
-  const displayName = input.name.trim() || 'there';
-  const safeName = escapeHtml(displayName);
   const supportEmail = getSupportAddress();
   const safeSupportEmail = escapeHtml(supportEmail);
   const from = getFromAddress();
@@ -74,9 +72,9 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
   const payload = {
     from,
     to: [input.email.toLowerCase().trim()],
-    subject: 'Hello, welcome to Berkshire Mental Health',
+    subject: 'Hello, thank you for joining the Milton Mental Health forum',
     text:
-      `Hello ${displayName}, welcome to Berkshire Mental Health.\n\n` +
+      'Hello, thank you for joining the Milton Mental Health forum.\n\n' +
       'Thank you for registering for the Members Portal.\n\n' +
       'What the portal is:\n' +
       'The portal is your secure member space for training, support resources, and progress tools.\n\n' +
@@ -89,7 +87,7 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
       '6. Return regularly to continue your learning journey and track updates.\n\n' +
       'If you need help with login, access, or course support, contact us and we will assist.\n' +
       `Support email: ${supportEmail}\n\n` +
-      'Berkshire Mental Health\n' +
+      'Rob at Milton Mental Health\n' +
       'Real Struggles. Real Support.\n',
     html: `
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#0a0a0a;padding:24px 12px;">
@@ -105,11 +103,11 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
                           Members Portal
                         </p>
                         <h1 style="margin:8px 0 0;font-family:'Arial Black',Impact,Arial,sans-serif;font-size:30px;line-height:1.15;text-transform:uppercase;color:#ff9900;">
-                          Hello, Welcome To Berkshire Mental Health
+                          Hello, Thank You For Joining The Milton Mental Health Forum
                         </h1>
                       </td>
                       <td align="right" style="vertical-align:middle;">
-                        <img src="https://melksham-mentalhealth.us/logo.png" width="110" alt="Melksham Mental Health" style="display:block;border:0;outline:none;text-decoration:none;height:auto;max-width:110px;">
+                        <img src="https://melksham-mentalhealth.us/logo.png" width="110" alt="Milton Mental Health" style="display:block;border:0;outline:none;text-decoration:none;height:auto;max-width:110px;">
                       </td>
                     </tr>
                   </table>
@@ -118,7 +116,7 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
               <tr>
                 <td style="padding:28px 24px;font-family:'Arial Black',Impact,Arial,sans-serif;color:#ffffff;">
                   <p style="margin:0 0 14px;font-size:16px;line-height:1.6;color:#ffffff;">
-                    Hello ${safeName}, thank you for joining the Members Portal.
+                    Hello, thank you for joining the Members Portal.
                   </p>
                   <p style="margin:0 0 18px;font-size:15px;line-height:1.6;color:#ffcc99;">
                     This portal is your secure member space for course learning, support tools, and personal progress tracking.
@@ -145,6 +143,9 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
                   <p style="margin:0;font-size:14px;line-height:1.6;color:#ffcc99;">
                     Need help? Email
                     <a href="mailto:${safeSupportEmail}" style="color:#ff9900;text-decoration:underline;">${safeSupportEmail}</a>.
+                  </p>
+                  <p style="margin:14px 0 0;font-size:14px;line-height:1.6;color:#ffffff;">
+                    From Rob at Milton Mental Health.
                   </p>
                 </td>
               </tr>
