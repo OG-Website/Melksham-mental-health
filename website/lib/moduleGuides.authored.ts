@@ -2,6 +2,8 @@ import type { ModuleGuide, SessionSegment } from './moduleGuides.ts';
 import { AUTHORED_MODULE_GUIDES_BATCH_11_15 } from './moduleGuides.authored.batch-11-15.ts';
 import { AUTHORED_MODULE_GUIDES_BATCH_16_20 } from './moduleGuides.authored.batch-16-20.ts';
 import { AUTHORED_MODULE_GUIDES_BATCH_21_25 } from './moduleGuides.authored.batch-21-25.ts';
+import { AUTHORED_MODULE_GUIDES_BATCH_26_30 } from './moduleGuides.authored.batch-26-30.ts';
+import { AUTHORED_MODULE_GUIDES_BATCH_31_35 } from './moduleGuides.authored.batch-31-35.ts';
 
 type AuthoredSlide = {
   title: string;
@@ -1607,4 +1609,6 @@ If anybody presents with current suicidal intent, immediate self-harm risk or in
   ...AUTHORED_MODULE_GUIDES_BATCH_11_15,
   ...AUTHORED_MODULE_GUIDES_BATCH_16_20,
   ...AUTHORED_MODULE_GUIDES_BATCH_21_25,
+  ...AUTHORED_MODULE_GUIDES_BATCH_26_30,
+  ...AUTHORED_MODULE_GUIDES_BATCH_31_35,
 };

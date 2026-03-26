@@ -56,4 +56,49 @@ export const AUTHORED_MODULE_RESEARCH_BATCH_16_20: Record<number, ModuleResearch
       source('NICE - Rehabilitation for chronic neurological disorders including functional neurological disorders', 'https://www.nice.org.uk/news/articles/tackling-variation-in-rehab-for-people-with-neurological-conditions', 'guideline'),
     ],
   ),
+  18: reviewed(
+    'This eating-disorders module has been rebuilt around current NHS and NICE guidance, with clearer teaching on medical risk, ARFID, body image pressure, family involvement and recovery-focused support.',
+    [
+      'Teach eating disorders as serious mental health conditions, not lifestyle choices.',
+      'Cover anorexia, bulimia, binge eating disorder and ARFID as distinct patterns.',
+      'Keep medical risk visible alongside psychological distress.',
+      'Treat shame reduction and early specialist support as part of good care.',
+    ],
+    [
+      source('NHS - Eating disorders overview', 'https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/behaviours/eating-disorders/overview/', 'service'),
+      source('NICE - Eating disorders: recognition and treatment', 'https://www.nice.org.uk/guidance/ng69', 'guideline'),
+      source('NHS England - Children and young people eating disorders', 'https://www.england.nhs.uk/mental-health/cyp/eating-disorders/', 'policy'),
+      source('Beat national helpline', 'https://www.nhs.uk/services/service-directory/beat-national-helpline-head-office/N10954074', 'service'),
+    ],
+  ),
+  19: reviewed(
+    'This sleep module has been rebuilt to keep insomnia, sleep apnoea, narcolepsy and circadian disruption grounded in practical care, with CBT-I treated as the main evidence-based route for chronic insomnia.',
+    [
+      'Teach sleep as a core mental health process, not optional self-care.',
+      'Separate insomnia from other sleep disorders that need medical assessment.',
+      'Cover circadian disruption, shift work and safety issues clearly.',
+      'Keep sleep advice realistic and specific rather than generic or perfectionistic.',
+    ],
+    [
+      source('NHS - Insomnia', 'https://www.nhs.uk/conditions/insomnia/', 'service'),
+      source('NHS - Sleep problems', 'https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/', 'service'),
+      source('NHS - Sleep apnoea', 'https://www.nhs.uk/conditions/sleep-apnoea/', 'service'),
+      source('NHS - Narcolepsy', 'https://www.nhs.uk/conditions/narcolepsy/', 'service'),
+    ],
+  ),
+  20: reviewed(
+    'This impulse-control and disruptive-behaviour module has been rebuilt around NICE conduct-disorder guidance, NHS anger resources and a behaviour-as-communication lens that keeps trauma, ADHD and environment in view.',
+    [
+      'Frame impulse control as a regulation issue rather than a moral verdict.',
+      'Teach behaviour patterns, functions and triggers instead of isolated incidents.',
+      'Keep developmental stage, trauma, ADHD and family environment visible.',
+      'Show that boundaries and skills can be taught consistently.',
+    ],
+    [
+      source('NICE - Conduct disorders in children and young people', 'https://www.nice.org.uk/guidance/cg158', 'guideline'),
+      source('NHS - Helping your child with anger issues', 'https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/help-your-child-with-anger-issues/', 'service'),
+      source('NHS - Teen aggression and arguments', 'https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/teen-aggression-and-arguments/', 'service'),
+      source('NHS - Get help with anger', 'https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/anger/', 'service'),
+    ],
+  ),
 };

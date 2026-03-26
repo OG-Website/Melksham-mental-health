@@ -6,6 +6,8 @@ import type {
 import { AUTHORED_MODULE_RESEARCH_BATCH_11_15 } from './moduleResearch.authored.batch-11-15.ts';
 import { AUTHORED_MODULE_RESEARCH_BATCH_16_20 } from './moduleResearch.authored.batch-16-20.ts';
 import { AUTHORED_MODULE_RESEARCH_BATCH_21_25 } from './moduleResearch.authored.batch-21-25.ts';
+import { AUTHORED_MODULE_RESEARCH_BATCH_26_30 } from './moduleResearch.authored.batch-26-30.ts';
+import { AUTHORED_MODULE_RESEARCH_BATCH_31_35 } from './moduleResearch.authored.batch-31-35.ts';
 
 function source(
   label: string,
@@ -182,4 +184,6 @@ export const AUTHORED_MODULE_RESEARCH: Record<number, ModuleResearch> = {
   ...AUTHORED_MODULE_RESEARCH_BATCH_11_15,
   ...AUTHORED_MODULE_RESEARCH_BATCH_16_20,
   ...AUTHORED_MODULE_RESEARCH_BATCH_21_25,
+  ...AUTHORED_MODULE_RESEARCH_BATCH_26_30,
+  ...AUTHORED_MODULE_RESEARCH_BATCH_31_35,
 };
