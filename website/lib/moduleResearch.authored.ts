@@ -3,6 +3,9 @@ import type {
   ModuleResearchSource,
   ModuleResearchSourceType,
 } from './moduleResearch.ts';
+import { AUTHORED_MODULE_RESEARCH_BATCH_11_15 } from './moduleResearch.authored.batch-11-15.ts';
+import { AUTHORED_MODULE_RESEARCH_BATCH_16_20 } from './moduleResearch.authored.batch-16-20.ts';
+import { AUTHORED_MODULE_RESEARCH_BATCH_21_25 } from './moduleResearch.authored.batch-21-25.ts';
 
 function source(
   label: string,
@@ -176,4 +179,7 @@ export const AUTHORED_MODULE_RESEARCH: Record<number, ModuleResearch> = {
       source('Samaritans - 116 123 and online support', 'https://www.samaritans.org', 'service'),
     ],
   ),
+  ...AUTHORED_MODULE_RESEARCH_BATCH_11_15,
+  ...AUTHORED_MODULE_RESEARCH_BATCH_16_20,
+  ...AUTHORED_MODULE_RESEARCH_BATCH_21_25,
 };

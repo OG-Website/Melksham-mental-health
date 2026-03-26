@@ -1,4 +1,7 @@
 import type { ModuleGuide, SessionSegment } from './moduleGuides.ts';
+import { AUTHORED_MODULE_GUIDES_BATCH_11_15 } from './moduleGuides.authored.batch-11-15.ts';
+import { AUTHORED_MODULE_GUIDES_BATCH_16_20 } from './moduleGuides.authored.batch-16-20.ts';
+import { AUTHORED_MODULE_GUIDES_BATCH_21_25 } from './moduleGuides.authored.batch-21-25.ts';
 
 type AuthoredSlide = {
   title: string;
@@ -1601,4 +1604,7 @@ If anybody presents with current suicidal intent, immediate self-harm risk or in
 - Student slides should emphasise warning signs, direct asking, safety planning and urgent routes.
 - Tutor notes should hold the escalation thresholds and safeguarding detail.`,
   }),
+  ...AUTHORED_MODULE_GUIDES_BATCH_11_15,
+  ...AUTHORED_MODULE_GUIDES_BATCH_16_20,
+  ...AUTHORED_MODULE_GUIDES_BATCH_21_25,
 };
