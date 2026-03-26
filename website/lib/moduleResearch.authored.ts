@@ -8,6 +8,9 @@ import { AUTHORED_MODULE_RESEARCH_BATCH_16_20 } from './moduleResearch.authored.
 import { AUTHORED_MODULE_RESEARCH_BATCH_21_25 } from './moduleResearch.authored.batch-21-25.ts';
 import { AUTHORED_MODULE_RESEARCH_BATCH_26_30 } from './moduleResearch.authored.batch-26-30.ts';
 import { AUTHORED_MODULE_RESEARCH_BATCH_31_35 } from './moduleResearch.authored.batch-31-35.ts';
+import { AUTHORED_MODULE_RESEARCH_BATCH_36_40 } from './moduleResearch.authored.batch-36-40.ts';
+import { AUTHORED_MODULE_RESEARCH_BATCH_41_45 } from './moduleResearch.authored.batch-41-45.ts';
+import { AUTHORED_MODULE_RESEARCH_BATCH_46_50 } from './moduleResearch.authored.batch-46-50.ts';
 
 function source(
   label: string,
@@ -186,4 +189,7 @@ export const AUTHORED_MODULE_RESEARCH: Record<number, ModuleResearch> = {
   ...AUTHORED_MODULE_RESEARCH_BATCH_21_25,
   ...AUTHORED_MODULE_RESEARCH_BATCH_26_30,
   ...AUTHORED_MODULE_RESEARCH_BATCH_31_35,
+  ...AUTHORED_MODULE_RESEARCH_BATCH_36_40,
+  ...AUTHORED_MODULE_RESEARCH_BATCH_41_45,
+  ...AUTHORED_MODULE_RESEARCH_BATCH_46_50,
 };
