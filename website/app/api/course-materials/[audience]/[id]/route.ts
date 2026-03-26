@@ -1,6 +1,5 @@
-import fs from 'node:fs/promises';
 import { NextResponse } from 'next/server';
-import { ensureCourseDeckGenerated, DECK_MIME_TYPE } from '@/lib/courseDeckGenerator';
+import { renderCourseDeckBuffer, DECK_MIME_TYPE } from '@/lib/courseDeckGenerator';
 import {
   getCourseDeckFilename,
   isCourseDeckAudience,
@@ -41,11 +40,10 @@ export async function GET(_: Request, { params }: RouteProps) {
     );
   }
 
-  const filePath = await ensureCourseDeckGenerated(moduleId, audience);
-  const fileBuffer = await fs.readFile(filePath);
+  const fileBuffer = await renderCourseDeckBuffer(moduleId, audience);
   const fileName = getCourseDeckFilename(moduleId, audience);
 
-  return new NextResponse(fileBuffer, {
+  return new NextResponse(new Uint8Array(fileBuffer), {
     status: 200,
     headers: {
       'Content-Type': DECK_MIME_TYPE,

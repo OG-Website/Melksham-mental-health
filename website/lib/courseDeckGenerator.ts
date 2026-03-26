@@ -16,6 +16,7 @@ import {
   getCourseDeckAbsolutePath,
   type CourseDeckAudience,
 } from './courseDecks.ts';
+import { normaliseCourseCopy, toUkEnglish } from './courseCopy.ts';
 
 const COLORS = {
   background: '0A0A0A',
@@ -28,6 +29,7 @@ const COLORS = {
 };
 
 const SOURCE_PATHS = [
+  path.join(process.cwd(), 'lib', 'courseCopy.ts'),
   path.join(process.cwd(), 'lib', 'moduleGuides.ts'),
   path.join(process.cwd(), 'lib', 'moduleResearch.ts'),
   path.join(process.cwd(), 'lib', 'courseDeckGenerator.ts'),
@@ -40,52 +42,17 @@ const DECK_MIME_TYPE = 'application/vnd.openxmlformats-officedocument.presentati
 type SlideScriptMap = Map<number, string[]>;
 
 function normalizeText(value: string): string {
-  return value.replace(/\r\n/g, '\n').replace(/\r/g, '\n').trim();
-}
-
-const UK_SPELLING_RULES: Array<[RegExp, string]> = [
-  [/\bbehavioral\b/gi, 'behavioural'],
-  [/\bbehaviorally\b/gi, 'behaviourally'],
-  [/\bbehavior\b/gi, 'behaviour'],
-  [/\bbehaviors\b/gi, 'behaviours'],
-  [/\bcounseling\b/gi, 'counselling'],
-  [/\bcounselor\b/gi, 'counsellor'],
-  [/\bcounselors\b/gi, 'counsellors'],
-  [/\borganize\b/gi, 'organise'],
-  [/\borganized\b/gi, 'organised'],
-  [/\borganizing\b/gi, 'organising'],
-  [/\borganization\b/gi, 'organisation'],
-  [/\borganizations\b/gi, 'organisations'],
-  [/\bprogram\b/gi, 'programme'],
-  [/\bprograms\b/gi, 'programmes'],
-  [/\bcenter\b/gi, 'centre'],
-  [/\bcenters\b/gi, 'centres'],
-  [/\bmodeling\b/gi, 'modelling'],
-  [/\bmodeled\b/gi, 'modelled'],
-];
-
-function preserveCase(source: string, target: string): string {
-  if (source.toUpperCase() === source) return target.toUpperCase();
-  if (source[0] && source[0] === source[0].toUpperCase()) {
-    return target[0].toUpperCase() + target.slice(1);
-  }
-  return target;
-}
-
-function toUkEnglish(value: string): string {
-  let result = value;
-  for (const [pattern, replacement] of UK_SPELLING_RULES) {
-    result = result.replace(pattern, (match) => preserveCase(match, replacement));
-  }
-  return result;
+  return normaliseCourseCopy(value).trim();
 }
 
 function chunkArray<T>(items: T[], chunkSize: number): T[][] {
   if (items.length === 0) return [[]];
+
   const chunks: T[][] = [];
   for (let index = 0; index < items.length; index += chunkSize) {
     chunks.push(items.slice(index, index + chunkSize));
   }
+
   return chunks;
 }
 
@@ -133,11 +100,10 @@ function safeDomain(url: string): string {
 }
 
 function parseSlideNumberToken(token: string): number[] {
-  const cleaned = token.replace(/\band\b/gi, '&').replace(/[–—]/g, '-');
+  const cleaned = token.replace(/\band\b/gi, '&').replace(/[\u2013\u2014]/g, '-');
   const numbers = new Set<number>();
-  const normalizedDelimiters = cleaned.replace(/[\u2013\u2014]/g, '-');
 
-  for (const rawPart of normalizedDelimiters.split(/[,&]/)) {
+  for (const rawPart of cleaned.split(/[,&]/)) {
     const part = rawPart.trim();
     if (!part) continue;
 
@@ -165,7 +131,7 @@ function parseSlideNumberToken(token: string): number[] {
 function buildSlideScriptMap(deliveryScript: string): SlideScriptMap {
   const notesBySlide = new Map<number, string[]>();
   const script = normalizeText(deliveryScript);
-  const sectionPattern = /(?:^|\n)SLIDE(?:S)?\s+([0-9,&\-\s]+)\s+[—-]\s*(.+?)\n([\s\S]*?)(?=\nSLIDE(?:S)?\s+[0-9]|\s*$)/g;
+  const sectionPattern = /(?:^|\n)SLIDE(?:S)?\s+([0-9,&\-\s]+)\s+[\u2013\u2014-]\s*(.+?)\n([\s\S]*?)(?=\nSLIDE(?:S)?\s+[0-9]|\s*$)/g;
   let match = sectionPattern.exec(script);
 
   while (match) {
@@ -184,27 +150,6 @@ function buildSlideScriptMap(deliveryScript: string): SlideScriptMap {
   }
 
   if (notesBySlide.size === 0 && script) {
-    const normalisedScript = script.replace(/[\u2013\u2014]/g, '-');
-    const safePattern = /(?:^|\n)SLIDE(?:S)?\s+([0-9,&\-\s]+)\s+-\s*(.+?)\n([\s\S]*?)(?=\nSLIDE(?:S)?\s+[0-9]|\s*$)/g;
-    let safeMatch = safePattern.exec(normalisedScript);
-
-    while (safeMatch) {
-      const slideNumbers = parseSlideNumberToken(safeMatch[1]);
-      const noteTitle = safeMatch[2].trim();
-      const noteBody = safeMatch[3].trim();
-      const note = `${noteTitle}\n\n${noteBody}`.trim();
-
-      for (const slideNumber of slideNumbers) {
-        const existing = notesBySlide.get(slideNumber) ?? [];
-        existing.push(note);
-        notesBySlide.set(slideNumber, existing);
-      }
-
-      safeMatch = safePattern.exec(normalisedScript);
-    }
-  }
-
-  if (notesBySlide.size === 0 && script) {
     notesBySlide.set(1, [script]);
   }
 
@@ -212,15 +157,14 @@ function buildSlideScriptMap(deliveryScript: string): SlideScriptMap {
 }
 
 function buildAgendaBullets(sessionBreakdown: SessionSegment[]): string[] {
-  return sessionBreakdown.map((segment) => toUkEnglish(`${segment.time}: ${segment.label}`));
+  return sessionBreakdown.map((segment) => `${segment.time}: ${segment.label}`);
 }
 
 function buildLearningFocusBullets(guide: ModuleGuide): string[] {
-  const headlineSlides = guide.slideOutline.slice(0, 4).map((slide) => slide.title);
-  const focusBullets = headlineSlides.map((title) => toUkEnglish(`Explore ${title}`));
-  focusBullets.push(toUkEnglish('Apply the module activity in a practical, structured way'));
-  focusBullets.push(toUkEnglish('Leave with UK support and signposting options'));
-  return focusBullets.slice(0, 6);
+  const headlineSlides = guide.slideOutline.slice(0, 4).map((slide) => `Explore ${slide.title}`);
+  headlineSlides.push('Apply the module activity in a practical, structured way');
+  headlineSlides.push('Leave with UK support and signposting options');
+  return headlineSlides.slice(0, 6).map((item) => toUkEnglish(item));
 }
 
 function formatReviewDate(reviewedOn: string): string {
@@ -239,22 +183,22 @@ function buildResearchSummaryText(research: ModuleResearch): string {
     `Reviewed on: ${formatReviewDate(research.reviewedOn)}`,
     '',
     'Evidence summary',
-    toUkEnglish(research.summary),
+    research.summary,
     '',
     'Teaching priorities',
-    ...research.teachingPriorities.map((priority, index) => `${index + 1}. ${toUkEnglish(priority)}`),
+    ...research.teachingPriorities.map((priority, index) => `${index + 1}. ${priority}`),
   ].join('\n');
 }
 
 function buildResearchSourceBullets(research: ModuleResearch): string[] {
-  return research.sources.map((source) => `${toUkEnglish(source.label)} (${safeDomain(source.url)})`);
+  return research.sources.map((source) => `${source.label} (${safeDomain(source.url)})`);
 }
 
 function buildResearchNotes(research: ModuleResearch): string[] {
   return [
     `Reviewed on\n${formatReviewDate(research.reviewedOn)}`,
-    `Evidence summary\n${toUkEnglish(research.summary)}`,
-    `Teaching priorities\n${research.teachingPriorities.map((priority) => toUkEnglish(priority)).join('\n')}`,
+    `Evidence summary\n${research.summary}`,
+    `Teaching priorities\n${research.teachingPriorities.join('\n')}`,
     `Reviewed sources\n${research.sources.map((source) => `${source.label}\n${source.url}`).join('\n\n')}`,
   ];
 }
@@ -274,33 +218,96 @@ function buildActivityPreview(activity: string): string[] {
   return bulletCandidates.length > 0
     ? bulletCandidates.map((entry) => toUkEnglish(entry))
     : [
-      toUkEnglish('Reflect privately'),
-      toUkEnglish('Follow the facilitator prompts'),
-      toUkEnglish('Share only if you feel comfortable'),
+      'Reflect privately',
+      'Follow the facilitator prompts',
+      'Share only if you feel comfortable',
     ];
 }
 
 function getActivityTitle(activity: string): string {
   const firstLine = normalizeText(activity).split('\n')[0]?.trim() ?? 'Interactive Activity';
-  const normalisedFirstLine = firstLine.replace(/[\u2013\u2014]/g, '-');
-  if (normalisedFirstLine !== firstLine) {
-    return toUkEnglish(normalisedFirstLine.replace(/^ACTIVITY\s+-\s*/i, '') || 'Interactive Activity');
-  }
-  return toUkEnglish(firstLine.replace(/^ACTIVITY\s+[—-]\s*/i, '') || 'Interactive Activity');
+  return toUkEnglish(firstLine.replace(/^ACTIVITY\s+[\u2013\u2014-]\s*/i, '') || 'Interactive Activity');
 }
 
 function buildTutorBriefText(guide: ModuleGuide): string {
   const parts = [
-    `Summary\n${toUkEnglish(guide.summary)}`,
+    `Summary\n${guide.summary}`,
     `Session flow\n${buildAgendaBullets(guide.sessionBreakdown).join('\n')}`,
-    `Facilitation priorities\n${toUkEnglish(guide.tutorNotes)}`,
+    `Facilitation priorities\n${guide.tutorNotes}`,
   ];
 
   if (guide.powerPoint) {
-    parts.push(`Module-specific slide brief\n${toUkEnglish(guide.powerPoint)}`);
+    parts.push(`Module-specific slide brief\n${guide.powerPoint}`);
   }
 
   return parts.join('\n\n');
+}
+
+function extractSlideNoteBody(note: string): string {
+  const parts = normalizeText(note)
+    .split(/\n{2,}/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (parts.length <= 1) {
+    return parts[0] ?? '';
+  }
+
+  return parts.slice(1).join('\n\n');
+}
+
+function cleanNarrativeForStudentSlide(value: string): string {
+  return normalizeText(value)
+    .replace(/^"+|"+$/g, '')
+    .replace(/\[[^\]]+\]/g, '')
+    .replace(/(^|\n)Ask:\s*/gi, '$1Reflection prompt: ')
+    .replace(/(^|\n)Introduce:\s*/gi, '$1')
+    .replace(/(^|\n)Instructions to read aloud:\s*/gi, '$1')
+    .replace(/Pause for \d+\s*(seconds?|minutes?)[^.?!]*[.?!]?/gi, '')
+    .trim();
+}
+
+function buildNarrativeDetailText(
+  outlineSlide: ModuleSlide,
+  notes: string[],
+  audience: CourseDeckAudience,
+): string {
+  if (notes.length === 0) {
+    return outlineSlide.bullets.map((bullet, index) => `${index + 1}. ${bullet}`).join('\n');
+  }
+
+  const combined = notes
+    .map((note) => extractSlideNoteBody(note))
+    .filter(Boolean)
+    .join('\n\n');
+
+  if (!combined) {
+    return outlineSlide.bullets.map((bullet, index) => `${index + 1}. ${bullet}`).join('\n');
+  }
+
+  return audience === 'tutor'
+    ? combined
+    : cleanNarrativeForStudentSlide(combined);
+}
+
+function buildDetailColumnNote(outlineSlide: ModuleSlide, audience: CourseDeckAudience): string {
+  const summaryBullets = outlineSlide.bullets
+    .slice(0, audience === 'tutor' ? 3 : 2)
+    .map((bullet) => `- ${bullet}`);
+
+  return audience === 'tutor'
+    ? `Delivery focus\n${summaryBullets.join('\n')}\n\nKeep the discussion practical, paced and person-centred.`
+    : `Key messages\n${summaryBullets.join('\n')}`;
+}
+
+function buildModuleTakeawayBullets(
+  guide: ModuleGuide,
+  research: ModuleResearch | undefined,
+): string[] {
+  const takeaways = guide.slideOutline.slice(0, 3).map((slide) => `Key theme: ${slide.title}`);
+  const evidence = research?.teachingPriorities.slice(0, 2) ?? [];
+
+  return [...takeaways, ...evidence].map((item) => toUkEnglish(item)).slice(0, 5);
 }
 
 async function fileExists(filePath: string): Promise<boolean> {
@@ -669,13 +676,16 @@ function addTutorNotes(slide: PptxGenJS.Slide, notes: string[]): void {
   slide.addNotes(cleaned.join('\n\n---\n\n'));
 }
 
-async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputPath: string): Promise<void> {
+async function buildPresentation(
+  moduleId: number,
+  audience: CourseDeckAudience,
+): Promise<PptxGenJS> {
   const guide = getModuleGuide(moduleId);
   if (!guide) {
     throw new Error(`Module ${moduleId} was not found in moduleGuides.ts`);
   }
-  const research = getModuleResearch(moduleId);
 
+  const research = getModuleResearch(moduleId);
   const pptx = createPresentation(guide, audience);
   const logoPath = await resolveLogoPath();
   const slideScripts = buildSlideScriptMap(guide.deliveryScript);
@@ -746,7 +756,7 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
         guide,
         audience,
         'Key Evidence and Practice Points',
-        research.teachingPriorities.map((priority) => toUkEnglish(priority)),
+        research.teachingPriorities,
         logoPath,
       );
     }
@@ -780,26 +790,54 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
   addTutorNotes(timetableSlide, [guide.tutorNotes]);
 
   guide.slideOutline.forEach((outlineSlide, index) => {
+    const slideNotes = slideScripts.get(index + 1) ?? [];
     const bulletGroups = splitBulletsForSlides(outlineSlide);
+
     bulletGroups.forEach((bullets, groupIndex) => {
       const slide = pptx.addSlide();
-      const title =
-        groupIndex === 0 ? outlineSlide.title : `${outlineSlide.title} (Continued)`;
+      const title = groupIndex === 0 ? outlineSlide.title : `${outlineSlide.title} (Continued)`;
       addBulletSlide(pptx, slide, guide, audience, title, bullets, logoPath);
-      addTutorNotes(slide, slideScripts.get(index + 1) ?? []);
+      addTutorNotes(slide, slideNotes);
+    });
+
+    const detailText = buildNarrativeDetailText(outlineSlide, slideNotes, audience);
+    const detailPages = paginateText(detailText, audience === 'tutor' ? 1200 : 950).filter(Boolean);
+
+    detailPages.forEach((page, pageIndex) => {
+      const detailSlide = pptx.addSlide();
+      addTextSlide(
+        pptx,
+        detailSlide,
+        guide,
+        audience,
+        pageIndex === 0
+          ? `${outlineSlide.title}: In Depth`
+          : `${outlineSlide.title}: In Depth (Part ${pageIndex + 1})`,
+        page,
+        logoPath,
+        {
+          fontSize: audience === 'tutor' ? 14.2 : 14.8,
+          columnNote: buildDetailColumnNote(outlineSlide, audience),
+        },
+      );
+      addTutorNotes(detailSlide, slideNotes.length > 0 ? slideNotes : [detailText]);
     });
   });
 
   const activityPages = paginateText(guide.activity, audience === 'tutor' ? 1500 : 900);
   activityPages.forEach((page, pageIndex) => {
     const slide = pptx.addSlide();
+    const activityTitle = pageIndex === 0
+      ? getActivityTitle(guide.activity)
+      : `${getActivityTitle(guide.activity)} (Part ${pageIndex + 1})`;
+
     if (audience === 'tutor') {
       addTextSlide(
         pptx,
         slide,
         guide,
         audience,
-        pageIndex === 0 ? getActivityTitle(guide.activity) : `${getActivityTitle(guide.activity)} (Part ${pageIndex + 1})`,
+        activityTitle,
         page,
         logoPath,
         {
@@ -814,7 +852,7 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
         slide,
         guide,
         audience,
-        pageIndex === 0 ? getActivityTitle(guide.activity) : `${getActivityTitle(guide.activity)} (Part ${pageIndex + 1})`,
+        activityTitle,
         pageIndex === 0 ? buildActivityPreview(guide.activity) : [page],
         logoPath,
       );
@@ -828,12 +866,27 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
     guide,
     audience,
     'Discussion and Reflection',
-    guide.discussionPrompts.map((prompt) => toUkEnglish(prompt)),
+    guide.discussionPrompts,
     logoPath,
   );
   addTutorNotes(discussionSlide, [
     `Discussion prompts\n${guide.discussionPrompts.join('\n')}`,
     'Facilitator note\nInvite reflection without pressure. Normalise passing and redirect if discussion becomes personal or unsafe.',
+  ]);
+
+  const takeawaySlide = pptx.addSlide();
+  addBulletSlide(
+    pptx,
+    takeawaySlide,
+    guide,
+    audience,
+    'Key Takeaways and Next Steps',
+    buildModuleTakeawayBullets(guide, research),
+    logoPath,
+  );
+  addTutorNotes(takeawaySlide, [
+    `Module takeaways\n${buildModuleTakeawayBullets(guide, research).join('\n')}`,
+    'Close by naming one practical action participants can take after the session.',
   ]);
 
   if (audience === 'tutor' && guide.videos && guide.videos.length > 0) {
@@ -844,7 +897,7 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
       guide,
       audience,
       'Optional Video Support',
-      guide.videos.map((video) => `${toUkEnglish(video.label)} (${safeDomain(video.url)})`),
+      guide.videos.map((video) => `${video.label} (${safeDomain(video.url)})`),
       logoPath,
     );
     addTutorNotes(
@@ -860,7 +913,7 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
     guide,
     audience,
     'Resources and Signposting',
-    guide.resources.map((resource) => `${toUkEnglish(resource.label)} (${safeDomain(resource.url)})`),
+    guide.resources.map((resource) => `${resource.label} (${safeDomain(resource.url)})`),
     logoPath,
   );
   addTutorNotes(
@@ -882,13 +935,45 @@ async function buildDeck(moduleId: number, audience: CourseDeckAudience, outputP
         logoPath,
         { fontSize: 14.1 },
       );
-      addTutorNotes(slide, guide.powerPoint ? [guide.powerPoint] : []);
+      if (guide.powerPoint) {
+        addTutorNotes(slide, [guide.powerPoint]);
+      }
     });
   }
 
+  return pptx;
+}
+
+async function toNodeBuffer(data: string | ArrayBuffer | Blob | Uint8Array): Promise<Buffer> {
+  if (Buffer.isBuffer(data)) return data;
+  if (data instanceof Uint8Array) return Buffer.from(data);
+  if (data instanceof ArrayBuffer) return Buffer.from(data);
+  if (typeof data === 'string') return Buffer.from(data, 'binary');
+  return Buffer.from(await data.arrayBuffer());
+}
+
+async function writeDeckFile(
+  moduleId: number,
+  audience: CourseDeckAudience,
+  outputPath: string,
+): Promise<void> {
+  const fileBuffer = await renderCourseDeckBuffer(moduleId, audience);
   const parentDir = path.dirname(outputPath);
   await fs.mkdir(parentDir, { recursive: true });
-  await pptx.writeFile({ fileName: outputPath, compression: true });
+  await fs.writeFile(outputPath, fileBuffer);
+}
+
+export async function renderCourseDeckBuffer(
+  moduleId: number,
+  audience: CourseDeckAudience,
+): Promise<Buffer> {
+  const pptx = await buildPresentation(moduleId, audience);
+  const fileData = await pptx.write({
+    outputType: 'nodebuffer',
+    compression: true,
+  });
+
+  return toNodeBuffer(fileData);
 }
 
 export async function ensureCourseDeckGenerated(
@@ -897,7 +982,7 @@ export async function ensureCourseDeckGenerated(
 ): Promise<string> {
   const outputPath = getCourseDeckAbsolutePath(moduleId, audience);
   if (await shouldRegenerateDeck(outputPath)) {
-    await buildDeck(moduleId, audience, outputPath);
+    await writeDeckFile(moduleId, audience, outputPath);
   }
   return outputPath;
 }
@@ -912,7 +997,7 @@ export async function generateAllCourseDecks(moduleIds?: number[]): Promise<stri
   for (const moduleId of ids) {
     for (const audience of COURSE_DECK_AUDIENCES) {
       const filePath = getCourseDeckAbsolutePath(moduleId, audience);
-      await buildDeck(moduleId, audience, filePath);
+      await writeDeckFile(moduleId, audience, filePath);
       generatedFiles.push(filePath);
     }
   }

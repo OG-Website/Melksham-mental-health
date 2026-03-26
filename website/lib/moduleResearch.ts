@@ -1,3 +1,5 @@
+import { normalizeModuleResearchText } from './courseCopy.ts';
+
 export type ModuleResearchSourceType =
   | 'guideline'
   | 'service'
@@ -911,5 +913,6 @@ export const moduleResearch: Record<number, ModuleResearch> = {
 };
 
 export function getModuleResearch(moduleId: number): ModuleResearch | undefined {
-  return moduleResearch[moduleId];
+  const research = moduleResearch[moduleId];
+  return research ? normalizeModuleResearchText(research) : undefined;
 }

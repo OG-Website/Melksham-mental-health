@@ -13,7 +13,7 @@ import {
   FaStickyNote,
   FaUsers,
 } from 'react-icons/fa';
-import { getModuleGuide, SESSION_BREAKDOWN } from '@/lib/moduleGuides';
+import { getModuleGuide } from '@/lib/moduleGuides';
 import { getModuleResearch } from '@/lib/moduleResearch';
 import { getCourseDeckDownloadPath } from '@/lib/courseDecks';
 import { loadCurrentSessionUser } from '@/lib/portalAuth';
@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props) {
   const { id } = await params;
   const guide = getModuleGuide(Number(id));
   if (!guide) return { title: 'Module Not Found | Melksham Mental Health' };
+
   return {
     title: `Module ${guide.id}: ${guide.topic} | MMH Courses`,
     description: guide.summary,
@@ -48,6 +49,7 @@ export default async function ModuleGuidePage({ params }: Props) {
 
   const guide = getModuleGuide(moduleId);
   if (!guide) notFound();
+
   const research = getModuleResearch(moduleId);
   const reviewedLabel = research
     ? new Date(`${research.reviewedOn}T00:00:00`).toLocaleDateString('en-GB', {
@@ -65,7 +67,10 @@ export default async function ModuleGuidePage({ params }: Props) {
   return (
     <div className="page-content text-left">
       <div className="mb-6">
-        <Link href="/courses" className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 text-sm font-semibold transition-colors">
+        <Link
+          href="/courses"
+          className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 text-sm font-semibold transition-colors"
+        >
           <FaArrowLeft className="text-xs" /> Back to All Courses
         </Link>
       </div>
@@ -79,7 +84,7 @@ export default async function ModuleGuidePage({ params }: Props) {
         <div className="flex flex-wrap items-center gap-4 mt-4">
           <div className="flex items-center gap-2 text-orange-400 text-sm font-semibold">
             <FaClock className="text-xs" />
-            <span>2-hour session · Evidence-based · Facilitated group programme</span>
+            <span>2-hour session | Evidence-based | Facilitated group programme</span>
           </div>
           <a
             href={studentDeckPath}
@@ -95,13 +100,14 @@ export default async function ModuleGuidePage({ params }: Props) {
           </a>
         </div>
         <p className="text-zinc-500 text-xs mt-3 max-w-3xl">
-          The student deck contains learner-facing slides only. The tutor deck is admin-only and includes delivery
-          notes, safeguarding prompts, and module-specific presenter guidance.
+          The student deck contains learner-facing slides only. The tutor deck is admin-only and
+          includes delivery notes, safeguarding prompts, and module-specific presenter guidance.
         </p>
         {research && reviewedLabel ? (
           <p className="text-zinc-400 text-xs mt-2 max-w-3xl">
-            This module was reviewed against current source material on {reviewedLabel}. The evidence priorities and
-            reviewed links below also feed the regenerated tutor and student decks.
+            This module was reviewed against current source material on {reviewedLabel}. The
+            evidence priorities and reviewed links below also feed the regenerated tutor and
+            student decks.
           </p>
         ) : null}
       </div>
@@ -115,15 +121,21 @@ export default async function ModuleGuidePage({ params }: Props) {
             <p className="text-[11px] tracking-[0.18em] uppercase text-orange-300 font-bold mb-3">
               Reviewed {reviewedLabel}
             </p>
-            <p className="text-zinc-200 text-sm leading-relaxed max-w-4xl mb-5">{research.summary}</p>
+            <p className="text-zinc-200 text-sm leading-relaxed max-w-4xl mb-5">
+              {research.summary}
+            </p>
 
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-white font-black text-sm mb-3 normal-case tracking-normal">Teaching Priorities</h3>
+                <h3 className="text-white font-black text-sm mb-3 normal-case tracking-normal">
+                  Teaching Priorities
+                </h3>
                 <ol className="space-y-2">
                   {research.teachingPriorities.map((priority, index) => (
                     <li key={priority} className="flex gap-3 items-start">
-                      <span className="text-orange-400 font-black text-sm min-w-[1.5rem] mt-0.5">{index + 1}.</span>
+                      <span className="text-orange-400 font-black text-sm min-w-[1.5rem] mt-0.5">
+                        {index + 1}.
+                      </span>
                       <span className="text-zinc-200 text-sm leading-relaxed">{priority}</span>
                     </li>
                   ))}
@@ -131,7 +143,9 @@ export default async function ModuleGuidePage({ params }: Props) {
               </div>
 
               <div>
-                <h3 className="text-white font-black text-sm mb-3 normal-case tracking-normal">Reviewed Source Set</h3>
+                <h3 className="text-white font-black text-sm mb-3 normal-case tracking-normal">
+                  Reviewed Source Set
+                </h3>
                 <ul className="space-y-3">
                   {research.sources.map((source) => (
                     <li key={source.url}>
@@ -160,7 +174,7 @@ export default async function ModuleGuidePage({ params }: Props) {
           <FaClock className="text-orange-400" /> Session Timetable
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {SESSION_BREAKDOWN.map((segment) => (
+          {guide.sessionBreakdown.map((segment) => (
             <div key={segment.label} className="border border-zinc-700 rounded-lg px-4 py-3">
               <div className="text-orange-400 font-black text-sm">{segment.time}</div>
               <div className="text-zinc-200 text-sm font-semibold mt-0.5">{segment.label}</div>
@@ -174,14 +188,20 @@ export default async function ModuleGuidePage({ params }: Props) {
           <FaListUl className="text-orange-400" /> Slide Outline
         </h2>
         <p className="text-zinc-400 text-sm mb-5 italic">
-          These outlines feed the generated student and tutor decks and show the session flow at a glance.
+          These outlines feed the generated student and tutor decks and show the session flow at a
+          glance.
         </p>
         <div className="space-y-4">
           {guide.slideOutline.map((slide, index) => (
             <div key={index} className="border border-zinc-700 rounded-lg px-5 py-4">
               <div className="flex items-start gap-3 mb-2">
-                <span className="text-orange-400 font-black text-sm min-w-[1.5rem]">S{index + 1}</span>
-                <h3 className="text-white font-black text-sm normal-case tracking-normal" style={{ textShadow: 'none', filter: 'none' }}>
+                <span className="text-orange-400 font-black text-sm min-w-[1.5rem]">
+                  S{index + 1}
+                </span>
+                <h3
+                  className="text-white font-black text-sm normal-case tracking-normal"
+                  style={{ textShadow: 'none', filter: 'none' }}
+                >
                   {slide.title}
                 </h3>
               </div>
@@ -203,7 +223,8 @@ export default async function ModuleGuidePage({ params }: Props) {
           <FaChalkboardTeacher className="text-orange-400" /> Tutor Delivery Script
         </h2>
         <p className="text-zinc-400 text-sm mb-5 italic">
-          These are verbatim tutor notes - your words, section by section. Adapt to your style; the key messages are marked in bold in the notes.
+          These are verbatim tutor notes - your words, section by section. Adapt to your style;
+          the key messages are marked in the notes.
         </p>
         <div className="bg-black/40 border border-zinc-700 rounded-lg px-6 py-5">
           <pre className="text-zinc-200 text-sm leading-relaxed whitespace-pre-wrap font-sans">
@@ -230,7 +251,9 @@ export default async function ModuleGuidePage({ params }: Props) {
         <ol className="space-y-3">
           {guide.discussionPrompts.map((prompt, index) => (
             <li key={index} className="flex gap-3 items-start">
-              <span className="text-orange-400 font-black text-sm min-w-[1.5rem] mt-0.5">{index + 1}.</span>
+              <span className="text-orange-400 font-black text-sm min-w-[1.5rem] mt-0.5">
+                {index + 1}.
+              </span>
               <span className="text-zinc-200 text-sm leading-relaxed">{prompt}</span>
             </li>
           ))}
@@ -273,10 +296,22 @@ export default async function ModuleGuidePage({ params }: Props) {
           <FaExclamationTriangle /> If a participant needs immediate support during this session:
         </p>
         <div className="text-zinc-300 text-sm space-y-1">
-          <p>• <strong>Emergency:</strong> Call <a href="tel:999" className="text-orange-400 underline">999</a></p>
-          <p>• <strong>Samaritans</strong> (24/7 free): <a href="tel:116123" className="text-orange-400 underline">116 123</a></p>
-          <p>• <strong>NHS 111</strong> mental health option: <a href="tel:111" className="text-orange-400 underline">111</a></p>
-          <p>• <strong>Shout:</strong> Text SHOUT to <a href="sms:85258" className="text-orange-400 underline">85258</a> (24/7)</p>
+          <p>
+            • <strong>Emergency:</strong> Call{' '}
+            <a href="tel:999" className="text-orange-400 underline">999</a>
+          </p>
+          <p>
+            • <strong>Samaritans</strong> (24/7 free):{' '}
+            <a href="tel:116123" className="text-orange-400 underline">116 123</a>
+          </p>
+          <p>
+            • <strong>NHS 111</strong> mental health option:{' '}
+            <a href="tel:111" className="text-orange-400 underline">111</a>
+          </p>
+          <p>
+            • <strong>Shout:</strong> Text SHOUT to{' '}
+            <a href="sms:85258" className="text-orange-400 underline">85258</a> (24/7)
+          </p>
         </div>
       </div>
 
