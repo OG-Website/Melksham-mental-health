@@ -866,4 +866,302 @@ If participants disclose neglect, abuse or unmanaged risk involving a person wit
 - Keep student slides uncluttered and accessible in their own design.
 - Tutor notes should emphasise diagnostic overshadowing, accessible communication and supported decision-making.`,
   }),
+  6: guide({
+    id: 6,
+    topic: 'Trauma and Stress: Acute Stress and Adjustment Disorders',
+    summary:
+      'A bespoke trauma foundations module on normal stress responses, acute stress reactions, adjustment disorder, stabilisation, red flags and when to move from watchful support into formal care.',
+    sessionBreakdown: buildSessionBreakdown([
+      'Welcome back and safety framing',
+      'Normal stress responses after difficult events',
+      'Acute stress, adjustment disorder and impairment',
+      'Stabilisation, coping and early support',
+      'Activity: build an early-support response plan',
+      'Discussion on thresholds and red flags',
+      'Wrap-up, signposting and next steps',
+    ]),
+    slides: [
+      {
+        title: 'Not Every Stress Response Is a Disorder',
+        bullets: [
+          'Shock, poor sleep, tearfulness, jumpiness and confusion can occur after major stress or trauma.',
+          'Many people improve over time with safety, support and recovery of routine.',
+          'Early distress should be taken seriously without rushing to label it.',
+          'Context, timing and functional impact matter.',
+        ],
+        notes: [
+          'Open by separating normal human stress responses from diagnosable conditions. That reduces over-pathologising while still validating distress.',
+          'The core teaching point is that distress can be real and deserving of support even before a formal diagnosis exists.',
+        ],
+      },
+      {
+        title: 'Acute Stress Reactions',
+        bullets: [
+          'People may feel detached, on edge, confused, irritable or unable to settle after a traumatic event.',
+          'Intrusive memories, nightmares and physical tension are common early responses.',
+          'Symptoms can be frightening even when they are a short-term reaction.',
+          'Immediate safety and stabilisation come first.',
+        ],
+        notes: [
+          'Keep the language practical. Learners need to recognise what an acute trauma response can look like without assuming that every severe early response will become PTSD.',
+          'Reassure participants that early reactions can be intense and still change over time.',
+        ],
+      },
+      {
+        title: 'Adjustment Disorder',
+        bullets: [
+          'Adjustment disorder describes distress linked to an identifiable stressor that is out of proportion or hard to recover from.',
+          'Common triggers include loss, relationship breakdown, migration, illness, work strain or caring pressure.',
+          'The person may feel overwhelmed, stuck or unable to function as usual.',
+          'Support needs to consider the stressor, the person and the context together.',
+        ],
+        notes: [
+          'This slide matters because adjustment disorder is often under-taught. It helps learners see that significant distress can follow life events that are not always described as trauma.',
+          'Keep the explanation grounded in function and persistence rather than lists of symptoms alone.',
+        ],
+      },
+      {
+        title: 'Timing, Duration and Functional Impact',
+        bullets: [
+          'Ask how long symptoms have been present and whether they are improving, worsening or becoming entrenched.',
+          'Look at sleep, self-care, work, study, relationships and safety.',
+          'Longer duration, rising impairment or increasing risk suggest the need for formal review.',
+          'Someone can look composed and still be struggling badly.',
+        ],
+        notes: [
+          'This is where you teach thresholds. Clinically useful questions are about duration, severity, impairment and risk.',
+          'Keep reinforcing that outward appearance can be misleading after trauma or major stress.',
+        ],
+      },
+      {
+        title: 'Early Support Should Focus on Stabilisation',
+        bullets: [
+          'Calm, practical support often helps more than forcing people to retell events repeatedly.',
+          'Sleep, hydration, food, routine and connection can all support early recovery.',
+          'Grounding, pacing and reducing avoidable stressors may help people regain a sense of control.',
+          'Do not push disclosure beyond what feels safe or useful.',
+        ],
+        notes: [
+          'Teach stabilisation before deep processing. People usually need safety and regulation before they need detailed exploration of the event.',
+          'This is also a safeguarding point: well-meaning support can become unhelpful if it is intrusive or overwhelming.',
+        ],
+      },
+      {
+        title: 'Red Flags and Escalation Points',
+        bullets: [
+          'Escalate concern when there is self-harm, suicidal thinking, severe dissociation, inability to function or unsafe substance use.',
+          'Escalate if symptoms persist, intensify or block daily life.',
+          'Children, young people and people with prior trauma may need closer follow-up.',
+          'Urgent safety needs always outrank the teaching plan.',
+        ],
+        notes: [
+          'Give the group a clear escalation frame. This is where they move from ordinary support into urgent action or formal referral.',
+          'Do not make the red flags vague. Learners need to know when immediate help matters.',
+        ],
+      },
+      {
+        title: 'UK Help-Seeking Routes After Trauma or Major Stress',
+        bullets: [
+          'GP, NHS talking therapies and local mental health services can provide assessment and treatment.',
+          'Some people may need specialist trauma services or crisis support.',
+          'Practical support around housing, work, money or safety may be part of recovery.',
+          'Follow-up matters because delayed deterioration is possible.',
+        ],
+        notes: [
+          'Make the pathway concrete and UK-specific. Support is often layered: primary care, talking therapies, crisis routes and practical help around the stressor.',
+          'The message is not "just cope"; it is "notice, stabilise, review and escalate when needed".',
+        ],
+      },
+      {
+        title: 'Recovery Starts With Safety and Meaningful Support',
+        bullets: [
+          'Early recovery is often uneven and non-linear.',
+          'People need validation, steadiness and realistic support rather than pressure to bounce back quickly.',
+          'The aim is not to erase the event but to reduce overwhelm and restore functioning.',
+          'Hope is credible when it is paired with practical care.',
+        ],
+        notes: [
+          'End with a grounded message about recovery. The first task is often to feel safe enough to sleep, think and reconnect with support.',
+          'That keeps the module humane and realistic rather than clinical-only.',
+        ],
+      },
+    ],
+    activity: `ACTIVITY - Early Support Response Plan (20 minutes)
+
+Tutor steps:
+1. Give each small group a scenario involving a recent bereavement, job loss, accident or other major stressor.
+2. Ask them to plan the first week of support under three headings: stabilisation, practical help and red flags.
+3. Ask each group what they would avoid doing because it might overwhelm or shame the person.
+4. Debrief by identifying the difference between supportive follow-up and urgent escalation.`,
+    discussionPrompts: [
+      'Why do people often minimise serious distress if the event does not look dramatic from the outside?',
+      'What helps somebody feel safer in the first days after a major stressor?',
+      'When does watchful support become too little, too late?',
+      'How can services respond without forcing people into labels too early?',
+    ],
+    resources: [
+      resource('NICE - Post-traumatic stress disorder', 'https://www.nice.org.uk/guidance/ng116'),
+      resource('NHS - PTSD overview', 'https://www.nhs.uk/mental-health/conditions/post-traumatic-stress-disorder-ptsd/overview/'),
+      resource('NHS - Talking therapies', 'https://www.nhs.uk/service-search/mental-health/find-an-nhs-talking-therapies-service'),
+      resource('NHS - Urgent help for mental health', 'https://www.nhs.uk/mental-health/urgent-help-for-mental-health/'),
+    ],
+    tutorNotes: `Facilitation:
+Keep the room psychologically safe. Many participants will know recent stress, loss or trauma first-hand even if they do not name it.
+
+Safeguarding:
+If current risk, serious dissociation or inability to stay safe becomes apparent, stop teaching and follow urgent support procedures.`,
+    powerPoint: `Tutor deck notes:
+- Use calm, restrained visuals and avoid graphic trauma imagery.
+- Student slides should focus on recognition, stabilisation and routes to help.
+- Tutor notes should hold the nuance on thresholds, red flags and pacing.`,
+  }),
+  7: guide({
+    id: 7,
+    topic: 'Trauma and Stress: PTSD and Complex PTSD',
+    summary:
+      'A bespoke module on PTSD and complex PTSD covering symptom patterns, trauma-informed care, treatment routes, stabilisation, avoidance, shame and recovery without sensationalising trauma.',
+    sessionBreakdown: buildSessionBreakdown([
+      'Welcome back and safety framing',
+      'PTSD patterns and how trauma can persist',
+      'Complex PTSD, shame and relationships',
+      'Treatment, stabilisation and trauma-informed care',
+      'Activity: map a trauma-informed support response',
+      'Discussion on avoidance, triggers and recovery',
+      'Wrap-up, signposting and next steps',
+    ]),
+    slides: [
+      {
+        title: 'What PTSD Is',
+        bullets: [
+          'PTSD can develop after traumatic events where fear, threat or helplessness overwhelms coping.',
+          'Core patterns often include re-experiencing, avoidance and a persistent sense of threat.',
+          'Trauma memories may feel present-tense rather than safely in the past.',
+          'PTSD is a treatable condition, not a personal weakness.',
+        ],
+        notes: [
+          'Begin by naming PTSD clearly and without drama. The goal is accurate recognition and hope, not shock value.',
+          'Explain that trauma memories can feel current in the body and mind, which helps learners understand flashbacks, nightmares and sudden fear.',
+        ],
+      },
+      {
+        title: 'Re-Experiencing, Avoidance and Hyperarousal',
+        bullets: [
+          'People may have flashbacks, nightmares, intrusive memories or intense emotional and physical reactions.',
+          'Avoidance can involve places, conversations, sensations or emotions linked to the trauma.',
+          'Hyperarousal may show up as jumpiness, irritability, poor sleep or constant scanning for danger.',
+          'These patterns can narrow a person\'s life over time.',
+        ],
+        notes: [
+          'Teach the cycle clearly: triggers activate threat, avoidance brings short-term relief, and the life of the person becomes smaller.',
+          'This helps participants understand why PTSD can be persistent even when the danger is over.',
+        ],
+      },
+      {
+        title: 'Complex PTSD Adds Further Layers',
+        bullets: [
+          'Complex PTSD can include the core PTSD pattern plus persistent problems with emotion regulation, identity and relationships.',
+          'It is often linked with repeated, prolonged or interpersonal trauma.',
+          'Shame, distrust and disconnection are common themes.',
+          'Support often needs pacing, safety and relational steadiness.',
+        ],
+        notes: [
+          'Keep this slide careful and grounded. Complex PTSD is not just "more PTSD"; it often affects self-organisation, attachment and identity in deeper ways.',
+          'Avoid turning complex trauma into a dramatic label. The point is to explain why recovery may need longer, steadier support.',
+        ],
+      },
+      {
+        title: 'Triggers, Body Memory and Daily Life',
+        bullets: [
+          'Triggers may be obvious or subtle, including sounds, smells, dates, conflict or powerlessness.',
+          'The body can react before the person has words for what is happening.',
+          'Work, parenting, sleep, intimacy and concentration can all be affected.',
+          'Trauma-informed support notices the pattern without blaming the person.',
+        ],
+        notes: [
+          'This is where the group learns to read trauma reactions in context. People are not being difficult; they are often responding to cues of danger.',
+          'Keep the focus on understanding patterns rather than pushing for disclosure.',
+        ],
+      },
+      {
+        title: 'Trauma-Informed Care Starts With Safety',
+        bullets: [
+          'Safety, choice, trust, collaboration and empowerment are core trauma-informed principles.',
+          'People usually need stabilisation before deep trauma processing.',
+          'Predictability and control over pace can reduce overwhelm.',
+          'Good support does not force disclosure or reliving.',
+        ],
+        notes: [
+          'Teach trauma-informed care as an approach, not a slogan. People who have lived with trauma often scan for danger in services too.',
+          'Pacing matters. Pressure to tell the full story can be actively unhelpful.',
+        ],
+      },
+      {
+        title: 'Treatment and Recovery Routes',
+        bullets: [
+          'Evidence-based trauma-focused therapies can help reduce symptoms and improve functioning.',
+          'Some people also need support with sleep, depression, substance use or practical safety problems.',
+          'Recovery often includes regulation skills, relational repair and gradual reconnection with life.',
+          'Follow-up and review matter because trauma recovery is rarely linear.',
+        ],
+        notes: [
+          'Keep the treatment explanation hopeful and realistic. Trauma-focused work can help, but the person may also need wider support around safety, housing, relationships or substance use.',
+          'The most useful message is that recovery is possible and usually paced.',
+        ],
+      },
+      {
+        title: 'Supporting Someone Day to Day',
+        bullets: [
+          'Listen calmly, avoid judgement and ask what helps them feel safer.',
+          'Do not demand details or challenge trauma memories in the moment.',
+          'Notice risk, dissociation, severe avoidance or loss of function.',
+          'Encourage professional support alongside trusted relationships.',
+        ],
+        notes: [
+          'This slide makes the module usable for carers, peers and volunteers. Practical support is often about steadiness, not interrogation.',
+          'Name the boundaries clearly so helpers do not drift into amateur trauma therapy.',
+        ],
+      },
+      {
+        title: 'Recovery Means More Than Symptom Reduction',
+        bullets: [
+          'Recovery can include sleeping better, feeling safer, reconnecting with others and rebuilding choice.',
+          'Progress may come with setbacks when stress or reminders intensify symptoms.',
+          'Relapse or triggering is not proof of failure.',
+          'Hope should be paired with realistic pacing and support.',
+        ],
+        notes: [
+          'Close with a grounded recovery message. The goal is not to erase the past, but to reduce the power trauma has over present life.',
+          'That keeps the module clinically honest and still hopeful.',
+        ],
+      },
+    ],
+    activity: `ACTIVITY - Trauma-Informed Support Mapping (20 minutes)
+
+Tutor steps:
+1. Give each group a short scenario involving somebody with nightmares, avoidance, startle responses and social withdrawal after trauma.
+2. Ask them to plan a trauma-informed first response under four headings: safety, communication, stabilisation and referral.
+3. Ask what would be actively unhelpful or overwhelming in the first conversation.
+4. Debrief by comparing supportive responses with intrusive ones.`,
+    discussionPrompts: [
+      'Why does avoidance feel protective in the short term and damaging in the long term?',
+      'What makes trauma-informed care feel genuinely safe rather than simply polite?',
+      'How should supporters respond when somebody is clearly distressed but not ready to talk in detail?',
+      'What would credible hope sound like for somebody living with PTSD or complex PTSD?',
+    ],
+    resources: [
+      resource('NICE - Post-traumatic stress disorder', 'https://www.nice.org.uk/guidance/ng116'),
+      resource('NHS - PTSD overview', 'https://www.nhs.uk/mental-health/conditions/post-traumatic-stress-disorder-ptsd/overview/'),
+      resource('NHS - PTSD treatment', 'https://www.nhs.uk/mental-health/conditions/post-traumatic-stress-disorder-ptsd/treatment/'),
+      resource('NHS - Talking therapies', 'https://www.nhs.uk/service-search/mental-health/find-an-nhs-talking-therapies-service'),
+    ],
+    tutorNotes: `Facilitation:
+Expect trauma material to land strongly for some participants. Keep the pace calm and do not pressure anybody to speak from personal experience.
+
+Safeguarding:
+If risk, severe dissociation or immediate safety concerns become visible, stop teaching and respond to the need in front of you.`,
+    powerPoint: `Tutor deck notes:
+- Avoid graphic imagery or dramatic language.
+- Student slides should focus on symptom patterns, trauma-informed care and routes to support.
+- Tutor notes should hold the nuance on pacing, complex trauma and safeguarding.`,
+  }),
 };

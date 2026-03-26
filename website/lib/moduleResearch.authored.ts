@@ -101,4 +101,34 @@ export const AUTHORED_MODULE_RESEARCH: Record<number, ModuleResearch> = {
       source('NICE - Challenging behaviour and learning disabilities', 'https://www.nice.org.uk/guidance/ng11', 'guideline'),
     ],
   ),
+  6: reviewed(
+    'This module has been rebuilt to distinguish normal post-stressor reactions from acute stress and adjustment disorder, with clearer teaching on stabilisation, functional impact, red flags and early UK help-seeking routes.',
+    [
+      'Do not over-diagnose ordinary distress, but do not minimise severe impairment either.',
+      'Teach timing, duration, functional impact and risk as the main decision anchors.',
+      'Prioritise stabilisation, safety and practical support before detailed trauma processing.',
+      'Keep UK help-seeking routes and urgent escalation points explicit.',
+    ],
+    [
+      source('NICE - Post-traumatic stress disorder', 'https://www.nice.org.uk/guidance/ng116', 'guideline'),
+      source('NHS - PTSD overview', 'https://www.nhs.uk/mental-health/conditions/post-traumatic-stress-disorder-ptsd/overview/', 'service'),
+      source('NHS - Talking therapies', 'https://www.nhs.uk/service-search/mental-health/find-an-nhs-talking-therapies-service', 'service'),
+      source('NHS - Urgent help for mental health', 'https://www.nhs.uk/mental-health/urgent-help-for-mental-health/', 'service'),
+    ],
+  ),
+  7: reviewed(
+    'This PTSD module has been rebuilt around NICE and NHS guidance, with stronger distinction between PTSD and complex PTSD, greater emphasis on trauma-informed pacing, and clearer teaching on treatment, triggers and day-to-day support.',
+    [
+      'Teach re-experiencing, avoidance and persistent threat clearly and without sensationalism.',
+      'Explain complex PTSD as more than symptom severity alone, especially around identity, relationships and regulation.',
+      'Keep trauma-informed care grounded in safety, choice, pacing and non-coercive support.',
+      'Pair hope with realistic recovery expectations and good signposting.',
+    ],
+    [
+      source('NICE - Post-traumatic stress disorder', 'https://www.nice.org.uk/guidance/ng116', 'guideline'),
+      source('NHS - PTSD overview', 'https://www.nhs.uk/mental-health/conditions/post-traumatic-stress-disorder-ptsd/overview/', 'service'),
+      source('NHS - PTSD treatment', 'https://www.nhs.uk/mental-health/conditions/post-traumatic-stress-disorder-ptsd/treatment/', 'service'),
+      source('NHS - Talking therapies', 'https://www.nhs.uk/service-search/mental-health/find-an-nhs-talking-therapies-service', 'service'),
+    ],
+  ),
 };
