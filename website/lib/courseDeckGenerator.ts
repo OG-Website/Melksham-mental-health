@@ -31,7 +31,9 @@ const COLORS = {
 const SOURCE_PATHS = [
   path.join(process.cwd(), 'lib', 'courseCopy.ts'),
   path.join(process.cwd(), 'lib', 'moduleGuides.ts'),
+  path.join(process.cwd(), 'lib', 'moduleGuides.authored.ts'),
   path.join(process.cwd(), 'lib', 'moduleResearch.ts'),
+  path.join(process.cwd(), 'lib', 'moduleResearch.authored.ts'),
   path.join(process.cwd(), 'lib', 'courseDeckGenerator.ts'),
   path.join(process.cwd(), 'lib', 'courseDecks.ts'),
 ];

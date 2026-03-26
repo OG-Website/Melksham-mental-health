@@ -1,4 +1,5 @@
 import { normalizeModuleGuideText } from './courseCopy.ts';
+import { AUTHORED_MODULE_GUIDES } from './moduleGuides.authored.ts';
 
 /**
  * Full tutor guide data for all 50 course modules.
@@ -7052,6 +7053,11 @@ LICENCE: Licensed to registered user only. Not for redistribution.`,
 
 /** Look up a single module guide by ID */
 export function getModuleGuide(id: number): ModuleGuide | undefined {
+  const authoredGuide = AUTHORED_MODULE_GUIDES[id];
+  if (authoredGuide) {
+    return normalizeModuleGuideText(authoredGuide);
+  }
+
   const guide = moduleGuides.find((g) => g.id === id);
   return guide ? normalizeModuleGuideText(guide) : undefined;
 }
