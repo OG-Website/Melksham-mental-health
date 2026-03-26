@@ -1164,4 +1164,441 @@ If risk, severe dissociation or immediate safety concerns become visible, stop t
 - Student slides should focus on symptom patterns, trauma-informed care and routes to support.
 - Tutor notes should hold the nuance on pacing, complex trauma and safeguarding.`,
   }),
+  8: guide({
+    id: 8,
+    topic: 'Trauma and Stress: Domestic and Intimate Partner Violence',
+    summary:
+      'A bespoke safeguarding-focused module on coercive control, patterns of domestic abuse, mental health impact, barriers to leaving, safe responses to disclosure and UK support routes.',
+    sessionBreakdown: buildSessionBreakdown([
+      'Welcome, safety framing and boundaries',
+      'What domestic abuse is and how it operates',
+      'Mental health impact, coercive control and risk',
+      'Disclosure, safety planning and referral',
+      'Activity: practise a safe first response',
+      'Discussion on barriers, blame and service responses',
+      'Wrap-up, urgent routes and next steps',
+    ]),
+    slides: [
+      {
+        title: 'Domestic Abuse Is More Than Physical Violence',
+        bullets: [
+          'Domestic abuse can include coercive control, intimidation, isolation, threats, sexual abuse, financial control and physical violence.',
+          'It can happen within current or former intimate relationships and within families.',
+          'Patterns of control are often more important than single incidents alone.',
+          'Abuse is about power and fear, not anger management gone wrong.',
+        ],
+        notes: [
+          'Open by broadening the picture beyond visible assault. Many survivors are controlled, surveilled and frightened long before or without obvious physical injury.',
+          'The main teaching point is pattern recognition: domestic abuse is often chronic and strategic.',
+        ],
+      },
+      {
+        title: 'Coercive Control Damages Mental Health',
+        bullets: [
+          'Survivors may experience anxiety, depression, trauma symptoms, shame, sleep disruption and reduced confidence.',
+          'The abuser often attacks reality, autonomy and support networks at the same time.',
+          'People may seem indecisive or inconsistent because they are living under threat.',
+          'Mental health symptoms can be a response to abuse rather than a separate problem.',
+        ],
+        notes: [
+          'This slide helps the room understand why survivors may appear exhausted, confused or unable to make straightforward choices.',
+          'Keep the framing contextual: fear, isolation and repeated humiliation predict mental health harm.',
+        ],
+      },
+      {
+        title: 'Who Abuse Affects and How It Escalates',
+        bullets: [
+          'Domestic abuse affects people of all genders, ages, identities and backgrounds.',
+          'Pregnancy, separation, stalking and previous threats can increase risk.',
+          'Children may be directly harmed or harmed through living with abuse.',
+          'Leaving can be one of the most dangerous periods.',
+        ],
+        notes: [
+          'Be precise without making the module vague. Abuse can affect anyone, while some groups face additional barriers or risks.',
+          'This is the point to stress that separation does not automatically create safety.',
+        ],
+      },
+      {
+        title: 'Why Leaving Is Often So Difficult',
+        bullets: [
+          'Fear, financial dependence, housing risk, children, immigration issues and shame can all keep people trapped.',
+          'Trauma bonding, hope and repeated manipulation can complicate decisions.',
+          'Services do harm when they ask "why did they stay?" instead of "what made it unsafe to leave?"',
+          'Blame closes disclosure down.',
+        ],
+        notes: [
+          'This slide matters because poor responses often begin with judgement. Survivors usually know more about the danger than the outside observer does.',
+          'Shift the room from blame to formulation: what risks, dependencies and threats are present?',
+        ],
+      },
+      {
+        title: 'A Safe First Response to Disclosure',
+        bullets: [
+          'Listen, believe, thank the person for telling you and ask what would help right now.',
+          'Do not pressure for every detail or demand immediate decisions.',
+          'Assess immediate safety and whether children or other dependants are at risk.',
+          'Know your safeguarding and referral routes in advance.',
+        ],
+        notes: [
+          'A first response needs to be calm, practical and non-judgemental. The job is not to investigate in the moment; it is to improve safety and connect support.',
+          'Belief and steadiness matter. Minimising or doubting can shut the door immediately.',
+        ],
+      },
+      {
+        title: 'Safety Planning and Escalation',
+        bullets: [
+          'If there is immediate danger, call 999.',
+          'Safety planning may include code words, safe contacts, documents, emergency bags and safer times to seek help.',
+          'Consider digital safety, stalking and monitoring of phones or accounts.',
+          'Support should be survivor-led where possible and risk-led where necessary.',
+        ],
+        notes: [
+          'Keep the guidance concrete. Safety planning is practical, specific and often small-step rather than one dramatic escape plan.',
+          'Mention digital control because it is common and often missed.',
+        ],
+      },
+      {
+        title: 'UK Support Routes and Trauma-Informed Care',
+        bullets: [
+          'GPs, domestic abuse services, police, SARCs and specialist advocacy may all be relevant.',
+          'Trauma-informed support protects dignity, privacy and choice wherever possible.',
+          'Children and family members may need parallel support.',
+          'Follow-up matters because risk and readiness can change quickly.',
+        ],
+        notes: [
+          'Teach this as a network response rather than a single referral. Survivors may need healthcare, housing, legal protection and specialist advocacy together.',
+          'Keep the tone practical: what is available, when is it urgent, and who needs to know?',
+        ],
+      },
+      {
+        title: 'Support Without Collusion or Blame',
+        bullets: [
+          'Good support names abuse clearly and avoids couples-language that hides control.',
+          'The survivor is not responsible for managing the abuser\'s behaviour.',
+          'Services need to document concerns and act on risk, not wait for certainty.',
+          'Recovery begins with safety, validation and restored choice.',
+        ],
+        notes: [
+          'Close by reinforcing clarity. Abuse should be named accurately and not blurred into "relationship difficulties" when coercion is present.',
+          'That gives the module a firm safeguarding standard rather than a vague wellbeing message.',
+        ],
+      },
+    ],
+    activity: `ACTIVITY - Safe First Response Practice (20 minutes)
+
+Tutor steps:
+1. Give pairs a short disclosure scenario involving coercive control or physical intimidation.
+2. Ask one person to practise a first response and the other to observe for safety, belief, judgement and clarity.
+3. Switch roles, then debrief using four questions: What helped? What was risky? What information was essential? What should happen next?
+4. Keep the exercise skills-based, not autobiographical.`,
+    discussionPrompts: [
+      'Why do services still miss coercive control even when the person is obviously distressed?',
+      'What language helps survivors feel believed, and what language shuts disclosure down?',
+      'How should teams balance survivor choice with safeguarding duties when risk is high?',
+      'What would a genuinely trauma-informed response look like in your setting?',
+    ],
+    resources: [
+      resource('GOV.UK - Domestic abuse: how to get help', 'https://www.gov.uk/guidance/domestic-violence-and-abuse'),
+      resource('NICE - Domestic violence and abuse: multi-agency working', 'https://www.nice.org.uk/guidance/ph50'),
+      resource('WHO - Violence against women fact sheet', 'https://www.who.int/news-room/fact-sheets/violence-against-women'),
+      resource('NHS - Sexual assault referral centres (SARCs)', 'https://www.nhs.uk/SARCs'),
+    ],
+    tutorNotes: `Facilitation:
+Do not invite personal disclosures. This topic is highly likely to be lived experience for somebody in the room.
+
+Safeguarding:
+If there is an active disclosure with immediate risk, stop the teaching and move into urgent safeguarding and safety planning.`,
+    powerPoint: `Tutor deck notes:
+- Keep slides calm and clear, with no imagery that sensationalises injury or violence.
+- Student slides should focus on recognition, safe response and routes to support.
+- Tutor notes should hold the safeguarding detail, escalation thresholds and response language.`,
+  }),
+  9: guide({
+    id: 9,
+    topic: 'Trauma and Stress: Childhood Trauma and Adverse Childhood Experiences',
+    summary:
+      'A bespoke module on childhood trauma, adverse childhood experiences, developmental impact, protective relationships, trauma-informed responses and recovery without reducing people to their ACE score.',
+    sessionBreakdown: buildSessionBreakdown([
+      'Welcome and safety framing',
+      'What childhood trauma and ACEs are',
+      'Developmental impact and later mental health',
+      'Protective relationships and trauma-informed support',
+      'Activity: map protective factors around a young person',
+      'Discussion on resilience, blame and systems',
+      'Wrap-up, signposting and next steps',
+    ]),
+    slides: [
+      {
+        title: 'Childhood Trauma and ACEs',
+        bullets: [
+          'Adverse childhood experiences include abuse, neglect and major household adversity.',
+          'ACEs are population-level indicators, not a full description of a child\'s life.',
+          'Repeated or chronic stress in childhood can affect development and later wellbeing.',
+          'The point is understanding risk and protection, not labelling people permanently.',
+        ],
+        notes: [
+          'Open by defining ACEs carefully. They are useful, but they are not the whole story and should not be used as destiny scores.',
+          'This keeps the module evidence-based and avoids flattening people into a number.',
+        ],
+      },
+      {
+        title: 'How Early Trauma Can Shape Development',
+        bullets: [
+          'Trauma can affect emotion regulation, attention, sleep, trust and stress reactivity.',
+          'Children may show distress through behaviour, shutdown, fear, aggression or difficulty learning.',
+          'The body and nervous system adapt to threat even when the child cannot explain it.',
+          'Trauma responses are often misunderstood as bad behaviour.',
+        ],
+        notes: [
+          'This slide helps the room reframe behaviour. A dysregulated child may be communicating fear, overload or learned survival patterns rather than deliberate defiance.',
+          'Keep the explanation developmentally grounded and practical.',
+        ],
+      },
+      {
+        title: 'Longer-Term Mental Health Impact',
+        bullets: [
+          'Childhood trauma is linked with higher risk of anxiety, depression, PTSD, substance use and relationship difficulty.',
+          'Risk rises when adversity is repeated, severe or unsupported.',
+          'Not everyone with early trauma develops later mental illness.',
+          'Protective factors and timely support matter greatly.',
+        ],
+        notes: [
+          'Be clear that early trauma increases risk without guaranteeing a fixed outcome.',
+          'That balance is important: serious enough to act on, but not deterministic.',
+        ],
+      },
+      {
+        title: 'Protective Relationships Change Outcomes',
+        bullets: [
+          'A trusted adult, stable routines and emotional safety can buffer harm.',
+          'Connection, attunement and predictable care support recovery and development.',
+          'Schools, families and communities can all become protective environments.',
+          'Resilience is relational, not just individual toughness.',
+        ],
+        notes: [
+          'This is the core hope slide. Protective relationships are one of the strongest ways to interrupt the effects of adversity.',
+          'Avoid using resilience as a demand for children to cope better on their own.',
+        ],
+      },
+      {
+        title: 'Trauma-Informed Support for Children and Families',
+        bullets: [
+          'Ask what happened and what is needed, not simply what is wrong.',
+          'Use calm routines, clear expectations and emotionally safe responses.',
+          'Work with carers while staying alert to safeguarding concerns.',
+          'Support must consider school, home, community and service context together.',
+        ],
+        notes: [
+          'Teach trauma-informed support as relational and systemic. Children do not recover in isolation from the environments around them.',
+          'This is also where the group should think about pacing, safety and predictability.',
+        ],
+      },
+      {
+        title: 'When to Escalate and Refer',
+        bullets: [
+          'Escalate when there is current abuse, neglect, risk of harm or severe deterioration.',
+          'Children may need safeguarding, CAMHS, school support or wider family services.',
+          'Adults with unresolved childhood trauma may need trauma-informed mental health support.',
+          'Documentation and follow-up matter.',
+        ],
+        notes: [
+          'Make the threshold explicit. This is not a module for vague concern only; it should help people recognise when immediate safeguarding action is required.',
+          'Follow-up matters because children often disclose in fragments, not all at once.',
+        ],
+      },
+      {
+        title: 'Do Not Reduce People to Their Trauma History',
+        bullets: [
+          'Trauma history is important, but identity, culture, strengths and choice still matter.',
+          'People need support that is person-centred, not trauma-fixated.',
+          'Hope comes from safety, relationship, meaning and skilled support.',
+          'Trauma-informed care should widen options, not narrow identity.',
+        ],
+        notes: [
+          'Close by resisting determinism. The module should recognise harm and still leave room for development, agency and change.',
+          'That keeps the session humane rather than fatalistic.',
+        ],
+      },
+    ],
+    activity: `ACTIVITY - Protective Factors Mapping (20 minutes)
+
+Tutor steps:
+1. Give groups a fictional case involving a young person with several stressors and inconsistent support.
+2. Ask them to map current risks, current protective factors and missing protective factors.
+3. Ask each group to choose three practical interventions that would increase safety, stability and connection.
+4. Debrief by comparing what helps in the immediate term and what needs wider system change.`,
+    discussionPrompts: [
+      'Why are trauma responses in children so often punished instead of understood?',
+      'What does a genuinely trauma-informed school, service or community look like?',
+      'How can we talk about ACEs without turning them into destiny scores?',
+      'Which protective factor is most powerful when early adversity cannot be undone?',
+    ],
+    resources: [
+      resource('UKHSA - National household survey of adverse childhood experiences in England', 'https://researchportal.ukhsa.gov.uk/en/publications/national-household-survey-of-adverse-childhood-experiences-and-th/'),
+      resource('NICE - Post-traumatic stress disorder', 'https://www.nice.org.uk/guidance/ng116'),
+      resource('NHS - Talking therapies', 'https://www.nhs.uk/service-search/mental-health/find-an-nhs-talking-therapies-service'),
+      resource('NHS - Mental health services', 'https://www.nhs.uk/nhs-services/mental-health-services/'),
+    ],
+    tutorNotes: `Facilitation:
+Do not ask participants to disclose their own ACE histories. Keep the work case-based and practical.
+
+Safeguarding:
+If concerns about a child\'s current safety arise, follow safeguarding procedures immediately and do not wait for certainty.`,
+    powerPoint: `Tutor deck notes:
+- Use simple developmental and systems diagrams, not sensational imagery.
+- Student slides should stay practical and non-deterministic.
+- Tutor notes should hold the nuance on safeguarding, developmental impact and protective relationships.`,
+  }),
+  10: guide({
+    id: 10,
+    topic: 'Trauma and Stress: Self-Harm and Suicide Prevention',
+    summary:
+      'A safeguarding-led module on self-harm, suicidal distress, warning signs, compassionate response, safety planning, urgent escalation and UK crisis routes.',
+    sessionBreakdown: buildSessionBreakdown([
+      'Welcome, safety framing and trigger boundaries',
+      'Understanding self-harm and suicidal distress',
+      'Risk factors, warning signs and protective factors',
+      'Compassionate response, safety planning and escalation',
+      'Activity: build a safe response checklist',
+      'Discussion on myths, fear and service response',
+      'Wrap-up, crisis routes and immediate next steps',
+    ]),
+    slides: [
+      {
+        title: 'Self-Harm and Suicidal Distress Are Serious',
+        bullets: [
+          'Self-harm and suicidal distress should always be taken seriously.',
+          'Self-harm and suicidal intent can overlap, but they are not identical.',
+          'People may be trying to cope, signal distress, punish themselves or escape overwhelming pain.',
+          'A calm response is safer than panic or judgement.',
+        ],
+        notes: [
+          'Open with seriousness and clarity. Do not dramatise, but do not minimise.',
+          'It matters to separate self-harm from suicide while still taking both as indicators of distress and possible risk.',
+        ],
+      },
+      {
+        title: 'What Can Increase Risk',
+        bullets: [
+          'Risk can rise with trauma, hopelessness, substance use, isolation, acute loss, severe mental illness or previous self-harm.',
+          'Access to means, escalating distress and inability to stay safe increase concern.',
+          'Protective factors include connection, reasons for living, restricted access to means and support that feels usable.',
+          'Risk changes over time and needs review.',
+        ],
+        notes: [
+          'Teach risk as dynamic, not static. A person can move from coping to acute risk quickly when stressors stack up.',
+          'Protective factors are part of real risk assessment, not an optional extra.',
+        ],
+      },
+      {
+        title: 'Warning Signs Should Trigger Action',
+        bullets: [
+          'Warning signs may include talk of hopelessness, farewell behaviour, giving possessions away, withdrawal or sudden agitation.',
+          'Some people show very little outwardly, so take direct disclosures seriously.',
+          'Rapid deterioration after a crisis, relapse or major loss needs urgent attention.',
+          'Do not wait for certainty before responding.',
+        ],
+        notes: [
+          'This slide needs to be direct. Waiting for perfect proof is one of the most common ways support is delayed.',
+          'Keep the message practical: notice changes, ask, stay with the concern and escalate when needed.',
+        ],
+      },
+      {
+        title: 'Asking Directly Does Not Create Suicidal Thoughts',
+        bullets: [
+          'Asking about self-harm or suicidal thoughts in a calm, direct way can improve safety.',
+          'Use plain language and listen to the answer without argument.',
+          'The aim is understanding, not interrogation.',
+          'People often feel relief when somebody asks clearly and takes them seriously.',
+        ],
+        notes: [
+          'This corrects a dangerous myth. Direct, compassionate questions are safer than vague hints or avoidance.',
+          'Model language the group can actually use in real conversations.',
+        ],
+      },
+      {
+        title: 'A Safe Immediate Response',
+        bullets: [
+          'Stay calm, listen, reduce isolation and focus on immediate safety.',
+          'If risk is immediate or the person cannot stay safe, call 999 or go to A&E.',
+          'If risk is serious but not immediate, use NHS urgent mental health routes, 111 or local crisis services.',
+          'Do not leave a high-risk person without an agreed safety plan or handover.',
+        ],
+        notes: [
+          'This is the operational slide. Learners need to know what to do, not just how to feel about the topic.',
+          'Be explicit about emergency action and do not soften the threshold when safety is compromised.',
+        ],
+      },
+      {
+        title: 'Safety Planning',
+        bullets: [
+          'A safety plan should include warning signs, coping steps, supportive contacts and urgent numbers.',
+          'Reducing access to means can save life.',
+          'Plans should be simple enough to use when somebody is distressed.',
+          'Follow-up matters because crisis can return after the first conversation.',
+        ],
+        notes: [
+          'Teach safety planning as a practical tool, not a paperwork exercise.',
+          'Keep it brief, concrete and collaborative wherever possible.',
+        ],
+      },
+      {
+        title: 'Support After the Immediate Crisis',
+        bullets: [
+          'People may need GP follow-up, crisis support, talking therapies, medication review or specialist care.',
+          'Family, friends and peer support may need guidance on how to help safely.',
+          'Shame and fear can intensify after disclosure, so follow-up needs care.',
+          'Compassion and continuity reduce repeat crisis risk.',
+        ],
+        notes: [
+          'The conversation cannot end at the first safe night. Follow-up is part of prevention.',
+          'This slide keeps the module from becoming a one-off emergency script only.',
+        ],
+      },
+      {
+        title: 'Prevention Means Taking Distress Seriously Early',
+        bullets: [
+          'Prevention includes connection, timely support, reduced stigma and easier access to help.',
+          'People often need support before they look overtly high-risk.',
+          'Myths, fear and dismissive language make things worse.',
+          'Hope is credible when it is paired with action and presence.',
+        ],
+        notes: [
+          'Close with prevention as an everyday practice. People usually send signals before the most acute point.',
+          'That links the module back to early support, not just crisis management.',
+        ],
+      },
+    ],
+    activity: `ACTIVITY - Safe Response Checklist (20 minutes)
+
+Tutor steps:
+1. Give small groups a fictional scenario involving a person who has disclosed self-harm or suicidal thinking.
+2. Ask them to build a checklist under four headings: what to say, what to ask, what not to do, and when to escalate urgently.
+3. Ask each group to add the exact crisis routes they would use locally and nationally.
+4. Debrief by comparing responses and correcting any unsafe gaps.
+
+Tutor reminder:
+Keep the exercise practical and non-graphic. Do not ask for personal stories.`,
+    discussionPrompts: [
+      'Why do people still avoid asking directly about suicidal thoughts even when they are worried?',
+      'What language helps somebody feel safer and what language increases shame?',
+      'How should services respond when a person is not at immediate risk but clearly not coping?',
+      'What would improve suicide prevention in everyday community settings, not just in crisis teams?',
+    ],
+    resources: [
+      resource('NICE - Self-harm: assessment, management and preventing recurrence', 'https://www.nice.org.uk/guidance/ng225'),
+      resource('NHS - Self-harm', 'https://www.nhs.uk/mental-health/conditions/self-harm/'),
+      resource('NHS - Urgent help for mental health', 'https://www.nhs.uk/mental-health/urgent-help-for-mental-health/'),
+      resource('Samaritans - 116 123 and online support', 'https://www.samaritans.org'),
+    ],
+    tutorNotes: `Facilitation:
+This module should be delivered slowly, clearly and without graphic detail. Do not invite the room into personal disclosure.
+
+Safeguarding:
+If anybody presents with current suicidal intent, immediate self-harm risk or inability to stay safe, stop the session and move into urgent emergency procedure.`,
+    powerPoint: `Tutor deck notes:
+- Keep slides plain, calm and high-contrast.
+- Student slides should emphasise warning signs, direct asking, safety planning and urgent routes.
+- Tutor notes should hold the escalation thresholds and safeguarding detail.`,
+  }),
 };

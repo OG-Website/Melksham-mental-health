@@ -131,4 +131,49 @@ export const AUTHORED_MODULE_RESEARCH: Record<number, ModuleResearch> = {
       source('NHS - Talking therapies', 'https://www.nhs.uk/service-search/mental-health/find-an-nhs-talking-therapies-service', 'service'),
     ],
   ),
+  8: reviewed(
+    'This domestic abuse module has been rebuilt around coercive control, mental health impact, disclosure, safety planning and multi-agency response. Current UK guidance supports clear naming of abuse, survivor-centred support and early safeguarding action where risk is high.',
+    [
+      'Teach domestic abuse as a pattern of control, not just isolated physical assaults.',
+      'Keep mental health impact tied to fear, isolation and coercion rather than abstract symptom lists.',
+      'Make first-response language, safeguarding and safety planning practical and explicit.',
+      'Avoid victim-blaming language and avoid inviting autobiographical disclosure in teaching.',
+    ],
+    [
+      source('GOV.UK - Domestic abuse: how to get help', 'https://www.gov.uk/guidance/domestic-violence-and-abuse', 'service'),
+      source('NICE - Domestic violence and abuse: multi-agency working', 'https://www.nice.org.uk/guidance/ph50', 'guideline'),
+      source('WHO - Violence against women fact sheet', 'https://www.who.int/news-room/fact-sheets/violence-against-women', 'evidence'),
+      source('NHS - Sexual assault referral centres (SARCs)', 'https://www.nhs.uk/SARCs', 'service'),
+    ],
+  ),
+  9: reviewed(
+    'This childhood trauma and ACEs module has been rebuilt to explain developmental impact without determinism. Current evidence supports using ACEs as a risk lens, centring protective relationships, and combining trauma-informed care with clear safeguarding and follow-up.',
+    [
+      'Teach ACEs as population-level indicators, not destiny scores for individuals.',
+      'Explain developmental and mental health impact in practical terms such as regulation, learning, trust and behaviour.',
+      'Keep protective relationships and trauma-informed environments central to the recovery message.',
+      'Make safeguarding thresholds explicit when current abuse or neglect may still be present.',
+    ],
+    [
+      source('UKHSA - National household survey of adverse childhood experiences in England', 'https://researchportal.ukhsa.gov.uk/en/publications/national-household-survey-of-adverse-childhood-experiences-and-th/', 'evidence'),
+      source('NICE - Post-traumatic stress disorder', 'https://www.nice.org.uk/guidance/ng116', 'guideline'),
+      source('NHS - Talking therapies', 'https://www.nhs.uk/service-search/mental-health/find-an-nhs-talking-therapies-service', 'service'),
+      source('NHS - Mental health services', 'https://www.nhs.uk/nhs-services/mental-health-services/', 'service'),
+    ],
+  ),
+  10: reviewed(
+    'This self-harm and suicide-prevention module has been rebuilt around direct risk recognition, compassionate response, safety planning and urgent UK escalation routes. Current guidance supports asking clearly about suicidal thoughts, treating self-harm seriously and making crisis pathways explicit.',
+    [
+      'Teach self-harm and suicidal distress as serious, with overlap but not complete equivalence.',
+      'Correct the myth that asking directly about suicide creates suicidal thoughts.',
+      'Make emergency thresholds, urgent routes and safety planning concrete and operational.',
+      'Avoid graphic detail and keep the module firmly safeguarding-led.',
+    ],
+    [
+      source('NICE - Self-harm: assessment, management and preventing recurrence', 'https://www.nice.org.uk/guidance/ng225', 'guideline'),
+      source('NHS - Self-harm', 'https://www.nhs.uk/mental-health/conditions/self-harm/', 'service'),
+      source('NHS - Urgent help for mental health', 'https://www.nhs.uk/mental-health/urgent-help-for-mental-health/', 'service'),
+      source('Samaritans - 116 123 and online support', 'https://www.samaritans.org', 'service'),
+    ],
+  ),
 };
