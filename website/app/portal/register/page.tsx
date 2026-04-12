@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FaLock, FaEnvelope, FaUser, FaEye, FaEyeSlash, FaShieldAlt } from 'react-icons/fa';
 import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import type { PortalFocus } from '@/lib/portalFocus';
 
 function getRegisterErrorMessage(message?: string): string {
   if (!message) return 'Registration failed. Please try again.';
@@ -27,6 +28,7 @@ export default function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [portalFocus, setPortalFocus] = useState<PortalFocus>('general');
   const [showPassword, setShowPassword] = useState(false);
   const [gdprConsent, setGdprConsent] = useState(false);
   const [error, setError] = useState('');
@@ -50,13 +52,23 @@ export default function RegisterPage() {
       const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password, gdprConsent }),
+        body: JSON.stringify({ name, email, password, gdprConsent, portalFocus }),
       });
-      const data = await res.json() as { ok?: boolean; error?: string };
+      const data = await res.json() as {
+        ok?: boolean;
+        error?: string;
+        user?: { portalFocus?: PortalFocus };
+      };
       if (!res.ok || !data.ok) {
         setError(getRegisterErrorMessage(data.error));
       } else {
-        router.push('/courses');
+        if (data.user?.portalFocus === 'women') {
+          router.push('/portal/womens-space');
+        } else if (data.user?.portalFocus === 'men') {
+          router.push('/portal/mens-space');
+        } else {
+          router.push('/courses');
+        }
         router.refresh();
       }
     } catch {
@@ -147,6 +159,55 @@ export default function RegisterPage() {
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-zinc-300 text-sm font-semibold mb-2">
+              Support Space
+            </label>
+            <div className="grid gap-3 text-sm">
+              {[
+                {
+                  value: 'general',
+                  title: 'General Portal',
+                  description: 'Standard member portal with course tools, diary, wall and community support.',
+                },
+                {
+                  value: 'women',
+                  title: 'Women\'s Support Space',
+                  description: 'Adds women-specific support for periods, pregnancy, stalking, Clare\'s Law, domestic abuse and reporting.',
+                },
+                {
+                  value: 'men',
+                  title: 'Men\'s Support Space',
+                  description: 'Adds men-specific support for talking therapies, fatherhood, men\'s mental health and abuse support.',
+                },
+              ].map((option) => (
+                <label
+                  key={option.value}
+                  className={`rounded-lg border px-4 py-3 cursor-pointer transition-colors ${
+                    portalFocus === option.value
+                      ? 'border-orange-400 bg-orange-950/30'
+                      : 'border-zinc-700 bg-black/30 hover:border-zinc-500'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="radio"
+                      name="portalFocus"
+                      value={option.value}
+                      checked={portalFocus === option.value}
+                      onChange={(e) => setPortalFocus(e.target.value as PortalFocus)}
+                      className="mt-1 accent-orange-500"
+                    />
+                    <div>
+                      <p className="text-zinc-100 font-semibold">{option.title}</p>
+                      <p className="text-zinc-400 text-xs leading-relaxed mt-1">{option.description}</p>
+                    </div>
+                  </div>
+                </label>
+              ))}
             </div>
           </div>
 

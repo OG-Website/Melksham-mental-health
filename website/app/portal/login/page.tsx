@@ -4,6 +4,7 @@ import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FaLock, FaEnvelope, FaEye, FaEyeSlash } from 'react-icons/fa';
+import type { PortalFocus } from '@/lib/portalFocus';
 
 function getLoginErrorMessage(message?: string): string {
   if (!message) return 'Login failed. Please try again.';
@@ -22,11 +23,11 @@ function getLoginErrorMessage(message?: string): string {
 function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const rawNext = searchParams.get('next') ?? '/portal';
+  const rawNext = searchParams.get('next');
   const next =
-    rawNext.startsWith('/') && !rawNext.startsWith('//') && !rawNext.includes('://')
+    rawNext && rawNext.startsWith('/') && !rawNext.startsWith('//') && !rawNext.includes('://')
       ? rawNext
-      : '/portal';
+      : null;
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -44,11 +45,21 @@ function LoginForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
-      const data = await res.json() as { ok?: boolean; error?: string };
+      const data = await res.json() as {
+        ok?: boolean;
+        error?: string;
+        user?: { portalFocus?: PortalFocus };
+      };
       if (!res.ok || !data.ok) {
         setError(getLoginErrorMessage(data.error));
       } else {
-        router.push(next);
+        const defaultTarget =
+          data.user?.portalFocus === 'women'
+            ? '/portal/womens-space'
+            : data.user?.portalFocus === 'men'
+              ? '/portal/mens-space'
+              : '/portal';
+        router.push(next ?? defaultTarget);
         router.refresh();
       }
     } catch {

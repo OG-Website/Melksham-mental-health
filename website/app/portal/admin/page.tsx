@@ -1,35 +1,39 @@
-import { redirect } from 'next/navigation';
-import Link from 'next/link';
 import fs from 'fs';
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import {
   FaArrowLeft,
+  FaBook,
+  FaCheckCircle,
+  FaComments,
   FaDatabase,
+  FaEnvelope,
   FaExclamationTriangle,
-  FaServer,
+  FaFileAlt,
+  FaHandHoldingHeart,
+  FaHeart,
+  FaInfoCircle,
+  FaLock,
+  FaMars,
+  FaPencilAlt,
+  FaQuestionCircle,
+  FaShieldAlt,
   FaSitemap,
+  FaTimesCircle,
   FaUserShield,
   FaUsers,
-  FaBook,
-  FaPencilAlt,
-  FaComments,
-  FaQuestionCircle,
-  FaHeart,
-  FaHandHoldingHeart,
-  FaLock,
-  FaInfoCircle,
-  FaCheckCircle,
-  FaTimesCircle,
+  FaVenus,
 } from 'react-icons/fa';
 import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import { getPortalUsersStorageDetails } from '@/lib/portalConfig';
-import { getPortalUsersTableStats } from '@/lib/portalDb';
+import { getPortalUsersTableStats, getWomenSupportTableStats } from '@/lib/portalDb';
 import { getAllMembers } from '@/lib/users';
 import { getAllMessages } from '@/lib/helpMessages';
 import { CONTACT_EMAIL } from '@/lib/constants';
 
 export const metadata = {
   title: 'Site Overview | Melksham Mental Health Admin',
-  description: 'Admin-only system overview: site tree, data storage, user capacity and member portal structure.',
+  description: 'Admin-only overview of the portal structure, storage layout, support spaces and safety reporting.',
 };
 
 function bytesToHuman(bytes: number): string {
@@ -55,92 +59,95 @@ const SITE_TREE = [
   {
     section: 'Public Pages',
     routes: [
-      { path: '/', label: 'Home', desc: 'Landing page — personal story, CTA for support and portal, crisis info' },
-      { path: '/about', label: 'About', desc: 'About Melksham Mental Health — background, mission, and founder story' },
-      { path: '/resources', label: 'Resources', desc: 'Mental health resources hub' },
-      { path: '/resources/crisis', label: 'Crisis Resources', desc: 'Emergency and crisis contact info — always accessible without login' },
-      { path: '/community', label: 'Community', desc: 'Community overview page' },
-      { path: '/community/stories', label: 'Community Stories', desc: 'Anonymised lived-experience stories shared by the community' },
-      { path: '/blog', label: 'Blog', desc: 'Articles and mental health content' },
-      { path: '/contact', label: 'Contact', desc: `Contact form - emails to ${CONTACT_EMAIL}` },
-      { path: '/courses', label: 'Courses', desc: '50-module mental health course listing — members can browse and request to join modules' },
-      { path: '/privacy', label: 'Privacy Policy', desc: 'Data policy and GDPR information' },
-      { path: '/terms', label: 'Terms', desc: 'Terms of service' },
-      { path: '/license', label: 'License', desc: 'Desktop app license page (Stripe integration)' },
-      { path: '/promo', label: 'Promo', desc: 'Promotional page for the course programme' },
-      { path: '/app/support', label: 'App Support', desc: 'Support page for the desktop app' },
+      { path: '/', label: 'Home', desc: 'Landing page with introduction, support signposting and portal entry points.' },
+      { path: '/about', label: 'About', desc: 'Organisation background, mission and founder context.' },
+      { path: '/resources', label: 'Resources', desc: 'Public mental health resource hub.' },
+      { path: '/resources/crisis', label: 'Crisis Resources', desc: 'Public emergency and urgent support information.' },
+      { path: '/community', label: 'Community', desc: 'Public community overview page.' },
+      { path: '/community/stories', label: 'Community Stories', desc: 'Shared lived-experience stories.' },
+      { path: '/blog', label: 'Blog', desc: 'Public written content and updates.' },
+      { path: '/contact', label: 'Contact', desc: `Contact route sending to ${CONTACT_EMAIL}.` },
+      { path: '/courses', label: 'Courses', desc: '50-module programme browser and course-interest entry point.' },
+      { path: '/privacy', label: 'Privacy Policy', desc: 'Data and privacy information.' },
+      { path: '/terms', label: 'Terms', desc: 'Terms of service.' },
     ],
   },
   {
-    section: 'Members Portal (Authentication Required)',
+    section: 'Portal Routes',
     routes: [
-      { path: '/portal/register', label: 'Register', desc: 'New member registration — name, email, password, GDPR consent checkbox' },
-      { path: '/portal/login', label: 'Login', desc: 'Member login — email + password, bcrypt verification, iron-session cookie' },
-      { path: '/portal', label: 'Portal Dashboard', desc: 'Main member dashboard — shows course access status, course requests, quick actions. Admin sees all members, help messages, course applications and stories' },
-      { path: '/portal/diary', label: 'My Diary', desc: 'Private personal diary — entries include date, mood (1–5), title, body, symptoms, triggers, positives. Only the logged-in member sees their own entries' },
-      { path: '/portal/my-story', label: 'My Story', desc: 'Member personal story — private text saved against the user account. Admin can view all stories' },
-      { path: '/portal/wall', label: 'Community Wall', desc: 'Shared community message board — posts shown to all logged-in members. Can post anonymously. Admin can delete any post' },
-      { path: '/portal/help', label: 'Help & Questions', desc: 'Member sends a question to the admin. Admin replies from the portal. Thread visible to both member and admin' },
-      { path: '/portal/self-referral', label: 'Self-Referral Links', desc: 'Curated directory of NHS, ADHD, crisis, addiction, autism and other self-referral services (no login required to view, but gated for members)' },
-      { path: '/portal/change-password', label: 'Change Password', desc: 'Update member password — verifies current password first. Admin must update via env var instead' },
-      { path: '/portal/admin', label: 'Site Overview (Admin)', desc: 'This page — admin-only system dashboard showing site tree, storage stats and user capacity' },
+      { path: '/portal/register', label: 'Register', desc: 'Member registration with portal-space selection: general, women or men.' },
+      { path: '/portal/login', label: 'Login', desc: 'Member and admin login with redirect based on support-space selection.' },
+      { path: '/portal', label: 'Portal Dashboard', desc: 'Main logged-in dashboard. Admin sees members, reports, broadcasts and operational queues.' },
+      { path: '/portal/womens-space', label: 'Women\'s Support Space', desc: 'Women-specific support area with safety, health and practical links.' },
+      { path: '/portal/report-him', label: 'Report Him', desc: 'Structured abuse and stalking reporting with evidence upload and police-ready pack generation.' },
+      { path: '/portal/pregnancy-support', label: 'Pregnancy Support', desc: 'Pregnancy, maternity and safety support for planned or unplanned situations.' },
+      { path: '/portal/mens-space', label: 'Men\'s Support Space', desc: 'Men-specific talking therapy, fatherhood, abuse and practical support links.' },
+      { path: '/portal/diary', label: 'My Diary', desc: 'Private diary entries for the logged-in member.' },
+      { path: '/portal/my-story', label: 'My Story', desc: 'Private lived-experience story saved against the member account.' },
+      { path: '/portal/wall', label: 'Community Wall', desc: 'Shared member wall with optional anonymous posting.' },
+      { path: '/portal/help', label: 'Help & Questions', desc: 'Member-to-admin support requests and replies.' },
+      { path: '/portal/self-referral', label: 'Self-Referral Links', desc: 'Curated referral and support directory.' },
+      { path: '/portal/change-password', label: 'Change Password', desc: 'Password change route for members.' },
+      { path: '/portal/admin', label: 'Site Overview', desc: 'Admin-only operational overview of the system.' },
     ],
   },
   {
-    section: 'Course Detail Pages (Admin Only)',
+    section: 'Portal API',
     routes: [
-      { path: '/courses/[id]', label: 'Course Module Detail', desc: 'Full module guide, PPTX download, and content. Gated to admin only. 50 modules (IDs 1–50)' },
-    ],
-  },
-  {
-    section: 'API Routes',
-    routes: [
-      { path: '/api/auth/login', label: 'POST /api/auth/login', desc: 'Verify credentials, create iron-session cookie' },
-      { path: '/api/auth/logout', label: 'POST /api/auth/logout', desc: 'Destroy session cookie' },
-      { path: '/api/auth/me', label: 'GET /api/auth/me', desc: 'Return current session user or 401' },
-      { path: '/api/auth/register', label: 'POST /api/auth/register', desc: 'Register new member (name, email, password, gdprConsent)' },
-      { path: '/api/portal/diary', label: 'GET/POST/DELETE /api/portal/diary', desc: 'Diary CRUD — create entry, list entries, delete entry' },
-      { path: '/api/portal/wall', label: 'GET/POST/DELETE /api/portal/wall', desc: 'Community wall CRUD — post, list, delete' },
-      { path: '/api/portal/help', label: 'GET/POST /api/portal/help', desc: 'Send help message (member) or reply (admin)' },
-      { path: '/api/portal/interest', label: 'POST /api/portal/interest', desc: 'Toggle course module interest (Request to Join)' },
-      { path: '/api/portal/my-story', label: 'GET/POST /api/portal/my-story', desc: 'Save or retrieve member personal story' },
-      { path: '/api/portal/course-access', label: 'POST /api/portal/course-access', desc: 'Apply for course access (member) or approve/revoke (admin)' },
-      { path: '/api/portal/change-password', label: 'POST /api/portal/change-password', desc: 'Change member password' },
-      { path: '/api/portal/admin/broadcast', label: 'POST /api/portal/admin/broadcast', desc: 'Admin-only: send one email/note to all registered members and save broadcast note history' },
-      { path: '/api/portal/admin/stats', label: 'GET /api/portal/admin/stats', desc: 'Admin-only: live file sizes, entry counts, storage paths, Vercel limits' },
+      { path: '/api/auth/register', label: 'POST register', desc: 'Creates account, stores selected portal focus, starts session and sends welcome email.' },
+      { path: '/api/auth/login', label: 'POST login', desc: 'Validates credentials and returns user profile including portal focus.' },
+      { path: '/api/auth/me', label: 'GET current user', desc: 'Returns the current session user with support-space metadata.' },
+      { path: '/api/portal/report-him', label: 'POST women report', desc: 'Creates a women-safety report with uploaded evidence files.' },
+      { path: '/api/portal/report-him/[reportId]', label: 'PATCH women report', desc: 'Admin-only status, notes and police reference updates.' },
+      { path: '/api/portal/report-him/[reportId]/attachments/[attachmentId]', label: 'GET women report evidence', desc: 'Owner or admin-only attachment download.' },
+      { path: '/api/portal/admin/broadcast', label: 'POST admin broadcast', desc: 'Sends an email and saves a note to all registered members.' },
+      { path: '/api/portal/admin/stats', label: 'GET admin stats', desc: 'Storage, capacity and durability overview for the admin dashboard.' },
+      { path: '/api/portal/diary', label: 'Diary CRUD', desc: 'Create, list and delete diary entries.' },
+      { path: '/api/portal/wall', label: 'Wall CRUD', desc: 'Create, list and delete community wall posts.' },
+      { path: '/api/portal/help', label: 'Help messages', desc: 'Create and list member help messages and admin replies.' },
+      { path: '/api/portal/interest', label: 'Course interest', desc: 'Toggle requested course modules.' },
+      { path: '/api/portal/course-access', label: 'Course access', desc: 'Apply for or approve course access.' },
+      { path: '/api/portal/change-password', label: 'Password change', desc: 'Change member password.' },
     ],
   },
 ];
 
-const USER_FIELDS = [
-  { field: 'id', type: 'string (UUID)', desc: 'Unique identifier — randomUUID() at registration' },
-  { field: 'email', type: 'string', desc: 'Lowercase trimmed email — used as login credential' },
-  { field: 'passwordHash', type: 'string (bcrypt)', desc: 'bcrypt hash (cost factor 12) — plain-text password is never stored' },
-  { field: 'name', type: 'string', desc: 'Full name as provided at registration' },
-  { field: 'isAdmin', type: 'boolean', desc: 'Always false for registered members — admin is configured via env vars' },
-  { field: 'gdprConsent', type: 'boolean', desc: 'true = member checked the data policy consent box at registration' },
-  { field: 'gdprConsentDate', type: 'ISO 8601 string', desc: 'UTC timestamp when GDPR consent was given' },
-  { field: 'createdAt', type: 'ISO 8601 string', desc: 'UTC timestamp of account creation' },
-  { field: 'interests', type: 'number[]', desc: 'Array of module IDs (1–50) the member has clicked "Request to Join"' },
-  { field: 'courseAccess', type: 'boolean', desc: 'true = admin has approved this member for full course access' },
-  { field: 'courseAccessApplied', type: 'boolean', desc: 'true = member has submitted an application for course access' },
-  { field: 'courseAccessAppliedAt', type: 'ISO 8601 string (optional)', desc: 'UTC timestamp when the course access application was submitted' },
-  { field: 'story', type: 'string (optional, max 10 000 chars)', desc: "Member's personal story — private, visible only to the member and admin" },
-  { field: 'loginCount', type: 'number', desc: 'Number of successful member logins recorded for this account' },
-  { field: 'lastLoginAt', type: 'ISO 8601 string (optional)', desc: 'UTC timestamp of the most recent successful login' },
+const ACCOUNT_FIELDS = [
+  { field: 'id', type: 'string', desc: 'UUID for the member account.' },
+  { field: 'email', type: 'string', desc: 'Lower-case login email.' },
+  { field: 'passwordHash', type: 'string', desc: 'bcrypt hash only. Plain-text password is never stored.' },
+  { field: 'name', type: 'string', desc: 'Display name used throughout the portal.' },
+  { field: 'portalFocus', type: 'general | women | men', desc: 'Selected support space used for post-login routing and gated sections.' },
+  { field: 'gdprConsent', type: 'boolean', desc: 'Registration consent flag.' },
+  { field: 'gdprConsentDate', type: 'ISO 8601 string', desc: 'Timestamp of consent capture.' },
+  { field: 'createdAt', type: 'ISO 8601 string', desc: 'Timestamp of account creation.' },
+  { field: 'interests', type: 'number[]', desc: 'Requested course module IDs.' },
+  { field: 'courseAccess', type: 'boolean', desc: 'Admin-approved course access flag.' },
+  { field: 'courseAccessApplied', type: 'boolean', desc: 'Whether the member has applied for course access.' },
+  { field: 'story', type: 'string?', desc: 'Optional private lived-experience text.' },
+  { field: 'loginCount', type: 'number', desc: 'Successful login counter.' },
+  { field: 'lastLoginAt', type: 'ISO 8601 string?', desc: 'Timestamp of the last successful login.' },
 ];
 
-const DIARY_FIELDS = [
-  { field: 'id', type: 'string (UUID)', desc: 'Unique entry identifier' },
-  { field: 'userId', type: 'string', desc: 'ID of the member who created the entry' },
-  { field: 'createdAt', type: 'ISO 8601 string', desc: 'UTC timestamp of creation' },
-  { field: 'date', type: 'YYYY-MM-DD string', desc: 'Date the member recorded the entry for (can differ from createdAt)' },
-  { field: 'mood', type: 'number (1–5)', desc: '1 = Very low, 2 = Low, 3 = Okay, 4 = Good, 5 = Great' },
-  { field: 'title', type: 'string', desc: 'Short title for the diary entry' },
-  { field: 'body', type: 'string', desc: 'Main diary text (free-form)' },
-  { field: 'symptoms', type: 'string', desc: 'Physical or mental symptoms noted' },
-  { field: 'triggers', type: 'string', desc: 'Events or situations that affected mood' },
-  { field: 'positives', type: 'string', desc: 'Positive things noticed during the day' },
+const WOMEN_REPORT_FIELDS = [
+  { field: 'incidentType', type: 'string', desc: 'Core category such as stalking, harassment or coercive control.' },
+  { field: 'summary', type: 'string', desc: 'Primary chronology of what happened.' },
+  { field: 'messageExcerpt', type: 'string?', desc: 'Quoted or pasted wording from messages or threats.' },
+  { field: 'incidentDateText', type: 'string?', desc: 'Free-text date, time or timeframe.' },
+  { field: 'incidentLocation', type: 'string?', desc: 'Location where the incident happened.' },
+  { field: 'platformOrChannel', type: 'string?', desc: 'Where the conduct took place, for example WhatsApp or in person.' },
+  { field: 'relationshipContext', type: 'string?', desc: 'Relationship to the person being reported.' },
+  { field: 'suspectName', type: 'string?', desc: 'Name or handle of the person being reported.' },
+  { field: 'suspectContact', type: 'string?', desc: 'Known usernames, phone numbers or identifying details.' },
+  { field: 'impactStatement', type: 'string?', desc: 'Impact on safety, children, work, sleep or wellbeing.' },
+  { field: 'desiredSupport', type: 'string?', desc: 'What help the member wants from the portal/admin team.' },
+  { field: 'anonymousToPolice', type: 'boolean', desc: 'Whether the user requested an anonymous police-ready pack where possible.' },
+  { field: 'immediateDanger', type: 'boolean', desc: 'Immediate-risk flag for urgent safeguarding.' },
+  { field: 'status', type: 'submitted | reviewing | ready', desc: 'Admin workflow status.' },
+  { field: 'policeReference', type: 'string?', desc: 'Optional police or safeguarding reference recorded by admin.' },
+  { field: 'adminNotes', type: 'string?', desc: 'Internal admin notes for handling and follow-up.' },
+  { field: 'attachments', type: 'file[]', desc: 'Uploaded images or PDFs stored in Postgres.' },
+  { field: 'generatedPack', type: 'derived text', desc: 'Police-ready export text assembled from the submitted report.' },
 ];
 
 export default async function AdminOverviewPage() {
@@ -152,73 +159,110 @@ export default async function AdminOverviewPage() {
 
   const isProduction = process.env.NODE_ENV === 'production';
   const usersStorage = getPortalUsersStorageDetails();
-  const usersPath = usersStorage.location;
   const diaryPath = process.env.DIARY_DATA_PATH ?? (isProduction ? '/tmp/mmh-diary.json' : 'data/diary.json');
   const wallPath = process.env.WALL_DATA_PATH ?? (isProduction ? '/tmp/mmh-wall.json' : 'data/wall.json');
   const helpPath = process.env.HELP_DATA_PATH ?? (isProduction ? '/tmp/mmh-help.json' : 'data/help-messages.json');
 
   const usersInfo = usersStorage.mode === 'database'
     ? { exists: true, ...(await getPortalUsersTableStats()) }
-    : getFileInfo(usersPath);
+    : getFileInfo(usersStorage.location);
+  const womenSupportInfo = usersStorage.mode === 'database'
+    ? { exists: true, ...(await getWomenSupportTableStats()) }
+    : { exists: false, reportEntries: 0, attachmentEntries: 0, sizeBytes: 0 };
   const diaryInfo = getFileInfo(diaryPath);
   const wallInfo = getFileInfo(wallPath);
   const helpInfo = getFileInfo(helpPath);
 
   const members = await getAllMembers();
   const helpMessages = getAllMessages();
-  const pendingHelp = helpMessages.filter((m) => !m.respondedAt).length;
-  const pendingCourseApps = members.filter((m) => m.courseAccessApplied && !m.courseAccess).length;
-  const totalInterests = members.reduce((acc, m) => acc + m.interests.length, 0);
+  const pendingHelp = helpMessages.filter((message) => !message.respondedAt).length;
+  const pendingCourseApps = members.filter((member) => member.courseAccessApplied && !member.courseAccess).length;
+  const totalInterests = members.reduce((acc, member) => acc + member.interests.length, 0);
+  const womenMembers = members.filter((member) => member.portalFocus === 'women').length;
+  const menMembers = members.filter((member) => member.portalFocus === 'men').length;
+  const generalMembers = members.filter((member) => member.portalFocus === 'general').length;
+  const totalStorageBytes =
+    usersInfo.sizeBytes +
+    womenSupportInfo.sizeBytes +
+    diaryInfo.sizeBytes +
+    wallInfo.sizeBytes +
+    helpInfo.sizeBytes;
 
-  const totalStorageBytes = usersInfo.sizeBytes + diaryInfo.sizeBytes + wallInfo.sizeBytes + helpInfo.sizeBytes;
   const storageItems = [
     {
       label: 'Member Accounts',
-      path: usersPath,
-      info: usersInfo,
+      path: usersStorage.location,
+      exists: usersInfo.exists,
+      entries: `${usersInfo.entries} member records`,
+      size: bytesToHuman(usersInfo.sizeBytes),
+      durable: usersStorage.mode === 'database',
+      note: usersStorage.mode === 'database'
+        ? 'Durable Postgres storage for registered members.'
+        : 'File fallback for local development only.',
       icon: <FaUsers className="text-orange-400" />,
-      existsLabel: usersStorage.mode === 'database' ? 'Database ready' : 'File exists',
+    },
+    {
+      label: 'Women Safety Reports',
+      path: usersStorage.mode === 'database'
+        ? 'portal_women_reports + portal_women_report_attachments'
+        : 'Unavailable without DATABASE_URL',
+      exists: womenSupportInfo.exists,
+      entries: `${womenSupportInfo.reportEntries} reports / ${womenSupportInfo.attachmentEntries} evidence files`,
+      size: bytesToHuman(womenSupportInfo.sizeBytes),
+      durable: usersStorage.mode === 'database',
+      note: usersStorage.mode === 'database'
+        ? 'Durable Postgres storage for reports and uploaded evidence.'
+        : 'Women safety reporting is intended for the database-backed setup.',
+      icon: <FaShieldAlt className="text-pink-300" />,
     },
     {
       label: 'Diary Entries',
       path: diaryPath,
-      info: diaryInfo,
+      exists: diaryInfo.exists,
+      entries: `${diaryInfo.entries} diary entries`,
+      size: bytesToHuman(diaryInfo.sizeBytes),
+      durable: false,
+      note: 'Still file-based JSON.',
       icon: <FaPencilAlt className="text-orange-400" />,
-      existsLabel: 'File exists',
     },
     {
-      label: 'Community Wall Posts',
+      label: 'Community Wall',
       path: wallPath,
-      info: wallInfo,
+      exists: wallInfo.exists,
+      entries: `${wallInfo.entries} wall posts`,
+      size: bytesToHuman(wallInfo.sizeBytes),
+      durable: false,
+      note: 'Still file-based JSON.',
       icon: <FaComments className="text-orange-400" />,
-      existsLabel: 'File exists',
     },
     {
       label: 'Help Messages',
       path: helpPath,
-      info: helpInfo,
+      exists: helpInfo.exists,
+      entries: `${helpInfo.entries} help threads`,
+      size: bytesToHuman(helpInfo.sizeBytes),
+      durable: false,
+      note: 'Still file-based JSON.',
       icon: <FaQuestionCircle className="text-orange-400" />,
-      existsLabel: 'File exists',
     },
   ];
 
   return (
     <div className="page-content">
-      {/* Header */}
       <div className="flex items-center gap-3 mb-2">
         <Link href="/portal" className="text-zinc-400 hover:text-orange-400 transition-colors">
           <FaArrowLeft />
         </Link>
         <p className="section-kicker">Admin Only</p>
       </div>
+
       <h1 className="text-3xl md:text-4xl font-black text-white mb-2 normal-case tracking-normal">
-        Site Overview &amp; System Info
+        Site Overview and Portal Operations
       </h1>
       <p className="text-zinc-400 text-sm mb-10">
-        Full site tree, data storage details, user capacity and member portal structure.
+        Current portal structure, storage layout, support-space routing and safety-report handling.
       </p>
 
-      {/* Live Stats Cards */}
       <section className="mb-12">
         <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
           <FaUsers className="inline mr-2 text-orange-400" />
@@ -227,45 +271,44 @@ export default async function AdminOverviewPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
             { label: 'Registered Members', value: members.length, icon: <FaUsers className="text-orange-400" /> },
+            { label: 'Women Space', value: womenMembers, icon: <FaVenus className="text-pink-300" /> },
+            { label: 'Men Space', value: menMembers, icon: <FaMars className="text-sky-300" /> },
+            { label: 'General Space', value: generalMembers, icon: <FaUserShield className="text-zinc-300" /> },
+            { label: 'Women Reports', value: womenSupportInfo.reportEntries, icon: <FaShieldAlt className="text-pink-300" /> },
+            { label: 'Evidence Files', value: womenSupportInfo.attachmentEntries, icon: <FaFileAlt className="text-pink-300" /> },
+            { label: 'Unread Help', value: pendingHelp, icon: <FaEnvelope className="text-red-400" /> },
+            { label: 'Course Applications', value: pendingCourseApps, icon: <FaBook className="text-orange-400" /> },
             { label: 'Diary Entries', value: diaryInfo.entries, icon: <FaPencilAlt className="text-orange-400" /> },
             { label: 'Wall Posts', value: wallInfo.entries, icon: <FaComments className="text-orange-400" /> },
-            { label: 'Help Messages', value: helpInfo.entries, icon: <FaQuestionCircle className="text-orange-400" /> },
-            { label: 'Unread Help', value: pendingHelp, icon: <FaQuestionCircle className="text-red-400" /> },
-            { label: 'Course Applications', value: pendingCourseApps, icon: <FaBook className="text-orange-400" /> },
-            { label: 'Course Requests (total)', value: totalInterests, icon: <FaHeart className="text-orange-400" /> },
-            { label: 'Total Storage Used', value: bytesToHuman(totalStorageBytes), icon: <FaDatabase className="text-orange-400" /> },
+            { label: 'Course Requests', value: totalInterests, icon: <FaHeart className="text-orange-400" /> },
+            { label: 'Total Stored Data', value: bytesToHuman(totalStorageBytes), icon: <FaDatabase className="text-orange-400" /> },
           ].map((card) => (
             <div key={card.label} className="border border-zinc-700 rounded-lg px-4 py-3 text-left">
-              <div className="flex items-center gap-2 mb-1">{card.icon}<span className="text-zinc-400 text-xs">{card.label}</span></div>
+              <div className="flex items-center gap-2 mb-1">
+                {card.icon}
+                <span className="text-zinc-400 text-xs">{card.label}</span>
+              </div>
               <p className="text-white font-black text-2xl">{card.value}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Storage Info */}
       <section className="mb-12">
         <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
           <FaDatabase className="inline mr-2 text-orange-400" />
-          Data Storage
+          Storage Layout
         </h2>
 
         {isProduction && (
           <div className="bg-red-900/20 border border-red-500/40 rounded-lg px-4 py-3 mb-4 flex items-start gap-3 text-sm">
             <FaExclamationTriangle className="text-red-400 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="text-red-200 font-semibold mb-1">⚠️ Ephemeral Storage Warning</p>
+              <p className="text-red-200 font-semibold mb-1">Production durability note</p>
               <p className="text-red-300">
-                Member accounts now use Postgres when <code className="bg-black/40 px-1 rounded">DATABASE_URL</code> is configured.
-                This storage is <strong>ephemeral</strong> — it is wiped whenever a new deployment is made or a new serverless
-                function instance spins up. <strong>Diary entries, wall posts and help messages can still be lost on each deployment until they are migrated too.</strong>
-              </p>
-              <p className="text-red-300 mt-2">
-                To persist data across deployments without MongoDB or Railway, consider:
-                <strong className="text-white"> Vercel KV</strong> (free Redis, 256 MB),
-                <strong className="text-white"> Vercel Postgres</strong> (free, 256 MB),
-                <strong className="text-white"> Turso</strong> (free SQLite, 500 MB), or
-                <strong className="text-white"> Upstash Redis</strong> (free tier available).
+                Member accounts and women safety reports are durable in Postgres. Diary entries, wall posts
+                and help messages are still file-based and can be lost on redeploy or cold-start changes until
+                they are migrated as well.
               </p>
             </div>
           </div>
@@ -277,200 +320,111 @@ export default async function AdminOverviewPage() {
               <div className="flex items-center gap-2 mb-1">
                 {item.icon}
                 <span className="text-white font-semibold">{item.label}</span>
-                {item.info.exists ? (
+                {item.exists ? (
                   <span className="inline-flex items-center gap-1 text-green-400 text-xs ml-auto">
-                    <FaCheckCircle /> {item.existsLabel}
+                    <FaCheckCircle /> Ready
                   </span>
                 ) : (
                   <span className="inline-flex items-center gap-1 text-zinc-500 text-xs ml-auto">
-                    <FaTimesCircle /> Not yet created
+                    <FaTimesCircle /> Not initialised
                   </span>
                 )}
               </div>
               <p className="text-zinc-400 font-mono text-xs mb-1">{item.path}</p>
-              <div className="flex gap-4 text-zinc-300 text-xs">
-                <span><strong className="text-white">{item.info.entries}</strong> entries</span>
-                <span><strong className="text-white">{bytesToHuman(item.info.sizeBytes)}</strong> on disk</span>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-zinc-300 text-xs mb-1">
+                <span>{item.entries}</span>
+                <span>{item.size}</span>
+                <span>{item.durable ? 'Durable' : 'Not durable in production'}</span>
               </div>
+              <p className="text-zinc-500 text-xs">{item.note}</p>
             </div>
           ))}
         </div>
-
-        <div className="mt-4 border border-zinc-700 rounded-lg px-4 py-3 text-sm text-left">
-          <p className="text-zinc-300 font-semibold mb-2">Portal storage notes</p>
-          <ul className="space-y-1 text-zinc-400 text-xs">
-            <li>• <strong className="text-white">/tmp size limit:</strong> 512 MB total (shared across all active function instances)</li>
-            <li>• <strong className="text-white">Data persistence:</strong> Within a single serverless instance warm invocation only</li>
-            <li>• <strong className="text-white">Data loss trigger:</strong> Any new deployment wipes /tmp on the next cold start</li>
-            <li>• <strong className="text-white">Admin account:</strong> Configured via ADMIN_EMAIL / ADMIN_PASSWORD_HASH env vars and never stored in the member table</li>
-            <li>• <strong className="text-white">Estimated capacity:</strong> ~1 user record ≈ 500 bytes → ~1 million records in 512 MB, but do not rely on this in production</li>
-          </ul>
-        </div>
       </section>
 
-      {/* User Capacity */}
-      <section className="mb-12">
-        <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
-          <FaServer className="inline mr-2 text-orange-400" />
-          User Capacity &amp; Platform Limits
-        </h2>
-        <div className="space-y-3 text-sm text-left">
-          <div className="border border-zinc-700 rounded-lg px-4 py-3">
-            <p className="text-white font-semibold mb-2">Vercel Hosting (Current Setup)</p>
-            <ul className="space-y-1 text-zinc-300 text-xs">
-              <li>• <strong className="text-white">Platform:</strong> Vercel Serverless (Next.js)</li>
-              <li>• <strong className="text-white">Storage:</strong> Postgres for member accounts, file-based JSON for diary, wall, and help</li>
-              <li>• <strong className="text-white">Bandwidth (Hobby):</strong> 100 GB / month</li>
-              <li>• <strong className="text-white">Bandwidth (Pro):</strong> 1 TB / month</li>
-              <li>• <strong className="text-white">Concurrent requests:</strong> Auto-scaled — no fixed limit</li>
-              <li>• <strong className="text-white">Serverless function timeout:</strong> 10 s (Hobby) / 60 s (Pro)</li>
-              <li>• <strong className="text-white">Practical member limit:</strong> Driven by your Postgres plan for accounts and by file storage for diary, wall, and help data</li>
-            </ul>
-          </div>
-          <div className="border border-orange-500/40 rounded-lg px-4 py-3 bg-orange-900/10">
-            <p className="text-orange-300 font-semibold mb-2">Persistent Storage Options (No MongoDB / Railway Required)</p>
-            <ul className="space-y-1 text-zinc-300 text-xs">
-              <li>• <strong className="text-white">Vercel KV</strong> — Redis key-value store, free tier: 256 MB, 30,000 commands/day. No extra service needed — add from Vercel dashboard.</li>
-              <li>• <strong className="text-white">Vercel Postgres</strong> — Managed PostgreSQL, free tier: 256 MB. Add from Vercel dashboard.</li>
-              <li>• <strong className="text-white">Turso</strong> — SQLite at the edge, free tier: 500 MB + 1 billion row reads/month.</li>
-              <li>• <strong className="text-white">Upstash Redis</strong> — Serverless Redis, free tier: 10,000 commands/day.</li>
-              <li>• <strong className="text-white">PlanetScale</strong> — Serverless MySQL, free tier available.</li>
-              <li>• <strong className="text-white">ngrok</strong> — Your ngrok premium account can tunnel to a local server running the Next.js app (with file-based storage on your local disk, which DOES persist). Run <code className="bg-black/40 px-1 rounded">npm run dev</code> locally, then <code className="bg-black/40 px-1 rounded">ngrok http 3000</code> to get a public HTTPS URL tonight.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* ngrok / Local Tunnelling Guide */}
-      <section className="mb-12">
-        <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
-          <FaServer className="inline mr-2 text-orange-400" />
-          Running Locally with a Public URL (ngrok / Tunnel)
-        </h2>
-        <div className="border border-zinc-700 rounded-lg px-4 py-4 text-sm text-left space-y-3">
-          <p className="text-zinc-300">
-            If an ngrok account (or any HTTP tunnel) is available, the site can be run locally and exposed at a public HTTPS URL.
-            Local file-based storage persists across restarts because there are no Vercel deployments to wipe <code className="bg-black/40 px-1 rounded">/tmp</code>:
-          </p>
-          <ol className="space-y-2 text-zinc-300 text-xs list-decimal list-inside">
-            <li>
-              Clone the repo locally and run:{' '}
-              <code className="bg-black/40 px-1 py-0.5 rounded font-mono">cd website &amp;&amp; npm install &amp;&amp; npm run build &amp;&amp; npm start</code>
-            </li>
-            <li>
-              Create a <code className="bg-black/40 px-1 py-0.5 rounded font-mono">website/.env.local</code> file and set:{' '}
-              <code className="bg-black/40 px-1 py-0.5 rounded font-mono">SESSION_SECRET</code>,{' '}
-              <code className="bg-black/40 px-1 py-0.5 rounded font-mono">ADMIN_EMAIL</code>,{' '}
-              <code className="bg-black/40 px-1 py-0.5 rounded font-mono">ADMIN_PASSWORD_HASH</code>
-            </li>
-            <li>
-              In a second terminal, start the tunnel:{' '}
-              <code className="bg-black/40 px-1 py-0.5 rounded font-mono">ngrok http 3000</code>
-            </li>
-            <li>
-              The tunnel provides a public HTTPS URL (e.g.{' '}
-              <code className="bg-black/40 px-1 py-0.5 rounded font-mono">https://abc123.ngrok.io</code>) that can be shared with members.
-            </li>
-            <li>
-              Data is saved to <code className="bg-black/40 px-1 py-0.5 rounded font-mono">website/data/*.json</code> on the local machine and persists across restarts.
-            </li>
-          </ol>
-          <p className="text-zinc-500 text-xs">
-            ngrok premium accounts support custom subdomains (e.g.{' '}
-            <code className="bg-black/40 px-1 rounded">ngrok http --subdomain=melksham 3000</code>).
-          </p>
-        </div>
-      </section>
-
-      {/* Members Portal Flow */}
       <section className="mb-12">
         <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
           <FaUserShield className="inline mr-2 text-orange-400" />
-          Members Portal — Registration &amp; Flow
+          Portal Spaces and Safety Flow
         </h2>
         <div className="space-y-4 text-sm text-left">
           {[
             {
-              step: '1. Registration',
-              path: '/portal/register',
-              icon: <FaUsers className="text-orange-400 flex-shrink-0" />,
-              desc: 'Visitor fills in: Full Name, Email, Password (min 8 chars), Confirm Password. Must tick the GDPR data consent checkbox. On submit, POST /api/auth/register validates inputs, hashes password with bcrypt (cost 12), stores the member in Postgres via DATABASE_URL (or data/portal-users.json in local dev), creates an iron-session cookie and redirects to /courses.',
+              title: 'Registration and routing',
+              icon: <FaUsers className="text-orange-400" />,
+              body:
+                'Registration now captures portalFocus. Women accounts are routed into the women\'s space, men into the men\'s space, and general members into the standard portal/course flow.',
             },
             {
-              step: '2. Login',
-              path: '/portal/login',
-              icon: <FaLock className="text-orange-400 flex-shrink-0" />,
-              desc: 'Member enters email + password. POST /api/auth/login calls verifyCredentials() — bcrypt.compare() is always called (even for unknown users) to prevent timing-based email enumeration. On success, iron-session cookie is set containing userId, email, name, isAdmin. Session is a browser-session cookie (no maxAge — expires on tab close).',
+              title: 'Women\'s support space',
+              icon: <FaVenus className="text-pink-300" />,
+              body:
+                'Women members get a separate pink support area covering periods, stalking, domestic abuse, Clare\'s Law, child-maintenance pressure and direct links into pregnancy support and the Report Him workflow.',
             },
             {
-              step: '3. Portal Dashboard',
-              path: '/portal',
-              icon: <FaUserShield className="text-orange-400 flex-shrink-0" />,
-              desc: 'Server-side page reads the session cookie. If not logged in, redirects to /portal/login. Shows: quick-action buttons, course access status banner, own course requests (module interests). Admin additionally sees: all members table, course access applications, help messages (unread highlighted), member stories.',
+              title: 'Report Him workflow',
+              icon: <FaShieldAlt className="text-pink-300" />,
+              body:
+                'The report form captures chronology, message excerpts, risk level, requested support and evidence uploads. The portal stores the raw report plus a generated police-ready pack. Admin can review, add notes and track status.',
             },
             {
-              step: '4. My Diary',
-              path: '/portal/diary',
-              icon: <FaPencilAlt className="text-orange-400 flex-shrink-0" />,
-              desc: 'Private diary — member creates entries with date, mood (1–5), title, main body, symptoms, triggers, positives. Entries shown newest-first. DELETE removes an entry. All entries are filtered by userId — members only ever see their own data.',
+              title: 'Pregnancy support',
+              icon: <FaHandHoldingHeart className="text-pink-300" />,
+              body:
+                'Pregnancy support gives routes for planned and unplanned pregnancy, local maternity services, unsafe relationships and abuse escalation during pregnancy.',
             },
             {
-              step: '5. My Story',
-              path: '/portal/my-story',
-              icon: <FaHeart className="text-orange-400 flex-shrink-0" />,
-              desc: "Free-text personal story stored against the user record (max 10,000 chars). Visible only to the member and admin. Admin sees all members' stories in the portal dashboard.",
-            },
-            {
-              step: '6. Community Wall',
-              path: '/portal/wall',
-              icon: <FaComments className="text-orange-400 flex-shrink-0" />,
-              desc: 'Shared message board visible to all logged-in members. Posts (max 1,000 chars) can be submitted as named or anonymous. Members can delete their own posts; admin can delete any post. Posts stored in mmh-wall.json.',
-            },
-            {
-              step: '7. Help & Questions',
-              path: '/portal/help',
-              icon: <FaQuestionCircle className="text-orange-400 flex-shrink-0" />,
-              desc: 'Member submits a question with subject (max 200 chars) and message (max 5,000 chars). Stored in mmh-help.json. Admin sees all messages in the portal dashboard with inline reply form. Admin reply is saved back against the message record.',
-            },
-            {
-              step: '8. Self-Referral Links',
-              path: '/portal/self-referral',
-              icon: <FaHandHoldingHeart className="text-orange-400 flex-shrink-0" />,
-              desc: 'Curated directory of NHS, ADHD, crisis, addiction, autism, domestic abuse and young people self-referral services. Static content — no database. Requires login.',
-            },
-            {
-              step: '9. Course Interest / Request to Join',
-              path: '/courses',
-              icon: <FaBook className="text-orange-400 flex-shrink-0" />,
-              desc: 'On the /courses page, each of the 50 modules has a "Request to Join" button. POST /api/portal/interest toggles the module ID in the user\'s interests[] array. The portal dashboard shows all a member\'s requested modules. Admin sees interest counts per module.',
-            },
-            {
-              step: '10. Course Access Application',
-              path: '/courses',
-              icon: <FaBook className="text-orange-400 flex-shrink-0" />,
-              desc: 'Member applies for full course access via POST /api/portal/course-access. Sets courseAccessApplied=true. Admin approves via the portal dashboard (AdminApproveButton), which sets courseAccess=true. Approved members see course module detail pages at /courses/[id].',
+              title: 'Men\'s support space',
+              icon: <FaMars className="text-sky-300" />,
+              body:
+                'Men members get a separate blue support area focused on talking therapies, crisis support, fatherhood, family pressure and abuse support for men.',
             },
           ].map((item) => (
-            <div key={item.step} className="border border-zinc-700 rounded-lg px-4 py-3">
+            <div key={item.title} className="border border-zinc-700 rounded-lg px-4 py-3">
               <div className="flex items-center gap-2 mb-1">
                 {item.icon}
-                <span className="text-white font-semibold">{item.step}</span>
-                <Link href={item.path} className="text-orange-400 text-xs hover:underline ml-auto">{item.path}</Link>
+                <span className="text-white font-semibold">{item.title}</span>
               </div>
-              <p className="text-zinc-300 text-xs leading-relaxed">{item.desc}</p>
+              <p className="text-zinc-300 text-xs leading-relaxed">{item.body}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* User Data Structure */}
       <section className="mb-12">
         <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
           <FaDatabase className="inline mr-2 text-orange-400" />
-          User Data Structure
+          Data Structure
         </h2>
+
         <p className="text-zinc-400 text-xs mb-3">
-          Each member account in <code className="bg-black/40 px-1 rounded">portal_users</code> (or <code className="bg-black/40 px-1 rounded">data/portal-users.json</code> in local development) contains the following fields:
+          Member accounts are stored in <code className="bg-black/40 px-1 rounded">portal_users</code> when
+          <code className="bg-black/40 px-1 rounded ml-1">DATABASE_URL</code> is configured.
+        </p>
+        <div className="overflow-x-auto mb-6">
+          <table className="w-full text-xs text-left">
+            <thead>
+              <tr className="border-b border-zinc-700 text-zinc-400 text-xs uppercase tracking-wider">
+                <th className="py-2 pr-4 font-semibold">Field</th>
+                <th className="py-2 pr-4 font-semibold">Type</th>
+                <th className="py-2 font-semibold">Description</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-zinc-800">
+              {ACCOUNT_FIELDS.map((field) => (
+                <tr key={field.field} className="text-zinc-300">
+                  <td className="py-2 pr-4 font-mono text-orange-300 align-top">{field.field}</td>
+                  <td className="py-2 pr-4 text-zinc-400 align-top whitespace-nowrap">{field.type}</td>
+                  <td className="py-2 align-top">{field.desc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="text-zinc-400 text-xs mb-3">
+          Women safety reporting is stored across <code className="bg-black/40 px-1 rounded">portal_women_reports</code> and
+          <code className="bg-black/40 px-1 rounded ml-1">portal_women_report_attachments</code>.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-xs text-left">
@@ -482,60 +436,22 @@ export default async function AdminOverviewPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-800">
-              {USER_FIELDS.map((f) => (
-                <tr key={f.field} className="text-zinc-300">
-                  <td className="py-2 pr-4 font-mono text-orange-300 align-top">{f.field}</td>
-                  <td className="py-2 pr-4 text-zinc-400 align-top whitespace-nowrap">{f.type}</td>
-                  <td className="py-2 align-top">{f.desc}</td>
+              {WOMEN_REPORT_FIELDS.map((field) => (
+                <tr key={field.field} className="text-zinc-300">
+                  <td className="py-2 pr-4 font-mono text-pink-300 align-top">{field.field}</td>
+                  <td className="py-2 pr-4 text-zinc-400 align-top whitespace-nowrap">{field.type}</td>
+                  <td className="py-2 align-top">{field.desc}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </div>
-
-        <p className="text-zinc-400 text-xs mt-6 mb-3">
-          Diary entries in <code className="bg-black/40 px-1 rounded">mmh-diary.json</code>:
-        </p>
-        <div className="overflow-x-auto">
-          <table className="w-full text-xs text-left">
-            <thead>
-              <tr className="border-b border-zinc-700 text-zinc-400 text-xs uppercase tracking-wider">
-                <th className="py-2 pr-4 font-semibold">Field</th>
-                <th className="py-2 pr-4 font-semibold">Type</th>
-                <th className="py-2 font-semibold">Description</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-zinc-800">
-              {DIARY_FIELDS.map((f) => (
-                <tr key={f.field} className="text-zinc-300">
-                  <td className="py-2 pr-4 font-mono text-orange-300 align-top">{f.field}</td>
-                  <td className="py-2 pr-4 text-zinc-400 align-top whitespace-nowrap">{f.type}</td>
-                  <td className="py-2 align-top">{f.desc}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <div className="mt-4 border border-zinc-700 rounded-lg px-4 py-3 text-xs text-left space-y-1">
-          <p className="text-zinc-300 font-semibold">Other stored data</p>
-          <p className="text-zinc-400">
-            <strong className="text-white">Wall posts</strong> (mmh-wall.json): id, userId, userName, content (max 1,000 chars), isAnonymous, createdAt
-          </p>
-          <p className="text-zinc-400">
-            <strong className="text-white">Help messages</strong> (mmh-help.json): id, userId, userName, userEmail, subject (max 200 chars), message (max 5,000 chars), createdAt, respondedAt?, adminReply?
-          </p>
-          <p className="text-zinc-400">
-            <strong className="text-white">Admin account</strong>: NOT stored in the member table — read from ADMIN_EMAIL / ADMIN_PASSWORD_HASH / ADMIN_NAME environment variables on every request.
-          </p>
         </div>
       </section>
 
-      {/* Full Site Tree */}
       <section className="mb-12">
         <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
           <FaSitemap className="inline mr-2 text-orange-400" />
-          Full Site Tree
+          Route Map
         </h2>
         <div className="space-y-8 text-left">
           {SITE_TREE.map((section) => (
@@ -557,22 +473,34 @@ export default async function AdminOverviewPage() {
         </div>
       </section>
 
-      {/* GDPR / Data Privacy */}
       <section className="mb-12">
         <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
           <FaInfoCircle className="inline mr-2 text-orange-400" />
-          Data Privacy &amp; GDPR Compliance
+          Privacy and Operational Notes
         </h2>
-        <div className="space-y-3 text-sm text-left">
-          <div className="border border-zinc-700 rounded-lg px-4 py-3 text-xs text-zinc-300 space-y-2">
-            <p><strong className="text-white">Data collected at registration:</strong> Full name, email address, hashed password, GDPR consent flag + timestamp, account creation date.</p>
-            <p><strong className="text-white">Data never stored:</strong> Plain-text passwords (bcrypt hashed with cost 12 only), payment card details.</p>
-            <p><strong className="text-white">Data shared with third parties:</strong> Never — no analytics, no advertising, no data sale.</p>
-            <p><strong className="text-white">Member data access:</strong> Each member can only access their own diary, story and help messages. Admin can access all member data for operational purposes.</p>
-            <p><strong className="text-white">Data deletion:</strong> Members can request account deletion by emailing {CONTACT_EMAIL}. Admin manually removes the user record from the JSON file.</p>
-            <p><strong className="text-white">Data retention:</strong> Member accounts are retained while the account is active when DATABASE_URL is configured. File-based portal data may still be wiped on redeploy until migrated.</p>
-            <p><strong className="text-white">Security:</strong> All pages served over HTTPS (Vercel automatic SSL). Session tokens encrypted with iron-session (AES-256). Passwords hashed with bcrypt (cost 12). Dummy bcrypt compare on unknown email to prevent timing attacks.</p>
-          </div>
+        <div className="border border-zinc-700 rounded-lg px-4 py-3 text-xs text-zinc-300 space-y-2 text-left">
+          <p><strong className="text-white">Admin account:</strong> Kept outside the member table and loaded from environment variables.</p>
+          <p><strong className="text-white">Passwords:</strong> Stored only as bcrypt hashes.</p>
+          <p><strong className="text-white">Welcome email:</strong> Sent automatically after successful registration and tailored by selected portal space.</p>
+          <p><strong className="text-white">Police handling:</strong> The portal produces a structured support pack. It does not directly submit evidence to police systems.</p>
+          <p><strong className="text-white">Remaining migration gap:</strong> Diary, wall and help data still need moving into Postgres if full durability is required.</p>
+          <p><strong className="text-white">Support contact:</strong> {CONTACT_EMAIL}</p>
+          <p><strong className="text-white">Admin password changes:</strong> Admin password remains environment-backed and is not changed through the member password route.</p>
+          <p><strong className="text-white">Course gating:</strong> Course-access approval is still controlled by admin from the main portal dashboard.</p>
+        </div>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-black text-white mb-4 normal-case tracking-normal border-b border-zinc-700 pb-2">
+          <FaLock className="inline mr-2 text-orange-400" />
+          Current technical position
+        </h2>
+        <div className="border border-zinc-700 rounded-lg px-4 py-3 text-sm text-left">
+          <p className="text-zinc-300">
+            The portal now has segmented women and men spaces, a database-backed women safety reporting flow with
+            evidence uploads, pregnancy support routes and admin-side visibility for those reports. The remaining
+            storage risk is limited to diary, wall and help content, which are still on JSON files.
+          </p>
         </div>
       </section>
     </div>

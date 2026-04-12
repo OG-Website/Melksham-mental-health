@@ -3,7 +3,7 @@ import fs from 'fs';
 import { portalApiErrorResponse } from '@/lib/portalApi';
 import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import { getPortalUsersStorageDetails } from '@/lib/portalConfig';
-import { getPortalUsersTableStats } from '@/lib/portalDb';
+import { getPortalUsersTableStats, getWomenSupportTableStats } from '@/lib/portalDb';
 
 function getFileStats(filePath: string): { exists: boolean; sizeBytes: number; entries: number } {
   try {
@@ -34,14 +34,17 @@ export async function GET() {
     const usersStats = usersStorage.mode === 'database'
       ? { exists: true, ...(await getPortalUsersTableStats()) }
       : getFileStats(usersStorage.location);
+    const womenSupportStats = usersStorage.mode === 'database'
+      ? { exists: true, ...(await getWomenSupportTableStats()) }
+      : { exists: false, reportEntries: 0, attachmentEntries: 0, sizeBytes: 0 };
 
     return NextResponse.json({
       environment: isProduction ? 'production' : 'development',
       storageType: usersStorage.mode === 'database'
-        ? 'hybrid: postgres for member accounts, file-based JSON for diary/wall/help'
+        ? 'hybrid: postgres for member accounts and women safety reporting, file-based JSON for diary/wall/help'
         : 'file-based JSON (development fallback)',
       storageNote: usersStorage.mode === 'database'
-        ? 'Member accounts persist in Postgres via DATABASE_URL. Diary, wall, and help data are still stored in file-based JSON.'
+        ? 'Member accounts and women safety reporting persist in Postgres via DATABASE_URL. Diary, wall, and help data are still stored in file-based JSON.'
         : usersStorage.description,
       files: {
         users: {
@@ -49,6 +52,17 @@ export async function GET() {
           mode: usersStorage.mode,
           durable: usersStorage.durable,
           ...usersStats,
+        },
+        womenSafetyReports: {
+          path: usersStorage.mode === 'database'
+            ? 'postgres://portal_women_reports + portal_women_report_attachments'
+            : 'Not available without DATABASE_URL',
+          mode: usersStorage.mode === 'database' ? 'database' : 'unavailable',
+          durable: usersStorage.mode === 'database',
+          exists: womenSupportStats.exists,
+          entries: womenSupportStats.reportEntries,
+          attachmentEntries: womenSupportStats.attachmentEntries,
+          sizeBytes: womenSupportStats.sizeBytes,
         },
         diary: { path: diaryPath, mode: 'file', durable: false, ...getFileStats(diaryPath) },
         wall: { path: wallPath, mode: 'file', durable: false, ...getFileStats(wallPath) },
@@ -61,14 +75,14 @@ export async function GET() {
         maxBandwidthPro: '1 TB / month',
         concurrentExecutions: 'Auto-scaled by Vercel',
         note: usersStorage.mode === 'database'
-          ? 'Member accounts no longer rely on /tmp. Diary, wall, and help data still do unless they are migrated as well.'
+          ? 'Member accounts and women safety evidence no longer rely on /tmp. Diary, wall, and help data still do unless they are migrated as well.'
           : 'Production portal auth requires DATABASE_URL. The JSON fallback is intended for local development only.',
       },
       userCapacity: {
         estimatedMaxUsers: usersStorage.mode === 'database'
-          ? 'Member-account capacity now depends on your Postgres plan rather than /tmp storage.'
+          ? 'Member-account capacity and safety-report evidence storage now depend on your Postgres plan rather than /tmp storage.'
           : 'Local JSON fallback only. Production should use Postgres for durable member accounts.',
-        recommendation: 'Use DATABASE_URL for persistent member accounts and add a migration/export step if you need to preserve existing JSON member data.',
+        recommendation: 'Use DATABASE_URL for persistent member accounts and safety reporting, and add a migration/export step if you need to preserve existing JSON member data.',
       },
     });
   } catch (error) {

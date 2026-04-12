@@ -1,8 +1,10 @@
 import nodemailer from 'nodemailer';
+import type { PortalFocus } from '@/lib/portalFocus';
 
 interface WelcomeEmailInput {
   name: string;
   email: string;
+  portalFocus: PortalFocus;
 }
 
 interface AdminBroadcastEmailInput {
@@ -173,6 +175,18 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
   const safeSupportEmail = escapeHtml(supportEmail);
   const from = getFromAddress();
   const portalLoginUrl = 'https://melksham-mentalhealth.us/portal/login';
+  const supportSpaceLine =
+    input.portalFocus === 'women'
+      ? '7. Open your Women\'s Support Space for pregnancy, safety, stalking, Claire\'s Law and reporting support.\n'
+      : input.portalFocus === 'men'
+        ? '7. Open your Men\'s Support Space for talking therapies, fatherhood support, domestic abuse support and men-specific wellbeing tools.\n'
+        : '';
+  const supportSpaceHtml =
+    input.portalFocus === 'women'
+      ? '<li style="margin:0;">Open your Women\'s Support Space for safety, pregnancy and reporting support.</li>'
+      : input.portalFocus === 'men'
+        ? '<li style="margin:0;">Open your Men\'s Support Space for talking therapies, fatherhood support and men-specific wellbeing tools.</li>'
+        : '';
 
   const payload: EmailPayload = {
     from,
@@ -189,7 +203,9 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
       '3. Request access to additional courses from your portal account.\n' +
       '4. Update your interests so your content stays relevant.\n' +
       '5. Use diary and story features to record reflections and personal progress.\n' +
-      '6. Return regularly to continue your learning journey and track updates.\n\n' +
+      '6. Return regularly to continue your learning journey and track updates.\n' +
+      supportSpaceLine +
+      '\n' +
       'If you need help with login, access, or course support, contact us and we will assist.\n' +
       `Support email: ${supportEmail}\n\n` +
       'From Rob at Melksham Mental Health\n' +
@@ -234,7 +250,8 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
                     <li style="margin:0 0 8px;">Request course access for additional training pathways.</li>
                     <li style="margin:0 0 8px;">Update your interests so your learning stays relevant.</li>
                     <li style="margin:0 0 8px;">Use diary and story tools to record reflection and progress.</li>
-                    <li style="margin:0;">Return regularly to continue your course journey.</li>
+                    <li style="margin:0 0 8px;">Return regularly to continue your course journey.</li>
+                    ${supportSpaceHtml}
                   </ul>
                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 22px;">
                     <tr>

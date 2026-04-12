@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { ensurePortalDatabaseConfigured, getUsersFilePath, usesPortalDatabase } from '@/lib/portalConfig';
 import { queryPortalUsers } from '@/lib/portalDb';
+import { normalizePortalFocus, type PortalFocus } from '@/lib/portalFocus';
 
 export interface User {
   id: string;
@@ -11,6 +12,7 @@ export interface User {
   passwordHash: string;
   name: string;
   isAdmin: boolean;
+  portalFocus: PortalFocus;
   gdprConsent: boolean;
   gdprConsentDate: string;
   createdAt: string;
@@ -71,6 +73,7 @@ function normalizeUser(record: UserRecord): User {
     passwordHash: record.passwordHash,
     name: record.name.trim(),
     isAdmin: false,
+    portalFocus: normalizePortalFocus(record.portalFocus),
     gdprConsent: record.gdprConsent ?? true,
     gdprConsentDate,
     createdAt,
@@ -116,6 +119,7 @@ function getAdminUser(): User {
     passwordHash,
     name: process.env.ADMIN_NAME ?? 'Rob Johnston',
     isAdmin: true,
+    portalFocus: 'general',
     gdprConsent: true,
     gdprConsentDate: '2024-01-01T00:00:00.000Z',
     createdAt: '2024-01-01T00:00:00.000Z',
@@ -144,6 +148,7 @@ async function listStoredMembers(): Promise<User[]> {
           gdpr_consent AS "gdprConsent",
           gdpr_consent_date AS "gdprConsentDate",
           created_at AS "createdAt",
+          portal_focus AS "portalFocus",
           interests,
           course_access AS "courseAccess",
           course_access_applied AS "courseAccessApplied",
@@ -174,6 +179,7 @@ async function findStoredMemberByEmail(email: string): Promise<User | null> {
           gdpr_consent AS "gdprConsent",
           gdpr_consent_date AS "gdprConsentDate",
           created_at AS "createdAt",
+          portal_focus AS "portalFocus",
           interests,
           course_access AS "courseAccess",
           course_access_applied AS "courseAccessApplied",
@@ -206,6 +212,7 @@ async function findStoredMemberById(id: string): Promise<User | null> {
           gdpr_consent AS "gdprConsent",
           gdpr_consent_date AS "gdprConsentDate",
           created_at AS "createdAt",
+          portal_focus AS "portalFocus",
           interests,
           course_access AS "courseAccess",
           course_access_applied AS "courseAccessApplied",
@@ -259,6 +266,7 @@ export async function createUser(
   password: string,
   name: string,
   gdprConsent: boolean,
+  portalFocus: PortalFocus = 'general',
 ): Promise<{ success: true; user: User } | { success: false; error: string }> {
   if (!gdprConsent) {
     return { success: false, error: 'You must agree to the data policy to register.' };
@@ -289,6 +297,7 @@ export async function createUser(
     passwordHash: await bcrypt.hash(password, 12),
     name: trimmedName,
     isAdmin: false,
+    portalFocus: normalizePortalFocus(portalFocus),
     gdprConsent: true,
     gdprConsentDate: now,
     createdAt: now,
@@ -310,13 +319,14 @@ export async function createUser(
             gdpr_consent,
             gdpr_consent_date,
             created_at,
+            portal_focus,
             interests,
             course_access,
             course_access_applied,
             story,
             login_count
           ) VALUES (
-            $1, $2, $3, $4, $5, $6::timestamptz, $7::timestamptz, $8::int[], $9, $10, $11, $12
+            $1, $2, $3, $4, $5, $6::timestamptz, $7::timestamptz, $8, $9::int[], $10, $11, $12, $13
           )
         `,
         [
@@ -327,6 +337,7 @@ export async function createUser(
           user.gdprConsent,
           user.gdprConsentDate,
           user.createdAt,
+          user.portalFocus,
           user.interests,
           user.courseAccess,
           user.courseAccessApplied,

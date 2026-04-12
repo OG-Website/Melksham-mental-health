@@ -17,6 +17,7 @@ export async function GET() {
         email: user.email,
         name: user.name,
         isAdmin: user.isAdmin,
+        portalFocus: user.portalFocus,
         interests: user.interests,
       },
     });

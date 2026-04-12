@@ -3,6 +3,7 @@ import { portalApiErrorResponse } from '@/lib/portalApi';
 import { savePortalSession } from '@/lib/portalAuth';
 import { sendPortalWelcomeEmail } from '@/lib/portalEmail';
 import { createUser } from '@/lib/users';
+import { normalizePortalFocus } from '@/lib/portalFocus';
 
 export async function POST(request: Request) {
   try {
@@ -11,8 +12,9 @@ export async function POST(request: Request) {
       password?: string;
       name?: string;
       gdprConsent?: boolean;
+      portalFocus?: string;
     };
-    const { email, password, name, gdprConsent } = body;
+    const { email, password, name, gdprConsent, portalFocus } = body;
 
     if (!email || !password || !name) {
       return NextResponse.json({ error: 'Name, email and password are required.' }, { status: 400 });
@@ -21,7 +23,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'You must agree to the data policy to register.' }, { status: 400 });
     }
 
-    const result = await createUser(email, password, name, gdprConsent);
+    const normalizedFocus = normalizePortalFocus(portalFocus);
+    const result = await createUser(email, password, name, gdprConsent, normalizedFocus);
     if (!result.success) {
       return NextResponse.json({ error: result.error }, { status: 400 });
     }
@@ -30,6 +33,7 @@ export async function POST(request: Request) {
     const emailResult = await sendPortalWelcomeEmail({
       name: result.user.name,
       email: result.user.email,
+      portalFocus: result.user.portalFocus,
     });
     if (!emailResult.sent) {
       console.warn('[MMH portal] Welcome email was not sent:', emailResult.reason ?? 'unknown reason');
@@ -42,6 +46,7 @@ export async function POST(request: Request) {
         email: result.user.email,
         name: result.user.name,
         isAdmin: result.user.isAdmin,
+        portalFocus: result.user.portalFocus,
       },
       welcomeEmailSent: emailResult.sent,
     });

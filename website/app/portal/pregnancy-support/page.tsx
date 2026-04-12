@@ -1,0 +1,96 @@
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
+import { FaArrowLeft, FaBaby, FaHeart, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa';
+import { loadCurrentSessionUser } from '@/lib/portalAuth';
+import { hasWomenSupportAccess } from '@/lib/portalFocus';
+import { pregnancySupportSections } from '@/lib/supportSpaces';
+
+export const metadata = {
+  title: 'Pregnancy Support | Melksham Mental Health',
+  description: 'Pregnancy support for planned, unplanned, safe and unsafe situations, with local maternity routes.',
+};
+
+export default async function PregnancySupportPage() {
+  const { user } = await loadCurrentSessionUser();
+
+  if (!user) {
+    redirect('/portal/login?next=/portal/pregnancy-support');
+  }
+  if (!hasWomenSupportAccess(user)) {
+    redirect('/portal');
+  }
+
+  return (
+    <div className="page-content women-space-page">
+      <div className="flex items-center gap-3 mb-2">
+        <Link href="/portal/womens-space" className="text-pink-100 hover:text-white transition-colors">
+          <FaArrowLeft />
+        </Link>
+        <p className="women-space-kicker">Pregnancy Support</p>
+      </div>
+
+      <div className="women-space-hero text-left">
+        <h1 className="women-space-title">Pregnancy Support</h1>
+        <p className="women-space-copy">
+          Support for planned pregnancy, unplanned pregnancy, single-parent pressure, relationship stress,
+          unsafe relationships and direct maternity routes around Wiltshire.
+        </p>
+      </div>
+
+      <div className="mt-8 grid gap-4 md:grid-cols-3 text-left">
+        {[
+          {
+            icon: <FaBaby />,
+            title: 'Planned or unplanned',
+            body: 'The page includes NHS first steps plus counselling and options support if you are unsure what to do.',
+          },
+          {
+            icon: <FaHeart />,
+            title: 'Single or in a relationship',
+            body: 'Use the practical support links even if the relationship feels unstable, controlling or financially unsafe.',
+          },
+          {
+            icon: <FaShieldAlt />,
+            title: 'Safety first',
+            body: 'If pregnancy has increased risk from a partner or ex-partner, use the abuse and Clare\'s Law links immediately.',
+          },
+        ].map((item) => (
+          <div key={item.title} className="women-space-panel">
+            <div className="women-space-panel-icon">{item.icon}</div>
+            <h2 className="women-space-panel-title">{item.title}</h2>
+            <p className="women-space-panel-copy">{item.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-10 space-y-8 text-left">
+        {pregnancySupportSections.map((section) => (
+          <section key={section.title} className="women-space-section">
+            <h2 className="women-space-section-title">{section.title}</h2>
+            {section.description ? <p className="women-space-copy mb-4">{section.description}</p> : null}
+            <div className="grid gap-3">
+              {section.links.map((link) => (
+                <a
+                  key={link.title}
+                  href={link.url}
+                  target={link.url.startsWith('http') ? '_blank' : undefined}
+                  rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="women-space-link-card"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="women-space-link-title">{link.title}</p>
+                      <p className="women-space-link-copy">{link.description}</p>
+                      {link.phone ? <p className="women-space-link-meta">Phone: {link.phone}</p> : null}
+                    </div>
+                    {section.title.includes('maternity') ? <FaMapMarkerAlt className="text-pink-100 flex-shrink-0 mt-1" /> : null}
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  );
+}
