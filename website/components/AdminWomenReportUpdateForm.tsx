@@ -50,14 +50,14 @@ export function AdminWomenReportUpdateForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-4 space-y-3 rounded-lg border border-zinc-700 bg-black/20 p-4">
+    <form onSubmit={handleSubmit} className="mt-4 space-y-3 women-space-panel">
       <div className="grid gap-3 md:grid-cols-2">
         <label className="block">
-          <span className="block text-xs font-semibold text-zinc-300 mb-1">Status</span>
+          <span className="block text-xs font-semibold text-pink-100 mb-1">Status</span>
           <select
             value={status}
             onChange={(event) => setStatus(event.target.value as WomenSupportReportStatus)}
-            className="w-full rounded-lg border border-zinc-600 bg-black/60 px-3 py-2 text-sm text-white"
+            className="women-space-input"
           >
             <option value="submitted">Submitted</option>
             <option value="reviewing">Reviewing</option>
@@ -66,24 +66,24 @@ export function AdminWomenReportUpdateForm({
         </label>
 
         <label className="block">
-          <span className="block text-xs font-semibold text-zinc-300 mb-1">Police reference</span>
+          <span className="block text-xs font-semibold text-pink-100 mb-1">Police reference</span>
           <input
             type="text"
             value={policeReference}
             onChange={(event) => setPoliceReference(event.target.value)}
-            className="w-full rounded-lg border border-zinc-600 bg-black/60 px-3 py-2 text-sm text-white"
+            className="women-space-input"
             placeholder="Crime or incident reference"
           />
         </label>
       </div>
 
       <label className="block">
-        <span className="block text-xs font-semibold text-zinc-300 mb-1">Admin notes</span>
+        <span className="block text-xs font-semibold text-pink-100 mb-1">Admin notes</span>
         <textarea
           value={adminNotes}
           onChange={(event) => setAdminNotes(event.target.value)}
           rows={4}
-          className="w-full rounded-lg border border-zinc-600 bg-black/60 px-3 py-2 text-sm text-white"
+          className="women-space-input"
           placeholder="Internal notes or actions taken"
         />
       </label>
@@ -92,11 +92,11 @@ export function AdminWomenReportUpdateForm({
         <button
           type="submit"
           disabled={submitting}
-          className="metal-button metal-button--small disabled:opacity-60 disabled:cursor-not-allowed"
+          className="women-space-button disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {submitting ? 'Saving...' : 'Save review'}
         </button>
-        {message ? <span className="text-xs text-zinc-300">{message}</span> : null}
+        {message ? <span className="text-xs text-pink-100">{message}</span> : null}
       </div>
     </form>
   );
