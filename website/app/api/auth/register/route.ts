@@ -3,7 +3,7 @@ import { portalApiErrorResponse } from '@/lib/portalApi';
 import { savePortalSession } from '@/lib/portalAuth';
 import { sendPortalWelcomeEmail } from '@/lib/portalEmail';
 import { createUser } from '@/lib/users';
-import { isPublicPortalFocus } from '@/lib/portalFocus';
+import { isPortalFocus } from '@/lib/portalFocus';
 
 export async function POST(request: Request) {
   try {
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'You must agree to the data policy to register.' }, { status: 400 });
     }
 
-    if (!isPublicPortalFocus(portalFocus)) {
+    if (!isPortalFocus(portalFocus)) {
       return NextResponse.json(
         { error: 'Please choose either the Female Portal or the Male Portal.' },
         { status: 400 },

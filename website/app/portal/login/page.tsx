@@ -48,17 +48,17 @@ function LoginForm() {
       const data = await res.json() as {
         ok?: boolean;
         error?: string;
-        user?: { portalFocus?: PortalFocus };
+        user?: { isAdmin?: boolean; portalFocus?: PortalFocus };
       };
       if (!res.ok || !data.ok) {
         setError(getLoginErrorMessage(data.error));
       } else {
         const defaultTarget =
-          data.user?.portalFocus === 'women'
+          data.user?.isAdmin
+            ? '/portal'
+            : data.user?.portalFocus === 'women'
             ? '/portal/womens-space'
-            : data.user?.portalFocus === 'men'
-              ? '/portal/mens-space'
-              : '/portal';
+            : '/portal/mens-space';
         router.push(next ?? defaultTarget);
         router.refresh();
       }

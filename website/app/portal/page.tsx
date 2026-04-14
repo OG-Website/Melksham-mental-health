@@ -88,10 +88,8 @@ const MODULE_TOPICS: Record<number, string> = {
   50: 'Prison, Legal System & Mental Health',
 };
 
-function describePortalFocus(portalFocus: 'general' | 'women' | 'men'): string {
-  if (portalFocus === 'women') return 'Women';
-  if (portalFocus === 'men') return 'Men';
-  return 'General';
+function describePortalFocus(portalFocus: 'women' | 'men'): string {
+  return portalFocus === 'women' ? 'Female' : 'Male';
 }
 
 export default async function PortalPage() {

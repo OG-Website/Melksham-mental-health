@@ -1,12 +1,10 @@
-export type PortalFocus = 'general' | 'women' | 'men';
-export type PublicPortalFocus = Exclude<PortalFocus, 'general'>;
+export type PortalFocus = 'women' | 'men';
 
 export function normalizePortalFocus(value: unknown): PortalFocus {
-  if (value === 'men') return 'men';
-  return value === 'women' ? 'women' : 'general';
+  return value === 'women' ? 'women' : 'men';
 }
 
-export function isPublicPortalFocus(value: unknown): value is PublicPortalFocus {
+export function isPortalFocus(value: unknown): value is PortalFocus {
   return value === 'women' || value === 'men';
 }
 

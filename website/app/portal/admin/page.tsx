@@ -75,7 +75,7 @@ const SITE_TREE = [
   {
     section: 'Portal Routes',
     routes: [
-      { path: '/portal/register', label: 'Register', desc: 'Member registration with portal-space selection: general, women or men.' },
+      { path: '/portal/register', label: 'Register', desc: 'Member registration with portal-space selection: female or male.' },
       { path: '/portal/login', label: 'Login', desc: 'Member and admin login with redirect based on support-space selection.' },
       { path: '/portal', label: 'Portal Dashboard', desc: 'Main logged-in dashboard. Admin sees members, reports, broadcasts and operational queues.' },
       { path: '/portal/womens-space', label: 'Women\'s Support Space', desc: 'Women-specific support area with safety, health and practical links.' },
@@ -117,7 +117,7 @@ const ACCOUNT_FIELDS = [
   { field: 'email', type: 'string', desc: 'Lower-case login email.' },
   { field: 'passwordHash', type: 'string', desc: 'bcrypt hash only. Plain-text password is never stored.' },
   { field: 'name', type: 'string', desc: 'Display name used throughout the portal.' },
-  { field: 'portalFocus', type: 'general | women | men', desc: 'Selected support space used for post-login routing and gated sections.' },
+  { field: 'portalFocus', type: 'women | men', desc: 'Selected support space used for post-login routing and gated sections.' },
   { field: 'gdprConsent', type: 'boolean', desc: 'Registration consent flag.' },
   { field: 'gdprConsentDate', type: 'ISO 8601 string', desc: 'Timestamp of consent capture.' },
   { field: 'createdAt', type: 'ISO 8601 string', desc: 'Timestamp of account creation.' },
@@ -180,7 +180,6 @@ export default async function AdminOverviewPage() {
   const totalInterests = members.reduce((acc, member) => acc + member.interests.length, 0);
   const womenMembers = members.filter((member) => member.portalFocus === 'women').length;
   const menMembers = members.filter((member) => member.portalFocus === 'men').length;
-  const generalMembers = members.filter((member) => member.portalFocus === 'general').length;
   const totalStorageBytes =
     usersInfo.sizeBytes +
     womenSupportInfo.sizeBytes +
@@ -273,7 +272,6 @@ export default async function AdminOverviewPage() {
             { label: 'Registered Members', value: members.length, icon: <FaUsers className="text-orange-400" /> },
             { label: 'Women Space', value: womenMembers, icon: <FaVenus className="text-pink-300" /> },
             { label: 'Men Space', value: menMembers, icon: <FaMars className="text-sky-300" /> },
-            { label: 'General Space', value: generalMembers, icon: <FaUserShield className="text-zinc-300" /> },
             { label: 'Women Reports', value: womenSupportInfo.reportEntries, icon: <FaShieldAlt className="text-pink-300" /> },
             { label: 'Evidence Files', value: womenSupportInfo.attachmentEntries, icon: <FaFileAlt className="text-pink-300" /> },
             { label: 'Unread Help', value: pendingHelp, icon: <FaEnvelope className="text-red-400" /> },
@@ -353,7 +351,7 @@ export default async function AdminOverviewPage() {
               title: 'Registration and routing',
               icon: <FaUsers className="text-orange-400" />,
               body:
-                'Registration now captures portalFocus. Women accounts are routed into the women\'s space, men into the men\'s space, and general members into the standard portal/course flow.',
+                'Registration now captures portalFocus as female or male only. Women accounts are routed into the women\'s space and men into the men\'s space.',
             },
             {
               title: 'Women\'s support space',

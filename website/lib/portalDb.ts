@@ -47,7 +47,7 @@ export async function ensurePortalSchema(): Promise<void> {
           course_access_applied BOOLEAN NOT NULL DEFAULT FALSE,
           course_access_applied_at TIMESTAMPTZ NULL,
           story TEXT NULL,
-          portal_focus TEXT NOT NULL DEFAULT 'general',
+          portal_focus TEXT NOT NULL DEFAULT 'men' CHECK (portal_focus IN ('women', 'men')),
           login_count INTEGER NOT NULL DEFAULT 0,
           last_login_at TIMESTAMPTZ NULL
         )
@@ -55,7 +55,33 @@ export async function ensurePortalSchema(): Promise<void> {
       .then(() =>
         getPool().query(`
           ALTER TABLE portal_users
-          ADD COLUMN IF NOT EXISTS portal_focus TEXT NOT NULL DEFAULT 'general'
+          ADD COLUMN IF NOT EXISTS portal_focus TEXT NOT NULL DEFAULT 'men'
+        `),
+      )
+      .then(() =>
+        getPool().query(`
+          UPDATE portal_users
+          SET portal_focus = 'men'
+          WHERE portal_focus IS NULL OR portal_focus NOT IN ('women', 'men')
+        `),
+      )
+      .then(() =>
+        getPool().query(`
+          ALTER TABLE portal_users
+          ALTER COLUMN portal_focus SET DEFAULT 'men'
+        `),
+      )
+      .then(() =>
+        getPool().query(`
+          ALTER TABLE portal_users
+          DROP CONSTRAINT IF EXISTS portal_users_portal_focus_check
+        `),
+      )
+      .then(() =>
+        getPool().query(`
+          ALTER TABLE portal_users
+          ADD CONSTRAINT portal_users_portal_focus_check
+          CHECK (portal_focus IN ('women', 'men'))
         `),
       )
       .then(() =>

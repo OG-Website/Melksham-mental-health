@@ -119,7 +119,7 @@ function getAdminUser(): User {
     passwordHash,
     name: process.env.ADMIN_NAME ?? 'Rob Johnston',
     isAdmin: true,
-    portalFocus: 'general',
+    portalFocus: 'men',
     gdprConsent: true,
     gdprConsentDate: '2024-01-01T00:00:00.000Z',
     createdAt: '2024-01-01T00:00:00.000Z',
@@ -266,7 +266,7 @@ export async function createUser(
   password: string,
   name: string,
   gdprConsent: boolean,
-  portalFocus: PortalFocus = 'general',
+  portalFocus: PortalFocus = 'men',
 ): Promise<{ success: true; user: User } | { success: false; error: string }> {
   if (!gdprConsent) {
     return { success: false, error: 'You must agree to the data policy to register.' };

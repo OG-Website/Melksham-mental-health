@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FaLock, FaEnvelope, FaUser, FaEye, FaEyeSlash, FaShieldAlt } from 'react-icons/fa';
 import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
-import type { PublicPortalFocus } from '@/lib/portalFocus';
+import type { PortalFocus } from '@/lib/portalFocus';
 
 function getRegisterErrorMessage(message?: string): string {
   if (!message) return 'Registration failed. Please try again.';
@@ -28,7 +28,7 @@ export default function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [portalFocus, setPortalFocus] = useState<PublicPortalFocus | ''>('');
+  const [portalFocus, setPortalFocus] = useState<PortalFocus | ''>('');
   const [showPassword, setShowPassword] = useState(false);
   const [gdprConsent, setGdprConsent] = useState(false);
   const [error, setError] = useState('');
@@ -61,17 +61,15 @@ export default function RegisterPage() {
       const data = await res.json() as {
         ok?: boolean;
         error?: string;
-        user?: { portalFocus?: PublicPortalFocus };
+        user?: { portalFocus?: PortalFocus };
       };
       if (!res.ok || !data.ok) {
         setError(getRegisterErrorMessage(data.error));
       } else {
         if (data.user?.portalFocus === 'women') {
           router.push('/portal/womens-space');
-        } else if (data.user?.portalFocus === 'men') {
-          router.push('/portal/mens-space');
         } else {
-          router.push('/courses');
+          router.push('/portal/mens-space');
         }
         router.refresh();
       }
@@ -197,7 +195,7 @@ export default function RegisterPage() {
                       name="portalFocus"
                       value={option.value}
                       checked={portalFocus === option.value}
-                      onChange={(e) => setPortalFocus(e.target.value as PublicPortalFocus)}
+                      onChange={(e) => setPortalFocus(e.target.value as PortalFocus)}
                       className="mt-1 accent-orange-500"
                     />
                     <div>
