@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { FaBaby, FaHeart, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa';
-import WomenPortalShell from '@/components/WomenPortalShell';
+import SupportPortalShell from '@/components/SupportPortalShell';
 import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import { hasWomenSupportAccess } from '@/lib/portalFocus';
 import { pregnancySupportSections } from '@/lib/supportSpaces';
@@ -21,14 +21,16 @@ export default async function PregnancySupportPage() {
   }
 
   return (
-    <WomenPortalShell
+    <SupportPortalShell
+      theme="women"
       activeHref="/portal/pregnancy-support"
       kicker="Pregnancy Support"
-      title="Pregnancy support inside the women's portal"
-      description="Planned or unplanned, single or in a relationship, safe or unsafe - this space keeps the practical next steps, maternity routes and abuse support together."
+      title="Pregnancy support without losing the rest of the site"
+      description="Planned or unplanned, single or in a relationship, safe or unsafe: this space keeps practical next steps, maternity routes and abuse support together while still leaving the wider Melksham site available."
       backHref="/portal/womens-space"
       backLabel="Back to women's portal"
       actions={[
+        { href: '/courses', label: 'Courses' },
         { href: '/portal/report-him', label: 'Report Him' },
         { href: '/portal/womens-space', label: 'Women\'s home', variant: 'secondary' },
       ]}
@@ -100,6 +102,6 @@ export default async function PregnancySupportPage() {
           ))}
         </div>
       </div>
-    </WomenPortalShell>
+    </SupportPortalShell>
   );
 }

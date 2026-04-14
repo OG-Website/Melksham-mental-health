@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { FaExclamationTriangle, FaHeart, FaShieldAlt, FaTint } from 'react-icons/fa';
-import WomenPortalShell from '@/components/WomenPortalShell';
+import SupportPortalShell from '@/components/SupportPortalShell';
 import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import { hasWomenSupportAccess } from '@/lib/portalFocus';
 import { urgentSupportLinks, womensSupportSections } from '@/lib/supportSpaces';
@@ -21,14 +21,16 @@ export default async function WomensSpacePage() {
   }
 
   return (
-    <WomenPortalShell
+    <SupportPortalShell
+      theme="women"
       activeHref="/portal/womens-space"
       kicker="Women's Support Space"
-      title="A separate women's portal, not the orange site in disguise"
-      description="This area is built for women dealing with stalking, domestic abuse, periods, school assault, sexting, child-maintenance pressure, image-based harm and pregnancy-related strain."
+      title="Women's portal with the full site still intact"
+      description="This portal keeps Melksham's main site access in place and adds women-specific support for safety, pregnancy, sexual harm, stalking, school assault, sexting, child-maintenance pressure and recovery."
       backHref="/portal"
       backLabel="Back to main portal"
       actions={[
+        { href: '/courses', label: 'Courses' },
         { href: '/portal/report-him', label: 'Open Report Him' },
         { href: '/portal/pregnancy-support', label: 'Pregnancy support', variant: 'secondary' },
       ]}
@@ -37,9 +39,9 @@ export default async function WomensSpacePage() {
           <p className="women-portal-side-title">Inside this portal</p>
           <ul className="women-portal-side-items">
             <li>Stalking, coercive control and Clare&apos;s Law support</li>
-            <li>Periods, hormonal strain and women&apos;s health signposting</li>
+            <li>Women's health, hormonal strain and pregnancy support</li>
             <li>Historic abuse, school assault, sexting and image-based harm</li>
-            <li>Pregnancy routes, maternity support and emergency contacts</li>
+            <li>Full access to courses, blog, resources and main portal tools</li>
           </ul>
         </div>
       )}
@@ -119,6 +121,6 @@ export default async function WomensSpacePage() {
           </div>
         </section>
       </div>
-    </WomenPortalShell>
+    </SupportPortalShell>
   );
 }

@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { FaDownload, FaFileAlt, FaShieldAlt } from 'react-icons/fa';
-import WomenPortalShell from '@/components/WomenPortalShell';
+import SupportPortalShell from '@/components/SupportPortalShell';
 import { loadCurrentSessionUser } from '@/lib/portalAuth';
 import { hasWomenSupportAccess } from '@/lib/portalFocus';
 import { WomenSupportReportForm } from '@/components/WomenSupportReportForm';
@@ -27,14 +27,16 @@ export default async function ReportHimPage() {
     : await listWomenSupportReportsForUser(user.id);
 
   return (
-    <WomenPortalShell
+    <SupportPortalShell
+      theme="women"
       activeHref="/portal/report-him"
       kicker="Report Him"
       title="Collect evidence and build the support pack properly"
-      description="Capture screenshots, messages, school incidents, stalking, coercive control, sexting and image-based harm in one structured flow. This stores the case inside the portal and creates a police-ready pack."
+      description="Capture screenshots, messages, school incidents, stalking, coercive control, sexting and image-based harm in one structured flow. This lives inside the women's portal without stripping out courses, resources or the wider site."
       backHref={user.isAdmin ? '/portal' : '/portal/womens-space'}
       backLabel={user.isAdmin ? 'Back to admin portal' : 'Back to women\'s portal'}
       actions={[
+        { href: '/courses', label: 'Courses' },
         { href: '/portal/womens-space', label: 'Women\'s home', variant: 'secondary' },
         { href: '/portal/pregnancy-support', label: 'Pregnancy support', variant: 'secondary' },
       ]}
@@ -162,6 +164,6 @@ export default async function ReportHimPage() {
           )}
         </section>
       </div>
-    </WomenPortalShell>
+    </SupportPortalShell>
   );
 }
