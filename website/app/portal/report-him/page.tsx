@@ -38,16 +38,29 @@ export default async function ReportHimPage() {
       <div className="women-space-hero text-left">
         <h1 className="women-space-title">Report Him</h1>
         <p className="women-space-copy">
-          Capture a structured timeline, upload screenshots, generate a police-ready pack and keep the evidence together.
+          Capture a structured timeline, upload screenshots, report stalking, sexual assault, sexting,
+          school-based abuse, coercive control or image-based harm, and generate a police-ready pack.
           This creates an internal support record and export text. It does not directly submit to the police.
         </p>
       </div>
 
-      {!user.isAdmin ? (
+      {user.isAdmin ? (
+        <div className="mt-8 space-y-4">
+          <div className="women-space-panel">
+            <h2 className="women-space-panel-title">Member reporting form preview</h2>
+            <p className="women-space-panel-copy">
+              This is the actual intake form women members use when reporting stalking, sexting, school assault,
+              image-based abuse, coercive control or harassment. Admin can review the structure here and use the
+              sections below to review incoming reports.
+            </p>
+          </div>
+          <WomenSupportReportForm previewOnly />
+        </div>
+      ) : (
         <div className="mt-8">
           <WomenSupportReportForm />
         </div>
-      ) : null}
+      )}
 
       <section className="mt-10 text-left">
         <div className="flex items-center gap-3 mb-4">

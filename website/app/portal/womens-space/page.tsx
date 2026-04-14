@@ -33,7 +33,8 @@ export default async function WomensSpacePage() {
         <h1 className="women-space-title">Women&apos;s Support Space</h1>
         <p className="women-space-copy">
           A dedicated area for women dealing with safety concerns, stalking, domestic abuse, pregnancy,
-          periods, child-maintenance stress and the mental load that comes with all of it.
+          periods, child-maintenance stress, sexual assault when younger, school-based abuse,
+          sexting and image-based harm.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href="/portal/report-him" className="women-space-button">
@@ -50,7 +51,7 @@ export default async function WomensSpacePage() {
           {
             icon: <FaShieldAlt />,
             title: 'Safety first',
-            body: 'Use the Report Him tool to capture screenshots, messages, timelines and a police-ready support pack.',
+            body: 'Use the Report Him tool to capture screenshots, messages, school incidents, timelines and a police-ready support pack.',
           },
           {
             icon: <FaTint />,

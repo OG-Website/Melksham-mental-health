@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 const ACCEPTED_EVIDENCE_TEXT = 'PNG, JPG, WEBP, GIF, HEIC, HEIF or PDF up to 4 MB each';
 
-export function WomenSupportReportForm() {
+export function WomenSupportReportForm({ previewOnly = false }: { previewOnly?: boolean }) {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -13,6 +13,9 @@ export function WomenSupportReportForm() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (previewOnly) {
+      return;
+    }
     setError('');
     setSuccess('');
     setSubmitting(true);
@@ -42,6 +45,11 @@ export function WomenSupportReportForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 text-left women-space-panel">
+      {previewOnly ? (
+        <div className="rounded-lg border border-pink-300/60 bg-pink-950/50 px-4 py-3 text-sm text-pink-50">
+          Admin preview only. Members with women&apos;s-space access see and submit this form.
+        </div>
+      ) : null}
       {error ? (
         <div className="rounded-lg border border-red-400/60 bg-red-950/50 px-4 py-3 text-sm text-red-100">
           {error}
@@ -53,12 +61,16 @@ export function WomenSupportReportForm() {
         </div>
       ) : null}
 
+      <fieldset disabled={previewOnly} className="space-y-4 disabled:opacity-80">
       <div className="grid gap-4 md:grid-cols-2">
         <label className="block">
           <span className="block text-sm font-semibold text-pink-50 mb-1">Incident type</span>
           <select name="incidentType" required className="women-space-input">
             <option value="">Choose one</option>
             <option value="Unsolicited sexual images">Unsolicited sexual images</option>
+            <option value="Sexting, sextortion or image-based abuse">Sexting, sextortion or image-based abuse</option>
+            <option value="Sexual assault at school, college or university">Sexual assault at school, college or university</option>
+            <option value="Historic abuse when younger">Historic abuse when younger</option>
             <option value="Stalking or monitoring">Stalking or monitoring</option>
             <option value="Domestic abuse or coercive control">Domestic abuse or coercive control</option>
             <option value="Harassment or threats">Harassment or threats</option>
@@ -222,11 +234,12 @@ export function WomenSupportReportForm() {
 
       <button
         type="submit"
-        disabled={submitting}
+        disabled={submitting || previewOnly}
         className="women-space-button disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {submitting ? 'Saving report...' : 'Save report and generate pack'}
+        {previewOnly ? 'Preview only - members submit this form' : submitting ? 'Saving report...' : 'Save report and generate pack'}
       </button>
+      </fieldset>
     </form>
   );
 }

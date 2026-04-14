@@ -34,6 +34,38 @@ export const womensSupportSections: SupportSection[] = [
     ],
   },
   {
+    title: 'Sexual assault, school abuse and image-based harm',
+    description: 'Direct routes for rape, sexual assault, abuse when younger, harmful sexual behaviour in school settings and sexual-image abuse.',
+    links: [
+      {
+        title: 'GOV.UK - Report a rape or sexual assault',
+        description: 'Official guidance on reporting rape or sexual assault, preserving evidence and support if you are not ready to go to police immediately.',
+        url: 'https://www.gov.uk/report-rape-sexual-assault',
+      },
+      {
+        title: 'Rape Crisis England & Wales',
+        description: '24/7 support line and specialist support for rape, child sexual abuse, sexual assault and sexual harassment.',
+        url: 'https://rapecrisis.org.uk/',
+        phone: '0808 500 2222',
+      },
+      {
+        title: 'Wiltshire Police - Sextortion reporting',
+        description: 'Wiltshire Police advice on sextortion, evidence, timelines and how to report online sexual blackmail safely.',
+        url: 'https://www.wiltshire.police.uk/advice/advice-and-information/online-safety/online-safety/sextortion/sextortion-reporting-it-to-us/',
+      },
+      {
+        title: 'CEOP - Report online sexual abuse',
+        description: 'Report online sexual abuse, grooming or exploitation involving a child or young person.',
+        url: 'https://www.ceop.police.uk/ceop-reporting/',
+      },
+      {
+        title: 'Childline - Report Remove',
+        description: 'If you are under 18 and a nude or sexual image has been shared online, Childline can help get it removed.',
+        url: 'https://www.childline.org.uk/remove/',
+      },
+    ],
+  },
+  {
     title: 'Stalking, abuse and relationship safety',
     description: 'Police and specialist services for stalking, coercive control, domestic abuse and unsafe partners.',
     links: [

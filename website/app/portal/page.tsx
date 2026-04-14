@@ -210,11 +210,32 @@ export default async function PortalPage() {
         {user.isAdmin && (
           <>
             <Link
+              href="/portal/womens-space"
+              className="metal-button metal-button--small"
+              style={{ background: 'linear-gradient(180deg,#ff66b7 0%,#ff4b95 100%)', borderColor: '#ff82c2' }}
+            >
+              <FaVenus /> Women&apos;s Space
+            </Link>
+            <Link
               href="/portal/report-him"
               className="metal-button metal-button--small"
               style={{ background: 'linear-gradient(180deg,#ff66b7 0%,#ff4b95 100%)', borderColor: '#ff82c2' }}
             >
-              <FaShieldAlt /> Review Reports
+              <FaShieldAlt /> Report Him
+            </Link>
+            <Link
+              href="/portal/pregnancy-support"
+              className="metal-button metal-button--small"
+              style={{ background: 'linear-gradient(180deg,#ff66b7 0%,#ff4b95 100%)', borderColor: '#ff82c2' }}
+            >
+              <FaHandHoldingHeart /> Pregnancy Support
+            </Link>
+            <Link
+              href="/portal/mens-space"
+              className="metal-button metal-button--small"
+              style={{ background: 'linear-gradient(180deg,#34a7ff 0%,#2375ff 100%)', borderColor: '#79c6ff' }}
+            >
+              <FaMars /> Men&apos;s Space
             </Link>
             <Link href="/portal/admin" className="metal-button metal-button--small">
               <FaSitemap /> Site Overview
@@ -258,6 +279,42 @@ export default async function PortalPage() {
             Open Men&apos;s Space
           </Link>
         </div>
+      )}
+
+      {user.isAdmin && (
+        <>
+          <div className="mb-12 border border-pink-400/40 rounded-lg px-5 py-5 text-left bg-pink-950/20">
+            <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
+              <FaVenus className="inline mr-2 text-pink-300" />Women&apos;s Portal Audit View
+            </h2>
+            <p className="text-zinc-200 text-sm mb-4">
+              Open the live women&apos;s portal, the reporting flow, pregnancy support and the pink theme exactly as members see it.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/portal/womens-space" className="inline-flex items-center gap-2 text-sm font-bold text-pink-100 border border-pink-300/60 px-3 py-1.5 rounded-full hover:bg-pink-600/20 transition-colors">
+                Open Women&apos;s Space
+              </Link>
+              <Link href="/portal/report-him" className="inline-flex items-center gap-2 text-sm font-bold text-pink-100 border border-pink-300/60 px-3 py-1.5 rounded-full hover:bg-pink-600/20 transition-colors">
+                Open Report Him
+              </Link>
+              <Link href="/portal/pregnancy-support" className="inline-flex items-center gap-2 text-sm font-bold text-pink-100 border border-pink-300/60 px-3 py-1.5 rounded-full hover:bg-pink-600/20 transition-colors">
+                Open Pregnancy Support
+              </Link>
+            </div>
+          </div>
+
+          <div className="mb-12 border border-sky-400/40 rounded-lg px-5 py-5 text-left bg-sky-950/20">
+            <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
+              <FaMars className="inline mr-2 text-sky-300" />Men&apos;s Portal Audit View
+            </h2>
+            <p className="text-zinc-200 text-sm mb-4">
+              Open the live men&apos;s support portal and check the tailored men&apos;s routes and resources.
+            </p>
+            <Link href="/portal/mens-space" className="inline-flex items-center gap-2 text-sm font-bold text-sky-100 border border-sky-300/60 px-3 py-1.5 rounded-full hover:bg-sky-600/20 transition-colors">
+              Open Men&apos;s Space
+            </Link>
+          </div>
+        </>
       )}
 
       {!user.isAdmin && !user.courseAccess && (
