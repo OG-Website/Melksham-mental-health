@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FaLock, FaEnvelope, FaUser, FaEye, FaEyeSlash, FaShieldAlt } from 'react-icons/fa';
 import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
-import type { PortalFocus } from '@/lib/portalFocus';
+import type { PublicPortalFocus } from '@/lib/portalFocus';
 
 function getRegisterErrorMessage(message?: string): string {
   if (!message) return 'Registration failed. Please try again.';
@@ -28,7 +28,7 @@ export default function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [portalFocus, setPortalFocus] = useState<PortalFocus>('general');
+  const [portalFocus, setPortalFocus] = useState<PublicPortalFocus | ''>('');
   const [showPassword, setShowPassword] = useState(false);
   const [gdprConsent, setGdprConsent] = useState(false);
   const [error, setError] = useState('');
@@ -46,6 +46,10 @@ export default function RegisterPage() {
       setError('You must agree to the data policy to register.');
       return;
     }
+    if (portalFocus !== 'women' && portalFocus !== 'men') {
+      setError('Please choose either the Female Portal or the Male Portal.');
+      return;
+    }
 
     setLoading(true);
     try {
@@ -57,7 +61,7 @@ export default function RegisterPage() {
       const data = await res.json() as {
         ok?: boolean;
         error?: string;
-        user?: { portalFocus?: PortalFocus };
+        user?: { portalFocus?: PublicPortalFocus };
       };
       if (!res.ok || !data.ok) {
         setError(getRegisterErrorMessage(data.error));
@@ -86,7 +90,7 @@ export default function RegisterPage() {
           Create Your Account
         </h1>
         <p className="text-zinc-300 mb-8 text-sm">
-          Join the members portal to browse our 50-module course programme and request to join sessions.
+          Choose the Female Portal or Male Portal, then create your account to access the right support space.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5 text-left">
@@ -164,24 +168,19 @@ export default function RegisterPage() {
 
           <div>
             <label className="block text-zinc-300 text-sm font-semibold mb-2">
-              Support Space
+              Choose Portal
             </label>
             <div className="grid gap-3 text-sm">
               {[
                 {
-                  value: 'general',
-                  title: 'General Portal',
-                  description: 'Standard member portal with course tools, diary, wall and community support.',
-                },
-                {
                   value: 'women',
-                  title: 'Women\'s Support Space',
-                  description: 'Adds women-specific support for periods, pregnancy, stalking, Clare\'s Law, domestic abuse and reporting.',
+                  title: 'Female Portal',
+                  description: 'Women-specific support for pregnancy, periods, stalking, Clare\'s Law, domestic abuse and reporting.',
                 },
                 {
                   value: 'men',
-                  title: 'Men\'s Support Space',
-                  description: 'Adds men-specific support for talking therapies, fatherhood, men\'s mental health and abuse support.',
+                  title: 'Male Portal',
+                  description: 'Men-specific support for talking therapies, fatherhood, men\'s mental health and abuse support.',
                 },
               ].map((option) => (
                 <label
@@ -198,7 +197,7 @@ export default function RegisterPage() {
                       name="portalFocus"
                       value={option.value}
                       checked={portalFocus === option.value}
-                      onChange={(e) => setPortalFocus(e.target.value as PortalFocus)}
+                      onChange={(e) => setPortalFocus(e.target.value as PublicPortalFocus)}
                       className="mt-1 accent-orange-500"
                     />
                     <div>
