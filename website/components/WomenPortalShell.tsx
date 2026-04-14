@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { FaArrowLeft, FaBaby, FaHeart, FaHome, FaShieldAlt, FaVenus } from 'react-icons/fa';
+import { FaArrowLeft, FaBaby, FaHeart, FaHome, FaShieldAlt } from 'react-icons/fa';
 
 interface WomenPortalAction {
   href: string;
@@ -42,16 +41,10 @@ export default function WomenPortalShell({
   return (
     <div className="women-portal-shell">
       <header className="women-portal-header">
-        <div className="women-portal-header-row">
-          <Link href="/portal/womens-space" className="women-portal-brand">
-            <span className="women-portal-brand-mark">
-              <FaVenus />
-            </span>
-            <span className="women-portal-brand-text">
-              <span className="women-portal-brand-overline">Melksham Mental Health</span>
-              <span className="women-portal-brand-name">Women&apos;s Portal</span>
-            </span>
-          </Link>
+        <div className="women-portal-header-art" aria-hidden="true" />
+
+        <div className="women-portal-header-lower">
+          <p className="women-portal-header-label">Melksham Women&apos;s Portal</p>
 
           <nav className="women-portal-nav" aria-label="Women portal">
             {NAV_ITEMS.map((item) => {
@@ -77,6 +70,8 @@ export default function WomenPortalShell({
       </header>
 
       <section className="women-portal-hero">
+        <div className="women-portal-hero-overlay" />
+
         <div className="women-portal-hero-back-row">
           <Link href={backHref} className="women-portal-back-link">
             <FaArrowLeft />
@@ -105,21 +100,8 @@ export default function WomenPortalShell({
             ) : null}
           </div>
 
-          <aside className="women-portal-side-panel women-portal-art-card">
-            <div className="women-portal-art-image-wrap">
-              <Image
-                src="/womens/Womans.png"
-                alt="Melksham Mental Health women's portal artwork"
-                fill
-                className="women-portal-art-image"
-                sizes="(max-width: 960px) 100vw, 34vw"
-                priority
-              />
-            </div>
-            <div className="women-portal-art-overlay" />
-            <div className="women-portal-side-panel-content">
-              {aside}
-            </div>
+          <aside className="women-portal-side-panel">
+            <div className="women-portal-side-panel-content">{aside}</div>
           </aside>
         </div>
       </section>
@@ -127,11 +109,14 @@ export default function WomenPortalShell({
       <div className="women-portal-content">{children}</div>
 
       <footer className="women-portal-footer">
-        <p className="women-portal-footer-title">Melksham Women&apos;s Portal</p>
-        <p className="women-portal-footer-copy">
-          A separate support space for women facing abuse, stalking, pregnancy pressure, sexual harm,
-          coercive control and mental health strain.
-        </p>
+        <div className="women-portal-footer-art" aria-hidden="true" />
+        <div className="women-portal-footer-copywrap">
+          <p className="women-portal-footer-title">Melksham Women&apos;s Portal</p>
+          <p className="women-portal-footer-copy">
+            A separate support space for women facing abuse, stalking, pregnancy pressure, sexual harm,
+            coercive control and mental health strain.
+          </p>
+        </div>
       </footer>
     </div>
   );
