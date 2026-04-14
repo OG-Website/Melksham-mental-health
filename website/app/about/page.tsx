@@ -10,7 +10,7 @@ const LIFE_SECTIONS = [
   {
     title: 'Where I Started',
     paragraphs: [
-      'I was born at Rawdon Hospital on 30 January 1989 and grew up in Broadtown in Wiltshire. I am the middle of three boys. My older brother has a different dad, but he has been there since the day I was born and he is still there now. My younger brother is from the same father as me.',
+      'I was born at Wroughton Hospital on 30 January 1989 and grew up in Broadtown in Wiltshire. I am the middle of three boys. My older brother has a different dad, but he has been there since the day I was born and he is still there now. My younger brother is from the same father as me.',
       'I did know my dad for a while, but he was never a stable or meaningful part of my life. He left his mark in the wrong way and, in the end, he became somebody who meant very little to me.',
       'When my mum remarried, my stepdad brought stability into our lives. Around 1997 we moved to Haydon Wick and, for those three years, life felt good. It felt like a proper home and a proper childhood.',
     ],
