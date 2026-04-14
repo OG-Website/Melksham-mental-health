@@ -173,7 +173,7 @@ export default function RegisterPage() {
                 {
                   value: 'women',
                   title: 'Female Portal',
-                  description: 'Women-specific support for pregnancy, periods, stalking, Clare\'s Law, domestic abuse and reporting.',
+                  description: 'Women-specific support for pregnancy, stalking, Clare\'s Law, domestic abuse and reporting.',
                 },
                 {
                   value: 'men',
