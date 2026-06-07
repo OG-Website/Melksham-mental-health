@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+coverage
+.logs
+*.log
+cmd-start.err.log
+cmd-start.out.log
+.env
+.env.local
+.env.*.local
+data/portal-users.json
+data/generated/course-decks
