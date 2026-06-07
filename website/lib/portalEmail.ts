@@ -178,12 +178,16 @@ export async function sendPortalWelcomeEmail(input: WelcomeEmailInput): Promise<
   const supportSpaceLine =
     input.portalFocus === 'women'
       ? '7. Open your Women\'s Support Space for pregnancy, safety, stalking, Claire\'s Law and reporting support.\n'
+      : input.portalFocus === 'both'
+        ? '7. Your account includes both the Women\'s Support Space and the Men\'s Support Space for full portal testing and support review.\n'
       : input.portalFocus === 'men'
         ? '7. Open your Men\'s Support Space for talking therapies, fatherhood support, domestic abuse support and men-specific wellbeing tools.\n'
         : '';
   const supportSpaceHtml =
     input.portalFocus === 'women'
       ? '<li style="margin:0;">Open your Women\'s Support Space for safety, pregnancy and reporting support.</li>'
+      : input.portalFocus === 'both'
+        ? '<li style="margin:0;">Your account includes both the Women\'s Support Space and the Men\'s Support Space for full portal testing and support review.</li>'
       : input.portalFocus === 'men'
         ? '<li style="margin:0;">Open your Men\'s Support Space for talking therapies, fatherhood support and men-specific wellbeing tools.</li>'
         : '';

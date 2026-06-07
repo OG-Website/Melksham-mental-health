@@ -29,6 +29,7 @@ import { AdminHelpReplyForm } from '@/components/AdminHelpReplyForm';
 import { getAdminBroadcastNotes } from '@/lib/adminBroadcasts';
 import { AdminBroadcastForm } from '@/components/AdminBroadcastForm';
 import { listWomenSupportReportsForAdmin } from '@/lib/womenSupport';
+import { hasMenSupportAccess, hasWomenSupportAccess, type PortalFocus } from '@/lib/portalFocus';
 
 export const metadata = {
   title: 'Member Portal | Melksham Mental Health',
@@ -88,8 +89,10 @@ const MODULE_TOPICS: Record<number, string> = {
   50: 'Prison, Legal System & Mental Health',
 };
 
-function describePortalFocus(portalFocus: 'women' | 'men'): string {
-  return portalFocus === 'women' ? 'Female' : 'Male';
+function describePortalFocus(portalFocus: PortalFocus): string {
+  if (portalFocus === 'women') return 'Female';
+  if (portalFocus === 'both') return 'Female + Male';
+  return 'Male';
 }
 
 export default async function PortalPage() {
@@ -103,6 +106,9 @@ export default async function PortalPage() {
   const helpMessages = user.isAdmin ? getAllMessages() : null;
   const broadcastNotes = user.isAdmin ? getAdminBroadcastNotes(12) : null;
   const womenReports = user.isAdmin ? await listWomenSupportReportsForAdmin(8) : [];
+  const canAccessWomen = hasWomenSupportAccess(user);
+  const canAccessMen = hasMenSupportAccess(user);
+  const hasDualPortalAccess = !user.isAdmin && user.portalFocus === 'both';
 
   const interestCount: Record<number, number> = {};
   if (members) {
@@ -127,6 +133,10 @@ export default async function PortalPage() {
       {user.isAdmin ? (
         <span className="inline-block bg-orange-600/30 border border-orange-500/50 text-orange-300 text-xs font-bold px-3 py-1 rounded-full mb-6">
           Founder - Rob Johnston
+        </span>
+      ) : hasDualPortalAccess ? (
+        <span className="inline-flex items-center gap-2 bg-fuchsia-600/20 border border-fuchsia-400/50 text-fuchsia-100 text-xs font-bold px-3 py-1 rounded-full mb-6">
+          <FaUsers /> Women&apos;s and Men&apos;s Support Enabled
         </span>
       ) : user.portalFocus === 'women' ? (
         <span className="inline-flex items-center gap-2 bg-pink-600/20 border border-pink-400/50 text-pink-100 text-xs font-bold px-3 py-1 rounded-full mb-6">
@@ -169,7 +179,7 @@ export default async function PortalPage() {
           <FaLock /> Change Password
         </Link>
 
-        {!user.isAdmin && user.portalFocus === 'women' && (
+        {!user.isAdmin && canAccessWomen && (
           <>
             <Link
               href="/portal/womens-space"
@@ -195,7 +205,7 @@ export default async function PortalPage() {
           </>
         )}
 
-        {!user.isAdmin && user.portalFocus === 'men' && (
+        {!user.isAdmin && canAccessMen && (
           <Link
             href="/portal/mens-space"
             className="metal-button metal-button--small"
@@ -244,7 +254,7 @@ export default async function PortalPage() {
         <LogoutButton />
       </div>
 
-      {!user.isAdmin && user.portalFocus === 'women' && (
+      {!user.isAdmin && canAccessWomen && (
         <div className="mb-12 border border-pink-400/40 rounded-lg px-5 py-5 text-left bg-pink-950/20">
           <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
             <FaVenus className="inline mr-2 text-pink-300" />Your Women&apos;s Support Space
@@ -264,7 +274,7 @@ export default async function PortalPage() {
         </div>
       )}
 
-      {!user.isAdmin && user.portalFocus === 'men' && (
+      {!user.isAdmin && canAccessMen && (
         <div className="mb-12 border border-sky-400/40 rounded-lg px-5 py-5 text-left bg-sky-950/20">
           <h2 className="text-white font-black text-base mb-2 normal-case tracking-normal">
             <FaMars className="inline mr-2 text-sky-300" />Your Men&apos;s Support Space

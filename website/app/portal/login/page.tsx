@@ -58,6 +58,8 @@ function LoginForm() {
             ? '/portal'
             : data.user?.portalFocus === 'women'
             ? '/portal/womens-space'
+            : data.user?.portalFocus === 'both'
+              ? '/portal'
             : '/portal/mens-space';
         router.push(next ?? defaultTarget);
         router.refresh();

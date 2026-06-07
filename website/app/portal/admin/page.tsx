@@ -76,7 +76,7 @@ const SITE_TREE = [
     section: 'Portal Routes',
     routes: [
       { path: '/portal/register', label: 'Register', desc: 'Member registration with portal-space selection: female or male.' },
-      { path: '/portal/login', label: 'Login', desc: 'Member and admin login with redirect based on support-space selection.' },
+      { path: '/portal/login', label: 'Login', desc: 'Member and admin login with redirect based on support-space selection or internal dual-access account mode.' },
       { path: '/portal', label: 'Portal Dashboard', desc: 'Main logged-in dashboard. Admin sees members, reports, broadcasts and operational queues.' },
       { path: '/portal/womens-space', label: 'Women\'s Support Space', desc: 'Women-specific support area with safety, health and practical links.' },
       { path: '/portal/report-him', label: 'Report Him', desc: 'Structured abuse and stalking reporting with evidence upload and police-ready pack generation.' },
@@ -117,7 +117,7 @@ const ACCOUNT_FIELDS = [
   { field: 'email', type: 'string', desc: 'Lower-case login email.' },
   { field: 'passwordHash', type: 'string', desc: 'bcrypt hash only. Plain-text password is never stored.' },
   { field: 'name', type: 'string', desc: 'Display name used throughout the portal.' },
-  { field: 'portalFocus', type: 'women | men', desc: 'Selected support space used for post-login routing and gated sections.' },
+  { field: 'portalFocus', type: 'women | men | both', desc: 'Selected support space used for post-login routing and gated sections. "both" is reserved for internally created dual-access accounts.' },
   { field: 'gdprConsent', type: 'boolean', desc: 'Registration consent flag.' },
   { field: 'gdprConsentDate', type: 'ISO 8601 string', desc: 'Timestamp of consent capture.' },
   { field: 'createdAt', type: 'ISO 8601 string', desc: 'Timestamp of account creation.' },
@@ -180,6 +180,7 @@ export default async function AdminOverviewPage() {
   const totalInterests = members.reduce((acc, member) => acc + member.interests.length, 0);
   const womenMembers = members.filter((member) => member.portalFocus === 'women').length;
   const menMembers = members.filter((member) => member.portalFocus === 'men').length;
+  const dualMembers = members.filter((member) => member.portalFocus === 'both').length;
   const totalStorageBytes =
     usersInfo.sizeBytes +
     womenSupportInfo.sizeBytes +
@@ -272,6 +273,7 @@ export default async function AdminOverviewPage() {
             { label: 'Registered Members', value: members.length, icon: <FaUsers className="text-orange-400" /> },
             { label: 'Women Space', value: womenMembers, icon: <FaVenus className="text-pink-300" /> },
             { label: 'Men Space', value: menMembers, icon: <FaMars className="text-sky-300" /> },
+            { label: 'Dual Access', value: dualMembers, icon: <FaUsers className="text-fuchsia-300" /> },
             { label: 'Women Reports', value: womenSupportInfo.reportEntries, icon: <FaShieldAlt className="text-pink-300" /> },
             { label: 'Evidence Files', value: womenSupportInfo.attachmentEntries, icon: <FaFileAlt className="text-pink-300" /> },
             { label: 'Unread Help', value: pendingHelp, icon: <FaEnvelope className="text-red-400" /> },
@@ -351,7 +353,7 @@ export default async function AdminOverviewPage() {
               title: 'Registration and routing',
               icon: <FaUsers className="text-orange-400" />,
               body:
-                'Registration now captures portalFocus as female or male only. Women accounts are routed into the women\'s space and men into the men\'s space.',
+                'Public registration captures portalFocus as female or male only. Women accounts are routed into the women\'s space and men into the men\'s space. Internal guest accounts can also be provisioned with both spaces enabled.',
             },
             {
               title: 'Women\'s support space',

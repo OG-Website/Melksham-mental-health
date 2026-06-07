@@ -47,7 +47,7 @@ export async function ensurePortalSchema(): Promise<void> {
           course_access_applied BOOLEAN NOT NULL DEFAULT FALSE,
           course_access_applied_at TIMESTAMPTZ NULL,
           story TEXT NULL,
-          portal_focus TEXT NOT NULL DEFAULT 'men' CHECK (portal_focus IN ('women', 'men')),
+          portal_focus TEXT NOT NULL DEFAULT 'men' CHECK (portal_focus IN ('women', 'men', 'both')),
           login_count INTEGER NOT NULL DEFAULT 0,
           last_login_at TIMESTAMPTZ NULL
         )
@@ -62,7 +62,7 @@ export async function ensurePortalSchema(): Promise<void> {
         getPool().query(`
           UPDATE portal_users
           SET portal_focus = 'men'
-          WHERE portal_focus IS NULL OR portal_focus NOT IN ('women', 'men')
+          WHERE portal_focus IS NULL OR portal_focus NOT IN ('women', 'men', 'both')
         `),
       )
       .then(() =>
@@ -81,7 +81,7 @@ export async function ensurePortalSchema(): Promise<void> {
         getPool().query(`
           ALTER TABLE portal_users
           ADD CONSTRAINT portal_users_portal_focus_check
-          CHECK (portal_focus IN ('women', 'men'))
+          CHECK (portal_focus IN ('women', 'men', 'both'))
         `),
       )
       .then(() =>

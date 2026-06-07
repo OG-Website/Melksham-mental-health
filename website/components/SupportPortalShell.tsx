@@ -15,6 +15,17 @@ interface SupportPortalLink {
   label: string;
 }
 
+interface SupportPortalThemeConfig {
+  brandTitle: string;
+  strapline: string;
+  emergencyCopy: ReactNode;
+  footerCopy: string;
+  headerSrc: string;
+  footerSrc: string;
+  bannerAlt: string;
+  spaceLinks: SupportPortalLink[];
+}
+
 interface SupportPortalShellProps {
   theme: 'women' | 'men';
   activeHref: string;
@@ -47,7 +58,7 @@ const PORTAL_LINKS: SupportPortalLink[] = [
   { href: '/portal/help', label: 'Help' },
 ];
 
-const THEME_CONFIG = {
+const THEME_CONFIG: Record<'women' | 'men', SupportPortalThemeConfig> = {
   women: {
     brandTitle: "Melksham Women's Portal",
     strapline: 'Same Melksham site access, with women-specific coverage layered on top.',
@@ -59,8 +70,9 @@ const THEME_CONFIG = {
     ),
     footerCopy:
       'Women-specific safeguarding, pregnancy, health and reporting support inside the wider Melksham Mental Health site.',
-    brandSrc: '/womens/Womans.png',
-    brandAlt: "Melksham Women's Portal artwork",
+    headerSrc: '/portals/women/header.png',
+    footerSrc: '/portals/women/footer.png',
+    bannerAlt: "Melksham Women's Portal banner art",
     spaceLinks: [
       { href: '/portal/womens-space', label: "Women's Home" },
       { href: '/portal/report-him', label: 'Report Him' },
@@ -78,11 +90,12 @@ const THEME_CONFIG = {
     ),
     footerCopy:
       'Men-specific mental health, fatherhood, abuse and recovery support inside the wider Melksham Mental Health site.',
-    brandSrc: '/logo.png',
-    brandAlt: "Melksham Men's Portal logo",
+    headerSrc: '/portals/men/header.png',
+    footerSrc: '/portals/men/footer.png',
+    bannerAlt: "Melksham Men's Portal banner art",
     spaceLinks: [{ href: '/portal/mens-space', label: "Men's Home" }] satisfies SupportPortalLink[],
   },
-} as const;
+};
 
 function navLinkClass(active: boolean): string {
   return `support-portal-nav-link${active ? ' support-portal-nav-link--active' : ''}`;
@@ -101,25 +114,26 @@ export default function SupportPortalShell({
   children,
 }: SupportPortalShellProps) {
   const config = THEME_CONFIG[theme];
+  const portalLinks = [...PORTAL_LINKS, ...config.spaceLinks];
 
   return (
     <div className={`support-portal-shell support-portal-shell--${theme}`}>
       <header className="support-portal-header">
-        <div className="support-portal-brandbar">
-          <div className="support-portal-brandmedia">
-            <Image
-              src={config.brandSrc}
-              alt={config.brandAlt}
-              width={theme === 'women' ? 280 : 220}
-              height={theme === 'women' ? 180 : 72}
-              className={`support-portal-brandimage support-portal-brandimage--${theme}`}
-              priority
-            />
-          </div>
-          <div className="support-portal-brandcopy">
-            <p className="support-portal-brandlabel">{config.brandTitle}</p>
-            <p className="support-portal-brandstrap">{config.strapline}</p>
-          </div>
+        <div className="support-portal-banner support-portal-banner--header">
+          <Image
+            src={config.headerSrc}
+            alt={config.bannerAlt}
+            width={1504}
+            height={254}
+            className="support-portal-banner-image"
+            priority
+          />
+          <div className="support-portal-banner-mask support-portal-banner-mask--header" aria-hidden="true" />
+        </div>
+
+        <div className="support-portal-shell-copyline">
+          <p className="support-portal-brandlabel">{config.brandTitle}</p>
+          <p className="support-portal-brandstrap">{config.strapline}</p>
         </div>
 
         <nav className="support-portal-nav support-portal-nav--site" aria-label="Main site links">
@@ -135,18 +149,24 @@ export default function SupportPortalShell({
           ))}
         </nav>
 
-        <nav className="support-portal-nav support-portal-nav--portal" aria-label="Portal links">
-          {[...PORTAL_LINKS, ...config.spaceLinks].map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={navLinkClass(activeHref === item.href)}
-              aria-current={activeHref === item.href ? 'page' : undefined}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="support-portal-toolbar">
+          <Link href="/resources/crisis" className="support-portal-helpbutton">
+            Need Help Now?
+          </Link>
+
+          <nav className="support-portal-toolbar-links" aria-label="Portal links">
+            {portalLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`support-portal-toolbutton${activeHref === item.href ? ' support-portal-toolbutton--active' : ''}`}
+                aria-current={activeHref === item.href ? 'page' : undefined}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
         <div className="support-portal-alert-strip">{config.emergencyCopy}</div>
       </header>
@@ -189,55 +209,44 @@ export default function SupportPortalShell({
       <div className="support-portal-content">{children}</div>
 
       <footer className="support-portal-footer">
-        <div className="support-portal-footergrid">
-          <div className="support-portal-footerbrand">
-            <Image
-              src={config.brandSrc}
-              alt={config.brandAlt}
-              width={theme === 'women' ? 220 : 170}
-              height={theme === 'women' ? 132 : 56}
-              className={`support-portal-footerimage support-portal-footerimage--${theme}`}
-            />
+        <div className="support-portal-banner support-portal-banner--footer">
+          <Image
+            src={config.footerSrc}
+            alt={`${config.bannerAlt} footer art`}
+            width={1434}
+            height={289}
+            className="support-portal-banner-image"
+          />
+          <div className="support-portal-banner-mask support-portal-banner-mask--footer" aria-hidden="true" />
+        </div>
+
+        <div className="support-portal-footerbar">
+          <div className="support-portal-footercopywrap">
             <p className="support-portal-footertitle">{config.brandTitle}</p>
             <p className="support-portal-footercopy">{config.footerCopy}</p>
           </div>
 
-          <div>
-            <p className="support-portal-footerheading">Main Site</p>
-            <nav className="support-portal-footerlinks">
-              {SITE_LINKS.map((item) => (
-                <Link key={item.href} href={item.href} className="support-portal-footerlink">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          <div>
-            <p className="support-portal-footerheading">Portal</p>
-            <nav className="support-portal-footerlinks">
-              {[...PORTAL_LINKS, ...config.spaceLinks].map((item) => (
-                <Link key={item.href} href={item.href} className="support-portal-footerlink">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          <div>
-            <p className="support-portal-footerheading">Contact</p>
-            <div className="support-portal-footerlinks">
-              <a href={CONTACT_EMAIL_HREF} className="support-portal-footerlink">
-                {CONTACT_EMAIL}
-              </a>
-              <Link href="/privacy" className="support-portal-footerlink">
-                Privacy Policy
+          <nav className="support-portal-footerlinks" aria-label="Footer links">
+            {SITE_LINKS.map((item) => (
+              <Link key={item.href} href={item.href} className="support-portal-footerlink">
+                {item.label}
               </Link>
-              <Link href="/terms" className="support-portal-footerlink">
-                Terms
+            ))}
+            {portalLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="support-portal-footerlink">
+                {item.label}
               </Link>
-            </div>
-          </div>
+            ))}
+            <a href={CONTACT_EMAIL_HREF} className="support-portal-footerlink">
+              {CONTACT_EMAIL}
+            </a>
+            <Link href="/privacy" className="support-portal-footerlink">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="support-portal-footerlink">
+              Terms
+            </Link>
+          </nav>
         </div>
       </footer>
     </div>
