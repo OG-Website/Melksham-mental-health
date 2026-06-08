@@ -30,6 +30,13 @@ body {
   color: var(--foreground);
   font-family: 'Arial Black', Impact, sans-serif;
   font-weight: bold;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Main content area with background texture */
@@ -126,6 +133,65 @@ p {
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   pointer-events: none;
+}
+
+.site-header-shell {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-width: 0;
+  padding: 0.75rem 0;
+}
+
+.site-header-nav {
+  display: none;
+  min-width: 0;
+}
+
+.site-header-menu-button {
+  flex-shrink: 0;
+}
+
+.site-header-mobile-nav {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .site-header-shell {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-header-shell {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1840px) {
+  .site-header-shell {
+    max-width: 112rem;
+  }
+
+  .site-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+
+  .site-header-menu-button,
+  .site-header-mobile-nav {
+    display: none !important;
+  }
 }
 
 /* Footer with background_2.png */

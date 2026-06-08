@@ -22,13 +22,13 @@ export default function Header() {
 
   return (
     <header className="grunge-header sticky top-0 z-50">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center gap-6 py-3">
+      <div className="site-header-shell relative z-10">
+        <div className="site-header-row">
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image src="/logo.png" alt="Melksham Mental Health Logo" width={400} height={130} className="h-20 md:h-24 w-auto drop-shadow-2xl" priority />
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-1 justify-end">
+          <nav className="site-header-nav" aria-label="Main navigation">
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path} className="nav-link">
                 {item.name}
@@ -39,13 +39,13 @@ export default function Header() {
             </Link>
           </nav>
 
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="brand-icon-button xl:!hidden" aria-label="Toggle menu">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="brand-icon-button site-header-menu-button" aria-label="Toggle menu">
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
         {isMenuOpen && (
-          <nav className="xl:hidden pb-4 border-t border-primary/30 mt-2 pt-4 space-y-2">
+          <nav className="site-header-mobile-nav pb-4 border-t border-primary/30 mt-2 pt-4 space-y-2">
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path} className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>
                 {item.name}
