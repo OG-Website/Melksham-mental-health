@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaPhone, FaSkull } from 'react-icons/fa';
+import { FaEnvelope, FaHeart, FaLifeRing, FaPhone, FaSkull } from 'react-icons/fa';
 
 export default function CrisisBanner() {
   return (
@@ -10,7 +10,7 @@ export default function CrisisBanner() {
             <FaPhone className="animate-pulse text-white" />
             <span className="font-bold uppercase grunge-text">Need help now?</span>
           </div>
-          <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-sm font-bold uppercase">
+          <div className="crisis-phone-links">
             <a href="tel:116123" className="hover:text-primary transition-colors grunge-text">
               Samaritans: 116 123 (24/7)
             </a>
@@ -23,7 +23,18 @@ export default function CrisisBanner() {
               More Resources -&gt;
             </Link>
           </div>
-          <Link href="/portal/register" className="crisis-join-link">
+          <div className="site-action-links" aria-label="Key actions">
+            <Link href="/app/support" className="site-action-link">
+              <FaHeart /> Get Support
+            </Link>
+            <Link href="/resources/crisis" className="site-action-link site-action-link--danger">
+              <FaLifeRing /> Crisis Help
+            </Link>
+            <Link href="/contact" className="site-action-link">
+              <FaEnvelope /> Contact
+            </Link>
+          </div>
+          <Link href="/portal/register" className="site-action-link site-action-link--join">
             <FaSkull /> Join Now
           </Link>
         </div>
