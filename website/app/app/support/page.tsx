@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { CONTACT_EMAIL_HREF, CONTACT_EMAIL_LABEL } from '@/lib/constants';
 
 export const metadata = {
   title: 'Get Support | Melksham Mental Health',
@@ -41,7 +41,7 @@ export default function SupportPage() {
           <p className="text-lg text-zinc-100 mb-8">Contact us through the website form or email. We aim to respond as quickly as possible, but this is a peer-led service.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="metal-button metal-button--small pulse-attention">Contact Form</Link>
-            <a href={CONTACT_EMAIL_HREF} className="metal-button metal-button--small">{CONTACT_EMAIL}</a>
+            <a href={CONTACT_EMAIL_HREF} className="metal-button metal-button--small">{CONTACT_EMAIL_LABEL}</a>
           </div>
         </div>
       </div>

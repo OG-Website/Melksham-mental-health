@@ -24,7 +24,7 @@ import { getAllMembers } from '@/lib/users';
 import LogoutButton from '@/components/LogoutButton';
 import { AdminApproveButton } from '@/components/CourseAccessApplyButton';
 import { getAllMessages } from '@/lib/helpMessages';
-import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { CONTACT_EMAIL_HREF, CONTACT_EMAIL_LABEL } from '@/lib/constants';
 import { AdminHelpReplyForm } from '@/components/AdminHelpReplyForm';
 import { getAdminBroadcastNotes } from '@/lib/adminBroadcasts';
 import { AdminBroadcastForm } from '@/components/AdminBroadcastForm';
@@ -661,7 +661,7 @@ export default async function PortalPage() {
           <p>
             <strong>Melksham Mental Health:</strong>{' '}
             <a href={CONTACT_EMAIL_HREF} className="text-orange-400 underline font-semibold">
-              {CONTACT_EMAIL}
+              {CONTACT_EMAIL_LABEL}
             </a>
           </p>
         </div>

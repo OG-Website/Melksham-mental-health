@@ -1,5 +1,5 @@
 import { FaEnvelope, FaExclamationTriangle } from 'react-icons/fa';
-import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { CONTACT_EMAIL_HREF, CONTACT_EMAIL_LABEL } from '@/lib/constants';
 
 export const metadata = {
   title: 'Contact | Melksham Mental Health',
@@ -19,7 +19,7 @@ export default function ContactPage() {
           <h2 className="text-3xl font-black text-white mb-6 normal-case tracking-normal">Contact Methods</h2>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href={CONTACT_EMAIL_HREF} className="metal-button metal-button--small pulse-attention">
-              <FaEnvelope /> {CONTACT_EMAIL}
+              <FaEnvelope /> {CONTACT_EMAIL_LABEL}
             </a>
             <a href="https://www.facebook.com/groups/m.m.health" target="_blank" rel="noopener noreferrer" className="metal-button metal-button--small">
               Private Facebook Group

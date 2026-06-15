@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
-import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { CONTACT_EMAIL_HREF, CONTACT_EMAIL_LABEL } from '@/lib/constants';
 
 interface SupportPortalAction {
   href: string;
@@ -129,6 +129,9 @@ export default function SupportPortalShell({
             priority
           />
           <div className="support-portal-banner-mask support-portal-banner-mask--header" aria-hidden="true" />
+          <Link href="/portal/register" className="support-portal-banner-join" aria-label="Join now">
+            Join Now
+          </Link>
         </div>
 
         <div className="support-portal-shell-copyline">
@@ -238,7 +241,7 @@ export default function SupportPortalShell({
               </Link>
             ))}
             <a href={CONTACT_EMAIL_HREF} className="support-portal-footerlink">
-              {CONTACT_EMAIL}
+              {CONTACT_EMAIL_LABEL}
             </a>
             <Link href="/privacy" className="support-portal-footerlink">
               Privacy Policy

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaUsers, FaArrowLeft, FaTrash, FaUserSecret } from 'react-icons/fa';
 import type { WallPost } from '@/lib/wall';
-import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { CONTACT_EMAIL_HREF, CONTACT_EMAIL_LABEL } from '@/lib/constants';
 
 interface Props {
   initialPosts: WallPost[];
@@ -175,7 +175,7 @@ export default function WallClient({ initialPosts, currentUserId, isAdmin }: Pro
         Posts are visible to all portal members and are moderated.
         Report concerns to{' '}
         <a href={CONTACT_EMAIL_HREF} className="text-orange-400/70 underline">
-          {CONTACT_EMAIL}
+          {CONTACT_EMAIL_LABEL}
         </a>.
       </p>
     </div>

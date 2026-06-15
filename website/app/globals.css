@@ -1950,6 +1950,28 @@ body:has(.support-portal-shell) .main-content::before {
   border-radius: 14px;
 }
 
+.support-portal-banner-join {
+  position: absolute;
+  right: 4.2%;
+  bottom: 10.5%;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(18%, 250px);
+  height: 24%;
+  min-height: 42px;
+  border-radius: 12px;
+  color: transparent;
+  text-decoration: none;
+}
+
+.support-portal-banner-join:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(255, 58, 166, 0.45);
+}
+
 .support-portal-banner-mask--footer {
   top: 24%;
   right: 3.2%;
@@ -2279,6 +2301,13 @@ body:has(.support-portal-shell) .main-content::before {
     width: 22%;
     height: 31%;
     top: 35%;
+  }
+
+  .support-portal-banner-join {
+    right: 4%;
+    bottom: 9%;
+    width: 24%;
+    min-height: 34px;
   }
 
   .support-portal-banner-mask--footer {

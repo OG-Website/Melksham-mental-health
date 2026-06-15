@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { CONTACT_EMAIL_HREF, CONTACT_EMAIL_LABEL } from '@/lib/constants';
 
 export const metadata = {
   title: "Terms of Service | Melksham Mental Health",
@@ -139,7 +139,7 @@ export default function TermsPage() {
             <p className="text-white">
               Questions about these terms? Contact us at:{' '}
               <a href={CONTACT_EMAIL_HREF} className="text-secondary hover:text-primary">
-                {CONTACT_EMAIL}
+                {CONTACT_EMAIL_LABEL}
               </a>
             </p>
           </section>

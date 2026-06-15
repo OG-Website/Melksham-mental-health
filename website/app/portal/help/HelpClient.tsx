@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaArrowLeft, FaQuestionCircle, FaEnvelope, FaCheckCircle } from 'react-icons/fa';
 import type { HelpMessage } from '@/lib/helpMessages';
-import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { CONTACT_EMAIL_HREF, CONTACT_EMAIL_LABEL } from '@/lib/constants';
 
 interface Props {
   initialMessages: HelpMessage[];
@@ -172,7 +172,7 @@ export default function HelpClient({ initialMessages, userName }: Props) {
           <a href="tel:08009530110" className="text-orange-400 underline">0800 953 0110</a> (24/7).
           You can also email us directly at{' '}
           <a href={CONTACT_EMAIL_HREF} className="text-orange-400 underline">
-            {CONTACT_EMAIL}
+            {CONTACT_EMAIL_LABEL}
           </a>.
         </p>
       </div>

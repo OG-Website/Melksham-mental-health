@@ -64,11 +64,11 @@ function getFromAddress(): string {
   const explicit = process.env.RESEND_FROM_EMAIL?.trim();
   if (explicit) return explicit;
 
-  return 'Rob at Melksham Mental Health <hello@melksham-mentalhealth.us>';
+  return 'Rob at Melksham Mental Health <melksham-mental-health@outlook.com>';
 }
 
 function getSupportAddress(): string {
-  return process.env.CONTACT_EMAIL?.trim() || 'hello@melksham-mentalhealth.us';
+  return process.env.CONTACT_EMAIL?.trim() || 'melksham-mental-health@outlook.com';
 }
 
 function escapeHtml(value: string): string {

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FaLock, FaEnvelope, FaUser, FaEye, FaEyeSlash, FaShieldAlt } from 'react-icons/fa';
-import { CONTACT_EMAIL, CONTACT_EMAIL_HREF } from '@/lib/constants';
+import { CONTACT_EMAIL_HREF, CONTACT_EMAIL_LABEL } from '@/lib/constants';
 import type { PortalFocus } from '@/lib/portalFocus';
 
 function getRegisterErrorMessage(message?: string): string {
@@ -239,7 +239,7 @@ export default function RegisterPage() {
                   Your data will <strong className="text-white">never be sold or shared</strong> with
                   any third party. You can request deletion of your account at any time by emailing{' '}
                   <a href={CONTACT_EMAIL_HREF} className="text-orange-400 underline">
-                    {CONTACT_EMAIL}
+                    {CONTACT_EMAIL_LABEL}
                   </a>.
                 </p>
                 <label className="flex items-start gap-2 cursor-pointer">
