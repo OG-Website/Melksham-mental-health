@@ -25,7 +25,7 @@ export default function Header() {
       <div className="site-header-shell relative z-10">
         <div className="site-header-row">
           <Link href="/" className="flex items-center flex-shrink-0">
-            <Image src="/logo.png" alt="Melksham Mental Health Logo" width={400} height={130} className="h-20 md:h-24 w-auto drop-shadow-2xl" priority />
+            <Image src="/logo.png" alt="Melksham Mental Health Logo" width={400} height={130} className="site-header-logo drop-shadow-2xl" priority />
           </Link>
 
           <nav className="site-header-nav" aria-label="Main navigation">
@@ -34,9 +34,6 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Link href="/portal/register" className="nav-link nav-link--cta">
-              <FaSkull /> Join Now
-            </Link>
           </nav>
 
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="brand-icon-button site-header-menu-button" aria-label="Toggle menu">
