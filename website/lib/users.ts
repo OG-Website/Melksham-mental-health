@@ -108,7 +108,7 @@ function writeUsersToFile(users: User[]): void {
 
 function getAdminUser(): User {
   const email = process.env.ADMIN_EMAIL ?? DEFAULT_ADMIN_EMAIL;
-  const rawHash = process.env.ADMIN_PASSWORD_HASH ?? '';
+  const rawHash = (process.env.ADMIN_PASSWORD_HASH ?? '').trim();
   const normalized = rawHash.replace(/\\\$/g, '$');
   const isValidBcrypt = /^\$2[ab]\$\d{2}\$[./A-Za-z0-9]{53}$/.test(normalized);
   const passwordHash = isValidBcrypt ? normalized : DEFAULT_ADMIN_HASH;
